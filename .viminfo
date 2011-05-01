@@ -17,12 +17,12 @@
 $
 
 # Command Line History (newest to oldest):
+:wq
+:w
 :colorscheme darkblue
 :colorscheme darkspectrum
 :q
 :GundoToggle
-:w
-:wq
 :set c
 :colorscheme railscasts
 :w]
@@ -70,48 +70,70 @@ $
 "0	CHAR	0
 	/proc/acpi/battery/BAT0
 "1	LINE	0
-	
+	!
 "2	LINE	0
+	!.gitignore
+"3	LINE	0
+	!.htaccess
+"4	LINE	0
+	*.zip
+"5	LINE	0
+	nbproject/
+	sites/default/files/
+	sites/default/settings.php
+	sites/default/files/afp_news_pictures/
+	sites/default/files/album/photos/
+	sites/default/files/arsel/
+	sites/default/files/backup_migrate/manual/
+	sites/default/files/backup_migrate/scheduled/
+	sites/default/files/brightcove_thumbnail/
+	sites/default/files/category_pictures/
+	sites/default/files/covers/
+	sites/default/files/family_article_pictures/
+	sites/default/files/games/pictures/
+	sites/default/files/imagecache/
+	sites/default/files/imagefield_thumbs/
+	sites/default/files/images/
+	sites/default/files/quran_audio/
+	sites/default/files/tmp/
+	sites/default/files/imagefield_thumbs/
+	sites/all/themes/m3com/old_templates/
+"6	LINE	0
+	
+"7	LINE	0
 	  # prevent a charge of more than 100% displaying
 	  if [ "$CHARGE" -gt "99.5" ]
 	  then
 	     CHARGE=100
 	  fi
-"3	LINE	0
+"8	LINE	0
 	  if [ "$CHARGE" -gt "99" ]
 	  then
 	     CHARGE=100
 	  fi
-"4	LINE	0
-	  #CHARGE=`printf %.2f $(( $REM_CAP * 100 / $FULL_CAP ))`
-"5	LINE	0
-	  CHARGE=`echo $REM_CAP / $FULL_CAP ))`
-"6	LINE	0
-	  CHARGE=`echo %.2f -> ($CHARGE)`
-"7	LINE	0
-	
-"8	LINE	0
-	  CHARGE= $(printf %.2f $CHARGE)
 "9	LINE	0
-	
+	  #CHARGE=`printf %.2f $(( $REM_CAP * 100 / $FULL_CAP ))`
 "k	CHAR	0
 	jjjjjjjjjjjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkjjjjjjjjjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkhhvllllllllllllllllllllllllllllllllllljjjjjjkkyjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjkkokp
 ""-	CHAR	0
-	/sys/devices/platform/smapi/BAT0/
+	&bitlbee.log
 
 # File marks:
-'0  88  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
-'1  1  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc.module
-'2  1  0  ~/.gitconfig
-'3  12  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
-'4  1  0  .wine/drive_c/Program Files (x86)/hitman2/Hitman2.ini
-'5  12  0  ~/.xmonad/battery
-'6  49  4  ~/stuff/battt.rb
-'7  71  2  ~/stuff/battt.rb
-'8  40  3  ~/.xmonad/battery
-'9  14  26  ~/.xmonad/battery
+'0  70  6  ~/.gitignore
+'1  88  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+'2  1  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc.module
+'3  1  0  ~/.gitconfig
+'4  12  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+'5  1  0  .wine/drive_c/Program Files (x86)/hitman2/Hitman2.ini
+'6  12  0  ~/.xmonad/battery
+'7  49  4  ~/stuff/battt.rb
+'8  71  2  ~/stuff/battt.rb
+'9  40  3  ~/.xmonad/battery
 
 # Jumplist (newest first):
+-'  70  6  ~/.gitignore
+-'  69  42  ~/.gitignore
+-'  1  0  ~/.gitignore
 -'  88  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
 -'  1  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
 -'  1  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc.module
@@ -209,10 +231,24 @@ $
 -'  14  47  ~/stuff/battt.rb
 -'  1  2  ~/stuff/battt.rb
 -'  71  2  ~/stuff/battt.rb
--'  40  3  ~/.xmonad/battery
--'  27  0  ~/.xmonad/battery
 
 # History of marks within files (newest to oldest):
+
+> ~/.gitignore
+	"	70	6
+	^	70	7
+	.	70	0
+	+	1	0
+	+	4	0
+	+	4	0
+	+	33	0
+	+	4	0
+	+	34	8
+	+	51	10
+	+	69	10
+	+	69	32
+	+	70	6
+	+	70	0
 
 > /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
 	"	88	0
@@ -1699,108 +1735,3 @@ $
 
 > ~/stuff/hacklab/haklabbeograd.github.com/index.html
 	"	1	0
-
-> /srv/http/m3com/sites/all/themes/m3com/scripts/jq-init.js
-	"	140	0
-	^	138	68
-	.	139	0
-	+	147	0
-	+	143	0
-	+	135	0
-	+	144	6
-	+	146	0
-	+	145	0
-	+	148	0
-	+	145	25
-	+	135	25
-	+	145	0
-	+	146	0
-	+	148	0
-	+	140	14
-	+	141	15
-	+	140	13
-	+	142	31
-	+	133	17
-	+	142	13
-	+	133	66
-	+	151	34
-	+	151	36
-	+	151	3
-	+	151	5
-	+	151	18
-	+	151	51
-	+	151	0
-	+	151	0
-	+	151	0
-	+	151	0
-	+	151	9
-	+	151	0
-	+	151	52
-	+	151	0
-	+	151	52
-	+	151	42
-	+	151	0
-	+	151	0
-	+	151	0
-	+	151	0
-	+	151	0
-	+	151	0
-	+	151	0
-	+	151	0
-	+	151	41
-	+	151	24
-	+	151	0
-	+	151	44
-	+	151	0
-	+	151	21
-	+	151	37
-	+	151	41
-	+	151	0
-	+	151	19
-	+	151	23
-	+	151	0
-	+	151	0
-	+	151	0
-	+	151	27
-	+	151	0
-	+	151	0
-	+	151	0
-	+	164	22
-	+	151	0
-	+	164	25
-	+	151	0
-	+	153	0
-	+	155	0
-	+	10	58
-	+	155	0
-	+	151	0
-	+	153	49
-	+	154	0
-	+	153	0
-	+	171	0
-	+	152	37
-	+	154	12
-	+	152	29
-	+	154	0
-	+	157	48
-	+	163	48
-	+	163	0
-	+	163	42
-	+	157	42
-	+	163	59
-	+	157	18
-	+	163	0
-	+	163	11
-	+	157	30
-	+	158	30
-	+	160	0
-	+	163	0
-	+	159	7
-	+	163	0
-	+	159	56
-	+	162	0
-	+	161	54
-	+	144	26
-	+	139	32
-	+	138	67
-	+	139	0
