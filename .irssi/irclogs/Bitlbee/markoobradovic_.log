@@ -1,0 +1,226 @@
+--- Log opened Thu Dec 09 12:46:31 2010
+12:46 Starting query in Bitlbee with markoobradovic_
+12:46 markoobradovic_| milose treba mi pristup na wfest linode
+12:48 playahater| root@178.79.140.115
+12:48 playahater| wf2010hmag
+--- Log closed Thu Dec 09 12:53:58 2010
+--- Log opened Thu Dec 09 13:00:04 2010
+13:00 Closing query with markoobradovic_
+--- Log closed Thu Dec 09 13:00:04 2010
+--- Log opened Thu Dec 23 21:46:19 2010
+21:46 Starting query in Bitlbee with markoobradovic_
+21:46 markoobradovic_| Jos radis ?
+21:49 playahater| ma jok ..
+21:49 playahater| doma
+21:49 playahater| mada .. malopre sam prihajao .. :) ..
+--- Log closed Thu Dec 23 21:54:28 2010
+--- Log opened Thu Dec 23 22:24:29 2010
+22:24 Closing query with markoobradovic_
+--- Log closed Thu Dec 23 22:24:29 2010
+--- Log opened Mon Dec 27 17:55:26 2010
+17:55 Starting query in Bitlbee with markoobradovic_
+17:55 markoobradovic_| milose kako ti ide link na build block
+17:55 markoobradovic_| ???
+17:55 markoobradovic_| http://localhost:8888/m3com/admin/build/block
+17:55 markoobradovic_| jel ovo ili me nesto jebe drugo
+17:56 playahater| da .. to je taj linak
+17:56 playahater| netje da otvori stranu,a?
+17:56 Closing query with markoobradovic_
+--- Log closed Mon Dec 27 17:56:23 2010
+--- Log opened Mon Dec 27 17:57:40 2010
+17:57 Starting query in Bitlbee with markoobradovic_
+17:57 markoobradovic_| jok
+17:57 markoobradovic_| vec 20 min ako ne i vise
+17:57 markoobradovic_| pulovao pushovao
+17:58 markoobradovic_| sve sam mu radio a on neda
+17:58 playahater| :)
+17:58 markoobradovic_| a recimo broadband otvara
+17:58 playahater| pa da .. treba mu "malo" vremena da bi povuko taj admin .. zahtevniji je nego obichan page/panel ..
+17:59 playahater| u kombinaciji kad nama baza jedva radi .. 
+17:59 playahater| dodjesh do sluchaja da mu treba 20 min
+17:59 playahater| :D
+17:59 playahater| uglavnom .. drmni mu refresh s vremena na vreme .. :)
+17:59 playahater| otvoritje ga u nekom trenutku
+17:59 playahater| :)
+17:59 Closing query with markoobradovic_
+--- Log closed Mon Dec 27 17:59:43 2010
+--- Log opened Thu Dec 30 19:56:39 2010
+19:56 Starting query in Bitlbee with markoobradovic_
+19:56 markoobradovic_| milose koji je link do taleem stranica
+19:56 playahater| uh ..
+19:56 playahater| i ja sam ih trazio .. al ih nisam nasho ..
+19:56 playahater| chek da pogledam ..
+19:57 markoobradovic_| <FONT>ok</FONT>
+--- Log closed Thu Dec 30 20:02:22 2010
+--- Log opened Thu Dec 30 20:19:33 2010
+20:19 Closing query with markoobradovic_
+--- Log closed Thu Dec 30 20:19:33 2010
+--- Log opened Fri Jan 14 15:51:58 2011
+15:51 Starting query in Bitlbee with markoobradovic_
+15:51 markoobradovic_| http://www.youtube.com/watch?v=C-z-_FG8e5U
+15:53 markoobradovic_| http://www.youtube.com/watch?v=qq6iEKVLzWY&feature=related
+15:57 playahater| znachi do jaja .. :)
+15:57 markoobradovic_| <FONT>i jedno i drugo?</FONT>
+--- Log closed Fri Jan 14 16:03:49 2011
+--- Log opened Fri Jan 14 16:48:50 2011
+16:48 Closing query with markoobradovic_
+--- Log closed Fri Jan 14 16:48:50 2011
+--- Log opened Fri Jan 14 17:16:01 2011
+17:16 Starting query in Bitlbee with markoobradovic_
+17:16 markoobradovic_| <FONT>http://www.youtube.com/watch?v=WjQTP39y2gQ&amp;NR=1</FONT>
+--- Log closed Fri Jan 14 17:21:49 2011
+--- Log opened Fri Jan 14 17:40:15 2011
+17:40 Closing query with markoobradovic_
+--- Log closed Fri Jan 14 17:40:15 2011
+--- Log opened Mon Jan 17 15:42:55 2011
+15:42 Starting query in Bitlbee with markoobradovic_
+15:42 markoobradovic_| kako se prelazi sa mastera na deveop
+15:42 markoobradovic_| ?
+15:43 playahater| git checkout develop
+15:43 markoobradovic_| <FONT>ok</FONT>
+15:43 playahater| pre toga .. git branch develop .. da napravish develop branch .. nakon chega se swithuejsh na njega sa 'checkout'
+15:44 markoobradovic_| <FONT>ok to sam uradio</FONT>
+15:44 markoobradovic_| <FONT>git checkout develop</FONT>
+15:44 playahater| do jajca ..
+15:44 playahater| :)
+15:44 markoobradovic_| <FONT>budala pisem ovde umesto u konzolu</FONT>
+15:44 playahater| hehe
+15:44 playahater| :0
+15:45 Closing query with markoobradovic_
+--- Log closed Mon Jan 17 15:45:49 2011
+--- Log opened Mon Jan 17 15:46:33 2011
+15:46 Starting query in Bitlbee with markoobradovic_
+15:46 markoobradovic_| <FONT>yeeee nema vise glupog fajla</FONT>
+15:46 playahater| :)
+15:46 playahater| to mi reci ..
+15:47 playahater| ako si sinhronizovao .. sad proveri da l su to poslednje promene ..
+15:47 playahater| ako je sve ok .. obrishi onaj dir sa desktopa
+15:52 Closing query with markoobradovic_
+--- Log closed Mon Jan 17 15:52:22 2011
+--- Log opened Thu Jan 20 14:15:17 2011
+14:15 Starting query in Bitlbee with markoobradovic_
+14:15 playahater| user: root
+14:15 playahater| pass: wf2010hmag
+14:17 playahater| xs*LyD2d
+--- Log closed Thu Jan 20 14:23:23 2011
+--- Log opened Thu Jan 20 14:38:39 2011
+14:38 Closing query with markoobradovic_
+--- Log closed Thu Jan 20 14:38:39 2011
+--- Log opened Thu Jan 20 17:40:16 2011
+17:40 Starting query in Bitlbee with markoobradovic_
+17:40 playahater| http://httpd.apache.org/docs/2.0/vhosts/examples.html
+17:40 playahater| http://httpd.apache.org/docs/2.0/vhosts/examples.html
+17:40 playahater| http://httpd.apache.org/docs/2.0/vhosts/examples.html
+--- Log closed Thu Jan 20 17:46:23 2011
+--- Log opened Thu Jan 20 18:22:53 2011
+18:22 Closing query with markoobradovic_
+--- Log closed Thu Jan 20 18:22:53 2011
+--- Log opened Sun Jan 23 16:53:59 2011
+16:53 Starting query in Bitlbee with markoobradovic_
+16:53 markoobradovic_| gde idem da kreiram blok?
+16:58 playahater| stize .. :)
+16:59 playahater| en/admin/build/block -> add block
+17:00 markoobradovic_| <FONT>thanks</FONT>
+--- Log closed Sun Jan 23 17:05:37 2011
+--- Log opened Sun Jan 23 17:47:56 2011
+17:47 Closing query with markoobradovic_
+--- Log closed Sun Jan 23 17:47:56 2011
+--- Log opened Mon Jan 24 17:06:13 2011
+17:06 Starting query in Bitlbee with markoobradovic_
+17:06 playahater| http://drupal.org/node/844680
+17:06 playahater| mozda nisam u pravu ..
+17:06 playahater| :)
+17:06 playahater| josh googlam .. :) ..
+17:06 markoobradovic_| <FONT>sad cu da procitam</FONT>
+17:06 Closing query with markoobradovic_
+--- Log closed Mon Jan 24 17:06:42 2011
+--- Log opened Mon Jan 31 12:44:42 2011
+12:44 Starting query in Bitlbee with markoobradovic_
+12:44 markoobradovic_| milose stalno mi izlazi ovo Queries taking longer than 5 ms and queries executed more than once, are highlighted. Page execution time was 1620.87 ms.
+12:44 markoobradovic_| Memory usage:
+12:44 markoobradovic_| Memory used at: devel_init()=1.02 MB, devel_shutdown()=15.67 MB.
+12:44 markoobradovic_|  
+12:44 markoobradovic_| sta da radim da vidimlokal
+12:44 markoobradovic_| vidim lokal
+12:45 playahater| ne vidish lokal?
+12:45 playahater| si pull-ovao?
+12:45 markoobradovic_| <FONT>nisam sad cu</FONT>
+12:46 playahater| ae .. 
+12:46 playahater| pull ..
+12:46 playahater| pa clear cache
+12:46 markoobradovic_| <FONT>oooooo ruk</FONT>
+12:46 playahater| :)
+12:46 playahater| na 3-4 .. il na 3-4-sad ?
+12:46 playahater| :)
+12:46 markoobradovic_| <FONT>to je bila tajna</FONT>
+12:46 markoobradovic_| <FONT>:)</FONT>
+--- Log closed Mon Jan 31 12:52:17 2011
+--- Log opened Mon Jan 31 12:58:38 2011
+12:58 playahater| pull
+12:58 playahater| :)
+12:58 Closing query with markoobradovic_
+--- Log closed Mon Jan 31 12:58:41 2011
+--- Log opened Tue Feb 08 02:50:23 2011
+02:50 Starting query in Bitlbee with markoobradovic_
+02:50 markoobradovic_| pluga?
+02:54 playahater| zemo
+02:55 markoobradovic_| aj
+--- Log closed Tue Feb 08 03:00:42 2011
+--- Log opened Tue Feb 08 04:06:01 2011
+04:06          <-- markoobradovic_ has quit irc
+--- Log closed Tue Feb 08 04:11:42 2011
+--- Log opened Tue Feb 08 04:28:49 2011
+04:28 Closing query with markoobradovic_
+--- Log closed Tue Feb 08 04:28:49 2011
+--- Log opened Thu Feb 10 12:48:00 2011
+12:48 Starting query in Bitlbee with markoobradovic_
+12:48 playahater| puuuuuuul .. :)
+12:48 Closing query with markoobradovic_
+--- Log closed Thu Feb 10 12:48:01 2011
+--- Log opened Thu Feb 10 12:48:16 2011
+12:48 Starting query in Bitlbee with markoobradovic_
+12:48 markoobradovic_| ooooooooo ruk
+12:48 Closing query with markoobradovic_
+--- Log closed Thu Feb 10 12:48:32 2011
+--- Log opened Thu Feb 10 12:48:44 2011
+12:48 Starting query in Bitlbee with markoobradovic_
+12:48 playahater| :D
+12:48 Closing query with markoobradovic_
+--- Log closed Thu Feb 10 12:48:46 2011
+--- Log opened Tue Feb 22 12:58:01 2011
+12:58 Starting query in Bitlbee with markoobradovic_
+12:58 markoobradovic_| http://localhost:8888/m3com//vitamin/order-data/581419/6
+--- Log closed Tue Feb 22 13:03:44 2011
+--- Log opened Tue Feb 22 13:13:11 2011
+13:13 Closing query with markoobradovic_
+--- Log closed Tue Feb 22 13:13:11 2011
+--- Log opened Mon Feb 28 13:38:45 2011
+13:38 Starting query in Bitlbee with markoobradovic_
+13:38 markoobradovic_| Balada Triste De Trompeta
+--- Log closed Mon Feb 28 13:44:03 2011
+--- Log opened Mon Feb 28 14:36:10 2011
+14:36 Closing query with markoobradovic_
+--- Log closed Mon Feb 28 14:36:10 2011
+--- Log opened Wed Mar 09 09:50:05 2011
+09:50 Starting query in Bitlbee with markoobradovic_
+09:50 playahater| 192.168.0.139/en/test-slide
+09:52 Closing query with markoobradovic_
+--- Log closed Wed Mar 09 09:52:21 2011
+--- Log opened Thu Apr 21 12:56:03 2011
+12:56 Starting query in Bitlbee with markoobradovic_
+12:56 markoobradovic_| http://www.youtube.com/watch?v=mpVr2wRY1O4
+--- Log closed Thu Apr 21 13:01:50 2011
+--- Log opened Thu Apr 21 13:09:17 2011
+13:09 Closing query with markoobradovic_
+--- Log closed Thu Apr 21 13:09:17 2011
+--- Log opened Wed Apr 27 12:20:23 2011
+12:20 Starting query in Bitlbee with markoobradovic_
+12:20 markoobradovic_| http://a5.sphotos.ak.fbcdn.net/hphotos-ak-snc6/225145_1863593343427_1048791723_2047354_290267_n.jpg
+--- Log closed Wed Apr 27 12:25:35 2011
+--- Log opened Wed Apr 27 12:59:55 2011
+12:59          <-- markoobradovic_ has quit irc
+13:03          <-- markoobradovic_ has quit irc
+--- Log closed Wed Apr 27 13:08:35 2011
+--- Log opened Wed Apr 27 13:13:05 2011
+13:13 Closing query with markoobradovic_
+--- Log closed Wed Apr 27 13:13:05 2011

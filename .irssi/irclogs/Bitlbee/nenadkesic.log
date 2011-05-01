@@ -1,0 +1,847 @@
+--- Log opened Thu Jan 20 19:57:43 2011
+19:57 Starting query in Bitlbee with nenadkesic
+19:57 playahater| druze .. nisam video request na vreme .. sorry ..
+19:57 playahater| :/
+19:57 nenadkesic| ok
+19:57 nenadkesic| nema frke
+19:58 nenadkesic| nego ne radi ta strana sa permissionima
+19:58 nenadkesic| odlepio sam vec vise
+19:58 nenadkesic| ne znam gde mi skripi a tu ne mogu da pristupim
+19:58 playahater| joojjj .. da .. mislim da je problem u memoriji .. ae da chekiram stvar ..
+19:58 playahater| chek sek ..
+19:58 nenadkesic| aj
+19:58 nenadkesic| deluje moemorija
+20:02 playahater| problem jeste memorija ...
+20:02 nenadkesic| sigurno
+20:02 nenadkesic| tu ima tusta i tma svega
+20:02 nenadkesic| video sam na onom drugom
+20:02 playahater| ali vetji problem je shto ne mozemo da setujemo vishe php memorije na tom serveru ..
+20:02 nenadkesic| kapiram
+20:02 playahater| sad tju da se konsultujem sa bogdanom ..
+20:02 playahater| chek sek ..
+20:02 nenadkesic| cek samo jos nesto
+20:03 playahater| ae
+20:03 playahater| :)
+20:04 nenadkesic| ono sto komitujem ide direktno na no-wire.com
+20:04 nenadkesic| ?
+20:04 nenadkesic| tj na apiTest
+20:04 nenadkesic| ta grana ide direkt
+20:05 playahater| ne .. posebno se pushuje branch na svaki server ..
+20:05 playahater| ti komitujesh na beanstalk ..
+20:05 playahater| nakon toga neko od nas uradi pull sa beanstalka na no-wire
+20:06 playahater| ups .. tachnije pull sa no-wire na beanstalk
+20:06 nenadkesic| simpaticno je da sve vreme imam pogresnu informaciju i tapkam u prazno
+20:07 nenadkesic| koliko ja onda cekam ?
+20:07 nenadkesic| dok nemam aktuelni kod na no-wire?
+20:07 nenadkesic| posto samo tamo mogu da radim jer ovaj API
+20:07 nenadkesic| ne radi lokalno
+20:07 playahater| znam .. kontam problem ..
+20:07 playahater| radim na tome .. :) ..
+20:07 playahater| sad tjemo da smislimo neko reshenje ..
+20:08 nenadkesic| konkretno
+20:08 nenadkesic| posto ne rade permissioni
+20:08 nenadkesic| uradio sam ovo
+20:08 nenadkesic| 'access arguments' => array('access content'), //array('create vitamin sub account'),
+20:08 nenadkesic| i komitovao
+20:08 nenadkesic| kako bi mogao da testiram
+20:08 playahater| aha .. ok .. ql ..
+20:08 nenadkesic| a ve neko vreme mislim kako je kod automatski tamo
+20:08 nenadkesic| i tipa kao zasto ne radi sada access content
+20:08 nenadkesic| kapiras?
+20:08 playahater| skroz ..
+20:08 nenadkesic| malo me voza ko na ringispilu :)
+20:09 nenadkesic| (i mozda sad uzmem pivo da se smirim)
+20:10 playahater| uhh .. vops obavezno !! .. 
+20:10 playahater| :)
+20:10 playahater| sad tjemo da bacimo stvar na web3.m3com.blabla ..
+20:11 playahater| tamo mozemo da sredimo memory_limit ..
+20:11 nenadkesic| ali kako tamo ide za kod?
+20:11 playahater| i pullovantjemo posldnji git na taj server
+20:11 nenadkesic| ako nesto menjam kad komitujem nece ici tamo ????
+20:11 nenadkesic| onda svaki put tebe da cimnem
+20:11 nenadkesic| ?
+20:12 nenadkesic| tj. potrudicu se da uradim veci komad pa onda mada je to nezgodno ...
+20:12 playahater| pa da .. mora da se povuche poslednji gid direktno sa servera na kome je drupal ..
+20:13 playahater| tako da to mora da uradi neko ko ima pristup tom serveru ..
+20:13 playahater| bogdan/ivan ..
+20:13 playahater| drugim rechima .. da .. cimash svaki put .. :/
+20:13 playahater| mene .. njih .. kog god dovatish .. :) ..
+20:14 nenadkesic| he he
+20:14 nenadkesic| nesto mi se cini da ces to biti ti
+20:14 nenadkesic| sorry :)
+20:14 nenadkesic| javi mi samo kad bacite na web3
+20:15 nenadkesic| ili ako cemo tamo testirati da vratim na stari permission ?
+20:15 nenadkesic| ah 100 komplikacija ...
+20:16 nenadkesic| nema veze neke ostane ovako, to je inace samo interni drupal permission
+20:16 playahater| a jebiga .. :) ..
+20:16 playahater| uglavnom .. trenutno ovako stoji stvar ..
+20:16 playahater| server za budzenje tje biti http://web3.m3com.com.sa
+20:17 playahater| kad komitujesh neshto .. pingujesh ivana/bogdana/mene .. da sinhonizujemo git sa tim novim serverom ..
+20:17 nenadkesic| ok, make sense
+20:18 playahater| kad prebacimo fajlove/git/bazu na novi server pingujemo te da znash da moz kliktjesh dalje ..
+20:18 playahater| do tad .. kontam da moz da cepensh jedan vops .. :)
+20:18 nenadkesic| odlicno !
+20:18 nenadkesic| hvala, za sad
+20:18 nenadkesic| dodjem ti lapo vopsa
+20:18 nenadkesic| kapiram do kraja dana mozda stignes i do gajbe
+20:18 nenadkesic| :)
+20:19 playahater| joj .. ne pitaj .. :/
+--- Log closed Thu Jan 20 20:24:21 2011
+--- Log opened Thu Jan 20 20:40:36 2011
+20:40 playahater| druze .. moz nastavish lagano kliktanje na http://web3.m3com.com.sa
+20:40 playahater| uz vops, naravno .. :)
+20:41 playahater| kad komitujesh .. pinguejsh nekog od nas da pushuje to na server ..
+20:41 playahater| :)
+--- Log closed Thu Jan 20 20:46:21 2011
+--- Log opened Thu Jan 20 20:47:01 2011
+20:47 nenadkesic| ok, fala
+20:48 nenadkesic| btw
+20:48 nenadkesic| u cega ste spakovali $message ?
+20:48 nenadkesic| it is very nice
+20:49 playahater| better_messages
+20:50 playahater| treba da dobudzimo da ne smara admina .. 
+20:50 playahater| :)
+20:50 nenadkesic| got it
+20:50 nenadkesic| mada admina i treba da smara
+20:51 nenadkesic| sa updates :)
+20:53 playahater| jes pa da bilo kom pada na pamet da moz da updateuje kad mu se digne,a? .. 
+20:53 playahater| aa .. ne moze .. :)
+--- Log closed Thu Jan 20 20:59:21 2011
+--- Log opened Thu Jan 20 21:01:02 2011
+21:01 nenadkesic| hola
+21:01 nenadkesic| ja bih da komitujem
+21:01 nenadkesic| samo da isprintam neke varijable
+21:01 nenadkesic| i onda bih odmah opet
+21:01 nenadkesic| setovao nesto kad vidim sta imam
+21:02 nenadkesic| da bacim na develop
+21:02 nenadkesic| pa da bacis na web3?
+21:03 playahater| ql ..
+21:03 playahater| komituj ..
+21:03 playahater| ili vetj jesi ?
+--- Log closed Thu Jan 20 21:09:21 2011
+--- Log opened Thu Jan 20 21:13:23 2011
+21:13 nenadkesic| gotovo
+21:13 nenadkesic| cimnuo sam bogdana danke
+21:16 playahater| aha .. ql ..
+21:16 playahater| ako ti neshto .. shaljesh mail/sms ..
+21:16 playahater| i ja (konachno) uskoro palim doma .. 
+21:16 playahater| :)
+21:18 nenadkesic| ok, hvala
+--- Log closed Thu Jan 20 21:24:21 2011
+--- Log opened Thu Jan 20 21:44:44 2011
+21:44 nenadkesic| c2 jos ?
+21:45 playahater| na zalost
+21:45 playahater| :)
+21:45 nenadkesic| :)
+21:45 nenadkesic| moze jedan pull
+21:45 nenadkesic| ?
+21:45 nenadkesic| kraci s mlekom
+21:45 nenadkesic| (hladnim)
+21:46 playahater| upravo tedoh da pitam
+21:46 playahater| :)
+21:46 nenadkesic| cek samo da komitujem
+21:46 playahater| ae .. taman dok ih ja organizujem :) .. jer mi nisu dali pristup tom novom serveru .. :/
+21:47 nenadkesic| malo mi j eglupo da za svaku glupost komituje + jos cimam nekog
+21:47 nenadkesic| navikao sam da imam u llokalu sve  ... pa dok ne proverim tu
+21:48 playahater| pa znam druze .. al jebesh ga kad je takav setup ..
+21:49 playahater| uglavnom .. javio sam ivanu da pushuje promene chim stigne doma ..
+21:49 nenadkesic| ma kapiram
+21:49 playahater| drugim rechima .. za oko pola sata imash izmene na serveru 
+21:50 nenadkesic| pogasicu
+21:50 nenadkesic| sve
+21:50 nenadkesic| dsm() -ove
+21:50 nenadkesic| jos u narenih lapo sata
+21:50 nenadkesic| i to je to
+21:50 nenadkesic| ovo je bilo na slepo
+21:51 nenadkesic| pa ono sta Alah da
+21:51 playahater| lol .. :) ..
+21:51 playahater| .. pa da ..
+21:51 nenadkesic| mislim tamo u Sauydisjkoj je valjda Alah
+21:51 playahater| nema druge
+21:51 nenadkesic| ako se ne varam
+21:51 nenadkesic| :)
+--- Log closed Thu Jan 20 21:56:21 2011
+--- Log opened Thu Jan 20 22:07:53 2011
+22:07 nenadkesic| gotovo
+22:07 nenadkesic| izlgeda ja ipak pre tebe
+22:08 nenadkesic| he he
+22:08 nenadkesic| cujemo se, fala vi jos jedared :)
+22:13 playahater| brate .. ja imam josh da peglam .. :) ..
+22:13 playahater| nishta ..
+22:13 playahater| chujemo se ..
+22:13 playahater| poz ..
+22:13 playahater| :)
+22:13 nenadkesic| iPoz
+22:13 nenadkesic| ;)
+22:13 playahater| hahaha .. dobra .. :)
+--- Log closed Thu Jan 20 22:19:21 2011
+--- Log opened Thu Jan 20 23:41:27 2011
+23:41 Closing query with nenadkesic
+--- Log closed Thu Jan 20 23:41:27 2011
+--- Log opened Fri Jan 21 23:36:07 2011
+23:36 Starting query in Bitlbee with nenadkesic
+23:36 nenadkesic| hola
+23:36 nenadkesic| tu si majstore?
+23:36 nenadkesic| spavas ti nekad?
+23:38 playahater| povremeno ..
+23:38 playahater| :)
+23:38 playahater| mada izbegavam .. :P
+23:38 playahater| ti?
+23:38 nenadkesic| uh
+23:38 nenadkesic| ja onoako
+23:38 nenadkesic| tu i tamo spavam
+23:38 nenadkesic| ali sa klopom sam katastrofalan
+23:39 nenadkesic| :)
+23:39 playahater| zato je tu vops .. :)
+23:39 nenadkesic| nego bacio sam neki kod tamo upravo
+23:39 playahater| gitovao si ga?
+23:39 nenadkesic| ne znam da li ti imas moci da dignes na no-wire.com ?
+23:39 nenadkesic| jesam
+23:39 playahater| nisu me josh upgrade-ovali .. :/
+23:40 playahater| ali mozemo da cimnemo ivana/bogdana da pushuju to ..
+23:40 nenadkesic| poslao sam bogdanu mail
+23:40 playahater| a jel nije beshe onaj web3 ?
+23:40 nenadkesic| mozda odreaguje
+23:41 nenadkesic| posto mi je rekao pre jedno sat/dva da moram malo da se iskljuci
+23:41 nenadkesic| nije web3
+23:41 nenadkesic| jer sada samo staticne neke stranice sam pravio
+23:41 playahater| aha .. ql ..
+23:41 nenadkesic| ne odnosi se na onaj API i one zajebancije
+23:41 nenadkesic| ali se stranice ne vide kako treba (layout)
+23:41 nenadkesic| jer fali deo koda + CSS
+23:42 playahater| uh .. pa da ..
+23:42 playahater| kontam da nisu josh zaboli .. 
+23:42 playahater| ima nade .. :)
+23:43 nenadkesic| jahvala
+--- Log closed Fri Jan 21 23:49:16 2011
+--- Log opened Sat Jan 22 00:02:32 2011
+00:02 Closing query with nenadkesic
+--- Log closed Sat Jan 22 00:02:32 2011
+--- Log opened Sat Jan 22 17:30:00 2011
+17:30 Starting query in Bitlbee with nenadkesic
+17:30 nenadkesic| e
+17:30 nenadkesic| kazi mi ako imas minut
+17:31 playahater| yo .. reci ..
+17:33 nenadkesic| vidi ovo
+17:33 nenadkesic| http://drupal.org/node/804002
+17:33 nenadkesic| provereno mi je vec na drugoj stvari
+17:34 nenadkesic| ovako kako je sad (sa 1.7) ne radi mi 
+17:34 nenadkesic| defaultni modul
+17:34 nenadkesic| od Dialoga
+17:34 nenadkesic| onaj za usera ....
+17:34 playahater| e .. da .. pazi ..
+17:34 playahater| znamo za problem .. ali nikako da nadjemo vremena ..
+17:35 nenadkesic| ja mogu vratiti na 1.6
+17:35 nenadkesic| ako mislis da je to ok
+17:35 nenadkesic| ili vec sta drugo treba
+17:35 playahater| nama radi dialog bez problema, kad js nije compressed 
+17:35 playahater| kad je compressed .. dialog se uchitava samo prvi put ..
+17:35 playahater| svaki sledetji puca ..
+17:35 playahater| i kontao sam da je ui problem ..
+17:36 nenadkesic| jeste
+17:36 nenadkesic| a isto tako ne rade
+17:36 nenadkesic| ni user/login forma
+17:36 nenadkesic| koju imas defaultno u dodatku za taj modul
+17:37 playahater| slazem se .. probaj 1.6 .. testiraj .. ako radi .. do jajca
+17:37 nenadkesic| a vidim i ds ste hakovali dialog module :)
+17:37 nenadkesic| no no !
+17:37 playahater| pa malo
+17:37 nenadkesic| ma jasm vec probao da stavim ui 1.6
+17:37 nenadkesic| ali mi iz nekog nebuloznog razloga
+17:37 nenadkesic| ne ucitava CSS
+17:37 nenadkesic| da li ste negde u JS od UI-stavljali neke reference na CSS
+17:37 nenadkesic| ili sam vec izludeo
+17:38 playahater| ne
+17:38 nenadkesic| ne kapiram zasto ga ne vuce
+17:38 nenadkesic| kopiram tu temu
+17:38 nenadkesic| u jquery.ui/themes
+17:38 nenadkesic| i pozovem u modulu
+17:38 nenadkesic| i ucita se
+17:38 playahater| default module nismo pipali uopshte .. sve shto je budzeno .. budzeno je u sites/all/modules/custom
+17:39 playahater| jesmo neke .. og/quiz .. ali oni su nebitni
+17:39 nenadkesic| ima u dialog modulu ova linija
+17:39 playahater| :)
+17:39 nenadkesic| drupal_add_css(JQUERY_UI_PATH .'/themes/m3com/m3com.css');
+17:39 nenadkesic| to je neko stavio da se zove ta tema
+17:39 playahater| wtf?
+17:39 nenadkesic| dialog linija 168
+17:39 nenadkesic| ups
+17:39 nenadkesic| 68
+17:39 playahater| nisam to izvalio ..
+17:39 playahater| chek ..
+17:40 playahater| shit .. da .. sad tju krenem da jurim barabu po komitovima .. :) ..
+17:40 playahater| :)
+17:40 nenadkesic| he he
+17:40 nenadkesic| :)
+17:41 nenadkesic| nemoj da kazes ko ti je cinkario :)
+17:41 nenadkesic| pssst
+17:41 playahater| u`re safe
+17:41 playahater| ;)
+17:41 nenadkesic| ok probacu ovo sa 1.6, to bi trebalo da radi
+17:41 playahater| da da .. definitivno imamo problem sa tim ui-em ..
+17:42 playahater| imash sve permisije shto se toga tiche
+17:42 playahater| :)
+17:42 playahater| sedi vozi .. 
+17:42 playahater| :)
+17:42 nenadkesic| ok, fala boss
+17:42 playahater| de bre .. nisam ja boss ..
+17:42 nenadkesic| probacu pa cu ti javiti
+17:42 playahater| ja sam bro
+17:42 playahater| :)
+17:42 nenadkesic| ok, bro
+17:42 nenadkesic| nego fotka ti takva
+17:42 nenadkesic| avatar
+17:42 nenadkesic| rodjeni boss
+17:43 nenadkesic| :B
+17:43 playahater| e .. da .. jeste malo zemunska .. 
+17:43 playahater| jbg .. takav ugao
+17:43 playahater| :)
+17:43 playahater| nije do mene
+17:43 playahater| :)
+17:43 Closing query with nenadkesic
+--- Log closed Sat Jan 22 17:43:34 2011
+--- Log opened Sat Jan 22 17:43:51 2011
+17:43 Starting query in Bitlbee with nenadkesic
+17:43 nenadkesic| ma u redu je
+17:43 playahater| lol
+17:43 nenadkesic| cujas l8e
+17:44 nenadkesic| r
+17:44 playahater| ql
+17:44 Closing query with nenadkesic
+--- Log closed Sat Jan 22 17:44:42 2011
+--- Log opened Sat Jan 22 21:59:24 2011
+21:59 Starting query in Bitlbee with nenadkesic
+21:59 playahater| yo
+21:59 playahater| :)
+21:59 Closing query with nenadkesic
+--- Log closed Sat Jan 22 21:59:39 2011
+--- Log opened Sat Jan 22 22:04:55 2011
+22:04 Starting query in Bitlbee with nenadkesic
+22:04 nenadkesic| yo
+22:05 playahater| druze .. imam neke vitaminske blokove na en/broadband
+22:05 playahater| :)
+22:06 playahater| chisto ti javim .. :) ..
+22:06 Closing query with nenadkesic
+--- Log closed Sat Jan 22 22:06:45 2011
+--- Log opened Sat Jan 22 22:07:08 2011
+22:07 Starting query in Bitlbee with nenadkesic
+22:07 nenadkesic| kaj je to?
+22:08 playahater| panel page ..
+22:08 playahater| logovan user vidi blokove sa vitamina
+22:09 nenadkesic| pa ja ih ne vidim ?
+22:09 nenadkesic| celar cache
+22:09 nenadkesic| cek
+22:10 nenadkesic| ustvari gd gledam
+22:10 nenadkesic| na web3 ?
+22:10 playahater| aha .. chek .. ja to vidim na lokalu .. 
+22:10 playahater| izvni ..
+22:10 playahater| chek da pullujem ..
+22:11 nenadkesic| btw
+22:11 nenadkesic| fora sa Dialogom
+22:11 nenadkesic| za user_login
+22:12 playahater| aha ..
+22:12 nenadkesic| je da se krshi na 
+22:12 nenadkesic| admin nalog
+22:12 nenadkesic| zato sto
+22:12 nenadkesic| negde u nekom custom kodu
+22:12 nenadkesic| ima redirekcija setovana
+22:12 nenadkesic| na hook_login
+22:12 nenadkesic| hook_user ($op = login)
+22:12 nenadkesic| + destination
+22:12 nenadkesic| query
+22:12 nenadkesic| i to ga krlja
+22:12 nenadkesic| a regularan user ok radi
+22:12 playahater| da da .. kontam .. 
+22:13 playahater| ok ..
+22:13 nenadkesic| tako da za sada ostavljam tako
+22:13 playahater| pogledatju shta se tu deshava
+22:13 nenadkesic| jer taj pop-up inace nije za gosn admina
+22:13 playahater| jashta ..
+22:13 playahater| inache .. sve ok sa blokovima .. 
+22:13 playahater| uradio sam pull i sredilo se .. :)
+22:13 nenadkesic| gde gledam ?
+22:14 playahater| ja sam na lokalu ..
+22:14 playahater| :)
+22:14 nenadkesic| a, ok
+22:14 playahater| mada mislim da je isti kod i na web3
+22:14 playahater| chak shta vishe .. poprilichno sam siguran
+22:14 playahater| :)
+22:14 playahater| uglavnom .. sve ok .. :)
+22:14 nenadkesic| ok
+22:14 nenadkesic| http://web3.m3com.com.sa/broadband
+22:14 nenadkesic| ja gledam odje
+22:15 nenadkesic| nis ...
+22:15 nenadkesic| enivej
+22:15 nenadkesic| tu ima jos hardcode-a
+22:15 nenadkesic| ponesto
+22:15 nenadkesic| ali to cu da mincam
+22:15 nenadkesic| posto je sad kao frka da se dobije layout
+22:15 nenadkesic| premda, naravno nema puno hardcode-a
+22:16 nenadkesic| no hardcode = to je jace od mene :B
+22:16 playahater| a shta se desilo pa se pojavili oni blokovi sa vitamina ?
+22:16 playahater| bilo ih u jednom trenutku na par kanala ..
+22:17 nenadkesic| ma nisam predvideo jos jedan iuslov na if
+22:17 nenadkesic| posto su vitamini ovi staticni nodovi sad
+22:17 playahater| vishe pitam zbog feature-a .. nego zbog bug-a
+22:17 playahater| :)
+22:17 nenadkesic| pa sam stavio filtriranje po putanji
+22:17 nenadkesic| vitamin/
+22:17 nenadkesic| i po $node->type == 'page'
+22:17 nenadkesic| ali prevideo sam da moze u panelima da se zadesi taj neki node
+22:17 nenadkesic| i onda se oma lepi na njega blok
+22:17 playahater| da da ..
+22:17 playahater| ladno ..
+22:18 playahater| :)
+22:18 playahater| ql ..
+22:18 nenadkesic| na kraju sam samo dodao filtriranje po argumentima
+22:18 nenadkesic| i to je to
+22:18 nenadkesic| al inace to je sad privremeno
+22:18 nenadkesic| posto vidim da je ideja da se sve pakuje u panele
+22:18 playahater| pa da .. 
+22:18 playahater| gde god moze ..
+22:18 nenadkesic| da, iako mi je to malo cudno
+22:18 playahater| mada imamo par nekih stvari van
+22:18 nenadkesic| zbog klijenta
+22:19 nenadkesic| oni to nece moci sami da edituju
+22:19 nenadkesic| odnosno mozda i 'oce
+22:19 playahater| pa ideja je da neko ode tamo .. sedi s njima mesec dana .. i nauchi ih kako se mrdaju blokovi gore/dole/levo/desno
+22:19 nenadkesic| mozda imaju tamo nekog majstora ko sto si ti ;)
+22:19 nenadkesic| isti tako samo sto ima onu feredzu :)
+22:19 nenadkesic| znao sam da palis u SA
+22:19 nenadkesic| he he
+22:19 playahater| hahaa
+22:20 nenadkesic| svrati malo do Dubaija
+22:20 playahater| ;)
+22:20 nenadkesic| tamo su dobre cice
+22:20 nenadkesic| ove manekenke
+22:20 nenadkesic| samo bro
+22:20 nenadkesic| moraces se naoruzas budzetom :)
+22:23 playahater| ma titju .. finansiratje alah ..
+22:23 playahater| :)
+22:23 nenadkesic| e, da
+22:23 nenadkesic| i ja sam cuo da je on dobrostojeci
+22:24 nenadkesic| cuj, kako i ne bi
+22:24 nenadkesic| ko sve veruje u njega, lo9lo
+22:24 playahater| ma to .. ima dobro glassachko telo .. :
+22:24 playahater| :)
+22:24 playahater| :P
+22:24 nenadkesic| he he :)
+22:24 playahater| nego ..
+22:24 playahater| si navatao jquery i ui kombinaciju ..
+22:25 playahater| jel lego 1.6?
+22:25 nenadkesic| pa radi 1.7
+22:25 nenadkesic| deluje da je problem
+22:25 nenadkesic| u jquery_update
+22:25 nenadkesic| da on mora dev verzija
+22:25 playahater| e .. da i on je drkosh ..
+22:25 nenadkesic| da bi bila kompatibilna sa 1.7
+22:25 nenadkesic| znam to od pre
+22:25 playahater| aha ..
+22:25 nenadkesic| mada uvek zaboravim tacnu kombinaciju 
+22:26 nenadkesic| uvek se iznova prisecam
+22:26 playahater| pa to .. x puta sam googlao istu stvar i opet ne znam :)
+22:26 nenadkesic| pa da, jbg i kad bi zapisivao
+22:26 nenadkesic| ne bi znao gde si zapisao :)
+22:26 playahater| taj fazon
+22:26 playahater| :)
+22:26 nenadkesic| mene dodatno urnisu browseri
+22:27 nenadkesic| ovi serveri imaju puno tih eksternih requesta
+22:27 nenadkesic| pa neki kao flash
+22:27 nenadkesic| pa ovo ono
+22:27 nenadkesic| na kraju Safari i FF
+22:27 nenadkesic| jako se ne vole
+22:27 nenadkesic| ode RAM i procesor do djavola
+22:27 nenadkesic| da ne verujes u sta se web pretvorio
+22:28 nenadkesic| sto tabova u oba naravno
+22:28 playahater| e da .. slazem se ..
+22:28 playahater| ALI ..
+22:29 playahater| 2.6.38 + minefield = jebe kevu ..
+22:29 playahater| ne osetjam web vishe ..
+22:29 playahater| preporodio sam se ..
+22:29 nenadkesic| w?
+22:29 nenadkesic| daj prosvetli me
+22:29 playahater| ram i dalje ostaje problem .. al x vishe ne zabada
+22:29 nenadkesic| ... Alaha ti
+22:30 playahater| aha .. da ..
+22:30 playahater| linux .. 
+22:30 playahater| kernel ..
+22:30 playahater| x server ..
+22:30 playahater| firefox4 = minefield
+22:30 playahater| :)
+22:30 nenadkesic| a, u redu je :)
+22:31 nenadkesic| sad gledam
+--- Log closed Sat Jan 22 22:36:29 2011
+--- Log opened Sat Jan 22 22:54:20 2011
+22:54 Closing query with nenadkesic
+--- Log closed Sat Jan 22 22:54:20 2011
+--- Log opened Sun Jan 23 17:19:50 2011
+17:19 Starting query in Bitlbee with nenadkesic
+17:19 playahater| yo bro ..
+17:20 playahater| reche da si nasho onu dialog redirekciju? ..
+17:22 nenadkesic| pa nisam 
+17:22 nenadkesic| nisam stigao da se bavim time
+17:22 nenadkesic| mislis na admina
+17:22 nenadkesic| ?
+17:23 nenadkesic| sto je uvek redirektovan na svoj edit page?
+17:23 nenadkesic| btw
+17:23 nenadkesic| zasto me nesto stalno baca na naslovnu stranu?
+17:23 nenadkesic| ili sam vec odlepio
+17:23 playahater| ne .. to sam sredio .. ali mi se opet javlja redirekcija na svaki login .. 
+17:23 playahater| reko mozda si naleteo ..
+17:23 playahater| ne mogu da nadjem ko je to ukenjao
+17:23 nenadkesic| imas sumnjiv kod
+17:23 playahater| :)
+17:23 nenadkesic| u auth_module
+17:24 playahater| sad tju da ga grepujem ..
+17:24 playahater| uglavnom .. kako te to uvek baca na front?
+17:24 playahater| prilikom login-a ?
+17:25 nenadkesic| ma na bilo kojoj putanji
+17:25 nenadkesic| al cek samo javicu ti
+17:26 playahater| uu .. to je neshto cudno ..
+17:27 nenadkesic| m3com_auth module
+17:27 nenadkesic| linija
+17:27 nenadkesic| 215
+17:27 nenadkesic| zatim linija
+17:27 nenadkesic| 226
+17:27 nenadkesic| i 235
+17:27 nenadkesic| te su mi nesto bile sumnjive
+17:27 nenadkesic| ali vrlo je moguce da i nije
+17:27 nenadkesic| no tako neki zajeb jeste negde ...
+--- Log closed Sun Jan 23 17:33:37 2011
+--- Log opened Sun Jan 23 17:37:57 2011
+17:37 playahater| o da .. auth smara ..
+17:38 playahater| iskomentarisao sam mu te redirect-ove .. pa nek budzi na pametniji nachin ..
+17:42 nenadkesic| i jel to uradilo posao?
+17:44 playahater| jeste ..
+17:44 nenadkesic| kuuul
+17:45 playahater| pa car radi redirect 3 puta .. i u tomprocesu je obuhvatio sve mogutje usere ..
+17:45 playahater| e jebiga .. pa ne moze .. :)
+17:45 playahater| brao .. catch .. :)
+17:47 Closing query with nenadkesic
+--- Log closed Sun Jan 23 17:47:51 2011
+--- Log opened Sun Jan 23 17:53:23 2011
+17:53 Starting query in Bitlbee with nenadkesic
+17:53 nenadkesic| np :)
+17:54 Closing query with nenadkesic
+--- Log closed Sun Jan 23 17:54:24 2011
+--- Log opened Thu Feb 03 17:18:37 2011
+17:18 Starting query in Bitlbee with nenadkesic
+17:18 nenadkesic| shefe
+17:18 nenadkesic| imam git smor
+17:18 nenadkesic| moze quick tip?
+17:18 nenadkesic| treba da komitujem nesto ...
+17:19 nenadkesic| evo sta mi izbacio
+17:19 nenadkesic| ! [rejected]        develop -> develop (non-fast-forward)
+17:19 nenadkesic| da ne gubim vreme sad po manualima
+17:20 playahater| e ..
+17:20 playahater| probaj opet
+17:20 playahater| :)
+17:20 playahater| server te jebe ..
+17:20 nenadkesic| cek
+17:20 playahater| ae ..
+17:20 playahater| nego .. mislim da sam uchukao js redosled ..
+17:20 nenadkesic| nece ...
+17:20 playahater| na order/bla mi ne izbacuje js error-e
+17:20 nenadkesic| kanda
+17:20 nenadkesic| za sad se ponasa fino
+17:20 nenadkesic| bacio sam oko
+17:20 playahater| radi,a?
+17:20 nenadkesic| sad sam bas chekirao
+17:21 nenadkesic| kul, da radi
+17:21 nenadkesic| ponasa se pristojno za sad :)
+17:21 nenadkesic| nego sta da radim sa ovim gitom
+17:21 nenadkesic| reko si ponovo samo "push"
+17:21 nenadkesic| ?
+17:21 nenadkesic| posto sam prethodno
+17:21 nenadkesic| uradio pull --rebase
+17:21 playahater| a git status ?
+17:21 playahater| shta vratja?
+17:21 nenadkesic| to uvek prvo uradim
+17:22 playahater| git status je clean?
+17:22 playahater| nothing to commit (working directory clean)
+17:22 playahater| ?
+17:22 nenadkesic| sve clean
+17:22 playahater| ako ti je clean .. onda samo .. git push origin develop
+17:22 nenadkesic| cek samo detaljno da proverim
+17:22 nenadkesic| sekund
+17:22 playahater| ako ti kaze rejected .. onda je do servera .. ne do tebe ..
+17:23 nenadkesic| Your branch is ahead of 'origin/develop' by 81 commits.
+17:23 nenadkesic| >>>>>>>
+17:23 playahater| ql .. to je ok .. 
+17:23 nenadkesic| evo ti ceo status
+17:23 nenadkesic| nk-mini:m3com nk-mini$ git status
+17:23 nenadkesic| # On branch develop
+17:23 nenadkesic| # Your branch is ahead of 'origin/develop' by 81 commits.
+17:23 nenadkesic| #
+17:23 nenadkesic| # Untracked files:
+17:23 nenadkesic| #   (use "git add <file>..." to include in what will be committed)
+17:23 nenadkesic| #
+17:23 nenadkesic| # sites/all/modules/ajaxsubmit-6.x-1.x-dev.tar.gz
+17:23 nenadkesic| # sites/all/modules/ajaxsubmit/
+17:23 nenadkesic| # sites/all/modules/custom/m3com_vitamin/js/jquery.validate.js
+17:23 nenadkesic| # sites/all/modules/custom/m3com_vitamin/js/m3com_vitamin.js.BACKUP
+17:23 nenadkesic| # sites/all/modules/custom/m3com_vitamin/m3com_vitamin.module.BACKUP
+17:23 nenadkesic| # sites/all/modules/custom/m3com_vitamin/templates/OLD_backup/
+17:23 nenadkesic| # sites/all/modules/custom/m3com_vitamin/templates/vitamin_order_first_tab.tpl.php.BACKUP
+17:23 nenadkesic| # sites/all/modules/custom/m3com_vitamin/vitamin_ctools_ajax_wizard.inc
+17:23 nenadkesic| # sites/all/modules/jquery_ui/jquery-ui-1.7.3.custom/
+17:23 nenadkesic| # sites/all/modules/jquery_ui/jquery-ui-1.8.9.custom/
+17:23 nenadkesic| # sites/all/modules/jquery_ui/jquery.ui-1.6/
+17:23 nenadkesic| # sites/all/modules/panels_tabs-6.x-1.0-rc6.tar.gz
+17:23 nenadkesic| # sites/all/modules/panels_tabs/
+17:23 nenadkesic| # sites/all/modules/tabs-6.x-1.3.tar.gz
+17:23 nenadkesic| # sites/all/modules/tabs/
+17:23 nenadkesic| nothing added to commit but untracked files present (use "git add" to track)
+17:23 nenadkesic| prethodno sam uradio commit
+17:24 nenadkesic| zatim pull --rebase
+17:24 nenadkesic| pa push
+17:24 nenadkesic| ali push nece
+17:24 playahater| pa fancy .. to je to ..
+17:24 playahater| nema shta ..
+17:24 playahater| pushuj dok ne prodje ..
+17:24 nenadkesic| ok, probacu ponovo
+17:24 playahater| ume beanstalk da zabode s vremena na vreme ..
+17:24 nenadkesic| oki
+17:24 nenadkesic| probacu kasnije
+17:25 nenadkesic| fala vi shefe
+17:25 playahater| ;)
+17:25 playahater| np
+17:25 playahater| nego .. shto se tiche js-ova ..
+17:25 playahater| ako budemo imali problema .. 
+17:25 playahater| naleteo sam na foru kad radish drupal_add_js .. da mu prosledish parametar scope=footer
+17:26 playahater| sad jurim kako da overajdujem celu stvar globalno .. pa da je default scope footer, a ne header
+17:26 nenadkesic| znam
+17:26 nenadkesic| aha
+17:26 nenadkesic| ima smisla
+--- Log closed Thu Feb 03 17:28:39 2011
+--- Log opened Thu Feb 03 17:29:23 2011
+17:29 Starting query in Bitlbee with nenadkesic
+17:29 playahater| yo .. puko mi irssi .. sorry ..
+17:29 playahater| ne znam shta mu bi ..
+17:30 playahater| uglavnom .. stvar za sad radi .. ako bude bilo neih problema .. mislim da tje scope da nam reshi stvar ..
+17:31 nenadkesic| oki
+17:31 nenadkesic| kul
+17:33 nenadkesic| e
+17:33 nenadkesic| neko ludilo mi je izbacio git sad
+17:34 nenadkesic| Auto-merging sites/all/modules/custom/m3com_auth/m3com_auth.module
+17:34 nenadkesic| Auto-merging sites/all/themes/m3com/m3com.info
+17:34 nenadkesic| CONFLICT (content): Merge conflict in sites/all/themes/m3com/m3com.info
+17:34 nenadkesic| Auto-merging sites/all/themes/m3com/scripts/webmail/login.js
+17:34 nenadkesic| CONFLICT (add/add): Merge conflict in sites/all/themes/m3com/scripts/webmail/login.js
+17:34 nenadkesic| Failed to merge in the changes.
+17:34 nenadkesic| Patch failed at 0004 Webmail integration - phase1
+17:34 nenadkesic|  
+17:34 nenadkesic| When you have resolved this problem run "git rebase --continue".
+17:34 nenadkesic| If you would prefer to skip this patch, instead run "git rebase --skip".
+17:34 nenadkesic| To restore the original branch and stop rebasing run "git rebase --abort".
+17:34 nenadkesic|  
+--- Log closed Thu Feb 03 17:39:50 2011
+--- Log opened Thu Feb 03 17:40:52 2011
+17:40 playahater| uh ..
+17:41 playahater| sad uletish u te fajlove gde tije izbacio CONFLICT .. i izbirshesh sranja tipa "<<" ">>" 
+17:41 playahater| prekontrolishesh da nema duplicate coda ..
+17:41 playahater| uradish git commit -a -m "resolving conflict"
+17:41 playahater| pa git pull
+17:41 playahater| pa git push
+17:42 playahater| shtima? :)
+17:42 nenadkesic| cek
+17:42 nenadkesic| ajd sad cu da vidim pa ti kazem
+17:42 playahater| ql .. tu sam .. ae ..
+17:44 nenadkesic| btw
+17:45 nenadkesic| pitanje
+17:45 nenadkesic| zasto mi u temi
+17:45 nenadkesic| m3com.info <http://m3com.info> 
+17:45 nenadkesic| zovemo gomilu JS fajlova koji su inace vec iuljuceni ?
+17:45 nenadkesic| a ne ustavi
+17:45 nenadkesic| komentovani su
+17:46 nenadkesic| jah
+17:46 playahater| al si me bacio u zbun .. :)
+17:46 playahater| znam da sam komentovao .. :) ..
+17:48 nenadkesic| pobrisao ove <<< HEAD-ove
+17:48 nenadkesic| (hedovinu:)
+17:48 nenadkesic| i nekakve 
+17:48 nenadkesic| ===========
+17:48 playahater| lol .. :)
+17:48 nenadkesic| u tim fajlovima
+17:48 playahater| ql ..
+17:48 nenadkesic| sad idem dalje pouputstvu
+17:48 playahater| ql
+17:48 playahater| ja sam tu ako zapne
+17:48 playahater| :)
+17:50 nenadkesic| git pull
+17:50 nenadkesic| samo
+17:50 nenadkesic| ili sa --rebase ?
+17:53 playahater| samo pull
+17:53 playahater| bez rebase
+17:53 nenadkesic| i opet nece push
+17:53 nenadkesic| opet mi je rejected
+17:53 nenadkesic| do djavolah
+17:54 playahater| jel si mogo nekad da pushujesh?
+17:54 playahater| glupo pitanje .. da .. ali mora pitam .. :)
+17:54 nenadkesic| pa jesam da radim to vec 2 nedelje crika :)
+17:55 playahater| chek da vidim da l ti je ok sve sa permisijama na beanstalku ..
+17:55 playahater| ja sam pushovao preminut ..
+17:55 playahater| proshlo ..
+17:55 playahater| mada i dalje sumnjam da je kombinacija .. tvoj isp i beanstalk ..
+17:55 playahater| chek da potrvdim te permisije ..
+17:56 nenadkesic| aj pls
+17:58 playahater| permisije su ok ..
+17:58 playahater| izgleda da te jebe server ..
+17:58 playahater| beanstalk je imao danas neku akciju oko sredjivanja servera ..
+17:58 playahater| probaj na par minuta push .. 
+17:58 nenadkesic| pa izgleda sam u problemu ,,,
+17:58 playahater| u jednom trenutku mora da prodje
+17:58 nenadkesic| ok, probacu kasnije
+17:58 playahater| ql ..
+--- Log closed Thu Feb 03 18:04:50 2011
+--- Log opened Thu Feb 03 19:08:44 2011
+19:08 Closing query with nenadkesic
+--- Log closed Thu Feb 03 19:08:44 2011
+--- Log opened Wed Feb 16 13:03:32 2011
+13:03 Starting query in Bitlbee with nenadkesic
+13:03 playahater| yo dude ..,
+13:03 playahater| imamo ..
+13:03 playahater| Fatal error: Cannot unset string offsets in /var/www/localhost/htdocs/m3com/sites/all/modules/cck/content.module on line 1312 
+13:04 nenadkesic| pa to je stari kod
+13:04 nenadkesic| da li ste podigli kod?
+13:05 nenadkesic| to je greska koju sam juce ispravljao
+13:06 playahater| pa ja sad pullovao u lokalu ..
+13:06 playahater| mozda je neko odavde neshto ukenjao ..
+13:06 nenadkesic| cek samo nesto da porverim
+13:07 playahater| ql
+13:07 playahater| :)
+13:08 nenadkesic| a mislim da znam sta je
+13:09 nenadkesic| imate viska polje u bazi
+13:09 nenadkesic| cek
+--- Log closed Wed Feb 16 13:14:05 2011
+--- Log opened Wed Feb 16 13:15:47 2011
+13:15 playahater| pokrenuo sam updatedb nakon pull-a
+13:16 nenadkesic| evo ti
+13:16 playahater| i nasho je qa 6_blabla
+13:16 nenadkesic| http://web3.m3com.com.sa/en/qa
+13:16 nenadkesic| tamo sljaka
+13:16 nenadkesic| trebalo je da se skloni to jedno polje iz baze
+13:16 nenadkesic| CCK
+13:16 nenadkesic| to treba i lokalno da uradis
+13:17 playahater| koja tabela? :)
+13:17 nenadkesic| lokalno
+13:17 nenadkesic| obrisi isto ovde
+13:17 nenadkesic| admin/content/node-type/questions/fields
+13:17 nenadkesic| i obrisi
+13:17 nenadkesic| field_question_title
+13:17 nenadkesic| to je to
+13:17 nenadkesic| pa javi
+13:19 playahater| ql ..
+13:19 playahater| chek ..
+13:21 playahater| yo .. sve ok shto se tiche fatal error-a ..
+13:21 playahater| ql
+13:21 playahater| :)
+13:22 playahater| inache .. sad na submit forme qa/ask-question-form, title pizdi da je prazan
+13:22 nenadkesic| nemoguce
+13:22 nenadkesic| da li si probam
+13:22 nenadkesic| na web3
+13:23 nenadkesic| upravo sam postovao
+13:23 nenadkesic| tamo
+13:23 nenadkesic| Question
+13:23 playahater| nisam na web .. sve vreme sam u lokalu ..
+13:23 nenadkesic| http://web3.m3com.com.sa/en/content/oh-amp-oh
+13:23 playahater| sorry
+13:23 playahater| chek da proverim tamo na serveru
+13:23 nenadkesic| ok
+13:23 nenadkesic| nf (nema frke)
+13:23 nenadkesic| ali vidi na web3
+13:23 nenadkesic| ima tu neki drugi bug sad vidim
+13:23 nenadkesic| a opet ne znam zasto
+13:23 nenadkesic| al to nema veze sa ovim
+13:27 playahater| isto i na web3 :( ..
+13:27 playahater| probavam kao admin ..
+13:27 playahater| title mu je prazan ..
+13:28 nenadkesic| ma ja sam sad postovao
+13:28 nenadkesic| kako je moguce
+13:28 nenadkesic| cek da porverim ponovo
+13:28 nenadkesic| cek
+13:30 nenadkesic| evo opet sam postova
+13:30 nenadkesic| http://web3.m3com.com.sa/en/content/sta-god
+13:30 nenadkesic| cek sta ti radis?
+13:30 nenadkesic| gde ides?
+13:30 playahater| hmm ..
+13:30 playahater| pa ..
+13:30 playahater| kao admin ..
+13:31 playahater| na ..
+13:31 playahater| http://web3.m3com.com.sa/qa/ask-question-form/
+13:31 playahater| tachnije na qa .. pa pupunim title ..
+13:31 nenadkesic| ides na /qa
+13:31 nenadkesic| tu postavis pitanje
+13:31 playahater| pa me on redirektuje
+13:31 nenadkesic| tako je
+13:31 playahater| i onda .. zabodenko .. :)
+13:31 playahater| (na submit)
+13:31 nenadkesic| pa kako
+13:31 nenadkesic| na web3 ?
+13:32 nenadkesic| jhm
+13:32 nenadkesic| imas skajp
+13:32 nenadkesic| ?
+13:32 nenadkesic| da ti pokazem moj ekran
+13:32 playahater| ima jeca .. sad tjemo kod nje ..
+13:32 nenadkesic| aj
+13:32 playahater| aj
+--- Log closed Wed Feb 16 13:38:05 2011
+--- Log opened Wed Feb 16 13:50:52 2011
+13:50 playahater| evo me .. :)
+13:51 nenadkesic| welcome back
+13:51 nenadkesic| ono sa skajpom je bilo heavy experience
+13:51 nenadkesic| :)
+13:51 nenadkesic| sad se vec lakse dise
+13:51 playahater| definitivno ..
+13:54 playahater| | nid    | answers_count | active | answer | field_question_title |
+13:54 nenadkesic| da
+13:54 nenadkesic| to generalno ima veze sa prikazom posle
+13:54 nenadkesic| ta nova kolona je napravila da bi se negde upisivala ta vrednost
+13:54 nenadkesic| e sad
+13:55 nenadkesic| to sto tebe title jebe
+13:55 playahater| da ..
+13:55 nenadkesic| ne bi trebalo da ima veze sa tim
+13:55 nenadkesic| al vidi gde je to
+13:55 nenadkesic| u kodu
+13:55 nenadkesic| function questions_validate($node) {
+13:55 nenadkesic|   $node->title = substr($node->field_question_title, 0, 250);
+13:55 nenadkesic|  
+13:55 nenadkesic| }
+13:58 playahater| da .. imam tu metodu ..
+13:58 nenadkesic| sad, meni se pokazalo da to radi
+13:58 nenadkesic| weirs
+13:58 nenadkesic| a neki cache clear
+13:58 nenadkesic| mada ne bi trebalo da ima veze
+13:59 nenadkesic| najcudnije u svemu je da je meni na web3 proslo
+13:59 nenadkesic| a tebi nije
+13:59 nenadkesic| ajde da nije tebi lokalno
+13:59 nenadkesic| pa da razmisljamo da je neki async
+13:59 nenadkesic| sta skripta slusa samo svog pisca? keve ti ...
+13:59 playahater| ae da brisnem shke/ logout/login na web3 pa da probam opet 
+14:00 nenadkesic| aj javi mi
+14:00 playahater| ql
+14:03 playahater| jebote .. ladno radi ...
+14:04 playahater| na web3
+14:04 playahater| koje ser qurac ovo deshava ..
+14:04 playahater| jebeni cache
+14:04 nenadkesic| nemam pojma
+14:04 nenadkesic| dao sam nalog skripti da ipak proradi :)
+14:04 playahater| sad tju isto da probam na lokalu
+14:04 playahater| hehe
+14:04 playahater| :)
+--- Log closed Wed Feb 16 14:10:05 2011
+--- Log opened Wed Feb 16 14:12:05 2011
+14:12 playahater| ista procedura u lokalu .. i ok ..
+14:12 playahater| radi ..
+14:12 playahater| dude ..
+14:12 playahater| Sorry za cim ..
+14:12 nenadkesic| nema frke dude
+14:12 nenadkesic| vazno je da radi
+14:12 nenadkesic| sve ok
+14:12 playahater| da da .. sve ok ..
+14:12 playahater| drush cc/logou/login/submit/success
+14:13 nenadkesic| nice :)
+--- Log closed Wed Feb 16 14:19:05 2011
+--- Log opened Wed Feb 16 14:35:13 2011
+14:35 Closing query with nenadkesic
+--- Log closed Wed Feb 16 14:35:13 2011

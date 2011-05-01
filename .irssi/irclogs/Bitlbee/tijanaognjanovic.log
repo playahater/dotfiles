@@ -1,0 +1,1354 @@
+--- Log opened Tue Sep 21 17:01:13 2010
+17:01 Starting query in Bitlbee with tijanaognjanovic
+17:01 tijanaognjanovic| zdravo
+17:01 playahater| dobar dan
+17:01 playahater| :)
+17:01 tijanaognjanovic| sta ima:)?
+17:02 playahater| bespotrebni blueprint cache 
+17:02 playahater| :)
+17:03 tijanaognjanovic| ko konfigurise "image magic"?
+--- Log closed Tue Sep 21 17:08:30 2010
+--- Log opened Tue Sep 21 18:05:30 2010
+18:05 playahater| kako ide?
+18:05 playahater| ja bih mogo da se ubacim u css .. :)
+18:05 tijanaognjanovic| imamo issue sa panelima:)
+18:05 tijanaognjanovic|  oces da dodjes
+18:06 playahater| ae
+18:06 tijanaognjanovic| do mene
+--- Log closed Tue Sep 21 18:11:30 2010
+--- Log opened Tue Sep 21 18:43:45 2010
+18:43 Closing query with tijanaognjanovic
+--- Log closed Tue Sep 21 18:43:45 2010
+--- Log opened Wed Sep 22 10:53:22 2010
+10:53 Starting query in Bitlbee with tijanaognjanovic
+10:53 playahater| pushovao moj style.css ..
+10:56 tijanaognjanovic| e xajde dodji pls
+--- Log closed Wed Sep 22 11:01:39 2010
+--- Log opened Wed Sep 22 11:18:07 2010
+11:18 playahater| sve ok kod mene .. vidim tvoj commit ..
+11:18 tijanaognjanovic| da ali ja ne vidim da je naso svoj template file:)
+11:18 tijanaognjanovic| sad cu vidim
+11:21 playahater| mogutje da je do m3com.info fajla i theme cache-a .. 
+11:22 playahater| sad tju da ga ujurim ..
+--- Log closed Wed Sep 22 11:27:39 2010
+--- Log opened Wed Sep 22 11:35:49 2010
+11:35 tijanaognjanovic| ne vredi, ja ne vidim ni jednu slovnu gresku:)
+11:36 tijanaognjanovic| a ne nalazi templejt
+11:36 playahater| majka mu stara .. ni ja ..
+11:36 tijanaognjanovic| xexe
+11:36 playahater| ne vidim greshku .. a ne radi ..
+11:36 playahater| moj identichan samo drugo ime je radio ..
+11:36 playahater| ne kontam ..
+11:38 tijanaognjanovic| ..ni ja:) vracas tvoj?
+11:38 playahater| probatju josh 2-3 klika ovaj tvoj
+11:38 playahater| iritira me jer ne znam shto ne radi ..
+11:38 playahater| :)
+11:38 playahater| osetjam da je glupost
+11:38 tijanaognjanovic| pa znam:) i mene
+11:40 tijanaognjanovic| e da nije donja crta u nazivu tpl fajla?
+11:41 playahater| mislim da nije ..
+11:41 playahater| mozda path do dir-a ..
+11:42 playahater| mozda mu se ne svidja layouts .. mozda hotje /plugins/blabla
+11:42 tijanaognjanovic| xm
+11:42 playahater| mada glupo
+11:42 tijanaognjanovic| aj provericu
+--- Log closed Wed Sep 22 11:47:39 2010
+--- Log opened Wed Sep 22 12:21:17 2010
+12:21 tijanaognjanovic| ok je sve
+12:21 tijanaognjanovic| u stvari ni ne treba templejt
+12:24 playahater| na klik ? :)
+--- Log closed Wed Sep 22 12:30:39 2010
+--- Log opened Wed Sep 22 12:31:19 2010
+12:31 Closing query with tijanaognjanovic
+--- Log closed Wed Sep 22 12:31:19 2010
+--- Log opened Mon Sep 27 12:39:01 2010
+12:39 Starting query in Bitlbee with tijanaognjanovic
+12:39 tijanaognjanovic| sta je sa admin menu-jem?
+12:39 tijanaognjanovic| ja ga ne vidim
+--- Log closed Mon Sep 27 12:44:12 2010
+--- Log opened Mon Sep 27 12:59:02 2010
+12:59 playahater| jedan sekund .. samo da komitujem .. :)
+13:02 playahater| git pull origin develop
+13:02 playahater| :)
+13:03 playahater| pa refresh ..
+13:03 playahater| :)
+13:03 Closing query with tijanaognjanovic
+--- Log closed Mon Sep 27 13:03:16 2010
+--- Log opened Mon Sep 27 14:30:11 2010
+14:30 Starting query in Bitlbee with tijanaognjanovic
+14:30 tijanaognjanovic| e sta si xteo?
+--- Log closed Mon Sep 27 14:35:12 2010
+--- Log opened Mon Sep 27 14:38:15 2010
+14:38 Closing query with tijanaognjanovic
+--- Log closed Mon Sep 27 14:38:15 2010
+--- Log opened Tue Oct 12 17:19:54 2010
+17:19 Starting query in Bitlbee with tijanaognjanovic
+17:19 tijanaognjanovic| kako ide markov mejl?
+17:20 playahater| marko?
+17:20 playahater| marko djordjevic ?
+17:20 playahater| marko obradovic?
+17:20 playahater| :)
+17:20 tijanaognjanovic| da, bio tu sa nama pre 2 nedelje
+17:20 tijanaognjanovic| ne
+17:20 tijanaognjanovic| decko koji je radio brightcove
+17:20 playahater| marko.djordjevic@agena.rs
+17:20 tijanaognjanovic| ok
+17:20 tijanaognjanovic| thanks
+--- Log closed Tue Oct 12 17:26:38 2010
+--- Log opened Tue Oct 12 17:31:06 2010
+17:31 tijanaognjanovic| jel znas sto mi prijavljuje ovo 
+17:31 tijanaognjanovic| Parse error: syntax error, unexpected $end in C:\wamp\www\m3com\sites\all\themes\m3com\block-header.tpl.php on line 46
+17:35 playahater| git pull --rebase origin develop
+--- Log closed Tue Oct 12 17:40:38 2010
+--- Log opened Tue Oct 12 17:58:58 2010
+17:58 playahater| $db_url['default'] = 'mysqli://root:agena@192.168.0.240/drupal_m3com'
+17:59 playahater| $db_url['m3com_log'] = 'mysqli://root:agena@192.168.0.240/drupal_m3com_log'
+--- Log closed Tue Oct 12 18:04:38 2010
+--- Log opened Tue Oct 12 18:11:21 2010
+18:11          <-- tijanaognjanovic has quit irc
+18:13 Closing query with tijanaognjanovic
+--- Log closed Tue Oct 12 18:13:05 2010
+--- Log opened Wed Oct 13 16:28:06 2010
+16:28 Starting query in Bitlbee with tijanaognjanovic
+16:28 tijanaognjanovic| ima page-islam.tpl i page-islam_channel.tpl 
+16:28 tijanaognjanovic| isto za news
+--- Log closed Wed Oct 13 16:34:10 2010
+--- Log opened Wed Oct 13 16:43:48 2010
+16:43 playahater| jeste .. ima .. :)
+16:43 Closing query with tijanaognjanovic
+--- Log closed Wed Oct 13 16:43:53 2010
+--- Log opened Fri Oct 15 12:49:49 2010
+12:49 Starting query in Bitlbee with tijanaognjanovic
+12:49 tijanaognjanovic| sta se koristi za ovu pomocnu navigaciju koja je padajuca?
+--- Log closed Fri Oct 15 12:55:31 2010
+--- Log opened Fri Oct 15 12:57:37 2010
+12:57 playahater| superfish .. ili kako se vetj zove skriptitj
+12:57 playahater| .. ako mislimo na isto .. :)
+12:57 Closing query with tijanaognjanovic
+--- Log closed Fri Oct 15 12:57:49 2010
+--- Log opened Fri Oct 15 12:57:57 2010
+12:57 Starting query in Bitlbee with tijanaognjanovic
+12:57 tijanaognjanovic| da
+12:58 tijanaognjanovic| znaci nema nice-menu-ja?
+13:00 playahater| koliko ja znam .. nema ..
+--- Log closed Fri Oct 15 13:06:31 2010
+--- Log opened Fri Oct 15 13:18:42 2010
+13:18 Closing query with tijanaognjanovic
+--- Log closed Fri Oct 15 13:18:42 2010
+--- Log opened Mon Oct 18 19:02:09 2010
+19:02 Starting query in Bitlbee with tijanaognjanovic
+19:02 tijanaognjanovic| jesi jos tu?
+19:02 tijanaognjanovic| mislim da cujem da se cujes jos:)
+--- Log closed Mon Oct 18 19:08:12 2010
+--- Log opened Mon Oct 18 19:12:10 2010
+19:12 playahater| of skroz .. kliktje se u najvetje .. :) ..
+19:12 tijanaognjanovic| jel se ne koristi div class="clear"
+19:12 tijanaognjanovic| ustvari mozes molim te da svratis do mene
+19:13 tijanaognjanovic| plz
+--- Log closed Mon Oct 18 19:18:12 2010
+--- Log opened Mon Oct 18 20:05:48 2010
+20:05 Closing query with tijanaognjanovic
+--- Log closed Mon Oct 18 20:05:48 2010
+--- Log opened Fri Oct 22 18:09:40 2010
+18:09 Starting query in Bitlbee with tijanaognjanovic
+18:09 tijanaognjanovic| <?php //print_r($form); ?>
+18:09 tijanaognjanovic| <?php 
+18:09 tijanaognjanovic| 	if($form['#parameters'][2])
+18:09 tijanaognjanovic| 	{ 
+18:09 tijanaognjanovic| ?>
+18:09 tijanaognjanovic| 		<div class="teaserHolder">
+18:09 tijanaognjanovic| 			<div class="teaserImage">
+18:09 tijanaognjanovic| 				<img src="<?php print base_path() ?>sites/all/themes/blueprint/images/newsletter.jpg" alt="Apply for newsletter - image" />
+18:09 tijanaognjanovic| 			</div>
+18:09 tijanaognjanovic| 			<div class="teaserText newsletter">
+18:09 tijanaognjanovic| 				<ul>
+18:09 tijanaognjanovic| 		         	<li><?php print drupal_render($form['email']) ?></li>
+18:09 tijanaognjanovic| 		         	<li><?php print drupal_render($form['lists']) ?></li>
+18:09 tijanaognjanovic| 		         	<li class="right"><?php print drupal_render($form['submit']) ?></li>
+18:09 tijanaognjanovic| 		         	<?php print drupal_render($form); ?>
+18:09 tijanaognjanovic| 				</ul>
+18:09 tijanaognjanovic| 			</div>
+18:09 tijanaognjanovic| 		</div>
+18:09 tijanaognjanovic| <?php 
+18:09 tijanaognjanovic| 	}
+18:15 playahater| q
+18:15 Closing query with tijanaognjanovic
+--- Log closed Fri Oct 22 18:15:17 2010
+--- Log opened Fri Oct 22 18:42:05 2010
+18:42 Starting query in Bitlbee with tijanaognjanovic
+18:42 tijanaognjanovic| div.view-views-islam-channel.view-display-id-block_8  -> div.view-islam-ma2zoun.view-display-id-page_4
+--- Log closed Fri Oct 22 18:47:39 2010
+--- Log opened Fri Oct 22 18:47:57 2010
+18:47 Closing query with tijanaognjanovic
+--- Log closed Fri Oct 22 18:47:57 2010
+--- Log opened Tue Oct 26 11:58:17 2010
+11:58 Starting query in Bitlbee with tijanaognjanovic
+11:58 playahater| http://geekandpoke.typepad.com/.a/6a00d8341d3df553ef0134885909e0970c-pi
+11:58 Closing query with tijanaognjanovic
+--- Log closed Tue Oct 26 11:58:21 2010
+--- Log opened Tue Oct 26 18:05:50 2010
+18:05 Starting query in Bitlbee with tijanaognjanovic
+18:05 tijanaognjanovic| http://docs.google.com/a/agena.rs/?tab=co#all
+--- Log closed Tue Oct 26 18:11:09 2010
+--- Log opened Tue Oct 26 18:42:40 2010
+18:42 Closing query with tijanaognjanovic
+--- Log closed Tue Oct 26 18:42:40 2010
+--- Log opened Wed Oct 27 12:00:15 2010
+12:00 Starting query in Bitlbee with tijanaognjanovic
+12:00 tijanaognjanovic| http://drupal.org/files/issues/pubdlcnt.php__0.patch
+--- Log closed Wed Oct 27 12:06:05 2010
+--- Log opened Wed Oct 27 13:04:36 2010
+13:04 Closing query with tijanaognjanovic
+--- Log closed Wed Oct 27 13:04:36 2010
+--- Log opened Thu Nov 04 16:12:46 2010
+16:12 Starting query in Bitlbee with tijanaognjanovic
+16:12 tijanaognjanovic| http://drupal.org/node/708086
+--- Log closed Thu Nov 04 16:17:59 2010
+--- Log opened Thu Nov 04 17:26:00 2010
+17:26 Closing query with tijanaognjanovic
+--- Log closed Thu Nov 04 17:26:00 2010
+--- Log opened Fri Nov 05 11:44:31 2010
+11:44 Starting query in Bitlbee with tijanaognjanovic
+11:44 tijanaognjanovic| ImageCache Temp Directory   -->	/Applications/MAMP/tmp/php is not writeable by the webserver.
+11:48 Closing query with tijanaognjanovic
+--- Log closed Fri Nov 05 11:48:45 2010
+--- Log opened Fri Nov 05 16:23:36 2010
+16:23 Starting query in Bitlbee with tijanaognjanovic
+16:23 tijanaognjanovic| .view-views-islam-channel.view-display-id-block_10
+--- Log closed Fri Nov 05 16:29:17 2010
+--- Log opened Fri Nov 05 18:32:04 2010
+18:32          <-- tijanaognjanovic has quit irc
+--- Log closed Fri Nov 05 18:37:17 2010
+--- Log opened Fri Nov 05 18:44:27 2010
+18:44 Closing query with tijanaognjanovic
+--- Log closed Fri Nov 05 18:44:27 2010
+--- Log opened Wed Nov 10 11:31:31 2010
+11:31 Starting query in Bitlbee with tijanaognjanovic
+11:31 tijanaognjanovic| http://www.stereomood.com
+--- Log closed Wed Nov 10 11:37:01 2010
+--- Log opened Wed Nov 10 11:40:30 2010
+11:40 Closing query with tijanaognjanovic
+--- Log closed Wed Nov 10 11:40:30 2010
+--- Log opened Thu Nov 11 16:46:19 2010
+16:46 Starting query in Bitlbee with tijanaognjanovic
+16:46 playahater| ae pull
+16:46 Closing query with tijanaognjanovic
+--- Log closed Thu Nov 11 16:46:21 2010
+--- Log opened Thu Nov 11 20:14:34 2010
+20:14 Starting query in Bitlbee with tijanaognjanovic
+20:14 playahater| http://stackoverflow.com/questions/800265/jquery-string-contains-manipulation
+--- Log closed Thu Nov 11 20:19:35 2010
+--- Log opened Thu Nov 11 20:23:58 2010
+20:23 Closing query with tijanaognjanovic
+--- Log closed Thu Nov 11 20:23:58 2010
+--- Log opened Mon Nov 15 16:58:16 2010
+16:58 Starting query in Bitlbee with tijanaognjanovic
+16:58 tijanaognjanovic| http://drupal.org/project/Advanced_Profile
+16:58 tijanaognjanovic| mozda bi trebalo da koristimo ovo
+17:02 playahater| najbolje rezultate daje kombinacija apk i content_profile .. 
+17:02 playahater| sve zavisi shta nama treba
+17:03 tijanaognjanovic| content_profile vec koristimo zar ne
+17:03 playahater| da
+--- Log closed Mon Nov 15 17:09:13 2010
+--- Log opened Mon Nov 15 17:39:06 2010
+17:39 Closing query with tijanaognjanovic
+--- Log closed Mon Nov 15 17:39:06 2010
+--- Log opened Tue Nov 16 12:41:17 2010
+12:41 Starting query in Bitlbee with tijanaognjanovic
+12:41 playahater| https://drupal.org/node/533358
+--- Log closed Tue Nov 16 12:46:57 2010
+--- Log opened Tue Nov 16 14:22:01 2010
+14:22 Closing query with tijanaognjanovic
+--- Log closed Tue Nov 16 14:22:01 2010
+--- Log opened Tue Nov 16 15:14:21 2010
+15:14 Starting query in Bitlbee with tijanaognjanovic
+15:14 playahater| http://www.agileapproach.com/blog-entry/using-hookviewsqueryalter-change-your-views-sort-order-0
+15:14 playahater| http://www.nicklewis.org/hook-views-query-alter-how-programatically-alter-views-queries
+--- Log closed Tue Nov 16 15:19:57 2010
+--- Log opened Tue Nov 16 15:49:54 2010
+15:49 Closing query with tijanaognjanovic
+--- Log closed Tue Nov 16 15:49:54 2010
+--- Log opened Tue Nov 16 15:50:38 2010
+15:50 Starting query in Bitlbee with tijanaognjanovic
+15:50 playahater| https://drupal.org/node/744102
+--- Log closed Tue Nov 16 15:55:57 2010
+--- Log opened Tue Nov 16 15:57:53 2010
+15:57 Closing query with tijanaognjanovic
+--- Log closed Tue Nov 16 15:57:53 2010
+--- Log opened Tue Nov 16 18:36:26 2010
+18:36 Starting query in Bitlbee with tijanaognjanovic
+18:36 playahater| https://drupal.org/project/views_slideshow_imageflow
+18:36 playahater| http://finnrudolph.de/ImageFlow/Examples#Reflection_background_color
+18:40 Closing query with tijanaognjanovic
+--- Log closed Tue Nov 16 18:40:34 2010
+--- Log opened Wed Nov 17 15:34:03 2010
+15:34 Starting query in Bitlbee with tijanaognjanovic
+15:34 playahater| https://drupal.org/project/galleria
+15:34 Closing query with tijanaognjanovic
+--- Log closed Wed Nov 17 15:34:06 2010
+--- Log opened Mon Nov 22 16:43:37 2010
+16:43 Starting query in Bitlbee with tijanaognjanovic
+--- Log closed Mon Nov 22 16:49:35 2010
+--- Log opened Mon Nov 22 16:54:58 2010
+16:54 playahater| http://client.agena.rs/m3com/prototype-html/_main/album/album-picture.html
+--- Log closed Mon Nov 22 17:00:35 2010
+--- Log opened Mon Nov 22 17:44:49 2010
+17:44          <-- tijanaognjanovic has quit irc
+--- Log closed Mon Nov 22 17:50:35 2010
+--- Log opened Mon Nov 22 17:56:02 2010
+17:56 Closing query with tijanaognjanovic
+--- Log closed Mon Nov 22 17:56:02 2010
+--- Log opened Tue Nov 23 14:41:40 2010
+14:41 Starting query in Bitlbee with tijanaognjanovic
+14:41 playahater| http://client.agena.rs/m3com/prototype-html/_main/album/album-picture.html
+--- Log closed Tue Nov 23 14:47:04 2010
+--- Log opened Tue Nov 23 16:51:14 2010
+16:51 Closing query with tijanaognjanovic
+--- Log closed Tue Nov 23 16:51:14 2010
+--- Log opened Fri Nov 26 18:09:37 2010
+18:09 Starting query in Bitlbee with tijanaognjanovic
+18:09 playahater| http://groups.drupal.org/node/10680
+18:12 Closing query with tijanaognjanovic
+--- Log closed Fri Nov 26 18:12:31 2010
+--- Log opened Mon Nov 29 14:41:08 2010
+14:41 Starting query in Bitlbee with tijanaognjanovic
+14:41 tijanaognjanovic| http://drupal.org/project/prev_next
+14:41 playahater| custom_pagers
+14:41 playahater| http://localhost/album/photo/tenis
+--- Log closed Mon Nov 29 14:46:54 2010
+--- Log opened Mon Nov 29 14:51:03 2010
+14:51 Closing query with tijanaognjanovic
+--- Log closed Mon Nov 29 14:51:03 2010
+--- Log opened Thu Dec 02 12:13:45 2010
+12:13 Starting query in Bitlbee with tijanaognjanovic
+12:13 tijanaognjanovic| http://deglos.com/blog/2010/10/06/overriding-urls-drupal-panel-pages
+12:17 tijanaognjanovic| http://www.linkedin.com/answers/technology/web-development/TCH_WDD/638120-11390634
+--- Log closed Thu Dec 02 12:22:56 2010
+--- Log opened Thu Dec 02 14:31:10 2010
+14:31          <-- tijanaognjanovic has quit irc
+--- Log closed Thu Dec 02 14:36:56 2010
+--- Log opened Thu Dec 02 14:49:53 2010
+14:49 tijanaognjanovic| http://groups.drupal.org/node/27232
+--- Log closed Thu Dec 02 14:54:56 2010
+--- Log opened Thu Dec 02 15:29:37 2010
+15:29 playahater| vidi ovo .. 
+15:29 playahater| http://drupal.org/node/215927#comment-786009
+15:29 playahater| :)
+15:31 playahater| ustvari .. ovo .. http://drupal.org/node/215927#comment-3320946
+--- Log closed Thu Dec 02 15:36:56 2010
+--- Log opened Thu Dec 02 16:01:10 2010
+16:01 playahater| http://drupal.org/project/ecard
+--- Log closed Thu Dec 02 16:06:56 2010
+--- Log opened Thu Dec 02 16:07:06 2010
+16:07 tijanaognjanovic| http://drupal.org/node/838936
+--- Log closed Thu Dec 02 16:12:56 2010
+--- Log opened Thu Dec 02 16:48:25 2010
+16:48 Closing query with tijanaognjanovic
+--- Log closed Thu Dec 02 16:48:25 2010
+--- Log opened Thu Dec 02 17:16:07 2010
+17:16 Starting query in Bitlbee with tijanaognjanovic
+17:16 playahater| http://drupal.org/node/260708
+--- Log closed Thu Dec 02 17:21:56 2010
+--- Log opened Thu Dec 02 17:30:15 2010
+17:30 Closing query with tijanaognjanovic
+--- Log closed Thu Dec 02 17:30:15 2010
+--- Log opened Fri Dec 03 18:55:24 2010
+18:55 Starting query in Bitlbee with tijanaognjanovic
+18:55 playahater| http://stackoverflow.com/questions/2418594/sum-all-input-elements-in-jquery
+--- Log closed Fri Dec 03 19:00:29 2010
+--- Log opened Fri Dec 03 19:06:56 2010
+19:06 playahater| http://api.jquery.com/keyup/
+19:12 playahater| http://stackoverflow.com/questions/2186283/jquery-help-running-a-keyup-event
+19:13 Closing query with tijanaognjanovic
+--- Log closed Fri Dec 03 19:13:07 2010
+--- Log opened Fri Dec 03 19:21:18 2010
+19:21 Starting query in Bitlbee with tijanaognjanovic
+19:21 tijanaognjanovic| drupal_add_js(base_path().path_to_theme().'scripts/family_budget_included.js','inline');
+19:22 Closing query with tijanaognjanovic
+--- Log closed Fri Dec 03 19:22:36 2010
+--- Log opened Mon Dec 06 19:00:10 2010
+19:00 Starting query in Bitlbee with tijanaognjanovic
+19:00 playahater| <?php
+19:00 playahater| print views_embed_view('search', 'page_1', array(23,44,100));
+19:00 playahater| http://groups.drupal.org/node/17397
+19:00 tijanaognjanovic| http://drupal.org/node/330959
+19:03 tijanaognjanovic| $view = views_get_view('views_tube_channel');
+19:03 tijanaognjanovic| echo $output = $view->preview('block_3', array($term_id));
+--- Log closed Mon Dec 06 19:09:15 2010
+--- Log opened Mon Dec 06 19:09:40 2010
+19:09          <-- tijanaognjanovic has quit irc
+--- Log closed Mon Dec 06 19:15:15 2010
+--- Log opened Mon Dec 06 19:16:31 2010
+19:16 Closing query with tijanaognjanovic
+--- Log closed Mon Dec 06 19:16:31 2010
+--- Log opened Wed Dec 08 15:15:59 2010
+15:15 Starting query in Bitlbee with tijanaognjanovic
+15:16 playahater| http://localhost/album/first-gallery/eeepc
+--- Log closed Wed Dec 08 15:21:24 2010
+--- Log opened Wed Dec 08 15:44:12 2010
+15:44 playahater| http://drupal.org/project/unlimited_css
+--- Log closed Wed Dec 08 15:49:24 2010
+--- Log opened Wed Dec 08 15:56:46 2010
+15:56 Closing query with tijanaognjanovic
+--- Log closed Wed Dec 08 15:56:46 2010
+--- Log opened Thu Dec 09 11:15:32 2010
+11:15 Starting query in Bitlbee with tijanaognjanovic
+11:15 playahater| http://localhost/album/first-gallery/digital-tree
+--- Log closed Thu Dec 09 11:20:58 2010
+--- Log opened Thu Dec 09 11:37:57 2010
+11:37 Closing query with tijanaognjanovic
+--- Log closed Thu Dec 09 11:37:57 2010
+--- Log opened Thu Dec 09 12:09:05 2010
+12:09 Starting query in Bitlbee with tijanaognjanovic
+12:09 tijanaognjanovic| .common-title ul.links .last
+--- Log closed Thu Dec 09 12:14:58 2010
+--- Log opened Thu Dec 09 12:17:05 2010
+12:17 Closing query with tijanaognjanovic
+--- Log closed Thu Dec 09 12:17:05 2010
+--- Log opened Fri Dec 10 11:40:26 2010
+11:40 Starting query in Bitlbee with tijanaognjanovic
+11:40 playahater| http://client.agena.rs/m3com/prototype-html/diwanee/110911/user_info.php
+--- Log closed Fri Dec 10 11:46:23 2010
+--- Log opened Fri Dec 10 12:07:00 2010
+12:07 Closing query with tijanaognjanovic
+--- Log closed Fri Dec 10 12:07:00 2010
+--- Log opened Fri Dec 10 13:01:36 2010
+13:01 Starting query in Bitlbee with tijanaognjanovic
+13:01 tijanaognjanovic| http://drupal.org/node/572078
+--- Log closed Fri Dec 10 13:07:23 2010
+--- Log opened Fri Dec 10 14:26:58 2010
+14:26 Closing query with tijanaognjanovic
+--- Log closed Fri Dec 10 14:26:58 2010
+--- Log opened Fri Dec 10 19:22:26 2010
+19:22 Starting query in Bitlbee with tijanaognjanovic
+19:22 tijanaognjanovic| http://www.imdb.com/title/tt1523483/
+--- Log closed Fri Dec 10 19:28:23 2010
+--- Log opened Fri Dec 10 20:23:00 2010
+20:23          <-- tijanaognjanovic has quit irc
+--- Log closed Fri Dec 10 20:28:23 2010
+--- Log opened Sat Dec 11 10:43:38 2010
+10:43 playahater| http://drupal.org/node/224913
+--- Log closed Sat Dec 11 10:49:29 2010
+--- Log opened Sat Dec 11 11:57:15 2010
+11:57 Closing query with tijanaognjanovic
+--- Log closed Sat Dec 11 11:57:15 2010
+--- Log opened Sat Dec 11 17:09:34 2010
+17:09 Starting query in Bitlbee with tijanaognjanovic
+17:09 playahater| http://coffeeshopped.com/2010/10/drupal-create-placeholder-and-separator-menu-items-via-your-theme
+--- Log closed Sat Dec 11 17:15:29 2010
+--- Log opened Sat Dec 11 19:10:18 2010
+19:10 Closing query with tijanaognjanovic
+--- Log closed Sat Dec 11 19:10:18 2010
+--- Log opened Sat Dec 11 19:10:55 2010
+19:10 Starting query in Bitlbee with tijanaognjanovic
+19:10 playahater| netje
+19:11 playahater| opet netje
+19:11 tijanaognjanovic| ..sites/all/themes/m3com/images/button-upload.jpg
+19:11 tijanaognjanovic| Tijana: sites/all/themes/m3com/images/button-upload.jpg
+19:11 tijanaognjanovic| Tijana: sites/all/themes/m3com/images/button-upload.jpg
+--- Log closed Sat Dec 11 19:17:29 2010
+--- Log opened Sat Dec 11 19:23:00 2010
+19:23 Closing query with tijanaognjanovic
+--- Log closed Sat Dec 11 19:23:00 2010
+--- Log opened Mon Dec 13 15:49:25 2010
+15:49 Starting query in Bitlbee with tijanaognjanovic
+15:49 playahater| http://localhost/en/islam/audio/random
+--- Log closed Mon Dec 13 15:55:25 2010
+--- Log opened Mon Dec 13 15:55:33 2010
+15:55 Closing query with tijanaognjanovic
+--- Log closed Mon Dec 13 15:55:33 2010
+--- Log opened Mon Dec 13 16:52:17 2010
+16:52 Starting query in Bitlbee with tijanaognjanovic
+16:52 tijanaognjanovic| <div class="span-21 comment-bar pane-print-0">
+16:52 tijanaognjanovic| 	<div class="span-9 last controls">
+16:52 tijanaognjanovic| 		<div class="span-2">
+16:52 tijanaognjanovic| 			<div class="span-1 last"><?php print print_insert_link(); ?></div>
+16:52 tijanaognjanovic| 		</div>
+16:52 tijanaognjanovic| 		<div class="span-7 last">
+16:52 tijanaognjanovic| 			<div class="span-4 last flag-make-favorite"><?php print flag_create_link('node_make_favorite', $node->nid); ?></div>
+16:52 tijanaognjanovic| 		</div>
+16:52 tijanaognjanovic| 	</div>
+16:52 tijanaognjanovic| 	<div class="span-12 last rating ">
+16:52 tijanaognjanovic| 		<?php print $node->content['fivestar_widget']['#value']; ?>		
+16:52 tijanaognjanovic| 	</div>
+16:52 tijanaognjanovic| 	<div class="clear"></div> 
+16:52 tijanaognjanovic| </div>
+16:52 playahater| sites/all/modules/flag/theme/flag.tpl.php
+--- Log closed Mon Dec 13 16:58:25 2010
+--- Log opened Mon Dec 13 16:59:32 2010
+16:59 playahater| pull
+16:59 playahater| sites/all/themes/m3com/templates/flag.tpl.php
+16:59 Closing query with tijanaognjanovic
+--- Log closed Mon Dec 13 16:59:38 2010
+--- Log opened Tue Dec 14 17:46:03 2010
+17:46 Starting query in Bitlbee with tijanaognjanovic
+17:46 playahater| http://drupal.org/node/665154
+--- Log closed Tue Dec 14 17:51:24 2010
+--- Log opened Tue Dec 14 18:02:29 2010
+18:02 Closing query with tijanaognjanovic
+--- Log closed Tue Dec 14 18:02:29 2010
+--- Log opened Thu Dec 16 13:20:43 2010
+13:20 Starting query in Bitlbee with tijanaognjanovic
+13:20 tijanaognjanovic| http://espaceculturel-leclerc.com/
+--- Log closed Thu Dec 16 13:26:16 2010
+--- Log opened Thu Dec 16 13:38:56 2010
+13:38 Closing query with tijanaognjanovic
+--- Log closed Thu Dec 16 13:38:56 2010
+--- Log opened Tue Dec 21 14:41:27 2010
+14:41 Starting query in Bitlbee with tijanaognjanovic
+14:41 playahater| http://drupal.org/node/552618
+--- Log closed Tue Dec 21 14:46:35 2010
+--- Log opened Tue Dec 21 15:19:34 2010
+15:19 Closing query with tijanaognjanovic
+--- Log closed Tue Dec 21 15:19:34 2010
+--- Log opened Tue Dec 21 17:36:03 2010
+17:36 Starting query in Bitlbee with tijanaognjanovic
+17:36 tijanaognjanovic| http://drupal.org/project/atrium_answers
+17:36 tijanaognjanovic| http://openatrium.com/
+17:37 tijanaognjanovic| http://drupal.org/project/question_answer
+--- Log closed Tue Dec 21 17:42:35 2010
+--- Log opened Tue Dec 21 17:49:54 2010
+17:49 Closing query with tijanaognjanovic
+--- Log closed Tue Dec 21 17:49:54 2010
+--- Log opened Wed Dec 22 15:24:51 2010
+15:24 Starting query in Bitlbee with tijanaognjanovic
+15:24 tijanaognjanovic| http://more.zites.net/embed-a-node-form-with-drupal-6
+15:25 tijanaognjanovic| jel bi ovo iskoristio za node/add formu
+15:27 playahater| pa da .. deluje mi kao dobra solucija ..
+15:27 playahater| ae da bacim neki srch .. u nadi da ima neshto jednostavnije ..
+15:27 playahater| :)
+15:28 playahater| za koji ct je to beshe?
+15:28 playahater| wedding-guest ?
+15:28 tijanaognjanovic| wedding_guest
+15:28 playahater| ql
+15:30 playahater| to si primenila ovo reshenje sa ovog bloga?
+--- Log closed Wed Dec 22 15:35:45 2010
+--- Log opened Wed Dec 22 15:42:19 2010
+15:42 playahater| kolko vidim mora da se alteruje cela forma u custom modulu i isprinta ista u custom bloku ..
+15:42 playahater| neshto tipa ..
+15:42 playahater| http://drupalcode.org/viewvc/drupal/contributions/sandbox/fago/embed_example/embed_example.module?view=markup
+15:42 playahater| ali nije bash samo copy/paste ..
+15:42 playahater| :/
+15:42 playahater| poigratju se ja sa tim ..
+--- Log closed Wed Dec 22 15:48:45 2010
+--- Log opened Wed Dec 22 15:59:55 2010
+15:59 Closing query with tijanaognjanovic
+--- Log closed Wed Dec 22 15:59:55 2010
+--- Log opened Wed Dec 22 17:08:34 2010
+17:08 Starting query in Bitlbee with tijanaognjanovic
+17:08 playahater| wedding-guest je family channel ?
+--- Log closed Wed Dec 22 17:13:45 2010
+--- Log opened Wed Dec 22 17:14:14 2010
+17:14 Closing query with tijanaognjanovic
+--- Log closed Wed Dec 22 17:14:14 2010
+--- Log opened Wed Dec 22 17:43:10 2010
+17:43 Starting query in Bitlbee with tijanaognjanovic
+17:43 playahater| polovichno sam reshio problem 
+17:43 playahater| :)
+17:43 playahater| http://localhost/family/wedding/addguest
+17:43 playahater| treba ubaciti josh redirect
+--- Log closed Wed Dec 22 17:48:45 2010
+--- Log opened Wed Dec 22 17:55:16 2010
+17:55 tijanaognjanovic| http://kids.m3com.com.sa/friends
+--- Log closed Wed Dec 22 18:00:45 2010
+--- Log opened Wed Dec 22 18:17:33 2010
+18:17 Closing query with tijanaognjanovic
+--- Log closed Wed Dec 22 18:17:33 2010
+--- Log opened Thu Dec 23 14:00:17 2010
+14:00 Starting query in Bitlbee with tijanaognjanovic
+14:00 tijanaognjanovic| sta dodam da se forma resetuje posle dodavanja guest-a?
+--- Log closed Thu Dec 23 14:05:40 2010
+--- Log opened Thu Dec 23 14:11:02 2010
+14:11 playahater| to sam vetj uradio
+14:11 playahater| pull
+14:11 playahater| :)
+14:11 Closing query with tijanaognjanovic
+--- Log closed Thu Dec 23 14:11:11 2010
+--- Log opened Thu Dec 23 14:11:13 2010
+14:11 Starting query in Bitlbee with tijanaognjanovic
+14:11 tijanaognjanovic| ok:)
+14:11 Closing query with tijanaognjanovic
+--- Log closed Thu Dec 23 14:11:17 2010
+--- Log opened Thu Dec 23 18:48:21 2010
+18:48 Starting query in Bitlbee with tijanaognjanovic
+18:48 tijanaognjanovic| http://kids.m3com.com.sa/quiz
+18:48 tijanaognjanovic| http://client.agena.rs/m3com/prototype-html/_main/kids/kids-quiz.html
+--- Log closed Thu Dec 23 18:53:40 2010
+--- Log opened Thu Dec 23 19:05:54 2010
+19:05 Closing query with tijanaognjanovic
+--- Log closed Thu Dec 23 19:05:54 2010
+--- Log opened Fri Dec 24 10:46:17 2010
+10:46 Starting query in Bitlbee with tijanaognjanovic
+10:46 tijanaognjanovic| the feeds will be changed to Korabia (ip:196.204.80.146, port:36,
+10:46 tijanaognjanovic| username:m3com, password:m3com#admin) this feed also contains the data for
+10:46 tijanaognjanovic| the islam news section on m3com.
+--- Log closed Fri Dec 24 10:52:16 2010
+--- Log opened Fri Dec 24 11:31:37 2010
+11:31 Closing query with tijanaognjanovic
+--- Log closed Fri Dec 24 11:31:37 2010
+--- Log opened Fri Dec 24 12:44:26 2010
+12:44 Starting query in Bitlbee with tijanaognjanovic
+12:44 tijanaognjanovic| http://client.agena.rs/m3com/prototype-html/_main/kids/kids-video.html
+--- Log closed Fri Dec 24 12:50:16 2010
+--- Log opened Fri Dec 24 12:52:07 2010
+12:52 playahater| http://www.cveticdesign.com/kolekcija/za_devojcice
+--- Log closed Fri Dec 24 12:57:16 2010
+--- Log opened Fri Dec 24 13:12:26 2010
+13:12 Closing query with tijanaognjanovic
+--- Log closed Fri Dec 24 13:12:26 2010
+--- Log opened Fri Dec 24 15:19:17 2010
+15:19 Starting query in Bitlbee with tijanaognjanovic
+15:19 playahater| 9223372036854775807
+--- Log closed Fri Dec 24 15:25:16 2010
+--- Log opened Fri Dec 24 15:58:04 2010
+15:58 tijanaognjanovic| ovaj tvoj broj je kod mene ostao upamcen kao 2147483647 :))
+--- Log closed Fri Dec 24 16:03:16 2010
+--- Log opened Fri Dec 24 16:17:43 2010
+16:17 Closing query with tijanaognjanovic
+--- Log closed Fri Dec 24 16:17:43 2010
+--- Log opened Fri Dec 24 17:07:58 2010
+17:07 Starting query in Bitlbee with tijanaognjanovic
+17:07 tijanaognjanovic| http://client.agena.rs/m3com/prototype-html/_main/kids/kids-joke.html
+--- Log closed Fri Dec 24 17:13:44 2010
+--- Log opened Fri Dec 24 17:19:06 2010
+17:19 playahater| http://localhost/en/naqa/naqa-net
+--- Log closed Fri Dec 24 17:24:44 2010
+--- Log opened Fri Dec 24 17:31:21 2010
+17:31 playahater| sites/all/themes/m3com/layouts/twocolbg/twocolbg.tpl.php
+--- Log closed Fri Dec 24 17:36:44 2010
+--- Log opened Fri Dec 24 17:37:51 2010
+17:37 Closing query with tijanaognjanovic
+--- Log closed Fri Dec 24 17:37:51 2010
+--- Log opened Fri Dec 24 17:43:36 2010
+17:43 Starting query in Bitlbee with tijanaognjanovic
+17:43 playahater| http://drupal.org/files/issues/quiz4-503228-single-page-quiz.patch
+--- Log closed Fri Dec 24 17:48:44 2010
+--- Log opened Fri Dec 24 17:52:27 2010
+17:52 Closing query with tijanaognjanovic
+--- Log closed Fri Dec 24 17:52:27 2010
+--- Log opened Mon Dec 27 15:19:29 2010
+15:19 Starting query in Bitlbee with tijanaognjanovic
+15:19 tijanaognjanovic| http://localhost:8181/kids/kids-treasure/treasure-1
+--- Log closed Mon Dec 27 15:25:07 2010
+--- Log opened Mon Dec 27 15:57:57 2010
+15:57 Closing query with tijanaognjanovic
+--- Log closed Mon Dec 27 15:57:57 2010
+--- Log opened Mon Dec 27 16:24:06 2010
+16:24 Starting query in Bitlbee with tijanaognjanovic
+16:24 tijanaognjanovic| http://client.agena.rs/m3com/prototype-html/_main/kids/kids-channel.html
+--- Log closed Mon Dec 27 16:29:07 2010
+--- Log opened Mon Dec 27 17:56:49 2010
+17:56 Closing query with tijanaognjanovic
+--- Log closed Mon Dec 27 17:56:49 2010
+--- Log opened Tue Dec 28 11:46:14 2010
+11:46 Starting query in Bitlbee with tijanaognjanovic
+11:46 playahater| http://localhost/node/add/kids-video
+--- Log closed Tue Dec 28 11:51:47 2010
+--- Log opened Tue Dec 28 12:05:35 2010
+12:05 Closing query with tijanaognjanovic
+--- Log closed Tue Dec 28 12:05:35 2010
+--- Log opened Wed Dec 29 14:45:23 2010
+14:45 Starting query in Bitlbee with tijanaognjanovic
+14:45 tijanaognjanovic| http://client.agena.rs/m3com/prototype-html/_main/kids/kids-joke-confirmation.html
+14:46 Closing query with tijanaognjanovic
+--- Log closed Wed Dec 29 14:46:12 2010
+--- Log opened Wed Dec 29 15:01:56 2010
+15:01 Starting query in Bitlbee with tijanaognjanovic
+15:01 playahater| a cleaving tool for splitting cask staves and shingles from the block
+15:03 Closing query with tijanaognjanovic
+--- Log closed Wed Dec 29 15:03:19 2010
+--- Log opened Wed Dec 29 18:40:33 2010
+18:40 Starting query in Bitlbee with tijanaognjanovic
+18:40 tijanaognjanovic| http://localhost:8181/kids/upload-joke-confirmation
+--- Log closed Wed Dec 29 18:46:10 2010
+--- Log opened Wed Dec 29 19:18:19 2010
+19:18 Closing query with tijanaognjanovic
+--- Log closed Wed Dec 29 19:18:19 2010
+--- Log opened Wed Dec 29 20:20:58 2010
+20:20 Starting query in Bitlbee with tijanaognjanovic
+20:20 playahater| http://drupal.org/node/891974
+20:24 playahater| http://drupal.org/node/326182
+20:28 Closing query with tijanaognjanovic
+--- Log closed Wed Dec 29 20:28:58 2010
+--- Log opened Thu Dec 30 13:40:56 2010
+13:40 Starting query in Bitlbee with tijanaognjanovic
+13:40 tijanaognjanovic| http://localhost:8181/en/node/1710/edit
+--- Log closed Thu Dec 30 13:46:22 2010
+--- Log opened Thu Dec 30 14:48:37 2010
+14:48 Closing query with tijanaognjanovic
+--- Log closed Thu Dec 30 14:48:37 2010
+--- Log opened Mon Jan 10 17:44:34 2011
+17:44 Starting query in Bitlbee with tijanaognjanovic
+17:44 tijanaognjanovic| http://localhost:8181/en/admin/build/views/edit/views_m3com_taxonomy
+17:44 tijanaognjanovic| poslednji displej
+--- Log closed Mon Jan 10 17:49:50 2011
+--- Log opened Mon Jan 10 17:51:10 2011
+17:51 tijanaognjanovic| http://localhost:8181/kids/treasures
+17:51 tijanaognjanovic| http://localhost:8181/kids/stories
+--- Log closed Mon Jan 10 17:56:50 2011
+--- Log opened Mon Jan 10 18:21:25 2011
+18:21 Closing query with tijanaognjanovic
+--- Log closed Mon Jan 10 18:21:25 2011
+--- Log opened Tue Jan 11 18:06:27 2011
+18:06 Starting query in Bitlbee with tijanaognjanovic
+18:06 tijanaognjanovic| /kids/quiz/quiz-1/take
+--- Log closed Tue Jan 11 18:11:34 2011
+--- Log opened Tue Jan 11 19:14:28 2011
+19:14          <-- tijanaognjanovic has quit irc
+19:15 Closing query with tijanaognjanovic
+--- Log closed Tue Jan 11 19:15:43 2011
+--- Log opened Wed Jan 12 11:10:52 2011
+11:10 Starting query in Bitlbee with tijanaognjanovic
+11:10 tijanaognjanovic| http://drupal.org/node/487004
+--- Log closed Wed Jan 12 11:16:22 2011
+--- Log opened Wed Jan 12 11:38:55 2011
+11:38 Closing query with tijanaognjanovic
+--- Log closed Wed Jan 12 11:38:55 2011
+--- Log opened Thu Jan 13 12:11:33 2011
+12:11 Starting query in Bitlbee with tijanaognjanovic
+12:11 playahater| http://drupal.org/project/profile_setup
+12:11 Closing query with tijanaognjanovic
+--- Log closed Thu Jan 13 12:11:37 2011
+--- Log opened Thu Jan 13 13:08:18 2011
+13:08 Starting query in Bitlbee with tijanaognjanovic
+13:08 tijanaognjanovic| kad sam otstampala neke formID-eve na svakoj strani se ukljucuju i: m3com_prayertimes_date_converter_block   m3com_prayertimes_calculator_block
+13:08 tijanaognjanovic| jel to ok?
+--- Log closed Thu Jan 13 13:13:50 2011
+--- Log opened Thu Jan 13 13:49:57 2011
+13:49 playahater| http://www.jankoatwarpspeed.com/post/2009/09/28/webform-wizard-jquery.aspx
+--- Log closed Thu Jan 13 13:55:50 2011
+--- Log opened Thu Jan 13 14:02:16 2011
+14:02 Closing query with tijanaognjanovic
+--- Log closed Thu Jan 13 14:02:16 2011
+--- Log opened Thu Jan 13 15:28:00 2011
+15:28 Starting query in Bitlbee with tijanaognjanovic
+15:28 playahater| http://drupal.org/node/864654#comment-3248358
+15:30 Closing query with tijanaognjanovic
+--- Log closed Thu Jan 13 15:30:04 2011
+--- Log opened Thu Jan 13 15:38:37 2011
+15:38 Starting query in Bitlbee with tijanaognjanovic
+15:38 playahater| http://drupal.org/node/889574
+15:38 Closing query with tijanaognjanovic
+--- Log closed Thu Jan 13 15:38:41 2011
+--- Log opened Thu Jan 13 17:52:23 2011
+17:52 Starting query in Bitlbee with tijanaognjanovic
+17:52 tijanaognjanovic| function user_register_submit(
+17:52 tijanaognjanovic| iz user.module
+17:53 tijanaognjanovic| function _user_password_dynamic_validation() {
+--- Log closed Thu Jan 13 17:58:50 2011
+--- Log opened Thu Jan 13 18:03:29 2011
+18:03 Closing query with tijanaognjanovic
+--- Log closed Thu Jan 13 18:03:29 2011
+--- Log opened Thu Jan 13 18:27:17 2011
+18:27 Starting query in Bitlbee with tijanaognjanovic
+18:27 tijanaognjanovic| http://drupal.org/node/860316#comment-3230238
+--- Log closed Thu Jan 13 18:29:35 2011
+--- Log opened Fri Jan 14 10:54:07 2011
+10:54 Starting query in Bitlbee with tijanaognjanovic
+10:54 playahater| $form['#cache] = TRUE
+--- Log closed Fri Jan 14 10:59:49 2011
+--- Log opened Fri Jan 14 11:49:06 2011
+11:49 Closing query with tijanaognjanovic
+--- Log closed Fri Jan 14 11:49:06 2011
+--- Log opened Fri Jan 14 15:01:32 2011
+15:01 Starting query in Bitlbee with tijanaognjanovic
+15:01 tijanaognjanovic| email change confirmation module
+15:03 tijanaognjanovic| http://drupal.org/project/multiple_email
+--- Log closed Fri Jan 14 15:08:49 2011
+--- Log opened Fri Jan 14 15:47:58 2011
+15:47 tijanaognjanovic| kids/quiz/quiz-time-up
+15:48 tijanaognjanovic| odnosno node/18789
+--- Log closed Fri Jan 14 15:53:49 2011
+--- Log opened Fri Jan 14 16:33:48 2011
+16:33 playahater| http://stackoverflow.com/questions/31044/is-there-an-exists-function-for-jquery
+--- Log closed Fri Jan 14 16:38:49 2011
+--- Log opened Fri Jan 14 16:43:06 2011
+16:43 playahater| http://www.youtube.com/watch?v=C-z-_FG8e5U
+16:43 playahater| http://www.youtube.com/watch?v=qq6iEKVLzWY&feature=related
+16:44 playahater| http://drupal.org/node/305225
+16:46 tijanaognjanovic| print swf($node->field_video[0]['filepath'], array('params' =>  array('height' => '600', 'width' => '800', 'wmode' => 'opaque','bgcolor' => '', 'movie' => 'http://orange.ledjam.com/flv/player.swf')));
+--- Log closed Fri Jan 14 16:51:49 2011
+--- Log opened Fri Jan 14 17:00:59 2011
+17:00 playahater| http://drupal.org/project/email_verify
+17:02 playahater| http://drupal.org/node/582764
+--- Log closed Fri Jan 14 17:08:49 2011
+--- Log opened Fri Jan 14 17:21:38 2011
+17:21 playahater| http://www.youtube.com/watch?v=WjQTP39y2gQ&amp;NR=1
+--- Log closed Fri Jan 14 17:26:49 2011
+--- Log opened Fri Jan 14 17:40:23 2011
+17:40 Closing query with tijanaognjanovic
+--- Log closed Fri Jan 14 17:40:23 2011
+--- Log opened Wed Jan 26 17:07:09 2011
+17:07 Starting query in Bitlbee with tijanaognjanovic
+17:07 tijanaognjanovic| http://localhost:8181/register
+--- Log closed Wed Jan 26 17:12:27 2011
+--- Log opened Wed Jan 26 17:39:07 2011
+17:39 Closing query with tijanaognjanovic
+--- Log closed Wed Jan 26 17:39:07 2011
+--- Log opened Thu Jan 27 16:22:23 2011
+16:22 Starting query in Bitlbee with tijanaognjanovic
+16:22 tijanaognjanovic| http://drupal.org/node/572894#comment-3976166
+16:24 tijanaognjanovic| mislim da cu da isprobam ovaj poslednji koment, posto je quiz modul vec straaaaasno ishakovan
+16:24 tijanaognjanovic| pa se nadam se nece pokvariti od jos 3 linijice
+--- Log closed Thu Jan 27 16:30:23 2011
+--- Log opened Thu Jan 27 17:14:18 2011
+17:14 Closing query with tijanaognjanovic
+--- Log closed Thu Jan 27 17:14:18 2011
+--- Log opened Thu Jan 27 18:52:50 2011
+18:52 Starting query in Bitlbee with tijanaognjanovic
+18:52 tijanaognjanovic| http://drupal.org/node/503228#comment-3422992
+--- Log closed Thu Jan 27 18:58:23 2011
+--- Log opened Thu Jan 27 19:49:37 2011
+19:49 Closing query with tijanaognjanovic
+--- Log closed Thu Jan 27 19:49:37 2011
+--- Log opened Mon Jan 31 16:53:46 2011
+16:53 Starting query in Bitlbee with tijanaognjanovic
+16:53 playahater| kids/upload-image-confirmation
+--- Log closed Mon Jan 31 16:59:17 2011
+--- Log opened Mon Jan 31 17:22:31 2011
+17:22 Closing query with tijanaognjanovic
+--- Log closed Mon Jan 31 17:22:31 2011
+--- Log opened Tue Feb 01 12:26:18 2011
+12:26 Starting query in Bitlbee with tijanaognjanovic
+12:26 tijanaognjanovic| jel zans za sta je ovo bilo potrebno: 
+12:26 tijanaognjanovic| html.js fieldset.collapsible legend { background-color: #EDEDED; } (m3com.css red 485)
+12:28 playahater| dsl form na user/login && user/register strani ..
+12:28 Closing query with tijanaognjanovic
+--- Log closed Tue Feb 01 12:28:27 2011
+--- Log opened Tue Feb 01 12:28:40 2011
+12:28 Starting query in Bitlbee with tijanaognjanovic
+12:28 tijanaognjanovic| ali to mora da se gadja prko id-a stranice
+12:28 tijanaognjanovic| jer ovako sve gadja
+12:29 playahater| znam .. mozda je htela da pogodi sve .. :)
+--- Log closed Tue Feb 01 12:34:41 2011
+--- Log opened Tue Feb 01 12:57:37 2011
+12:57 Closing query with tijanaognjanovic
+--- Log closed Tue Feb 01 12:57:37 2011
+--- Log opened Tue Feb 01 17:56:12 2011
+17:56 Starting query in Bitlbee with tijanaognjanovic
+17:56 playahater| family/family-and-society
+17:56 playahater| http://localhost/en/admin/build/pages/nojs/operation/page-family_channel/handlers/page_family_channel_panel_context_6/content
+--- Log closed Tue Feb 01 18:02:41 2011
+--- Log opened Tue Feb 01 18:37:24 2011
+18:37 Closing query with tijanaognjanovic
+--- Log closed Tue Feb 01 18:37:24 2011
+--- Log opened Wed Feb 02 10:22:47 2011
+10:22 Starting query in Bitlbee with tijanaognjanovic
+10:22 tijanaognjanovic| http://espaceculturel-leclerc.com/
+--- Log closed Wed Feb 02 10:28:37 2011
+--- Log opened Wed Feb 02 12:00:53 2011
+12:00 tijanaognjanovic| http://redmine.diwanee.com/issues/1369
+12:03 playahater| http://localhost/en/admin/build/modules
+--- Log closed Wed Feb 02 12:08:37 2011
+--- Log opened Wed Feb 02 12:41:37 2011
+12:41 Closing query with tijanaognjanovic
+--- Log closed Wed Feb 02 12:41:37 2011
+--- Log opened Wed Feb 02 13:02:47 2011
+13:02 Starting query in Bitlbee with tijanaognjanovic
+13:02 tijanaognjanovic| sta je bilo ovde http://redmine.diwanee.com/issues/1364
+--- Log closed Wed Feb 02 13:08:37 2011
+--- Log opened Wed Feb 02 13:16:20 2011
+13:16 playahater| ne znam .. kolko vidim .. sve je ok .. :)
+13:16 Closing query with tijanaognjanovic
+--- Log closed Wed Feb 02 13:16:24 2011
+--- Log opened Wed Feb 02 15:17:39 2011
+15:17 Starting query in Bitlbee with tijanaognjanovic
+15:17 tijanaognjanovic| skontala sam yasto vraca 2 admina.. jer je svih profila autor admin!!! sad ako admin 
+15:18 tijanaognjanovic| updejtuje neki profil ne baca ga na stranu tog user-a, nego na njegovu user stranu, zbog one redirekcije:)
+15:21 tijanaognjanovic| ne obaziri se na ovu prvu recenicu da sam nesto skontala.. povlacim rec
+--- Log closed Wed Feb 02 15:27:37 2011
+--- Log opened Wed Feb 02 16:05:31 2011
+16:05 tijanaognjanovic| http://www.youtube.com/watch?v=DN2mBKTBswA
+--- Log closed Wed Feb 02 16:10:37 2011
+--- Log opened Wed Feb 02 16:55:12 2011
+16:55 Closing query with tijanaognjanovic
+--- Log closed Wed Feb 02 16:55:12 2011
+--- Log opened Wed Feb 02 17:04:39 2011
+17:04 Starting query in Bitlbee with tijanaognjanovic
+17:04 tijanaognjanovic| http://redmine.diwanee.com/issues/1305
+--- Log closed Wed Feb 02 17:10:37 2011
+--- Log opened Wed Feb 02 17:43:29 2011
+17:43 Closing query with tijanaognjanovic
+--- Log closed Wed Feb 02 17:43:29 2011
+--- Log opened Thu Feb 03 15:30:46 2011
+15:30 Starting query in Bitlbee with tijanaognjanovic
+15:30 playahater| pull pls .. :)
+15:31 Closing query with tijanaognjanovic
+--- Log closed Thu Feb 03 15:31:01 2011
+--- Log opened Thu Feb 03 17:49:21 2011
+17:49 Starting query in Bitlbee with tijanaognjanovic
+17:49 tijanaognjanovic| http://localhost:8181/en/family/family-and-society/health/%D9%83%D9%8A%D9%81-%D8%AA%D8%AA%D8%BA%D9%84%D8%A8-%D8%B9%D9%84%D9%89-%D8%AA%D9%88%D8%AA%D8%B1%D9%83%D8%9F
+--- Log closed Thu Feb 03 17:54:50 2011
+--- Log opened Thu Feb 03 19:12:25 2011
+19:12 playahater| /q/q
+19:12 Closing query with tijanaognjanovic
+--- Log closed Thu Feb 03 19:12:28 2011
+--- Log opened Sat Feb 05 18:00:31 2011
+18:00 Starting query in Bitlbee with tijanaognjanovic
+18:00 playahater| http://localhost/en/node/34349/edit
+--- Log closed Sat Feb 05 18:06:19 2011
+--- Log opened Sat Feb 05 19:59:32 2011
+19:59 Closing query with tijanaognjanovic
+--- Log closed Sat Feb 05 19:59:32 2011
+--- Log opened Mon Feb 07 10:30:10 2011
+10:30 Starting query in Bitlbee with tijanaognjanovic
+10:30 tijanaognjanovic| vidi ovo http://m3com/en/news/economy/%D8%A7%D9%84%D8%A7%D8%B9%D8%AA%D8%AF%D8%A7%D8%A1-%D8%B9%D9%84%D9%89-%D8%A7%D9%86%D8%A8%D9%88%D8%A8-%D8%A7%D9%84%D8%BA%D8%A7%D8%B2-%D8%A7%D9%84%D9%85%D8%B5%D8%B1%D9%8A-%D8%B3%D9%8A%D9%83%D9%84%D9%81-%D8%A7%D9%84%D8%A7%D8%B1%D8%AF%D9%86-%D8%AE%D8%B3%D8%A7%D8%A6%D8%B1-35-%D9%85%D9%84%D9%8A%D9%88%D9%86-%D8%AF%D9%88%D9%84%D8%A7%D8%B1-%D9%8A%D9%88%D9%85%D9%8A%D8%A7
+--- Log closed Mon Feb 07 10:35:42 2011
+--- Log opened Mon Feb 07 11:20:04 2011
+11:20 Closing query with tijanaognjanovic
+--- Log closed Mon Feb 07 11:20:04 2011
+--- Log opened Mon Feb 07 11:38:11 2011
+11:38 Starting query in Bitlbee with tijanaognjanovic
+11:38 tijanaognjanovic| http://m3com/en/family/wedding/house-of-a-lifetime/%D9%88%D8%B2%D8%B9%D9%8A-%D9%84%D9%85%D8%B3%D8%A7%D8%AA%D9%83-%D8%A7%D9%84%D8%B1%D9%82%D9%8A%D9%82%D8%A9-%D9%81%D9%8A-%D8%B5%D8%A7%D9%84%D8%A9-%D9%85%D9%86%D8%B2%D9%84%D9%83
+--- Log closed Mon Feb 07 11:43:42 2011
+--- Log opened Mon Feb 07 11:46:19 2011
+11:46 Closing query with tijanaognjanovic
+--- Log closed Mon Feb 07 11:46:19 2011
+--- Log opened Mon Feb 07 21:12:31 2011
+21:12 Starting query in Bitlbee with tijanaognjanovic
+21:12 tijanaognjanovic| aj molim te pogledaj ovo http://redmine.diwanee.com/issues/1785
+21:12 tijanaognjanovic| jel imas ideju??
+--- Log closed Mon Feb 07 21:17:42 2011
+--- Log opened Mon Feb 07 23:13:57 2011
+23:13 Closing query with tijanaognjanovic
+--- Log closed Mon Feb 07 23:13:57 2011
+--- Log opened Tue Feb 08 00:19:16 2011
+00:19 Starting query in Bitlbee with tijanaognjanovic
+00:19 tijanaognjanovic| sta  je odluceno za ovo http://redmine.diwanee.com/issues/1347
+00:19 tijanaognjanovic| svaki kanal svoj..
+00:19 tijanaognjanovic| ili..?
+00:21 playahater| koliko ja znam .. svaki view/page/panel treba da izbaci rss u browser-u + jedan rss page sa linkovima ka "nekim" rss stranama
+--- Log closed Tue Feb 08 00:27:42 2011
+--- Log opened Tue Feb 08 00:48:01 2011
+00:48 tijanaognjanovic| http://drupal.org/node/1013716
+--- Log closed Tue Feb 08 00:53:42 2011
+--- Log opened Tue Feb 08 00:57:57 2011
+00:57 tijanaognjanovic| to bi po komentaru ispod, kao trebalo da je commitovan-o ili sta?,  mi imamo CCK 6.x-3.x-dev verz.
+00:58 playahater| to se odnosi na select orother module ..
+00:58 playahater| ali nasho sam neshto bolje ..
+00:58 playahater| http://drupal.org/node/375307
+00:58 playahater| :)
+00:58 playahater| sad tju da probam da mu dodjem glave
+00:59 tijanaognjanovic| al to j eza 7icu
+00:59 playahater| jok .. patch je za 6
+00:59 tijanaognjanovic| super ondak:)
+00:59 playahater| 6.9 na zalost .. al ae da vidimo da l radi .. :)
+01:04 tijanaognjanovic| e a mozzda ima ovde neki trag
+01:04 tijanaognjanovic| http://drupal.org/node/780566
+01:05 tijanaognjanovic| kao ne radi sa svim modulima jer neki ne pozovu drupal_alter..
+01:05 tijanaognjanovic| nema resenja dole.. ali samo procitaj prvi red
+--- Log closed Tue Feb 08 01:10:42 2011
+--- Log opened Tue Feb 08 02:10:17 2011
+02:10 Closing query with tijanaognjanovic
+--- Log closed Tue Feb 08 02:10:17 2011
+--- Log opened Tue Feb 08 03:06:48 2011
+03:06 Starting query in Bitlbee with tijanaognjanovic
+03:06 tijanaognjanovic| JEL OVO ZATVORENO
+03:06 tijanaognjanovic| http://redmine.diwanee.com/issues/1376
+--- Log closed Tue Feb 08 03:12:42 2011
+--- Log opened Tue Feb 08 03:15:00 2011
+03:15 playahater| na nekim mestima radi .. na nekim ne ..
+03:15 playahater| treba prekontrolisati josh jednom ..
+03:15 playahater| al ne sad ..
+03:15 playahater| :)
+--- Log closed Tue Feb 08 03:20:42 2011
+--- Log opened Tue Feb 08 03:33:19 2011
+03:33 tijanaognjanovic| node 27617
+03:33 tijanaognjanovic| uid 0
+03:33 tijanaognjanovic| flags
+03:33 tijanaognjanovic| flag_content
+--- Log closed Tue Feb 08 03:38:42 2011
+--- Log opened Tue Feb 08 03:57:44 2011
+03:57          <-- tijanaognjanovic has quit irc
+--- Log closed Tue Feb 08 04:03:42 2011
+--- Log opened Tue Feb 08 04:28:47 2011
+04:28 Closing query with tijanaognjanovic
+--- Log closed Tue Feb 08 04:28:47 2011
+--- Log opened Tue Feb 08 15:16:56 2011
+15:16 Starting query in Bitlbee with tijanaognjanovic
+15:16 playahater| http://geekandpoke.typepad.com/geekandpoke/2011/02/recently-at-the-trunk.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+GeekAndPoke+%28Geek+And+Poke%29
+15:17 tijanaognjanovic| http://redmine.diwanee.com/issues/1816
+--- Log closed Tue Feb 08 15:22:26 2011
+--- Log opened Tue Feb 08 16:18:17 2011
+16:18 Closing query with tijanaognjanovic
+--- Log closed Tue Feb 08 16:18:17 2011
+--- Log opened Tue Feb 08 17:28:47 2011
+17:28 Starting query in Bitlbee with tijanaognjanovic
+17:28 tijanaognjanovic| foreach($form['password_reset']['question']['#options'] as $key => $value) { $form['password_reset']['question']['#options'][$key] = t($value); }
+17:31 Closing query with tijanaognjanovic
+--- Log closed Tue Feb 08 17:31:35 2011
+--- Log opened Wed Feb 09 16:53:29 2011
+16:53 Starting query in Bitlbee with tijanaognjanovic
+16:53 tijanaognjanovic| Note: Characters are case insensitive, i.e. you do not need to enter upper or lower case letters as shown in the image
+--- Log closed Wed Feb 09 16:58:46 2011
+--- Log opened Wed Feb 09 17:01:33 2011
+17:01 Closing query with tijanaognjanovic
+--- Log closed Wed Feb 09 17:01:33 2011
+--- Log opened Thu Feb 10 11:37:28 2011
+11:37 Starting query in Bitlbee with tijanaognjanovic
+11:37 tijanaognjanovic| http://m3com/kooraonline
+11:37 tijanaognjanovic| ulogovan kao admin
+11:37 tijanaognjanovic| stoji ta greska 2 dana
+11:38 tijanaognjanovic| a pritom izlogovana vidim stranicu:)
+--- Log closed Thu Feb 10 11:43:48 2011
+--- Log opened Thu Feb 10 12:02:36 2011
+12:02 playahater| ja ne mogu da pristupim toj stranici .. wsod .. :\
+--- Log closed Thu Feb 10 12:07:48 2011
+--- Log opened Thu Feb 10 15:46:10 2011
+15:46          <-- tijanaognjanovic has quit irc
+--- Log closed Thu Feb 10 15:51:54 2011
+--- Log opened Thu Feb 10 16:35:03 2011
+16:35 Closing query with tijanaognjanovic
+--- Log closed Thu Feb 10 16:35:03 2011
+--- Log opened Fri Feb 11 11:08:10 2011
+11:08 Starting query in Bitlbee with tijanaognjanovic
+11:08 playahater| gotov import
+11:08 playahater| :)
+11:08 Closing query with tijanaognjanovic
+--- Log closed Fri Feb 11 11:08:15 2011
+--- Log opened Fri Feb 11 12:00:22 2011
+12:00 Starting query in Bitlbee with tijanaognjanovic
+12:00 playahater| http://xkcd.com/859/
+--- Log closed Fri Feb 11 12:06:11 2011
+--- Log opened Fri Feb 11 12:06:27 2011
+12:06 Closing query with tijanaognjanovic
+--- Log closed Fri Feb 11 12:06:27 2011
+--- Log opened Mon Feb 14 10:56:57 2011
+10:56 Starting query in Bitlbee with tijanaognjanovic
+10:56 tijanaognjanovic| aj pliz otvori u chrome-u
+10:57 tijanaognjanovic| http://client.agena.rs/m3com/prototype-html/_main/QA/Q-A-advanced-search.html
+--- Log closed Mon Feb 14 11:02:16 2011
+--- Log opened Mon Feb 14 13:08:06 2011
+13:08 tijanaognjanovic| http://redmine.diwanee.com/issues/1951
+--- Log closed Mon Feb 14 13:13:16 2011
+--- Log opened Mon Feb 14 19:53:06 2011
+19:53          <-- tijanaognjanovic has quit irc
+--- Log closed Mon Feb 14 19:58:16 2011
+--- Log opened Mon Feb 14 21:44:20 2011
+21:44 Closing query with tijanaognjanovic
+--- Log closed Mon Feb 14 21:44:20 2011
+--- Log opened Tue Feb 15 12:06:09 2011
+12:06 Starting query in Bitlbee with tijanaognjanovic
+12:06 tijanaognjanovic| http://m3com/news/motor-sports/%D8%B1%D8%A7%D9%84%D9%8A-%D8%A7%D9%84%D8%B3%D9%88%D9%8A%D8%AF-%D9%87%D9%8A%D8%B1%D9%81%D9%88%D9%86%D9%86-%D9%8A%D9%86%D8%AA%D8%B2%D8%B9-%D8%A7%D9%84%D8%B5%D8%AF%D8%A7%D8%B1%D8%A9-%D9%81%D9%8A-%D8%A7%D9%84%D9%8A%D9%88%D9%85-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A
+--- Log closed Tue Feb 15 12:11:39 2011
+--- Log opened Tue Feb 15 12:13:45 2011
+12:13 Closing query with tijanaognjanovic
+--- Log closed Tue Feb 15 12:13:45 2011
+--- Log opened Tue Feb 15 14:53:10 2011
+14:53 Starting query in Bitlbee with tijanaognjanovic
+14:53 tijanaognjanovic| http://web3.m3com.com.sa/en/sourah/%D8%A2%D9%84-%D8%B9%D9%85%D8%B1%D8%A7%D9%86
+--- Log closed Tue Feb 15 14:58:39 2011
+--- Log opened Tue Feb 15 15:00:12 2011
+15:00 Closing query with tijanaognjanovic
+--- Log closed Tue Feb 15 15:00:12 2011
+--- Log opened Tue Feb 15 15:42:01 2011
+15:42 Starting query in Bitlbee with tijanaognjanovic
+15:42 tijanaognjanovic| http://redmine.diwanee.com/attachments/1173/registration.png
+15:43 tijanaognjanovic| [#prefix] => <div id="account-pass-restrictions"><ul><li>كلمة السر يجب أن تكون من 6 أحرف على الأقل</li><li>يجب على كلمة السر ان تختلف عن اسم المستخدم</li><li>كلمة السر يجب ان تحتوي على ما لا يقل عن حرف واحد.</li><li>كلمة السر يجب ان تحتوي على الأقل على واحد من الأحرف
+15:43 tijanaognjanovic| الأبجدية أو الرقمية</li><li>كلمة السر يجب ان تحتوي على ما لا يقل عن رقم واحد</li></ul></div> 
+--- Log closed Tue Feb 15 15:48:39 2011
+--- Log opened Tue Feb 15 16:06:11 2011
+16:06 Closing query with tijanaognjanovic
+--- Log closed Tue Feb 15 16:06:11 2011
+--- Log opened Tue Feb 15 18:25:16 2011
+18:25 Starting query in Bitlbee with tijanaognjanovic
+18:25 playahater| http://drupal.org/node/500202
+--- Log closed Tue Feb 15 18:30:39 2011
+--- Log opened Tue Feb 15 19:05:05 2011
+19:05 Closing query with tijanaognjanovic
+--- Log closed Tue Feb 15 19:05:05 2011
+--- Log opened Wed Feb 16 12:58:23 2011
+12:58 Starting query in Bitlbee with tijanaognjanovic
+12:58 tijanaognjanovic| >> Jelena Visnjic: upisite se za ketering za sutra https://spreadsheets.google.com/a/agena.rs/ccc?key=0Ak_UQY71r8RHdGlObzhoY0tSMVU1My1SbEF3eVotNHc&hl=en#gid=0
+--- Log closed Wed Feb 16 13:04:05 2011
+--- Log opened Wed Feb 16 13:55:45 2011
+13:55 Closing query with tijanaognjanovic
+--- Log closed Wed Feb 16 13:55:45 2011
+--- Log opened Wed Feb 16 16:46:03 2011
+16:46 Starting query in Bitlbee with tijanaognjanovic
+16:46 tijanaognjanovic| vidi ovo /all/modules/addresses/addreesses.inc
+16:46 playahater| uh .. gledo sam ga pre neki dan .. 
+16:46 playahater| horor
+16:46 playahater| :)
+--- Log closed Wed Feb 16 16:52:05 2011
+--- Log opened Wed Feb 16 17:21:34 2011
+17:21 Closing query with tijanaognjanovic
+--- Log closed Wed Feb 16 17:21:34 2011
+--- Log opened Thu Feb 17 14:23:16 2011
+14:23 Starting query in Bitlbee with tijanaognjanovic
+14:23 tijanaognjanovic| http://drupal.org/project/syndication
+--- Log closed Thu Feb 17 14:28:19 2011
+--- Log opened Thu Feb 17 15:38:55 2011
+15:38 Closing query with tijanaognjanovic
+--- Log closed Thu Feb 17 15:38:55 2011
+--- Log opened Thu Feb 17 15:39:07 2011
+15:39 Starting query in Bitlbee with tijanaognjanovic
+15:39 tijanaognjanovic| var_dump(die("from m3com_misc hook_nodeapi tube-video"));
+15:39 playahater| var_dump($node); die();
+15:39 Closing query with tijanaognjanovic
+--- Log closed Thu Feb 17 15:39:41 2011
+--- Log opened Thu Feb 17 15:47:18 2011
+15:47 Starting query in Bitlbee with tijanaognjanovic
+15:47 tijanaognjanovic| Remove checked from list
+--- Log closed Thu Feb 17 15:52:19 2011
+--- Log opened Thu Feb 17 17:47:48 2011
+17:47          <-- tijanaognjanovic has quit irc
+--- Log closed Thu Feb 17 17:53:19 2011
+--- Log opened Thu Feb 17 19:01:57 2011
+19:01 Closing query with tijanaognjanovic
+--- Log closed Thu Feb 17 19:01:57 2011
+--- Log opened Mon Feb 21 18:17:02 2011
+18:17 Starting query in Bitlbee with tijanaognjanovic
+18:17 tijanaognjanovic| http://m3com.com.sa/en/admin/content/node-type/tube-video/fields/field_tube_video_upload
+--- Log closed Mon Feb 21 18:22:54 2011
+--- Log opened Mon Feb 21 19:01:05 2011
+19:01          <-- tijanaognjanovic has quit irc
+19:03 Closing query with tijanaognjanovic
+--- Log closed Mon Feb 21 19:03:25 2011
+--- Log opened Tue Feb 22 18:30:05 2011
+18:30 Starting query in Bitlbee with tijanaognjanovic
+18:30 tijanaognjanovic| http://www.youtube.com/watch?v=zS8JIV4mBZQ
+--- Log closed Tue Feb 22 18:35:44 2011
+--- Log opened Tue Feb 22 19:49:36 2011
+19:49 Closing query with tijanaognjanovic
+--- Log closed Tue Feb 22 19:49:36 2011
+--- Log opened Tue Feb 22 23:11:13 2011
+23:11 Starting query in Bitlbee with tijanaognjanovic
+23:11 playahater| http://drupal.org/project/nodewords_pagetitle
+23:14 Closing query with tijanaognjanovic
+--- Log closed Tue Feb 22 23:14:18 2011
+--- Log opened Thu Feb 24 18:07:28 2011
+18:07 Starting query in Bitlbee with tijanaognjanovic
+18:07 tijanaognjanovic| na orangu smo koristili nodewords 6-1.12
+18:07 tijanaognjanovic| beta9
+18:07 tijanaognjanovic| ipak nismo onaj 6-3.x
+--- Log closed Thu Feb 24 18:13:18 2011
+--- Log opened Thu Feb 24 18:14:05 2011
+18:14 playahater| hm .. da .. izvalio sam da je ovaj 3.x opasno nedovrshen / mrshav sa opcijama ..
+18:14 playahater| sretjom, 1.x radi .. :)
+18:14 tijanaognjanovic| al uzmi tu 1.12 beta9 ako vec nisi
+18:15 tijanaognjanovic| ili ako vec nij enoviji
+18:16 playahater| trenutno je 6.x-1.12-beta9
+18:16 tijanaognjanovic| taj smo mi na orangu, i mislim da je sve ok bilo
+18:16 playahater| za sad radi .. :)
+18:18          <-- tijanaognjanovic has quit irc
+--- Log closed Thu Feb 24 18:24:18 2011
+--- Log opened Thu Feb 24 18:40:21 2011
+18:40 Closing query with tijanaognjanovic
+--- Log closed Thu Feb 24 18:40:21 2011
+--- Log opened Mon Feb 28 16:34:53 2011
+16:34 Starting query in Bitlbee with tijanaognjanovic
+16:34 tijanaognjanovic| http://m3com.com.sa/kids/paint/cartoon-image/%D9%88%D8%AC%D9%87-%D8%AC%D9%85%D9%8A%D9%84
+--- Log closed Mon Feb 28 16:40:03 2011
+--- Log opened Mon Feb 28 17:08:50 2011
+17:08 Closing query with tijanaognjanovic
+--- Log closed Mon Feb 28 17:08:50 2011
+--- Log opened Mon Feb 28 18:52:35 2011
+18:52 Starting query in Bitlbee with tijanaognjanovic
+18:52 playahater| http://m3com.com.sa/en/admin/user/permissions
+--- Log closed Mon Feb 28 18:58:03 2011
+--- Log opened Mon Feb 28 19:16:35 2011
+19:16          <-- tijanaognjanovic has quit irc
+--- Log closed Mon Feb 28 19:22:03 2011
+--- Log opened Mon Feb 28 19:35:45 2011
+19:35 Closing query with tijanaognjanovic
+--- Log closed Mon Feb 28 19:35:45 2011
+--- Log opened Wed Mar 02 16:45:04 2011
+16:45 Starting query in Bitlbee with tijanaognjanovic
+16:45 tijanaognjanovic| mi smo za ajaxovanje formi pre koristili:  jquery.form.js
+16:45 tijanaognjanovic| za kijent sajd validaciju i sl
+16:45 tijanaognjanovic| jel da radim s tim
+--- Log closed Wed Mar 02 16:50:51 2011
+--- Log opened Wed Mar 02 17:02:56 2011
+17:02 Closing query with tijanaognjanovic
+--- Log closed Wed Mar 02 17:02:56 2011
+--- Log opened Thu Mar 03 17:18:49 2011
+17:18 Starting query in Bitlbee with tijanaognjanovic
+17:18 tijanaognjanovic| http://redmine.diwanee.com/issues/2072
+--- Log closed Thu Mar 03 17:23:55 2011
+--- Log opened Thu Mar 03 17:27:11 2011
+17:27 playahater| node/773333
+--- Log closed Thu Mar 03 17:32:55 2011
+--- Log opened Thu Mar 03 18:16:58 2011
+18:16          <-- tijanaognjanovic has quit irc
+--- Log closed Thu Mar 03 18:22:55 2011
+--- Log opened Fri Mar 04 11:03:50 2011
+11:03 Starting query in Bitlbee with tijanaognjanovic
+11:03 tijanaognjanovic|     * Not deleted from the files table because it is use on -1 other terms.
+11:03 tijanaognjanovic|     * image removed.
+11:03 tijanaognjanovic|     * Deleted term test.
+11:03 tijanaognjanovic|  
+--- Log closed Fri Mar 04 11:09:29 2011
+--- Log opened Fri Mar 04 11:16:44 2011
+11:16 Closing query with tijanaognjanovic
+--- Log closed Fri Mar 04 11:16:44 2011
+--- Log opened Fri Mar 04 12:21:19 2011
+12:21 Starting query in Bitlbee with tijanaognjanovic
+12:21 tijanaognjanovic| zakomentarisala ovo: function m3com_misc_form_alter(&$form, &$form_state, $form_id) {
+12:21 tijanaognjanovic| ...
+12:21 tijanaognjanovic| 	//$form['#cache'] = true; 
+12:21 tijanaognjanovic| jel to to
+12:22 Closing query with tijanaognjanovic
+--- Log closed Fri Mar 04 12:22:37 2011
+--- Log opened Mon Mar 07 15:46:43 2011
+15:46 Starting query in Bitlbee with tijanaognjanovic
+15:46 playahater| marko.djordjevic@agena.rs
+15:46 Closing query with tijanaognjanovic
+--- Log closed Mon Mar 07 15:46:50 2011
+--- Log opened Mon Mar 07 18:12:16 2011
+18:12 Starting query in Bitlbee with tijanaognjanovic
+18:12 playahater| http://localhost/en/admin/build/translate/edit/15785
+18:12 Closing query with tijanaognjanovic
+--- Log closed Mon Mar 07 18:12:56 2011
+--- Log opened Tue Mar 08 16:54:04 2011
+16:54 Starting query in Bitlbee with tijanaognjanovic
+16:54 playahater| http://www.facebook.com/STC906
+--- Log closed Tue Mar 08 17:00:04 2011
+--- Log opened Tue Mar 08 17:39:28 2011
+17:39 Closing query with tijanaognjanovic
+--- Log closed Tue Mar 08 17:39:28 2011
+--- Log opened Tue Mar 08 18:20:10 2011
+18:20 Starting query in Bitlbee with tijanaognjanovic
+18:20 tijanaognjanovic| http://m3com.com.sa/en/admin/build/block/configure/block/21
+18:25 playahater| http://dev.m3com.com.sa:8080/en/node/add/image
+--- Log closed Tue Mar 08 18:31:04 2011
+--- Log opened Tue Mar 08 18:36:17 2011
+18:36          <-- tijanaognjanovic has quit irc
+--- Log closed Tue Mar 08 18:42:04 2011
+--- Log opened Tue Mar 08 18:47:05 2011
+18:47 Closing query with tijanaognjanovic
+--- Log closed Tue Mar 08 18:47:05 2011
+--- Log opened Mon Mar 14 12:04:39 2011
+12:04 Starting query in Bitlbee with tijanaognjanovic
+12:04 playahater| http://drupal.org/node/575842
+--- Log closed Mon Mar 14 12:10:02 2011
+--- Log opened Mon Mar 14 12:37:48 2011
+12:37 Closing query with tijanaognjanovic
+--- Log closed Mon Mar 14 12:37:48 2011
+--- Log opened Mon Mar 14 14:46:59 2011
+14:46 Starting query in Bitlbee with tijanaognjanovic
+14:46 tijanaognjanovic| ^([L-Z]in) 
+14:47 tijanaognjanovic| The '^' is an anchor indicating first position. Win does not start the string so no match.
+14:49 tijanaognjanovic| http://www.zytrax.com/tech/web/regex.htm
+--- Log closed Mon Mar 14 14:55:02 2011
+--- Log opened Mon Mar 14 15:57:17 2011
+15:57 Closing query with tijanaognjanovic
+--- Log closed Mon Mar 14 15:57:17 2011
+--- Log opened Mon Mar 14 16:19:50 2011
+16:19 Starting query in Bitlbee with tijanaognjanovic
+16:19 playahater| 'Notification message'
+16:19 Closing query with tijanaognjanovic
+--- Log closed Mon Mar 14 16:19:53 2011
+--- Log opened Tue Mar 15 17:15:11 2011
+17:15 Starting query in Bitlbee with tijanaognjanovic
+17:15 playahater| http://drupal.org/node/659458
+17:15 Closing query with tijanaognjanovic
+--- Log closed Tue Mar 15 17:15:14 2011
+--- Log opened Wed Mar 16 15:33:44 2011
+15:33 Starting query in Bitlbee with tijanaognjanovic
+15:33 tijanaognjanovic| http://m3com/node/18789/edit
+--- Log closed Wed Mar 16 15:39:26 2011
+--- Log opened Wed Mar 16 16:41:02 2011
+16:41 playahater| git diff --stat --color master..develop
+--- Log closed Wed Mar 16 16:46:26 2011
+--- Log opened Wed Mar 16 17:05:58 2011
+17:05 Closing query with tijanaognjanovic
+--- Log closed Wed Mar 16 17:05:58 2011
+--- Log opened Thu Mar 17 15:22:34 2011
+15:22 Starting query in Bitlbee with tijanaognjanovic
+15:22 playahater| block-views-views_news_channel-block_7block-views-views_news_channel-block_7
+--- Log closed Thu Mar 17 15:28:07 2011
+--- Log opened Thu Mar 17 15:46:55 2011
+15:46 Closing query with tijanaognjanovic
+--- Log closed Thu Mar 17 15:46:55 2011
+--- Log opened Fri Mar 18 10:30:34 2011
+10:30 Starting query in Bitlbee with tijanaognjanovic
+10:30 tijanaognjanovic| axaxax, gle ovo http://www.youtube.com/watch?v=KMU0tzLwhbE
+--- Log closed Fri Mar 18 10:35:47 2011
+--- Log opened Fri Mar 18 10:50:53 2011
+10:50 Closing query with tijanaognjanovic
+--- Log closed Fri Mar 18 10:50:53 2011
+--- Log opened Fri Mar 18 16:58:08 2011
+16:58 Starting query in Bitlbee with tijanaognjanovic
+16:58 tijanaognjanovic| kaspersky-wrapper
+--- Log closed Fri Mar 18 17:03:47 2011
+--- Log opened Fri Mar 18 17:23:07 2011
+17:23 Closing query with tijanaognjanovic
+--- Log closed Fri Mar 18 17:23:07 2011
+--- Log opened Mon Apr 04 16:09:25 2011
+16:09 Starting query in Bitlbee with tijanaognjanovic
+16:09 tijanaognjanovic| $iv   = openssl_random_pseudo_bytes(16);
+16:09 tijanaognjanovic|     $user = json_encode(array("name" => $user->name, "id" => $user->uid));
+16:09 tijanaognjanovic|     $key  = str_repeat("12345678", 4); // SAMPLE KEY FOR TESTING
+16:09 tijanaognjanovic|     $enc  = openssl_encrypt($user, "AES-256-CBC", $key, true, $iv);
+16:09 tijanaognjanovic|     $p    = array($enc, $iv);
+16:09 tijanaognjanovic|     $pp   = array_map("base64_encode", $p);
+16:09 tijanaognjanovic|     $params = implode("--", $pp);
+--- Log closed Mon Apr 04 16:15:15 2011
+--- Log opened Mon Apr 04 16:24:50 2011
+16:24 Closing query with tijanaognjanovic
+--- Log closed Mon Apr 04 16:24:50 2011
+--- Log opened Mon Apr 04 16:59:57 2011
+16:59 Starting query in Bitlbee with tijanaognjanovic
+16:59 tijanaognjanovic| http://dev.m3com.com.sa/en/content/story-testing-story-of-jawaker-games
+--- Log closed Mon Apr 04 17:05:15 2011
+--- Log opened Mon Apr 04 17:20:13 2011
+17:20 Closing query with tijanaognjanovic
+--- Log closed Mon Apr 04 17:20:13 2011
+--- Log opened Thu Apr 07 16:28:30 2011
+16:28 Starting query in Bitlbee with tijanaognjanovic
+16:28 tijanaognjanovic| content/testing-story-of-jawaker-games
+16:31 tijanaognjanovic| parent.document.getElementById('jawakeriframe').height = document['body'].offsetHeight + 25;
+--- Log closed Thu Apr 07 16:37:07 2011
+--- Log opened Thu Apr 07 17:23:17 2011
+17:23 Closing query with tijanaognjanovic
+--- Log closed Thu Apr 07 17:23:17 2011
+--- Log opened Thu Apr 07 23:23:39 2011
+23:23 Starting query in Bitlbee with tijanaognjanovic
+23:23 tijanaognjanovic| games/كورة-أون-لاين
+--- Log closed Thu Apr 07 23:29:07 2011
+--- Log opened Thu Apr 07 23:43:23 2011
+23:43          <-- tijanaognjanovic has quit irc
+23:44 Closing query with tijanaognjanovic
+--- Log closed Thu Apr 07 23:44:57 2011
+--- Log opened Tue Apr 12 13:16:07 2011
+13:16 Starting query in Bitlbee with tijanaognjanovic
+13:16 tijanaognjanovic| http://www.espaceculturel-leclerc.fr/livre/romans/quitter-le-monde
+--- Log closed Tue Apr 12 13:22:01 2011
+--- Log opened Tue Apr 12 14:22:24 2011
+14:22 Closing query with tijanaognjanovic
+--- Log closed Tue Apr 12 14:22:24 2011
+--- Log opened Wed Apr 13 15:13:39 2011
+15:13 Starting query in Bitlbee with tijanaognjanovic
+15:13 tijanaognjanovic| jel ima danas push-a
+15:14 playahater| mislim da ne
+--- Log closed Wed Apr 13 15:19:30 2011
+--- Log opened Wed Apr 13 15:26:26 2011
+15:26 tijanaognjanovic| ok, u sv sl baci na dev kad god: contemplates/node-internal_banner-body.tpl 
+15:26 tijanaognjanovic| i themes/m3com/node-service-links.tpl
+15:27 tijanaognjanovic| pa i na live
+--- Log closed Wed Apr 13 15:32:30 2011
+--- Log opened Wed Apr 13 15:47:40 2011
+15:47 Closing query with tijanaognjanovic
+--- Log closed Wed Apr 13 15:47:40 2011
+--- Log opened Thu Apr 14 16:24:04 2011
+16:24 Starting query in Bitlbee with tijanaognjanovic
+16:24 tijanaognjanovic| Resavska 34
+16:24 tijanaognjanovic| +381 11 3232677
+16:24 tijanaognjanovic| +381 11 3034311
+--- Log closed Thu Apr 14 16:29:31 2011
+--- Log opened Thu Apr 14 16:56:56 2011
+16:56 Closing query with tijanaognjanovic
+--- Log closed Thu Apr 14 16:56:56 2011
+--- Log opened Thu Apr 21 10:22:14 2011
+10:22 Starting query in Bitlbee with tijanaognjanovic
+10:22 playahater| http://www.youtube.com/watch?v=no2_M_b059g
+--- Log closed Thu Apr 21 10:27:50 2011
+--- Log opened Thu Apr 21 10:49:05 2011
+10:49 Closing query with tijanaognjanovic
+--- Log closed Thu Apr 21 10:49:05 2011
+--- Log opened Wed Apr 27 13:06:45 2011
+13:06 Starting query in Bitlbee with tijanaognjanovic
+13:06 playahater| https://drupal.org/node/313272#comment-1105812
+13:06 Closing query with tijanaognjanovic
+--- Log closed Wed Apr 27 13:06:47 2011

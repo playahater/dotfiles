@@ -1,0 +1,26 @@
+# Write your default config options here!
+
+vo=xv
+#vo=gl2
+ao=alsa
+#ao=alsa:device=plug=dmix
+af=resample=44100:16:2
+subfont-encoding=unicode
+subcp = cp1250
+#font="Comic Sans MS"
+font="profont"
+#font = "/usr/share/fonts/corefonts/comic.ttf"
+#sub_cp = "cp1250"
+subfont-osd-scale=2
+sub-fuzziness=1
+#aspect=1.7777
+channels=2
+ontop="yes"
+softvol="yes"
+#nodouble="no"
+#cache=8192
+#nocache="yes"
+framedrop="no"
+#zoom=yes
+af=volnorm
+fstype=none

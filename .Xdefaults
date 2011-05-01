@@ -1,0 +1,36 @@
+
+Xft.antialias: true
+Xft.dpi:       96
+Xft.hinting:   true
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcddefault
+Xft.rgba:      rgb
+
+URxvt.depth:            32
+URxvt.termName:         xterm-256color
+URxvt.loginShell:        false
+URxvt.utmpInhibit:      true
+URxvt.scrollBar:         false
+URxvt.internalBorder:        0
+URxvt.borderWidth:           0
+URxvt.secondaryScroll:    true
+URxvt.saveLines:          10240
+URxvt.cursorBlink:        false
+URxvt.buffered:         true
+URxvt.urgentOnBell: true
+URxvt.foreground:White
+URxvt.cursorColor:White
+URxvt.background:Black
+URxvt.perl-lib:         /usr/lib/urxvt/perl
+URxvt.perl-ext-common:  searchable-scrollback
+
+URxvt.font:       xft:Liberation Mono:pixelsize=14:antialias=true:autohint=true
+URxvt.boldFont:   xft:Liberation Mono:pixelsize=14:antialias=true:autohint=true
+
+!URxvt.font:     xft:ProFont:size=13
+!URxvt.boldFont: xft:ProFont:size=13
+
+URxvt*transparent:          true
+URxvt*shading:              5
+URxvt*tint:                 Black
+URxvt*inheritPixmap:        true

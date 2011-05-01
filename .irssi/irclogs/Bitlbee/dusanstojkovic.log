@@ -1,0 +1,188 @@
+--- Log opened Wed Oct 20 11:54:50 2010
+11:54 Starting query in Bitlbee with dusanstojkovic
+11:54 dusanstojkovic| function blueprint_nice_menu_build($menu) 
+11:54 dusanstojkovic| {
+11:54 dusanstojkovic| 	$q = $_REQUEST['q'];
+11:54 dusanstojkovic|     $q = explode('/', $q);
+11:54 dusanstojkovic| 	if($q[0]=='jeux-videos') $q[0]='jeux-video';
+11:54 dusanstojkovic| 
+11:54 dusanstojkovic|   foreach ($menu as $menu_item) 
+11:54 dusanstojkovic|   {
+11:54 dusanstojkovic|     $mlid = $menu_item['link']['mlid'];
+11:54 dusanstojkovic| 	
+11:54 dusanstojkovic| 	//print drupal_get_path_alias($menu_item['link']['href']).'<br />';
+11:54 dusanstojkovic|     // Check to see if it is a visible menu item.
+11:54 dusanstojkovic|     if ($menu_item['link']['hidden'] == 0) 
+11:54 dusanstojkovic| 	{
+11:54 dusanstojkovic|       // Build class name based on menu path
+11:54 dusanstojkovic|       // e.g. to give each menu item individual style.
+11:54 dusanstojkovic|       // Strip funny symbols.
+11:54 dusanstojkovic|       $clean_path = str_replace(array('http://', '<', '>', '&', '=', '?', ':'), '', $menu_item['link']['href']);
+11:54 dusanstojkovic| 	  
+11:54 dusanstojkovic| 	  $alias = drupal_get_path_alias($menu_item['link']['href']);
+11:54 dusanstojkovic| 	  $alias_array = explode('/', $alias);
+11:54 dusanstojkovic| 	  //print_r($alias_array);
+11:54 dusanstojkovic|       // Convert slashes to dashes.
+11:54 dusanstojkovic|       $clean_path = str_replace('/', '-', $clean_path);
+11:54 dusanstojkovic| 	  
+11:54 dusanstojkovic|       $path_class = 'menu-path-'. $clean_path;
+11:54 dusanstojkovic|       // If it has children build a nice little tree under it.
+11:54 dusanstojkovic| 	  //print '$alias_array[0]: '.$alias_array[0].' $alias_array[1]: '.$alias_array[1].' $q[0]: '.$q[0].' $q[1]: '.$q[1].'<br />';
+11:54 dusanstojkovic|       if ((!empty($menu_item['link']['has_children'])) && (!empty($menu_item['below'])))
+11:54 dusanstojkovic| 	  {	//print 'uso u prvi<br />';
+11:54 dusanstojkovic|         // Keep passing children into the function 'til we get them all.
+11:54 dusanstojkovic|         $children = theme('nice_menu_build', $menu_item['below']);
+11:54 dusanstojkovic|         // Set the class to parent only of children are displayed.
+11:54 dusanstojkovic|         $parent_class = $children ? 'menuparent ' : '';
+11:54 dusanstojkovic|         $output .= '<li id="menu-'. $mlid .'" class="'. $parent_class . $path_class;
+11:54 dusanstojkovic| 		if ($alias_array[0]==$q[0]) {$output .=' active-branch';/* print 'true1'.$alias_array[0].'/'.$alias_array[1].' <br />'; */}
+11:54 dusanstojkovic| 		$output .='" >'. theme('menu_item_link', $menu_item['link']);
+11:54 dusanstojkovic|         // Build the child UL only if children are displayed for the user.
+11:54 dusanstojkovic|         if ($children) 
+11:54 dusanstojkovic| 		{
+11:54 dusanstojkovic|           $output .= '<ul>';
+11:54 dusanstojkovic|           $output .= $children;
+11:54 dusanstojkovic|           $output .= "</ul>\n";
+11:54 dusanstojkovic|         }
+11:54 dusanstojkovic|         $output .= "</li>\n";
+11:54 dusanstojkovic|       }
+11:54 dusanstojkovic|       else 
+11:54 dusanstojkovic| 	  {		
+11:54 dusanstojkovic| 		//print 'uso u drugi<br />';
+11:54 dusanstojkovic|         $output .= '<li id="menu-'. $mlid .'" class="'. $path_class;
+11:54 dusanstojkovic| 		//print '|'.$clean_path.'|<br />';
+11:54 dusanstojkovic| 		if ($q[0]=='espace-culturel' && $alias_array[0]==$q[0]) {$output .=' active-branch';/*print 'true2<br />';*/}
+11:54 dusanstojkovic| 		//print $clean_path.'******'.$q[0].'-'.$q[1].'<br />';
+11:54 dusanstojkovic| 		if (($alias_array[0]==$q[0]) && ($alias_array[1]==$q[1])) {$output .=' active-leaf';/*print 'true3<br />';*/}
+11:54 dusanstojkovic| 		//print '$alias_array[0]: '.$alias_array[0].' $alias_array[1]: '.$alias_array[1].' $q[0]: '.$q[0].' $q[1]: '.$q[1].'<br />';
+11:54 dusanstojkovic| 		$output .= '" >'. theme('menu_item_link', $menu_item['link']) .'</li>'."\n";
+11:54 dusanstojkovic|       }
+11:54 dusanstojkovic|     }
+11:54 dusanstojkovic|   }
+11:54 dusanstojkovic|   
+11:54 dusanstojkovic|   return $output;
+11:54 dusanstojkovic| }
+11:55 playahater| ql 
+11:55 playahater| 10x
+11:55 playahater| :)
+11:56 Closing query with dusanstojkovic
+--- Log closed Wed Oct 20 11:56:57 2010
+--- Log opened Wed Oct 27 13:22:10 2010
+13:22 Starting query in Bitlbee with dusanstojkovic
+13:22 dusanstojkovic| oш код мене? има много више простора
+--- Log closed Wed Oct 27 13:28:05 2010
+--- Log opened Wed Oct 27 13:35:23 2010
+13:35 Closing query with dusanstojkovic
+--- Log closed Wed Oct 27 13:35:23 2010
+--- Log opened Wed Oct 27 14:20:21 2010
+14:20 Starting query in Bitlbee with dusanstojkovic
+14:20 dusanstojkovic| мишкееее
+--- Log closed Wed Oct 27 14:26:05 2010
+--- Log opened Wed Oct 27 14:47:57 2010
+14:47 Closing query with dusanstojkovic
+--- Log closed Wed Oct 27 14:47:57 2010
+--- Log opened Wed Oct 27 15:05:14 2010
+15:05 Starting query in Bitlbee with dusanstojkovic
+15:05 dusanstojkovic| лииинк
+--- Log closed Wed Oct 27 15:11:05 2010
+--- Log opened Wed Oct 27 15:14:30 2010
+15:14 playahater| jebote .. ne znash shta mi rade ovde .. :)
+15:14 playahater| stiiiiize
+15:14 playahater| :)
+15:14 playahater| a i chetkamo da ti ivan sredi account za redmine 
+15:14 playahater| si dobio user i pass ?
+15:15 dusanstojkovic| само покри рукама гузу и штрумфуј
+15:15 dusanstojkovic| не нисам
+15:15 playahater| http://redmine.diwanee.com/login
+15:15 playahater| chetkaj user i pass .. 
+15:16 playahater| ili podseti ivana 
+15:17 dusanstojkovic| искај му ако га имаш на ток-у, искључен је са скајпа
+--- Log closed Wed Oct 27 15:23:05 2010
+--- Log opened Wed Oct 27 15:23:42 2010
+15:23 dusanstojkovic| jel ti reko da ce mi ga dadne?
+15:28 playahater| reko
+15:28 playahater| nemam skype ..
+15:28 playahater| nema ga na gtalk
+--- Log closed Wed Oct 27 15:34:05 2010
+--- Log opened Wed Oct 27 15:47:00 2010
+15:47 dusanstojkovic| ti,molim te,kad budes mogao,kao sto si rekao,pre 6 cimni da isklikcemo jedan panel da me uputis. ne vidim na remine-u nikakav git url? treba mi beanstalk nalog za to?
+--- Log closed Wed Oct 27 15:52:05 2010
+--- Log opened Wed Oct 27 16:29:27 2010
+16:29 Closing query with dusanstojkovic
+--- Log closed Wed Oct 27 16:29:27 2010
+--- Log opened Wed Oct 27 16:49:22 2010
+16:49 Starting query in Bitlbee with dusanstojkovic
+16:49 dusanstojkovic| zasto sites/all/themes nije u git-u?
+16:50 playahater| kako nije?
+--- Log closed Wed Oct 27 16:56:05 2010
+--- Log opened Wed Oct 27 17:19:53 2010
+17:19 Closing query with dusanstojkovic
+--- Log closed Wed Oct 27 17:19:53 2010
+--- Log opened Wed Oct 27 17:26:26 2010
+17:26 Starting query in Bitlbee with dusanstojkovic
+17:26 dusanstojkovic| turi li gu?
+--- Log closed Wed Oct 27 17:32:05 2010
+--- Log opened Wed Oct 27 17:39:23 2010
+17:39 Closing query with dusanstojkovic
+--- Log closed Wed Oct 27 17:39:23 2010
+--- Log opened Wed Oct 27 17:39:40 2010
+17:39 Starting query in Bitlbee with dusanstojkovic
+17:39 playahater| primi li gu?
+17:39 Closing query with dusanstojkovic
+--- Log closed Wed Oct 27 17:39:42 2010
+--- Log opened Wed Oct 27 17:39:59 2010
+17:39 Starting query in Bitlbee with dusanstojkovic
+17:39 dusanstojkovic| opravija sam ga. raboti
+--- Log closed Wed Oct 27 17:45:05 2010
+--- Log opened Wed Oct 27 17:50:05 2010
+17:50 playahater| :)
+17:50 playahater| to mi reci
+17:50 playahater| moz se proshetash do mene ako imash vremena ..
+17:50 playahater| treba mi mala pomoc
+17:50 playahater| :)
+17:50 playahater| meni .. active clasa ..
+17:50 playahater| ta sranja
+--- Log closed Wed Oct 27 17:56:05 2010
+--- Log opened Wed Oct 27 19:36:57 2010
+19:36 Closing query with dusanstojkovic
+--- Log closed Wed Oct 27 19:36:57 2010
+--- Log opened Fri Oct 29 16:54:10 2010
+16:54 Starting query in Bitlbee with dusanstojkovic
+16:54 playahater| git pull --rebase origin develop
+--- Log closed Fri Oct 29 16:59:53 2010
+--- Log opened Fri Oct 29 18:23:34 2010
+18:23 Closing query with dusanstojkovic
+--- Log closed Fri Oct 29 18:23:34 2010
+--- Log opened Mon Nov 01 15:54:24 2010
+15:54 Starting query in Bitlbee with dusanstojkovic
+15:54 dusanstojkovic| jel gu citas?
+15:55 dusanstojkovic| a be, milosu!
+--- Log closed Mon Nov 01 16:01:54 2010
+--- Log opened Mon Nov 01 17:07:47 2010
+17:07 Closing query with dusanstojkovic
+--- Log closed Mon Nov 01 17:07:47 2010
+--- Log opened Wed Nov 10 10:13:38 2010
+10:13 Starting query in Bitlbee with dusanstojkovic
+10:13 dusanstojkovic| http://localhost/m3com/admin/build/pages/nojs/operation/page-sports_channel/handlers/page_sports_channel_panel_context_10/preview
+10:13 dusanstojkovic| http://localhost/m3com/sports/sports-champions
+--- Log closed Wed Nov 10 10:19:01 2010
+--- Log opened Wed Nov 10 10:52:27 2010
+10:52 Closing query with dusanstojkovic
+--- Log closed Wed Nov 10 10:52:27 2010
+--- Log opened Thu Nov 11 16:46:06 2010
+16:46 Starting query in Bitlbee with dusanstojkovic
+16:46 playahater| ae pull
+16:46 Closing query with dusanstojkovic
+--- Log closed Thu Nov 11 16:46:08 2010
+--- Log opened Thu Nov 11 16:46:24 2010
+16:46 Starting query in Bitlbee with dusanstojkovic
+16:46 dusanstojkovic| са с рибезј?
+16:46 playahater| bez
+16:46 Closing query with dusanstojkovic
+--- Log closed Thu Nov 11 16:46:36 2010
+--- Log opened Thu Nov 11 16:56:46 2010
+16:56 Starting query in Bitlbee with dusanstojkovic
+16:56 dusanstojkovic| Fatal error: Call to undefined function curl_init() in C:\xampp\htdocs\m3com\sites\all\modules\brightcove\brightcove.module on line 211
+16:58 playahater| jebem li ga
+16:58 Closing query with dusanstojkovic
+--- Log closed Thu Nov 11 16:58:22 2010

@@ -1,0 +1,2 @@
+#load xmpp
+#load /usr/lib64/libloudmouth-1.so

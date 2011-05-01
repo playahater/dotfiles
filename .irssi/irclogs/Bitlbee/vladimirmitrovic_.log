@@ -1,0 +1,483 @@
+--- Log opened Fri Dec 03 16:25:27 2010
+16:25 Starting query in Bitlbee with vladimirmitrovic_
+16:25 playahater| http://drupal.org/node/678158
+--- Log closed Fri Dec 03 16:30:29 2010
+--- Log opened Fri Dec 03 16:43:50 2010
+16:43 playahater| http://drupal.org/files/issues/textfield_default_value.patch
+--- Log closed Fri Dec 03 16:49:29 2010
+--- Log opened Fri Dec 03 17:34:22 2010
+17:34 Closing query with vladimirmitrovic_
+--- Log closed Fri Dec 03 17:34:22 2010
+--- Log opened Fri Dec 03 17:52:08 2010
+17:52 Starting query in Bitlbee with vladimirmitrovic_
+17:52 vladimirmitrovic_| aj neka makne neko ovaj help menu sto pada preko stranicu
+17:52 vladimirmitrovic_| turim ga na ...
+17:52 playahater| :)
+17:52 playahater| ae satju
+17:56 playahater| pull
+17:56 playahater| :)
+--- Log closed Fri Dec 03 18:02:29 2010
+--- Log opened Fri Dec 03 18:18:18 2010
+18:18 Closing query with vladimirmitrovic_
+--- Log closed Fri Dec 03 18:18:18 2010
+--- Log opened Tue Dec 07 16:11:28 2010
+16:11 Starting query in Bitlbee with vladimirmitrovic_
+16:11 vladimirmitrovic_| Jesi koristio flowplayer za pustanje mp3
+16:12 playahater| jesam .. ali basic setup ..
+16:13 playahater| shta ti treba?
+16:13 vladimirmitrovic_| kako ide
+16:13 vladimirmitrovic_| taj basic
+16:13 vladimirmitrovic_| ja flv recimo ovako pustim 
+16:14 vladimirmitrovic_| echo theme('flowplayer', base_path() . 'sites/default/files/arsel/test.flv');
+16:14 vladimirmitrovic_| sa theme mu dam sta i putanju do fajla
+16:14 vladimirmitrovic_| al ne znam kako da namestim mp3
+16:15 playahater| aha .. chek ..
+16:15 playahater| sa tju ti poshaljem ..
+16:16 vladimirmitrovic_| moram li kad pustam audio da mu prosledim i cover image 
+16:16 vladimirmitrovic_| zar ne moze da se smanji u jednu liniju
+16:18 playahater| ako smo se dobro razumeli ..
+16:18 playahater| treba ti ovo ..
+16:18 playahater| http://drupal.org/node/551242#comment-3073776
+16:18 vladimirmitrovic_| moze da bude mali, jasno mi je kako on radi ali mi nije jasno kako to isto da proradi kroz drupal
+16:18 vladimirmitrovic_| daj da vidim 
+16:19 playahater| a? .. tje bude?
+16:19 vladimirmitrovic_| pa ovo je za video izgleda
+16:19 vladimirmitrovic_| pokrenem ja flv odlicno, sa onaj jednostavniji kod 
+16:19 vladimirmitrovic_| samo theme('flowplayer', $path);
+16:20 vladimirmitrovic_| nista cu potrazim za audio kako ide
+16:20 vladimirmitrovic_| mora da moze
+--- Log closed Tue Dec 07 16:26:27 2010
+--- Log opened Tue Dec 07 16:28:24 2010
+16:28 playahater| a da probash da ga embeduejsh preko swf funkcije?
+16:28 playahater| http://drupal.org/node/401992#comment-1359030
+--- Log closed Tue Dec 07 16:33:27 2010
+--- Log opened Tue Dec 07 16:36:34 2010
+16:36 playahater| kolko vidim .. svi rade ruchno ..
+16:36 playahater| http://drupal.org/node/787008#comment-3073380
+16:37 playahater| ovako ga dodash .. i dobudzish za audio ..
+--- Log closed Tue Dec 07 16:42:27 2010
+--- Log opened Tue Dec 07 16:42:39 2010
+16:42 playahater| i na kraju opet swf .. 
+16:42 playahater| http://drupal.org/node/581778#comment-2203150
+16:43 playahater| sad gledam .. nama u swftools-u nije enable-ovan flowplayer .. mozda te to jebucka ..
+16:43 playahater| http://drupal.org/node/417020
+16:45 vladimirmitrovic_| [16:30:42] pusta ga, samo da mu kazem da bude malechak
+--- Log closed Tue Dec 07 16:50:27 2010
+--- Log opened Tue Dec 07 17:02:23 2010
+17:02 Closing query with vladimirmitrovic_
+--- Log closed Tue Dec 07 17:02:23 2010
+--- Log opened Fri Dec 10 17:18:25 2010
+17:18 Starting query in Bitlbee with vladimirmitrovic_
+17:18 vladimirmitrovic_| aj dodji za sekundu
+17:18 playahater| kretjem za sekundu
+17:18 playahater| :)
+17:18 Closing query with vladimirmitrovic_
+--- Log closed Fri Dec 10 17:18:42 2010
+--- Log opened Sat Dec 11 11:41:08 2010
+11:41 Starting query in Bitlbee with vladimirmitrovic_
+11:41 vladimirmitrovic_| ovaj ti se help meni opet otvara
+11:41 vladimirmitrovic_| ako nece da te slusa uzmi obrisi ga 
+11:41 vladimirmitrovic_| da ga ja ne brisem 
+11:41 vladimirmitrovic_| ispada preko send mms formu recimo
+11:42 playahater| to samo kod tebe ne radi .. :)
+11:42 vladimirmitrovic_| ma kako da ne 
+11:42 playahater| ubaci display: hidden za taj id kod sebe u css
+11:42 vladimirmitrovic_| vidim ja da ce radite celu noc, samo se sajebavajte 
+11:42 playahater| i reshen problem :)
+11:42 vladimirmitrovic_| a sto bi to radio
+11:42 vladimirmitrovic_| zar ne treba da bude skupljen 
+11:43 playahater| pa jeste skupljen ..
+11:43 vladimirmitrovic_| pa kako nije
+11:43 playahater| i kod ivana .. i kod titje .. i kod mene ..
+11:43 playahater| samo kod tebe zeza .. ne znam do chega moz da bude ..
+11:43 playahater| i na serveru radi ..
+11:43 vladimirmitrovic_| idi na arsel send mms 
+11:43 playahater| ae .. chek ..
+11:44 vladimirmitrovic_| tu je bojca iskoristio sigurno neku klasu, id i to je pokrenuo 
+11:44 vladimirmitrovic_| otvorio ga 
+11:44 playahater| http://localhost/arsel/send-sms
+11:44 playahater| kod mene ok
+11:44 vladimirmitrovic_| mms
+11:44 vladimirmitrovic_| bre
+11:44 playahater| ups
+11:44 playahater| aaa .. pa da .. 
+11:44 playahater| otvoren ..
+11:45 playahater| to ste vi neshto ujebali tamo
+11:45 playahater| :)
+11:45 playahater| inache radi kako treba
+11:45 playahater| uu .. pa js za taj help meni ne radi na toj stranici ..
+11:46 vladimirmitrovic_| namesti ga caskom, vidi koji id koristis / klasu, pretrazi stranicu da vidis neli se koristi jos negde ako ne cu ga brisem 
+11:46 playahater| ne uchitava js uopshte ..
+11:46 vladimirmitrovic_| pa ucitaj ga decko
+11:46 playahater| ma ima ga js u stranici .. al se ne izvrshava ..
+11:48 playahater| misim da ga jquery.ui drka ..
+11:48 playahater| jel se jquery.ui samo na mms uchitava?
+11:48 vladimirmitrovic_| na sms ga ne drka 
+11:48 vladimirmitrovic_| a iste su stranice
+11:48 playahater| a ..
+11:48 playahater| hmm
+11:49 vladimirmitrovic_| ima ga valjda i na sms
+11:49 playahater| nema ga
+11:49 playahater| do jquery.ui-a je izgleda ..
+11:49 vladimirmitrovic_| onda ga iskljuci 
+11:49 vladimirmitrovic_| pa proveri 
+11:50 vladimirmitrovic_| tu ima samo jedan dijalog
+11:50 vladimirmitrovic_| compatible file
+11:50 vladimirmitrovic_| s
+--- Log closed Sat Dec 11 11:55:29 2010
+--- Log opened Sat Dec 11 11:57:11 2010
+11:57 Closing query with vladimirmitrovic_
+--- Log closed Sat Dec 11 11:57:11 2010
+--- Log opened Sat Dec 11 12:02:34 2010
+12:02 Starting query in Bitlbee with vladimirmitrovic_
+--- Log closed Sat Dec 11 12:08:29 2010
+--- Log opened Sat Dec 11 12:14:10 2010
+12:14 playahater| pull
+12:14 playahater| :)
+12:14 playahater| sklonio sam help dropdown na svim arsel stranicama
+12:14 playahater| nisam mogo samo na mms
+12:14 vladimirmitrovic_| ok
+12:14 playahater| pa tje ga pogledamo kasnije .. 
+12:14 playahater| sad jurim ove panele
+12:14 playahater| to je bitnije
+12:15 vladimirmitrovic_| samo zabelezi da ne pamtimo
+12:15 playahater| zabelezeto kod mene u lokalu ..
+--- Log closed Sat Dec 11 12:20:29 2010
+--- Log opened Sat Dec 11 12:22:53 2010
+12:22 Closing query with vladimirmitrovic_
+--- Log closed Sat Dec 11 12:22:53 2010
+--- Log opened Mon Dec 13 18:22:31 2010
+18:22 Starting query in Bitlbee with vladimirmitrovic_
+18:22 vladimirmitrovic_| do kad ce radis?
+18:22 vladimirmitrovic_| jos li si na poso 
+--- Log closed Mon Dec 13 18:28:25 2010
+--- Log opened Mon Dec 13 18:49:07 2010
+18:49 playahater| upravo se spremam da krenem doma
+18:51 vladimirmitrovic_| pa kako je bilo danas
+18:51 vladimirmitrovic_| jesi raspolozan malo da te gnjavim, tj ti da pijes pivo a ja da radim nesto i svremena na vreme da te pitam
+--- Log closed Mon Dec 13 18:56:25 2010
+--- Log opened Mon Dec 13 18:59:29 2010
+18:59 playahater| si kolima?
+18:59 playahater| otjesh do nas?
+18:59 vladimirmitrovic_| jesam 
+18:59 playahater| na vops .. konsultacije
+18:59 playahater| :)
+18:59 playahater| ja sam doma za pola sata
+19:00 vladimirmitrovic_| pa ja bi, mucim se nesto a svi moji problemi su krajnje jednostavni jer je ceo projekat jednostavan 
+19:00 vladimirmitrovic_| mogu da dodjem po tebe 
+19:00 vladimirmitrovic_| da me saces ispred preduzece
+19:00 playahater| moze
+19:00 vladimirmitrovic_| samo da sidjem sa brdo 
+19:00 playahater| ae ..
+19:00 playahater| imash moj broj ..
+19:00 playahater| cimni me kad budesh bio blizu da strchim dole
+19:01 vladimirmitrovic_| ajde cimam te, zurim 
+19:01 vladimirmitrovic_| ej daj mi broj
+19:01 vladimirmitrovic_| cimni me 
+19:01 vladimirmitrovic_| nesto se istripovo imam neki tvoj broj za 12 cifara
+19:02 vladimirmitrovic_| cimni me na 069 13 31 980
+19:03 playahater| :)
+19:03 playahater| upishi .. i cimaj kad budesh bio blizu ..
+19:03 playahater| ae .. :)
+19:05          <-- vladimirmitrovic_ has quit irc
+19:05 Closing query with vladimirmitrovic_
+--- Log closed Mon Dec 13 19:05:42 2010
+--- Log opened Tue Dec 14 12:50:46 2010
+12:50 Starting query in Bitlbee with vladimirmitrovic_
+12:50 vladimirmitrovic_| ej Ok je ovo sa loadovanje nodova, imaju srecu te node_load kad prvi put loaduje baca to u cache, tj view pravi node objekat koji postoji i kad ga drugi put zatrazimo samo ga clonira
+12:50 vladimirmitrovic_| na radi query 
+12:51 vladimirmitrovic_| spasili su se zamalko
+--- Log closed Tue Dec 14 12:56:24 2010
+--- Log opened Tue Dec 14 13:46:40 2010
+13:46 playahater| :)
+13:46 Closing query with vladimirmitrovic_
+--- Log closed Tue Dec 14 13:46:43 2010
+--- Log opened Thu Dec 23 10:46:22 2010
+10:46 Starting query in Bitlbee with vladimirmitrovic_
+10:46 vladimirmitrovic_| Sto je .yellow-button-sms iskomentarisan u style.css
+--- Log closed Thu Dec 23 10:51:40 2010
+--- Log opened Thu Dec 23 11:01:26 2010
+11:01 playahater| jebem li ga ..
+11:01 playahater| mogutje da je marija neshto chachkala
+11:01 playahater| ja style.css ne pipam
+11:01 vladimirmitrovic_| ok
+11:01 Closing query with vladimirmitrovic_
+--- Log closed Thu Dec 23 11:01:57 2010
+--- Log opened Thu Dec 23 11:07:55 2010
+11:07 Starting query in Bitlbee with vladimirmitrovic_
+11:08 playahater| jel ovo mozda odgovor na tvoje predjashnje pitanje
+11:08 playahater| http://redmine.diwanee.com/issues/1093
+11:08 playahater| :)
+11:08 vladimirmitrovic_| izgleda
+11:09 Closing query with vladimirmitrovic_
+--- Log closed Thu Dec 23 11:09:10 2010
+--- Log opened Thu Dec 23 11:32:19 2010
+11:32 Starting query in Bitlbee with vladimirmitrovic_
+11:32 vladimirmitrovic_| Gde se nalaze prototip fajlovi 
+11:35 playahater| http://client.agena.rs/m3com/prototype-html/_main/
+11:35 vladimirmitrovic_| ma di su fajlovi, to ti meni kazi 
+11:37 playahater| kaki be fajlovi
+11:37 playahater| na tom linku ti je html/css
+11:37 playahater| ovo su njihovi ..
+11:37 playahater| http://client.agena.rs/m3com/prototype-html/diwanee/
+11:38 Closing query with vladimirmitrovic_
+--- Log closed Thu Dec 23 11:38:15 2010
+--- Log opened Thu Dec 23 11:38:32 2010
+11:38 Starting query in Bitlbee with vladimirmitrovic_
+11:38 vladimirmitrovic_| dobro bre sta ako mi treba neki images
+11:38 playahater| pa ti me jebesh ..
+11:38 playahater| :)
+11:38 playahater| http://client.agena.rs/m3com/prototype-html/_main/images/
+11:39 playahater| tje bude?
+11:39 vladimirmitrovic_| sta me koj moj jebavaju, izmenila sam i super, pa nek prodje lepo ceo site pa nek menja
+11:39 playahater| :)
+11:39 playahater| napishi kao komentar na taj tiket ..
+11:40 playahater| mada mislim da sam ga zatvorio ..
+11:40 playahater| osh da otvorim pa iskomentarishi .. 
+11:40 playahater| taman reshimo problem za ubudutje
+11:41 vladimirmitrovic_| ma reko sam joj, a ako se ponovi onda cu stvarno da im kazem, pa ja kad bi ostavljao iza sebe ko sta treba da uradi, pa jebem li ga kad bi smo zavrsili
+11:41 vladimirmitrovic_| promenis neku sliku, jebi ga search kroz code, ides redom i menjas 
+11:41 vladimirmitrovic_| ja ovu njenu poruku nisam ni konstatovo 
+--- Log closed Thu Dec 23 11:47:40 2010
+--- Log opened Thu Dec 23 11:53:04 2010
+11:53 playahater| pa znam drugare .. meni sve to jasno .. 
+11:53 playahater| ja pricham al nema ko da slusha ..
+11:53 playahater| al nemoj mi se nervirash, lebati ..
+11:53 playahater| znash .. da si ti nervozan .. i meni skochi pritisak .. :)
+11:53 Closing query with vladimirmitrovic_
+--- Log closed Thu Dec 23 11:53:40 2010
+--- Log opened Thu Dec 23 11:54:16 2010
+11:54 Starting query in Bitlbee with vladimirmitrovic_
+11:54 vladimirmitrovic_| nema nerviranje, jos malo cu pocnem da tepam pa ce se radi kako treba
+11:54 playahater| e to podrzavam
+11:54 playahater| :)
+11:54 playahater| batina iz raja izashla ..
+11:54 playahater| :)
+11:55 Closing query with vladimirmitrovic_
+--- Log closed Thu Dec 23 11:55:10 2010
+--- Log opened Thu Dec 23 11:55:15 2010
+11:55 Starting query in Bitlbee with vladimirmitrovic_
+11:55 vladimirmitrovic_| channel introduction folder treba da bude u git
+11:55 vladimirmitrovic_| kad uploadujemo one slicice da ih svako povuce kod sebe 
+11:56 vladimirmitrovic_| i kad deploy radimo da ne mislimo na to, namestio sam ga jednom i sad vidim da ga opet neko zuljio
+11:56 playahater| sreditju to ..
+11:56 playahater| preuzimam na sebe
+11:56 playahater| :)
+--- Log closed Thu Dec 23 12:02:40 2010
+--- Log opened Thu Dec 23 12:07:48 2010
+12:07 Closing query with vladimirmitrovic_
+--- Log closed Thu Dec 23 12:07:48 2010
+--- Log opened Thu Dec 23 13:25:03 2010
+13:25 Starting query in Bitlbee with vladimirmitrovic_
+13:25 playahater| mislim da sam sredio channel_introduction
+13:25 playahater| pull
+--- Log closed Thu Dec 23 13:30:40 2010
+--- Log opened Thu Dec 23 13:33:55 2010
+13:33 vladimirmitrovic_| ok, zapreti tamo da vode racun
+13:34 playahater| :)
+--- Log closed Thu Dec 23 13:39:40 2010
+--- Log opened Thu Dec 23 13:40:10 2010
+13:40 Closing query with vladimirmitrovic_
+--- Log closed Thu Dec 23 13:40:10 2010
+--- Log opened Thu Dec 23 14:27:54 2010
+14:27 Starting query in Bitlbee with vladimirmitrovic_
+14:27 vladimirmitrovic_| Decko sta ti inace radis?
+14:27 vladimirmitrovic_| kolko si zaposljen?
+--- Log closed Thu Dec 23 14:33:40 2010
+--- Log opened Thu Dec 23 14:36:37 2010
+14:36 Closing query with vladimirmitrovic_
+--- Log closed Thu Dec 23 14:36:37 2010
+--- Log opened Thu Dec 23 14:51:49 2010
+14:51 Starting query in Bitlbee with vladimirmitrovic_
+14:51 vladimirmitrovic_| ej pa nije li sa file da mu se navodi putanja
+14:53 vladimirmitrovic_| nije, file se izvrsava pre callback funkcije
+14:54 playahater| http://drupal.org/node/224170#comment-1487832
+--- Log closed Thu Dec 23 14:59:40 2010
+--- Log opened Thu Dec 23 15:09:51 2010
+15:09 Closing query with vladimirmitrovic_
+--- Log closed Thu Dec 23 15:09:51 2010
+--- Log opened Fri Dec 24 17:30:31 2010
+17:30 Starting query in Bitlbee with vladimirmitrovic_
+17:30 vladimirmitrovic_| Obrises cache i cao 
+17:31 vladimirmitrovic_| pogodi neki cron hook i pocisti sve sto nije vec indeksirano a nije nista indeksirano
+17:35 vladimirmitrovic_| radimo li mi uopste backup?
+17:35 vladimirmitrovic_| sad nesto razmisljam Bojca kakv je budalac on bi mogo sve da obrise
+17:37 playahater| kolko ja znam ne automatski
+17:37 playahater| :(
+17:37 playahater| mada nemoj me drzish za rech ..
+--- Log closed Fri Dec 24 17:42:44 2010
+--- Log opened Fri Dec 24 17:52:33 2010
+17:52 Closing query with vladimirmitrovic_
+--- Log closed Fri Dec 24 17:52:33 2010
+--- Log opened Fri Dec 24 18:41:46 2010
+18:41 Starting query in Bitlbee with vladimirmitrovic_
+18:41 vladimirmitrovic_| dodji caskom ovam
+18:42 playahater| stizem
+18:42 Closing query with vladimirmitrovic_
+--- Log closed Fri Dec 24 18:42:49 2010
+--- Log opened Tue Dec 28 14:27:15 2010
+14:27 Starting query in Bitlbee with vladimirmitrovic_
+14:27 playahater| http://localhost/en/album/group/1693/pictures
+--- Log closed Tue Dec 28 14:32:47 2010
+--- Log opened Tue Dec 28 15:09:55 2010
+15:09          <-- vladimirmitrovic_ has quit irc
+--- Log closed Tue Dec 28 15:15:47 2010
+--- Log opened Tue Dec 28 16:46:56 2010
+16:46 Closing query with vladimirmitrovic_
+--- Log closed Tue Dec 28 16:46:56 2010
+--- Log opened Thu Dec 30 12:38:09 2010
+12:38 Starting query in Bitlbee with vladimirmitrovic_
+12:38 vladimirmitrovic_| aj proveri sto se ne vidi header slika na special numbers i uploaduj je opet 
+12:38 vladimirmitrovic_| treba da bude u git 
+12:38 vladimirmitrovic_| opet nam se gube te sliek 
+--- Log closed Thu Dec 30 12:43:22 2010
+--- Log opened Thu Dec 30 14:39:07 2010
+14:39          <-- vladimirmitrovic_ has quit irc
+--- Log closed Thu Dec 30 14:44:22 2010
+--- Log opened Thu Dec 30 14:48:38 2010
+14:48 Closing query with vladimirmitrovic_
+--- Log closed Thu Dec 30 14:48:38 2010
+--- Log opened Fri Jan 14 11:11:57 2011
+11:11 Starting query in Bitlbee with vladimirmitrovic_
+11:11 vladimirmitrovic_| Ko radi m3com_misc module?
+11:16 playahater| titja
+11:16 playahater| :)
+11:16 playahater| ubaci tamo apostrof na tu 47 liniju  .. i cepaj dalje .. :)
+11:17 vladimirmitrovic_| ma cu ubacim nije to problem, nego...
+11:17 playahater| znam ..
+11:17 playahater| :)
+--- Log closed Fri Jan 14 11:22:49 2011
+--- Log opened Fri Jan 14 11:48:58 2011
+11:48 Closing query with vladimirmitrovic_
+--- Log closed Fri Jan 14 11:48:58 2011
+--- Log opened Tue Jan 18 12:14:29 2011
+12:14 Starting query in Bitlbee with vladimirmitrovic_
+12:14 playahater| drugare .. jel znash mozda kako se pristupa staroj m3com bazi? .. kako da browsujem njihovom bazom?
+12:15 vladimirmitrovic_| kojoj bazi?
+12:15 vladimirmitrovic_| originalnim bazama mislis
+12:19 vladimirmitrovic_| imam pristup da ti namestim da vidis bazu iz navicat recimo
+--- Log closed Tue Jan 18 12:24:51 2011
+--- Log opened Tue Jan 18 12:25:15 2011
+12:25 playahater| da .. mislim na njihove originalne baze ..
+12:25 playahater| jel tu idemo preko vpn-a ?
+12:26 vladimirmitrovic_| ne, preko ssh 
+12:26 vladimirmitrovic_| samo cas
+12:26 vladimirmitrovic_| sta koristis?
+12:26 vladimirmitrovic_| navicat ili nesto drugo?
+12:26 playahater| ssh/terminal/php_my_admin
+12:26 vladimirmitrovic_| ustvari sta god da koristis mozes li da napravis konekciju preko ssh tunel 
+12:26 playahater| da be .. naravno ..
+12:26 playahater| daj mi samo podatke kako da pristupim ..
+12:27 playahater| ip/user/pass/port
+12:27 vladimirmitrovic_| e pa onda sta me koj moj zezas
+12:27 playahater| hihi
+12:27 playahater| :)
+12:27 vladimirmitrovic_| zakaci se tamo i uzivaj 
+12:27 vladimirmitrovic_| ;-)
+12:27 vladimirmitrovic_| samo sek 
+12:28 playahater| ae
+12:28 playahater| :)
+12:28 vladimirmitrovic_| paswordi su mi muka, samo da pronajdem po mailovi 
+12:29 playahater| e .. nisi jedini .. :(
+12:29 playahater| i ja patim s ti podaci ..
+12:30 playahater| treba da sranja u git da se drze .. :D
+12:30 Closing query with vladimirmitrovic_
+--- Log closed Tue Jan 18 12:30:11 2011
+--- Log opened Tue Jan 18 12:31:45 2011
+12:31 Starting query in Bitlbee with vladimirmitrovic_
+12:31 vladimirmitrovic_| SSH:
+12:31 vladimirmitrovic_| host: sftp://212.100.219.134
+12:31 vladimirmitrovic_| port: 13337
+12:31 vladimirmitrovic_| user: root
+12:31 vladimirmitrovic_| pass: M3Com08Net
+12:31 vladimirmitrovic_| probaj 
+12:32 vladimirmitrovic_| baza: 212.100.219.136
+12:32 vladimirmitrovic_| 3306
+12:32 vladimirmitrovic_| m3akmUsr
+12:33 vladimirmitrovic_| M3ak0m2N0W
+12:33 vladimirmitrovic_| to ti je to 
+12:33 vladimirmitrovic_| ovo drugo je baza, a prvo je tunel 
+12:36 playahater| o da .. do jaja ..
+12:36 playahater| hvala drugare ..
+12:36 vladimirmitrovic_| pazi sta radis, to sam ti u poverenje dao :-p
+12:36 playahater| de bre .. jel sumnjash u mene?
+12:36 playahater| :P
+12:36 playahater| :D
+12:37 vladimirmitrovic_| zajebemo li nesto ima da bude dzihad, dzihad
+12:38 playahater| hahahaha
+12:38 playahater| sve chetiri krute
+12:38 playahater| :)
+12:38 Closing query with vladimirmitrovic_
+--- Log closed Tue Jan 18 12:38:21 2011
+--- Log opened Tue Jan 18 14:36:48 2011
+14:36 Starting query in Bitlbee with vladimirmitrovic_
+14:37 playahater| drugare koji je user/pass za pristup developeru od spolja?
+14:37 playahater| ima neshto extdev .. ako se dobro setjam ..
+14:37 vladimirmitrovic_| externaldev
+14:37 playahater| to
+14:37 playahater| a pass?
+14:37 vladimirmitrovic_| 765ap246
+14:37 playahater| to
+14:37 vladimirmitrovic_| [SSH pristup developeru]
+14:37 vladimirmitrovic_| ssh externaldev@89.216.16.77 -p 40
+14:37 vladimirmitrovic_| pass: 765ap246
+14:38 vladimirmitrovic_| pa onda mozes root/agena
+14:39 playahater| fala drugare .. :) ..
+14:40 vladimirmitrovic_| ma ja ne znam sta gi je trebao onaj administrator 
+14:40 vladimirmitrovic_| sve znam
+14:40 playahater| lele .. mani ga .. 
+14:41 playahater| :)
+--- Log closed Tue Jan 18 14:46:51 2011
+--- Log opened Tue Jan 18 14:47:28 2011
+14:47 Closing query with vladimirmitrovic_
+--- Log closed Tue Jan 18 14:47:28 2011
+--- Log opened Wed Jan 19 16:52:34 2011
+16:52 Starting query in Bitlbee with vladimirmitrovic_
+16:53 playahater| drugare .. jel si radio neku integraciju sms/mms sa og ?
+16:53 playahater| sad sam nasho komentar baje od pre mesec dana ..
+16:53 playahater| https://agena.notableapp.com/posts/136394
+16:55 vladimirmitrovic_| Posalji mi mail, izaso sam
+16:55 playahater| ok
+16:55 playahater| :)
+--- Log closed Wed Jan 19 17:01:30 2011
+--- Log opened Wed Jan 19 18:47:11 2011
+18:47 Closing query with vladimirmitrovic_
+--- Log closed Wed Jan 19 18:47:11 2011
+--- Log opened Tue Jan 25 16:16:45 2011
+16:16 Starting query in Bitlbee with vladimirmitrovic_
+16:16 playahater| drupal_mail('password_reset', $name, $to, $language->language, $params, $from, TRUE);
+16:19 Closing query with vladimirmitrovic_
+--- Log closed Tue Jan 25 16:19:22 2011
+--- Log opened Tue Jan 25 16:51:15 2011
+16:51 Starting query in Bitlbee with vladimirmitrovic_
+16:51 playahater| http://drupal.org/node/358855#comment-1203146
+16:51 Closing query with vladimirmitrovic_
+--- Log closed Tue Jan 25 16:51:23 2011
+--- Log opened Mon Jan 31 18:37:12 2011
+18:37 Starting query in Bitlbee with vladimirmitrovic_
+18:37 playahater| http://drupal.org/node/721774#comment-2704244
+18:39 Closing query with vladimirmitrovic_
+--- Log closed Mon Jan 31 18:39:57 2011
+--- Log opened Wed Mar 30 10:48:34 2011
+10:48 Starting query in Bitlbee with vladimirmitrovic_
+10:48 vladimirmitrovic_| puhovo sam dev pa imate neke greske 
+10:48 vladimirmitrovic_| vidim 
+10:48 vladimirmitrovic_| m3com_ar_flash
+10:49 vladimirmitrovic_| .module
+10:49 vladimirmitrovic_| line 105
+10:53 playahater| ispravio ..
+10:53 playahater| :)
+10:58 playahater| push dev 
+10:59 playahater| :)
+10:59 Closing query with vladimirmitrovic_
+--- Log closed Wed Mar 30 10:59:04 2011
+--- Log opened Fri Apr 15 12:44:28 2011
+12:44 Starting query in Bitlbee with vladimirmitrovic_
+12:44 playahater| pull
+12:44 Closing query with vladimirmitrovic_
+--- Log closed Fri Apr 15 12:44:35 2011
+--- Log opened Wed Apr 27 12:58:08 2011
+12:58 Starting query in Bitlbee with vladimirmitrovic_
+12:58 playahater| PHP Fatal error:  Cannot redeclare m3com_auth_cronapi() (previously declared in /var/www/vhosts/dev.m3com.com.sa/httpdocs/sites/all/modules/custom/m3com_auth/m3com_auth.module:877) in /var/www/vhosts/dev.m3com.com.sa/httpdocs/sites/all/modules/custom/m3com_auth/m3com_auth.module on line 936
+12:58 Closing query with vladimirmitrovic_
+--- Log closed Wed Apr 27 12:58:21 2011

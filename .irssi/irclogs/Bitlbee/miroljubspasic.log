@@ -1,0 +1,936 @@
+--- Log opened Mon Nov 22 11:24:39 2010
+11:24 Starting query in Bitlbee with miroljubspasic
+11:24 playahater| https://drupal.org/project/tcontact
+11:25 playahater| https://drupal.org/node/313272
+11:28 miroljubspasic| primljeno :-)
+11:29 playahater| https://drupal.org/project/language_sections
+11:30 playahater| ovaj poslednji modul je zamena za ruchno definisanje varijabli u settings.php
+11:32 playahater| mislim da kombinacija language_sections, tcontact i i18n reshava sve multilanguage probleme .. :)
+--- Log closed Mon Nov 22 11:37:35 2010
+--- Log opened Mon Nov 22 11:40:37 2010
+11:40 playahater| evo i ovo imash na klik .. :)
+11:40 playahater| 
+11:40 playahater| https://drupal.org/project/contact_field
+11:46 Closing query with miroljubspasic
+--- Log closed Mon Nov 22 11:46:31 2010
+--- Log opened Fri Nov 26 16:09:13 2010
+16:09 Starting query in Bitlbee with miroljubspasic
+16:09 miroljubspasic| pomagaj :-) 
+16:09 miroljubspasic| vise ne znam sta klikcem 
+16:09 miroljubspasic| ako imas vremena 
+16:09 miroljubspasic| ..
+16:10 playahater| stizem ..
+--- Log closed Fri Nov 26 16:16:26 2010
+--- Log opened Fri Nov 26 16:50:49 2010
+16:50 Closing query with miroljubspasic
+--- Log closed Fri Nov 26 16:50:49 2010
+--- Log opened Fri Dec 10 12:13:51 2010
+12:13 Starting query in Bitlbee with miroljubspasic
+12:13 playahater| http://help.github.com/linux-key-setup/
+--- Log closed Fri Dec 10 12:19:23 2010
+--- Log opened Fri Dec 10 12:50:41 2010
+12:50 Closing query with miroljubspasic
+--- Log closed Fri Dec 10 12:50:41 2010
+--- Log opened Tue Dec 21 16:45:13 2010
+16:45 Starting query in Bitlbee with miroljubspasic
+16:45 miroljubspasic| sandra.dudvarski@agena.rs
+--- Log closed Tue Dec 21 16:50:35 2010
+--- Log opened Tue Dec 21 16:51:20 2010
+16:51 playahater| danke :)
+16:51 Closing query with miroljubspasic
+--- Log closed Tue Dec 21 16:51:22 2010
+--- Log opened Fri Dec 24 11:56:25 2010
+11:56 Starting query in Bitlbee with miroljubspasic
+11:56 playahater| http://mirror.teamdouche.net/?type=nightly
+--- Log closed Fri Dec 24 12:02:16 2010
+--- Log opened Fri Dec 24 12:08:56 2010
+12:08 Closing query with miroljubspasic
+--- Log closed Fri Dec 24 12:08:56 2010
+--- Log opened Tue Dec 28 22:36:47 2010
+22:36 Starting query in Bitlbee with miroljubspasic
+22:36 miroljubspasic| znam da nije radno vreme, ali ovi arapi nisu normaalni :-)
+22:37 miroljubspasic| imaju oko 10000 istih username u tabeli
+22:37 miroljubspasic| mysql> select count(distinct fullname) from swusers;
+22:37 miroljubspasic| +--------------------------+
+22:37 miroljubspasic| | count(distinct fullname) |
+22:37 miroljubspasic| +--------------------------+
+22:37 miroljubspasic| |                   241470 |
+22:37 miroljubspasic| +--------------------------+
+22:37 miroljubspasic| mysql> select count(*) from swusers;
+22:37 miroljubspasic| +----------+
+22:37 miroljubspasic| | count(*) |
+22:37 miroljubspasic| +----------+
+22:37 miroljubspasic| |   251028 |
+22:37 miroljubspasic| +----------+
+--- Log closed Tue Dec 28 22:43:18 2010
+--- Log opened Wed Dec 29 00:10:15 2010
+00:10          <-- miroljubspasic has quit irc
+--- Log closed Wed Dec 29 00:15:18 2010
+--- Log opened Wed Dec 29 11:26:13 2010
+11:26 Closing query with miroljubspasic
+--- Log closed Wed Dec 29 11:26:13 2010
+--- Log opened Wed Dec 29 13:38:13 2010
+13:38 Starting query in Bitlbee with miroljubspasic
+13:38 playahater| http://www.portal-srbija.com/ugostiteljstvo/restorani/luda-kuca-kineski-fast-food/
+--- Log closed Wed Dec 29 13:44:10 2010
+--- Log opened Wed Dec 29 14:46:14 2010
+14:46 Closing query with miroljubspasic
+--- Log closed Wed Dec 29 14:46:14 2010
+--- Log opened Wed Jan 12 11:36:51 2011
+11:36 Starting query in Bitlbee with miroljubspasic
+11:36 miroljubspasic| http://www.geany.org/
+11:38 Closing query with miroljubspasic
+--- Log closed Wed Jan 12 11:38:52 2011
+--- Log opened Fri Jan 14 14:04:07 2011
+14:04 Starting query in Bitlbee with miroljubspasic
+14:04 playahater| http://api.drupal.org/api/drupal/includes--tablesort.inc/6
+14:07 playahater| http://api.drupal.org/api/drupal/includes--theme.inc/function/theme_table/6
+14:09 playahater| http://drupal.org/node/309686
+--- Log closed Fri Jan 14 14:14:49 2011
+--- Log opened Fri Jan 14 14:25:26 2011
+14:25 Closing query with miroljubspasic
+--- Log closed Fri Jan 14 14:25:26 2011
+--- Log opened Tue Jan 18 12:29:46 2011
+12:29 Starting query in Bitlbee with miroljubspasic
+12:29 miroljubspasic|     * warning: array_merge(): Argument #1 is not an array in /var/www/drupal/modules/user/user.module on line 1981.
+12:29 miroljubspasic|     * warning: usort() expects parameter 1 to be array, null given in /var/www/drupal/modules/user/user.module on line 1985.
+12:29 miroljubspasic|  
+--- Log closed Tue Jan 18 12:34:51 2011
+--- Log opened Tue Jan 18 13:47:47 2011
+13:47 playahater| http://scalability.rs/369/software-scalability-belgrade-meetup-04
+--- Log closed Tue Jan 18 13:52:51 2011
+--- Log opened Tue Jan 18 14:47:34 2011
+14:47 Closing query with miroljubspasic
+--- Log closed Tue Jan 18 14:47:34 2011
+--- Log opened Tue Jan 18 16:30:50 2011
+16:30 Starting query in Bitlbee with miroljubspasic
+16:30 miroljubspasic| http://redmine.diwanee.com/documents/27
+--- Log closed Tue Jan 18 16:35:51 2011
+--- Log opened Tue Jan 18 16:56:42 2011
+16:56 Closing query with miroljubspasic
+--- Log closed Tue Jan 18 16:56:42 2011
+--- Log opened Tue Jan 18 17:05:09 2011
+17:05 Starting query in Bitlbee with miroljubspasic
+17:05 playahater| https://code.google.com/p/dropbox-js/
+17:06 playahater| https://dropbox-js.googlecode.com/svn/trunk/
+--- Log closed Tue Jan 18 17:11:51 2011
+--- Log opened Tue Jan 18 17:32:23 2011
+17:32 Closing query with miroljubspasic
+--- Log closed Tue Jan 18 17:32:23 2011
+--- Log opened Tue Jan 18 19:43:54 2011
+19:43 Starting query in Bitlbee with miroljubspasic
+19:43 playahater| http://drupal.org/project/smsframework
+--- Log closed Tue Jan 18 19:49:51 2011
+--- Log opened Tue Jan 18 20:27:19 2011
+20:27 Closing query with miroljubspasic
+--- Log closed Tue Jan 18 20:27:19 2011
+--- Log opened Wed Jan 19 13:05:41 2011
+13:05 Starting query in Bitlbee with miroljubspasic
+13:05 playahater| http://drupal.org/node/300997#comment-2285010
+--- Log closed Wed Jan 19 13:11:30 2011
+--- Log opened Wed Jan 19 13:28:48 2011
+13:28 Closing query with miroljubspasic
+--- Log closed Wed Jan 19 13:28:48 2011
+--- Log opened Wed Jan 19 19:19:18 2011
+19:19 Starting query in Bitlbee with miroljubspasic
+19:19 miroljubspasic| qh7gyzt8fbmpl5e	pjugjp41xjjqw6s
+19:19 miroljubspasic| qh7gyzt8fbmpl5e
+19:19 miroljubspasic| pjugjp41xjjqw6s
+19:21 playahater| http://localhost/filestorage
+19:22 Closing query with miroljubspasic
+--- Log closed Wed Jan 19 19:22:49 2011
+--- Log opened Thu Jan 20 00:14:00 2011
+00:14 Starting query in Bitlbee with miroljubspasic
+--- Log closed Thu Jan 20 00:19:49 2011
+--- Log opened Thu Jan 20 00:21:07 2011
+00:21 Closing query with miroljubspasic
+--- Log closed Thu Jan 20 00:21:07 2011
+--- Log opened Thu Jan 20 21:36:58 2011
+21:36 Starting query in Bitlbee with miroljubspasic
+21:36 playahater| http://drupal.org/node/281450#comment-1560836
+--- Log closed Thu Jan 20 21:42:21 2011
+--- Log opened Thu Jan 20 21:59:23 2011
+21:59 Closing query with miroljubspasic
+--- Log closed Thu Jan 20 21:59:23 2011
+--- Log opened Thu Jan 20 22:38:00 2011
+22:38 Starting query in Bitlbee with miroljubspasic
+22:38 playahater| http://api.drupal.org/api/drupal/developer--hooks--core.php/function/hook_mail/6#comment-1373
+--- Log closed Thu Jan 20 22:43:21 2011
+--- Log opened Thu Jan 20 23:41:18 2011
+23:41 Closing query with miroljubspasic
+--- Log closed Thu Jan 20 23:41:18 2011
+--- Log opened Thu Jan 27 12:24:00 2011
+12:24 Starting query in Bitlbee with miroljubspasic
+12:24 miroljubspasic| http://tumblr.intranation.com/post/766290743/using-dropbox-git-repository
+--- Log closed Thu Jan 27 12:29:23 2011
+--- Log opened Thu Jan 27 13:46:51 2011
+13:46 Closing query with miroljubspasic
+--- Log closed Thu Jan 27 13:46:51 2011
+--- Log opened Sun Jan 30 14:34:43 2011
+14:34 Starting query in Bitlbee with miroljubspasic
+14:34 playahater| http://www.portal-srbija.com/ugostiteljstvo/restorani/luda-kuca-kineski-fast-food/
+14:35 Closing query with miroljubspasic
+--- Log closed Sun Jan 30 14:35:02 2011
+--- Log opened Mon Jan 31 17:11:35 2011
+17:11 Starting query in Bitlbee with miroljubspasic
+17:11 miroljubspasic| Fatal error: Maximum execution time of 30 seconds exceeded in /var/www/m3com/sites/all/modules/javascript_aggregator/jsminplus.php on line 1074 
+17:11 miroljubspasic| mozda ti nesto znaci
+--- Log closed Mon Jan 31 17:17:17 2011
+--- Log opened Mon Jan 31 17:21:48 2011
+17:21 Closing query with miroljubspasic
+--- Log closed Mon Jan 31 17:21:48 2011
+--- Log opened Tue Feb 01 12:40:09 2011
+12:40 Starting query in Bitlbee with miroljubspasic
+12:40 miroljubspasic| http://groups.drupal.org/node/115589
+--- Log closed Tue Feb 01 12:45:41 2011
+--- Log opened Tue Feb 01 12:57:28 2011
+12:57 playahater| radi :)
+12:57 Closing query with miroljubspasic
+--- Log closed Tue Feb 01 12:57:29 2011
+--- Log opened Tue Feb 01 12:57:55 2011
+12:57 Starting query in Bitlbee with miroljubspasic
+12:57 miroljubspasic| pa sta je bilo?
+12:59 playahater| zabudalio neshto dok se importovala baza
+12:59 Closing query with miroljubspasic
+--- Log closed Tue Feb 01 12:59:24 2011
+--- Log opened Thu Feb 03 15:31:43 2011
+15:31 Starting query in Bitlbee with miroljubspasic
+15:31 playahater| pull pls .. :)
+15:31 Closing query with miroljubspasic
+--- Log closed Thu Feb 03 15:31:46 2011
+--- Log opened Sat Feb 05 16:26:38 2011
+16:26 Starting query in Bitlbee with miroljubspasic
+16:26 miroljubspasic| http://localhost/en/admin/build/pages/nojs/operation/page-family_channel/handlers/page_family_channel_panel_context_14/content
+16:26 miroljubspasic| main content 
+16:26 miroljubspasic| sta je node-add-guest
+--- Log closed Sat Feb 05 16:32:19 2011
+--- Log opened Sat Feb 05 17:21:24 2011
+17:21 Closing query with miroljubspasic
+--- Log closed Sat Feb 05 17:21:24 2011
+--- Log opened Mon Feb 07 19:25:26 2011
+19:25 Starting query in Bitlbee with miroljubspasic
+19:25 playahater| http://drupal.org/node/228200#comment-946317
+--- Log closed Mon Feb 07 19:30:42 2011
+--- Log opened Mon Feb 07 22:00:41 2011
+22:00          <-- miroljubspasic has quit irc
+--- Log closed Mon Feb 07 22:05:42 2011
+--- Log opened Mon Feb 07 23:30:56 2011
+23:30 Closing query with miroljubspasic
+--- Log closed Mon Feb 07 23:30:56 2011
+--- Log opened Tue Feb 08 15:14:03 2011
+15:14 Starting query in Bitlbee with miroljubspasic
+15:14 playahater| http://feedproxy.google.com/~r/GeekAndPoke/~3/WZgd8ly3Yio/recently-at-the-trunk.html
+--- Log closed Tue Feb 08 15:19:26 2011
+--- Log opened Tue Feb 08 16:18:19 2011
+16:18 Closing query with miroljubspasic
+--- Log closed Tue Feb 08 16:18:19 2011
+--- Log opened Tue Feb 15 12:49:54 2011
+12:49 Starting query in Bitlbee with miroljubspasic
+12:49 playahater| #1881
+--- Log closed Tue Feb 15 12:55:39 2011
+--- Log opened Tue Feb 15 14:44:47 2011
+14:44          <-- miroljubspasic has quit irc
+--- Log closed Tue Feb 15 14:50:39 2011
+--- Log opened Tue Feb 15 15:00:23 2011
+15:00 Closing query with miroljubspasic
+--- Log closed Tue Feb 15 15:00:23 2011
+--- Log opened Wed Feb 16 15:44:12 2011
+15:44 Starting query in Bitlbee with miroljubspasic
+15:44 playahater| ftp://m3com:m3com#admin@196.204.80.146:36/Religion.XML
+--- Log closed Wed Feb 16 15:50:05 2011
+--- Log opened Wed Feb 16 15:54:26 2011
+15:54 Closing query with miroljubspasic
+--- Log closed Wed Feb 16 15:54:26 2011
+--- Log opened Wed Feb 16 16:54:25 2011
+16:54 Starting query in Bitlbee with miroljubspasic
+16:54 playahater| http://web3.m3com.com.sa/search/node/test
+16:54 Closing query with miroljubspasic
+--- Log closed Wed Feb 16 16:54:27 2011
+--- Log opened Wed Feb 16 18:47:11 2011
+18:47 Starting query in Bitlbee with miroljubspasic
+18:47 miroljubspasic| http://web3.m3com.com.sa/news/news-of-the-hour/%D8%A7%D9%84%D8%AD%D9%83%D9%88%D9%85%D8%A9-%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D9%82%D8%A7%D9%84%D9%8A%D8%A9-%D8%A7%D9%84%D8%AA%D9%88%D9%86%D8%B3%D9%8A%D8%A9-%D8%AA%D9%88%D8%A7%D8%AC%D9%87-%D8%A7%D9%88%D9%84-%D8%A7%D8%B2%D9%85%D8%A9-%D8%AF%D8%A8%D9%84%D9%88%D9%85%D8%A7%D8%B3%D9%8A%D8%A9-0
+18:47 Closing query with miroljubspasic
+--- Log closed Wed Feb 16 18:47:55 2011
+--- Log opened Thu Feb 17 12:41:28 2011
+12:41 Starting query in Bitlbee with miroljubspasic
+12:41 playahater| ftp://m3com:m3com#admin@196.204.80.146:36/Religion.XML
+12:41 Closing query with miroljubspasic
+--- Log closed Thu Feb 17 12:41:30 2011
+--- Log opened Thu Feb 17 22:02:15 2011
+22:02 Starting query in Bitlbee with miroljubspasic
+22:02 playahater| http://drupal.org/node/265694
+--- Log closed Thu Feb 17 22:07:19 2011
+--- Log opened Thu Feb 17 22:38:16 2011
+22:38 Closing query with miroljubspasic
+--- Log closed Thu Feb 17 22:38:16 2011
+--- Log opened Mon Feb 21 00:42:30 2011
+00:42 Starting query in Bitlbee with miroljubspasic
+00:42 miroljubspasic| VBF4424FB5
+--- Log closed Mon Feb 21 00:48:27 2011
+--- Log opened Mon Feb 21 00:59:32 2011
+00:59 Closing query with miroljubspasic
+--- Log closed Mon Feb 21 00:59:32 2011
+--- Log opened Tue Feb 22 12:45:14 2011
+12:45 Starting query in Bitlbee with miroljubspasic
+12:45 miroljubspasic| https://www.ookla.com/order.php
+--- Log closed Tue Feb 22 12:50:44 2011
+--- Log opened Tue Feb 22 13:13:20 2011
+13:13 Closing query with miroljubspasic
+--- Log closed Tue Feb 22 13:13:20 2011
+--- Log opened Tue Feb 22 17:57:55 2011
+17:57 Starting query in Bitlbee with miroljubspasic
+17:57 playahater| molerova25AD1wanee
+17:57 Closing query with miroljubspasic
+--- Log closed Tue Feb 22 17:57:59 2011
+--- Log opened Tue Feb 22 23:10:55 2011
+23:10 Starting query in Bitlbee with miroljubspasic
+23:10 miroljubspasic| http://m3com.com.sa/en/speed_test
+23:14 Closing query with miroljubspasic
+--- Log closed Tue Feb 22 23:14:16 2011
+--- Log opened Tue Mar 01 11:06:52 2011
+11:06 Starting query in Bitlbee with miroljubspasic
+11:06 miroljubspasic| Fatal error: Call to undefined function panels_plugin_get_function() in /var/www/m3com/sites/all/modules/panels/includes/display-edit.inc on line 291 
+--- Log closed Tue Mar 01 11:12:49 2011
+--- Log opened Tue Mar 01 11:40:33 2011
+11:40 playahater| http://drupal.org/node/559922
+--- Log closed Tue Mar 01 11:45:49 2011
+--- Log opened Tue Mar 01 12:11:01 2011
+12:11 playahater| http://drupal.org/node/805736#comment-3069150
+--- Log closed Tue Mar 01 12:16:49 2011
+--- Log opened Tue Mar 01 14:07:38 2011
+14:07 miroljubspasic| molerova25AD1wanee
+14:09 Closing query with miroljubspasic
+--- Log closed Tue Mar 01 14:09:58 2011
+--- Log opened Tue Mar 01 15:46:22 2011
+15:46 Starting query in Bitlbee with miroljubspasic
+15:46 miroljubspasic| $a[(string)$handler->attributes()->city][(string)$handler->attributes()->area_en]['en']
+15:46 miroljubspasic| 10.3.3 302 Found
+15:46 miroljubspasic|  
+15:46 miroljubspasic| The requested resource resides temporarily under a different URI. Since the redirection might be altered on occasion, the client SHOULD continue to use the Request-URI for future requests. This response is only cacheable if indicated by a Cache-Control or Expires header field.
+15:46 miroljubspasic|  
+15:46 miroljubspasic| The temporary URI SHOULD be given by the Location field in the response. Unless the request method was HEAD, the entity of the response SHOULD contain a short hypertext note with a hyperlink to the new URI(s).
+15:46 miroljubspasic|  
+15:46 miroljubspasic| If the 302 status code is received in response to a request other than GET or HEAD, the user agent MUST NOT automatically redirect the request unless it can be confirmed by the user, since this might change the conditions under which the request was issued.
+15:46 miroljubspasic|  
+15:46 miroljubspasic|       Note: RFC 1945 and RFC 2068 specify that the client is not allowed
+15:46 miroljubspasic|       to change the method on the redirected request.  However, most
+15:46 miroljubspasic|       existing user agent implementations treat 302 as if it were a 303
+15:46 miroljubspasic|       response, performing a GET on the Location field-value regardless
+15:46 miroljubspasic|       of the original request method. The status codes 303 and 307 have
+15:46 miroljubspasic|       been added for servers that wish to make unambiguously clear which
+15:46 miroljubspasic|       kind of reaction is expected of the client.
+--- Log closed Tue Mar 01 15:51:49 2011
+--- Log opened Tue Mar 01 15:56:32 2011
+15:56 Closing query with miroljubspasic
+--- Log closed Tue Mar 01 15:56:32 2011
+--- Log opened Wed Mar 02 11:09:09 2011
+11:09 Starting query in Bitlbee with miroljubspasic
+11:09 miroljubspasic| molerova25AD1wanee
+--- Log closed Wed Mar 02 11:14:51 2011
+--- Log opened Wed Mar 02 11:18:09 2011
+11:18          <-- miroljubspasic has quit irc
+11:23 Closing query with miroljubspasic
+--- Log closed Wed Mar 02 11:23:03 2011
+--- Log opened Wed Mar 02 12:04:55 2011
+12:04 Starting query in Bitlbee with miroljubspasic
+12:04 miroljubspasic| molerova25AD1wanee
+12:07          <-- miroljubspasic has quit irc
+--- Log closed Wed Mar 02 12:12:51 2011
+--- Log opened Wed Mar 02 12:38:38 2011
+12:38          <-- miroljubspasic has quit irc
+--- Log closed Wed Mar 02 12:43:51 2011
+--- Log opened Wed Mar 02 14:38:36 2011
+14:38 Closing query with miroljubspasic
+--- Log closed Wed Mar 02 14:38:36 2011
+--- Log opened Wed Mar 02 18:17:33 2011
+18:17 Starting query in Bitlbee with miroljubspasic
+18:17 miroljubspasic| Parse error: Unterminated string literal in file '[inline]' on line 3200 
+18:17 miroljubspasic| strana http://m3com.com.sa:8080/en/user
+18:20 Closing query with miroljubspasic
+--- Log closed Wed Mar 02 18:20:43 2011
+--- Log opened Thu Mar 03 15:45:08 2011
+15:45 Starting query in Bitlbee with miroljubspasic
+15:45 miroljubspasic| m3com_weather/dependent_dropdown
+--- Log closed Thu Mar 03 15:50:55 2011
+--- Log opened Thu Mar 03 16:03:44 2011
+16:03 Closing query with miroljubspasic
+--- Log closed Thu Mar 03 16:03:44 2011
+--- Log opened Fri Mar 04 11:52:58 2011
+11:52 Starting query in Bitlbee with miroljubspasic
+11:52 miroljubspasic| ovaj
+11:52 miroljubspasic| WD php: Notice: Undefined index: argument in m3com_misc_views_data_alter() (line 299 of /var/www/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module).                                                                    [error]
+11:53 miroljubspasic| mnooogo se puta javlja
+--- Log closed Fri Mar 04 11:58:29 2011
+--- Log opened Fri Mar 04 12:22:43 2011
+12:22 Closing query with miroljubspasic
+--- Log closed Fri Mar 04 12:22:43 2011
+--- Log opened Thu Mar 10 10:46:22 2011
+10:46 Starting query in Bitlbee with miroljubspasic
+10:46 playahater| yo ..
+10:46 playahater| si ziv?
+10:46 playahater| :)
+10:46 playahater| mrdash li?
+10:46 Closing query with miroljubspasic
+--- Log closed Thu Mar 10 10:46:42 2011
+--- Log opened Thu Mar 10 11:59:24 2011
+11:59 Starting query in Bitlbee with miroljubspasic
+11:59 miroljubspasic| yo
+11:59 miroljubspasic| :-)
+11:59 miroljubspasic| evo me
+12:00 miroljubspasic| bio sam kod doktora...
+--- Log closed Thu Mar 10 12:05:09 2011
+--- Log opened Thu Mar 10 13:03:21 2011
+13:03 playahater| molerova25AD1wanee
+13:03 playahater| *ignorishi - treba mi taze linijija u logu
+13:03 playahater| :)
+13:03 playahater| zbog grep-a
+13:03 playahater| :)
+13:03 playahater| si ok? ..
+13:03 playahater| te drma temp?
+13:04 miroljubspasic| :-) ok 
+13:04 playahater| echo 3 >> /proc/acpi/temp/fan/cooler_speed
+13:04 miroljubspasic| sad ne 
+13:04 playahater| :)
+13:04 miroljubspasic| nece valjda ni uvece 
+13:04 miroljubspasic| :-)
+13:05 playahater| dobro je .. cepaj vitamine .. i uzivaj .. :)
+13:05 miroljubspasic| klikcem :-)
+13:06 miroljubspasic| imam par pitanja, kasnije cu, pa kad imas vreme...
+13:06 playahater| ne bi trebalo .. al ajde .. :)
+13:06 playahater| ok .. ql ..
+13:06 playahater| tu sam ..
+13:06 playahater| vichi kad ono ..
+--- Log closed Thu Mar 10 13:12:09 2011
+--- Log opened Thu Mar 10 13:28:58 2011
+13:28 Closing query with miroljubspasic
+--- Log closed Thu Mar 10 13:28:58 2011
+--- Log opened Thu Mar 10 15:10:33 2011
+15:10 Starting query in Bitlbee with miroljubspasic
+15:10 miroljubspasic| yo :-)
+15:10 miroljubspasic| pitanje 
+15:10 miroljubspasic| za ovaj manchester treba album
+15:11 miroljubspasic| sad, video sam panel album
+15:11 miroljubspasic| ne znam da li sam na pravom putu
+15:11 miroljubspasic| ...
+15:12 miroljubspasic| ima jos neki channel album, pa da vidim kroz primer...
+15:14 playahater| treba da ubudzish album blok na manchester kanalu ?
+15:14 miroljubspasic| http://client.agena.rs/m3com/prototype-html/_main/manchester/manchester-channel.html
+15:15 miroljubspasic| kaze more on channel photo album
+15:16 playahater| aha .. hmmm ..
+15:16 playahater| pa ..
+15:16 playahater| kontam da je to link /album ..
+15:16 playahater| al mi nemamo machester fotke kolko ja znam ..
+15:16 playahater| che da proverim ..
+15:16 miroljubspasic| imacemo
+15:17 miroljubspasic| ima i conntent type 
+15:17 miroljubspasic| mu_picture
+15:17 playahater| aha ..
+15:18 playahater| ali to nije nigde predvidjeno na album kanalu ..
+15:18 playahater| tako da ..
+15:18 playahater| moz napravish jedan view .. po tom machester image ct-u .. i da ga ubacish na homepage album-a .. i isti taj block bacish na manchester 
+15:19 playahater| pitanje je da li treba prepraviti sve view-ove na albumu i dodati u filter i taj mu_picture ?
+15:20 playahater| ili je samo potreban block/page na album kanalu sa tim mu_picture ct-om
+15:20 miroljubspasic| dobio sam ovaj odgovor 
+15:20 miroljubspasic| Da to vodi na album channel, dakle pravi album je u pitanju.
+15:20 miroljubspasic|  
+15:21 miroljubspasic| sad nemam pojma sta tacno treba :-(
+15:22 miroljubspasic| verovatno se ti pitas za to? :-)
+15:23 playahater| hmm ..
+15:23 playahater| pa .. ae onda ovako ..
+15:24 playahater| 2 block view-a =>  sa 5 komada bez pager-a && sa tipa 20kom sa pagerom ..
+15:25 playahater| block bez pager-a ide na homepage albuma i more link vodi na panel page koji shtampa view sa pager-om ..
+15:26 playahater| na taj nachin dobijamo mu_picture na albumu bez potrebe dodavanja nekih linkova u menijima
+15:26 playahater| to mi deluje kao najbezbolnija integracija ..
+15:26 playahater| a?
+15:26 playahater| :)
+15:27 miroljubspasic| Ok, valjda sam razumeo...
+15:28 playahater| pa malo sam ga skarabudzeno objasnio .. al kontash na shta mislim .. :D
+15:29 miroljubspasic| mislim da da
+--- Log closed Thu Mar 10 15:34:09 2011
+--- Log opened Thu Mar 10 15:48:25 2011
+15:48 miroljubspasic| sta da radim za push 
+15:48 miroljubspasic| tj. commit i to je ok, a za panel i views?
+15:48 playahater| da .. komitujesh na develop
+15:49 playahater| a panel i views .. hmm
+15:49 miroljubspasic| a panel i views?
+15:49 playahater| export
+15:49 playahater| :)
+15:49 miroljubspasic| pa onda i to u file 
+15:49 miroljubspasic| ?
+15:50 playahater| pa ili u file .. ili ih odma import na dev
+15:50 miroljubspasic| ili import na dev.m3com
+15:50 playahater| :)
+15:50 playahater| telepatija
+15:50 playahater| :D
+15:50 miroljubspasic| ok :-)
+15:50 playahater| m3akm_header.php
+15:51 playahater| kako da vidim arapski umesto kuka i kvaka
+15:51 playahater| :)
+15:51 miroljubspasic| win-1256 charset
+15:53 miroljubspasic| ja ga scp 
+15:53 miroljubspasic| pa ga onda otvorim u gedit ili geany...
+15:55 playahater| netje majka mu stara ..
+15:55 playahater| nema veze ..
+15:55 playahater| videtju vetj neshto ..
+--- Log closed Thu Mar 10 16:01:09 2011
+--- Log opened Thu Mar 10 16:02:27 2011
+16:02 miroljubspasic| probaj i sa iso-8859-6
+--- Log closed Thu Mar 10 16:08:09 2011
+--- Log opened Thu Mar 10 16:11:34 2011
+16:11 miroljubspasic| ja sam zbog testa ubacio neki content iz devel modula
+16:11 miroljubspasic| generate content 
+16:11 miroljubspasic| e sad kad commit-ujem nema nikakvog sadrzaja
+16:12 miroljubspasic| pa ne znam sta da radim u vezi s tim
+16:12 playahater| hmm .. pa mislim da je to ok ..
+16:12 playahater| imamo funckionalnost ..
+16:13 playahater| content treba ili importovati .. ili tje oni to da poubacuju ..
+16:13 playahater| ali pitaj bogija, za svaki sluchaj
+16:13 playahater| :)
+16:13 miroljubspasic| ok
+16:13 miroljubspasic| ok
+--- Log closed Thu Mar 10 16:19:09 2011
+--- Log opened Thu Mar 10 16:20:15 2011
+16:20 miroljubspasic| i content type isto export-import?
+16:20 miroljubspasic| baza na dev i web123 je jos uvek ista?
+16:20 playahater| da
+16:23 Closing query with miroljubspasic
+--- Log closed Thu Mar 10 16:23:08 2011
+--- Log opened Thu Mar 10 17:04:13 2011
+17:04 Starting query in Bitlbee with miroljubspasic
+17:04 playahater| shaljem ti na mail ovaj file sa sjebanim encodingom ..
+17:04 playahater| pa samo chekiraj da l moz ti da otvorish a da lichi na neshto
+17:04 playahater| :)
+17:05 miroljubspasic| ok
+17:06 playahater| vataj
+17:06 playahater| :)
+17:09 miroljubspasic| oces ti da ga otvaras da ti kazem kako iili da menjam ja sta treba
+17:10 playahater| uspeo si?
+17:10 playahater| kazi kako
+17:10 playahater| :)
+17:10 playahater| otju probam
+17:10 playahater| :)
+17:12 miroljubspasic| gedit
+17:12 miroljubspasic| pa ides na file->open
+17:12 miroljubspasic| i onda imas opciju character encoding
+17:13 miroljubspasic| pa tu dodas arabic-windows 1256
+17:13 miroljubspasic| i onda selektujes file i open
+17:15 playahater| to mi reci
+17:15 playahater| :)
+17:16 miroljubspasic| :)
+17:17 playahater| a kako to sa vim-om? :P
+17:17 playahater| :D
+17:17 playahater| shalim se .. :)
+17:17 miroljubspasic| ma, dok mi je ovo uspelo poludeo sam... 
+17:17 miroljubspasic| tacno se secam
+17:18 playahater| pa fora je shto ne moz da ga konvertujesh ..
+17:18 playahater| mora ga otvorish kao taj 1256
+17:18 playahater| besmisleno ..
+17:18 miroljubspasic| uspeo sam jednom  u utf-8 ili 16, ali mora ovaj encoding zbog foruma...
+--- Log closed Thu Mar 10 17:24:09 2011
+--- Log opened Thu Mar 10 17:41:25 2011
+17:41 Closing query with miroljubspasic
+--- Log closed Thu Mar 10 17:41:25 2011
+--- Log opened Thu Mar 10 17:47:59 2011
+17:47 Starting query in Bitlbee with miroljubspasic
+17:47 playahater| drugare .. si importovao views/panels na dev.m3com.com.sa ?
+17:49 miroljubspasic| views i panel da
+17:49 miroljubspasic| menjam onaj header i treba import content type
+17:51 playahater| aha .. ql ..
+--- Log closed Thu Mar 10 17:56:09 2011
+--- Log opened Thu Mar 10 18:03:23 2011
+18:03 Closing query with miroljubspasic
+--- Log closed Thu Mar 10 18:03:23 2011
+--- Log opened Thu Mar 10 18:21:31 2011
+18:21 Starting query in Bitlbee with miroljubspasic
+18:21 miroljubspasic| smem da commit jos nesto?
+18:21 miroljubspasic| 	    <?php print t("Used @percent % or @megainfo from @quotainfo available", array('@percent' => number_format($percent, 2), '@megainfo' => format_size($dropbox_account['quota_info']['normal']), '@quotainfo' => format_size($dropbox_account['quota_info']['quota'])))?>
+18:21 miroljubspasic| ova linija, zbog prevoda...
+18:23 playahater| da .. slobodno ..
+18:23 playahater| smesh na develop kad god ti tjef
+18:23 playahater| :)
+18:24 miroljubspasic| ok
+--- Log closed Thu Mar 10 18:30:09 2011
+--- Log opened Thu Mar 10 18:34:16 2011
+18:34 Closing query with miroljubspasic
+--- Log closed Thu Mar 10 18:34:16 2011
+--- Log opened Fri Mar 11 09:51:06 2011
+09:51 Starting query in Bitlbee with miroljubspasic
+09:51 miroljubspasic| yo :-)
+09:51 miroljubspasic| imam pitanje
+09:52 miroljubspasic| menu, pravim na admin/build/menu-customize/ i samo ga ubacim u panel ili treba superfish block?
+09:52 playahater| ne treba ti superfish block ..
+09:53 playahater| direktno drmnesh menu block na panel
+09:53 miroljubspasic| nesto se cudno vidi, ima neka fora?
+09:53 playahater| ne bi trebalo ..
+09:53 playahater| moz bacish pogled u jqinit.js .. tamo ima neke finte za taj dropdown ..
+09:53 playahater| mozda treba ga prijavish u taj file .. :)
+09:54 miroljubspasic| panel, add content-> menus ?	onda je jq-init
+09:55 miroljubspasic| u views sam stavio row style node, teaser
+09:56 playahater| views => ql .. panel => ql ..
+09:56 playahater| superfish => hmmm ...
+09:56 miroljubspasic| e sad mi treba tpl koji je drugaciji od teaser, a to vec postoji...
+09:56 miroljubspasic| moze da se stavi if u zavisnosti od path-a
+09:56 playahater| :)
+09:56 playahater| da
+09:57 miroljubspasic| ili da menjam na fields
+09:57 miroljubspasic| znaci stavim 1 if? ok
+09:57 playahater| to smo tako vetj radili za news teaser template
+09:57 miroljubspasic| video sam, ali ima za front-page samo, a nisam naisao na jos neki if...
+09:58 miroljubspasic| kad push-ujem na develop to je odmah na dev?
+09:59 miroljubspasic| da ne zajebem nesto
+09:59 miroljubspasic| ?
+09:59 playahater| nije odmah ..
+09:59 playahater| cimnesh vladu da ti to baci tamp
+09:59 playahater| ili ivana
+09:59 miroljubspasic| ok
+09:59 playahater| *tamo
+09:59 playahater| :)
+10:00 miroljubspasic| da te nr smaram vise
+10:00 miroljubspasic| posle cu :-)
+--- Log closed Fri Mar 11 10:06:01 2011
+--- Log opened Fri Mar 11 10:40:23 2011
+10:40 playahater| e be .. eve me ..
+10:40 playahater| ma opushteno .. kad god ti neshto .. vichi ..
+10:42 playahater| inache .. titja mi kaze da je i ona imala neki trip sa superfish-om na e-game kanalu
+10:42 playahater| medjutim .. pojavio se nakon par klika po kanalu sam ..
+10:42 miroljubspasic| e, to je samo css
+10:43 miroljubspasic| treba da se doda u css klasa...
+10:43 playahater| znam da se ne koristi superfish module .. sve ide preko obichnih menu blokova .. i ima neko budzenje u jq-init da radi expand kako treba
+10:43 miroljubspasic| ok :-)
+10:43 playahater| :)
+10:44 miroljubspasic| radi ok. :-)
+10:44 playahater| jeej
+10:44 playahater| :)
+--- Log closed Fri Mar 11 10:50:01 2011
+--- Log opened Fri Mar 11 11:15:51 2011
+11:15 Closing query with miroljubspasic
+--- Log closed Fri Mar 11 11:15:51 2011
+--- Log opened Fri Mar 11 14:39:34 2011
+14:39 Starting query in Bitlbee with miroljubspasic
+14:39 playahater| yo
+14:39 miroljubspasic| yo
+14:39 miroljubspasic| :-)
+14:39 playahater| pitanje .. si setovao cookie do sad negde iz js-a na m3com ?
+14:40 miroljubspasic| cookie iz js, ne
+14:40 playahater| ql
+14:40 playahater| :)
+14:40 playahater| 10x
+14:43 miroljubspasic| da mu jebem mater, stavio sam lighttpd i sad mogu da kliknem
+14:43 miroljubspasic| sa apache nista, totalna blokada...
+14:43 miroljubspasic| u pravu si ti oduvek :-)
+14:45 playahater| .. bre .. ako tje ga vozish pod mali gas .. mora se drzish laganih servera .. :)
+14:45 playahater| da vish tek kako leti nginx .. :)
+14:45 playahater| ne osetja se ..
+14:45 playahater| :D
+14:45 playahater| al je drk za podesiti ..
+14:48 playahater| nego .. imash ideju kako da setujem cookie iz jquery-a samo korisnicima koji su logovani?
+14:49 playahater| nasho sam kako da setujem/chitam/menjam cookie iz jquery-a .. 
+14:49 playahater| sad to treba da odradim ali samo za logovane usere ..
+14:49 playahater| pritom .. cela stvar treba da bude iskljuchivo client side ..
+14:50 miroljubspasic| da radis drupal_add_js if uid>0 ?
+14:51 playahater| to je server side reshenje ..
+14:51 playahater| treba mi client ..
+14:51 playahater| gledam kako da izvalim na osnovu postojetjih cookie-a da je korisnik logovan ..
+--- Log closed Fri Mar 11 14:57:01 2011
+--- Log opened Fri Mar 11 15:00:28 2011
+15:00 miroljubspasic| vezani su za bazom. pa ako tamo pise da si logovan onda ti prolazi cookie
+15:00 miroljubspasic| mislim da bi to bio i rizik da moze lako da se provali da li si logovan
+15:00 miroljubspasic| koja je u stvari ideja?
+15:02 playahater| ideja je da izbacim modal dialog sa statichkom slikom samo prvi put kad se korisnik loguje
+15:03 playahater| cela stvar treba da bude client side ..
+15:03 playahater| sad gledam .. drupal setuje SESSblablabla cookie kad se logujesh ..
+15:04 playahater| jedino da filtriram po: cookie name i domain ..
+15:05 playahater| ako name kretje sa SESSblabla i domen je m3com .. set!
+15:05 playahater| :)
+15:05 miroljubspasic| i kad se ne logujes je isto, pa kad se ulogujes ti u tabelu session stavi uid, inace je 0
+15:07 miroljubspasic| ukoliko mu ti iz drupal ne das cookie, mislim da je nemoguce...
+--- Log closed Fri Mar 11 15:13:01 2011
+--- Log opened Fri Mar 11 15:16:59 2011
+15:16 playahater| chek .. meni ne setuje SESSblabla ako nisam logovan
+15:17 playahater| ili nisam dobro podesio ovaj cookie manager u ff-u .. mada ..
+15:20 miroljubspasic| stvarno ga nema :-)
+15:24 miroljubspasic| onda je to ok. ali verovatno se to negde podesava ili je promenjeno u 6.20, siguran sam da sam vidjao 
+15:24 miroljubspasic| ili nije uspevao da ga obrise prilikom logout
+--- Log closed Fri Mar 11 15:30:01 2011
+--- Log opened Fri Mar 11 17:08:10 2011
+17:08          <-- miroljubspasic has quit irc
+--- Log closed Fri Mar 11 17:14:01 2011
+--- Log opened Fri Mar 11 17:39:28 2011
+17:39 Closing query with miroljubspasic
+--- Log closed Fri Mar 11 17:39:28 2011
+--- Log opened Mon Mar 14 15:39:14 2011
+15:39 Starting query in Bitlbee with miroljubspasic
+15:39 miroljubspasic| mislim da je ovako bolje...
+15:39 miroljubspasic|  <?php if($title): ?>  <h2 class="<?php print $vitamin_class; ?>"><?php print $title; ?></h2>  <?php endif;?>
+--- Log closed Mon Mar 14 15:45:02 2011
+--- Log opened Mon Mar 14 15:57:15 2011
+15:57 Closing query with miroljubspasic
+--- Log closed Mon Mar 14 15:57:15 2011
+--- Log opened Mon Mar 14 16:58:02 2011
+16:58 Starting query in Bitlbee with miroljubspasic
+16:58 miroljubspasic| onpageshow="event.persisted && (function(){var allInstances = CKEDITOR.instances, editor, doc;for ( var i in allInstances ){ editor = allInstances[ i ]; doc = editor.document; if ( doc ) { doc.$.designMode = "off"; doc.$.designMode = "on"; }}})();
+--- Log closed Mon Mar 14 17:03:02 2011
+--- Log opened Mon Mar 14 17:58:14 2011
+17:58 miroljubspasic| http://dev.m3com.com.sa:8080/wi-fi
+--- Log closed Mon Mar 14 18:04:02 2011
+--- Log opened Mon Mar 14 18:08:36 2011
+18:08 Closing query with miroljubspasic
+--- Log closed Mon Mar 14 18:08:36 2011
+--- Log opened Mon Mar 14 18:20:32 2011
+18:20 Starting query in Bitlbee with miroljubspasic
+18:20 playahater|  OVO STAVI NA CONTACT إتصل بنا
+18:20 Closing query with miroljubspasic
+--- Log closed Mon Mar 14 18:20:35 2011
+--- Log opened Thu Mar 17 14:30:26 2011
+14:30 Starting query in Bitlbee with miroljubspasic
+14:30 playahater| http://api.drupal.org/api/drupal/modules--taxonomy--taxonomy.module/function/taxonomy_get_tree/6
+--- Log closed Thu Mar 17 14:36:07 2011
+--- Log opened Thu Mar 17 15:17:40 2011
+15:17 playahater| http://www.drupalstore.info/node/163
+15:19 playahater| http://stackoverflow.com/questions/3285863/drupal-how-can-i-programmatically-add-taxonomy-terms-to-a-node-in-hook-nodeapi
+--- Log closed Thu Mar 17 15:25:07 2011
+--- Log opened Thu Mar 17 15:46:57 2011
+15:46 Closing query with miroljubspasic
+--- Log closed Thu Mar 17 15:46:57 2011
+--- Log opened Thu Mar 17 16:15:14 2011
+16:15 Starting query in Bitlbee with miroljubspasic
+16:15 miroljubspasic| http://m3com/maazoun/importdata
+16:18 miroljubspasic| m3com_maazoun
+--- Log closed Thu Mar 17 16:24:07 2011
+--- Log opened Thu Mar 17 19:04:47 2011
+19:04 Closing query with miroljubspasic
+--- Log closed Thu Mar 17 19:04:47 2011
+--- Log opened Fri Mar 18 12:01:08 2011
+12:01 Starting query in Bitlbee with miroljubspasic
+12:01 miroljubspasic| Fatal error: Call to undefined function image_gd_check_settings() in /var/www/m3com/includes/image.inc on line 70 
+--- Log closed Fri Mar 18 12:06:47 2011
+--- Log opened Fri Mar 18 12:24:45 2011
+12:24 Closing query with miroljubspasic
+--- Log closed Fri Mar 18 12:24:45 2011
+--- Log opened Fri Mar 18 14:41:07 2011
+14:41 Starting query in Bitlbee with miroljubspasic
+14:41 miroljubspasic| http://m3com/en/maazoum-node-operation
+--- Log closed Fri Mar 18 14:46:47 2011
+--- Log opened Fri Mar 18 14:53:20 2011
+14:53 miroljubspasic| maazoum_test
+--- Log closed Fri Mar 18 14:58:47 2011
+--- Log opened Fri Mar 18 15:28:10 2011
+15:28 playahater| http://drupal.org/node/361871
+--- Log closed Fri Mar 18 15:33:47 2011
+--- Log opened Fri Mar 18 18:58:40 2011
+18:58          <-- miroljubspasic has quit irc
+--- Log closed Fri Mar 18 19:03:47 2011
+--- Log opened Fri Mar 18 19:05:45 2011
+19:05 Closing query with miroljubspasic
+--- Log closed Fri Mar 18 19:05:45 2011
+--- Log opened Thu Mar 31 11:04:52 2011
+11:04 Starting query in Bitlbee with miroljubspasic
+11:04 miroljubspasic| ej
+11:04 miroljubspasic| na cigaru?
+--- Log closed Thu Mar 31 11:10:43 2011
+--- Log opened Mon Apr 04 17:41:03 2011
+17:41 Starting query in Bitlbee with miroljubspasic
+17:41 playahater| ↵~.
+17:41 Closing query with miroljubspasic
+--- Log closed Mon Apr 04 17:41:12 2011
+--- Log opened Tue Apr 05 11:00:10 2011
+11:00 Starting query in Bitlbee with miroljubspasic
+11:00 miroljubspasic| na cigaru?
+--- Log closed Tue Apr 05 11:05:49 2011
+--- Log opened Tue Apr 05 11:25:35 2011
+11:25 Closing query with miroljubspasic
+--- Log closed Tue Apr 05 11:25:35 2011
+--- Log opened Thu Apr 07 10:29:08 2011
+10:29 Starting query in Bitlbee with miroljubspasic
+10:29 miroljubspasic| molerova25AD1wanee
+10:30 miroljubspasic| i aj na cigaru kad i ako mozes...
+10:31 playahater| moze ..
+10:31 playahater| chek samo se ulogujem
+10:31 playahater| :)
+--- Log closed Thu Apr 07 10:37:07 2011
+--- Log opened Thu Apr 07 11:04:02 2011
+11:04 Closing query with miroljubspasic
+--- Log closed Thu Apr 07 11:04:02 2011
+--- Log opened Thu Apr 07 13:23:43 2011
+13:23 Starting query in Bitlbee with miroljubspasic
+13:23 playahater| tjemo na cigaru ..
+13:23 Closing query with miroljubspasic
+--- Log closed Thu Apr 07 13:23:45 2011
+--- Log opened Thu Apr 07 13:24:29 2011
+13:24 Starting query in Bitlbee with miroljubspasic
+13:24 miroljubspasic| ajde
+--- Log closed Thu Apr 07 13:30:07 2011
+--- Log opened Thu Apr 07 14:11:32 2011
+14:11 Closing query with miroljubspasic
+--- Log closed Thu Apr 07 14:11:32 2011
+--- Log opened Mon Apr 11 11:01:37 2011
+11:01 Starting query in Bitlbee with miroljubspasic
+11:01 miroljubspasic| na cigaru? 
+11:01 playahater| zemo ..
+11:02 miroljubspasic| ajde
+11:02 Closing query with miroljubspasic
+--- Log closed Mon Apr 11 11:02:40 2011
+--- Log opened Mon Apr 11 13:23:53 2011
+13:23 Starting query in Bitlbee with miroljubspasic
+13:23 miroljubspasic| select users.name, m3com_dropbox_token.uid, m3com_dropbox_token.token from users join m3com_dropbox_token on m3com_dropbox_token.uid=users.uid; 
+13:27 playahater| +-------+-----+-----------------+
+13:27 playahater| | name  | uid | token           |
+13:27 playahater| +-------+-----+-----------------+
+13:27 playahater| | admin |   1 | yno98bg0d08angm |
+13:27 playahater| +-------+-----+-----------------+
+13:27 playahater| 1 row in set (0.00 sec)
+13:28 playahater| mysql> select users.name, m3com_dropbox_token.uid, m3com_dropbox_token.token from users join m3com_dropbox_token on m3com_dropbox_token.uid=users.uid;
+13:28 playahater| +-------+-----+-----------------+
+13:28 playahater| | name  | uid | token           |
+13:28 playahater| +-------+-----+-----------------+
+13:28 playahater| | admin |   1 | yno98bg0d08angm |
+13:28 playahater| +-------+-----+-----------------+
+13:28 playahater| 1 row in set (0.00 sec)
+13:28 Closing query with miroljubspasic
+--- Log closed Mon Apr 11 13:28:28 2011
+--- Log opened Mon Apr 11 15:15:04 2011
+15:15 Starting query in Bitlbee with miroljubspasic
+15:15 miroljubspasic| na dev.m3com admin nije dsl?
+15:15 playahater| hmm .. mozda mu je neko sklonio tu rolu ovih dana ..
+15:15 playahater| znam da je bio ..
+15:15 playahater| dodaj mu ako ti treba
+15:16 miroljubspasic| mogu da vratim?
+15:16 miroljubspasic| ok
+15:18 playahater| zemo
+--- Log closed Mon Apr 11 15:24:28 2011
+--- Log opened Mon Apr 11 15:32:09 2011
+15:32          <-- miroljubspasic has quit irc
+--- Log closed Mon Apr 11 15:37:28 2011
+--- Log opened Mon Apr 11 16:01:38 2011
+16:01          <-- miroljubspasic has quit irc
+--- Log closed Mon Apr 11 16:07:28 2011
+--- Log opened Mon Apr 11 16:10:59 2011
+16:10 playahater| tje varimo?
+16:10 playahater| :)
+16:11 Closing query with miroljubspasic
+--- Log closed Mon Apr 11 16:11:03 2011
+--- Log opened Mon Apr 11 16:11:41 2011
+16:11 Starting query in Bitlbee with miroljubspasic
+16:11 miroljubspasic| ajde
+--- Log closed Mon Apr 11 16:17:28 2011
+--- Log opened Mon Apr 11 16:35:42 2011
+16:35 Closing query with miroljubspasic
+--- Log closed Mon Apr 11 16:35:42 2011
+--- Log opened Mon Apr 11 16:47:56 2011
+16:47 Starting query in Bitlbee with miroljubspasic
+16:47 miroljubspasic| INSERT INTO m3com_dropbox (uid, username, password) VALUES (181255, 'abufaisal@m3com.com.sa', 'KDuCM7NG8gWK');
+16:48 miroljubspasic| ako moze upit na dev
+--- Log closed Mon Apr 11 16:53:28 2011
+--- Log opened Mon Apr 11 16:54:47 2011
+16:54          <-- miroljubspasic has quit irc
+--- Log closed Mon Apr 11 17:00:28 2011
+--- Log opened Tue Apr 12 10:50:17 2011
+10:50 Starting query in Bitlbee with miroljubspasic
+10:50 miroljubspasic| ocemo na pljugu?
+10:52 playahater| otjemo ..
+10:52 playahater| za 5min ..
+10:52 playahater| samo da stavim da se iskopira neshto ..
+10:52 playahater| :)
+10:52 Closing query with miroljubspasic
+--- Log closed Tue Apr 12 10:52:59 2011
+--- Log opened Tue Apr 12 10:53:23 2011
+10:53 Starting query in Bitlbee with miroljubspasic
+10:53 miroljubspasic| ok
+--- Log closed Tue Apr 12 10:59:01 2011
+--- Log opened Tue Apr 12 12:11:11 2011
+12:11 Closing query with miroljubspasic
+--- Log closed Tue Apr 12 12:11:11 2011
+--- Log opened Wed Apr 13 10:52:18 2011
+10:52 Starting query in Bitlbee with miroljubspasic
+10:52 miroljubspasic| ocemo na cigar?
+10:56 playahater| za tri trenutka .. 
+10:56 playahater| :
+10:57 miroljubspasic| ok
+--- Log closed Wed Apr 13 11:02:38 2011
+--- Log opened Wed Apr 13 11:08:43 2011
+11:08          <-- miroljubspasic has quit irc
+--- Log closed Wed Apr 13 11:14:38 2011
+--- Log opened Wed Apr 13 11:22:13 2011
+11:22 Closing query with miroljubspasic
+--- Log closed Wed Apr 13 11:22:13 2011
+--- Log opened Wed Apr 13 15:54:29 2011
+15:54 Starting query in Bitlbee with miroljubspasic
+15:54 miroljubspasic| oces da jedes uskoro?
+15:54 miroljubspasic| ja cu sad, pa ako ces ubrzo...
+--- Log closed Wed Apr 13 16:00:30 2011
+--- Log opened Wed Apr 13 16:03:04 2011
+16:03 playahater| e .. moze ..
+16:03 Closing query with miroljubspasic
+--- Log closed Wed Apr 13 16:03:07 2011
+--- Log opened Wed Apr 13 16:05:01 2011
+16:05 Starting query in Bitlbee with miroljubspasic
+16:05 miroljubspasic| ajde
+--- Log closed Wed Apr 13 16:10:30 2011
+--- Log opened Wed Apr 13 16:31:51 2011
+16:31 Closing query with miroljubspasic
+--- Log closed Wed Apr 13 16:31:51 2011
+--- Log opened Thu Apr 14 09:39:04 2011
+09:39 Starting query in Bitlbee with miroljubspasic
+09:39 miroljubspasic| http://www.blic.rs/Vesti/Svet/247359/Hit-video-Ceski-predsednik-ukrao-penkalo-tokom-posete-Cileu
+--- Log closed Thu Apr 14 09:45:02 2011
+--- Log opened Thu Apr 14 12:09:17 2011
+12:09 Closing query with miroljubspasic
+--- Log closed Thu Apr 14 12:09:17 2011
+--- Log opened Thu Apr 14 17:11:37 2011
+17:11 Starting query in Bitlbee with miroljubspasic
+17:11 miroljubspasic| http://www.ubuntu.com/
+--- Log closed Thu Apr 14 17:17:31 2011
+--- Log opened Thu Apr 14 17:30:16 2011
+17:30 Closing query with miroljubspasic
+--- Log closed Thu Apr 14 17:30:16 2011
+--- Log opened Fri Apr 15 10:50:40 2011
+10:50 Starting query in Bitlbee with miroljubspasic
+10:50 miroljubspasic| aj kad si za cigaru, cimni
+10:51 playahater| dogovoreno .. :)
+10:51 playahater| ae za par minuta ..
+10:51 miroljubspasic| ko
+--- Log closed Fri Apr 15 10:56:27 2011
+--- Log opened Fri Apr 15 12:09:37 2011
+12:09 Closing query with miroljubspasic
+--- Log closed Fri Apr 15 12:09:37 2011
+--- Log opened Fri Apr 15 14:49:55 2011
+14:49 Starting query in Bitlbee with miroljubspasic
+14:49 miroljubspasic| mozes da pristupis http://192.168.0.131:8080/
+14:51 playahater| da
+14:51 miroljubspasic| ok
+14:51 playahater| odo da varim
+14:51 miroljubspasic| za min mozemo na cigaru
+14:51 playahater| ae
+--- Log closed Fri Apr 15 14:57:17 2011
+--- Log opened Fri Apr 15 15:01:49 2011
+15:01          <-- miroljubspasic has quit irc
+--- Log closed Fri Apr 15 15:07:17 2011
+--- Log opened Fri Apr 15 15:35:00 2011
+15:35          <-- miroljubspasic has quit irc
+--- Log opened Fri Apr 15 16:13:37 2011
+16:13 Starting query in Bitlbee with miroljubspasic
+16:13 miroljubspasic| 1938 linija u m3com.css
+16:13 miroljubspasic| ne verujem da su marko ili marija ovo pisali
+16:14 miroljubspasic| ali ovo ne bi trebalo da bude zakomentarisno...
+--- Log closed Fri Apr 15 16:20:18 2011
+--- Log opened Fri Apr 15 16:20:39 2011
+16:20 Closing query with miroljubspasic
+--- Log closed Fri Apr 15 16:20:39 2011
+--- Log opened Thu Apr 21 10:45:30 2011
+10:45 Starting query in Bitlbee with miroljubspasic
+10:45 miroljubspasic| (http://espaceculturel-leclerc.com/    user: admin pass: 765dip246).
+--- Log closed Thu Apr 21 10:50:50 2011
+--- Log opened Thu Apr 21 10:53:05 2011
+10:53 Closing query with miroljubspasic
+--- Log closed Thu Apr 21 10:53:05 2011
+--- Log opened Thu Apr 21 11:41:20 2011
+11:41 Starting query in Bitlbee with miroljubspasic
+11:41 miroljubspasic| ocemo na cigaru?
+11:43 playahater| ae ..
+11:43 Closing query with miroljubspasic
+--- Log closed Thu Apr 21 11:43:07 2011
+--- Log opened Thu Apr 21 11:43:51 2011
+11:43 Starting query in Bitlbee with miroljubspasic
+11:43 miroljubspasic| ajde
+11:45 Closing query with miroljubspasic
+--- Log closed Thu Apr 21 11:45:57 2011

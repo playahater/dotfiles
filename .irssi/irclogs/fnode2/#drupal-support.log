@@ -1,0 +1,535 @@
+--- Log opened Mon Mar 01 15:56:52 2010
+15:56          --> playahat1r has joined
+15:56 #drupal-support: Total of 285 nicks [0 ops, 0 halfops, 0 voices, 285 normal]
+15:56 !wolfe.freenode.net [freenode-info] help freenode weed out clonebots -- please register your IRC nick and auto-identify: http://freenode.net/faq.shtml#nicksetup
+15:56          --> CrookedNumber_ has joined
+15:56          <-- roccs- has quit irc
+15:56          --> tom_o_t has joined
+15:57 Join to #drupal-support was synced in 14 secs
+15:57          --> mlsamuelson has joined
+15:57          --> FransK has joined
+15:58          --> CoffeeIV has joined
+15:59          --> phunster has joined
+16:00  hewhocutsdown| I'm linking several types of content
+16:00  hewhocutsdown| I have a node, which loads a quicktabs block, which loads a couple different Views as separate tabs
+16:01          --> roccs- has joined
+16:01  hewhocutsdown| if I hard-code an argument in the quicktab, the views load correctly
+16:01  hewhocutsdown| but the block doesn't see the node arguments
+16:01          <-- mincevv has quit irc
+16:01  hewhocutsdown| I see a discussion on the subject here http://drupal.org/node/332521
+16:01          <-- BigMack83 has quit irc
+16:01  Druplicon| http://drupal.org/node/332521 => Drupal6: Passing Argument to Block View => 6 comments, 2 IRC mentions
+16:01  hewhocutsdown| but I don't know where the code goes; would this go into the originating node?
+16:02          <-- Ricoshady has quit irc
+16:03          <-- McGo has quit irc
+16:03          --> AB3I has joined
+16:03          --> nestorconde has joined
+16:03          --> fjs007 has joined
+16:03          --> BigMack83 has joined
+16:03          --> TheAbacus has joined
+16:03          --> duran has joined
+16:03          --> Myst1c has joined
+16:04          --> vordude has joined
+16:05  fjs007| Can somebody help me get control of my drupal 5.x site? My web developers are abandoning the project and i need to get the admin rights.
+16:05          <-- roccs- has quit irc
+16:05          <-- YesCT has quit irc
+16:06          <-- heshan has quit irc
+16:06          <-- BigMack83 has quit irc
+16:07          --> BigMack83 has joined
+16:07  gooddesignusa| hey all i'm using http://drupal.org/project/ckeditor and i'm having some weird issue with it messing up a view
+16:07          --> wonder95 has joined
+16:07  gooddesignusa| seems like it adds weird spaces 
+16:08  Guest75117|  hi, how I can get in auitopmatic the size of a flv/swf video uploaded?
+16:08          --> tmclaugh1 has joined
+16:09          <-- hyrcan has quit irc
+16:09          --> hyrcan has joined
+16:09          --> roccs- has joined
+16:09          <-- nestorconde has quit irc
+16:10          --> rfay has joined
+16:10          --> roccs--2 has joined
+16:10          <-- roccs--2 has quit irc
+16:11          --> roccs--2 has joined
+16:11          <-- roccs--2 has quit irc
+16:11          <-- madhums has quit irc
+16:11          --> roccs--2 has joined
+16:12          --> FransK_ has joined
+16:12  robi__| >	http://drupal.org/node/729196
+16:12  Druplicon| http://drupal.org/node/729196 => How to get active class on primary links? => 2 comments, 3 IRC mentions
+16:12          <-- FransK has quit irc
+16:13          <-- efaistos has quit irc
+16:14          <-- roccs- has quit irc
+16:15          --> roccs- has joined
+16:15          --> efaistos has joined
+16:15          <-- siliconmeadow has quit irc
+16:15          <-- roccs--2 has quit irc
+16:16          --> rampy has joined
+16:18          <-- jerdavis has quit irc
+16:18          <-- Graloth has quit irc
+16:19          <-- roccs- has quit irc
+16:20          --> siliconmeadow has joined
+16:20          --> ridethefire122 has joined
+16:21          <-- beautifulmind has quit irc
+16:21          <-- ridethefire122 has quit irc
+16:22          <-- ridethefire has quit irc
+16:22          --> smhar has joined
+16:22          <-- TinyElvis has left
+16:23          <-- MadTBone has quit irc
+16:23          --> MadTBone has joined
+16:24          --> roccs- has joined
+16:27          <-- efaistos has left
+16:28          <-- roccs- has quit irc
+16:29  keystr0k| How do I load a node add/edit form for a certain content type, but modify the form elements based on some conditionals that happen before the node form is called in?
+16:29          <-- bertboerland has quit irc
+16:29  keystr0k| I don't believe hook_form_alter() will work because I need to use variables that exist only directly before the form is pulled in / rendered.
+16:30          --> beautifulmind has joined
+16:31          <-- ngnp has quit irc
+16:32          -#- EvanDonovan_away is known as EvanDonovan
+16:32          --> Yvier6 has joined
+16:33          --> roccs- has joined
+16:33  Yvier6| hey guys what's up? what's wrong here? title="»<?php print $node->$title ?>«" 
+16:33          --> e621 has joined
+16:33  keystr0k| remove the $ before title
+16:33  keystr0k| $node->title
+16:34  keystr0k| Yvier6:  ^^
+16:34  Yvier6| oooooooooooh very stupid haha
+16:34  keystr0k| it happens
+16:34          --> sam_ has joined
+16:34          <-- beautifulmind has quit irc
+16:35          --> ronan_ has joined
+16:35  Yvier6| keystr0k: what would be the output if i would use only <?php print $title ?> ?
+16:35          --> smitty519 has joined
+16:36  keystr0k| Yvier6:  I think that depends on where you're calling it...   if the $title variable exists, it'll print whatever that is... which I think will work in a normal .tpl.php file.    To show the title in contemplate templates, you'd use   $node->title
+16:36  smitty519| Can calendar be used with fields from multiple content types?
+16:36          <-- BigMack83 has quit irc
+16:36  Yvier6| ah ok thanks
+16:36          <-- Yvier6 has left
+16:37          <-- roccs- has quit irc
+16:39  e621| hmmm anyone know why drupal may not be loading the admin theme?
+16:39  e621| and use the default theme instead
+16:39          --> McGo has joined
+16:39  e621| it's been like this for 2 days and it is so frustrating
+16:39          --> nestorconde has joined
+16:40          --> firfin has joined
+16:40          <-- AndreasHaugstrup has quit irc
+16:41  fooman| when you create a content type how do you remove the title field from being required
+16:41          --> roccs- has joined
+16:41          --> beautifulmind has joined
+16:41          <-- roccs- has quit irc
+16:41          <-- Slurpee has quit irc
+16:42          --> roccs- has joined
+16:42  lazysoundsystem| hi keystr0k, i think you're looking for hook_form
+16:43  keystr0k| lazysoundsystem:  reading the api page now, thanks.
+16:44          <-- dsdeiz has quit irc
+16:45          --> dsdeiz has joined
+16:45          <-- robi__ has quit irc
+16:45          --> darrenoh has joined
+16:46          <-- roccs- has quit irc
+16:47          --> Dannyboy has joined
+16:47  lazysoundsystem| i have a question too: can anyone help with the third parameter in this: theme('imagecache', 'my_preset', $picture)
+16:47  lazysoundsystem| i've tried $content_profile->field_profile_pic[0][filepath] and $content_profile->field_profile_pic but neither seem to work
+16:48          --> lizzard_ has joined
+16:48          --> Slurpee has joined
+16:49          --> sarah_p has joined
+16:50          --> roccs- has joined
+16:50          --> jerdavis has joined
+16:51  keystr0k| lazysoundsystem:  use the devel module and its   dpm() function to see exactly what you need to target.
+16:51  keystr0k| dpm($content_profile);
+16:51  keystr0k| it'll show you the entire structure of that object
+16:52          <-- smhar has quit irc
+16:52          <-- szczym has quit irc
+16:52  lazysoundsystem| keystr0k: thanks, I've got the object, and [filepath] gives me the path to the picture, but i can't get it to output
+16:52          --> G_S has joined
+16:53  keystr0k| lazysoundsystem:  ['filepath']   right?
+16:53  keystr0k| with the single quotes
+16:53          <-- datim has quit irc
+16:53          --> datim has joined
+16:54  keystr0k| img src=/'<?php print $content_profile->field_profile_pic[0]['filepath']; ?>' alt='test'
+16:54  keystr0k| something like that?
+16:54          <-- datim has quit irc
+16:54          --> szczym has joined
+16:54          <-- budda has quit irc
+16:54          --> datim has joined
+16:55          <-- Cyberschorsch has quit irc
+16:55          <-- roccs- has quit irc
+16:55          <-- datim has quit irc
+16:55          --> datim has joined
+16:56          --> smhar has joined
+16:56          <-- szczym has quit irc
+16:56          --> freepenguin has joined
+16:56          --> thadwheeler has joined
+16:56  lazysoundsystem| keystr0k: thanks, i already tried that - i can output the path, and print the picture directly, without the single quotes - i just want to do it with imagecache
+16:56          --> mordecai has joined
+16:56  keystr0k| aaaaah.
+16:57  keystr0k| lazysoundsystem:  http://drupalcontrib.org/api/function/imagecache_create_url/6
+16:58  keystr0k| lazysoundsystem:  I didn't read your original question I guess. sorry
+16:58          --> roccs- has joined
+17:00  lazysoundsystem| keystr0k: no, i think you did - I got the url and can print it out using normal html - i just can't get imagecache to work with this field
+17:00  keystr0k| I see. I typically use that function...   
+17:00  keystr0k| and feed it the preset name and filepath
+17:00  keystr0k| and set the results as a variable that I then use as my image src
+17:01  lazysoundsystem| using the base filepath?
+17:01          <-- cerpy has quit irc
+17:01          <-- Badger has quit irc
+17:01  keystr0k| Yeah, the idea is that you feed that function the path to the image, and it returns a path to the imagecache version of the image
+17:02  lazysoundsystem| but without calling imagecache the picture doesn't get cached at the size i want.
+17:02  keystr0k| lazysoundsystem:  hmmm.
+17:03          <-- roccs- has quit irc
+17:04  awolfey| How can I override a theme function in a javascript file?
+17:04  awolfey| that is, the theme function I want to override is in a js file.
+17:04  lazysoundsystem| keystr0k: nevermind, i've been knocking my head on this for a couple of days already. I'll concentrate on something else and come back to this later. Thanks for your suggestions.
+17:04  keystr0k| lazysoundsystem:  sorry mate. :(
+17:05  keystr0k| lazysoundsystem:  I'm sure there is someone better-qualified than me that may be able to help next time... haha.
+17:05          <-- WormFood has quit irc
+17:06          <-- smhar has quit irc
+17:06          <-- sarah_p has quit irc
+17:06  G_S| If I want to take a user's ability to edit Post Settings, what permission is that?
+17:06          --> FransK__ has joined
+17:07          <-- Egyptian[Home] has quit irc
+17:07          <-- FransK_ has quit irc
+17:07          --> roccs- has joined
+17:07          <-- roccs- has quit irc
+17:07          --> roccs- has joined
+17:08          <-- bitchkat has quit irc
+17:08          <-- seutje has quit irc
+17:10          --> budda has joined
+17:11          --> nitrospectide has joined
+17:11          <-- emspace has quit irc
+17:11          <-- Bokonon has quit irc
+17:12          <-- roccs- has quit irc
+17:13          <-- freepenguin has quit irc
+17:13          --> ShiNboi has joined
+17:13  lazysoundsystem| keystr0k: no, please. And good luck with the hook_form - there's a good explanation, as of most things, in the Pro Drupal Development book chapter on nodes
+17:13  keystr0k| lazysoundsystem:  hehe. Reading that book now. It's AWESOME :)
+17:13          <-- jme-- has quit irc
+17:15          --> tots has joined
+17:16          --> roccs- has joined
+17:16          <-- aboros has quit irc
+17:16          <-- roccs- has quit irc
+17:16          --> allisterb has joined
+17:16          --> roccs- has joined
+17:17          <-- roccs- has quit irc
+17:17          --> roccs- has joined
+17:17          <-- cmchadwick has quit irc
+17:17  tots| I have two views, once a table style and the other a GMap style. I want to create one page with both on it, and have the filters for one view act on both. I'm not quite sure how to go about it. What keywords should I be Googling for?
+17:18          --> WormFood has joined
+17:18          --> Bokonon has joined
+17:18          <-- allisterb_ has quit irc
+17:19          <-- leprechau has quit irc
+17:20          --> Egyptian[Home] has joined
+17:20          --> leprechau has joined
+17:21          --> HedgeMage has joined
+17:21          <-- roccs- has quit irc
+17:22          <-- sicjoy has quit irc
+17:23          <-- tots has quit irc
+17:24          --> shermang has joined
+17:24          <-- hewhocutsdown has quit irc
+17:25          --> Janusman has joined
+17:26          <-- betz has quit irc
+17:26          --> MartinCleaver has joined
+17:26          --> roccs- has joined
+17:26          --> muhh has joined
+17:26          --> madhums has joined
+17:27          --> roccs--2 has joined
+17:27          --> alka_ has joined
+17:28  G_S| I want to take away a user's ability to edit the Post Settings.  What permission is that?
+17:29          <-- flabberkenny has quit irc
+17:30          -#- indyteckcook is known as indy-brb
+17:30          --> Nashville has joined
+17:30          <-- roccs- has quit irc
+17:30          --> roccs- has joined
+17:30  Nashville| how do you get your emails to format properly ie not show all the html tags?
+17:31          <-- roccs--2 has quit irc
+17:31          <-- beautifulmind has quit irc
+17:32          --> Irishgringo has joined
+17:32  G_S| Nashville:  What's the Input Format set to?
+17:32          <-- sutha has quit irc
+17:32          --> rho has joined
+17:32  Nashville| umm - I think the fck editor
+17:33          <-- svendecabooter has quit irc
+17:33          --> jessicaD has joined
+17:33  Irishgringo| theme question... if I wanted to add a library to my theme.. or just to my system in general, is there a prefered method...  can I get some sugestions on how to add this jquery library please... http://www.jqtouch.com/
+17:34          --> beautifulmind has joined
+17:34          <-- lennartweb has quit irc
+17:34  Nashville| custom - php filter
+17:34  Irishgringo| Nashville: was that to me?  
+17:35  Nashville| This is all it says under it -    * You may post PHP code. You should include <?php ?> tags.   no to G_S    
+17:35          <-- roccs- has quit irc
+17:35  G_S| Nashville:  Make sure HTML isn't filtered.  Or at least those particular tags
+17:35  gooddesignusa| Druplicon: seen irarab
+17:35  Druplicon| irarab was last seen in #drupal 5 weeks 5 days ago saying 'ill give it a try thank you for your help'.
+17:36  Nashville| it shows up fine on the node view - but I am using that info for emails (to make them administrable)
+17:36          <-- Michelle has quit irc
+17:36  gooddesignusa| Irishgringo: hey that plugin looks cool. Does it make it so they have a cursor on the iphone ?
+17:37  Nashville| lol wait - it
+17:37          --> rightsprocket has joined
+17:37  Nashville| s this:      * Lines and paragraphs break automatically.
+17:37  Nashville|     * Web page addresses and e-mail addresses turn into links automatically.
+17:37  Nashville|     * Insert Google Map macro.Create a macro
+17:37  G_S| Nashville:  Go to admin/settings/filters and look at that Input Format
+17:37          <-- V1ntage_work has quit irc
+17:37  rightsprocket| Hello everyone.
+17:37  Nashville| they have there helper text above on this site - ok
+17:37  rightsprocket| Does anyone know if the string overrides module can replace html passed through the t() function?
+17:38          <-- volkan has quit irc
+17:38  Irishgringo| gooddesignusa: I am more of an iPhone developer... but I like this...
+17:38          --> altrugon has joined
+17:38  Nashville| html filter is off for this input type
+17:38          --> roccs- has joined
+17:39  G_S| hmm
+17:39  G_S| Nashville:  I don't know if this is necessarily the problem but some email programs will filter out HTML to keep malicious code out
+17:40  Nashville| hmm - the odd thing is it still shows the code...
+17:40          <-- altrugon has quit irc
+17:40          <-- rightsprocket has quit irc
+17:40          <-- marcvangend has quit irc
+17:40  Nashville| its like  <p> Hello! </p>
+17:40  Nashville| annoying...
+17:40  gooddesignusa| Irishgringo: PM
+17:40  Irishgringo| sure...   
+17:40          --> Michelle has joined
+17:40          <-- Michelle has quit irc
+17:40          --> Michelle has joined
+17:41  G_S| It still could be the email program
+17:41  G_S| I don't know what else it could be
+17:42          <-- sam_ has quit irc
+17:42  Nashville| also I can receive html emails with this client
+17:42          <-- Egyptian[Home] has quit irc
+17:42  Nashville| hmm thanks for helping out though
+17:42  G_S| sorry I couldn't be more help
+17:43          <-- roccs- has quit irc
+17:43          --> momendo has joined
+17:44          --> minus_ has joined
+17:46          --> rightsprocket has joined
+17:47          --> roccs- has joined
+17:47          <-- StryKaizer has quit irc
+17:48          <-- qom2 has quit irc
+17:49          <-- orb has quit irc
+17:49          --> orb has joined
+17:49  G_S| if I want to take a user's ability to edit post settings away, what permission is that?
+17:49          <-- lukus has quit irc
+17:50          --> sam_ has joined
+17:51          --> FatGuyLaughing has joined
+17:51  beautifulmind| I'm havin problem in creating branch on cvs.drupal.org
+17:51  beautifulmind| have gone thrhough all the documentation
+17:52          <-- roccs- has quit irc
+17:52          <-- lizzard_ has quit irc
+17:53  beautifulmind| but getting error while creating the branch: can not create branch in /contributions
+17:53          -#- indy-brb is known as indytechcook
+17:54          <-- maikel has quit irc
+17:55          <-- Myst1c has quit irc
+17:55          --> PasNox has joined
+17:56          --> roccs- has joined
+17:58          <-- jhedstrom has quit irc
+17:58          <-- Bokonon has quit irc
+17:58          --> jhedstrom has joined
+18:00          --> Bokonon has joined
+18:01          <-- geo27 has quit irc
+18:01  Irishgringo| repeating question... if I want to add a JQuery library... jqtouch, in drupal is there a prescribed method... should it be done in a module? the theme? or is there a module that allows me to add plugins.... other wise I am going to have to hardcode this...
+18:02  nitrospectide| i want to set up a view where the filter looks to see if a field value is less than another field value. the first value - i can pick the field from a list. on the second i need to put in a value. can i reference the field somehow?
+18:02          --> BigMack83 has joined
+18:02          --> BANSAL has joined
+18:02          --> fakingfantastic has joined
+18:02          <-- BANSAL has left
+18:02  fakingfantastic| is there a way to put text after a webform?
+18:03  beautifulmind| Irishgringo: well, if the libreay act as a part of the them, you need to copy it to the theme's directory and link it to page.tpl.php and other templates you have craeted
+18:03  beautifulmind| fakingfantastic: use hook_form_alter() or hook_form_FORM_ID_alter()
+18:04  skh_| Irishgringo: a better way would be to add it to your theme's .info file, or even better, if you only need it at certain times, use drupal_add_js in the function(s)
+18:04  skh_| shouldn't be adding resources directly in your tpl's
+18:04  Irishgringo| skh_: that sounds like a good idea...
+18:05  beautifulmind| Irishgringo: yeah that's a better way
+18:05  Irishgringo| i was planning on creating some <secret> pages that only iPhones can see...
+18:05  beautifulmind| if you are using 6.x 
+18:05  Irishgringo| I am using d6
+18:05          <-- dan_runpcrun has left
+18:05  fakingfantastic| beautifulmind: i can also do node-webform.tpl.php right
+18:06  beautifulmind| fakingfantastic: do you want a form element?
+18:06          <-- timmillwood has quit irc
+18:07  beautifulmind| Irishgringo: okay
+18:08          --> PatMac has joined
+18:08          --> lizzard_ has joined
+18:08  skh_| Irishgringo: take a look at this for changing theme based on user agent
+18:08  skh_| ,pbileplugin?
+18:08          --> sherman has joined
+18:08  skh_| mobileplugin?
+18:08          <-- shermang has quit irc
+18:09  skh_| er. http://drupal.org/project/mobileplugin
+18:10          <-- beautifulmind has quit irc
+18:10          --> smultron has joined
+18:11          --> Igashu has joined
+18:11          <-- styol has quit irc
+18:12          <-- leprechau has quit irc
+18:12          <-- fakingfantastic has left
+18:12  Irishgringo| well, I think the mobileplugin module, requires a theme for mobile devices.  I just want to create custom node.tpl.php that call custom page.tpl.php ...  and mobileplugin looks a little dated...  all in all, being an iphone developer...  I dont particluarly like this strategy
+18:13          --> katbailey has joined
+18:13          <-- nathanjo has quit irc
+18:14          --> kdmarks has joined
+18:15          --> MediaDoneRight has joined
+18:15          --> geerlingguy has joined
+18:15  skh_| well drupal isn't written in objective c and isn't an iphone app.. i was just pointing out alternatives for displaying your pages based on the agent viewing them =).
+18:16          <-- geerlingguy has left
+18:16          <-- siliconmeadow has quit irc
+18:16          <-- c4rl has quit irc
+18:17  Irishgringo| I appreciate the help..   but I need core features of the phones...  appcelerator, coredata... stuff like that... so a pure html is the problem.   but the growl stuff I will look at more.  also looking at the mobile plugin stuff now....  
+18:17  G_S| if I want to take a user's ability to edit post settings away, what permission is that?
+18:18          --> lukus has joined
+18:18  skh_| 'edit own posts' or something similar
+18:18          --> RCube has joined
+18:19  Irishgringo| i think I am going to have to theme some views pages directly... and include the jqtouch library as you suggested   .
+18:19          <-- tobiassjosten has quit irc
+18:19  indytechcook| Irishgringo: your best bet might be to user the services module to communicate between a iphone app and drupal
+18:20  PatMac| What is the name of the module that breaks each node down into being visible by a role?
+18:20  Irishgringo| indytechcook: I have not been able to figure out the services module well... and I am told that I should wait until services 3 comes out in 2 months...
+18:21  Irishgringo| but I need examples to figure stuff out... and I just could not find any... but you are right about services
+18:21          --> Myst1c has joined
+18:21          --> jredding has joined
+18:21  indytechcook| Irishgringo: http://drupal.org/node/659772
+18:21  Druplicon| http://drupal.org/node/659772 => Drupal + Services Module + Beer = BeerCloud on Android and iPhone  => 15 comments, 9 IRC mentions
+18:22  Irishgringo| indytechcook: I use json services all the time to talk to other platforms...   expecially ruby...  but DRUPAL has not been fun
+18:22          --> cfuller1_ has joined
+18:23  Irishgringo| indytechcook: yes... I have read that stuff many times... and i think I talked to the develper... but he told me to wait for services 3... which only has a node service at the moment... which might actually be all I need at the moment...
+18:23          <-- cfuller12 has quit irc
+18:23          <-- drifteaur has quit irc
+18:24          <-- Pix___ has left
+18:25          <-- cps0 has quit irc
+18:26          <-- jenlampton has quit irc
+18:27          <-- LouisEric has quit irc
+18:28          --> leprechau has joined
+18:29  Irishgringo| perhaps I should explain why I want to use the jqtouch libraries...   it gives me some webkit features that look like native iphone table stuff...  and it will render on other smartphones the same way... which I think is pretty cool.
+18:29          --> macode has joined
+18:31  Irishgringo| another question... that is probably best done in services..  but i could also accept a compiled plist as well...   which would just be generated every couple hours and put on a cache server somewhere...   so a combination of a cron job and generating the list from a view...  if anyone has some sugestions there?
+18:31          <-- leprechau has quit irc
+18:31          <-- matason has quit irc
+18:32          <-- PatMac has quit irc
+18:32          --> fakingfantastic has joined
+18:32  fakingfantastic| how do blocks get added to page loads? I have a block that should get loaded to a custom region, but it's not loading, how can i debug?
+18:33          <-- dokumori has quit irc
+18:34          --> matason has joined
+18:35          --> LouisEric has joined
+18:35          <-- matason has quit irc
+18:37  smitty519| Can the calendar and or timeline modules be used with fields from multiple content types?
+18:37  G_S| How do I remove a user's ability to edit "Post Settings"?
+18:38          --> StryKaizer has joined
+18:41          <-- paulbooker has quit irc
+18:41          --> cps0 has joined
+18:42          --> aaaa has joined
+18:42          <-- sam_ has quit irc
+18:42          <-- nestorconde has quit irc
+18:43          <-- aaaa has quit irc
+18:43          <-- zzolo has quit irc
+18:45          <-- rampy has quit irc
+18:46  lava| is there a way to have fields in a view that you can enable/disable while looking at the view?
+18:46          --> leprechau has joined
+18:46          <-- rho has quit irc
+18:47          <-- minus_ has quit irc
+18:47          <-- nicholasThompson has quit irc
+18:48          <-- kenpark has quit irc
+18:48  foo| Looks like the "split at cursor" option is broke with wysiwyg api + tinymce. I used <!--break--> ... but views doesn't know how to filter it out. I'm going to write a views template file to strip it out unless anyone has a better idea.
+18:49  duran| I'm trying to build a zen sub-theme.   and the left sidebar region isn't displaying...   anyone see this before?  am I missing something obvious?
+18:49  duran| I have blocks in that region
+18:49          <-- Crash1hd has quit irc
+18:50  duran| G_S: you have to modify roles, I'm not sure what permission level changes that, but you have to start with minimal rights, and go up from there.
+18:50  skh_| duran: may be a silly question, but those blocks are displaying something right?
+18:50  lava| hi foo 
+18:51          <-- johsw has quit irc
+18:51  duran| yes, there are things in the blocks
+18:51  foo| lava: howdy :)
+18:51  duran| I'm moving from a hacked garland theme, to zen.
+18:51  duran| and I've "moved' the blocks to other regions (content) and they show up
+18:51  skh_| what about on the blocks overview page, do they show there?
+18:51  duran| no
+18:52  duran| in fact the "yellow" bars that show where the regions are, aren't showing up
+18:52  duran| its just the left and right areas
+18:52  e621| hi!
+18:52  Druplicon| que tal
+18:52  Druplicon|  e621 is great
+18:52  duran| the section of page.tpl that is ...         <?php if ($left): ?>
+18:52  duran|   isn't showing anything
+18:52  e621| I was doing this: http://www.kirkdesigns.co.uk/drupal-6-how-embed-region-node
+18:52  e621| to add a region in my zen theme
+18:53  e621| function zen_preprocess_node(&$vars, $hook) {
+18:53  skh_| duran: what about if you use the base zen theme, does it work
+18:53  e621| $vars['prop_images'] = theme('blocks', 'prop_images');
+18:53  e621| }
+18:53  e621| I added this, and all blew up
+18:53          <-- jessicaD has quit irc
+18:53  duran| checking
+18:53  e621| Fatal error: Cannot redeclare zen_preprocess_node() (previously declared in /home/content/t/h/o/thomasclucas/html/sites/all/themes/zen/zen/template.php:185) in /home/content/t/h/o/thomasclucas/html/sites/all/themes/zen/zen/template.php  on line 292
+18:53  e621| anyone can see what is wrong?
+18:53  skh_| e621: replace 'zen' with the name of your theme
+18:53  duran| AH HA
+18:53  duran| they do
+18:53          --> glowrocks has joined
+18:53  e621| that is the name of my theme..
+18:54  skh_| e621: in your template.php, you have the same function declared twice, take a look
+18:54  e621| skh that's right...
+18:54  e621| my bad
+18:54  duran| So, when I set to the default ZEN theme, the sidebars show up
+18:54  e621| thanks!
+18:55  skh_| np
+18:55  e621| right
+18:55  e621| so I add the new region
+18:55  e621| inside the previous functions
+18:55          <-- bleen has quit irc
+18:55  skh_| duran: my guess is either that you changed your .tpl file, or missed renaming the "SUBTHEME" text somewhere
+18:55  machine1| hey
+18:55  Druplicon| hey
+18:55  machine1| whats up
+18:55  machine1| salut
+18:56  duran| yeah, looking for that STARTERKIT somewhere.
+18:56  skh_| grep -r STARTERKIT . ftw =)
+18:56  duran| I'll also copy the page.tpl from zen to my subtheme/templates directory, again
+18:56  e621| ok!
+18:56  Druplicon|  OK, you got it, boss!
+18:56  e621| thanks
+18:56          --> minus_ has joined
+18:56          --> c4rl has joined
+18:57  skh_| e621: np.. now you know what to do when you see the redeclare error.. cant have 2 functions with same name
+18:57          --> bleen has joined
+18:57  e621| right!
+18:57  Druplicon| But of course! yes!
+18:57  e621| thank you skh
+18:57  e621| I copied the code inside the existing function
+18:58  e621| and it didn't explode
+18:58  skh_| e621: as a side note, i see you're editing the base zen theme, you should take a look at creating a zen subtheme if you wanna do it the way you're supposed it
+18:58  duran| well
+18:58  e621| I know that...
+18:58          --> robbiethegeek has joined
+18:58  duran| lots of STARTERKIT show up in my .svn directories....
+18:58  e621| the bad is that I learned that like 2 weeks after
+18:58  e621| starting making changes on my own...
+18:58  e621| :(
+18:58  duran| but thats to be expected :)
+18:58          --> tech4him has joined
+18:58  skh_| e621: not hard to fix, just move your customizations into the starterkit, rename, then redownload the base
+--- Log closed Mon Mar 01 18:59:02 2010
+--- Log opened Tue Mar 02 04:16:33 2010
+04:16          --> playahat1r has joined
+04:16 #drupal-support: Total of 254 nicks [0 ops, 0 halfops, 0 voices, 254 normal]
+04:16 Join to #drupal-support was synced in 14 secs
+04:17  tots| I've got a Panel set up with two views. How can I get the exposed filters from one view to affect the second view?
+04:17  hefox| tots: do they have the same ops?
+04:17          --> SeventyFifthTbn has joined
+04:18          --> grantkruger has joined
+04:18  tots| hefox: ops? not sure what you mean but right now both views have the same exposed filters. It's duplication and would love to have one view's filters control both
+04:19  ricardopadua| hefox: http://img191.imageshack.us/img191/8754/picture1dg.png   should I delete the content of the box at the bottom?
+04:20  dsdeiz| the 'name' should be null i think...
+04:20  hefox| if you want 
+04:20  hefox| dsdeiz: theme_username formats the name to whatever the site name is, so I suspect it doesn't matter
+04:20  dsdeiz| oh, learning new things... tnx!
+04:20  hefox| it's useful to have the name as annoymous though, or such, to keep someone from taking it
+04:20  ricardopadua| but should i delete the last box's content?
+04:20  hefox| er whatever the site SETTING is
+04:21  hefox| leave it for now unless you have problems 
+04:21  ricardopadua| ok
+04:21          --> allisterb_ has joined
+04:21  ricardopadua| done, now what?
+04:21          <-- Bryan-10 has quit irc
+04:22          <-- crdant has quit irc
+--- Log closed Tue Mar 02 04:22:30 2010
+--- Log opened Tue Mar 02 19:57:03 2010
+19:57          --> playahat1r has joined
+19:57 #drupal-support: Total of 307 nicks [0 ops, 0 halfops, 0 voices, 307 normal]
+19:57          <-- kman000 has quit irc
+19:57          <-- tr has quit irc
+19:57 Join to #drupal-support was synced in 22 secs
+19:57          <-- playahat1r has left
+--- Log closed Tue Mar 02 19:57:45 2010

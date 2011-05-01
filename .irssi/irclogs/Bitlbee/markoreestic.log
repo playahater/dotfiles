@@ -1,0 +1,285 @@
+--- Log opened Fri Apr 01 15:32:11 2011
+15:32 Starting query in Bitlbee with markoreestic
+15:32 markoreestic| jesi li video moj poslednji mail?
+15:32 markoreestic| ajmo ovde da se izdogovaramo brze je
+15:36 markoreestic| ok onda link za twitter treba da izgleda kako?
+15:37 markoreestic| ok, to je to
+--- Log closed Fri Apr 01 15:42:22 2011
+--- Log opened Sat Apr 02 02:25:09 2011
+02:25 Starting query in Bitlbee with markoreestic
+02:25 markoreestic| tu?
+--- Log closed Sat Apr 02 02:30:43 2011
+--- Log opened Sat Apr 02 03:01:21 2011
+03:01          <-- markoreestic has quit irc
+--- Log closed Sat Apr 02 03:06:43 2011
+--- Log opened Sat Apr 02 12:00:23 2011
+12:00          <-- markoreestic has quit irc
+--- Log closed Sat Apr 02 12:05:43 2011
+--- Log opened Sat Apr 02 12:09:40 2011
+12:09          <-- markoreestic has quit irc
+--- Log closed Sat Apr 02 12:14:43 2011
+--- Log opened Sat Apr 02 12:14:58 2011
+12:14 Closing query with markoreestic
+--- Log closed Sat Apr 02 12:14:58 2011
+--- Log opened Sat Apr 02 13:51:17 2011
+13:51 Starting query in Bitlbee with markoreestic
+13:51 markoreestic| javi mi kada imas nesto novo
+13:51 playahater| setovao sam rolu useru petak
+13:52 playahater| treba da prodjesh mms formu ..
+13:52 playahater| inache .. namestio sam ti debug file ..
+13:52 playahater| post se trenutno dumpuje u ..
+13:53 playahater| http://dev.m3com.com.sa/sites/default/files/textfile.txt
+13:53 playahater| u tj file ti ide post iz flash/send/mms
+13:54 playahater| tu treba da dobijesh niz sa: sender,recipiend, file, text
+13:54 playahater| jel ti to ok?
+13:54 playahater| to mi palo na pamet kao neko reshenje za debug ..
+13:54 playahater| tu vidish shta stigne meni od podataka
+13:55 playahater| ako je flash/check/number success .. shaljesh post na flash/send/mms i gledash dump u http://dev.m3com.com.sa/sites/default/files/textfile.txt
+13:55 playahater| kad tu dobijemo podatke .. dobri smo .. :)
+--- Log closed Sat Apr 02 14:01:43 2011
+--- Log opened Sat Apr 02 14:02:09 2011
+14:02          <-- markoreestic has quit irc
+--- Log closed Sat Apr 02 14:07:43 2011
+--- Log opened Sat Apr 02 14:13:38 2011
+14:13 markoreestic| konacno imam nesto
+14:13 markoreestic| dobija error
+14:14 playahater| greshka je uvek do jaja
+14:14 playahater| :)
+14:14 markoreestic| kao da nemam pristup http://dev.m3com.com.sa/flash/send/mms 
+14:15 playahater| opali taj link iz browser-a 
+14:15 playahater| http://dev.m3com.com.sa/flash/send/mms
+14:15 playahater| vratice ti 'ok'
+14:15 playahater| kad ga opalish iz vlash-a sa postoom, pored ok treba da vrati i dump $_post promenljive
+14:15 playahater| otjesh da namestim dump josh neke metode u drugu promenljivu ..
+14:16 markoreestic| ne razumem zasto to pravi problem a ne kod ostalog slanja
+14:16 playahater| jel bi ti znachilo?
+14:17 markoreestic| nene, mislim da je ovo do samog flash-a...
+14:17 playahater| ups .. ne u drugu promenljivu .. vetj u drugi fajl .. sorry .. zabudalio sam malo .. :)
+14:18 playahater| vichi ako mislish da ima neki nachin da dumpujemo sranje i vidimo gde je problem ..
+14:18 playahater| je mogu da ti dumpujem shta god mi prosledish ..
+14:18 playahater| ako ti to neshto znachi ..
+14:18 playahater| :)
+14:19 playahater| uglavnom .. tu sam .. online .. chetkam .. :)
+14:19 markoreestic| brate kakva glupost
+14:20 markoreestic| prosto neverovatno
+14:20 playahater| si ga nasho
+14:20 playahater| :)
+14:20 markoreestic| ubijaju me ovi iz adoba
+14:20 markoreestic| ne mogu da pozovem f-ju koja vrsi upload fajla na server ako tu funkciju ne poziva sama interakcija, t.j. pritisak na dugme
+14:21 markoreestic| i to su ubacilu kao neki security u zadnju verziju flash-a
+14:21 markoreestic| ...
+14:21 playahater| hehe .. debili ..
+14:21 playahater| o boze ..
+14:21 playahater| hmm ..
+14:21 playahater| kako bi bi odgovaralo onda ..
+14:22 playahater| daj da nadjemo neko jednostavno reshenje .. 
+14:22 playahater| se ne jebavamo bezveze ..
+14:22 playahater| :)
+14:22 markoreestic| pa jedni da kada cekira telefon opet mora da pritisne neko dugme :(
+14:22 playahater| ako otjesh da menjamo logiku za mms .. vichi ..
+14:22 playahater| hmmmm ..
+14:23 playahater| a .. shta mislish daaa ...
+14:23 playahater| recimo ..
+14:23 playahater| baja dodje na formu .. 
+14:23 playahater| unese podatke ..
+14:23 playahater| i ti mi ih sve dzumple prosledish na flash/send/mms ..
+14:24 playahater| i ja ti vratim false ako je broj losh ..
+14:24 markoreestic| u slucaju da je pogresan telefon ti ne snimis podatke a vratis mi fail=fail
+14:24 playahater| i vratim ti fail/success ako mms prosho/zaboo
+14:24 markoreestic| moze i tako
+14:25 playahater| znachi true/false za broj success/fail za mms
+14:25 playahater| ae ispravi onaj fb link .. da bacimo taj fajl na server ..
+14:25 markoreestic| najbolje da mi vracas phone=true ili phone=false
+14:26 playahater| a u drugom push-u da bacimo promene za mms
+14:26 markoreestic| jer true=true nece raditi u flashu jer ne gleda na true kao promenljivu nego kao booolean
+14:26 playahater| ok .. dogovoreto .. phone=true/false
+14:26 playahater| pa da .. kontam da moze da se javi problem sa true=true
+14:27 markoreestic| ok, nadam se da ce ovo srediti probleme...
+14:27 playahater| ql ..
+14:28 playahater| nego .. ae da gurnemo na server ispravljeni fb link sad ga budem pushovao ovu promenu za mms
+14:28 markoreestic| to je vec sredjeno, samo ovo da ubacim
+14:28 playahater| aha ..
+14:28 playahater| ql ..
+--- Log closed Sat Apr 02 14:34:43 2011
+--- Log opened Sat Apr 02 14:39:52 2011
+14:39 playahater| imash mail
+14:39 playahater| :)
+14:44 playahater| dude .. fb link i dalje $
+14:44 playahater| :)
+14:45 playahater| bacio sam sve promene na server
+14:45 playahater| chekiraj ..
+14:48 markoreestic| a govno, zaboravio sam da podesim ove text boxove... :/
+14:50 markoreestic| opet vraca false za imagePath
+14:50 playahater| kad kliknem na twitter/fb .. prosledi mi link . ali opet sa $
+14:51 playahater| ja ti dajem dobar link .. izgleda da uzme imagePath .. ali mu doda $
+14:52 markoreestic| skinu sam $
+14:52 playahater| ae baci fajl da ga bacim na server .. 
+14:53 playahater| da probamo jedno po jedno ..
+14:53 playahater| ae ove twitter/fb dugmitje .. pa kad prodju .. idemo na mms
+14:53 playahater| :)
+14:53 markoreestic| ne dodaje vise $, ali opet vraca false
+14:54 playahater| kad snimish sliku u galeriju .. ja ti vratim success i link do slike .. 
+14:54 playahater| i kad kliknem na twitter/fb .. ja dobijem taj link shto sam ti dao nakon snimanja slike
+14:54 markoreestic| ali umesto tog linka ja dobijam false, malo pre je radilo sto je najgore
+14:54 playahater| hmmm ..
+14:55 playahater| mada kako ja dobijem onda taj link na twitter/fb sad?
+14:56 markoreestic| dobijas link na twitter i fb, ali u=false i status=false
+14:58 markoreestic| video mail?
+14:59 playahater| da .. bacio sam uprvo tu poslednju verziju na server ..
+14:59 playahater| jel moze flash da keshira neshto .. i dalje dobijam $ ispred lika za twit/fb
+14:59 playahater| ili to mene tripuje ovaj flash na linuxu?
+14:59 playahater| :)
+15:00 markoreestic| ne bi trebalo, on hoce da kesira fajl koji ucitav, ali ne i sam sebe
+15:01 markoreestic| ne znam ocisti kesh nekoliko puta :/
+15:01 playahater| jel kod tebe otvara ok te twitter/fb linkove?
+15:03 playahater| da .. ok .. kesh neki me jebo ..
+15:03 markoreestic| sad cu ponovo da ucitam
+15:03 playahater| sad i meni vratja false
+15:04 playahater| s tim shto link twitter/fb opet idu na flash/post/image ..
+15:04 markoreestic| u flash debug-u kod prvog snimanja posalje, vrati mu se success=success i imagePath=false
+15:04 playahater| hmm .. chek da proverim ..
+15:04 playahater| ali nisam nishta dirao taj deo koda ..
+15:04 markoreestic| sada ce da salje sve dok ne dobije nesto drugo sem null i false
+15:05 playahater| :)
+--- Log closed Sat Apr 02 15:10:43 2011
+--- Log opened Sat Apr 02 15:12:50 2011
+15:12          <-- markoreestic has quit irc
+15:12 markoreestic| [15:09:33] ok, sada salje mms i sve to, ali vraca fail
+15:13 playahater| upravo gledam .. shta se s tim deshava ..
+15:13 playahater| sec
+--- Log closed Sat Apr 02 15:18:43 2011
+--- Log opened Sat Apr 02 15:24:09 2011
+15:24          <-- markoreestic has quit irc
+15:25 playahater| fuck ..
+15:25 playahater| jebem ti sranje ..
+15:25 playahater| puko goo.gl shirtner u arabiji ..
+15:25 playahater| nemaju ping ga njima ..
+15:25 playahater| sad ti vratjam link ..
+15:26 playahater| sad tju da testiram ..
+15:26 markoreestic| well, not our problem :)
+15:26 playahater| not indeed ..
+15:26 playahater| :)
+--- Log closed Sat Apr 02 15:31:43 2011
+--- Log opened Sat Apr 02 15:31:58 2011
+15:31 playahater| ok .. dobijam post za mms ..
+15:32 playahater| do jaja ..
+15:32 playahater| i mislim da ga prosledjuje dobro ..
+15:33 playahater| ne znam .. shta on ispishe nakon shto popunish mms formu kako treba .. kliknesh na send mms ?
+15:33 playahater| ima dva reda .. drugi red je kratji
+15:33 playahater| :)
+15:33 playahater| imam osetjaj da je to success
+15:33 playahater| :D
+--- Log closed Sat Apr 02 15:35:29 2011
+--- Log opened Thu Apr 07 22:49:59 2011
+22:49 Starting query in Bitlbee with markoreestic
+22:49 markoreestic| evo saljem, testirao sam ovde lokalno i ucitava dresove
+22:50 markoreestic| do www je bio problem
+22:50 markoreestic| poslao
+22:50 markoreestic| javi mi sto pre da li radi
+22:50 markoreestic| i ostalo sve
+--- Log closed Thu Apr 07 22:56:07 2011
+--- Log opened Thu Apr 07 23:00:28 2011
+23:00 playahater| ok
+23:00 playahater| upravo bacam na server ..
+23:00 playahater| pingujem chim bude live
+23:00 markoreestic| ajd
+23:02 Closing query with markoreestic
+--- Log closed Thu Apr 07 23:02:20 2011
+--- Log opened Thu Apr 07 23:17:37 2011
+23:17 Starting query in Bitlbee with markoreestic
+23:17 markoreestic| testirao sam sada, i radi
+23:19 playahater| yup ..
+23:19 playahater| 10x dude ..
+23:19 playahater| sory za cim ..
+--- Log closed Thu Apr 07 23:25:07 2011
+--- Log opened Thu Apr 07 23:25:40 2011
+23:25 markoreestic| evo saljem ti jos jednu verziju za nesto sto sam ja primetio
+--- Log closed Thu Apr 07 23:31:07 2011
+--- Log opened Thu Apr 07 23:31:21 2011
+23:31 markoreestic| poslao
+23:31 markoreestic| javi sto pre kada postavis
+--- Log closed Thu Apr 07 23:37:07 2011
+--- Log opened Thu Apr 07 23:40:06 2011
+23:40 playahater| upravo sam pushovao na server ..
+23:40 playahater| za par trenutaka je online ..
+23:43          <-- markoreestic has quit irc
+23:46 Closing query with markoreestic
+--- Log closed Thu Apr 07 23:46:54 2011
+--- Log opened Thu Apr 07 23:50:37 2011
+23:50 Starting query in Bitlbee with markoreestic
+23:50 markoreestic| ok, palim, cujemo se
+23:50 playahater| ql .. 
+23:50 playahater| 10x
+23:50 playahater| poz ...
+23:50 playahater| :)
+23:51 Closing query with markoreestic
+--- Log closed Thu Apr 07 23:51:08 2011
+--- Log opened Thu Apr 07 23:51:11 2011
+23:51 Starting query in Bitlbee with markoreestic
+23:51 markoreestic| np
+23:51 markoreestic| poz
+23:51          <-- markoreestic has quit irc
+23:51 Closing query with markoreestic
+--- Log closed Thu Apr 07 23:51:30 2011
+--- Log opened Fri Apr 08 19:09:40 2011
+19:09 Starting query in Bitlbee with markoreestic
+19:09 markoreestic| poslao sam ti covek
+19:09 playahater| ql dude ..
+19:09 playahater| baceno online ..
+19:10 playahater| desava nam se neki bug .. ali samo na windowsu ..
+19:10 markoreestic| kakav?
+19:11 playahater| desi se da kad kliknesh na fb pa twitter pa snimanje slike u album, da snimi dve slike .. umesto jedne
+19:11 playahater| jel mogutje da je do nekog cache-a?
+19:11 markoreestic| jedno za drugim?
+19:11 markoreestic| brzo?
+19:11 markoreestic| ili kako?
+19:12 playahater| pa ne brzo .. .. ali da .. jedno za drugim ..
+19:12 playahater| mada meni ne duplira na linuxu ..
+19:12 playahater| mogu da kliknem kolko god hotju puta .. uvek mi snimi samo jednu sliku u albumu ..
+19:12 playahater| do jaja chudno ..
+19:13 markoreestic| jeste cudno posto kada snimis vec, potpuno preskace proces snimanja na dalje
+19:14 playahater| da .. i tako se i ponasha na linuxu ..
+19:14 markoreestic| sad cu da testiram i da vidim sta trejsuje
+19:15 markoreestic| da jako, cudno opet je poslao
+19:16 playahater| i tebi se desava?
+19:16 markoreestic| da
+19:16 playahater| ali .. kako meni ne duplira .. ?
+19:16 playahater| :|
+19:18 markoreestic| nista, imao sam drugu metodu za to za svaki slucaj zkaomentarisanu, saljem ti novu verziju pa da testiramo
+19:18 playahater| ok ..
+19:23 markoreestic| kaci kad pustis
+19:23 markoreestic| kazi
+19:23 playahater| ok .. upravo komitujem
+--- Log closed Fri Apr 08 19:28:24 2011
+--- Log opened Fri Apr 08 19:28:58 2011
+19:28 playahater| pushteno
+19:29 playahater| live je ..
+--- Log closed Fri Apr 08 19:34:24 2011
+--- Log opened Fri Apr 08 19:34:59 2011
+19:34 markoreestic| ok mislim da je sredjeno
+19:35 markoreestic| treba jos nesto?
+19:35 playahater| ako je to ok .. onda nishta ..
+19:35 playahater| :)
+19:35 markoreestic| ql
+19:36 markoreestic| od sutra cu biti normalno dostupan
+19:36 markoreestic| pa cimajte
+19:36 playahater| ok .. ql .. 
+19:36 playahater| mada ..
+19:36 playahater| nadama se da je to to .. :)
+19:36 markoreestic| takodje :)
+19:36 playahater| sad tje nadlezni da kliknu .. ako su zadovoljni .. zatvaramo ..
+19:36 playahater| :)
+19:38 markoreestic| cek video sam ja nesto :)
+19:38 playahater| :)
+19:38 markoreestic| ne prikazuje u obavestenju za fb i twitter njihove logoe
+19:40 markoreestic| saljem to sredjeno
+19:40 playahater| ok .. ql ..
+19:41 markoreestic| poslao
+19:41 markoreestic| palim ja pa se cujemo
+19:41 playahater| ql .. sad tju da ga komitujem ..
+19:41 playahater| ok ..
+19:42          <-- markoreestic has quit irc
+--- Log closed Fri Apr 08 19:48:24 2011
+--- Log opened Fri Apr 08 19:53:01 2011
+19:53 Closing query with markoreestic
+--- Log closed Fri Apr 08 19:53:01 2011

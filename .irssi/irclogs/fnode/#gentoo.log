@@ -1,0 +1,1680 @@
+--- Log opened Tue Mar 02 06:27:15 2010
+06:27          --> playahater has joined
+06:27 #gentoo: Total of 777 nicks [10 ops, 0 halfops, 45 voices, 722 normal]
+06:27          <-- stid has left
+06:27  shadowdaemon| physically unplug even
+06:27  Luther| DylanJ, standard shutdown + turn on right
+--- Log closed Tue Mar 02 06:27:25 2010
+--- Log opened Tue Mar 02 06:27:43 2010
+06:27          --> playahater has joined
+06:27 #gentoo: Total of 776 nicks [10 ops, 0 halfops, 45 voices, 721 normal]
+06:27  pickledpiper| Did you disconnect the power?
+06:28 Join to #gentoo was synced in 22 secs
+06:28  d3m0n3| ahhahaha
+06:28          <-- voidprayer has quit irc
+06:28  d3m0n3| try to restart machine Luther
+06:28  Luther| and OH p.s: when I press 'reboot' or 'halt' from command line my computer goes to the standard text-scrolling and stops/hangs at: no more processes on this runlevel
+06:28  Luther| d3m0n3, I did, a second ago
+06:28  Luther| (when I went offline)
+06:28  d3m0n3| ok nice
+06:28  domX| hi
+06:28  Luther| hi
+06:28  pickledpiper| try 'shutdown -hP now'
+06:29          <-- robink has quit irc
+06:29          --> robink has joined
+06:29  domX| can someone help me with grub a little?
+06:29          --> SkyLeach has joined
+06:29          <-- zz_romb has quit irc
+06:29  d3m0n3| Luther:  shutdown -h 0
+06:29          <-- biohazrd has quit irc
+06:29  Luther| pickledpiper, ill do that next time....dont you realize i havent had internet for 16+ hrs ??? let me enjoy this :D
+06:30  pickledpiper| hahaha!
+06:30  Sagan| Luther: xD omg
+06:30  shadowdaemon| cold turkey
+06:30  d3m0n3| xD
+06:30          <-- nickm_ has quit irc
+06:30  domX| I have a running debian server on sda and want to install gentoo on sdb. however grub fails to install on sdb :(
+06:30  d3m0n3| domX: sure
+06:30  shadowdaemon| only need one grub install
+06:30  d3m0n3| domX: u need a boot partiton
+06:30  d3m0n3| debian not have it
+06:31  pickledpiper| no... you don't need a boot partition.
+06:31  d3m0n3| u must invert your os
+06:31  Luther| domX, d3m0n3 actually invented gentoo in his dorm room back in college...so ask him anything. he has all the answers
+06:31  pickledpiper| you might need to use the swap command.
+06:31          --> voidprayer has joined
+06:31          <-- thrasibule has quit irc
+06:31  domX| /dev/sda1 is /boot in the running debian as far as I know
+06:32  shadowdaemon| u must find the intergral of you OS in other words
+06:32          --> nickm_ has joined
+06:32  Luther| shadowdaemon, lmao
+06:32  domX| and I am installing gentoo on /dev/sdb with /dev/sdb1 as /boot and /dev/sdb2 as /
+06:33  pickledpiper| sounds fine
+06:33  pickledpiper| should work domX
+06:33  d3m0n3| invert your hd this is the quickly way
+06:33  domX| usually I install gentoo on sda/hda, never had this issue
+06:33  domX| saying something about cannot read stage1
+06:33  domX| or cannot find stage1
+06:33          <-- tejing has left
+06:33  domX| but it is there
+06:34  Luther| pickledpiper / d3m0n3 I got another question: On re-boot, I am gonna assume that all this work is gonna go down the toilet, so how can I set it up so it first looks for : eth0, then wlan1, then wlan0 in sequence and brings whatever is connected/turned on up without problems on bootup
+06:34  shadowdaemon| Luther: /etc/conf.d/net
+06:34  pickledpiper| hold on domX, you already have a /boot partition on /dev/sda yeah?
+06:35  pickledpiper| maybe /dev/sda1?
+06:35  domX| yeah, but that one shall be erased together with debian later
+06:35  domX| as soon as gentoo is running fine
+06:35  d3m0n3| u must set static ip
+06:36  Luther| shadowdaemon, this is what I have now : http://dpaste.com/166761/
+06:36  domX| could I just edit menu.lst from debians /boot d3m0n3 ?
+06:36          <-- BitOBear has quit irc
+06:36          <-- lemonchicken has quit irc
+06:36  d3m0n3| domX: no
+06:36  pickledpiper| domX, you will have to overwrite your mbr on sda to do that and when you remove the drive you will no longer be able to boot to gentoo!
+06:36  andares| Hey guys, I have no idea what's happening.
+06:36  shadowdaemon| Luther: also /etc/conf.d/rc
+06:36  domX| debian is amd64 2.6.26, gentoo is amd64 no-multilib 2.6.32
+06:36  andares| For some reason, a lot of things on my system seem redirected to /dev/null.
+06:36  d3m0n3| domX: u must reinstall grub on new sda
+06:36          <-- nickm_ has quit irc
+06:36  andares| In particular, less doesn't work anymore.
+06:36          <-- voidprayer has quit irc
+06:37  andares| It happened after I installed qpsmtpd.
+06:37          <-- Zucca has quit irc
+06:37  andares| Also I'm locked out of xscreensaver, and it keeps saying /dev/null: permission denied whenever I source /etc/profile or .bash_profile.
+06:37  Luther| shadowdaemon, what do I put in them?
+06:37  shadowdaemon| Luther: /etc/conf.d/net.example is useful too
+06:37  andares| So I have no idea where the problem even started from.
+06:37          --> voidprayer has joined
+06:37  shadowdaemon| Luther: check /etc/conf.d/net.example
+06:38  Luther| k
+06:38          --> nickm_ has joined
+06:38  andares| Anyone? D:
+06:38  Luther| shadowdaemon, no such file?
+06:38  d3m0n3| Luther: with dhcp u have always this problem
+06:38  d3m0n3| Luther: must set static ip on wired and wireless network
+06:39  andares| Is there a way I can make bash print what line it tried to access /dev/null?
+06:39          <-- zeroedout has quit irc
+06:40          --> zz_romb has joined
+06:40  domX| isn't it possible to install grub into the mbr of sdb, then tell the bios to boot the disk known as sdb first (priority) so that it is handled as sda?
+06:40          <-- SonOfBuzz has quit irc
+06:40          -#- zz_romb is known as romb
+06:40          <-- romb has quit irc
+06:40          --> romb has joined
+06:41  d3m0n3| domX: u must install in sda ( invert hd priority )
+06:41  domX| I wanted to keep the debian (rootserver) as a backup until the new gentoo is running fine
+06:42          --> SonOfBuzz has joined
+06:42  pickledpiper| Yes this will work domX
+06:42  shadowdaemon| Luther: no such file?
+06:42  d3m0n3| domX: put hd with debian in sdb and form debian install grub in sda
+06:42  Luther| shadowdaemon, yea doesnt exit
+06:42  Luther| d3m0n3, that sucks :(
+06:42  shadowdaemon| Luther: weird
+06:43  Luther| shadowdaemon, i don't even understand this one man :/
+06:43  Luther| well I sort of do
+06:43          <-- final_inode has quit irc
+06:43  Luther| wpa_supplicant_wlan1="-Dwext"
+06:43  andares| Can anyone help me with this /dev/null problem?
+06:43  Luther| and .. modules)wlan1=( "wpa_supplicant" )
+06:44  pickledpiper| Problem with changing priority is that your drive associations may change domX.  you will need to be very careful to check your partitions before you install Gentoo otherwise you may end up overwriting debian
+06:44  andares| Also unix_checkpwd is giving a GENERAL PROTECTION FAULT.
+06:44  andares| GAH what the hell
+06:44  andares| My kernel is broken or something.
+06:44          --> final_inode has joined
+06:44  shadowdaemon| andares: you want to see the output of /dev/null?
+06:44  Luther| shadowdaemon, the point is..if I am in the middle of a dessert with one wifi signal and my adapter stopped working...I would probably die due to my gentoo-incompetence
+06:44  shadowdaemon| andares: input to /dev/null I mean
+06:44          <-- nickm_ has quit irc
+06:44  andares| shadowdaemon: uh.. what? No, no, a lot of programs seem to be trying to manipulate /dev/null for some reason.
+06:44  pickledpiper| n.b. sda becomes sdb and sdb becomes sda.
+06:45  andares| shadowdaemon: as in, I installed qpsmtpd and it broke my system somehow that's causing a lot of programs to try to read /dev/null.
+06:45          --> ggc has joined
+06:45  pickledpiper| your grub.conf will also need to reflect this.
+06:46          --> nickm_ has joined
+06:46  d3m0n3| pickledpiper: must set hda with gento and sdb with debian and than install grub from debian
+06:46  shadowdaemon| Luther: first try to get /etc/conf.d/net.example from somewhere, I tried to wgetpaste it, but no luck for some reason
+06:47  Luther| d3m0n3, you got any idea on this
+06:47  shadowdaemon| andares: /dev/null is called a 'bit bucket'
+06:47  andares| shadowdaemon: I know what /dev/null is.
+06:47  d3m0n3| Luther: the best way is to read gentoo document  on web
+06:47          <-- Azerthoth|D has quit irc
+06:47  andares| shadowdaemon: whenever I source /etc/profile, it gives me a line that says "/dev/null: permission denied."
+06:48  pickledpiper| I agree with d3m0n3.
+06:48          <-- mason-l has quit irc
+06:48          --> dividebyzer0 has joined
+06:48  dividebyzer0| Hello all
+06:48  shadowdaemon| andares: ls -l /dev/null
+06:48  andares| -rwxr-xr-x 1 root root 0 Mar  2 00:40 /dev/null
+06:49  shadowdaemon| crw-rw-rw- 1 root root 1, 3 2010-03-02 12:02 /dev/null
+06:49  Luther| d3m0n3, ok gotch
+06:49          --> corndog has joined
+06:49  andares| shadowdaemon: I guess qpsmtpd's ebuild screwed with /dev/null then?
+06:49          --> ArCHONKoG has joined
+06:49  Luther| d3m0n3, which should I read to set it up so on bootup it looks for eth0, then wlan0 and then wlan0
+06:49  shadowdaemon| andares: seems bizarre
+06:49  andares| shadowdaemon: yeah, but I can't think of any other reason for it.
+06:49  pickledpiper| Luther did you actually have a DHCP server on that network?
+06:49  andares| Or any reason at all...
+06:50  Luther| d3m0n3, also, can you tell me those commands to start wlan0 again? I think It might work this time..
+06:50          <-- nbren has quit irc
+06:50  domX| pickledpiper: this is what I tried http://dpaste.com/166771/
+06:50  Luther| pickledpiper, Im not sure to be honest dude... how can I be sure?
+06:50  andares| shadowdaemon: maybe udev failed or something?
+06:50  d3m0n3| Luther: if u set static ip work all
+06:50  shadowdaemon| andares: seems likely
+06:50  pickledpiper| can you connect to it automatically with windows without setting up IP addresses?
+06:51  shadowdaemon| andares: rm /dev/null && mknod -m 666 /dev/null c 1 3
+06:51  andares| shadowdaemon: restarting udev fixed the problem. This is weird as hell though.
+06:51          * andares guesses that udev recreated null.
+06:51  d3m0n3| pickledpiper: wireless startup in different subnet of router
+06:51  pickledpiper| what version of grub are you using domX?
+06:51  CrazyWoods| ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2) , can't connect to mysql server, any idea?
+06:52  shadowdaemon| andares: well hopefully it will be ok on reboot
+06:52  domX| pickledpiper: grub-static 0.97-r9
+06:53          <-- nickm_ has quit irc
+06:53  andares| shadowdaemon: it couldn't possibly mean that my computer got rooted or anything, could it?
+06:53          <-- Luther has quit irc
+06:53          --> Luther has joined
+06:53  Luther| I think I got a problem
+06:53  Luther| My wifi disconnects / dis-associates with AP randomly now
+06:54  d3m0n3| lol
+06:54  domX| pickledpiper: should my setup work?
+06:54  Luther| X_x
+06:54  d3m0n3| have u set static ip?
+06:54  domX| fstab/grub.conf
+06:54  pickledpiper| domX try changing root (hd0,0) to root (hd1,0)
+06:54  Luther| d3m0n3, is that one of the few hundred things we did before?
+06:54  shadowdaemon| andares: Who knows? It doesn't seem likely though.
+06:54          --> Azerthoth|D has joined
+06:54  andares| Hm, okay.
+06:55          --> nickm_ has joined
+06:55          <-- corndog has quit irc
+06:55  d3m0n3| ok Luther
+06:55  d3m0n3| restart
+06:55  d3m0n3| xD
+06:55          <-- mie has quit irc
+06:56          --> mie has joined
+06:57  domX| grub> setup (hd1)
+06:57  domX| Checking if "/boot/grub/stage1" exists... no
+06:57  domX| Checking if "/grub/stage1" exists... no
+06:57  domX| Error 24: Attempt to access block outside partition
+06:57          <-- Naamah kicked domX (Flood. Paste at http://dpaste.com)
+06:57          --> domX has joined
+06:57          <-- ggc has quit irc
+06:57          --> ivanich|wrk has joined
+06:57  Luther| d3m0n3, I'll come see you tommorow then :P right now I am having an orgasm  at the gorgeous view of the internets :P
+06:57  d3m0n3| domX: this is far way to install i told u
+06:58  pickledpiper| domX... you need to use setup on hd0
+06:58  pickledpiper| not hd1
+06:58          <-- ArCHONKoG has quit irc
+06:58  pickledpiper| Your doing this the hard way.
+06:58          --> Author has joined
+06:58  domX| yeah I guess I dont know enough about grub yet sry
+06:58  pickledpiper| it would be easier just to disable your old hard disk and boot from CD the way everyone else does.
+06:59  domX| 0,0 means, first disk, first partition right
+06:59  dividebyzer0| Hello all, as a quick and hopefully simple question. At the moment I have not had the opportunity to work with Gentoo. I have heard many good things and worked with a few other distrobutions in the past. As I feel Gentoo at the moment may still be a bit over my head in terms of installation process, I was wondering if it was worth attempting to install Gentoo in a virtual machine or to simply wait till I have a spare machine to attempt the installati
+06:59  d3m0n3| domX: yes
+06:59          <-- zencyl has quit irc
+06:59  pickledpiper| yup.
+07:00  pickledpiper| currently that is your debian disk.
+07:00  domX| and device (hd0) /dev/sdb should tell grub to access sdb when using "root" and "setup" with (hd0...) ?!
+07:01  pickledpiper| grub does not know what /dev/sdb is.  it only knows about hd0 and hd1
+07:01  pickledpiper| it works differently.
+07:01  domX| I just picked that thing about device from this HowTo http://en.gentoo-wiki.com/wiki/Root_filesystem_over_LVM2,_DM-Crypt_and_RAID
+07:02          <-- romb has quit irc
+07:02          <-- eTangenT has quit irc
+07:02  domX| thought it would work ^^
+07:02  domX| seemed logical :D
+07:02          --> FelipeMcMont has joined
+07:02          <-- a-v has quit irc
+07:03          --> geo27 has joined
+07:03          <-- nickm_ has quit irc
+07:04          <-- Sagan has quit irc
+07:05          --> nickm_ has joined
+07:06          --> eTangenT has joined
+07:07          --> rockso has joined
+07:07          <-- vk4akp_ has left
+07:07  pickledpiper| sorry domX i misunderstood you. hd0 should be /dev/sda and that is where debian is currently installed yeah?
+07:08          --> zz_romb has joined
+07:08  pickledpiper| hd1 should be /dev/sdb and that is where gentoo is installed?
+07:08          <-- rockso has quit irc
+07:08          -#- zz_romb is known as romb
+07:08          <-- romb has quit irc
+07:08          --> romb has joined
+07:08          <-- smorg has quit irc
+07:09          --> cahoot has joined
+07:09          <-- cahoot has quit irc
+07:09          --> cahoot has joined
+07:09          <-- imcsk8 has quit irc
+07:09  pickledpiper| so all you need to do is modify your grub.conf to root (hd1,1)
+07:10  pickledpiper| then use setup on hd0 and it should work.
+07:11  pickledpiper| sorry root (hd1,0)
+07:11  pickledpiper| cause that's where your kernel is.
+07:11          <-- final_inode has quit irc
+07:12  domX| hey guys I think I solved it
+07:12  pickledpiper| booting?
+07:13  domX| /boot was ext2. however debian set inode-size to 256
+07:13  domX| changed it to 128 and successfully installed grub
+07:13          <-- DdRmanxbxfr has quit irc
+07:14          <-- Milos|Laptop has quit irc
+07:14          <-- mie has quit irc
+07:14          <-- _spm_Draget has quit irc
+07:16          --> final_inode has joined
+07:18          <-- buntfalke has quit irc
+07:19          <-- ki__ has quit irc
+07:21          --> kiri has joined
+07:21          --> shentino has joined
+07:21          --> tlze has joined
+07:22          --> smorg has joined
+07:23          <-- defragger has quit irc
+07:23          --> pandaemonium has joined
+07:23          <-- pandaemonium has quit irc
+07:23          --> pandaemonium has joined
+07:24          --> ki__ has joined
+07:24          --> defragger has joined
+07:24          <-- defragger has quit irc
+07:24          --> defragger has joined
+07:24          <-- ghosTM55 has quit irc
+07:25          <-- z35 has quit irc
+07:25          --> z35 has joined
+07:26          <-- Zaister has quit irc
+07:26          --> Zaister has joined
+07:27          <-- cahoot has quit irc
+07:27          <-- BlackBinary has quit irc
+07:27          --> VNA9216 has joined
+07:29          --> kreton has joined
+07:29          <-- pandaemonium has quit irc
+07:29          <-- GenKreton has quit irc
+07:30          <-- hadees has quit irc
+07:31          <-- mkyser has quit irc
+07:32          --> RalphSpencer has joined
+07:32  Luther| d3m0n3, how long have you used gentoo for ?
+07:33          --> olesalscheider has joined
+07:33          --> rockso has joined
+07:33          --> hadees has joined
+07:34          <-- nickm_ has quit irc
+07:35  d3m0n3| Luther: i use slack
+07:35  d3m0n3| :P
+07:36          <-- sevis has quit irc
+07:36          <-- rockso has left
+07:36          --> sevis has joined
+07:36  Luther| d3m0n3, wtf ? why are you a.) in #gentoo b.) know a lot about gentoo?
+07:36          --> nickm_ has joined
+07:37          <-- coi has quit irc
+07:37  shadowdaemon| Luther: because
+07:37          <-- na641 has quit irc
+07:37          <-- final_inode has quit irc
+07:38  d3m0n3| Luther: previously I have used also gentoo
+07:38  Luther| oh
+07:38  Luther| why'd you switch ?
+07:38  shadowdaemon| Luther: because
+07:39  shadowdaemon| Luther: sorry  =)
+07:39  d3m0n3| use flag hatred
+07:39  d3m0n3| xD
+07:40  shadowdaemon| Luther: did you find /etc/conf.d/net.example?
+07:40  shentino| hmm...
+07:40  shadowdaemon| Luther: something is wrong with my wgetpaste, else I would paste it
+07:40  shentino| Which is geekier, slackware or gentoo?
+07:41  shadowdaemon| shentino: wrong question maybe?
+07:41  itdocks| slackware
+07:41  itdocks| :P
+07:42  shadowdaemon| Which is geekier, gentoo or watching you-tube?
+07:42  itdocks| gentoo
+07:42  Luther| shadowdaemon, how about redtube
+07:42  shentino| my question was a serious one though
+07:42  Luther| thats pretty geeky
+07:42  Luther| shadowdaemon, nah, Im over it for now... Ive had enough gentoo for today
+07:42          <-- nickm_ has quit irc
+07:43  shentino| I suppose I should ask, which one is further from "mere mortal users" in terms of technical expertise required to manage?
+07:43  Luther| shentino, whats geekier? slack , gentoo or linux from scratch ?
+07:43  d3m0n3| shentino: both? to slackware are simple to install but it has many operations post conf gentoo is more complex to install but once made it does not have problems
+07:43          --> harpal has joined
+07:43  shadowdaemon| question is: which distro allows most flexibility AND ease-of-use?
+07:43  Luther| or two broken circuit boards , one wire , dead camel in the middle of the serengetti
+07:44  Luther| thats pretty hardcore geeky
+07:44  shadowdaemon| Luther: dead camel in the middle of the serengetti
+07:44  Luther| shadowdaemon, ... shentino 's questions pretty good though to be honest :p
+07:44  shadowdaemon| Luther: true, it is a discussion point
+07:44          --> gardintrapp has joined
+07:45  shentino| I like gentoo's flexibility
+07:45          <-- whereami has quit irc
+07:45  itdocks| i like gentoo because i can't tolerate bullshit
+07:46  Luther| anyone got an answer to shentino's question? --> Which one os further from "mere mortal users" in terms of technical expertise required to manage? (slack/gentoo/lfs/[insert here])
+07:46          <-- heathen has quit irc
+07:46  Luther| *us
+07:46          <-- D-ion has quit irc
+07:46  Luther| *is
+07:47  shadowdaemon| probably lfs
+07:47          --> sping has joined
+07:47          <-- sping has quit irc
+07:47          --> sping has joined
+07:47  mode/#gentoo [+v sping] by ChanServ
+07:47  shadowdaemon| I don't think Gentoo's purpose is to be far from the purposes of "mere mortal users"
+07:48  shadowdaemon| I like the flexibility
+07:48  itdocks| gentoo is a ninja
+07:48  itdocks| :P
+07:48  Satoru-san| how do I eclean distfiles?
+07:48  dividebyzer0| ^^if you can get it installed
+07:48  Satoru-san| I am out of space :P
+07:48  Luther| yea
+07:49  itdocks| once you install gentoo a couple of times you don't even need the manual anymore
+07:49  Satoru-san| itdocks: yes.
+07:49  shadowdaemon| Satoru-san: I would say 'man eclean' but your man pages are not working
+07:49  itdocks| or you can just clone another machine you have
+07:49  Satoru-san| yea.
+07:49  Luther| see that? if you asked Satoru-san 's question (how do I eclean distfiles?) from some random dude on the street, i bet $100 he'll get shot,..
+07:49          <-- phiwer has quit irc
+07:49  Luther| therefore gentoo is l33t
+07:50  shadowdaemon| Satoru-san: seriously, I reckon sort out your man problem
+07:50  d3m0n3| Luther: if you search a distribution easy to manage nobody of the two it is appropriated
+07:50  Satoru-san| why would I get shot?
+07:50          --> nickm_ has joined
+07:50          <-- ferdy- has quit irc
+07:50  shadowdaemon| Satoru-san: but I wouldn't really know where to start
+07:50          --> phiwer has joined
+07:50  itdocks| if you want easy get ubuntu heh
+07:50          <-- Two9A has quit irc
+07:50  Satoru-san| shadowdaemon: if I could find out how to zcat a .bz2 file then I wouldnt even need man :P
+07:50  d3m0n3| right itdock
+07:50  d3m0n3| xD
+07:51  itdocks| i have hundreds of gentoo machines in production in an actual business environment, wouldn't have it any other way :)
+07:51  shadowdaemon| Satoru-san: bzip -cd <man-page>
+07:51          --> nanditux has joined
+07:51  Luther| itdock, really? thats A LOT, what kind of business do you work/congragate at
+07:52  itdocks| publishing
+07:52  shentino| Satoru:  Isn't that bzcat?
+07:52  Satoru-san| all I have to do is whereis eclean | bzip -cd `awk '{pring $2}'`
+07:52  dividebyzer0| itdocks: maybe one day I'll be able to get through the install lol
+07:52  Satoru-san| wait no..
+07:53  itdocks| it feels great to get through the install for the first time
+07:53  Luther| itdock, I always wondered if gentoo even fit in such environment...care to give me a brief 2 line summary how how gentoo fits in?
+07:53  shadowdaemon| Satoru-san: maybe you need two gentoo systems? one is in your native language, one is in japanese?
+07:53  Satoru-san| bzip -cd `whereis eclean | awk '{pring $2}'
+07:53  Satoru-san| shadowdaemon: thats what locales are supposed to do
+07:53  Satoru-san| :P
+07:53          <-- DrSpotter has quit irc
+07:54  shadowdaemon| Satoru-san: yes, why is that not working I wonder?
+07:54  Satoru-san| shadowdaemon: cause I missed the ` at the end
+07:54  Satoru-san| shadowdaemon: also that bzip thing doesnt work
+07:54  Satoru-san| lol!
+07:54  Satoru-san| pring?!
+07:54  Satoru-san| pring?!?!?!!
+07:54          --> lemonchicken has joined
+07:54  Satoru-san| -_-
+07:55          --> cristianonet has joined
+07:56  dividebyzer0| itdocks: I hope to get through it I always end up stuck and frustrated at one point or another which has never allowed it to go near my main machine.. :( one day though!
+07:56  Satoru-san| shadowdaemon: try this echo `whereis eclean | awk '{print $4}'`
+07:56  shadowdaemon| Satoru-san: try this: bzip2 -cd /usr/share/man/man1/whois.1.bz2 | awk
+07:56          --> Siavash has joined
+07:57  itdocks| Luther: I use gentoo to maintain my own linux distributions - fully customized for my environment.  I get to use all of gentoo's flexibility to my advantage, and using radmind as a force multiplier, I can compile & configure once, then deploy everywhere.
+07:57          <-- nickm_ has quit irc
+07:57  Satoru-san| :D shadowdaemon: bzip2 -cd `whereis eclean | awk '{print $4}'`
+07:57  Luther| itdock, sounds l33t for sure
+07:57  Satoru-san| it works
+07:58  shadowdaemon| sort of
+07:58          --> hkBst has joined
+07:58  mode/#gentoo [+v hkBst] by ChanServ
+07:58          <-- Fieldy has quit irc
+07:59          <-- Siavash has left
+07:59  Satoru-san| shadowdaemon: its readable atleast
+07:59  Satoru-san| :P
+07:59  itdocks| Works great for me but certainly not for everyone
+07:59          --> nickm_ has joined
+07:59          --> D-ion has joined
+08:01  Satoru-san| shadowdaemon: looks to me like eclean -dist <-- destructive
+08:01  itdocks| Luther: we used to be a freebsd shop, gentoo was an easy transition
+08:01  shadowdaemon| Satoru-san: hmm maybe, eclean --help?
+08:01          --> few has joined
+08:01  Satoru-san| :O
+08:01  Satoru-san| :O! why didnt I think of that@
+08:02  Satoru-san| eclean-dist it looks like
+08:03          --> Siavash has joined
+08:03  Siavash| does anybody want to share his/her fstab ? i want to access ntfs drives here too
+08:04  shadowdaemon| Siavash: sure, if I can just get wgetpaste working
+08:04          --> wilder has joined
+08:04          <-- alexine_dsouza has quit irc
+08:04  shadowdaemon| why has wgetpaste failed?
+08:04  shadowdaemon| is the site down?
+08:04  Satoru-san| shadowdaemon: you are pasting too much
+08:04  Siavash| shadowdaemon, thanks a bunch dude
+08:04          <-- nickm_ has quit irc
+08:04  Satoru-san| you can only paste like 200 lines
+08:05          --> alexine_dsouza has joined
+08:05  shadowdaemon| Satoru-san: it is not that I don't think
+08:05  Satoru-san| wait fstab is like small though
+08:05  shadowdaemon| maybe omploader
+08:05          <-- george has quit irc
+08:05  Satoru-san| shadowdaemon: it is try piping dmesg to wgetpaste
+08:05  Satoru-san| with --verbose
+08:06  Satoru-san| it tells you its too large
+08:06  shadowdaemon| Siavash: http://omploader.org/vM3BrNg
+08:06  shadowdaemon| Satoru-san: nah it is not the size
+08:06  Siavash| thanks a lot for sharing
+08:06  shadowdaemon| np
+08:07          --> nickm_ has joined
+08:07  shadowdaemon| well I can ping dpaste.com
+08:08          <-- b0nafide has quit irc
+08:08  shadowdaemon| but nvm
+08:08          <-- Azerthoth|D has quit irc
+08:09          --> mason-l has joined
+08:10  itdocks| Siavash: http://paste2.org/p/696993 <- fstab
+08:11  Siavash| thanks again :)
+08:13          <-- VNA9216 has quit irc
+08:13  Siavash| what are tmpfs and shm ?
+08:14  itdocks| ramdisk
+08:15          --> Consensus has joined
+08:15  Consensus| Is anyone decent with grub to answer a few questions about the command-line interface?
+08:16          <-- mason-l has quit irc
+08:17          <-- dividebyzer0 has quit irc
+08:17          <-- alexine_dsouza has quit irc
+08:17  shadowdaemon| Consensus: possibly...
+08:17          --> dividebyzer0 has joined
+08:18          --> eradicus has joined
+08:18          <-- Wizzleby has quit irc
+08:18          --> alexine_dsouza has joined
+08:21          --> VNA9216 has joined
+08:21          <-- yurebis has quit irc
+08:23  Luther| Question for you guys.... is there a way to KICK off people from your wifi or control / block limewire/p2p temporarily ?
+08:25  itdocks| lock out their mac address
+08:25          --> Cybertinus has joined
+08:25  Luther| itdock, mac filtering..of course
+08:25  Luther| thanks
+08:25  itdocks| hehe
+08:26          --> kyerussell has joined
+08:27          --> agent0range has joined
+08:27  agent0range| anyone know of an application other than gnugpg top check asc files in windows?
+08:28          <-- setz has quit irc
+08:29          --> na641 has joined
+08:29          <-- Siavash has left
+08:29          --> Wizzleby has joined
+08:29  agent0range| are those just md5 files?
+08:30  shadowdaemon| agent0range: try 'file'
+08:30          <-- rogue_koder has quit irc
+08:30  agent0range| file?
+08:31  shadowdaemon| /usr/bin/file
+08:31  shadowdaemon| dunno about windows .acs files
+08:31  agent0range| bummer
+08:32          <-- ki__ has quit irc
+08:32          --> MetaPhaze has joined
+08:35  Satoru-san| how long does wxGTK take to compile?
+08:38          --> Tina- has joined
+08:39          <-- apelgate has quit irc
+08:39          --> geo27_ has joined
+08:40          --> jvs has joined
+08:40          --> SanityInFlux has joined
+08:41          <-- timahvo1 has quit irc
+08:42  chovy| marienz: http://chovy.dyndns.org/err/emerge.nodoc.err (sorry for the delay) this is with USE='-doc'.
+08:42          <-- agent0range has quit irc
+08:47          --> Kame2 has joined
+08:47  chovy| anyone know how to remove these circular dependencies? http://chovy.dyndns.org/err/emerge.ask.err
+08:47          <-- Resistance has quit irc
+08:49          --> sequemis has joined
+08:49          --> [Author] has joined
+08:49          --> lugo has joined
+08:49          --> tresh has joined
+08:49          <-- Author has quit irc
+08:50          --> mazzachre has joined
+08:50          --> vadmeste has joined
+08:51          <-- cristianonet has quit irc
+08:51          <-- shentino has quit irc
+08:51          <-- Consensus has quit irc
+08:53          --> Thev00d00 has joined
+08:53          <-- pentanol has quit irc
+08:54          --> penguinFunk has joined
+08:54          <-- nanditux has quit irc
+08:55          --> LordHelmchen has joined
+08:56          <-- fosstux has quit irc
+08:57          --> zcram has joined
+08:58          --> timahvo1 has joined
+08:58          <-- sevis has quit irc
+08:58          --> andern has joined
+08:58          <-- na641 has quit irc
+08:59  LordHelmchen| greetings. what is the canonical way to delete files from the src-tarball from within an ebuild before the rest is then installed ?
+08:59          --> aisbaa has joined
+09:00          <-- nickm_ has quit irc
+09:00          --> ciskje has joined
+09:01          --> indietrash has joined
+09:02          <-- Zorry has quit irc
+09:02          --> setz has joined
+09:02          --> Milos|Laptop has joined
+09:02  pickledpiper| chovy have you done an emerge --sync recently?
+09:02          --> nickm_ has joined
+09:03 +dragonheart| LordHelmchen: use the exclude options in tar  to prevent their extraction or delete it after its unpacked
+09:03  chovy| pickledpiper: yup. problem is font-config doesn't support the -doc flag (ignroing it). so i'm trying with -truetype -doc to avoid the pkg pulling it in from being built.
+09:03          --> Zorry has joined
+09:03          <-- Zorry has quit irc
+09:03          --> Zorry has joined
+09:03          <-- JoeHazzers has quit irc
+09:04          --> dabuti_ has joined
+09:04  dabuti_| hi, anyone knows what driver do I need for Microdia PC Camera (SN9C325) please ?
+09:05          --> JoeHazzers has joined
+09:05          --> FatsDT has joined
+09:06  FatsDT| Where is tunctl in portage?
+09:07  LordHelmchen| In case I want to go with deletion, I do simply use rm ${WORKDIR}/${P}/offendingfile ?
+09:07  chovy| dabuti_: CONFIG_USB_GSPCA_SONIXJ
+09:07  dabuti_| ok thanks chovy
+09:08          --> Milos|Laptop_ has joined
+09:08  LordHelmchen| should this go into src_unpack ,src_install or as-needed on case-by-case ?
+09:08  thasp| what is it about alsamixer deciding when it wants the PCM volume control slider to show up?
+09:08  thasp| everytime i reboot i wrestle with it to et it to show up
+09:09  thasp| if i start mpd and open gimmix, i can adjust pcm volume
+09:09  thasp| but i should not have to do this
+09:09          <-- hkBst has quit irc
+09:09          --> hkBst has joined
+09:09  mode/#gentoo [+v hkBst] by ChanServ
+09:10          --> edannenbe has joined
+09:10  shadowdaemon| FatsDT: equery b /usr/bin/tunctl -> sys-apps/usermode-utilities
+09:11  chovy| thasp: i had this problem a long time ago. amixer i think is a command line tool that will let you set the default volume.
+09:11          --> polatov has joined
+09:12  thasp| mpd's lack of recognition for wavpack is sad
+09:12          <-- Milos|Laptop has quit irc
+09:12  thasp| as is aqualung's lack of recognition for APE :(
+09:12  thasp| i need one media player that can play all of this
+09:12  chovy| vlc
+09:12          --> pavan_ has joined
+09:12          <-- mcdebugger has quit irc
+09:13  thasp| vlc never ran on gentoo well for me
+09:13  FatsDT| shadowdaemon: Thank you
+09:13  thasp| or at all
+09:14  chovy| 43 of 65 updates for xp now :)
+09:14  chovy| should be another 45 hours.
+09:14          <-- RalphSpencer has quit irc
+09:15          <-- Rcomian has quit irc
+09:15          --> mcdebugger has joined
+09:16          <-- polatov has quit irc
+09:16          --> andreax1 has joined
+09:17          --> bigmonk has joined
+09:18          --> celsion has joined
+09:18          --> `moebius` has joined
+09:19          <-- andreax has quit irc
+09:20          --> mason-l has joined
+09:21          --> ddvlad has joined
+09:21          --> Resistance4 has joined
+09:21          -#- Resistance4 is known as Resistance
+09:21          <-- werdan7 has quit irc
+09:21          --> ghosTM55 has joined
+09:23  chovy| dang. i think i could have just rebuilt the one package with -truetype -- i did world.
+09:23          <-- nocturnus has quit irc
+09:23          <-- mcdebugger has quit irc
+09:24          --> coffee88 has joined
+09:24          <-- coffee88 has quit irc
+09:24          --> coffee88 has joined
+09:24  biatche| can anybody here confirm that the tenshi package works?
+09:25          --> octavsly has joined
+09:25          --> werdan7 has joined
+09:25  mode/#gentoo [+v werdan7] by ChanServ
+09:26  gormux| biatche: ok for me
+09:26          --> nocturnus has joined
+09:26  LordHelmchen| how do I find out what implied default and inherited behaviour I'll loose that I need to recreate by adding, lets say
+09:26  LordHelmchen| src_unpack { rm ${WORKDIR}/${P}/${COLLIDINGFILES} } ?
+09:26  gormux|      Tue Mar  2 09:26:04 2010 >>> app-admin/tenshi-0.10-r3
+09:26  gormux|        merge time: 6 seconds.
+09:26  biatche| tenshi keeps crashing for me
+09:26          --> mikkoc has joined
+09:26  LordHelmchen| to my experimental ebuild that was blatantly copied from a similar package ?
+09:27  gormux| biatche: post your logs
+09:27          --> abchirk_ has joined
+09:27          <-- nickm_ has quit irc
+09:27  biatche| Mar 2 16:24:48 lyckas /etc/init.d/tenshi[20004]: status: crashed
+09:27          <-- indietrash has quit irc
+09:28  biatche| using defaults
+09:28          <-- FatsDT has quit irc
+09:29          --> kan_ibal has joined
+09:29          --> nickm_ has joined
+09:29          <-- abchirk has quit irc
+09:30  gormux| biatche: ah, so this is not emerge that fails
+09:30  gormux| you should be more precise :)
+09:31  gormux| then, what happens when you launch it manually via the init script ?
+09:31          --> lacqui has joined
+09:31  gormux| for me, I got a warning but it runs
+09:31  gormux| (just installed it, all defaults)
+09:32  biatche| yes
+09:34          --> jbartosik has joined
+09:34          <-- nickm_ has quit irc
+09:36          --> nickm_ has joined
+09:37          --> RalphSpencer has joined
+09:37          <-- RalphSpencer has quit irc
+09:37          --> RalphSpencer has joined
+09:37          <-- tresh has quit irc
+09:38          -#- RalphSpencer is known as RalphSpencer|AWA
+09:38          <-- ghosTM55 has quit irc
+09:39          <-- sequemis has quit irc
+09:40          --> george has joined
+09:40  mode/#gentoo [+v george] by ChanServ
+09:42          <-- itdocks has quit irc
+09:42          <-- dabuti_ has quit irc
+09:43          --> ghosTM55 has joined
+09:43          <-- LordHelmchen has left
+09:44          --> apelgate has joined
+09:46          <-- ztfw has quit irc
+09:46          --> SuperFlo has joined
+09:47          --> bearsh|work has joined
+09:49          <-- pgega has quit irc
+09:49          <-- jbartosik has quit irc
+09:49          <-- RalphSpencer|AWA has quit irc
+09:51          <-- stephanbueckner1 has quit irc
+09:51          --> pgega has joined
+09:52          <-- aubrey has quit irc
+09:54          --> mcdebugger has joined
+09:58          --> lukoc has joined
+09:58          <-- gajop has quit irc
+09:58          <-- lukoc has left
+09:59          --> RalphSpencer has joined
+09:59          <-- RalphSpencer has quit irc
+09:59          --> granquet has joined
+09:59          --> RalphSpencer has joined
+10:03          <-- jvs has quit irc
+10:03          <-- Milos|Laptop_ has quit irc
+10:04          <-- mason-l has quit irc
+10:04          --> minidev has joined
+10:04          --> jvs has joined
+10:04          <-- Cephalon has quit irc
+10:06          -#- MasterPrenium`aw is known as MasterPrenium
+10:07          --> Waylander has joined
+10:07          --> Nutah has joined
+10:07          --> eLuke has joined
+10:07          <-- FelipeMcMont has left
+10:10  biatche| does anybody have tenshi working? lyckas log # /etc/init.d/tenshi status \ * status: crashed
+10:12          <-- nocturnus has quit irc
+10:12          --> gajop has joined
+10:12          --> Reign1 has joined
+10:12          --> nocturnus has joined
+10:13          --> dudicus has joined
+10:13          --> Mavrik- has joined
+10:13  nocturnus| how can i offset my pages for printing with CUPS's lp command?
+10:13  Reign1| what must i do after kernel upgrade with nvidia module to make it work, load or what? i forgot, as kdm does not start with new kernel
+10:13          --> Seadog has joined
+10:13  biatche| start-stop-daemon --start --quiet --pidfile /var/lib/tenshi/tenshi.pid --exec /usr/sbin/tenshi -- -c /etc/tenshi/tenshi.conf -P /var/lib/tenshi/tenshi.pid ...... shouldnt lib be run?
+10:14  andip| Reign1: re-emerge nvidia-drivers
+10:14  Reign1| under new kernel?
+10:14          <-- Seadog_ has quit irc
+10:14  Reign1| ok
+10:14  andip| Reign1: then reboot, or unload/reload nvidia-module
+10:14  Reign1| god it
+10:14  Reign1| got it :)
+10:15          --> stephanbueckner has joined
+10:18          --> tomboy65 has joined
+10:18          --> mason-l has joined
+10:18          <-- tomboy64 has quit irc
+10:19          --> kyerussel has joined
+10:20          --> matteo1990 has joined
+10:21          <-- kyerussell has quit irc
+10:21  matteo1990| How to send a file to another PC in my wireless network? I can ping it
+10:21          <-- everslick has quit irc
+10:21          <-- Reign1 has quit irc
+10:22  Stonefish| matteo1990: Install some sort of program for the exchange of files.  Perhaps a SMB or FTP server.
+10:22          --> everslick has joined
+10:22          <-- ghosTM55 has quit irc
+10:22          <-- kreton has quit irc
+10:24          <-- tlze has quit irc
+10:24          --> nyk2005 has joined
+10:24          <-- pavan_ has quit irc
+10:24  pickledpiper| do you have ssh access to it matteo?
+10:25          --> ghosTM55 has joined
+10:26  nyk2005| Does anyone know why "media-gfx/imgseek" suddently dissapeared from portage? It's a great program! I know the GUI is not so usable and crashes, but the python module is great!
+10:27          --> Milos|Laptop_ has joined
+10:28          --> tlze has joined
+10:29          --> Milos|Laptop__ has joined
+10:29          <-- Milos|Laptop__ has quit irc
+10:29          --> ibqn has joined
+10:29          --> pavan_ has joined
+10:30  s_edrik| grub tells me it can't find /dev/root when I try to install it to my /dev/sda, has anyone encountered this problem?
+10:31          --> noxid has joined
+10:31          --> TheOnly has joined
+10:31  noxid| hi, i got a error while compiling webkit-gtk: http://pastie.org/849479.js
+10:31          --> drellok has joined
+10:32          <-- Milos|Laptop_ has quit irc
+10:32          --> eix_dejan has joined
+10:34  s_edrik| noxid: is that your whole error message, did not make much sense to me :/'
+10:35  nyk2005| s_edrik: no... why is /dev/root important in that context?
+10:35  noxid| s_edrik: its not the full log.
+10:35          --> pentanol has joined
+10:36  noxid| s_edrik: what do you need to get to know more? :/
+10:36          --> albech has joined
+10:36          <-- Firstyear has quit irc
+10:36  s_edrik| nyk2005: I have no idea, it's what grub tells me when I try to reinstall it on my disk, did a reinstall of windows last night and need to reinstall grub now
+10:36          --> Cephalon has joined
+10:36  s_edrik| noxid: I could not see any error message in that log
+10:36  pickledpiper| have you got a line that says something like 'root (hd0,0)' in grub.conf s_edrik?
+10:36          --> GenKreton has joined
+10:36  noxid| s_edrik: at the end.
+10:37  nyk2005| s_edrik: it's a fatal error? you can't ignore it?
+10:37          --> Firstyear has joined
+10:38  s_edrik| pickledpiper: yeah the grub.conf should work fine, since the only thing I have changed is reinstall of windows on the windows partition on the computer. This is not a fresh install =)
+10:38          --> Baldurgon has joined
+10:38  s_edrik| nyk2005: grub refuses to continue to do anything atleast
+10:38          <-- defragger has quit irc
+10:39          --> defragger has joined
+10:39          <-- defragger has quit irc
+10:39          --> defragger has joined
+10:40  s_edrik| noxid: a quick search on the forums gave me this link :) http://forums.gentoo.org/viewtopic-t-804235-highlight-webkitgtk.html
+10:40          <-- minidev has quit irc
+10:41          <-- albech has quit irc
+10:41          --> doobry has joined
+10:41          <-- kyerussel has quit irc
+10:41  nyk2005| s_edrik: don't know... googing seems to imply it could be an issue of what "root" in in /boot/grub/grub.conf is
+10:42  s_edrik| ok, will look at it as soon as the computer boots the livedvd
+10:42  noxid| thx s_edrik
+10:44          <-- Mavrik- has quit irc
+10:44          <-- wilder has quit irc
+10:44  s_edrik| np, did it help? :)
+10:45  nocturnus| http://www.cups.org/newsgroups.php?s20330+gcups.general+v20349+T0 <--- help me with this please
+10:45          <-- eix_dejan has quit irc
+10:46          --> eix_dejan has joined
+10:46          <-- avenj has quit irc
+10:47          <-- shadowdaemon has quit irc
+10:49          --> eix_dejan1 has joined
+10:50          <-- mcdebugger has quit irc
+10:50          --> _krash has joined
+10:50          <-- rej has quit irc
+10:50          <-- eix_dejan has quit irc
+10:51          <-- noxid has left
+10:51          --> rej has joined
+10:51  mode/#gentoo [+o rej] by ChanServ
+10:53          <-- touparx has quit irc
+10:54          <-- ahmedammar has quit irc
+10:55  s_edrik| there lets see, the exact message I get is /dev/root: Not found or not a block device
+10:55          --> Fersure has joined
+10:55  s_edrik| and my grub conf is pointing root to hd(0,1) which is my gentoo partition
+10:56  SuspectZero| any suggestions on a small easy to use wav player?
+10:56          <-- mason-l has quit irc
+10:57          --> rcomian has joined
+10:57          --> illu has joined
+10:58          <-- mjrosenb has quit irc
+10:59  SuspectZero| nvm aplay did the trick
+10:59          --> mason-l has joined
+11:00          --> mcdebugger has joined
+11:00  mazzachre| s_edrik, What have you set root= for the kernel?
+11:00          --> mjrosenb has joined
+11:01          <-- mason-l has quit irc
+11:01  s_edrik| mazzachre: hd(0,1)
+11:02  s_edrik| but I found the error now, I needed to update the mtab for grub to play nicley
+11:02          --> albech has joined
+11:02  s_edrik| got it installed now :)
+11:02  mazzachre| s_edrik, No that is for grub, what do you tell the kernel
+11:02  s_edrik| mazzachre: /dev/sda2 I believe
+11:02  s_edrik| but I got it working now =)
+11:03  mazzachre| ok
+11:03          <-- jm-test has quit irc
+11:03          --> jm-test has joined
+11:03  s_edrik| thanks guys
+11:05          <-- Sipingal has quit irc
+11:05          <-- mcdebugger has quit irc
+11:05          --> thebomb has joined
+11:07          <-- bicyclerepairman has quit irc
+11:07  RalphSpencer| any idea how to make a script login with scp and do something?
+11:08          --> SiNiESTrO has joined
+11:10          <-- ciskje has quit irc
+11:10  s_edrik| login with scp?
+11:10  penguinFunk| RalphSpencer: use expect
+11:10  s_edrik| I think ssh got an -e option
+11:11  RalphSpencer| total noob; please give the command :)
+11:11  penguinFunk| if you wan't auto login, but perhaps public key authentication would be better
+11:11  penguinFunk| (no password's displayed in clear)
+11:12  penguinFunk| but if someone can access the machine to read the password in the script, they can also steal your pub keys...so...
+11:12          --> Siffy has joined
+11:12  RalphSpencer| nah will be readable by root only
+11:12  RalphSpencer| chmod
+11:13          -#- MasterPrenium is known as MasterPrenium`aw
+11:13  penguinFunk| http://wiki.tcl.tk/11583
+11:13  penguinFunk| see some expect scripting examples
+11:13  penguinFunk| if you scroll down near the bottom there is an scp example
+11:13          --> RalphSpencerII has joined
+11:13          <-- tlze has quit irc
+11:13          <-- RalphSpencerII has quit irc
+11:14  RalphSpencer| ok thanks
+11:15          <-- SanityInFlux has quit irc
+11:15          <-- xake has quit irc
+11:16          <-- pavan_ has quit irc
+11:16          --> SuspectZero_ has joined
+11:16          --> mcdebugger has joined
+11:16          --> xake has joined
+11:17          <-- dudicus has quit irc
+11:18          <-- xake has quit irc
+11:20          <-- SuspectZero has quit irc
+11:21          --> snubby has joined
+11:22          <-- Triffid_Hunter has quit irc
+11:22          <-- thebomb has quit irc
+11:24 +marienz| chovy: looks like you need to run "perl-cleaner --all"
+11:24          --> Triffid_Hunter has joined
+11:24          <-- doobry has quit irc
+11:24 +marienz| chovy: (at least that's what your paste directed at me looked like, I haven't looked at what you did since then)
+11:25          <-- alexbobp has quit irc
+11:25          --> doobry has joined
+11:26          <-- doobry has quit irc
+11:26          --> touparx has joined
+11:26          --> hareldvd has joined
+11:27          --> alexbobp has joined
+11:27          -#- MasterPrenium`aw is known as MasterPrenium
+11:28          <-- mansour has quit irc
+11:28          <-- mcdebugger has quit irc
+11:28          <-- Autie has quit irc
+11:29          --> Screaming has joined
+11:29          <-- Screaming has left
+11:29          --> coffee88_ has joined
+11:29          <-- coffee88_ has quit irc
+11:29          --> coffee88_ has joined
+11:29          --> mschiff has joined
+11:30          <-- coffee88 has quit irc
+11:32          --> Belliash has joined
+11:33          <-- octavsly has quit irc
+11:34          --> dgl has joined
+11:34          <-- drellok has quit irc
+11:35          --> [Enrico] has joined
+11:35          --> ahmedammar has joined
+11:36  mode/#gentoo [+v ahmedammar] by ChanServ
+11:37          --> octavsly has joined
+11:39          --> igel has joined
+11:39          <-- albech has quit irc
+11:40          <-- alien64 has left
+11:40          --> dMaggot has joined
+11:40          --> Dwarik has joined
+11:42          --> Mavrik- has joined
+11:42          --> a-v has joined
+11:42          --> Wood_Warrior has joined
+11:44          --> sunmao has joined
+11:44  Wood_Warrior| Hi, is there problem to upgrade kde packages or whole kde, while kde is running ?
+11:46 @bonsaikitten| Wood_Warrior: there's a small chance that either apps refuse to start or crash, but in general it's not a big issue
+11:47  nocturnus| http://www.cups.org/newsgroups.php?s20330+gcups.general+v20349+T0 <--- help me with this please
+11:47          <-- ColdFyre has quit irc
+11:48          <-- ericx has quit irc
+11:49          --> RickRocK has joined
+11:49  RickRocK| how to know how centos if i have ffmpeg installed ?
+11:49  nocturnus| this is #gentoo go ask #centos
+11:49  RickRocK| gentoo suck
+11:50  RickRocK| that why
+11:50          --> mkyser has joined
+11:50  nocturnus| then why are you here, moron?
+11:50  RickRocK| to see loser gentoo like you here
+11:50  nocturnus| well you've seen me, now get lost
+11:52  mode/#gentoo [+b RickRocK!*@*] by bonsaikitten
+11:52          <-- Naamah kicked RickRocK (Banned)
+11:52 @bonsaikitten| nocturnus: don't feed the trolls
+11:52  nocturnus| Thank you.
+11:52          --> ggt has joined
+11:52          --> mansour has joined
+11:52  nocturnus| Are you kidding? If it wasn't for me he wouldn't have been revealed.
+11:53 @bonsaikitten| no, he was there yesterday already
+11:53  nocturnus| why wasn't he banned yesterday?
+11:53 @bonsaikitten| because he parted early enough
+11:53  nocturnus| you can't ban people if they aren't here?
+11:53  Wood_Warrior| bonsaikitten: but after restart the system it should not be even this problems " refuse to start or crash" ?
+11:53  Wood_Warrior| <nocturnus> http:// ?
+11:53          <-- hkBst has quit irc
+11:53 @bonsaikitten| nocturnus: why bother :) I usually hope they just stay away
+11:54  nocturnus| Wood_Warrior: ?
+11:54          --> hkBst has joined
+11:54  mode/#gentoo [+v hkBst] by ChanServ
+11:54 @bonsaikitten| Wood_Warrior: no, after restart it shouldn't have problems
+11:54  nocturnus| bonsaikitten: you bother because then we don't have to deal with these pieces of trash
+11:54  Wood_Warrior| nocturnus: sorry, my mistake with copy paste , never mind :)
+11:54          --> albech has joined
+11:54 @bonsaikitten| nocturnus: chill, human ... chill :)
+11:54  Wood_Warrior| bonsaikitten thanks !
+11:55  Keruspe| Why was networkmanager-0.8 removed from tree? oO
+11:56 @bonsaikitten| removed?
+11:56          <-- kevinqcs has quit irc
+11:56  Keruspe| I just synced and rsync deleted it, so it wants to downgrade
+11:57          --> ciskje has joined
+11:57 @bonsaikitten| Keruspe: err ... no :)
+11:57 @bonsaikitten| it hasn't been touched in the last week
+11:58          --> indietrash has joined
+11:59  Keruspe| seems like there is a weird bug for me so
+11:59          --> P1ro has joined
+11:59          <-- P1ro has quit irc
+11:59          --> P1ro has joined
+11:59 +ssuominen| pebcak
+12:00  izua_| hello
+12:01  izua_| i have compiled knockd and iptables. they both work wonderfully, except one minor problem
+12:01  izua_| although i did 'rc-update add knock default', if the system reboots, knockd won't start and i have to start it manually
+12:02          --> kevinqcs has joined
+12:02  penguinFunk| maybe knockd needs to be started AFTER iptables and possibly other services
+12:03          --> yq has joined
+12:03  jaime_| izua_: the interface must be up before knockd. iptables don't matter
+12:03          --> mason-l has joined
+12:03  yq| What's a fetch restriction?
+12:03  yq| Fetch Restriction: 1 package (1 unsatisfied)
+12:03  izua_| jaime_: hmm, i have a need net in depend()
+12:03  penguinFunk| yq: due to licensing issues you are not allowed to download the package via portage
+12:03  yq| Oh.
+12:03  izua_| although the main interface is eth1 and not eth0
+12:04  penguinFunk| yq: you must download the file yourself and place into /usr/portage/distfiles
+12:04  gormux| yq: it generally means that you have to download the files yourself
+12:04  ggt| .
+12:04          <-- bigmonk has quit irc
+12:04          <-- m77771111 has quit irc
+12:04  yq| Right
+12:04  jaime_| izua_: yes, i know. might still be a timing question. saying, because when my ppp reconnects, i have to manually restart knockd too
+12:04  izua_| where can i view the runlevel init messages (the ones with [ ok ])? the server doesn't have a monitor
+12:05          <-- Wood_Warrior has quit irc
+12:05  jaime_| izua_: do you use dhcp with that interface??
+12:05  izua_| yes
+12:05          -#- izua_ is known as izua
+12:05          <-- P1ro has quit irc
+12:05  izua| i could go static, but i'd prefer not to
+12:05          --> P1ro has joined
+12:06  izua| dhcp is under 3 sec, since the server (soho router) is two hops away
+12:06  jaime_| izua_: there's your problem i guess. knockd is already running when the ip changes
+12:06  izua| hmm
+12:06  izua| so, need net, dhcpd?
+12:06          --> da_risk__ has joined
+12:06          --> Trollfjoll has joined
+12:06  jaime_| try start knockd from the conf.d/net postup()
+12:07  izua| uhm.. sory?
+12:07  jaime_| jaime_: nevermind, it doesn't make sense anyway
+12:07          --> zeroedout has joined
+12:07  izua| lol
+12:07  penguinFunk| get knockd init script to sleep 5
+12:07          <-- aisbaa has quit irc
+12:08  penguinFunk| should delay it long enough for network interfaces to start
+12:08  izua| oh come on
+12:08  izua| i'm sure there's a better way the rc script can check if dhcpd is ok
+12:08  gormux| jaime_: talking to yourself ?
+12:08  jaime_| izua: postup() is still worth a try, gimme one sec
+12:08  izua| lemme check how to do that
+12:10  izua| ok so i create a postup() function in /etc/conf.d/net and there i run /etc/init.d/knock
+12:10  izua| and i assume i'll also do rc-update del knock default?
+12:10          -#- SuspectZero_ is known as SuspectZero
+12:10  jaime_| izua: thats the idea
+12:10          <-- Trollfjoll has quit irc
+12:11          --> Trollfjoll has joined
+12:11  izua| ok, brb
+12:11          <-- izua has quit irc
+12:12          --> rmrf has joined
+12:13  jaime_| gormux: no. do you?
+12:13  gormux| 11:58 < jaime_> jaime_: nevermind, it doesn't make sense anyway
+12:13  jaime_| %)
+12:14          --> Joker has joined
+12:14          <-- Joker has quit irc
+12:14          --> Joker has joined
+12:14  mode/#gentoo [+v Joker] by ChanServ
+12:14          --> izua has joined
+12:15  izua| woohoo
+12:15          * izua pokes jaime_ 
+12:15          <-- merlijn has quit irc
+12:16          --> Dad` has joined
+12:17          --> bicyclerepairman has joined
+12:17  jaime_| izua: your knockd will still die as soon as you get a new ip. ppp makes that easy with it's own ip.up and .sown scripts, but i wouldn't know how to do that with a dhcp'ed eth
+12:17          <-- ggt has quit irc
+12:18          <-- linXea has quit irc
+12:18  izua| i won't get a new ip
+12:18  izua| since it's leased for infinity
+12:19  izua| but at some point i'm going to make this box replace the router, and then the ip will be a given over ppp :)
+12:19          <-- nocturnus has quit irc
+12:20          <-- lejonet has quit irc
+12:20  jaime_| then you should be fine. remember 'echo "/etc/init.d/knock restart" >>/etc/ppp/ip-up.d/90-local.sh
+12:20          --> |Vargas| has joined
+12:20          <-- |Vargas| has quit irc
+12:20          --> |Vargas| has joined
+12:22          <-- WormDrink has quit irc
+12:22          <-- andreax1 has quit irc
+12:24          --> WormDrink has joined
+12:24          --> merlijn has joined
+12:24          --> gutts has joined
+12:24  gutts| hi
+12:25  gutts| Is somebody can tell me if the "Lots of debug output from radeon driver" can make my gnome-session (or whatever) very long to start ?
+12:25          <-- abchirk_ has quit irc
+12:26          --> nocturnus has joined
+12:27          --> Autie has joined
+12:28          <-- sunmao has quit irc
+12:29          --> overfuse has joined
+12:29          <-- Mavrik- has quit irc
+12:30          <-- kiorky has quit irc
+12:30          --> CMoH has joined
+12:30          <-- lemonchicken has quit irc
+12:30          --> ni1s has joined
+12:31          <-- nocturnus has quit irc
+12:31          <-- jvs has quit irc
+12:32          --> noisebleed has joined
+12:32          <-- noisebleed has quit irc
+12:32          --> noisebleed has joined
+12:32          --> abchirk has joined
+12:33          <-- mason-l has quit irc
+12:35          <-- hareldvd has quit irc
+12:36          <-- abchirk has quit irc
+12:36          --> nocturnus has joined
+12:36  nocturnus| how do you get ping to exit after 1 second if no response occurs? -w or -W don't do this and ping just stalls there; its screwing up my script
+12:37          --> rsajdok_ has joined
+12:37  Xelnor| nocturnus: ping -c 1 ?
+12:37  nocturnus| Xelnor: nope
+12:38          --> _mpu has joined
+12:39          --> chgtg has joined
+12:40          <-- dMaggot has quit irc
+12:41          <-- Resistance has quit irc
+12:42          --> avenj has joined
+12:42  mode/#gentoo [+o avenj] by ChanServ
+12:42          <-- vitovt has quit irc
+12:42          <-- hkBst has quit irc
+12:42          --> vitovt has joined
+12:43          --> hkBst has joined
+12:43  mode/#gentoo [+v hkBst] by ChanServ
+12:43          --> Zaba has joined
+12:43          -#- vitovt is known as Guest75261
+12:45          -#- Guest75261 is known as vitovt_
+12:45          <-- pickledpiper has left
+12:46          <-- jinzhu has quit irc
+12:48          --> jmrk_ has joined
+12:49          --> student has joined
+12:50  student| hi. from anyone's experience.. is the linux scsi subsystem inherently slow?
+12:50  student| im developing a pcie-scsi driver for my board...
+12:50  student| but im only getting like... 22MBPS benchmark on 16K sequential access 100% reads
+12:50          <-- Geek_Slack has quit irc
+12:51  Zaba| student, you probably would have more luck in ##linux or relevant linux's mailing lists.
+12:51  gutts| Zaba, an idea for my problem ?
+12:51  student| thanks. good idea
+12:51  Zaba| gutts, what is your problem?
+12:52          <-- rescbr has quit irc
+12:52          <-- nocturnus has quit irc
+12:53          --> nocturnus has joined
+12:53  gutts| Zaba, could you tell me if the "Lots of debug output from radeon driver" (in the kernel) can make my gnome-session (or whatever) very long to start ?
+12:54  _mpu| gutts: I enabled this one time, the computer did not even boot ....
+12:55  gutts| erf so It's probably that
+12:55          --> blaise has joined
+12:56  _mpu| Lots of is really lots of
+12:56          --> Dadou` has joined
+12:56  gutts| in fact when I tape startx
+12:56  gutts| type*
+12:57  gutts| I've got a lot of things written
+12:57  gutts| so I think that's this one's fault
+12:57  gutts| (apologies for my bad english)
+12:57          --> hicham has joined
+12:57  _mpu| X is by nature a bit verbose (even more when poorly configured)
+12:57  gutts| yep
+12:57          <-- a-v has quit irc
+12:57          --> abchirk has joined
+12:58  blaise| there's so many ways to configure x now though, so that's neither here nore there..
+12:58          --> Dad`` has joined
+12:58          <-- Dad` has quit irc
+12:59  gutts| but there I've got some things like that in plus :
+12:59  gutts| can tell me if the "Lots of debug output from radeon driver" can make my gnome-session (or whatever) very long to start ?
+12:59  gutts| erf
+12:59  gutts| Restore TV Restarts
+12:59  gutts| Restore Timing Tables
+12:59  gutts| Restore TV standard
+12:59  gutts| Leaving Restore TV
+12:59          <-- Naamah kicked gutts (Flood. Paste at http://dpaste.com)
+12:59          --> gutts has joined
+12:59  gutts| apologies for the paste
+12:59  blaise| :P
+13:00  _mpu| by the way, there will always be Xorg.conf ? it seems that hal tends to shrink our Xorg.conf
+13:01  gutts| I don't use xorg.conf
+13:01  blaise| _mpu: most likely, I would say yes.. although it seems like they're trying to phase it out
+13:01          <-- nocturnus has quit irc
+13:01          <-- Dadou` has quit irc
+13:01  _mpu| yep, it seems however extensions and fots paths must be configured in a file specific to X
+13:01          <-- abchirk has quit irc
+13:01  _mpu| *fonts
+13:02          --> tifflor has joined
+13:02          --> kiorky has joined
+13:02  blaise| I'm not a fan of the HAL system
+13:03  blaise| it's frighteningly similar to the dreaded 'registry'
+13:03  gutts| thanks for the answers by the way
+13:03  gutts| compilation in progress...
+13:03          <-- zeroedout has quit irc
+13:03          <-- tcoppi has quit irc
+13:04  _mpu| blaise: I found it quite useful when I had to plug a keyboard with a different layout that the one integrated in my laptop
+13:04          --> tcoppi has joined
+13:06  blaise| _mpu: I never had any problems using BT/USB/WirelessUSB keyboards with different layouts.. they all identified themselves properly
+13:06  _mpu| and i find the idea a big pipe dispatching all events to everybody sexy :)
+13:06  blaise| they were all like "Hey, I'm a cryllic bluetooth keyboard, and you should treat me as such.."
+13:06          <-- student has quit irc
+13:08          --> dabuti_ has joined
+13:09          <-- bbrooks has quit irc
+13:09          --> nocturnus has joined
+13:09  _mpu| and was it ok to plug the keyboard while x was started ,
+13:09  _mpu| ?
+13:09  blaise| yeah..
+13:09  dabuti_| hi, I've got a problem when trying to install xvidcap package
+13:09  dabuti_| [blocks B     ] <x11-libs/libXext-1.0.99 ("<x11-libs/libXext-1.0.99" is blocking x11-proto/xextproto-7.1.1)
+13:09  dabuti_| Is there any way to fix it ?
+13:09  Naib| install x11-libs/libXext > 1.0.99
+13:10  dabuti_| with ~amd64 keyword ?
+13:11          <-- rommel has quit irc
+13:11          --> a-v has joined
+13:11          --> jbartosik has joined
+13:12  dabuti_| oh I can merge it now, thanks Naib :D
+13:12          --> nidev has joined
+13:12          <-- alexine_dsouza has quit irc
+13:12          --> abchirk has joined
+13:13          --> Wireman has joined
+13:13  _mpu| blaise: my keyboard did not tell to x that it was an apple keyboard ...
+13:14  blaise| lol
+13:16          <-- n17ikh has quit irc
+13:17          --> Seadog_ has joined
+13:17          <-- a-v has quit irc
+13:18          --> kyerussell has joined
+13:18          <-- Ignatius has quit irc
+13:18          --> the_lord has joined
+13:18  _mpu| I had to build a dirty .xmodmap to get useless characters like ~ } { [ ]   -_-
+13:19  blaise| hahaha
+13:19          <-- nyk2005 has quit irc
+13:19          <-- Seadog has quit irc
+13:20  blaise| I just had all available keyboard maps/layouts available, and had a drop down menu at the login for kdm/gdm so I could select the language/keyboard at login
+13:20  _mpu| however I have § just under the index
+13:21          --> hangfire has joined
+13:21          --> doobry has joined
+13:21  octo_| i cant believe it has taken almost 24 hours to compile and instal kde4 lol
+13:21  hangfire| octo_: slow computer?
+13:22          <-- dgl has quit irc
+13:22  octo_| vmware gven 1 cpu
+13:22          --> n17ikh has joined
+13:22  hangfire| octo_: that's a 'yes'
+13:22  octo_| how long should it normally take , theres 560 packages
+13:23  zcram| it's not your computer that is wrong, it is kde4
+13:23  zcram| and now that gentoo has ceased kde3, I think I'm terminating my involvement
+13:23  octo_| kde4 is a really nice desktop i thik
+13:24  octo_| ive been using it in suse for a long time
+13:24  hangfire| zcram: well, there's always kde-sunset
+13:24  octo_| but i never had to watch it compile lol
+13:24          <-- smorg has quit irc
+13:24          <-- the_lord has quit irc
+13:25          --> rescbr has joined
+13:25  octo_| xfce lol
+13:25          --> the_lord has joined
+13:26          <-- ni1s has quit irc
+13:27          <-- dabuti_ has quit irc
+13:27          <-- jbartosik has quit irc
+13:28          --> a-v has joined
+13:28          <-- joeytwiddle has quit irc
+13:29  _mpu| the number of useless features is now incredible with composite rendering ...
+13:29          <-- willikins has quit irc
+13:30          --> jvs has joined
+13:30 +ssuominen| it's a good thing you can get away with just ~50 pkgs from kde-base/ and disabling all of that unnecessary fancy cruft with simple click from preferences :)
+13:30          <-- indietrash has quit irc
+13:30          <-- octo_ has quit irc
+13:31  _mpu| it is now possible to be sick just by moving windows around
+13:32          <-- HarryS has quit irc
+13:32          --> mcdebugger has joined
+13:32          --> HarryS has joined
+13:32  _mpu| only 50 packages are sufficient to install kde ??
+13:32 +ssuominen| a feature that can be disabled with single click
+13:32          --> chaoxifer has joined
+13:32  a-v| Window compositing allows reducing CPU load.
+13:32 +ssuominen| yep
+13:32          --> NoNaMeNo has joined
+13:33  _mpu| a-v: I think that cpu load is not really a problem
+13:34  _mpu| cpu are bigger and bigger and applications such as mplayer just has to use direct rendering
+13:34  _mpu| have
+13:35  a-v| starting from Intel video driver version 2.9, mplayer and Quake III Arena work faster with compositing than without it for me.
+13:35  _mpu| weird
+13:36          --> ratatata has joined
+13:36          <-- VNA9216 has quit irc
+13:38          --> VNA9216 has joined
+13:39          <-- nemysis has quit irc
+13:39          --> rogue_koder has joined
+13:39          --> joeytwiddle has joined
+13:39          <-- apelgate has quit irc
+13:40          <-- koollman has quit irc
+13:43          --> dodecanese has joined
+13:44  dodecanese| heh how can i unload a module with modprobe?
+13:44  _mpu| dodecanese: rmmod
+13:44  dodecanese| ty
+13:45          --> apelgate has joined
+13:45          --> chaoxifer_ has joined
+13:46          --> IAmWill has joined
+13:46          <-- chaoxifer has quit irc
+13:47          --> krynnotaur has joined
+13:47          -#- krynnotaur is known as Guest33347
+13:47          <-- Guest33347 has quit irc
+13:49          <-- tkmorris has quit irc
+13:51          --> nemysis has joined
+13:51          --> _spm_Draget has joined
+13:51          <-- apelgate has quit irc
+13:52          <-- HorizonXP has quit irc
+13:52          --> koollman has joined
+13:52          <-- IAmWill has quit irc
+13:53          --> apelgate has joined
+13:54          <-- zxiiro_ has quit irc
+13:55          --> tlze has joined
+13:57          <-- PreZLaptop has quit irc
+13:57          --> lorenzo_ has joined
+13:59          --> stid has joined
+14:00          --> kwowt has joined
+14:03          <-- matteo1990 has quit irc
+14:04          <-- nemysis has quit irc
+14:04          <-- Triffid_Hunter has quit irc
+14:04          <-- koollman has quit irc
+14:05          --> nemysis has joined
+14:06          --> Triffid_Hunter has joined
+14:06          --> anemos has joined
+14:06          <-- anemos has quit irc
+14:07          --> koollman has joined
+14:07          --> lorenzo__ has joined
+14:09          <-- lorenzo_ has quit irc
+14:10          --> Mavrik- has joined
+14:11          <-- Gentle has quit irc
+14:13          --> FinboySlick has joined
+14:13          <-- dodecanese has quit irc
+14:15          <-- albech has quit irc
+14:17          --> Gentle has joined
+14:18          <-- Mavrik- has quit irc
+14:19          <-- GenKreton has quit irc
+14:22          --> matteo1990_ has joined
+14:23          --> vortexx has joined
+14:23          --> albech has joined
+14:23          <-- CMoH has quit irc
+14:24          --> momonster has joined
+14:27          --> Ronis_BR has joined
+14:29  [biabia]| in code listing 3.7 of the installation instructions they say you can change user id to the newly created user. does that mean they suggest doing so at that point and not installing as root?
+14:29  [biabia]| or does it matter
+14:32          --> smooth_penguin has joined
+14:32          --> GenKreton has joined
+14:32  andip| is there a way to make amarok play flac and/or wav-files properly?
+14:32  geo27_| people : hi !
+14:33  lodtank| andip: replace it with mplayer
+14:34  stid| biabia: i think 3.7 tells you that you can view documents with this user instead of root
+14:35  stid| biabia: but i don't think you can continue the installation steps without root permission
+14:36          <-- ra1nb0w has quit irc
+14:36          <-- G1ider has quit irc
+14:36  stid| biabia: and the normal user is only used for the access of the installation environment
+14:36          --> thrasibule has joined
+14:36          --> ra1nb0w has joined
+14:37          --> R0b0t1 has joined
+14:37          --> Glider has joined
+14:38  [biabia]| stid oh thanks. i misread that
+14:38  stid| biabia: u'r welcome
+14:39          <-- momonster has quit irc
+14:39          <-- eradicus has quit irc
+14:39          --> Belxjander has joined
+14:39          <-- Openfree` has quit irc
+14:40          --> Openfree` has joined
+14:41          --> PeGa has joined
+14:41          <-- me262 has quit irc
+14:41          --> krynnotaur has joined
+14:42          <-- ghosTM55 has quit irc
+14:43          <-- thrasibule has quit irc
+14:44          <-- flea has quit irc
+14:44          <-- cjk101010 has quit irc
+14:44          <-- albech has quit irc
+14:47          <-- Wireman has quit irc
+14:47          --> zxiiro has joined
+14:47          --> cjk101010 has joined
+14:48          --> ghosTM55 has joined
+14:49          --> smuf has joined
+14:51          <-- octavsly has quit irc
+14:53          --> indietrash has joined
+14:54          <-- stid has left
+14:55          <-- rsajdok_ has quit irc
+14:58          --> bobnormal has joined
+14:59  indietrash| tor + torbutton in firefox - howto?
+14:59  bobnormal| anyone know what to go for in a mobile processor right now, core i3 > core i2 or not? prices (GBP) seem 600 -> 2000 and im not really sure what's worthwhile. i do lots of vmware so 64-bit virtualisation-capable is a must .. recommendations for linux-safe models (any vendor) welcome. 15" preferred
+14:59          --> albech has joined
+15:00          --> wchun has joined
+15:01          --> fbuettner has joined
+15:01  jmrk_| bobnormal: i'd wait a few more weeks until more i5/i7 models are available. core 2 duo's are basically 2 year old technology, i wouldn't buy one of those now
+15:02  bobnormal| jmrk_: thanks.  can't wait 2 weeks unfortunately, skipping continents for the next 2 months and need to be sorted before then
+15:02          <-- fbuettner has quit irc
+15:03          <-- nidev has quit irc
+15:03          <-- hkBst has quit irc
+15:04  jmrk_| bobnormal: well, if time is an issue, just take whatever you can get for an acceptable price
+15:04  bobnormal| jmrk_: im confused by all the mobile processor naming, i7>i5>i3 or not?
+15:05  geo27_| Hi to all ! I've just bought a belkin N+N usb wireless adapter to put on my gentoo box. How can know the chipset that is inside and/or the driver to use ?
+15:05          --> boom[x] has joined
+15:05          --> hkBst has joined
+15:05  mode/#gentoo [+v hkBst] by ChanServ
+15:06          --> ZogG has joined
+15:06  jmrk_| bobnormal: i7>i5>i3, yes, but the differences aren't that great. i don't know off the top of my head whether there are any relevant differences wrt. virtualization, you should google that. wikipedia might have an overview?
+15:08  bobnormal| jmrk_: yeah i've been browsing intel processors on wikipedia for ages, it's all a bit 'i am an overenthusiastic gamer and want to know all the trivialities and code names' rather than presenting a simple overview.  went to tomshardware but they havent updated their mobile cpu charts for 2010
+15:08          <-- Cephalon has quit irc
+15:10          <-- albech has quit irc
+15:10  jmrk_| bobnormal: look here: http://en.wikipedia.org/wiki/Arrandale_%28microprocessor%29
+15:11          --> POC|Farmer has joined
+15:11          --> jo-phone has joined
+15:12  jmrk_| doesn't say anything about virtualization diffences; i guess all models have those instructions
+15:12  jo-phone| Bit of a newbie here - app-arch/xz-utils" is blocking app-arch/lzma-utils-4.32.7
+15:12  jo-phone| and app-arch/lzma-utils ("app-arch/lzma-utils" is blocking app-arch/xz-utils-4.999.9_beta)
+15:12          <-- Baldurgon has quit irc
+15:13  zcram| goodbye, live well, and take care of your health
+15:13  jmrk_| bobnormal: if you care about battery life under load and/or heat, go for one of the 18W or 25W models if you can (but afaik they're pretty rare for now)
+15:13          <-- zcram has left
+15:13  bobnormal| jmrk_: thanks, i'm looking at the next series up, bottom-line clarksfield. research vendor model hardware compatibility now
+15:13  bobnormal| jmrk_: thats 45w
+15:15          --> kaushal has joined
+15:15          --> voidprayer-ns has joined
+15:15  kaushal| is there a way to enable simplexml in php ?
+15:15          <-- voidprayer has quit irc
+15:15          <-- deadowl has quit irc
+15:15          --> blitzkrieg3 has joined
+15:15  bobnormal| jmrk_: hp envy 15 .. lots of linux info
+15:15  jmrk_| kaushal: the 'simplexml' use flag?
+15:15  kaushal| i did dev-lang/php json mysql pdo tidy xmlreader simplexml xml
+15:15  kaushal| jmrk_: it didnot worked
+15:16  bobnormal| kaushal: DO NOT use simplexml .. you should use domxml .. google 'site:slideshare.net php xml' and read.
+15:16  kaushal| ok
+15:16          -#- Unode|NA is known as Unode
+15:16          --> ztfw has joined
+15:16          --> octavsly has joined
+15:16  bobnormal| kaushal: basically simplexml is fugly AND inefficient, it is a huge mistake to implement with it if you value your time/sanity/maintainability, i went through that pain last year.
+15:16          --> hkBst_ has joined
+15:16  mode/#gentoo [+v hkBst_] by ChanServ
+15:16  kaushal| bobnormal: so is it dev-lang/php domxml ?
+15:17          --> wayman has joined
+15:18  kaushal| I mean the use flag
+15:19          <-- hkBst has quit irc
+15:19          --> yalu has joined
+15:20          --> krynnota_ has joined
+15:20  yalu| hiI I'm getting this error about packages being masked due to this reason: "app-shells/bash-completion-1.1-r5 (masked by: EAPI 2, invalid: SLOT is undefined)". Now I could solve this by upgrading portage, which would be no problem except it's protage I'm trying to merge in the first place... so, quid?
+15:20  yalu| chicken and egg problem
+15:21  kaushal| bobnormal: was waiting for your answer :)
+15:21  Kunalagon| hello, is there any way to find a driver for device for which I have pci/usb device id ?
+15:21          <-- mazzachre has quit irc
+15:21 @bonsaikitten| yalu: emerge --nodeps portage
+15:21          --> Nijverheid has joined
+15:22 @bonsaikitten| yalu: be aware that that is a bit unsupported, it shouldn't break anything but is really not the nicest way of doing it
+15:22          <-- david38 has quit irc
+15:22          <-- touparx has quit irc
+15:22          <-- krynnotaur has quit irc
+15:22  jo-phone| What's the best policy for blocks? I've no idea why some blocks should occur - app-arch/lzma-utils ("app-arch/lzma-utils" is blocking app-arch/xz-utils-4.999.9_beta)
+15:22          <-- krynnota_ has quit irc
+15:22  yalu| bonsaikitten: the nice way would be to sync and upgrade every month or so I think :-)
+15:22 @bonsaikitten| yalu: correct :)
+15:22  jmrk_| jo-phone: general strategy: uninstall one of the two blocking packages ;)
+15:22  [Enrico]| jo-phone: xz-utils is just the new version of lzma-utils so you can safely unmerge lzma-utils ad keep going with xz-utils
+15:23  yalu| bonsaikitten: not really the purpose of this box I'm afraid
+15:23          <-- octavsly has quit irc
+15:23 @bonsaikitten| heh
+15:23 @bonsaikitten| yalu: I could handle that for you ;)
+15:23  vadmeste| Hi, I am running Gentoo, and this is the output of /etc/init.d/nfs start => http://paste.pocoo.org/show/184678/, my /etc/exports is http://paste.pocoo.org/show/184680/
+15:23  jo-phone| jmrk_: I usually do :) but last time I fried some stuff
+15:23  jo-phone| [Enrico]: TY
+15:23          --> mazzachre has joined
+15:24          --> david38 has joined
+15:25  yalu| an api change between 2.1.4 and 2.1.6... tha's what I call crazy
+15:26          <-- mrsolo_2000_ has quit irc
+15:26          -#- Glider is known as G1ider
+15:26  gutts| is it possible that hal make startx slow to start ?
+15:26          -#- G1ider is known as Glider
+15:27          -#- Glider is known as G1ider
+15:27          --> krynnotaur has joined
+15:27          --> voidprayer has joined
+15:28          <-- mazzachre has quit irc
+15:28          --> m77771111 has joined
+15:28          --> mazzachre has joined
+15:28          <-- m77771111 has quit irc
+15:28          -#- voidprayer is known as phantasmacantus
+15:29          --> albech has joined
+15:29          --> BCMM has joined
+15:29          --> DeviantPeer has joined
+15:30          <-- eTangenT has quit irc
+15:30          --> hkBst__ has joined
+15:30          --> eTangenT has joined
+15:30          <-- voidprayer-ns has quit irc
+15:30  DeviantPeer| hi all!
+15:30          --> goundy has joined
+15:30  DeviantPeer| anyone knows if there is a project for go (the language) support in gentoo?
+15:30  overfuse| I need some help deciding what name to give a build. The ebuild is a patched unfs-0.9.22 with GlusterFS's booster-0.5. The tarball is nfs3-0.9.23booster0.5.tar.gz. Under the guidlines of the developer hand book I am still not sure what to name the ebuild. Any ideas?
+15:30          <-- hkBst_ has quit irc
+15:31  bobnormal| deviantpeer: no, what language is that out of interest?
+15:31          --> Lap_64 has joined
+15:31  DeviantPeer| bobnormal: http://golang.org/
+15:32          <-- indietrash has quit irc
+15:32          <-- janes has quit irc
+15:32          --> psymin has joined
+15:32          <-- olesalscheider has quit irc
+15:34          --> Mavrik- has joined
+15:34          <-- albech has quit irc
+15:35          --> bigmonk has joined
+15:35          <-- SuspectZero has quit irc
+15:36          -#- vitovt_ is known as vitovt
+15:36          -#- phantasmacantus is known as phantacantus
+15:37          <-- smooth_penguin has quit irc
+15:37          <-- da_risk__ has left
+15:37  muh2000| gentoo boot cd uses "dokeymap" to setuo the keyboard layout. is it possible to set the keybap in the bootcmdline?
+15:38          <-- geo27_ has quit irc
+15:38          --> da_risk__ has joined
+15:38          -#- Nijverheid is known as ijzer
+15:39  hangfire| DeviantPeer: It isn't stable enough for package releases.
+15:39  hangfire| DeviantPeer: You'll have to get a checkout + build on your own
+15:39          --> a-v[] has joined
+15:39          -#- ijzer is known as Nijverheid
+15:39          <-- a-v has quit irc
+15:39          -#- a-v[] is known as a-v
+15:41          <-- vadmeste has quit irc
+15:41          --> geo27_ has joined
+15:41          --> elsewho has joined
+15:41  elsewho| hello
+15:41          <-- Ronis_BR has quit irc
+15:42  hangfire| elsewho: hi - just post a question :)
+15:42          --> Dad` has joined
+15:42  elsewho| how caqn i find out, which package pulls a specific package in the dependency graph?
+15:42          <-- obiwan_ has quit irc
+15:42  Naib| elsewho: emerge ... -t
+15:42  _spm_Draget| muh2000: I think there was something like keymap=xx
+15:42  hangfire| elsewho: 'emerge -tp' (but I've always found it a nightmare to read)
+15:42          --> styx_ has joined
+15:42          --> obiwan_ has joined
+15:43  hangfire| muh2000: Hit the FXX keys on the config line, and it'll explain how
+15:43          --> janes has joined
+15:43  hangfire| muh2000: * I meant the 'boot' line
+15:43  hkBst__| DeviantPeer: why don't you write a live ebuild?
+15:44  elsewho| is there a database backend to portage, sothat emerge works faster?
+15:44          --> fatalerrors has joined
+15:44          --> _fatalerrors has joined
+15:44  hangfire| elsewho: for searching: 'eix'
+15:44          <-- hkBst__ has quit irc
+15:44  elsewho| ok
+15:44          <-- _fatalerrors has quit irc
+15:44          <-- Dad`` has quit irc
+15:44          <-- eLuke has left
+15:44  elsewho| when emerge ... -pt only shows up one package, this means it is pulled in by world?
+15:45  hangfire| elsewho: well, you can combine with -D and -e for more info. '-v' is handy too.
+15:45  hangfire| elsewho: or check the world file (/var/lib/portage/world)
+15:46          <-- setz has quit irc
+15:46          --> vsTerminus has joined
+15:47          <-- _spm_Draget has quit irc
+15:47          --> ckauhaus has joined
+15:47  elsewho| when doing emerge --unmerge, is the package removed from world automatically?
+15:47  [Enrico]| elsewho: yes
+15:48          <-- ddvlad has quit irc
+15:48  elsewho| thx
+15:48          <-- askhader has left
+15:48          --> r5d has joined
+15:48          <-- Lap_64 has quit irc
+15:48          --> ddvlad has joined
+15:48          --> deadowl has joined
+15:49          --> Lap_64 has joined
+15:49          --> biohazrd has joined
+15:50  muh2000| hangfire: nope, no explanation there :/
+15:50          <-- RalphSpencer has quit irc
+15:50          --> RalphSpencer has joined
+15:50          <-- zxiiro has quit irc
+15:50          <-- tlze has quit irc
+15:51  hangfire| muh2000: oh, sorry.
+15:51  hangfire| muh2000: I'm sure that you can change the keymap on the fly, it's just not something I've ever done
+15:51  kaushal| bobnormal: hi again
+15:51  kaushal| it didnot worked
+15:52  muh2000| hangfire: well there is dokeymap but that asks me to type in a keymap. i want it automated
+15:52  kaushal| Fatal error: Call to undefined function simplexml_import_dom() in /var/www/localhost/htdocs/apps/Monitor/LatencyScraper.php
+15:52          <-- kevinqcs has quit irc
+15:52  jmrk_| kaushal: what exactly were you trying?
+15:53          <-- lorenzo__ has quit irc
+15:53          <-- Lap_64 has quit irc
+15:53  kaushal| jmrk_: i did dev-lang/php json mysql pdo tidy xmlreader domxml
+15:53          --> indietrash has joined
+15:53  jmrk_| kaushal: to use a simple_xml_<something> method in a php installation that was compiled without simplexml support?
+15:53          <-- jo-phone has quit irc
+15:53          --> r0bertz_ has joined
+15:53  jmrk_| well, it worked
+15:54  jmrk_| your php doesn't support simplexml anymore
+15:54  kaushal| ok
+15:54  jmrk_| so if you try to use it, you get an error. could've told you that before
+15:54  kaushal| jmrk_: so what do i use ?
+15:54  jmrk_| if you've already written code based on simplexml, it's probably the most time-efficient thing to keep the code and compile php with simplexml support
+15:55  jmrk_| if you want to scratch simplexml, then your php is fine, but you need to rewrite the affected code
+15:56          --> lorenzo__ has joined
+15:56          <-- csplinter has quit irc
+15:56          <-- r0bertz has quit irc
+15:57          --> ujjain has joined
+15:57  jmrk_| btw, i don't know what's wrong with simplexml. if it works for you, use it :)
+15:57          --> qdii has joined
+15:58  qdii| Hellol
+15:58  qdii| I've got a computer that hadn't been updated for monthes. Now I try to emerge -NuDav world, it goes like "a file listed in the Manifest couldn't be found"
+15:58  ujjain| Hello. I have the feeling I am screwed and unable to reinstall grub2, because all howto's assume you do not have a seperate /boot partition. I have 2 partitions, 1 ext3=/boot and 1 LVM with swap and ext4. Can somebody please guide me to the grub2 process? I have been trying for 3 hours now. Even a basic command as root (hd0,4) fails, even though I mounted /dev/sda5.
+15:58  qdii| Anyone knows how to fix that ?
+15:58  qubit| qdii: emerge sync again
+15:58          --> albech has joined
+15:59          --> zxiiro has joined
+15:59          --> cyanure has joined
+15:59          --> PreZLaptop has joined
+16:00  qdii| qubit: well I did it twice at different times
+16:00          <-- eTangenT has quit irc
+16:00 @bonsaikitten| ujjain: why grub2 ?
+16:00  cyanure| hi
+16:00  qdii| but nothing changed :
+16:00          <-- lethias has quit irc
+16:01          --> Phlogi has joined
+16:01  qubit| qdii: then the package maintainer borked the package, you can either use /etc/package.mask to mask that version and use a different one, or try to skip it
+16:01          --> octavsly has joined
+16:01  ujjain| bonsaikitten: Uhh,, I did not care much for the version, it was default.
+16:01          --> banditman has joined
+16:01  qubit| err, /etc/portage/package.mask
+16:01 @bonsaikitten| ujjain: ah, a funtoo user!
+16:01  cyanure| i have a really strange problem : i want to have some kind of automount with my gentoo and so i installed hald+ivman and no my keyboard (when hald is started) on X, the character inpout are doubled (example : when i tip 'a' it writes "aa")
+16:02  ujjain| bonsaikitten: Yes, almost! Can you please help me?
+16:02          <-- misterjack has quit irc
+16:02 @bonsaikitten| ujjain: #funtoo :)
+16:02  ujjain| bonsaikitten: I use #ubuntu, but I don't like those people. They lack Linux knowledge.
+16:02  RalphSpencer| emerge: there are no ebuilds built with USE flags to satisfy "dev-util/subversion[-dso,perl]".<newline>!!! One of the following packages is required to complete your request:
+16:02  RalphSpencer| - dev-util/subversion-1.6.9 (Change USE: -dso)
+16:02          --> Darkas has joined
+16:03  RalphSpencer| whats about that??
+16:03          --> ColdFyre has joined
+16:03 @bonsaikitten| ujjain: maybe you should ask in the right place
+16:03          <-- snubby has quit irc
+16:03  gutts| when I type startx, I've got that : (II) RADEON(0): Output: VGA-0, Detected Monitor Type: 0 which is very slow
+16:03  gutts| any idea ?
+16:03 @bonsaikitten| RalphSpencer: read it :)
+16:03          <-- chgtg has quit irc
+16:03  RalphSpencer| yup i tried to build subversion with -dso but still it throws that error
+16:04  RalphSpencer| *thats as far as i could understand emerge
+16:04 @bonsaikitten| RalphSpencer: did you use /etc/portage/package.use ?
+16:04  RalphSpencer| nope
+16:04          <-- phantacantus has quit irc
+16:04 @bonsaikitten| set it in /etc/make.conf ?
+16:04  RalphSpencer| yep
+16:04 @bonsaikitten| hrm, strange
+16:05 @bonsaikitten| emerge -pv subversion shows that useflag disabled ?
+16:05  hangfire| RalphSpencer: let's see the output of emerge -pv subversion
+16:05  hangfire| bonsaikitten: :(
+16:05  qdii| qubit: the package is samba-libs, I thought this one was so frequently used there was no way it could have been borked
+16:05 @bonsaikitten| hangfire: yeah, I'm fasterrr ;)
+16:05          <-- vortexx has quit irc
+16:05          --> smooth_penguin has joined
+16:05          <-- penguinFunk has quit irc
+16:05          --> miromiro has joined
+16:05 @bonsaikitten| qdii: hmm, that sounds funny
+16:05          --> vortexx has joined
+16:05 @bonsaikitten| qdii: can you give me more info?
+16:06  qubit| qdii: while i wouldnt think it likely, it is possible, especially if youre using the testing branch
+16:06 @bonsaikitten| it it quite possible that my network failure yesterday caused that one
+16:06          -#- MasterPrenium is known as MasterPrenium`aw
+16:07 @bonsaikitten| yep, manifest broken
+16:07 @bonsaikitten| qdii: thanks for reporting
+16:07  RalphSpencer| http://paste.pocoo.org/show/184702/
+16:07  RalphSpencer| emerge -pv subversion
+16:08 @bonsaikitten| qdii: committed, should hit the rsync mirrors in ~1h
+16:08  cyanure| i have a really strange problem : i want to have some kind of automount with my gentoo and so i installed hald+ivman and no my keyboard (when hald is started) on X, the character inpout are doubled (example : when i tip 'a' it writes "aa")
+16:08          --> lewnidas_ has joined
+16:08          <-- edannenbe has quit irc
+16:08  kaushal| bonsaikitten: hi
+16:08  kaushal| i get Fatal error: Call to undefined function simplexml_import_dom() in /var/www/localhost/htdocs/apps/latency-monitor/Monitor/LatencyScraper.php on line 39
+16:09  kaushal| I did used simplexml use flag in gentoo
+16:09  kaushal| and did emerge -av php. still i face the same issue
+16:09 @bonsaikitten| RalphSpencer: see the * there? dso is changed, but the package not recompiled yet
+16:09  hangfire| cyanure: do you have an xorg.conf?
+16:09 @bonsaikitten| RalphSpencer: emerge -auNDv world <-- try that
+16:09  RalphSpencer| hmm
+16:09          <-- ujjain has left
+16:09  RalphSpencer| wierd, i did compile
+16:09  hangfire| RalphSpencer: did it work? ;)
+16:09  RalphSpencer| heh
+16:10  jmrk_| kaushal: pastebin the output of "emerge -pv php"
+16:10          --> edannenbe has joined
+16:10  geo27_| Hi again. Would someone be kind enough to either help me here or direct me towards a more appropriate channel for my belkin f6d6050ed linux driver problem ? It seems that module rt2x00usb should work, but I have no ra0 or wlan0 device after the module load.
+16:10  kaushal| sure
+16:11  kaushal| jmrk_: http://paste.ubuntu.com/387033/
+16:11          --> bittin has joined
+16:12  hangfire| geo27_: does dmesg say anything? Do you have the firmware merged too?
+16:12  iamben| kaushal: it says in your paste the -simplexml is set
+16:12  [biabia]| reading the help docs for setting USE flags during installation is not helping me much.  This is my first install and not really sure which USE flags to put in make.conf
+16:13 @bonsaikitten| [biabia]: if in doubt leave defaults
+16:13          --> misterjack has joined
+16:13  hangfire| [biabia]: You'll probably be fine with mostly defaults to start - if you've picked gnome or kde, then set one or the other
+16:13  [biabia]| defaults are 'mmx sse sse2
+16:13  iamben| [biabia]: those are not defaults, defaults are set by your profile... check emerge --info
+16:13  [biabia]| hmm ok
+16:13  geo27_| hangfire: thanks for your answer. here is what I get after having loaded the rt73usb module. There is something to merge ? I would have guessed that all was provided by the kernel itself. I'll check that !
+16:14  kaushal| iamben: is it correct now http://paste.ubuntu.com/387036/ ?
+16:14  jmrk_| kaushal: yes
+16:14  iamben| kaushal: yeah, now you just need to remerge it
+16:14  kaushal| so emerge -av php ?
+16:14  jmrk_| yes
+16:14  kaushal| sure
+16:14          --> Ronis_BR has joined
+16:14  qdii| sorry for not answerring, and thanks for the modifications :)
+16:14  kaushal| jmrk_: let me update you
+16:15  hangfire| geo27_: Yes, you need the rt2X00 kernel driver (modular or otherwise) and the firmware image merged
+16:15  kaushal| iamben: thanks
+16:15  kaushal| iamben: i will update you
+16:15          --> tresh has joined
+16:15          <-- kaushal has quit irc
+16:15  hangfire| geo27_: did you mean to paste a link?
+16:15  geo27_| hangfire: oh. Thanks for this, I didn't know for the firmware part. I'll merge this right now.
+16:16  geo27_| http://pastebin.com/MPjCsAPE here is the link that didn't follow the copy/paste process.
+16:16  hangfire| geo27_: only if it's actually a rt73 card ;)
+16:16          --> flea has joined
+16:17          -#- flea is known as Guest84530
+16:17  hangfire| geo27_: tbh, that looks like it's working already - are you sure that there isn' anything else before that?
+16:17          <-- gutts has quit irc
+16:18  geo27_| hangfire: no, nothing more before or after that. And ifconfig and iwconfig only report lo and eth0 interfaces, nothing for my usb device.
+16:18  hangfire| geo27_: ifconfig -a
+16:18          -#- MasterPrenium`aw is known as MasterPrenium
+16:19          <-- avenj has quit irc
+16:19          <-- jvs has quit irc
+16:20  [biabia]| iamben it shows bash: emerge: command not found   (im at the step in installation right before chrooting)
+16:20  hangfire| geo27_: you're lucky - I was just getting my rt61 working yesterday ;)  (it went pretty smoothly though)
+16:20 @bonsaikitten| [biabia]: the livecd environment has no emerge available
+16:20  geo27_| hangfire: ifconfig -a shows only lo and eht0, nothing more.
+16:20  hangfire| bonsaikitten: doesn't it? Is that a new thing?
+16:20          <-- playahater has left
+--- Log closed Tue Mar 02 16:20:54 2010
+--- Log opened Tue Mar 02 17:49:05 2010
+17:49          --> playahater has joined
+17:49 #gentoo: Total of 819 nicks [9 ops, 0 halfops, 46 voices, 764 normal]
+17:49 !bartol.freenode.net [freenode-info] if you're at a conference and other people are having trouble connecting, please mention it to staff: http://freenode.net/faq.shtml#gettinghelp
+17:49 Join to #gentoo was synced in 18 secs
+17:49          --> noptrix has joined
+17:49  noptrix| hi ppl
+17:49          <-- playahater has left
+--- Log closed Tue Mar 02 17:49:37 2010
+--- Log opened Tue Mar 02 20:40:57 2010
+20:40          --> playahater has joined
+20:40 #gentoo: Total of 860 nicks [10 ops, 0 halfops, 47 voices, 803 normal]
+20:41  iamben| orzel: maybe you got unlucky and found an out of date rsync server? check if some of those packages' current versions still exist in your local portage
+--- Log closed Tue Mar 02 20:41:15 2010
+--- Log opened Tue Mar 02 20:46:45 2010
+20:46          --> playahater has joined
+20:46 #gentoo: Total of 864 nicks [10 ops, 0 halfops, 47 voices, 807 normal]
+20:46 !niven.freenode.net [freenode-info] please register your nickname...don't forget to auto-identify! http://freenode.net/faq.shtml#nicksetup
+20:47 Join to #gentoo was synced in 23 secs
+20:47  peratu| nolimitsoya, what do you need for your firewall? Probably this helps you -> http://www.carrosses.com/~peratu/tutoriales/iptables/iptables_en.html
+20:48          <-- bscape has quit irc
+20:48          <-- Exposure has quit irc
+20:48          <-- albech has quit irc
+20:48          <-- _krash has quit irc
+20:49  nolimitsoya| peratu, id like a tray applet that lets me monitor, block and allow connections through a gui, and preferably on a per application rule basis :)
+20:49          --> pollo502 has joined
+20:50          <-- DerDieb has left
+20:50          <-- styx_ has quit irc
+20:52          --> Exposure has joined
+20:52          <-- pollo502 has left
+20:53          <-- R0b0t1 has quit irc
+20:54          --> tresh has joined
+20:54          --> ice_cream has joined
+20:55          --> MrPaper has joined
+20:55          --> Ordog_by has joined
+20:55          --> HB2 has joined
+20:56          <-- looonger has quit irc
+20:56          --> LabMonkey has joined
+20:56          <-- bittin_ has quit irc
+20:58          <-- playahater has left
+--- Log closed Tue Mar 02 20:58:16 2010

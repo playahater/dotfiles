@@ -1,0 +1,813 @@
+--- Log opened Fri Oct 08 10:50:44 2010
+10:50 Starting query in Bitlbee with marijajovicevic
+10:50 marijajovicevic| http://www.manemoj.com/?url=forum/posts&forumid=13&topicid=279&page=103
+--- Log closed Fri Oct 08 10:56:07 2010
+--- Log opened Fri Oct 08 13:58:07 2010
+13:58 Closing query with marijajovicevic
+--- Log closed Fri Oct 08 13:58:07 2010
+--- Log opened Thu Oct 14 15:17:52 2010
+15:17 Starting query in Bitlbee with marijajovicevic
+15:17 playahater| font-size: 0.75em; /* 16px x .75 = 12px */
+15:18 playahater| line-height: 1.333em; /* 12px x 1.333 = 16px */
+15:18 Closing query with marijajovicevic
+--- Log closed Thu Oct 14 15:18:11 2010
+--- Log opened Mon Oct 18 17:46:50 2010
+17:46 Starting query in Bitlbee with marijajovicevic
+17:46 marijajovicevic| 	#CD0376
+--- Log closed Mon Oct 18 17:52:12 2010
+--- Log opened Mon Oct 18 18:20:15 2010
+18:20 Closing query with marijajovicevic
+--- Log closed Mon Oct 18 18:20:15 2010
+--- Log opened Tue Oct 19 19:08:11 2010
+19:08 Starting query in Bitlbee with marijajovicevic
+19:08 marijajovicevic| http://users.tpg.com.au/j_birch/plugins/superfish/#download
+--- Log closed Tue Oct 19 19:13:51 2010
+--- Log opened Tue Oct 19 19:15:06 2010
+19:15          <-- marijajovicevic has quit irc
+--- Log closed Tue Oct 19 19:20:51 2010
+--- Log opened Tue Oct 19 20:49:17 2010
+20:49 Closing query with marijajovicevic
+--- Log closed Tue Oct 19 20:49:17 2010
+--- Log opened Tue Oct 26 09:44:31 2010
+09:44 Starting query in Bitlbee with marijajovicevic
+09:44 marijajovicevic|  <ul>
+09:44 marijajovicevic|         <li><a href="home.html">إتصل بنا</a></li>
+09:44 marijajovicevic|         <li><a href="#nogotellfriend">أخبر صديقا</a></li>
+09:44 marijajovicevic|         <li><a href="#nogoprivacy">الخصوصية والسرية</a></li>
+09:44 marijajovicevic|         <li><a href="#nogoterms">الأحكام والشروط</a></li>
+09:44 marijajovicevic|         <li class="rss"><a href="#">RSS</a></li>
+09:44 marijajovicevic|       </ul>
+--- Log closed Tue Oct 26 09:50:09 2010
+--- Log opened Tue Oct 26 09:59:59 2010
+09:59 marijajovicevic| <ul>
+09:59 marijajovicevic| <li><a href="home.html">إتصل بنا</a></li>
+09:59 marijajovicevic| <li><a href="#nogotellfriend">أخبر صديقا</a></li>
+09:59 marijajovicevic| <li><a href="#nogoprivacy">الخصوصية والسرية</a></li>
+09:59 marijajovicevic| <li><a href="#nogoterms">الأحكام والشروط</a></li>
+09:59 marijajovicevic| <li class="rss"><a href="#">RSS</a></li>
+09:59 marijajovicevic| </ul>
+--- Log closed Tue Oct 26 10:05:09 2010
+--- Log opened Tue Oct 26 10:18:01 2010
+10:18 Closing query with marijajovicevic
+--- Log closed Tue Oct 26 10:18:01 2010
+--- Log opened Tue Oct 26 10:29:29 2010
+10:29 Starting query in Bitlbee with marijajovicevic
+10:29 marijajovicevic| أرسل
+--- Log closed Tue Oct 26 10:35:09 2010
+--- Log opened Tue Oct 26 11:43:34 2010
+11:43 Closing query with marijajovicevic
+--- Log closed Tue Oct 26 11:43:34 2010
+--- Log opened Tue Oct 26 12:55:08 2010
+12:55 Starting query in Bitlbee with marijajovicevic
+12:55 marijajovicevic| #ui-datepicker-div {
+12:55 marijajovicevic| background:none repeat scroll 0 0 white;
+12:55 marijajovicevic| border:1px solid #EDEDED;
+12:55 marijajovicevic| font-size:12px;
+12:55 marijajovicevic| }
+12:55 marijajovicevic| m3com.css?M (line 340)
+12:55 marijajovicevic| #ui-datepicker-div {
+12:55 marijajovicevic| background:none repeat scroll 0 0 #EEEEEE;
+12:55 marijajovicevic| border-bottom:2px solid #666666;
+12:55 marijajovicevic| border-right:2px solid #666666;
+12:55 marijajovicevic| color:#A50B6E;
+12:55 marijajovicevic| font-family:Verdana,sans-serif;
+12:55 marijajovicevic| font-size:100%;
+12:55 marijajovicevic| }
+12:55 marijajovicevic| .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
+12:55 marijajovicevic| font-weight:bold;
+12:55 marijajovicevic| height:1.8em;
+12:55 marijajovicevic| position:absolute;
+12:55 marijajovicevic| top:2px;
+12:55 marijajovicevic| width:1.8em;
+12:55 marijajovicevic| }
+12:55 marijajovicevic| .ui-datepicker .ui-datepicker-title select {
+12:55 marijajovicevic| color:#555555;
+12:55 marijajovicevic| float:left;
+12:55 marijajovicevic| font-size:11px;
+12:55 marijajovicevic| margin:1px 0;
+12:55 marijajovicevic| }
+12:55 marijajovicevic| .ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year {
+12:55 marijajovicevic| width:48%;
+12:55 marijajovicevic| }
+--- Log closed Tue Oct 26 13:00:09 2010
+--- Log opened Tue Oct 26 13:01:55 2010
+13:01 Closing query with marijajovicevic
+--- Log closed Tue Oct 26 13:01:55 2010
+--- Log opened Thu Nov 04 17:26:07 2010
+17:26 Starting query in Bitlbee with marijajovicevic
+17:26 marijajovicevic| http://net.tutsplus.com/articles/news/getting-good-with-git-new-rockable-book/
+--- Log closed Thu Nov 04 17:31:59 2010
+--- Log opened Thu Nov 04 17:45:55 2010
+17:45          <-- marijajovicevic has quit irc
+--- Log closed Thu Nov 04 17:50:59 2010
+--- Log opened Thu Nov 04 21:41:44 2010
+21:41 Closing query with marijajovicevic
+--- Log closed Thu Nov 04 21:41:44 2010
+--- Log opened Fri Nov 05 14:14:46 2010
+14:14 Starting query in Bitlbee with marijajovicevic
+14:14 playahater| 192.168.0.111
+14:14 Closing query with marijajovicevic
+--- Log closed Fri Nov 05 14:14:53 2010
+--- Log opened Fri Nov 05 14:29:25 2010
+14:29 Starting query in Bitlbee with marijajovicevic
+14:29 marijajovicevic| form#user-login, #user-login  HEIGHT 75PX
+14:30 playahater| done
+14:31 marijajovicevic| ee a on se pojebo jer nema klasu LOG koju imas kad niej ulogovan
+--- Log closed Fri Nov 05 14:36:17 2010
+--- Log opened Fri Nov 05 14:54:07 2010
+14:54 Closing query with marijajovicevic
+--- Log closed Fri Nov 05 14:54:07 2010
+--- Log opened Fri Nov 05 15:12:52 2010
+15:12 Starting query in Bitlbee with marijajovicevic
+15:12 marijajovicevic| http://192.168.0.111/islam/video nevalja link na slici
+--- Log closed Fri Nov 05 15:18:17 2010
+--- Log opened Fri Nov 05 15:18:42 2010
+15:18 marijajovicevic| menu se opet sjebao
+--- Log closed Fri Nov 05 15:24:17 2010
+--- Log opened Fri Nov 05 17:57:02 2010
+17:57          <-- marijajovicevic has quit irc
+--- Log closed Fri Nov 05 18:02:17 2010
+--- Log opened Fri Nov 05 18:44:29 2010
+18:44 Closing query with marijajovicevic
+--- Log closed Fri Nov 05 18:44:29 2010
+--- Log opened Mon Nov 08 13:44:26 2010
+13:44 Starting query in Bitlbee with marijajovicevic
+13:44 marijajovicevic| ee jel mozes na 2 minuta? da se zapanjis malo a?
+13:44 playahater| :)
+13:44 playahater| ae
+13:44 Closing query with marijajovicevic
+--- Log closed Mon Nov 08 13:44:54 2010
+--- Log opened Mon Nov 15 13:38:50 2010
+13:38 Starting query in Bitlbee with marijajovicevic
+13:38 marijajovicevic| ee snimila sam neke sitne errore na index strani pa kad stignes vici da ti kazem sta da se izmeni
+13:39 playahater| ql
+--- Log closed Mon Nov 15 13:45:13 2010
+--- Log opened Mon Nov 15 14:03:11 2010
+14:03 Closing query with marijajovicevic
+--- Log closed Mon Nov 15 14:03:11 2010
+--- Log opened Mon Nov 15 15:00:45 2010
+15:00 Starting query in Bitlbee with marijajovicevic
+15:00 marijajovicevic| http://album.m3com.com.sa/privacySetting/view
+15:00 marijajovicevic| http://album.m3com.com.sa/Groups/view/type/admin/groupID/3459
+15:01 marijajovicevic| http://album.m3com.com.sa/inviteToMyGroup/view/groupID/3459
+15:05 marijajovicevic| u:wassim73
+15:05 marijajovicevic| p:default
+--- Log closed Mon Nov 15 15:10:13 2010
+--- Log opened Mon Nov 15 15:15:26 2010
+15:15 Closing query with marijajovicevic
+--- Log closed Mon Nov 15 15:15:26 2010
+--- Log opened Mon Nov 15 16:38:52 2010
+16:38 Starting query in Bitlbee with marijajovicevic
+16:38 marijajovicevic| ee ajde da uradimo ove izmene za index
+--- Log closed Mon Nov 15 16:44:13 2010
+--- Log opened Mon Nov 15 17:39:07 2010
+17:39 Closing query with marijajovicevic
+--- Log closed Mon Nov 15 17:39:07 2010
+--- Log opened Mon Nov 15 18:21:24 2010
+18:21 Starting query in Bitlbee with marijajovicevic
+18:21 playahater| 192.168.0.134/news
+18:21 playahater| nije l ova slika malo ukrivo?
+18:21 playahater| :)
+18:22 playahater| nasho sam .. 
+18:22 playahater| zaboravi
+18:22 playahater| :0
+18:22 marijajovicevic| k
+18:24 marijajovicevic| http://client.agena.rs/m3com/prototype-html/diwanee/110911/rss.php
+--- Log closed Mon Nov 15 18:30:13 2010
+--- Log opened Mon Nov 15 20:30:04 2010
+20:30 Closing query with marijajovicevic
+--- Log closed Mon Nov 15 20:30:04 2010
+--- Log opened Tue Nov 16 10:25:10 2010
+10:25 Starting query in Bitlbee with marijajovicevic
+10:25 marijajovicevic| bilo bi dobro da sad odmah uradimo one strelice sa index strane i pause dugme da sakrijemo jer je to nesto sto je bogdan jos pre mesec dana rekao da uradimo a nismo:(
+--- Log closed Tue Nov 16 10:30:57 2010
+--- Log opened Tue Nov 16 11:22:02 2010
+11:22 Closing query with marijajovicevic
+--- Log closed Tue Nov 16 11:22:02 2010
+--- Log opened Tue Nov 16 11:29:49 2010
+11:29 Starting query in Bitlbee with marijajovicevic
+11:29 marijajovicevic| jel jesi??
+11:29 marijajovicevic| napravio neki spisaka
+--- Log closed Tue Nov 16 11:34:57 2010
+--- Log opened Tue Nov 16 11:40:13 2010
+11:40 playahater| upravo pravim ..
+11:40 marijajovicevic| aaa ajde ja taman htela da posaljem dokuemnt
+11:40 playahater| de proveri molim te slichce na 192.168.0.103/album
+--- Log closed Tue Nov 16 11:45:57 2010
+--- Log opened Tue Nov 16 14:22:06 2010
+14:22 Closing query with marijajovicevic
+--- Log closed Tue Nov 16 14:22:06 2010
+--- Log opened Thu Nov 18 12:36:00 2010
+12:36 Starting query in Bitlbee with marijajovicevic
+12:36 playahater| http://client.agena.rs/m3com/prototype-html/_main/islam/islam-audio-visual.html
+12:36 playahater| tretji blok u sidebar-u
+12:36 playahater| jel nisu zamenjena mesta mozda?
+12:36 marijajovicevic| cek da vidim
+12:36 playahater| knjiga vodi na album 
+12:36 playahater| traka vodi na tube
+12:36 playahater| to bi bilo logichno ..
+12:37 playahater| ae .. :)
+12:37 marijajovicevic| knjiga treba da vodi na tube-channel-category
+12:37 marijajovicevic| traka na album
+12:37 playahater| ok .. :)
+12:38 marijajovicevic| pa sta me zezas! tako je na prototipu! ja mislila da je neka greska
+12:38 marijajovicevic| AJ SE DROGIRAS za kaznu!
+12:38 playahater| :)
+12:38 playahater| ae
+--- Log closed Thu Nov 18 12:44:13 2010
+--- Log opened Thu Nov 18 12:53:37 2010
+12:53 Closing query with marijajovicevic
+--- Log closed Thu Nov 18 12:53:37 2010
+--- Log opened Fri Nov 19 10:07:46 2010
+10:07 Starting query in Bitlbee with marijajovicevic
+10:07 marijajovicevic| http://www.hongkiat.com/blog/30-futuristic-phones-we-wish-were-real/ 
+10:10 playahater| fancy .. :)
+--- Log closed Fri Nov 19 10:16:14 2010
+--- Log opened Fri Nov 19 10:25:46 2010
+10:25 Closing query with marijajovicevic
+--- Log closed Fri Nov 19 10:25:46 2010
+--- Log opened Fri Nov 19 15:13:53 2010
+15:13 Starting query in Bitlbee with marijajovicevic
+15:13 marijajovicevic| koji ti je ip?
+--- Log closed Fri Nov 19 15:19:14 2010
+--- Log opened Fri Nov 19 15:19:45 2010
+15:19 playahater| netju da ti kazem ..
+15:19 playahater| rasprichatjesh
+15:19 playahater| :)
+15:20 marijajovicevic| + sa homepage iz chaneel linka izbaci ICF CEEEALLLLVIIII!
+15:20 playahater| 103
+--- Log closed Fri Nov 19 15:26:14 2010
+--- Log opened Fri Nov 19 15:34:12 2010
+15:34 Closing query with marijajovicevic
+--- Log closed Fri Nov 19 15:34:12 2010
+--- Log opened Mon Nov 22 11:47:24 2010
+11:47 Starting query in Bitlbee with marijajovicevic
+11:47 playahater| ae baci link do redmine-a
+11:47 playahater| :)
+11:47 playahater| ne mogu da ga nadjem ..
+11:47 playahater| da pochistim te repove iz news-a i islama
+11:48 marijajovicevic| cek
+11:48 marijajovicevic| http://redmine.diwanee.com
+11:48 marijajovicevic| idem do tebe
+11:49 playahater| ae
+--- Log closed Mon Nov 22 11:54:35 2010
+--- Log opened Mon Nov 22 11:55:21 2010
+11:55 marijajovicevic| islam quran reader
+11:55 marijajovicevic| islam prayer time
+11:55 marijajovicevic| islam prayer time form
+11:55 marijajovicevic| islam news list
+11:55 marijajovicevic| ma2zounou
+11:55 marijajovicevic| audio-visual
+11:55 marijajovicevic| audio-playlist 2
+11:55 marijajovicevic| audio-platlist2-video
+11:55 marijajovicevic| audio-playlist
+11:55 marijajovicevic| audio-playlist-video
+11:55 marijajovicevic| audio-page
+11:55 marijajovicevic| audio-page-video
+11:55 marijajovicevic| anashid-playlist
+11:55 marijajovicevic| ad3iya-reader
+--- Log closed Mon Nov 22 12:00:35 2010
+--- Log opened Mon Nov 22 12:10:56 2010
+12:10 playahater| ae djido :)
+--- Log closed Mon Nov 22 12:16:35 2010
+--- Log opened Mon Nov 22 12:25:16 2010
+12:25 playahater| 192.168.0.103/islam/quran
+12:25 playahater| chekiraj padding
+12:25 playahater| :)
+--- Log closed Mon Nov 22 12:30:35 2010
+--- Log opened Mon Nov 22 12:40:43 2010
+12:40 marijajovicevic| dokle si stigao??
+--- Log closed Mon Nov 22 12:46:35 2010
+--- Log opened Mon Nov 22 12:46:56 2010
+12:46 playahater| josh malo pa gotovo :)
+12:47 marijajovicevic| aa samo mi reci sta je uradjeno da znam sta da pratim i da radim na red mine
+--- Log closed Mon Nov 22 12:52:35 2010
+--- Log opened Mon Nov 22 12:54:50 2010
+12:54 playahater| ja bih ovo da zatvorim http://redmine.diwanee.com/issues/1046
+12:55 playahater| prekontrolishi .. :)
+12:55 marijajovicevic| daj mi ip..130..134??
+12:55 playahater| 192.168.0.103/islam/quran
+12:58 marijajovicevic| http://192.168.0.103/islam/nashyd/test-nashyd-1 zar ne bi trebalo i ovde da stoje??
+12:59 playahater| oma dodje
+12:59 playahater| :)
+13:01 marijajovicevic| http://192.168.0.103/islam/quran DJIDO VAMO!! 
+13:03 playahater| ok je i http://192.168.0.103/islam/nashyd/test-nashyd-1
+13:03 playahater| proveri
+13:04 marijajovicevic| http://192.168.0.103/islam/ad3iya-reader DUUUGMEEEEE
+--- Log closed Mon Nov 22 13:09:35 2010
+--- Log opened Mon Nov 22 13:32:38 2010
+13:32 Closing query with marijajovicevic
+--- Log closed Mon Nov 22 13:32:38 2010
+--- Log opened Mon Nov 22 13:36:08 2010
+13:36 Starting query in Bitlbee with marijajovicevic
+13:36 playahater| jel border na ovoj stranici ok ?
+13:36 playahater| http://192.168.0.103/islam/nashyd
+13:36 playahater| http://redmine.diwanee.com/issues/1025
+13:37 marijajovicevic| da bila su dva bordera
+13:37 playahater| ql
+13:38 playahater| a male reklame ?
+13:38 playahater| http://redmine.diwanee.com/issues/1046
+13:38 marijajovicevic| to je ok
+13:38 playahater| ql
+--- Log closed Mon Nov 22 13:44:35 2010
+--- Log opened Mon Nov 22 14:54:48 2010
+14:54 playahater| odakle ovaj padding-top sad na frontu za taj block ?
+14:54 playahater| ae baci pogled ..
+14:55 marijajovicevic| a oklen ja znam!
+14:55 marijajovicevic| :D
+14:55 playahater| http://192.168.0.103/islam/
+14:55 playahater| http://192.168.0.103/
+14:55 marijajovicevic| na sta?? na home?
+14:55 playahater| uporedi block sa ta dva linka
+14:55 playahater| isto sve kolko ja vidim,a?
+14:55 playahater| :)
+14:55 playahater| ovaj na home-u ima neki padding-top ovaj na islam nema ..
+14:55 playahater| :/
+14:55 marijajovicevic| osim paddinga na homu
+14:56 marijajovicevic| izgelda da ti nisu iste klase...
+14:56 marijajovicevic| cek gledam
+14:56 playahater| ma isto sve ..
+14:58 marijajovicevic| na homu ti cita klasu ul.quicktabs_tabs {
+14:58 marijajovicevic| border-top:2px solid #FFFFFF;
+14:58 marijajovicevic| margin-top:0;
+14:58 marijajovicevic| }
+14:58 marijajovicevic| a za islam je ne cita, prepise je
+14:58 marijajovicevic| css je http://192.168.0.103/sites/all/modules/quicktabs/css/quicktabs.css?X LINE7
+14:59 playahater| to mi reci
+14:59 playahater| :)
+14:59 playahater| brao
+14:59 playahater| 3 bambija
+14:59 playahater| :)
+14:59 marijajovicevic| m aisteraj one iz kuhinje pa da zapalimo lulu!;-)
+15:00 playahater| ja batalio ..
+15:00 playahater| duvan .. nikotin .. 
+15:00 marijajovicevic| aaa pa vidim nema te
+15:00 playahater| ;)
+15:01 playahater| mora sredim plutja malo chistim thcom .. :)
+15:01 playahater| ubija me ovaj nikotin i katran
+15:01 playahater| :D
+15:01 marijajovicevic| tja ... 
+--- Log closed Mon Nov 22 15:07:35 2010
+--- Log opened Mon Nov 22 15:49:19 2010
+15:49 marijajovicevic| aaaaaaaaajdeeeeeeeeeeeeeeeeeeeeee
+15:49 playahater| eeeeeeeeeeeeeeeeeeeeeeeeeeeeeevooooooooooooooooooooooo
+15:49 playahater| :)
+15:50 marijajovicevic| izvini, ispustio si jedno E i 3 O!
+15:51 playahater| damn;
+--- Log closed Mon Nov 22 15:56:35 2010
+--- Log opened Mon Nov 22 16:34:46 2010
+16:34 Closing query with marijajovicevic
+--- Log closed Mon Nov 22 16:34:46 2010
+--- Log opened Tue Nov 23 11:30:47 2010
+11:30 Starting query in Bitlbee with marijajovicevic
+11:30 playahater| samo da nadjem potreban software koji treba da skinesh
+11:33 playahater| https://code.google.com/p/msysgit/downloads/list
+11:38 playahater| http://help.github.com/msysgit-key-setup/
+--- Log closed Tue Nov 23 11:43:04 2010
+--- Log opened Tue Nov 23 11:47:04 2010
+11:47 Closing query with marijajovicevic
+--- Log closed Tue Nov 23 11:47:04 2010
+--- Log opened Tue Nov 23 12:09:31 2010
+12:09 Starting query in Bitlbee with marijajovicevic
+12:09 marijajovicevic| mmmmmmmmmmmm
+12:09 marijajovicevic| MIIIIIIIILOOOSEEE
+--- Log closed Tue Nov 23 12:15:04 2010
+--- Log opened Tue Nov 23 12:18:38 2010
+12:18 Closing query with marijajovicevic
+--- Log closed Tue Nov 23 12:18:38 2010
+--- Log opened Tue Nov 23 12:57:56 2010
+12:57 Starting query in Bitlbee with marijajovicevic
+12:57 marijajovicevic| KAKO DA ja povucem recimo fajlove koje sam menjala kod mene na kompu...ZNACI da vidim gde je razlika i povucem ih kod sebe ne komp..ne push!!PULL!!"d
+--- Log closed Tue Nov 23 13:03:04 2010
+--- Log opened Tue Nov 23 13:50:59 2010
+13:50 Closing query with marijajovicevic
+--- Log closed Tue Nov 23 13:50:59 2010
+--- Log opened Wed Nov 24 10:25:56 2010
+10:25 Starting query in Bitlbee with marijajovicevic
+10:25 marijajovicevic| http://sonspring.com/journal/formalize-css da li bi ovo moglo da nam pomogne oko formi za m3com
+--- Log closed Wed Nov 24 10:31:24 2010
+--- Log opened Wed Nov 24 10:34:36 2010
+10:34 playahater| pa definitivno ..
+10:34 playahater| samo ne znam da li da petljamo dodatni js u celu stvar ..
+10:35 playahater| misli da nema potrebe ..
+10:35 marijajovicevic| ajde pogeldacemo kasnije malo bolej pa da vidimo ja sam samo onako na brzinu presla
+10:35 playahater| al moz da bacimo na razmatranje
+10:35 playahater| ql
+10:35 marijajovicevic| pa to da
+--- Log closed Wed Nov 24 10:40:24 2010
+--- Log opened Wed Nov 24 15:18:33 2010
+15:18 Closing query with marijajovicevic
+--- Log closed Wed Nov 24 15:18:33 2010
+--- Log opened Thu Nov 25 16:49:26 2010
+16:49 Starting query in Bitlbee with marijajovicevic
+16:49 marijajovicevic| aj djidu!!
+--- Log closed Thu Nov 25 16:55:05 2010
+--- Log opened Thu Nov 25 18:02:31 2010
+18:02          <-- marijajovicevic has quit irc
+--- Log closed Thu Nov 25 18:08:05 2010
+--- Log opened Thu Nov 25 18:08:16 2010
+18:08 Closing query with marijajovicevic
+--- Log closed Thu Nov 25 18:08:16 2010
+--- Log opened Mon Dec 06 15:37:52 2010
+15:37 Starting query in Bitlbee with marijajovicevic
+15:37 marijajovicevic| ajde gituj da mogu da vidim neku stranu koju je ivan uradio
+15:39 playahater| ajde
+15:39 playahater| :)
+15:41 playahater| done;
+15:41 Closing query with marijajovicevic
+--- Log closed Mon Dec 06 15:41:02 2010
+--- Log opened Mon Dec 06 15:41:06 2010
+15:41 Starting query in Bitlbee with marijajovicevic
+15:41 marijajovicevic| kewl thnx
+15:42 playahater| :) .. you misspelled that one .. 
+15:42 playahater| its ql
+15:42 playahater| :)
+15:42 marijajovicevic| nop!
+15:42 marijajovicevic| IT IS kewl!
+15:43 playahater| no it's not .. 
+15:43 playahater| :)
+15:44 marijajovicevic| http://www.urbandictionary.com/define.php?term=kewl
+15:44 marijajovicevic| :))))))
+15:45 playahater| that doesn`t mean a thing
+15:46 marijajovicevic| jao bre imam posla!
+15:46 playahater| hihi
+15:46 marijajovicevic| i niko se od mojih strangera ne buni za to
+15:46 marijajovicevic| sta vise to sam od njih pokupila
+15:46 marijajovicevic| aj zdravo sad
+15:47 playahater| do vidjenja
+--- Log closed Mon Dec 06 15:52:15 2010
+--- Log opened Mon Dec 06 16:57:44 2010
+16:57 Closing query with marijajovicevic
+--- Log closed Mon Dec 06 16:57:44 2010
+--- Log opened Mon Dec 06 17:23:50 2010
+17:23 Starting query in Bitlbee with marijajovicevic
+17:23 marijajovicevic| ajde push pull i tako to
+17:24 playahater| chek ..
+17:24 marijajovicevic| cek ti
+17:25 marijajovicevic| izgelda da je ivan to uradio
+17:25 marijajovicevic| jeste
+17:26 playahater| koje?
+17:26 playahater| jel kod mene gledash?
+17:26 marijajovicevic| pushovao zabrpavi
+17:26 marijajovicevic| pa da...
+17:26 marijajovicevic| valjda svi tu ...
+17:26 playahater| ne moze on da pushuje kod sebe a da se kod mene promeni stvar .. 
+17:26 playahater| moram ja da pullujem na svojoj mashini
+17:27 playahater| pre toga neko mora da pushuje .. da bih ja imao shta da pullujem
+17:27 playahater| :)
+17:27 marijajovicevic| ja lepo vidim sta treba d avidim a adresa je 103
+--- Log closed Mon Dec 06 17:32:15 2010
+--- Log opened Mon Dec 06 17:32:46 2010
+17:32 marijajovicevic| ajde sad
+17:32 marijajovicevic| puuulll
+17:33 playahater| oma dodje :)
+17:35 playahater| ae
+17:39 marijajovicevic| kewl
+17:41 playahater| ql
+17:41 playahater| :)
+--- Log closed Mon Dec 06 17:47:15 2010
+--- Log opened Mon Dec 06 18:17:12 2010
+18:17 Closing query with marijajovicevic
+--- Log closed Mon Dec 06 18:17:12 2010
+--- Log opened Mon Dec 06 18:22:29 2010
+18:22 Starting query in Bitlbee with marijajovicevic
+18:22 marijajovicevic| koji ti je URL
+--- Log closed Mon Dec 06 18:28:15 2010
+--- Log opened Mon Dec 06 18:33:28 2010
+18:33 Closing query with marijajovicevic
+--- Log closed Mon Dec 06 18:33:28 2010
+--- Log opened Mon Dec 13 17:44:44 2010
+17:44 Starting query in Bitlbee with marijajovicevic
+17:44 marijajovicevic| a nisam znala da smo vratila onaj RSS u levoj koloni na kraju...
+17:44 playahater| ni ja
+17:44 playahater| :)
+17:45 marijajovicevic| pa otkud to tu?!?
+17:46 playahater| http://localhost/en/islam/audio/random
+17:50 Closing query with marijajovicevic
+--- Log closed Mon Dec 13 17:50:27 2010
+--- Log opened Mon Dec 13 17:51:16 2010
+17:51 Starting query in Bitlbee with marijajovicevic
+17:51 marijajovicevic| ee kako ono PRVO GIT STATUS
+17:51 marijajovicevic| JESAM KAze nema promena
+17:53 Closing query with marijajovicevic
+--- Log closed Mon Dec 13 17:53:25 2010
+--- Log opened Tue Dec 21 16:49:26 2010
+16:49 Starting query in Bitlbee with marijajovicevic
+16:49 marijajovicevic| kako ono git status pa pull
+16:51 Closing query with marijajovicevic
+--- Log closed Tue Dec 21 16:51:15 2010
+--- Log opened Wed Dec 22 14:09:28 2010
+14:09 Starting query in Bitlbee with marijajovicevic
+14:10 playahater| prvo pregledaj postojetje tikete koji se odnose na tebe ..
+14:10 playahater| shta mozesh zatvori .. ostatak edituj da ima smisla .. i cepaj dalje ..
+14:10 playahater| kako prelazish kanale i nalazish bagove u css/strukturi/shta_god .. tako pravi tikete na redmine
+14:11 playahater| shta mozesh reshish .. shta ne mozesh dodelish kom mislish da treba
+14:11 playahater| :)
+14:11 Closing query with marijajovicevic
+--- Log closed Wed Dec 22 14:11:36 2010
+--- Log opened Wed Dec 22 14:16:30 2010
+14:16 Starting query in Bitlbee with marijajovicevic
+14:16 playahater| nemoj da me zasmejavash !!!
+14:16 playahater| boli me kad se smejem
+14:16 playahater| :)
+14:16 marijajovicevic| gili gili gili gili
+14:16 marijajovicevic| IT ONLY HURTS WHEN I LAUGH a?
+14:17 playahater| mooooooooreeeeeeee ..
+14:17 marijajovicevic| plaaaavooooo
+14:17 playahater| smth like that
+14:17 marijajovicevic| toolpoooo
+14:17 marijajovicevic| kiparsko
+--- Log closed Wed Dec 22 14:22:45 2010
+--- Log opened Wed Dec 22 15:08:30 2010
+15:08 Closing query with marijajovicevic
+--- Log closed Wed Dec 22 15:08:30 2010
+--- Log opened Thu Dec 23 16:27:28 2010
+16:27 Starting query in Bitlbee with marijajovicevic
+16:27 marijajovicevic| ALBUM
+16:27 marijajovicevic| procenti koliko gotovo
+16:30 playahater| ostalo je da se sredi css i da isprogramiram taj dialog
+16:30 playahater| ne rachunajutji stvari koje smo dogovorili da ne radimo sad
+16:31 playahater| poppup dialog
+16:31 playahater| :)
+16:32 playahater| okvirno .. 90%
+--- Log closed Thu Dec 23 16:37:40 2010
+--- Log opened Thu Dec 23 17:00:35 2010
+17:00 Closing query with marijajovicevic
+--- Log closed Thu Dec 23 17:00:35 2010
+--- Log opened Thu Dec 23 17:32:13 2010
+17:32 Starting query in Bitlbee with marijajovicevic
+17:32 marijajovicevic| ee aj na pus pauzu
+17:32 marijajovicevic| da te pitam nesto
+17:37          <-- marijajovicevic has quit irc
+--- Log closed Thu Dec 23 17:42:40 2010
+--- Log opened Thu Dec 23 17:53:29 2010
+17:53 Closing query with marijajovicevic
+--- Log closed Thu Dec 23 17:53:29 2010
+--- Log opened Tue Dec 28 10:16:01 2010
+10:16 Starting query in Bitlbee with marijajovicevic
+10:16 marijajovicevic| [10:00:18] samo da ne zaboravim - posto trebas da radis pop ud dialoge treba da vidimo koji je dizajn za to jer treba da uradim css..ja sam Vladi za Arsel vec uradila jedna pa da vidimo da li to i koliko mozemo da iskoristimo
+10:19 playahater| da radim pop ud dialoge,a? .. :)
+10:19 playahater| ma da .. isti je dizajn za sve ..
+10:19 playahater| nema shta posebno da se budzi
+10:19 marijajovicevic| pa bogdan je to rekao mislim trebad a ih "obalcis":D za promenu
+10:19 marijajovicevic| btw evo nesto http://blejac.com/prevodilac-zenskih-reci/
+10:21 playahater| lol .. 
+10:21 playahater| :)
+10:23 playahater| .. kontam da bude isti dizajn kao na arselu ..
+10:24 playahater| iskoristitjemo vetj postojetji css za te dijaloge ..
+10:24 marijajovicevic| JEL opt ne smes da pricas?
+10:24 marijajovicevic| opet te boli zub?:D
+10:25 playahater| e nije .. samo mi se MNOGO spava .. :)
+10:26 marijajovicevic| maa daaaj tek je utorak! sta ce sutra biti?!?:D
+10:26 playahater| pa dobro .. ne mora me podsetjash ..
+10:26 playahater| :)
+--- Log closed Tue Dec 28 10:32:17 2010
+--- Log opened Tue Dec 28 10:33:46 2010
+10:33 Closing query with marijajovicevic
+--- Log closed Tue Dec 28 10:33:46 2010
+--- Log opened Tue Dec 28 12:33:58 2010
+12:33 Starting query in Bitlbee with marijajovicevic
+12:34 Closing query with marijajovicevic
+--- Log closed Tue Dec 28 12:34:20 2010
+--- Log opened Thu Dec 30 13:46:34 2010
+13:46 Starting query in Bitlbee with marijajovicevic
+13:46 marijajovicevic| ajde vidi one izmene
+13:48 playahater| budem
+13:48 playahater| :)
+13:48 Closing query with marijajovicevic
+--- Log closed Thu Dec 30 13:48:20 2010
+--- Log opened Thu Dec 30 13:53:08 2010
+13:53 Starting query in Bitlbee with marijajovicevic
+13:53 marijajovicevic| poslala sam ti na FB za novaka
+13:53 marijajovicevic| ONO  novaka
+--- Log closed Thu Dec 30 13:58:22 2010
+--- Log opened Thu Dec 30 14:48:32 2010
+14:48 Closing query with marijajovicevic
+--- Log closed Thu Dec 30 14:48:32 2010
+--- Log opened Thu Dec 30 21:19:25 2010
+21:19 Starting query in Bitlbee with marijajovicevic
+21:19 marijajovicevic| ajde pull uradi
+21:24 marijajovicevic| ajde pull puuullll
+21:24 marijajovicevic| puuuuuuuuuul
+21:28 playahater| done;
+--- Log closed Thu Dec 30 21:34:22 2010
+--- Log opened Thu Dec 30 21:35:53 2010
+21:35 marijajovicevic| http://192.168.0.106/koura-saudi ajde vidi majke ti koja se navi vuce
+21:35 marijajovicevic| mislim ID i to
+--- Log closed Thu Dec 30 21:41:22 2010
+--- Log opened Thu Dec 30 21:45:43 2010
+21:45 marijajovicevic| ok evo sad cem
+21:45 marijajovicevic| aa ne ti ovo je za tijanu
+21:49 Closing query with marijajovicevic
+--- Log closed Thu Dec 30 21:49:19 2010
+--- Log opened Thu Dec 30 22:26:21 2010
+22:26 Starting query in Bitlbee with marijajovicevic
+22:26 marijajovicevic| http://192.168.0.106/en/arsel/home
+22:26 marijajovicevic| daj mi url za ovo da promenim neki txt
+22:27 playahater| nema za to url ..
+22:27 playahater| :/
+22:27 playahater| to je iz koda ..
+22:27 marijajovicevic| pa kako da promenim sadrzaj?
+22:27 playahater| nikako
+22:27 marijajovicevic| pa da iz koda mora da se menja
+22:27 marijajovicevic| epa super
+22:28 playahater| :/
+22:30 playahater| 0691270010
+22:30 playahater| cimni da imam broj ..
+22:30 playahater| :)
+22:31 marijajovicevic| 3 dvojcice 3 trojcice:D
+--- Log closed Thu Dec 30 22:36:22 2010
+--- Log opened Thu Dec 30 22:46:51 2010
+22:46          <-- marijajovicevic has quit irc
+--- Log closed Thu Dec 30 22:52:22 2010
+--- Log opened Thu Dec 30 23:35:08 2010
+23:35          <-- marijajovicevic has quit irc
+--- Log closed Thu Dec 30 23:40:22 2010
+--- Log opened Thu Dec 30 23:46:54 2010
+23:46 Closing query with marijajovicevic
+--- Log closed Thu Dec 30 23:46:54 2010
+--- Log opened Mon Jan 10 17:33:03 2011
+17:33 Starting query in Bitlbee with marijajovicevic
+17:33 marijajovicevic| a evo ga i drugi
+17:35 playahater| a bre .. ima se - moze se .. :)
+17:35 Closing query with marijajovicevic
+--- Log closed Mon Jan 10 17:35:35 2011
+--- Log opened Mon Jan 10 17:35:44 2011
+17:35 Starting query in Bitlbee with marijajovicevic
+17:35 marijajovicevic| pa na koji da pisem??
+17:35 marijajovicevic| na Milos ili PLAYA
+17:36 playahater| na koji ti zgodnije .. :)
+17:36 Closing query with marijajovicevic
+--- Log closed Mon Jan 10 17:36:04 2011
+--- Log opened Mon Jan 10 17:36:19 2011
+17:36 Starting query in Bitlbee with marijajovicevic
+17:36 marijajovicevic| dobro!
+17:36 playahater| :)
+17:36 playahater| hehe
+17:36 Closing query with marijajovicevic
+--- Log closed Mon Jan 10 17:36:49 2011
+--- Log opened Tue Jan 11 14:19:10 2011
+14:19 Starting query in Bitlbee with marijajovicevic
+14:19 playahater| http://localhost/en/admin/build/pages
+--- Log closed Tue Jan 11 14:24:34 2011
+--- Log opened Tue Jan 11 14:28:16 2011
+14:28          <-- marijajovicevic has quit irc
+--- Log closed Tue Jan 11 14:33:34 2011
+--- Log opened Tue Jan 11 15:18:34 2011
+15:18 Closing query with marijajovicevic
+--- Log closed Tue Jan 11 15:18:34 2011
+--- Log opened Thu Jan 13 15:59:58 2011
+15:59 Starting query in Bitlbee with marijajovicevic
+16:00 playahater| git status
+16:00 playahater| git commit -a -m "blabla"
+16:00 playahater| git pull origin develop
+16:00 playahater| git push origin develop
+16:02 Closing query with marijajovicevic
+--- Log closed Thu Jan 13 16:02:42 2011
+--- Log opened Tue Jan 18 17:17:22 2011
+17:17 Starting query in Bitlbee with marijajovicevic
+17:17 marijajovicevic| molim te zapisi ono za slike na red mine
+17:18 playahater| vazilizazili
+17:19 playahater| :P
+17:19 marijajovicevic| ja stvanro ne znam ko je ovde na 800gr brufena!?!? a;i cini se da si ti meni je haaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaj
+17:20 playahater| ja kad saznam shta me vozi .. ja ti javljam ..
+17:20 playahater| :)
+--- Log closed Tue Jan 18 17:26:51 2011
+--- Log opened Tue Jan 18 17:32:22 2011
+17:32 Closing query with marijajovicevic
+--- Log closed Tue Jan 18 17:32:22 2011
+--- Log opened Thu Jan 20 20:35:03 2011
+20:35 Starting query in Bitlbee with marijajovicevic
+20:35 playahater| http://192.168.0.102/m3com/
+20:35 Closing query with marijajovicevic
+--- Log closed Thu Jan 20 20:35:21 2011
+--- Log opened Fri Jan 21 15:26:28 2011
+15:26 Starting query in Bitlbee with marijajovicevic
+15:26 marijajovicevic| http://redmine.diwanee.com/issues/1232
+--- Log closed Fri Jan 21 15:32:16 2011
+--- Log opened Fri Jan 21 16:41:55 2011
+16:41 Closing query with marijajovicevic
+--- Log closed Fri Jan 21 16:41:55 2011
+--- Log opened Fri Jan 28 18:09:38 2011
+18:09 Starting query in Bitlbee with marijajovicevic
+18:09 marijajovicevic| The correct size for new home page slider is:
+18:09 marijajovicevic|  
+18:09 marijajovicevic| width: 648px;
+18:09 marijajovicevic| height: 258px;
+18:09 marijajovicevic| http://redmine.diwanee.com/projects/m3com-redevelopment/documents
+--- Log closed Fri Jan 28 18:15:36 2011
+--- Log opened Fri Jan 28 18:52:50 2011
+18:52 Closing query with marijajovicevic
+--- Log closed Fri Jan 28 18:52:50 2011
+--- Log opened Thu Feb 03 17:42:26 2011
+17:42 Starting query in Bitlbee with marijajovicevic
+17:42 playahater| pull
+17:42 Closing query with marijajovicevic
+--- Log closed Thu Feb 03 17:42:30 2011
+--- Log opened Thu Feb 03 17:42:36 2011
+17:42 Starting query in Bitlbee with marijajovicevic
+17:42 marijajovicevic| ok
+17:42 Closing query with marijajovicevic
+--- Log closed Thu Feb 03 17:42:41 2011
+--- Log opened Wed Feb 16 16:49:43 2011
+16:49 Starting query in Bitlbee with marijajovicevic
+16:49 marijajovicevic| http://web3.m3com.com.sa/search/node/test
+--- Log closed Wed Feb 16 16:55:05 2011
+--- Log opened Wed Feb 16 17:21:32 2011
+17:21 Closing query with marijajovicevic
+--- Log closed Wed Feb 16 17:21:32 2011
+--- Log opened Fri Feb 18 00:58:08 2011
+00:58 Starting query in Bitlbee with marijajovicevic
+00:58 marijajovicevic| http://web3.m3com.com.sa/qitaf/partner/%D8%B4%D8%B1%D9%83%D8%A9-%D9%85%D9%83%D8%AA%D8%A8%D8%A9-%D8%A7%D9%84%D8%B9%D8%A8%D9%8A%D9%83%D8%A7%D9%86
+01:01 playahater| http://web3.m3com.com.sa/node/1749/edit
+01:01 Closing query with marijajovicevic
+--- Log closed Fri Feb 18 01:01:09 2011
+--- Log opened Thu Mar 03 17:35:35 2011
+17:35 Starting query in Bitlbee with marijajovicevic
+17:35 marijajovicevic| family/cuisine HITNO
+17:35 marijajovicevic| font-size 0
+17:35 marijajovicevic| akoj e skript podivaljao kao sto si pricao da znamo
+17:35 marijajovicevic| ako nije ako su oni ubacivili d opet znamp
+17:36 playahater| ma oni su pajseri ..
+17:36 playahater| losh copy/paset
+17:36 marijajovicevic| ODLICNO!
+17:36 playahater| paste
+17:36 playahater| :P
+17:36 marijajovicevic| FENOMENALNO!!
+17:36 playahater| :)
+17:36 marijajovicevic| ali obrati paznju da je i desni panel isti takav
+17:36 marijajovicevic| pardon LEVI
+17:36 playahater| pa da .. izgleda nisu zatvorili e font tagove
+17:37 marijajovicevic| ok ok 
+17:37 marijajovicevic| znaci oni su 100%
+--- Log closed Thu Mar 03 17:42:55 2011
+--- Log opened Thu Mar 03 18:35:33 2011
+18:35 playahater| #news .pane-views-views-news-channel-block-2 {
+18:35 playahater| .view-views-news-channel.view-display-id-block_2 {
+--- Log closed Thu Mar 03 18:40:55 2011
+--- Log opened Thu Mar 03 18:54:56 2011
+18:54          <-- marijajovicevic has quit irc
+--- Log closed Thu Mar 03 19:00:55 2011
+--- Log opened Thu Mar 17 19:16:22 2011
+19:16 Starting query in Bitlbee with marijajovicevic
+19:16 marijajovicevic| pushovala css
+19:17 Closing query with marijajovicevic
+--- Log closed Thu Mar 17 19:17:31 2011
+--- Log opened Wed Apr 06 18:07:21 2011
+18:07 Starting query in Bitlbee with marijajovicevic
+18:07 marijajovicevic| http://dev.m3com.com.sa/printmail/828130
+18:07 marijajovicevic| cekiraj print
+18:07 marijajovicevic| ili znas da ej 100% sve ok
+18:07 marijajovicevic| aaa
+18:07 marijajovicevic| ovo je print mail
+18:07 marijajovicevic| onda je sve ok sorry
+18:08 playahater| mojne me shtrecash
+18:08 Closing query with marijajovicevic
+--- Log closed Wed Apr 06 18:08:28 2011
+--- Log opened Wed Apr 06 18:08:35 2011
+18:08 Starting query in Bitlbee with marijajovicevic
+18:08 marijajovicevic| sorry
+18:08 playahater| :)
+18:08 marijajovicevic| al evo ovo
+18:08 marijajovicevic| http://dev.m3com.com.sa/rss/qa
+18:08 marijajovicevic| 404
+18:09 marijajovicevic| SA odavde http://dev.m3com.com.sa/content/lorem-ipsum-test-question-5nullam-egestas-condimentum-arcu-sed-rhoncus-est-euismod-quis
+18:11          <-- marijajovicevic has quit irc
+--- Log closed Wed Apr 06 18:17:06 2011
+--- Log opened Wed Apr 06 18:19:09 2011
+18:19 Closing query with marijajovicevic
+--- Log closed Wed Apr 06 18:19:09 2011
+--- Log opened Thu Apr 07 14:13:00 2011
+14:13 Starting query in Bitlbee with marijajovicevic
+14:13 playahater| http://dev.m3com.com.sa/album/dress-gallery/admins-favorite-dress-17
+14:13 playahater| menu block u sideber-u
+--- Log closed Thu Apr 07 14:19:07 2011
+--- Log opened Thu Apr 07 14:40:52 2011
+14:40 Closing query with marijajovicevic
+--- Log closed Thu Apr 07 14:40:52 2011
+--- Log opened Wed Apr 13 15:25:26 2011
+15:25 Starting query in Bitlbee with marijajovicevic
+15:25 marijajovicevic| ako kad hocu da idem na neki drugi link dobijem ovo:
+15:25 marijajovicevic| The requested URL /m3com/Ø£Ø®Ø¨Ø§Ø± was not found on this server.
+15:25 marijajovicevic|  
+15:25 marijajovicevic| Additionally, a 404 Not Found error was encountered while trying to use an ErrorDocument to handle the request.
+15:25 playahater| aha .. ok .. sad tju da dodjem da kliknem to
+15:25 marijajovicevic| da li to znaci da treba da obrisem ili uradim nesto sa .htaccess??
+15:27 playahater| ne
+15:28 Closing query with marijajovicevic
+--- Log closed Wed Apr 13 15:28:01 2011
+--- Log opened Wed Apr 13 15:28:10 2011
+15:28 Starting query in Bitlbee with marijajovicevic
+15:28 marijajovicevic| ok! onda ne znam!onda dojdi
+15:32 marijajovicevic| jel oces?
+--- Log closed Wed Apr 13 15:38:30 2011
+--- Log opened Wed Apr 13 16:02:56 2011
+16:02 Closing query with marijajovicevic
+--- Log closed Wed Apr 13 16:02:56 2011
+--- Log opened Thu Apr 14 15:56:09 2011
+15:56 Starting query in Bitlbee with marijajovicevic
+15:56 marijajovicevic| http://www.m3com.com.sa/album/%D8%AE%D9%84%D9%81%D9%8A%D8%A7%D8%AA-%D8%AA%D8%AC%D8%B1%D9%8A%D8%AF%D9%8A%D8%A9-11
+--- Log closed Thu Apr 14 16:01:31 2011
+--- Log opened Thu Apr 14 16:10:16 2011
+16:10 Closing query with marijajovicevic
+--- Log closed Thu Apr 14 16:10:16 2011

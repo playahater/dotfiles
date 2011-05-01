@@ -1,0 +1,7 @@
+--- Log opened Thu Mar 11 00:05:46 2010
+00:05 Starting query in Bitlbee with msnjaimat
+00:05 msnjaimat| Disconnected from MSN servers: [Failure instance: Traceback (failure with no frames): twisted.internet.error.ConnectionLost: Connection to the other side was lost in a non-clean fashion.
+00:05 msnjaimat| ]
+00:05          <-- msnjaimat has quit irc
+00:07 Closing query with msnjaimat
+--- Log closed Thu Mar 11 00:07:40 2010

@@ -1,0 +1,567 @@
+--- Log opened Sun Oct 03 15:21:24 2010
+15:21 Starting query in Bitlbee with markoobradovic
+15:21 playahater| http://ftp.drupal.org/files/projects/addthis-6.x-2.9.tar.gz
+15:25 playahater| http://ftp.drupal.org/files/projects/service_links-6.x-1.1.tar.gz
+--- Log closed Sun Oct 03 15:30:53 2010
+--- Log opened Sun Oct 03 16:10:50 2010
+16:10 playahater|  202  if (module_exists('service_links')) {
+16:10 playahater|  203     $vars['service_links'] = theme('links', service_links_render($vars['node'], TRUE));
+16:10 playahater|  204   }
+16:11 playahater|       <?php print $service_links; ?>
+--- Log closed Sun Oct 03 16:16:53 2010
+--- Log opened Sun Oct 03 16:26:51 2010
+16:26 playahater| <?php
+16:26 playahater| $links = service_links_render($node, TRUE);
+16:26 playahater| print '<div class="service-label">'. t('Bookmark/Search this post with: ') .'</div>'. theme('links', $links);
+16:26 playahater| ?>
+--- Log closed Sun Oct 03 16:31:53 2010
+--- Log opened Sun Oct 03 16:33:56 2010
+16:33 Closing query with markoobradovic
+--- Log closed Sun Oct 03 16:33:56 2010
+--- Log opened Mon Oct 04 20:04:41 2010
+20:04 Starting query in Bitlbee with markoobradovic
+20:04 playahater| https://drupal.org/node/175013#comment-2882118
+--- Log closed Mon Oct 04 20:09:53 2010
+--- Log opened Mon Oct 04 22:06:17 2010
+22:06 Closing query with markoobradovic
+--- Log closed Mon Oct 04 22:06:17 2010
+--- Log opened Tue Oct 05 20:03:16 2010
+20:03 Starting query in Bitlbee with markoobradovic
+20:03 playahater| jesi?
+20:03 playahater| :)
+20:03 markoobradovic| cek sec
+20:03 playahater| ql .. lagano ..
+20:03 markoobradovic| 
+20:03 markoobradovic| 
+20:03 markoobradovic| 18.28
+20:03 markoobradovic| Bogdan Brkić
+20:03 markoobradovic| 18.28
+20:03 markoobradovic| Server je spreman na ovoj IP
+20:03 markoobradovic| http://92.243.21.98/
+20:03 markoobradovic| 
+20:03 markoobradovic| Treba modul za varnish da se doda  i cron kada budemo pustali sajt.
+20:03 markoobradovic| 
+20:03 markoobradovic| FTP je
+20:03 markoobradovic| ftp:://92.243.21.98 <http://92.243.21.98/>
+20:03 markoobradovic| login: ten
+20:03 markoobradovic| password: ha0YBH7i6auX
+20:03 markoobradovic| 
+20:03 markoobradovic| PHPMyAdmin
+20:03 markoobradovic| http://92.243.21.98:8080/phpmyadmin/
+20:03 markoobradovic| login: shoofonline
+20:03 markoobradovic| password: PF6jZPrjtLCNuy47
+20:03 markoobradovic| 
+20:03 markoobradovic| Database se zove shoofonline
+20:03 markoobradovic| 18.28
+20:03 markoobradovic| za video portal podaci
+20:03 markoobradovic| evo
+--- Log closed Tue Oct 05 20:09:04 2010
+--- Log opened Tue Oct 05 20:19:26 2010
+20:19 playahater| drugare .. nikako ne mogu da se logujem preko ftp-a
+20:19 playahater| server: 92.243.21.98; user:ten; password:ha0YBH7i6auX;
+20:19 markoobradovic| jesi li primetio da ima dva puta :: u ftp
+20:20 markoobradovic| obrisi jednu
+20:20 playahater| ma da .. al meni ne treba taj prefix .. 
+20:20 playahater| meni je bitna samo ip adresa, user i pass ..
+20:20 markoobradovic| ja sam se logovao normalno
+20:20 playahater| i kaze mi ..
+20:20 playahater| Error:	Connection timed out
+20:20 playahater| Error:	Failed to retrieve directory listing
+20:20 playahater| i kod mene i kod marka isto vratja ..
+20:20 markoobradovic| cek
+20:21 playahater| mozda je zabranjen pristup sa bilo koje ip adrese ..
+20:21 markoobradovic| jel si na ftp ili sftp
+20:21 playahater| ftp
+20:21 markoobradovic| oces boki da te pozove da vidimo da li mozemo da to uradimo telefonom
+20:21 markoobradovic| ?
+20:21 playahater| ae
+--- Log closed Tue Oct 05 20:27:04 2010
+--- Log opened Tue Oct 05 20:28:52 2010
+20:28 playahater| evo ti screenshot greshke na mail .. 
+20:29 markoobradovic| ok
+20:29 playahater| da smislimo neki ssh, da podesimo nekako ftp .. ili da probamo telefonom ..
+20:30 playahater| uglavnom .. problem je kurac .. kontam da je neka glupost ..
+20:30 playahater| idem za chas da se iskenjam .. pingujem za 5-10 min .. :) ..
+20:30 markoobradovic| ok
+--- Log closed Tue Oct 05 20:36:04 2010
+--- Log opened Tue Oct 05 21:10:04 2010
+21:10          <-- markoobradovic has quit irc
+--- Log closed Tue Oct 05 21:15:04 2010
+--- Log opened Tue Oct 05 21:53:26 2010
+21:53 Closing query with markoobradovic
+--- Log closed Tue Oct 05 21:53:26 2010
+--- Log opened Wed Oct 06 12:20:29 2010
+12:20 Starting query in Bitlbee with markoobradovic
+12:20 markoobradovic| not-front logged-in page-node node-type-ct-video-clip no-sidebars admin-nw admin-vertical admin-df admin-expanded  i18n-en col-1 
+12:21 markoobradovic| <?php // $Id: page.tpl.php,v 1.15.4.7 2008/12/23 03:40:02 designerbrent Exp $ ?>
+12:21 markoobradovic| <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+12:21 markoobradovic| 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+12:21 markoobradovic| 
+12:21 markoobradovic| <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language ?>" lang="<?php print $language->language ?>">
+12:21 markoobradovic| <head>
+12:21 markoobradovic| 	<title><?php print $head_title ?></title>
+12:21 markoobradovic| 	<meta http-equiv="content-language" content="<?php print $language->language ?>" />
+12:21 markoobradovic| 	<?php print $meta; ?>
+12:21 markoobradovic|   <?php print $head; ?>
+12:21 markoobradovic|   <?php print $styles; ?>  
+12:21 markoobradovic|   <!--[if lte IE 7]>
+12:21 markoobradovic|     <link rel="stylesheet" href="<?php print $path; ?>blueprint/blueprint/ie.css" type="text/css" media="screen, projection">
+12:21 markoobradovic|   	<link href="<?php print $path; ?>css/ie.css" rel="stylesheet"  type="text/css"  media="screen, projection" />
+12:21 markoobradovic|   <![endif]-->  
+12:21 markoobradovic|   <!--[if lte IE 6]>
+12:21 markoobradovic|   	<link href="<?php print $path; ?>css/ie6.css" rel="stylesheet"  type="text/css"  media="screen, projection" />
+12:21 markoobradovic|   <![endif]-->  
+12:21 markoobradovic| </head>
+12:21 markoobradovic| 
+12:21 markoobradovic| <body class="<?php print $body_classes; ?>">
+12:21 markoobradovic| <div class="container">
+12:21 markoobradovic|   <div id="header" class="span-24 last">
+12:21 markoobradovic|   <div class="span-19 apend-1"><div class="banner"> <?php print $banner; ?> </div></div>
+12:21 markoobradovic|     <div id="logo" class="span-4 last">
+12:21 markoobradovic|       <a title="<?php print $site_name; ?><?php if ($site_slogan != '') print ' &ndash; '. $site_slogan; ?>" href="<?php print url(); ?>"><img src="<?php print base_path(); ?>sites/default/files/shoof-logo.png" /></a></div>
+12:21 markoobradovic| 
+12:21 markoobradovic|    <div class="span-24 last">
+12:21 markoobradovic|     <?php print $header; ?> </div>
+12:21 markoobradovic| 
+12:21 markoobradovic| </div>
+12:21 markoobradovic| 
+12:21 markoobradovic|  
+12:21 markoobradovic|   <div class="span-24 videoContent">
+12:21 markoobradovic|     <?php
+12:21 markoobradovic| 
+12:21 markoobradovic|       if ($tabs != '') {
+12:21 markoobradovic|         print '<div class="tabs">'. $tabs .'</div>';
+12:21 markoobradovic|       }
+12:21 markoobradovic| 
+12:21 markoobradovic|       if ($messages != '') {
+12:21 markoobradovic|         print '<div id="messages">'. $messages .'</div>';
+12:21 markoobradovic|       }
+12:21 markoobradovic|       
+12:21 markoobradovic|         
+12:21 markoobradovic| 
+12:21 markoobradovic|       print $help; // Drupal already wraps this one in a class      
+12:21 markoobradovic| 
+12:21 markoobradovic| 
+12:21 markoobradovic|     
+12:21 markoobradovic|     print '<div class="span-8"><div class="videoAd">'. $video_ad .'</div></div>';  
+12:21 markoobradovic|     
+12:21 markoobradovic|     print $content; 
+12:21 markoobradovic|     
+12:21 markoobradovic| 	if ($video_left){
+12:21 markoobradovic|         print '<div class="'. $left_classes .' span-8 leftSidebarVideo">'. $video_left .'</div>';
+12:21 markoobradovic| 	} 
+12:21 markoobradovic| 	
+12:21 markoobradovic| 	print '<div class="'. $left_classes .' span-16 last commentContainer videoClipBody">'. $comments .'</div>';
+12:21 markoobradovic|       
+12:21 markoobradovic|     print $feed_icons; 
+12:21 markoobradovic|     
+12:21 markoobradovic|     ?>
+12:21 markoobradovic|     
+12:21 markoobradovic|     </div>
+12:21 markoobradovic|     </div>
+12:21 markoobradovic|    <div class="footerWrapper"> 
+12:21 markoobradovic|    <div class="container">
+12:21 markoobradovic|    <div class="span-24 last footerTop">
+12:21 markoobradovic|     <?php if ($footer_message | $footer): ?>
+12:21 markoobradovic|       <div id="footer">
+12:21 markoobradovic|    <?php if ($footer): ?>
+12:21 markoobradovic|        <?php print $footer; ?>
+12:21 markoobradovic|         <?php endif; ?></div></div>
+12:21 markoobradovic|  <div class="span-4 append-3 footerLeft"> <?php print $footer_left ?></div>
+12:21 markoobradovic|          <div class="span-17 last footerRight">  <?php print $footer_right ?></div>
+12:21 markoobradovic|         <?php if ($footer_message): ?>
+12:21 markoobradovic|           <div id="footer-message"><?php print $footer_message; ?></div>
+12:21 markoobradovic|         <?php endif; ?>
+12:21 markoobradovic|       </div>
+12:21 markoobradovic|     <?php endif; ?>
+12:21 markoobradovic|   </div>
+12:21 markoobradovic| </div>
+12:21 markoobradovic|   <?php if ($right): ?>
+12:21 markoobradovic|     <div class="<?php print $right_classes; ?>"><?php print $right; ?></div>
+12:21 markoobradovic|   <?php endif ?>
+12:21 markoobradovic|   
+12:21 markoobradovic| 
+12:21 markoobradovic|   <?php print $scripts ?>
+12:21 markoobradovic|   <?php print $closure; ?>
+12:21 markoobradovic| 
+12:21 markoobradovic| </div>
+12:21 markoobradovic| </div> 
+12:21 markoobradovic| </body>
+12:21 markoobradovic| </html>
+--- Log closed Wed Oct 06 12:27:28 2010
+--- Log opened Wed Oct 06 12:34:23 2010
+12:34 Closing query with markoobradovic
+--- Log closed Wed Oct 06 12:34:23 2010
+--- Log opened Wed Oct 06 16:26:11 2010
+16:26 Starting query in Bitlbee with markoobradovic
+16:26 playahater| http://www.rubenswieringa.com/blog/flex-book-component-beta
+--- Log closed Wed Oct 06 16:31:28 2010
+--- Log opened Wed Oct 06 16:36:23 2010
+16:36 playahater| http://www.jpageflip.de/index_en.php
+16:36 playahater| http://forum.jquery.com/topic/page-flip-effect
+--- Log closed Wed Oct 06 16:42:28 2010
+--- Log opened Wed Oct 06 17:43:20 2010
+17:43 Closing query with markoobradovic
+--- Log closed Wed Oct 06 17:43:20 2010
+--- Log opened Mon Oct 18 14:34:04 2010
+14:34 Starting query in Bitlbee with markoobradovic
+14:34 playahater| https://drupal.org/node/133977
+14:34 Closing query with markoobradovic
+--- Log closed Mon Oct 18 14:34:07 2010
+--- Log opened Wed Oct 27 10:15:01 2010
+10:15 Starting query in Bitlbee with markoobradovic
+10:15 markoobradovic| http://www.youtube.com/watch?v=BaeRpb23Mqs
+--- Log closed Wed Oct 27 10:20:05 2010
+--- Log opened Wed Oct 27 10:29:17 2010
+10:29 Closing query with markoobradovic
+--- Log closed Wed Oct 27 10:29:17 2010
+--- Log opened Thu Oct 28 13:44:47 2010
+13:44 Starting query in Bitlbee with markoobradovic
+13:44 markoobradovic| #3 - Error writing file './click/admin.frm' (Errcode: 122)
+--- Log closed Thu Oct 28 13:50:24 2010
+--- Log opened Thu Oct 28 14:45:59 2010
+14:45 Closing query with markoobradovic
+--- Log closed Thu Oct 28 14:45:59 2010
+--- Log opened Sat Nov 06 14:18:46 2010
+14:18 Starting query in Bitlbee with markoobradovic
+14:18 playahater| http://help.github.com/mac-key-setup/
+--- Log closed Sat Nov 06 14:23:53 2010
+--- Log opened Sat Nov 06 15:25:02 2010
+15:25          <-- markoobradovic has quit irc
+--- Log closed Sat Nov 06 15:30:53 2010
+--- Log opened Sat Nov 06 16:04:00 2010
+16:04 Closing query with markoobradovic
+--- Log closed Sat Nov 06 16:04:00 2010
+--- Log opened Mon Nov 15 10:11:17 2010
+10:11 Starting query in Bitlbee with markoobradovic
+10:11 markoobradovic| http://sixrevisions.com/infographs/web-designers-vs-web-developers/
+--- Log closed Mon Nov 15 10:17:13 2010
+--- Log opened Mon Nov 15 10:22:24 2010
+10:22 playahater| :)
+10:22 Closing query with markoobradovic
+--- Log closed Mon Nov 15 10:22:30 2010
+--- Log opened Tue Nov 30 10:34:09 2010
+10:34 Starting query in Bitlbee with markoobradovic
+10:34 playahater| http://drupal.org/project/ubercart
+10:34 markoobradovic| <FONT>cool</FONT>
+10:34 playahater| chisto da imash predstavu shta sve moze po defaultu .. :)
+10:34 playahater| na klik
+10:34 playahater| :)
+10:34 markoobradovic| <FONT>cool</FONT>
+10:36 Closing query with markoobradovic
+--- Log closed Tue Nov 30 10:36:51 2010
+--- Log opened Mon Dec 06 16:28:35 2010
+16:28 Starting query in Bitlbee with markoobradovic
+16:28 playahater| boocha ..
+16:28 playahater| vidi shta sam nasho
+16:28 playahater| http://drupal.org/project/megamenu
+16:28 playahater| :)
+16:28 playahater| teshka beta .. ali .. ja bih probao
+16:28 playahater| :)
+16:28 Closing query with markoobradovic
+--- Log closed Mon Dec 06 16:28:51 2010
+--- Log opened Mon Dec 06 16:29:11 2010
+16:29 Starting query in Bitlbee with markoobradovic
+16:29 markoobradovic| <FONT>znam za ovo </FONT>
+16:29 markoobradovic| <FONT>video u petak</FONT>
+16:29 markoobradovic| <FONT>plasi me ta beta</FONT>
+16:29 markoobradovic| <FONT>ali moz se proba</FONT>
+16:31 playahater| misim da nije frka staviti betu za takvu stvar ..
+16:31 playahater| probash .. ako radi .. cepash ..
+16:31 playahater| :)
+16:32 markoobradovic| <FONT>icepigu</FONT>
+16:32 markoobradovic| <FONT>:)</FONT>
+--- Log closed Mon Dec 06 16:37:15 2010
+--- Log opened Mon Dec 06 16:57:36 2010
+16:57 playahater| moj omiljeni padez .. :)
+16:57 Closing query with markoobradovic
+--- Log closed Mon Dec 06 16:57:38 2010
+--- Log opened Wed Dec 08 15:44:21 2010
+15:44 Starting query in Bitlbee with markoobradovic
+15:44 playahater| http://drupal.org/project/unlimited_css
+--- Log closed Wed Dec 08 15:49:24 2010
+--- Log opened Wed Dec 08 15:56:40 2010
+15:56 Closing query with markoobradovic
+--- Log closed Wed Dec 08 15:56:40 2010
+--- Log opened Thu Dec 09 15:55:13 2010
+15:55 Starting query in Bitlbee with markoobradovic
+15:55 markoobradovic| http://rafael.adm.br/css_browser_selector/
+--- Log closed Thu Dec 09 16:00:58 2010
+--- Log opened Thu Dec 09 17:18:00 2010
+17:18 Closing query with markoobradovic
+--- Log closed Thu Dec 09 17:18:00 2010
+--- Log opened Sat Dec 11 15:54:37 2010
+15:54 Starting query in Bitlbee with markoobradovic
+15:54 markoobradovic| jebe me git
+15:54 markoobradovic| imas sec
+15:58 Closing query with markoobradovic
+--- Log closed Sat Dec 11 15:58:13 2010
+--- Log opened Sun Dec 12 02:43:19 2010
+02:43 Starting query in Bitlbee with markoobradovic
+02:43 markoobradovic| a7b_mama 1234567890
+--- Log closed Sun Dec 12 02:48:29 2010
+--- Log opened Sun Dec 12 03:53:14 2010
+03:53          <-- markoobradovic has quit irc
+--- Log closed Sun Dec 12 03:58:29 2010
+--- Log opened Sun Dec 12 04:46:48 2010
+04:46 Closing query with markoobradovic
+--- Log closed Sun Dec 12 04:46:48 2010
+--- Log opened Mon Dec 13 10:09:18 2010
+10:09 Starting query in Bitlbee with markoobradovic
+10:09 markoobradovic| http://dowebsitesneedtolookexactlythesameineverybrowser.com/
+--- Log closed Mon Dec 13 10:14:25 2010
+--- Log opened Mon Dec 13 11:39:01 2010
+11:39 Closing query with markoobradovic
+--- Log closed Mon Dec 13 11:39:01 2010
+--- Log opened Thu Dec 23 12:08:38 2010
+12:08 Starting query in Bitlbee with markoobradovic
+12:08 markoobradovic| kako da predjem sa mastera na develop
+12:08 markoobradovic| ?
+12:09 playahater| git checkout develop
+12:09 markoobradovic| <FONT>ok</FONT>
+12:09 markoobradovic| <FONT>git chekout develop</FONT>
+12:09 playahater| prvo napravish branch 
+12:09 playahater| git branch develop
+12:10 playahater| pa git checkout develop
+12:10 playahater| :)
+12:10 markoobradovic| <FONT>ok sredio sam</FONT>
+12:10 playahater| ql
+12:11 markoobradovic| <FONT>a da se povezem na bazu posto sad imam drupal bez baze</FONT>
+12:11 markoobradovic| <FONT>koji fajl sta menjam</FONT>
+12:11 playahater| settings.php
+12:12 playahater| mislim da sam ti ga slao na mail
+12:12 markoobradovic| <FONT>ok </FONT>
+12:12 playahater| chekiraj .. ako nisam .. shaljem opet
+12:12 markoobradovic| <FONT>naci cu</FONT>
+12:12 playahater| ql
+12:14 markoobradovic| <FONT>i stavim ga u sites/all/default ?</FONT>
+12:15 markoobradovic| <FONT>mislim na sites/default</FONT>
+12:15 playahater| sites/default
+12:15 playahater| to
+12:15 playahater| :)
+12:15 markoobradovic| <FONT>jbt opet nesto nisam uradio...</FONT>
+12:16 playahater| stizem
+12:16 playahater| :)
+--- Log closed Thu Dec 23 12:22:40 2010
+--- Log opened Thu Dec 23 12:44:37 2010
+12:44 Closing query with markoobradovic
+--- Log closed Thu Dec 23 12:44:37 2010
+--- Log opened Thu Dec 23 17:13:27 2010
+17:13 Starting query in Bitlbee with markoobradovic
+17:13 markoobradovic| <FONT>kako dodajem fajl koji se nalazi na ovoj putanji: sites/all/themes/m3com/images/content-banner-brodaband.png</FONT>
+17:13 markoobradovic| <FONT>???</FONT>
+17:13 markoobradovic| <FONT>git add ? sites/all/themes/m3com/images/content-banner-brodaband.png ?</FONT>
+17:14 markoobradovic| <FONT>ili celu putanju sa httpili kako</FONT>
+17:14 playahater| bez http ako dodajesh file u git
+17:18 Closing query with markoobradovic
+--- Log closed Thu Dec 23 17:18:20 2010
+--- Log opened Thu Jan 06 05:21:17 2011
+05:21 Starting query in Bitlbee with markoobradovic
+05:22 Closing query with markoobradovic
+--- Log closed Thu Jan 06 05:22:39 2011
+--- Log opened Mon Jan 17 17:25:03 2011
+17:25 Starting query in Bitlbee with markoobradovic
+17:25 markoobradovic| Microsoft, Yahoo agree on buyout price
+17:25 markoobradovic| Redmond nabs Yahoo's datacenters, Web properties, and ad platform for $47.2 billion
+17:26 playahater| ipak jesu? ..
+17:26 playahater| eto .. svaki dan neshto novo ..
+17:26 playahater| :)
+17:27 playahater| mada ..
+17:27 playahater| In February 2008, Microsoft Corporation made an unsolicited bid to acquire Yahoo! for USD $44.6 billion. Yahoo! subsequently formally rejected the bid, claiming that it "substantially undervalues" Yahoo! and was not in the interest of its shareholders. Three years later, Yahoo! had a stock market capitalization of USD $22.24 billion.[8] Carol Bartz replaced cofounder Jerry Yang in January 2009[9]
+--- Log closed Mon Jan 17 17:33:06 2011
+--- Log opened Mon Jan 17 17:53:25 2011
+17:53 Closing query with markoobradovic
+--- Log closed Mon Jan 17 17:53:25 2011
+--- Log opened Fri Jan 21 11:11:57 2011
+11:11 Starting query in Bitlbee with markoobradovic
+11:11 markoobradovic| pa de si miskez ????
+11:12 markoobradovic| sta radis?
+11:12 playahater| evo .. :) .. kliktanje ..
+11:12 markoobradovic| kakav ti je Drupal?
+11:12 markoobradovic| <FONT>A Jquery?</FONT>
+11:12 markoobradovic| <FONT>sve znas ???!!</FONT>
+11:12 markoobradovic| <FONT>Ja sam cuo da znas i Flash?</FONT>
+11:12 markoobradovic| <FONT>CCCCC</FONT>
+11:13 markoobradovic| <FONT>A jel ti ulazi i vikendom</FONT>
+11:13 markoobradovic| <FONT>???</FONT>
+11:13 markoobradovic| <FONT>Stvarnoooo?!!!!</FONT>
+11:13 markoobradovic| <FONT>Strava!</FONT>
+11:13 markoobradovic| <FONT>Bices srecan u ageni!!</FONT>
+11:14 playahater| ti si lood .. :)
+11:14 markoobradovic| <FONT>ma slusam razgovor za posao</FONT>
+11:14 playahater| aaaaaaaaaaaaaaaaaa....
+11:14 playahater| da ..
+11:14 markoobradovic| <FONT>tako ide koketiranje pre jebanja</FONT>
+11:14 playahater| ima smisla .. :)
+11:14 playahater| ne seri .. hahaha
+11:14 playahater| pa da ..
+11:14 playahater| :)
+--- Log closed Fri Jan 21 11:20:16 2011
+--- Log opened Fri Jan 21 14:25:54 2011
+14:25 Closing query with markoobradovic
+--- Log closed Fri Jan 21 14:25:54 2011
+--- Log opened Sat Jan 22 16:43:55 2011
+16:43 Starting query in Bitlbee with markoobradovic
+16:43 markoobradovic| http://localhost:8888/m3com/quitaf
+16:44 markoobradovic| ovo se opasno sjebalo
+16:44 markoobradovic| pomesali su vam se vitamin i quitaf
+--- Log closed Sat Jan 22 16:49:28 2011
+--- Log opened Sat Jan 22 17:05:15 2011
+17:05 markoobradovic| imam zute dugmice svuda na family ali nema gde da se edituje
+17:05 playahater| ok .. sad tju da nadjem ..
+17:06 playahater| daj mi link do stranice gde su ti dugmitji
+17:06 markoobradovic| <FONT>http://localhost:8888/m3com/family/wedding/guest-list</FONT>
+17:06 markoobradovic| <FONT>recimo</FONT>
+17:07 markoobradovic| <FONT>ali ima ih i na kuhinji pa recepti i tako uglavnom svuda na family</FONT>
+17:08 playahater| http://localhost/en/admin/build/ctools-content/list/wedding_buttons/edit
+17:09 markoobradovic| <FONT>ok</FONT>
+17:09 playahater| ako ima josh neki .. samo mi pusti link
+--- Log closed Sat Jan 22 17:14:28 2011
+--- Log opened Sat Jan 22 17:33:38 2011
+17:33 markoobradovic| <FONT>http://localhost:8888/m3com/album/gallery/jhfghjfghj</FONT>
+17:38 markoobradovic| <FONT><U>http://localhost:8888/m3com/album/gallery/jhfghjfghj</U></FONT>
+--- Log closed Sat Jan 22 17:44:28 2011
+--- Log opened Sat Jan 22 17:44:46 2011
+17:44 Closing query with markoobradovic
+--- Log closed Sat Jan 22 17:44:46 2011
+--- Log opened Sun Jan 23 11:02:38 2011
+11:02 Starting query in Bitlbee with markoobradovic
+11:02 playahater| kako reche .. za one pozadine .. :)
+--- Log closed Sun Jan 23 11:04:23 2011
+--- Log opened Sun Jan 23 11:05:04 2011
+11:05 Starting query in Bitlbee with markoobradovic
+11:05 playahater| sadok ?
+11:05 playahater| daj link za one pozadine .. :)
+11:07          <-- markoobradovic has quit irc
+--- Log closed Sun Jan 23 11:12:37 2011
+--- Log opened Sun Jan 23 12:38:21 2011
+12:38          <-- markoobradovic has quit irc
+--- Log closed Sun Jan 23 12:43:37 2011
+--- Log opened Sun Jan 23 14:02:38 2011
+14:02          <-- markoobradovic has quit irc
+--- Log closed Sun Jan 23 14:08:37 2011
+--- Log opened Sun Jan 23 17:48:07 2011
+17:48 Closing query with markoobradovic
+--- Log closed Sun Jan 23 17:48:07 2011
+--- Log opened Tue Jan 25 11:50:46 2011
+11:50 Starting query in Bitlbee with markoobradovic
+11:50 markoobradovic| http://www.youtube.com/watch?v=KCv2cgIlnHA
+11:51 playahater| the one and only ..
+11:51 playahater| :)
+--- Log closed Tue Jan 25 11:57:02 2011
+--- Log opened Tue Jan 25 12:50:27 2011
+12:50 markoobradovic| <FONT>http://2bits.com/drupal-planet/reducing-server-resource-utilization-busy-sites-implementing-fast-404s-drupal.html</FONT>
+--- Log closed Tue Jan 25 12:56:02 2011
+--- Log opened Tue Jan 25 13:54:16 2011
+13:54 Closing query with markoobradovic
+--- Log closed Tue Jan 25 13:54:16 2011
+--- Log opened Mon Jan 31 20:25:49 2011
+20:25 Starting query in Bitlbee with markoobradovic
+20:25 markoobradovic| jos crncis?
+20:26          <-- markoobradovic has quit irc
+--- Log closed Mon Jan 31 20:32:26 2011
+--- Log opened Mon Jan 31 20:32:41 2011
+20:32 playahater| .q
+20:32 Closing query with markoobradovic
+--- Log closed Mon Jan 31 20:32:44 2011
+--- Log opened Wed Feb 02 17:43:04 2011
+17:43 Starting query in Bitlbee with markoobradovic
+17:43 playahater| http://wfest.org:8080/phpmy/
+17:43 Closing query with markoobradovic
+--- Log closed Wed Feb 02 17:43:09 2011
+--- Log opened Thu Feb 03 11:45:51 2011
+11:45 Starting query in Bitlbee with markoobradovic
+11:45 playahater| naleteo pa rekoh ti prosledim ..
+11:45 playahater| http://spheredev.org/wiki/Git_for_the_lazy
+11:46 playahater| :)
+11:46 Closing query with markoobradovic
+--- Log closed Thu Feb 03 11:46:02 2011
+--- Log opened Thu Feb 03 13:46:14 2011
+13:46 Starting query in Bitlbee with markoobradovic
+13:46 playahater| pull
+13:46 Closing query with markoobradovic
+--- Log closed Thu Feb 03 13:46:21 2011
+--- Log opened Thu Feb 03 15:31:17 2011
+15:31 Starting query in Bitlbee with markoobradovic
+15:31 playahater| pull pls .. :)
+15:31 Closing query with markoobradovic
+--- Log closed Thu Feb 03 15:31:19 2011
+--- Log opened Thu Feb 03 17:42:36 2011
+17:42 Starting query in Bitlbee with markoobradovic
+17:42 playahater| pull
+17:42 Closing query with markoobradovic
+--- Log closed Thu Feb 03 17:42:39 2011
+--- Log opened Fri Feb 04 11:14:21 2011
+11:14 Starting query in Bitlbee with markoobradovic
+11:14 markoobradovic| http://localhost:8888/m3com/en/wi-fi/coverage-map
+11:14 Closing query with markoobradovic
+--- Log closed Fri Feb 04 11:14:56 2011
+--- Log opened Fri Feb 04 13:29:24 2011
+13:29 Starting query in Bitlbee with markoobradovic
+13:29 markoobradovic| http://wifi.m3com.com.sa/gmap
+--- Log closed Fri Feb 04 13:34:55 2011
+--- Log opened Fri Feb 04 15:36:02 2011
+15:36 Closing query with markoobradovic
+--- Log closed Fri Feb 04 15:36:02 2011
+--- Log opened Thu Feb 10 14:10:08 2011
+14:10 Starting query in Bitlbee with markoobradovic
+14:10 markoobradovic| http://www.youtube.com/watch?v=4ba1BqJ4S2M
+--- Log closed Thu Feb 10 14:15:54 2011
+--- Log opened Thu Feb 10 16:34:52 2011
+16:34 playahater| daj linak za bubu
+16:34 playahater| :)
+16:34 Closing query with markoobradovic
+--- Log closed Thu Feb 10 16:34:54 2011
+--- Log opened Thu Feb 10 16:42:51 2011
+16:42 Starting query in Bitlbee with markoobradovic
+16:42 markoobradovic| http://www.youtube.com/blackbeetle
+--- Log closed Thu Feb 10 16:47:54 2011
+--- Log opened Thu Feb 10 18:51:21 2011
+18:51          <-- markoobradovic has quit irc
+--- Log closed Thu Feb 10 18:56:54 2011
+--- Log opened Mon Mar 07 15:51:18 2011
+15:51 Starting query in Bitlbee with markoobradovic
+15:51 playahater| mislim da imamo vetj gotovu "coda-slider" funkcionalnost u drupalu
+15:51 playahater| :)
+15:51 playahater| samo da potvrdim i vichem
+15:51 markoobradovic| <FONT>what?</FONT>
+15:51 playahater| :)
+15:52 markoobradovic| <FONT>coool</FONT>
+15:52 markoobradovic| <FONT>to mi kazi</FONT>
+15:52 playahater| :)
+--- Log closed Mon Mar 07 15:57:10 2011
+--- Log opened Mon Mar 07 16:55:34 2011
+16:55 Closing query with markoobradovic
+--- Log closed Mon Mar 07 16:55:34 2011
+--- Log opened Mon Mar 07 17:15:35 2011
+17:15 Starting query in Bitlbee with markoobradovic
+--- Log closed Mon Mar 07 17:21:10 2011
+--- Log opened Mon Mar 07 17:42:23 2011
+17:42 playahater| 192.168.0.139/en/test-slide
+17:42 playahater| jel nam ovako neshto pije vodu?
+17:42 playahater| :)
+17:42 Closing query with markoobradovic
+--- Log closed Mon Mar 07 17:42:38 2011
+--- Log opened Wed Mar 09 14:48:51 2011
+14:48 Starting query in Bitlbee with markoobradovic
+14:49 playahater| http://dev.m3com.com.sa:8080/en
+14:49 playahater| chekiraj .. ako je ok .. da pushujemo na master
+14:49 Closing query with markoobradovic
+--- Log closed Wed Mar 09 14:49:20 2011
+--- Log opened Thu Mar 10 16:42:44 2011
+16:42 Starting query in Bitlbee with markoobradovic
+16:42 playahater| probaj iz explodera => 192.168.0.139/kooraonline/free-for-all
+16:42 Closing query with markoobradovic
+--- Log closed Thu Mar 10 16:42:50 2011
+--- Log opened Mon Mar 14 17:50:29 2011
+17:50 Starting query in Bitlbee with markoobradovic
+17:50 playahater| http://dev.m3com.com.sa:8080/prayer-time/view
+17:50 Closing query with markoobradovic
+--- Log closed Mon Mar 14 17:50:31 2011
+--- Log opened Mon Mar 14 17:53:01 2011
+17:53 Starting query in Bitlbee with markoobradovic
+17:53 markoobradovic| <FONT>pane-menu-menu-islam-nav</FONT>
+--- Log closed Mon Mar 14 17:58:02 2011
+--- Log opened Mon Mar 14 18:08:39 2011
+18:08 Closing query with markoobradovic
+--- Log closed Mon Mar 14 18:08:39 2011

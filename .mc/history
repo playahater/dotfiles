@@ -1,0 +1,438 @@
+
+[inp SMB link to machine ]
+0=192.168.0.3
+
+[Search]
+0=live
+
+[inp Unselect ]
+0=*
+
+[inpCreate a new Directory]
+0=lietome
+1=pi
+2=wrestler
+3=lb
+4=books
+5=emilly-shop
+6=shomi
+7=70
+8=irssi
+9=scripts
+10=autorun
+11=audio_books
+12=.vim
+13=better.off.ted
+14=work
+15=dvd
+16=jazz_in_the_house
+17=cuba_libre
+18=cert
+19=app
+20=nove
+21=ram
+22=sep
+23=claw
+24=otac
+25=games
+26=stuff
+27=njah
+28=.dzen
+29=css
+30=flags
+31=roun
+32=kernel
+33=sisa
+34=public enemy
+35=roni_size
+36=slike
+37=all
+38=jpg
+39=weeds
+40=tiop_gear
+41=top_gear
+42=pes
+43=modules
+44=themes
+45=dokumenta
+46=maca_mara
+47=sport
+48=iriver
+49=vratice_se_rode
+50=theme
+51=sokogym
+52=moma
+53=iso
+54=podcast
+55=lock_sotck_two_smoking_barrels
+56=trainspotting
+57=subtitle
+58=monk
+59=eureka
+
+[inpmc.fm.panel-filter]
+0=*
+
+[inpmc.fm.menu.exec.parameter]
+0=gqview
+
+[user-fmt-input]
+0=half type name | size | perm
+
+[mini-input]
+0=half type name | size | perm
+
+[input]
+0=/
+1=playahater
+
+[save-as]
+0=settings.php
+
+[inp:ftplink_cmd: FTP to machine ]
+0=/#ftp:playhater@freebsd
+1=/#ftp:playahater@freebsd
+2=playahater:bl3ya.@freebsd
+3=/#ftp:veskomic@veskomicovic.com
+4=client.agena.rs/m3com/prototype-html/
+5=ftp:ten:password:ha0YBH7i6auX@92.243.21.98
+6=/#ftp:ten@92.243.21.98
+7=ftp:ten:ha0YBH7i6auX@92.243.21.98
+8=ten:ha0YBH7i6auX@92.243.21.98
+9=ten:ha0YBH7i6auX@92.243.21.98/
+10=m3com:m3com#admin@196.204.80.146:36
+11=ineskamo:Cairodrome_12?@ineskamontenegro.ru
+
+[inp:smblink_cmd: SMB link to machine ]
+0=192.168.0.240
+
+[auth_domain]
+0=VOID
+1=WORKGROUP
+
+[auth_name]
+0=PLAYAHATER
+
+[:unselect_cmd: Unselect ]
+0=
+
+[mc.shared.search]
+0=perl
+1=jpg
+2=jpeg
+3=png
+4=token
+5=xpdf
+6=pray
+7=en
+8='en'
+9=_theme
+
+[mc.esc.timeout]
+0=1000000
+
+[input-timo-vfs]
+0=60
+
+[input-passwd]
+0=anonymous@
+
+[input-timeout]
+0=
+1=900
+
+[input-ftp-proxy]
+0=gate
+
+[inp:fishlink_cmd: Shell link to machine ]
+0=homoludens@
+1=root@192.168.0.4
+2=root@ibook
+3=10.0.0.1
+4=freebsd
+5=homoludens@slobodnakultura.org
+6=
+7=root@10.0.0.81
+8=homoludens@10.0.0.25
+9=playahater@radioswap.net:5222
+10=sshtv
+11=homoludens@tv
+12=playahater@radioswap.net:2222
+13=bobsledge:xs*LyD2d@wf10.droopia.net
+14=root@webfest.org
+15=root@wfest.org
+16=root@developer
+17=lindev@ineska.droopia.net
+18=cvetic@cvetic.droopia.net
+19=cvetic@cvetic.droopia.net//home/cvetic/cvetic.droopia.net/sites/all/themes/cvetic
+20=cvetic@cveticdesign.com/home/cvetic/cveticdesign.com
+21=cvetic@cveticdesign.com
+22=cvetic@cveticdesign.com/home/cvetic/cveticdesign.com/
+23=root@178.79.140.115
+24=cvetic@cveticdesign.com/home/cvetic/cveticdesign.com/sites/all/modules
+25=m3com:m3com#admin@196.204.80.146:36
+26=agena2@192.168.0.102
+27=agena3@192.168.0.143
+28=agena5@192.168.0.120
+29=agena1@192.168.0.139
+30=agena1@192.168.0.118
+31=root@developer:40
+32=root@192.168.0.242:40
+
+[inpmc.fm.mkdir]
+0=css_10112010
+1=ziri_pregled_glasova
+2=sdfa
+3=wutang
+4=sjunk
+5=skunk
+6=hed_pe
+7=latest_misc
+8=ziri
+9=new_backup_ctools
+10=HedPE
+11=milosh
+12=colors
+13=plugin
+14=syntax
+15=android
+16=media
+17=books
+18=quiz
+19=map
+20=modules_backup
+21=finish
+22=stock_theme
+23=cowboy
+24=gi3
+25=m3com
+26=backup
+27=template_backup
+28=m3com_drupal
+29=files
+30=stuff
+31=pressflow_m3com
+32=site_backup
+33=another_quiz
+34=theme
+35=moz_bckp
+36=older
+37=vim
+38=bs-diskretni_heroji
+39=titja
+40=misha
+41=hc
+42=iso
+43=tempalte_backup
+44=m3com_sports
+45=old
+46=openx_lazy
+47=openx_orig
+48=tomato
+49=tmp
+50=mem_patch
+51=lenovo
+52=memcache_orig
+53=plugins
+54=home
+55=asdf
+56=mpdbackup
+57=haklab
+58=lwt
+59=wc3
+
+[input-def]
+0=*
+
+[input2]
+0=/#sh:root@developer:40/var/www/html/sites/all/modules/custom/m3com_misc/m3com_misc.module
+1=/var/www/localhost/htdocs/m3com/sites/all/modules/custom/m3com_sports/
+2=/var/www/localhost/htdocs/m3com/sites/all/modules/custom/m3com_sports/views/m3com_sports_handler_argument_reference.inc
+3=/var/www/localhost/htdocs/m3com/sites/all/themes/m3com/old_templates/
+4=/var/www/localhost/htdocs/old/
+5=/home/playahater/stuff/drupal/sites/m3com/modules_backup/openx_lazy/
+6=/home/playahater/stuff/drupal/sites/m3com/openx_orig/
+7=/home/playahater/Downloads/tomato/
+8=/home/playahater/stuff/mp3/
+9=/home/playahater/stuff/tmp/wall/old/tmp/
+10=/home/playahater/stuff/drupal/sites/m3com/openx_orig/openx/
+11=/home/playahater/Downloads/
+12=/mnt/sdb1/media/mp3/
+13=/var/www/localhost/htdocs/m3com/sites/all/modules/custom/
+14=/#sh:root@developer:40/var/www/html/sites/all/modules/
+15=/home/playahater/stuff/drupal/sites/m3com/modules_backup/mem_patch/
+16=/#sh:root@developer:40/root/
+17=/home/playahater/Desktop/
+18=/home/playahater/Desktop/lenovo/
+19=/var/www/localhost/htdocs/m3com/sites/all/themes/m3com/css/
+20=/home/playahater/stuff/drupal/sites/m3com/modules_backup/memcache_orig/
+21=/var/www/localhost/htdocs/m3com/sites/all/modules/views_slideshow/js/
+22=/var/www/localhost/htdocs/m3com/sites/all/themes/m3com/scripts/
+23=/home/playahater/stuff/drupal/sites/m3com/modules_backup/
+24=/#sh:root@developer:40/var/www/html/sites/default/
+25=/#sh:root@developer:40/var/www/html/sites/default/files/
+26=/var/www/localhost/htdocs/m3com/sites/default/files/
+27=/var/www/localhost/htdocs/m3com/sites/all/modules/views_slideshow/js/jquery.moj.js
+28=/var/www/localhost/htdocs/m3com/sites/all/modules/views_slideshow/contrib/views_slideshow_thumbnailhover/module.moj.module
+29=/home/playahater/stuff/android/
+30=/home/playahater/stuff/drupal/sites/m3com/ar_flash/
+31=/var/www/localhost/htdocs/m3com/sites/all/libraries/flashservices
+32=/var/www/localhost/htdocs/m3com/
+33=/var/www/localhost/htdocs/m3com/sites/all/modules/custom/m3com_ar_flash
+34=/mnt/sdb1/
+35=/home/playahater/stuff/drupal/sites/m3com/modules_libraries/
+36=/var/www/localhost/htdocs/m3com/sites/all/plugins/
+37=/var/www/localhost/htdocs/m3com/sites/all/libraries/
+38=/home/playahater/torrents/Balada triste de trompeta.DVDRIP.(spanish).www.lokotorrents.com/farsan.srt
+39=/home/playahater/torrents/Balada triste de trompeta.DVDRIP.(spanish).www.lokotorrents.com/farsan.avi
+40=/home/playahater/torrents/
+41=/var/www/localhost/htdocs/m3com/sites/default/files/egames/
+42=/var/www/localhost/htdocs/m3com/sites/all/modules/
+43=/home/play/stuff/tmp/
+44=/home/play/
+45=/home/play/stuff/tmp/mpdbackup/
+46=/home/play/stuff/haklab/
+47=/home/play/torrents/
+48=/home/play/.vim/
+49=/#sh:root@192.168.0.242:40/var/www/html/sites/all/modules/custom/m3com_auth/
+50=/#sh:root@192.168.0.242:40/var/www/html/sites/all/themes/m3com/css/
+51=/home/play/.wine/drive_c/Program Files (x86)/Valve/Portal 2/
+52=/home/play/.wine/drive_c/lwt/
+53=/home/play/.wine/drive_c/wc3/
+54=/home/play/.wine/drive_c/Program Files (x86)/
+55=/home/play/.wine/drive_c/Program Files (x86)/hitman2/
+56=/home/play/.wine/drive_c/Program Files (x86)/hitman2/Scenes/AllLevels/
+57=/home/play/.wine/drive_c/Program Files (x86)/Eidos/Hitman Contracts/
+58=/home/play/.vim/doc/
+59=/home/play/.vim/plugin/
+
+[Dir Hist New Right Panel]
+0=/home/play/.pki
+1=/#sh:root@192.168.0.242:40
+2=/#sh:root@192.168.0.242:40/var
+3=/#sh:root@192.168.0.242:40/var/www
+4=/#sh:root@192.168.0.242:40/var/www/html
+5=/#sh:root@192.168.0.242:40/var/www/html/sites
+6=/#sh:root@192.168.0.242:40/var/www/html/sites/all/modules/custom/m3com_auth
+7=/#sh:root@192.168.0.242:40/var/www/html/sites/all/modules/custom
+8=/#sh:root@192.168.0.242:40/var/www/html/sites/all/modules
+9=/#sh:root@192.168.0.242:40/var/www/html/sites/all
+10=/#sh:root@192.168.0.242:40/var/www/html/sites/all/themes
+11=/#sh:root@192.168.0.242:40/var/www/html/sites/all/themes/m3com
+12=/#sh:root@192.168.0.242:40/var/www/html/sites/all/themes/m3com/css
+13=/srv/http/m3com
+14=/srv/http/m3com/sites
+15=/srv/http/m3com/sites/all
+16=/srv/http/m3com/sites/all/modules
+17=/srv/http/m3com/sites/all/modules/openx
+18=/home/play/stuff/tmp
+19=/home/play/screenshots
+20=/home/play/stuff/android/Camera
+21=/home/play/stuff/android
+22=/etc/.git
+23=/etc
+24=/
+25=/mnt/iso/SKIDROW/portal2/bin
+26=/mnt/iso/SKIDROW/portal2
+27=/mnt/iso/SKIDROW
+28=/mnt/iso
+29=/mnt
+30=/home/play/.wine/drive_c/Program Files
+31=/home/play/stuff
+32=/home/play/Downloads/lwt_warcraft3toolkit.rar#urar
+33=/home/play/Downloads
+34=/home/play/.wine/drive_c/Program Files (x86)/hitman2/Hitman.2.Silent.Assassin.Nocd.Crack.rar#urar
+35=/home/play/.wine/drive_c/Program Files (x86)/hitman2/Scenes/AllLevels
+36=/home/play/.wine/drive_c/Program Files (x86)/hitman2
+37=/home
+38=/home/play/torrents/[TorrThem] Hitman 3 - Contracts (2004)/cd1
+39=/home/play/torrents/[TorrThem] Hitman 3 - Contracts (2004)/cd2
+40=/home/play/.wine/drive_c/Program Files (x86)/Eidos/Hitman Contracts
+41=/home/play/.wine/drive_c/Program Files (x86)/Eidos
+42=/home/play/.wine/drive_c/Program Files (x86)
+43=/home/play/.wine/drive_c
+44=/home/play/.wine
+45=/home/play/.vim/doc
+46=/home/play/.vim
+47=/home/play/.vim/plugin
+48=/home/play/.xmonad
+49=/home/play/torrents/The.Listener.S01.DVDRip.XviD-SAiNTS
+50=/home/play/torrents/Quake 3 Arena + Team Arena (Retail ISO)/Quake 3 Team Arena
+51=/home/play/torrents/Quake 3 Arena + Team Arena (Retail ISO)/Quake 3 Arena
+52=/home/play/torrents/[TorrThem] Hitman 3 - Contracts (2004)
+53=/home/play/torrents/Warcraft III Reign of Chaos & The Frozen Thron
+54=/home/play/torrents/Quake 3 Arena + Team Arena (Retail ISO)
+55=/home/play/torrents/Portal.2-SKIDROW
+56=/home/play/torrents/Portal no-Steam.ru
+57=/home/play/torrents/400.Android.Games.Collection [PAID APPS ONLY] - DroidIP
+58=/home/play/torrents
+59=/home/play
+
+[cmdline]
+0=cd /mnt
+1=4
+2=cd
+3=j
+4=
+
+[Dir Hist New Left Panel]
+0=/home/play/.nbi
+1=/home/play/.mplayer
+2=/home/play/stuff/tmp
+3=/home/play/stuff/tmp/mpdbackup
+4=/home/play/stuff/haklabbeograd.github.com
+5=/home/play/stuff/haklab/plain_and_simple.zip#uzip
+6=/home/play/stuff/haklab
+7=/home/play/stuff
+8=/home/play/torrents/400.Android.Games.Collection [PAID APPS ONLY] - DroidIP
+9=/home/play/.vim/git/vim-fugitive/plugin
+10=/home/play/.vim/git/vim-fugitive/doc
+11=/home/play/.vim/git/vim-fugitive
+12=/home/play/.vim/git
+13=/home/play/.vim/colors
+14=/home/play/.vim/nerdtree_plugin
+15=/home/play/.vim/syntax
+16=/home/play/.vim/plugin
+17=/home/play/.vim
+18=/home
+19=/
+20=/srv
+21=/srv/http
+22=/srv/http/m3com
+23=/srv/http/m3com/sites
+24=/srv/http/m3com/sites/all/modules/custom/m3com_auth
+25=/srv/http/m3com/sites/all/modules
+26=/srv/http/m3com/sites/all
+27=/srv/http/m3com/sites/all/themes
+28=/srv/http/m3com/sites/all/themes/m3com/css
+29=/srv/http/m3com/sites/all/themes/m3com
+30=/home/play/.wine/drive_c/Program Files (x86)/Valve
+31=/home/play/.wine/drive_c/Program Files (x86)/Valve/Portal 2
+32=/home/play/.wine
+33=/home/play/.wine/drive_c
+34=/home/play/.wine/drive_c/lwt
+35=/home/play/torrents/[PC Games ] Hitman 2 Silent Assassin (PC GAME FULL).rar#urar
+36=/home/play/.wine/drive_c/Program Files (x86)
+37=/home/play/.wine/drive_c/Program Files (x86)/hitman2
+38=/home/play/.wine/drive_c/Program Files (x86)/hitman2/Scenes
+39=/home/play/.wine/drive_c/Program Files (x86)/hitman2/Scenes/AllLevels
+40=/home/play/.wine/drive_c/Program Files (x86)/hitman2/Scenes/AllLevels/Logos.ZIP#uzip
+41=/home/play/.wine/drive_c/Program Files (x86)/hitman2/Scenes/AllLevels/Logos.ZIP#uzip/SCENES/AllLevels
+42=/home/play/.wine/drive_c/Program Files (x86)/hitman2/Scenes/AllLevels/Logos.ZIP#uzip/SCENES
+43=/home/play/torrents
+44=/home/play/torrents/[TorrThem] Hitman 3 - Contracts (2004)/cd1
+45=/home/play/torrents/[TorrThem] Hitman 3 - Contracts (2004)
+46=/home/play/torrents/[TorrThem] Hitman 3 - Contracts (2004)/cd2/[patch 1.74]
+47=/home/play/torrents/[TorrThem] Hitman 3 - Contracts (2004)/cd2/DirectX9
+48=/home/play/torrents/[TorrThem] Hitman 3 - Contracts (2004)/cd2
+49=/home/play/torrents/[TorrThem] Hitman 3 - Contracts (2004)/cd2/[crack 1.74]
+50=/home/play
+51=/home/play/Downloads/sjl-gundo.vim-dc582486455b.tar.bz2#utar/sjl-gundo.vim-dc582486455b/doc
+52=/home/play/Downloads/sjl-gundo.vim-dc582486455b.tar.bz2#utar/sjl-gundo.vim-dc582486455b/plugin
+53=/home/play/Downloads/sjl-gundo.vim-dc582486455b.tar.bz2#utar/sjl-gundo.vim-dc582486455b/site
+54=/home/play/Downloads/sjl-gundo.vim-dc582486455b.tar.bz2#utar/sjl-gundo.vim-dc582486455b/tests
+55=/home/play/Downloads/sjl-gundo.vim-dc582486455b.tar.bz2#utar/sjl-gundo.vim-dc582486455b
+56=/home/play/Downloads/sjl-gundo.vim-dc582486455b.tar.bz2#utar
+57=/home/play/Downloads
+58=/srv/http/m3com/sites/all/modules/custom/m3com_misc
+59=/srv/http/m3com/sites/all/modules/custom

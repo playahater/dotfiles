@@ -1,0 +1,369 @@
+--- Log opened Wed Feb 02 10:25:18 2011
+10:25 Starting query in Bitlbee with markovucinic
+10:25 playahater| http://espaceculturel-leclerc.com/
+10:26 playahater| s tim shto je tu nicemenu, a ne superfish .. mada je ista logika ..
+10:26 markovucinic| jbg, bitno mi je kako slaze childove i sa kojim classama
+10:26 markovucinic| :|
+10:31 playahater| .. mislim da je chak na isti nachin .. jer je na tom leclerku je, koliko ja znam .. kombinacija nicemenu+superfish.js ..
+10:32 markovucinic| jeste, isti je fazon - u <ul><li>  on hiduje nove <ul> podtagove i tako radi
+10:32 markovucinic| samo treba naci logiku da nekako prepozna te  <ul>  childove  :(
+--- Log closed Wed Feb 02 10:38:37 2011
+--- Log opened Wed Feb 02 12:01:03 2011
+12:01 Closing query with markovucinic
+--- Log closed Wed Feb 02 12:01:03 2011
+--- Log opened Wed Feb 02 14:06:35 2011
+14:06 Starting query in Bitlbee with markovucinic
+14:06 markovucinic| jel mozes da skocis do mene kad budes imao vremena?  desava mi se nesto paradoxalno ...
+14:10 playahater| ok ..
+14:10 playahater| stizem ..
+14:10 playahater| :)
+14:10 Closing query with markovucinic
+--- Log closed Wed Feb 02 14:10:58 2011
+--- Log opened Wed Feb 02 14:44:56 2011
+14:44 Starting query in Bitlbee with markovucinic
+14:44 markovucinic| ces da svrnes do mene, ako si slobodan?
+--- Log closed Wed Feb 02 14:50:37 2011
+--- Log opened Wed Feb 02 14:53:26 2011
+14:53 Closing query with markovucinic
+--- Log closed Wed Feb 02 14:53:26 2011
+--- Log opened Wed Feb 02 16:25:39 2011
+16:25 Starting query in Bitlbee with markovucinic
+16:25 markovucinic| ok je
+16:25 markovucinic| :)
+16:25 markovucinic| sorry
+--- Log closed Wed Feb 02 16:31:37 2011
+--- Log opened Wed Feb 02 16:55:03 2011
+16:55 Closing query with markovucinic
+--- Log closed Wed Feb 02 16:55:03 2011
+--- Log opened Wed Feb 02 17:09:27 2011
+17:09 Starting query in Bitlbee with markovucinic
+17:09 markovucinic| aj pliz, samo da commit uradimo 
+--- Log closed Wed Feb 02 17:14:37 2011
+--- Log opened Wed Feb 02 17:31:18 2011
+17:31          <-- markovucinic has quit irc
+--- Log closed Wed Feb 02 17:36:37 2011
+--- Log opened Wed Feb 02 17:43:26 2011
+17:43 Closing query with markovucinic
+--- Log closed Wed Feb 02 17:43:26 2011
+--- Log opened Thu Feb 03 11:04:08 2011
+11:04 Starting query in Bitlbee with markovucinic
+11:04 playahater| e da .. imash i toggle comment na : ,+c+space
+11:04 Closing query with markovucinic
+--- Log closed Thu Feb 03 11:04:18 2011
+--- Log opened Thu Feb 03 11:04:24 2011
+11:04 Starting query in Bitlbee with markovucinic
+11:04 markovucinic| fala  ;)
+11:04 playahater| np ;)
+11:04 Closing query with markovucinic
+--- Log closed Thu Feb 03 11:04:49 2011
+--- Log opened Thu Feb 03 11:47:28 2011
+11:47 Starting query in Bitlbee with markovucinic
+11:47 Closing query with markovucinic
+--- Log closed Thu Feb 03 11:47:38 2011
+--- Log opened Thu Feb 03 12:07:22 2011
+12:07 Starting query in Bitlbee with markovucinic
+12:07 markovucinic| jedno glupo pitanje -  vitamin servis funkcionise preko vitamin modula i nema jos neke "repove" sa strane?
+12:10 playahater| vishe-manje .. da .. 
+12:10 playahater| oslanja se na m3com_auth
+12:11 playahater| preko njega proverava status korisnika ..
+12:11 playahater| ali to je pozivanje nekih metoda samo iz tog auth modula ..
+12:11 markovucinic| a sam servis vitamin je sadrzan samo u modulu?
+--- Log closed Thu Feb 03 12:17:08 2011
+--- Log opened Thu Feb 03 12:51:01 2011
+12:51 playahater| uh .. izvini shto sam ovako agilan .. :) ..
+12:51 playahater| neshto me iscimali na sve strane ..
+12:51 playahater| uglavnom ..
+12:51 playahater| da .. mislim da je cela logika sadrzana samo u taj modul
+12:51 markovucinic| ok 
+12:51 markovucinic| dobio sam da pregledam taj modul
+12:52 markovucinic| pa me to zanimalo
+12:52 markovucinic| tnx i sorry sto te cimatam  :)
+12:52 playahater| ma opushteno .. ;)
+12:52 Closing query with markovucinic
+--- Log closed Thu Feb 03 12:52:24 2011
+--- Log opened Thu Feb 03 13:32:07 2011
+13:32 Starting query in Bitlbee with markovucinic
+13:32 markovucinic| u kolikoj si guzvi od 1 do 5?  :)
+--- Log closed Thu Feb 03 13:37:08 2011
+--- Log opened Thu Feb 03 13:46:06 2011
+13:46 Closing query with markovucinic
+--- Log closed Thu Feb 03 13:46:06 2011
+--- Log opened Thu Feb 03 15:31:09 2011
+15:31 Starting query in Bitlbee with markovucinic
+15:31 playahater| pull pls .. :)
+15:31 Closing query with markovucinic
+--- Log closed Thu Feb 03 15:31:11 2011
+--- Log opened Thu Feb 03 15:32:18 2011
+15:32 Starting query in Bitlbee with markovucinic
+15:32 markovucinic| done  :)
+15:32 playahater| 10x
+15:32 playahater| :)
+15:32 Closing query with markovucinic
+--- Log closed Thu Feb 03 15:32:28 2011
+--- Log opened Thu Feb 03 15:32:34 2011
+15:32 Starting query in Bitlbee with markovucinic
+15:32 markovucinic| ?
+15:35 Closing query with markovucinic
+--- Log closed Thu Feb 03 15:35:59 2011
+--- Log opened Thu Feb 03 16:58:26 2011
+16:58 Starting query in Bitlbee with markovucinic
+16:58 markovucinic| pogodi kome trebas hitno  :)
+16:58 markovucinic| ako si free na barem nekoliko minuta, jer ne moze na brzaka
+16:59 playahater| :) ..
+16:59 playahater| ql ..
+16:59 playahater| stizem chim pre ..
+16:59 Closing query with markovucinic
+--- Log closed Thu Feb 03 16:59:45 2011
+--- Log opened Thu Feb 03 16:59:54 2011
+16:59 Starting query in Bitlbee with markovucinic
+16:59 markovucinic| tim bolje  :)
+17:00 playahater| :D
+17:00 Closing query with markovucinic
+--- Log closed Thu Feb 03 17:00:02 2011
+--- Log opened Fri Feb 04 11:35:50 2011
+11:35 Starting query in Bitlbee with markovucinic
+11:35 markovucinic| sta se desilo sa devel modulom?
+--- Log closed Fri Feb 04 11:40:55 2011
+--- Log opened Fri Feb 04 11:41:21 2011
+11:41 playahater| iskljuchen .. 
+11:41 playahater| slobodno ga ukljuchi ..
+11:41 markovucinic| ok
+--- Log closed Fri Feb 04 11:46:55 2011
+--- Log opened Fri Feb 04 12:10:35 2011
+12:10 markovucinic| da li custom breadcrumbs treba da bude na svim kanalima?
+12:11 playahater| ja mislim da treba da bude svugde sem na front|login|register
+12:12 markovucinic| jer se trenutno vidi samo na family i games, sto je i logicno, jer su samo te dva menija data
+12:12 markovucinic| da li smem da cackam po module settings?
+12:12 markovucinic| msm necu nesto znacajno sjebati u bazi
+12:12 markovucinic| ?
+12:13 playahater| naravno ..
+12:13 markovucinic| ok
+12:13 playahater| imash sve privilegije ..
+12:13 playahater| imamo backup .. :)
+12:13 markovucinic| ;)
+--- Log closed Fri Feb 04 12:18:55 2011
+--- Log opened Fri Feb 04 12:31:21 2011
+12:31 markovucinic| izvini, sto smaram, kako da pristupim menu settings?   nema ih...
+--- Log closed Fri Feb 04 12:36:55 2011
+--- Log opened Fri Feb 04 12:55:07 2011
+12:55 Closing query with markovucinic
+--- Log closed Fri Feb 04 12:55:07 2011
+--- Log opened Fri Feb 04 12:58:22 2011
+12:58 Starting query in Bitlbee with markovucinic
+12:58 markovucinic| hoces mozda na cigaru da mi objasnis nesto?
+12:58 markovucinic| da te ne davim preko gtalka....
+12:58 playahater| zemo
+--- Log closed Fri Feb 04 13:03:55 2011
+--- Log opened Fri Feb 04 13:17:22 2011
+13:17 Closing query with markovucinic
+--- Log closed Fri Feb 04 13:17:22 2011
+--- Log opened Fri Feb 04 15:43:33 2011
+15:43 Starting query in Bitlbee with markovucinic
+15:43 markovucinic| jel mozes na sek molim te da vidis ovo djubre?
+15:48 playahater| hehe
+15:48 playahater| stizem
+--- Log closed Fri Feb 04 15:53:55 2011
+--- Log opened Fri Feb 04 16:04:08 2011
+16:04 markovucinic| drupal_get_breadcrumb()   -  Get the breadcrumb trail for the current page.
+16:04 markovucinic| vrlo prosto
+16:04 markovucinic| on na tome ne radi
+16:05 playahater| hmm .. jurish ga dalje .. :)
+16:09 markovucinic| ok, bogdan kaze ako ovo ne bude sljakalo, da probam da napisem kao modul, koji ce u bloku pozivati sistemski default breadcrumb
+16:09 markovucinic| i da ga na taj nacim podmetnemo panelima
+16:10 markovucinic| da li je to teorijski izvodljivo?
+16:10 playahater| jeste .. skroz ..
+16:11 playahater| samo kontam da je jednostavnije da se izjuri bug u custom_breadcrumbs jer on vetj ima celu logiku gotovu ..
+16:11 markovucinic| da da
+16:11 markovucinic| naravno
+--- Log closed Fri Feb 04 16:16:55 2011
+--- Log opened Fri Feb 04 17:30:23 2011
+17:30 Closing query with markovucinic
+--- Log closed Fri Feb 04 17:30:23 2011
+--- Log opened Sat Feb 05 12:14:19 2011
+12:14 Starting query in Bitlbee with markovucinic
+12:14 markovucinic| dodji da vidis ovo molim te
+--- Log closed Sat Feb 05 12:20:18 2011
+--- Log opened Sat Feb 05 12:25:06 2011
+12:25 Closing query with markovucinic
+--- Log closed Sat Feb 05 12:25:06 2011
+--- Log opened Sat Feb 05 14:26:47 2011
+14:26 Starting query in Bitlbee with markovucinic
+14:26 markovucinic| kako smo bese juce/sinoc na broadband duplirali title?
+--- Log closed Sat Feb 05 14:32:19 2011
+--- Log opened Sat Feb 05 14:47:29 2011
+14:47 playahater| "leave node titie" .. u panelu
+14:47 playahater| ..  :)ko mislimo na isto .. 
+--- Log closed Sat Feb 05 14:53:19 2011
+--- Log opened Sat Feb 05 15:42:39 2011
+15:42 Closing query with markovucinic
+--- Log closed Sat Feb 05 15:42:39 2011
+--- Log opened Mon Feb 07 20:46:38 2011
+20:46 Starting query in Bitlbee with markovucinic
+20:46 playahater| http://drupal.org/node/228200#comment-946317
+--- Log closed Mon Feb 07 20:51:42 2011
+--- Log opened Mon Feb 07 23:13:59 2011
+23:13 Closing query with markovucinic
+--- Log closed Mon Feb 07 23:13:59 2011
+--- Log opened Wed Feb 09 11:36:51 2011
+11:36 Starting query in Bitlbee with markovucinic
+11:36 markovucinic| jel tebi baza radi normalno?
+11:36 playahater| jok ..
+11:37 playahater| mislim da se josh nije importovala ..
+11:37 playahater| mada nisam siguran ..
+11:37 markovucinic| do moga  :S
+11:37 playahater| :)
+11:37 markovucinic| radi uzasno sporo, a da ne pominjem da me jos uvek jebava za menu_callback...
+11:38 playahater| izvaljujem da se vuche ko prebiven .. ochigledno josh nije gotov import ..
+11:39 Closing query with markovucinic
+--- Log closed Wed Feb 09 11:39:22 2011
+--- Log opened Wed Feb 09 12:21:10 2011
+12:21 Starting query in Bitlbee with markovucinic
+12:21 playahater| zavrshen import ..
+12:21 markovucinic| do jaja, a meni i dalje ne radi, iako sam preimenovao modul ....
+12:21 markovucinic| :S
+12:21 playahater| si izbacio 2 iz imena ?
+12:22 markovucinic| da
+12:22 markovucinic| i isti djavo
+12:22 markovucinic| ne ulazi u hook menu
+12:23 playahater| otvori neki modul i uporedi sa tvojom menu metodom
+12:23 playahater| neka glupost je u pitanju ..
+12:25 Closing query with markovucinic
+--- Log closed Wed Feb 09 12:25:00 2011
+--- Log opened Wed Feb 09 12:27:07 2011
+12:27 Starting query in Bitlbee with markovucinic
+12:27 markovucinic| isti q.....
+12:27 markovucinic| iskorpirao sam tudje
+12:27 markovucinic| promenio nazive
+12:27 markovucinic| i to
+12:27 markovucinic| ocistio cache
+12:27 markovucinic| i isto :(
+--- Log closed Wed Feb 09 12:32:46 2011
+--- Log opened Wed Feb 09 12:53:26 2011
+12:53 markovucinic| da li mozes na sekund molim te, treba mi pomoc?
+12:53 markovucinic| izvini
+12:53 playahater| ok .. chek ..
+--- Log closed Wed Feb 09 12:58:46 2011
+--- Log opened Wed Feb 09 13:12:53 2011
+13:12 Closing query with markovucinic
+--- Log closed Wed Feb 09 13:12:53 2011
+--- Log opened Thu Feb 10 15:46:33 2011
+15:46 Starting query in Bitlbee with markovucinic
+15:46 markovucinic| btw. admin ima u rolama DSL  :)
+15:50 playahater| fuck
+15:50 playahater| :)
+15:50 markovucinic| nema veze, olaksava mi svakako
+15:50 playahater| odradi logiku .. regulisatjemo permisije kasnije ..
+15:50 playahater| :)
+15:50 markovucinic| naravno
+15:51 Closing query with markovucinic
+--- Log closed Thu Feb 10 15:51:28 2011
+--- Log opened Thu Feb 10 16:43:43 2011
+16:43 Starting query in Bitlbee with markovucinic
+16:43 markovucinic| brate, ovo zabada non stop ....   ne mogu da uhvatim zbog cega puca - totalno je random..
+16:43 markovucinic| bukvalno napravim i najmanju promenu i pukne
+16:44 markovucinic| tako isto odjednom i proradi...
+--- Log closed Thu Feb 10 16:49:54 2011
+--- Log opened Thu Feb 10 17:05:41 2011
+17:05 Closing query with markovucinic
+--- Log closed Thu Feb 10 17:05:41 2011
+--- Log opened Thu Feb 10 17:07:08 2011
+17:07 Starting query in Bitlbee with markovucinic
+17:07 playahater| daj mi ip adresu i user-a :)
+17:07 markovucinic| 192.168.0.120
+17:07 markovucinic| agena5
+17:07 playahater| ql
+17:07 playahater| 10x
+17:08 markovucinic| si rekao da sad uradim commit i push
+17:08 markovucinic| ?
+17:08 playahater| da
+17:10 markovucinic| moram da instaliram open ssh ...
+17:10 markovucinic| za minut...
+17:10 playahater| ql
+17:11 markovucinic| aj probaj
+17:13 playahater| ql
+17:13 markovucinic| k  ;)
+--- Log closed Thu Feb 10 17:18:54 2011
+--- Log opened Thu Feb 10 17:39:30 2011
+17:39 playahater| pull
+17:39 playahater| ime te jebalo .. :) ..
+17:39 playahater| umesto ta3lem .. ti si imao na par mesta ta3lim
+17:40 playahater| :)
+17:40 Closing query with markovucinic
+--- Log closed Thu Feb 10 17:40:06 2011
+--- Log opened Thu Feb 10 18:06:30 2011
+18:06 Starting query in Bitlbee with markovucinic
+18:06 markovucinic| jesi push?
+18:06 playahater| jesam kurac .. :) ..
+18:06 playahater| imam neke konflikte ..
+18:06 playahater| moram to da razreshim prvo
+--- Log closed Thu Feb 10 18:11:54 2011
+--- Log opened Thu Feb 10 19:26:02 2011
+19:26          <-- markovucinic has quit irc
+--- Log closed Thu Feb 10 19:31:54 2011
+--- Log opened Fri Feb 11 10:52:47 2011
+10:52 Starting query in Bitlbee with markovucinic
+--- Log closed Fri Feb 11 10:58:11 2011
+--- Log opened Fri Feb 11 11:08:17 2011
+11:08 Closing query with markovucinic
+--- Log closed Fri Feb 11 11:08:17 2011
+--- Log opened Fri Feb 11 11:13:43 2011
+11:13 Starting query in Bitlbee with markovucinic
+11:13 markovucinic| kako da zajebem git kad nece da mi radi pull zbog nekih fajlova koje nisam commit-ovai
+--- Log closed Fri Feb 11 11:19:11 2011
+--- Log opened Fri Feb 11 11:20:04 2011
+11:20 playahater| git checkout .
+11:20 playahater| dodjesh do dir-a gde ti se nalazi taj file ..
+11:20 playahater| i drmensh mu gore pomenutu komandu
+11:20 playahater| on u tom trenutku uradi discard svih promena
+11:21 markovucinic| ok
+11:21 markovucinic| fala  ;)
+11:21 playahater| ili git checkou /path/to/file
+11:21 playahater| ql
+11:21 playahater| :)
+--- Log closed Fri Feb 11 11:27:11 2011
+--- Log opened Fri Feb 11 11:41:49 2011
+11:41 markovucinic| danas nam porucuju klopu... da li to ima neko skriveno znacenje ?  :)
+--- Log closed Fri Feb 11 11:47:11 2011
+--- Log opened Fri Feb 11 12:06:52 2011
+12:06 playahater| obichno znachi da smo poginuli u najavi :)
+12:06 Closing query with markovucinic
+--- Log closed Fri Feb 11 12:06:58 2011
+--- Log opened Wed Feb 16 16:30:11 2011
+16:30 Starting query in Bitlbee with markovucinic
+16:32 playahater| /sites/all/themes/m3com/scripts/family_budget_included.js
+16:32 playahater| tu imash blur primer
+16:32 playahater| :)
+16:32 playahater| mozda ti ne pomogne mnogo .. al reko ti javim .. :)
+16:33 Closing query with markovucinic
+--- Log closed Wed Feb 16 16:33:01 2011
+--- Log opened Wed Feb 16 16:35:53 2011
+16:35 Starting query in Bitlbee with markovucinic
+16:35 playahater| /sites/all/themes/m3com/scripts/family_budget_included.js
+16:36 Closing query with markovucinic
+--- Log closed Wed Feb 16 16:36:05 2011
+--- Log opened Wed Feb 16 16:36:19 2011
+16:36 Starting query in Bitlbee with markovucinic
+16:36 playahater| tu imash primer za blur
+16:36 playahater| mozda ti pomogne
+16:36 playahater| :)
+16:36 Closing query with markovucinic
+--- Log closed Wed Feb 16 16:36:34 2011
+--- Log opened Wed Feb 16 17:05:39 2011
+17:05 Starting query in Bitlbee with markovucinic
+17:05 markovucinic| somi, znam da sam ultra dosadan, ali ja ovo ne znam.... nista mi ne radi...
+17:10 playahater| proveri drupal_add_js kako pozivash ..
+17:10 playahater| mozda argument nije 'node'
+17:10 playahater| mozda je neki drugi ..
+17:10 markovucinic| pa to je i fora, nemam pojma kako te fja radi
+17:10 playahater| api.drupal.org
+17:10 playahater| :)
+17:10 playahater| mora chitanje da padne dok ne povatash neke stvari .. :)
+17:11 playahater| ne znam ni ja sve napamet .. 
+17:11 playahater| google
+17:11 playahater| :)
+17:11 markovucinic| ;)
+17:12 playahater| samo lagano .. opushteno .. u jednom trenutku tje da krene da se sklapa .. ;)
+--- Log closed Wed Feb 16 17:18:05 2011
+--- Log opened Wed Feb 16 17:21:28 2011
+17:21 Closing query with markovucinic
+--- Log closed Wed Feb 16 17:21:28 2011

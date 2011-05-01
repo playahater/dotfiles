@@ -1,0 +1,18 @@
+Config { font = "xft:ProFont:size=10:antialias=true:hinting=true"
+       , bgColor = "black"
+       , fgColor = "#EBEBEB"
+       , position = Top
+       , lowerOnStart = True
+       , commands = [ Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 10
+                    , Run Weather "LYBE" ["-t","<tempC>C","-L","10","-H","28","--normal","green","--high","red","--low","lightblue"] 18000
+                    , Run Memory ["-t","Mem: <usedratio>%/<used>M", "-L","20","-H","65", "-l", "green", "--normal","orange","--high","red"] 50
+                    , Run Network "wlan0" ["-L","0","-H","240","-l", "green", "--normal","orange","--high","red"] 5
+                    , Run Network "eth0" ["-L","0","-H","240","-l", "green", "--normal","orange","--high","red"] 5
+                    , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
+                    , Run StdinReader
+                    , Run CommandReader "/home/play/.xmonad/battery" "BAT"
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%StdinReader% }{ %LYBE% <fc=#008518>|</fc> %cpu% <fc=#008518>|</fc> %memory% <fc=#008518>|</fc> %wlan0% <fc=#008518>|</fc> %eth0% <fc=#008518>|</fc> %BAT% <fc=#008518>|</fc><fc=green> %date%</fc>"
+       }

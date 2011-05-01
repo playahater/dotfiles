@@ -1,0 +1,268 @@
+--- Log opened Mon Feb 14 21:44:51 2011
+21:44 Starting query in Bitlbee with markomedojevic
+21:44 playahater| m3com_auth_msisdn_load($uid, TRUE/FALSE)
+--- Log closed Mon Feb 14 21:50:16 2011
+--- Log opened Mon Feb 14 22:58:07 2011
+22:58          <-- markomedojevic has quit irc
+--- Log closed Mon Feb 14 23:03:16 2011
+--- Log opened Mon Feb 14 23:04:17 2011
+23:04 Closing query with markomedojevic
+--- Log closed Mon Feb 14 23:04:17 2011
+--- Log opened Tue Feb 15 12:13:52 2011
+12:13 Starting query in Bitlbee with markomedojevic
+12:13 playahater| http://drupal.org/node/162373
+12:13 Closing query with markomedojevic
+--- Log closed Tue Feb 15 12:13:56 2011
+--- Log opened Tue Feb 15 18:21:25 2011
+18:21 Starting query in Bitlbee with markomedojevic
+--- Log closed Tue Feb 15 18:26:39 2011
+--- Log opened Tue Feb 15 19:13:22 2011
+19:13 Closing query with markomedojevic
+--- Log closed Tue Feb 15 19:13:22 2011
+--- Log opened Wed Feb 16 11:01:44 2011
+11:01 Starting query in Bitlbee with markomedojevic
+11:01 playahater| http://client.agena.rs/m3com/prototype-html/_main/vitamin/
+11:01 Closing query with markomedojevic
+--- Log closed Wed Feb 16 11:01:51 2011
+--- Log opened Wed Feb 16 12:56:04 2011
+12:56 Starting query in Bitlbee with markomedojevic
+12:57 Closing query with markomedojevic
+--- Log closed Wed Feb 16 12:57:00 2011
+--- Log opened Thu Feb 17 13:37:57 2011
+13:37 Starting query in Bitlbee with markomedojevic
+13:37 markomedojevic| http://www.b92.net/info/vesti/index.php?yyyy=2011&mm=02&dd=16&nav_category=12&nav_id=493277
+13:43 Closing query with markomedojevic
+--- Log closed Thu Feb 17 13:43:13 2011
+--- Log opened Thu Feb 17 14:31:29 2011
+14:31 Starting query in Bitlbee with markomedojevic
+14:31 playahater|  619   $form['operation'] = array(
+14:31 playahater|  620       '#type' => 'submit',
+14:31 playahater|  621       '#value' => t('Submit'),
+14:31 playahater|  622       '#submit' => TRUE,
+14:31 playahater|  623       '#weight' => 100,
+14:31 playahater|  624       '#attributes' => array('tabindex' => '1'),
+14:31 playahater|  625       '#submit' => array('m3com_auth_dslcredentials_form_submit'),
+14:31 playahater|  626   );
+14:31 playahater|  627 
+14:31 playahater|  628   $form['skip'] = array(
+14:31 playahater|  629       '#type' => 'submit',
+14:31 playahater|  630       '#value' => t('Skip'),
+14:31 playahater|  631       '#submit' => array('m3com_misc_skip_submit'),
+14:31 playahater|  632       '#weight' => 100,
+14:31 playahater|  633       '#attributes' => array('class' => 'btn-submit long', 'tabindex' => '2'),
+14:31 playahater|  634   );
+--- Log closed Thu Feb 17 14:37:19 2011
+--- Log opened Thu Feb 17 15:38:50 2011
+15:38 Closing query with markomedojevic
+--- Log closed Thu Feb 17 15:38:50 2011
+--- Log opened Fri Feb 18 00:17:23 2011
+00:17 Starting query in Bitlbee with markomedojevic
+00:17 playahater| http://drupal.org/node/527058
+--- Log closed Fri Feb 18 00:23:19 2011
+--- Log opened Fri Feb 18 01:01:12 2011
+01:01 Closing query with markomedojevic
+--- Log closed Fri Feb 18 01:01:12 2011
+--- Log opened Fri Feb 18 03:30:00 2011
+03:30 Starting query in Bitlbee with markomedojevic
+03:30 playahater| http://drupal.org/node/223430
+--- Log closed Fri Feb 18 03:35:19 2011
+--- Log opened Fri Feb 18 05:16:09 2011
+05:16 Closing query with markomedojevic
+--- Log closed Fri Feb 18 05:16:09 2011
+--- Log opened Sat Feb 19 13:59:06 2011
+13:59 Starting query in Bitlbee with markomedojevic
+13:59 markomedojevic| cao. e da ne znas koji je root pass an 89.216.16.77 (nas dev server)?
+--- Log closed Sat Feb 19 14:04:43 2011
+--- Log opened Sat Feb 19 14:08:28 2011
+14:08 markomedojevic| e ne treba mi vise
+14:08 markomedojevic| snasao sam se
+--- Log closed Sat Feb 19 14:13:43 2011
+--- Log opened Sat Feb 19 14:54:27 2011
+14:54          <-- markomedojevic has quit irc
+--- Log closed Sat Feb 19 14:59:43 2011
+--- Log opened Sat Feb 19 18:30:16 2011
+18:30          <-- markomedojevic has quit irc
+18:34 markomedojevic| cao. da nisi tu?
+--- Log closed Sat Feb 19 18:39:43 2011
+--- Log opened Sat Feb 19 19:00:26 2011
+19:00          <-- markomedojevic has quit irc
+--- Log closed Sat Feb 19 19:05:43 2011
+--- Log opened Sat Feb 19 20:04:17 2011
+20:04 playahater| ehej prijatelju ..
+20:04 playahater| evo me ..
+20:04 playahater| danas sam u horizontali ..
+20:05 playahater| javio mi bogdan da treba sutra da se pojavimo tamo .. oko 11h ..
+20:05 playahater| pa aktivno punim baterije .. :)
+20:05 Closing query with markomedojevic
+--- Log closed Sat Feb 19 20:05:47 2011
+--- Log opened Sat Feb 19 20:09:37 2011
+20:09 Starting query in Bitlbee with markomedojevic
+20:09 markomedojevic| e cao :
+20:09 markomedojevic| ma mucio sam se da instaliram m3com u lokalu
+20:09 markomedojevic| ali uspeo sam
+--- Log closed Sat Feb 19 20:15:43 2011
+--- Log opened Sat Feb 19 23:01:00 2011
+23:01          <-- markomedojevic has quit irc
+--- Log closed Sat Feb 19 23:06:43 2011
+--- Log opened Sun Feb 20 07:18:50 2011
+07:18          <-- markomedojevic has quit irc
+--- Log closed Sun Feb 20 07:24:43 2011
+--- Log opened Tue Feb 22 19:01:17 2011
+19:01 Starting query in Bitlbee with markomedojevic
+19:01 playahater| sites/default/files/avatar_selection/1.jpg
+19:01 Closing query with markomedojevic
+--- Log closed Tue Feb 22 19:01:21 2011
+--- Log opened Tue Feb 22 19:39:34 2011
+19:39 Starting query in Bitlbee with markomedojevic
+19:39 markomedojevic| http://drupal.org/node/580538#comment-2383658
+--- Log closed Tue Feb 22 19:44:44 2011
+--- Log opened Tue Feb 22 19:49:33 2011
+19:49 Closing query with markomedojevic
+--- Log closed Tue Feb 22 19:49:33 2011
+--- Log opened Wed Feb 23 14:39:38 2011
+14:39 Starting query in Bitlbee with markomedojevic
+14:39 playahater| http://shellmultimedia.com/articles/hookthemeregistryalter-advanced-template-control
+--- Log closed Wed Feb 23 14:45:27 2011
+--- Log opened Wed Feb 23 15:25:00 2011
+15:25 Closing query with markomedojevic
+--- Log closed Wed Feb 23 15:25:00 2011
+--- Log opened Mon Mar 07 14:15:25 2011
+14:15 Starting query in Bitlbee with markomedojevic
+14:15 playahater| $block = module_invoke('openx', 'block', 'view', 60); print $block['content'];
+--- Log closed Mon Mar 07 14:21:10 2011
+--- Log opened Mon Mar 07 15:47:00 2011
+15:47 Closing query with markomedojevic
+--- Log closed Mon Mar 07 15:47:00 2011
+--- Log opened Mon Mar 07 16:28:38 2011
+16:28 Starting query in Bitlbee with markomedojevic
+16:28 playahater| http://drupal.org/node/1020336
+--- Log closed Mon Mar 07 16:34:10 2011
+--- Log opened Mon Mar 07 16:55:16 2011
+16:55 Closing query with markomedojevic
+--- Log closed Mon Mar 07 16:55:16 2011
+--- Log opened Wed Mar 09 13:37:40 2011
+13:37 Starting query in Bitlbee with markomedojevic
+13:37 markomedojevic| cao
+13:37 markomedojevic| kako bese ide procedura kada trebam da uradim merge na staging
+13:38 markomedojevic| da bi mogao da vidim promene na dev
+--- Log closed Wed Mar 09 13:44:11 2011
+--- Log opened Wed Mar 09 14:47:09 2011
+14:47 Closing query with markomedojevic
+--- Log closed Wed Mar 09 14:47:09 2011
+--- Log opened Wed Mar 09 15:38:44 2011
+15:38 Starting query in Bitlbee with markomedojevic
+15:38 markomedojevic| 4ed21cd90b9aaffb8eecba456ba2bc6a6a19aba1
+15:38 markomedojevic| a3a4283da4d3b4355cbdd27232ecd4c3136f6ab4
+--- Log closed Wed Mar 09 15:44:11 2011
+--- Log opened Wed Mar 09 16:18:58 2011
+16:18 playahater| mislim da je odradjen push na dev.m3com.com.sa
+16:18 playahater| probaj
+16:19 playahater| :)
+16:19 playahater| .q
+16:19 Closing query with markomedojevic
+--- Log closed Wed Mar 09 16:19:02 2011
+--- Log opened Wed Mar 09 16:19:05 2011
+16:19 Starting query in Bitlbee with markomedojevic
+16:19 markomedojevic| tnx
+16:21 Closing query with markomedojevic
+--- Log closed Wed Mar 09 16:21:00 2011
+--- Log opened Wed Mar 09 18:10:04 2011
+18:10 Starting query in Bitlbee with markomedojevic
+18:10 playahater| http://api.drupal.org/api/drupal/developer--topics--forms_api_reference.html/6
+18:10 playahater| :)
+18:10 Closing query with markomedojevic
+--- Log closed Wed Mar 09 18:10:07 2011
+--- Log opened Fri Mar 11 11:14:00 2011
+11:14 Starting query in Bitlbee with markomedojevic
+11:14 playahater| druze .. aj git pull origin develop ..
+11:14 playahater| :)
+11:15 Closing query with markomedojevic
+--- Log closed Fri Mar 11 11:15:41 2011
+--- Log opened Fri Mar 11 11:17:12 2011
+11:17 Starting query in Bitlbee with markomedojevic
+11:17 markomedojevic| ok
+11:17 markomedojevic| btw dobijao sam neki error vezan za superfish
+11:17 markomedojevic| kapiram da je zbog toga
+--- Log closed Fri Mar 11 11:23:01 2011
+--- Log opened Fri Mar 11 11:23:45 2011
+11:23 playahater| sad vishe ne,a?
+11:27 markomedojevic| kod mene se nazalost i dalje pojavljuje
+11:27 playahater| hmm .. ae mi baci link do stranice gde ti se javlja greshka ..
+11:28 markomedojevic| $("ul.sf-menu").superfish is not a function
+11:28 markomedojevic|  
+11:28 markomedojevic| izgleda da se javlja na svim stranicama
+11:31 playahater| druze .. ae ochisti cache u browseru pa probaj opet ..
+--- Log closed Fri Mar 11 11:37:01 2011
+--- Log opened Fri Mar 11 11:39:04 2011
+11:39 Closing query with markomedojevic
+--- Log closed Fri Mar 11 11:39:04 2011
+--- Log opened Fri Mar 11 18:53:52 2011
+18:53 Starting query in Bitlbee with markomedojevic
+18:53 markomedojevic|  drupal_add_js("{$path}/includes/jquery.cookie.js");
+--- Log closed Fri Mar 11 18:59:01 2011
+--- Log opened Fri Mar 11 19:02:29 2011
+19:02          <-- markomedojevic has quit irc
+--- Log closed Fri Mar 11 19:08:01 2011
+--- Log opened Fri Mar 11 20:36:17 2011
+20:36 Closing query with markomedojevic
+--- Log closed Fri Mar 11 20:36:17 2011
+--- Log opened Sat Apr 02 23:24:04 2011
+23:24 Starting query in Bitlbee with markomedojevic
+23:24 markomedojevic| cao da ne znas koji je url za html prototypes na ageni
+23:24 markomedojevic| btw vidim da commitujes i preko vikenda ;)
+--- Log closed Sat Apr 02 23:29:51 2011
+--- Log opened Fri Apr 08 00:03:32 2011
+00:03 Starting query in Bitlbee with markomedojevic
+00:03 playahater| dude ..
+00:03 playahater| :)
+00:03 playahater| pali na spavanje ..
+00:03 playahater| sutra tjemo testiramo glogin .
+00:03 playahater| mi smo polumrtvi u kancu ..
+00:03 markomedojevic| vazi
+00:04 playahater| c-ya sutr a.. 
+00:04 markomedojevic| jel ste vi jos u firmi
+00:04 playahater| poz ..
+00:04 playahater| ;)
+00:04 markomedojevic| strasno
+00:04 playahater| strashnije nego shto mislish
+00:04 markomedojevic| pa zasto ste zzaginuli :(
+00:04 playahater| :)
+00:05 markomedojevic| uzas
+00:05 playahater| jeste ..
+00:05 playahater| ne pitaj ..
+00:06 playahater| pali na kunt .. 
+00:06 playahater| i ja tju uskoro ..
+00:06 playahater| nadam se ..
+00:06 playahater| :\
+--- Log closed Fri Apr 08 00:12:07 2011
+--- Log opened Fri Apr 08 00:15:14 2011
+00:15 Closing query with markomedojevic
+--- Log closed Fri Apr 08 00:15:14 2011
+--- Log opened Fri Apr 08 18:01:26 2011
+18:01 Starting query in Bitlbee with markomedojevic
+18:01 markomedojevic| git@agena.beanstalkapp.com:/m3com-crm.git
+18:05          <-- markomedojevic has quit irc
+18:06 Closing query with markomedojevic
+--- Log closed Fri Apr 08 18:06:07 2011
+--- Log opened Tue Apr 12 17:27:18 2011
+17:27 Starting query in Bitlbee with markomedojevic
+17:27 markomedojevic| e kada stignes ako ti nije problem opet uradi merge fajlova iz group login foldera
+17:28 playahater| ok ..
+--- Log closed Tue Apr 12 17:34:01 2011
+--- Log opened Tue Apr 12 17:51:31 2011
+17:51 Closing query with markomedojevic
+--- Log closed Tue Apr 12 17:51:31 2011
+--- Log opened Wed Apr 20 17:38:36 2011
+17:38 Starting query in Bitlbee with markomedojevic
+17:38 markomedojevic|   if(!$("#leaderboard div").size() && !$("#leaderboard a").size()) {
+17:38 markomedojevic|       
+17:38 markomedojevic|   }
+--- Log closed Wed Apr 20 17:43:41 2011
+--- Log opened Wed Apr 20 18:05:16 2011
+18:05 Closing query with markomedojevic
+--- Log closed Wed Apr 20 18:05:16 2011
+--- Log opened Thu Apr 21 12:37:02 2011
+12:37 Starting query in Bitlbee with markomedojevic
+12:37 playahater| http://redmine.diwanee.com/documents/27
+12:37 Closing query with markomedojevic
+--- Log closed Thu Apr 21 12:37:08 2011

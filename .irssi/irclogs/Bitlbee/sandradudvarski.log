@@ -1,0 +1,353 @@
+--- Log opened Mon Feb 21 14:43:39 2011
+14:43 Starting query in Bitlbee with sandradudvarski
+14:43 sandradudvarski| milan.mihajlovic.nis@gmail.com
+14:43 sandradudvarski| je covek koji radi flash za app
+--- Log closed Mon Feb 21 14:48:54 2011
+--- Log opened Mon Feb 21 15:48:00 2011
+15:48 Closing query with sandradudvarski
+--- Log closed Mon Feb 21 15:48:00 2011
+--- Log opened Mon Feb 21 20:11:15 2011
+20:11 Starting query in Bitlbee with sandradudvarski
+20:11 sandradudvarski| Desi Milose!
+20:12 sandradudvarski| Vlada ce oko 23h da napise nesto u doc koji sam serovala, molim te ako mozes pogledaj pa se usaglasi i ti
+20:12 playahater| ok .. dogovoreno .. :) ..
+20:12 sandradudvarski| hvala
+20:12 playahater| np .. :)
+--- Log closed Mon Feb 21 20:17:54 2011
+--- Log opened Tue Feb 22 11:16:13 2011
+11:16 Starting query in Bitlbee with sandradudvarski
+11:16 sandradudvarski| http://www.agenapps.com/Wear_dress/
+11:17 sandradudvarski| podatke koje razmenjuju
+11:17 sandradudvarski| flash i back end sajta
+11:17 sandradudvarski| mora da se ubaci još neki "middleware"
+--- Log closed Tue Feb 22 11:22:54 2011
+--- Log opened Tue Feb 22 12:42:03 2011
+12:42 Closing query with sandradudvarski
+--- Log closed Tue Feb 22 12:42:03 2011
+--- Log opened Thu Feb 24 15:08:09 2011
+15:08 Starting query in Bitlbee with sandradudvarski
+15:08 sandradudvarski| http://agenapps.com/Wear_dress/1/
+--- Log closed Thu Feb 24 15:13:18 2011
+--- Log opened Thu Feb 24 16:49:54 2011
+16:49 Closing query with sandradudvarski
+--- Log closed Thu Feb 24 16:49:54 2011
+--- Log opened Wed Mar 16 21:47:13 2011
+21:47 Starting query in Bitlbee with sandradudvarski
+21:47 sandradudvarski| Cao Milose, radis?
+21:52 sandradudvarski| Kontaktirace te Marko Ristic, fleser sto radi aplikaciju za m3com, a u vezi funkcionalnosti dugmica Via MMS, My Photos, Share FB i TW. Hvala i pozz
+21:53          <-- sandradudvarski has quit irc
+--- Log closed Wed Mar 16 21:59:36 2011
+--- Log opened Fri Apr 01 23:30:38 2011
+23:30 Starting query in Bitlbee with sandradudvarski
+23:30 sandradudvarski| Milose, kako stojimo?
+23:32 playahater| chuo sam se sa markom .. radi na bug-u za slanje podataka za mms ..
+23:32 playahater| chim zavrshi poslace mi flash ..
+23:33 playahater| javljam ti kad ga komitujem
+23:33 sandradudvarski| javi te mi kad mogu da probam
+23:33 playahater| ok
+23:37 Closing query with sandradudvarski
+--- Log closed Fri Apr 01 23:37:01 2011
+--- Log opened Sat Apr 02 01:13:56 2011
+01:13 Starting query in Bitlbee with sandradudvarski
+01:13 sandradudvarski| Milooooooooooooseeeeeeee
+01:16 playahater| tu sam .. 
+01:16 playahater| jedva budan ..
+01:16 playahater| nema ga marko josh ..
+01:16 sandradudvarski| znam i ja
+01:17 sandradudvarski| jel radi ili...?
+01:17 playahater| ja se nadam da radi ..
+01:17 playahater| :)
+01:17 sandradudvarski| pa sta ste se dogovorili?
+01:18 playahater| da mi poshalje flash file chim zavrshi .. i da tje da uzme odmah to da odradi ..
+01:18 playahater| to je bilo .. odavno ..
+01:18 playahater| a jel zna za taj marker?
+01:18 sandradudvarski| ajde ga startuj mislim da je online
+01:18 sandradudvarski| marker radi
+01:19 sandradudvarski| sad sam probala
+01:19 playahater| aha .. ql ..
+01:19 sandradudvarski| ali ne radi share ni jedan 
+01:19 sandradudvarski| u stvari ni jedna funkcionalnost sem save ne radi
+01:23 playahater| snimanje slike u album radi ..
+01:23 playahater| snimanje na hard radi ..
+01:23 playahater| twitter i fb kao rade .. to treba da sredi ..
+01:23 sandradudvarski| ko to treba da sredi?
+01:24 playahater| marko
+01:24 sandradudvarski| kakav je dogovor?
+01:24 playahater| ne znam .. sad sam ga pingovao .. nije mi josh odgovorio ..
+01:25 sandradudvarski| i ja sam 
+01:25 playahater| ako ne stignemo vecheras .. mislim da tje morati da ostane za sutra ..
+01:25 playahater| ako ne stigne da zavrshi to .. dzaba sedimo budni ..
+01:25 sandradudvarski| jel ti poslao izmene makar neke?
+01:26 playahater| pa josh oko devetke ..
+01:26 playahater| i to sam josh odmah okachio ..
+01:26 sandradudvarski| cekaj sec, please
+01:30 sandradudvarski| Evo me, i u Album kao radi
+01:30 sandradudvarski| a mms?
+01:31 playahater| mms, twitter i fb polovichno
+01:31 playahater| mms prolazi validaciju ali ne submit-uje podatke drupalu
+01:32 playahater| twitter i fb otvaraju novi tab i prosledjuju url kako treba sem shto url ima prefix $ .. pa twitter i fb ne prepoznaju kao link
+01:33 sandradudvarski| da meni trazi da upisem url
+01:33 playahater| na fb da .. jer ne prepoznaje $http://blabla
+01:33 playahater| treba da dobije http://blabla
+01:34 playahater| nije strashan bug .. al na kraju .. ne radi kako treba
+01:34 sandradudvarski| a za album snimi kako treba ali nemam nikakvo obavestenje i na igrici ostane alert kao da nisam uspela da posaljem u album
+01:35 sandradudvarski| jel marko zna sta sve treba da uradi?
+01:36 playahater| nakon snimanja slike bi trebalo da ispishe da je slika uspeshno snimljena i da je u galeriji .. ne znam da li onaj arapski to znachi ..
+01:36 playahater| mada sam primetio da je razlichita poruka za greshku i uspeshno kreiranje slike u albumu ..
+01:38 sandradudvarski| meni se cini da nije kako treba ne znam kako da paste text u google translate
+01:39 sandradudvarski| Kad ustajes sutra?
+01:40 playahater| ne moze iz flash-a copy/paste ..
+01:40 playahater| ne radi select ..
+01:40 playahater| pa ne znam .. do jedanestice sam budan nadam se ..
+01:40 playahater| bolje je pitanje kad marko ustaje sutra .. :)
+01:41 sandradudvarski| nece da mi se javi na gtalk
+01:42 sandradudvarski| cekaj da probam opet, ako se tebi prvo javi kazi mu da mi se odazove
+01:43 playahater| ok
+--- Log closed Sat Apr 02 01:48:43 2011
+--- Log opened Sat Apr 02 01:51:26 2011
+01:51 sandradudvarski| Milose, ne vredi da ga cekas, ja cu da mu objasnim za ovu losu komunikaciju
+01:51 sandradudvarski| Ti i ja ce cujemo oko 11h, ok?
+01:52 sandradudvarski| Vladi sam isto poslala mail da znas
+01:52 playahater| ok .. 
+01:52 playahater| dogovoreto ..
+01:52 sandradudvarski| adje laku noc
+01:52 playahater| iskomuniciratju ja sa vladom ako bude imao vremena da istestiramo mms ..
+01:52 playahater| uglavnom .. 
+01:52 playahater| laku notj
+01:52 playahater| :)
+01:53 sandradudvarski| :)
+--- Log closed Sat Apr 02 01:58:43 2011
+--- Log opened Sat Apr 02 02:39:30 2011
+02:39          <-- sandradudvarski has quit irc
+02:41 Closing query with sandradudvarski
+--- Log closed Sat Apr 02 02:41:28 2011
+--- Log opened Sat Apr 02 11:17:36 2011
+11:17 Starting query in Bitlbee with sandradudvarski
+11:17 sandradudvarski| Desi Milose!
+--- Log closed Sat Apr 02 11:22:43 2011
+--- Log opened Sat Apr 02 12:10:56 2011
+12:10          <-- sandradudvarski has quit irc
+--- Log closed Sat Apr 02 12:16:43 2011
+--- Log opened Sat Apr 02 12:44:57 2011
+12:44 playahater| poz sandra ..
+12:45 playahater| poslednja verzija flasha koju mi je marko poslao jutros oko 3-4 je online ..
+12:45 playahater| upravo sam mu prosledio mail sa bagovima ..
+12:45 playahater| jedina izmena u tom flashu je ispravljen twitter link .. 
+12:46 playahater| facebook link i dalje u sebi ima $ ..
+12:46 playahater| podatke za mms i dalje ne dobijam ..
+12:47 playahater| poslao sam mu mail .. opet, objasnio proceduru .. nadam se da tje sledetji flash koji mi bude poslao da radi kompletno ..
+12:47 playahater| marko ima informacije .. treba da sedne i da sredi to ..
+12:48 playahater| i da mi nakon toga pusti flash da ga bacim na server ..
+12:48 playahater| ja sam online .. :)
+--- Log closed Sat Apr 02 12:54:43 2011
+--- Log opened Sat Apr 02 13:00:43 2011
+13:00          <-- sandradudvarski has quit irc
+13:02 sandradudvarski| Rekla sam Marku da te pinguje, javi mi odmah ako nesto nije kako treba molim te, ovo ne sme da se ponavlja
+13:07 playahater| ok ..
+13:07 Closing query with sandradudvarski
+--- Log closed Sat Apr 02 13:07:14 2011
+--- Log opened Sat Apr 02 15:53:33 2011
+15:53 Starting query in Bitlbee with sandradudvarski
+15:53 playahater| sandra ..
+15:54 playahater| postavio sam poslednju verziju flash-a na dev.m3com.com.sa ..
+15:54 sandradudvarski| evo me
+15:54 playahater| twitter i fb rade ..
+15:54 sandradudvarski| ok
+15:54 playahater| meni dodushe i dalje izbacuje $ ispred fb-a .. ali marko kaze da kod njega radi .. 
+15:54 playahater| mozda ovaj moj flash malo baguje ..
+15:54 playahater| mms podatke primamo i prosledjujemo kako treba ..
+15:54 playahater| vlada treba da istestira samo da li se mms stvari poshalje ..
+15:55 playahater| to je vetj deo sa mms api-jem ..
+15:55 playahater| snimanje slike u albumu i na hard je isto ok ..
+15:56 playahater| sad tju da pustim vladi mail da proba da testira mms ..
+15:56 playahater| da vidimo gde smo s tim ..
+15:57 sandradudvarski| ja cu sad da testiram, pa se javljam
+15:57 playahater| mada .. ako ti radi sharovanje i snimanje slike u album .. mislim da mozesh da objavish da je verzija ok za testiranje .. 
+15:58 playahater| mms logika nam je dobra koliko vidim .. samo nemam pristup mms log-u .. pa ne nzam15:48 playahater| mozda ovaj moj flash budali
+15:58 playahater| ups .. paste-ovao sam neshto bezveze ..
+15:58 playahater| :)
+15:58 sandradudvarski| simultani covece!
+15:58 sandradudvarski| :)
+15:59 playahater| ne pitaj
+15:59 playahater| :)
+15:59 sandradudvarski| javim ti se kad istestiram
+15:59 playahater| obavezno
+15:59 playahater| :)
+15:59 playahater| probaj da ochisti kesh u browseru pre bilo chega ..
+16:00 sandradudvarski| znam, vec jesam, samo ne znam kako da probam mms
+16:00 playahater| pa ..
+16:00 playahater| jedini broj koji ja znam da je validan je ..
+16:00 playahater| 00966554433221
+16:00 playahater| i ako ukucash taj broj u drugo polje (recipient) .. ja shaljem mms ..
+16:00 playahater| samo ne znam da li je stvarno poslat ..
+16:01 playahater| to bi trebalo vlada samo da ishchekira i vidi da l smo ok ..
+16:01 playahater| mada meni deluje sve ok
+16:01 sandradudvarski| jel vlada to moze da vidi?
+16:01 playahater| moze ..
+16:02 sandradudvarski| ok, testiram, ti posalji vladi mail, a ja cu da ga zovem na mob
+16:02 playahater| deal
+16:04 playahater| poslao mi marko sad izmenjenu verziju ..
+16:04 playahater| dodao je neke sitnice ..
+16:05 playahater| uploadujem pa ti javljam da testirash
+16:05 playahater| ubacio je preloader da bi korisnik znao da se neshto deshava
+16:05 sandradudvarski| vazi
+16:08          <-- sandradudvarski has quit irc
+--- Log closed Sat Apr 02 16:10:03 2011
+--- Log opened Sat Apr 02 16:13:34 2011
+16:13 Starting query in Bitlbee with sandradudvarski
+16:13 playahater| poslao vladi mail
+16:13 playahater| bacio glash na server ..
+16:13 playahater| isterstiraj ..
+16:13 playahater| :)
+16:13 playahater| ja sam online ako zatrebam vladi ..
+16:14 sandradudvarski| evo odmah
+16:14 sandradudvarski| vazi
+16:15 Closing query with sandradudvarski
+--- Log closed Sat Apr 02 16:15:33 2011
+--- Log opened Sat Apr 02 16:18:33 2011
+16:18 Starting query in Bitlbee with sandradudvarski
+16:18 sandradudvarski| Milose, twitter radi, Facebook ne radi, mms mi izlazi neko alert obavestenje, steta sto ne znam arapski:)
+16:18 sandradudvarski| save to hard radi, album radi
+16:19 sandradudvarski| zovem vladu za mms, a marka za fb
+16:21 playahater| e .. pa da .. i meni fb baguje .. al marko kaze da radi ..
+16:21 playahater| pinguj ga ..
+16:21 playahater| ja sam online
+16:21 playahater| :)
+16:22 sandradudvarski| evo pricam sa njim
+16:25 sandradudvarski| Miso!
+16:25 playahater| da
+16:26 Closing query with sandradudvarski
+--- Log closed Sat Apr 02 16:26:27 2011
+--- Log opened Sat Apr 02 16:26:59 2011
+16:26 Starting query in Bitlbee with sandradudvarski
+16:26 sandradudvarski| Marko kaze da za fb nema onaj prefiks$, moj tab se otvara na http://www.facebook.com/sharer.php?u=$http://dev.m3com.com.sa/album/dress-gallery/augmented-20110402171143
+16:26 sandradudvarski|  
+16:26 sandradudvarski| a njegov koji mi je poslao je bez prefiksa http://www.facebook.com/sharer.php?u=http://dev.m3com.com.sa/album/dress-gallery/augmented-20110402171911
+16:27 sandradudvarski| sta to moze da bude?
+16:28 playahater| hmm ..
+16:28 playahater| iskreno .. ne znam ..
+16:28 playahater| ja mu shaljem identichan link u oba sluchaja
+16:29 playahater| ustvari .. ja mu u jednom koraku poshaljem link .. a on taj link shalje na fb/twitter ..
+16:29 playahater| verovatno neki bagic u flash-u ..
+16:31 sandradudvarski| jel mozes da ga startujes, pa kad ustanovite javi mi, a vlada je online ne odgovara mi
+16:31 playahater| vlada verovatno nije pored rachunara trenutno ..
+16:31 playahater| kontam da tje se javiti chim bude mogo ..
+16:31 sandradudvarski| aho, ok
+16:32 sandradudvarski| aha
+16:32 playahater| ql .. chim mi marko poshalje novi flash .. istog trenutka ga uploadujem na server i pingujem te
+16:32 sandradudvarski| deal
+--- Log closed Sat Apr 02 16:38:18 2011
+--- Log opened Sat Apr 02 16:45:31 2011
+16:45 Closing query with sandradudvarski
+--- Log closed Sat Apr 02 16:45:31 2011
+--- Log opened Sat Apr 02 16:53:39 2011
+16:53 Starting query in Bitlbee with sandradudvarski
+16:54 playahater| sandra .. marko je probao sa cimerovog rachunara i nema $ ..
+16:55 playahater| mogutje da je ovo kod nas neki cache ..
+16:55 playahater| nije mi jasno ..
+16:55 playahater| mada nisam bash nabolje u toku sa flash tehnologijama .. ne znam da l je mogutje da flash iskeshira na taj nachin ..
+16:55 playahater| ako imash neki nachin da testirash sa drugog rachunara .. to bi bilo super ..
+16:56 playahater| da znamo da li radi na nekom rachunaru koji do sad nije video taj sajt ..
+16:56 playahater| to je najbolji test
+--- Log closed Sat Apr 02 17:01:18 2011
+--- Log opened Sat Apr 02 17:02:05 2011
+17:02 sandradudvarski| sad cu da probam
+--- Log closed Sat Apr 02 17:07:18 2011
+--- Log opened Sat Apr 02 17:23:34 2011
+17:23 Starting query in Bitlbee with sandradudvarski
+17:23 sandradudvarski| Milose, probala sam na drugom racunaru..
+17:24 sandradudvarski| na tom mi ne radi ni fb ni tw, sad cu da kazem marku
+--- Log closed Sat Apr 02 17:29:51 2011
+--- Log opened Sat Apr 02 17:38:56 2011
+17:38 sandradudvarski| Milose, jel postoji zabrana da posaljes sliku na fb itw ako nisi ulogovan na m3com?
+--- Log closed Sat Apr 02 17:44:51 2011
+--- Log opened Sat Apr 02 17:45:59 2011
+17:45 playahater|  da .. naravno ..
+--- Log closed Sat Apr 02 17:51:51 2011
+--- Log opened Sat Apr 02 18:13:26 2011
+18:13 Closing query with sandradudvarski
+--- Log closed Sat Apr 02 18:13:26 2011
+--- Log opened Sat Apr 02 18:22:48 2011
+18:22 Starting query in Bitlbee with sandradudvarski
+18:22 sandradudvarski| milose, tu si?
+18:24 playahater| da .. chekam marka da mi poshalje flash file ..
+18:27 sandradudvarski| mogu da te pozovem na mob?
+18:27 playahater| upravo mi je stigo flash ..
+18:27 playahater| sad tju da uploadujem pa ti javljam da probash ..
+18:27 sandradudvarski| javi kad podignes
+18:27 playahater| ok
+--- Log closed Sat Apr 02 18:33:51 2011
+--- Log opened Sat Apr 02 18:40:15 2011
+18:40 playahater| sandra .. probaj ..
+18:40 playahater| :)
+18:40 playahater| twiter i fb rade ..
+18:40 playahater| snimanjA rade ..
+18:41 playahater| mms submituje .. samo je ostalo da se vidi da li se shalje ..
+18:41 playahater| ne znam da l to mozemo da testiramo sa dev servera ..
+18:41 playahater| mada bi trebalo da moze ..
+18:42 playahater| mislim da smo spremni za prvu pravu beta verziju ..
+18:42 playahater| :)
+18:42 playahater| ja sam probao iz firefox-a na linuxu . i iz firefoxa i opere na windosu u virtuelnoj masini .. 
+18:42 playahater| i feedback je pozitivan :)
+18:46 Closing query with sandradudvarski
+--- Log closed Sat Apr 02 18:46:45 2011
+--- Log opened Sat Apr 02 18:48:44 2011
+18:48 Starting query in Bitlbee with sandradudvarski
+18:48 sandradudvarski| evo probam
+18:52 sandradudvarski| Milose tu si
+18:54 playahater| da jesam .. 
+18:54 sandradudvarski| radi mi fb ali iz drugog puta
+18:54 playahater| moguce da je to neki cache .. 
+18:54 sandradudvarski| kad kliknem jednom izadje mi ono obavestenje koje kad ugasim i ponovo kliknem na fb radi, je i tebi tako?
+18:55 playahater| hmm .. ne razumem te bash najbolje .. al mislim da ne ..
+18:56 sandradudvarski| mogu na mob da te zovem?
+18:56 playahater| ja kliknem na twitter .. otvori mi twitter u novom tabu sa dobrim linkom .. 
+18:56 playahater| ista stvar za face
+18:56 playahater| moze .. 
+18:56 sandradudvarski| vidi, ocistim kes
+18:56 sandradudvarski| pojavi mi se igrica iz pocetka..
+18:57 sandradudvarski| prodjem sve korake i dodjem do final screena
+18:57 sandradudvarski| pritisnem fb
+18:57 sandradudvarski| loader, pa obavestenje, ali mi se ne otvori tab
+18:58 sandradudvarski| nego ugasim to obavestenje i ponovo kliknem na fb i tek onda mi je ok
+18:58 playahater| mozda ti browser prvi put blokira taj tab ..
+18:58 playahater| hmm ..
+18:58 playahater| dosta chudno ..
+18:58 playahater| meni se to ne desava ..
+18:59 sandradudvarski| evo da probam ponovo, ponovo cu da ocistim kes
+18:59 playahater| probao sam iz 3 razlichita browsera na linuxu i windowsi .. i odmah .. kad kliknem mi otvori novi tab
+18:59 sandradudvarski| ja imam vistu
+18:59 playahater| uhh ..
+19:00 playahater| mada to ne bi trebalo da bude uzrok ..
+19:00 playahater| :)
+19:01 playahater| evo ja opet probao i radi kako treba
+19:02 sandradudvarski| meni tw iz prvog otvara tab, a fb ne
+19:02 sandradudvarski| u firefoxu, sad cu da probam i druge
+--- Log closed Sat Apr 02 19:07:51 2011
+--- Log opened Sat Apr 02 19:08:35 2011
+19:08 sandradudvarski| u chromu mi radi ali u exploreru ne, tebi svuda radi kako treba?
+19:09 playahater| probao sam firefox, chrome i operu u windows/linux .. i radi ..
+19:09 playahater| :)
+19:10 sandradudvarski| odmah ti otvori tab?
+19:10 playahater| da
+19:10 playahater| mislim da je kod tebe neki bug ..
+19:11 playahater| kombinacija verzije browser-a, flash-a i wondowsa ..
+19:11 playahater| mada .. ne mogu da budem siguran ..
+19:11 playahater| s druge strane .. kod mene radi ..
+19:11 playahater| najbolje da testiraju .. pa da vidimo ..
+19:11 sandradudvarski| marku isto sve radi?
+19:11 playahater| da .. kaze da mu radi ..
+19:12 sandradudvarski| a vlada?
+19:12 playahater| nije mi se javio ..
+19:13 sandradudvarski| ok, ja cu da mu posaljem mail, a ti brisi, dosta je bilo Weekend buddy
+19:13 playahater| :)
+19:13 playahater| ok .. ja tju do majke na 'ruchak' .. sad vetj vecheru :) .. pa sam kasnije online ..
+19:14 playahater| ako se javi vlada .. nek me pinguje ..
+19:14 sandradudvarski| ja idem veceras do nekih prijatelj ali sam na mob.., ako bude bas nesto mogu i od njih
+19:14 playahater| ok .. ql ..
+19:14 playahater| have a nice weekend .. :)
+19:14 sandradudvarski| tou too
+--- Log closed Sat Apr 02 19:20:51 2011
+--- Log opened Sat Apr 02 19:24:08 2011
+19:24 Closing query with sandradudvarski
+--- Log closed Sat Apr 02 19:24:08 2011

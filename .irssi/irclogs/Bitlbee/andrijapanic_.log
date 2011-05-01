@@ -1,0 +1,143 @@
+--- Log opened Tue Mar 01 11:21:13 2011
+11:21 Starting query in Bitlbee with andrijapanic_
+11:21 andrijapanic_| [Tue Mar 01 13:14:37 2011] [error] [client 89.216.16.77] PHP Fatal error:  Call to undefined function panels_plugin_get_function() in /var/www/html/sites/all/modules/panels/includes/display-edit.inc on line 291, referer: http://dev.m3com.com.sa/en/admin/build/pages/nojs/operation/user_view/handlers/user_view_panel_context/content
+11:21 andrijapanic_| to imam na devu
+11:21 andrijapanic_| od skorijih logova
+11:22 playahater| hm .. da ..
+11:23 playahater| imamo neki konflikt nekog modula sa tim panelima
+11:23 playahater| u toku sam s tim ..
+11:23 andrijapanic_| <FONT>oket</FONT>
+--- Log closed Tue Mar 01 11:28:49 2011
+--- Log opened Tue Mar 01 14:09:54 2011
+14:09 Closing query with andrijapanic_
+--- Log closed Tue Mar 01 14:09:54 2011
+--- Log opened Tue Mar 01 16:22:20 2011
+16:22 Starting query in Bitlbee with andrijapanic_
+16:22 andrijapanic_| <FONT>+1 for the other modules interfering. I had the same problem with ckeditor combined with panel editing, removing panels from it's control using ckeditor visibility in the module controls allowed me to save edited panels again normally. Have to see if the latest update to ckeditor fixes this later.</FONT>
+--- Log closed Tue Mar 01 16:27:49 2011
+--- Log opened Tue Mar 01 16:34:22 2011
+16:34 Closing query with andrijapanic_
+--- Log closed Tue Mar 01 16:34:22 2011
+--- Log opened Tue Mar 01 17:50:55 2011
+17:50 Starting query in Bitlbee with andrijapanic_
+17:50 playahater| http://www.imagemagick.org/Usage/api/#building
+17:50 Closing query with andrijapanic_
+--- Log closed Tue Mar 01 17:50:57 2011
+--- Log opened Tue Mar 08 13:00:28 2011
+13:00 Starting query in Bitlbee with andrijapanic_
+13:00 playahater| en/admin/reports/memcache
+13:01 playahater| molerova25AD1wanee
+13:02 andrijapanic_| <FONT><a href="http://drupal.org/node/911232#comment-3525972" title="http://drupal.org/node/911232#comment-3525972">http://drupal.org/node/911232#comment-3525972</a></FONT>
+--- Log closed Tue Mar 08 13:08:04 2011
+--- Log opened Tue Mar 08 13:36:22 2011
+13:36 andrijapanic_| <FONT>hari poter na pozadini ? :)</FONT>
+--- Log closed Tue Mar 08 13:42:04 2011
+--- Log opened Tue Mar 08 13:55:39 2011
+13:55 Closing query with andrijapanic_
+--- Log closed Tue Mar 08 13:55:39 2011
+--- Log opened Tue Mar 08 17:20:04 2011
+17:20 Starting query in Bitlbee with andrijapanic_
+17:20 playahater| http://code.google.com/p/memcached/wiki/FAQ#Troubleshooting_common_problems
+17:21 Closing query with andrijapanic_
+--- Log closed Tue Mar 08 17:21:18 2011
+--- Log opened Tue Mar 08 17:21:23 2011
+17:21 Starting query in Bitlbee with andrijapanic_
+17:21 playahater| http://code.google.com/p/memcached/wiki/FAQ#Troubleshooting_common_problems
+--- Log closed Tue Mar 08 17:27:04 2011
+--- Log opened Tue Mar 08 17:42:40 2011
+17:42 Closing query with andrijapanic_
+--- Log closed Tue Mar 08 17:42:40 2011
+--- Log opened Wed Mar 09 11:25:55 2011
+11:25 Starting query in Bitlbee with andrijapanic_
+11:25 playahater| http://m3com.com.sa/en/admin/reports/status
+--- Log closed Wed Mar 09 11:31:11 2011
+--- Log opened Wed Mar 09 11:35:50 2011
+11:35          <-- andrijapanic_ has quit irc
+11:37 Closing query with andrijapanic_
+--- Log closed Wed Mar 09 11:37:19 2011
+--- Log opened Tue Mar 15 15:28:29 2011
+15:28 Starting query in Bitlbee with andrijapanic_
+15:28 andrijapanic_| /usr/bin/convert   to je putanja do programa, cisto da ipak pomenem
+15:30 playahater| da da .. :)
+15:30 Closing query with andrijapanic_
+--- Log closed Tue Mar 15 15:30:20 2011
+--- Log opened Tue Mar 15 17:32:51 2011
+17:32 Starting query in Bitlbee with andrijapanic_
+17:32 playahater|   19 include_once('/sites/default/settings.php');
+17:32 playahater|   20 var_dump($conf);die();
+17:33 playahater| u index.php na dev.m3com.com.sa
+17:33 Closing query with andrijapanic_
+--- Log closed Tue Mar 15 17:33:12 2011
+--- Log opened Tue Mar 15 17:36:01 2011
+17:36 Starting query in Bitlbee with andrijapanic_
+17:36 andrijapanic_| <FONT>samo ovo, umesto prave index.php stranice ?</FONT>
+--- Log closed Tue Mar 15 17:41:30 2011
+--- Log opened Tue Mar 15 17:42:35 2011
+17:42 Closing query with andrijapanic_
+--- Log closed Tue Mar 15 17:42:35 2011
+--- Log opened Tue Apr 05 14:27:37 2011
+14:27 Starting query in Bitlbee with andrijapanic_
+14:27 andrijapanic_| kaze devla da dampujem live bazu i stavim na dev, jel to OK ?
+--- Log closed Tue Apr 05 14:32:49 2011
+--- Log opened Tue Apr 05 14:33:28 2011
+14:33 playahater| ne
+--- Log closed Tue Apr 05 14:38:49 2011
+--- Log opened Tue Apr 05 14:47:09 2011
+14:47 Closing query with andrijapanic_
+--- Log closed Tue Apr 05 14:47:09 2011
+--- Log opened Wed Apr 06 15:11:40 2011
+15:11 Starting query in Bitlbee with andrijapanic_
+15:11 andrijapanic_| ne znam jel radi ovaj chat-over-vpn, pa da ponovim: hakeru, da uklonim gd.so <http://gd.so/> modul iz php-a, na web1,2,3 ?
+15:11 andrijapanic_| :)
+--- Log closed Wed Apr 06 15:17:06 2011
+--- Log opened Wed Apr 06 15:20:49 2011
+15:20 playahater| da
+15:20 Closing query with andrijapanic_
+--- Log closed Wed Apr 06 15:20:51 2011
+--- Log opened Wed Apr 06 20:05:32 2011
+20:05 Starting query in Bitlbee with andrijapanic_
+20:05 andrijapanic_| vrnuto sefe
+20:07 playahater| 10x dude ..
+20:07 playahater| sorry za cim .. :)
+20:07 playahater| odmaraj .. uzivaj .. 
+20:07 playahater| c-ya
+20:07 playahater| ;)
+20:07 andrijapanic_| <FONT>ma cool, sreca pa sam kuci :)</FONT>
+20:07 andrijapanic_| <FONT>ajd i ti pali ako mozes :)</FONT>
+20:07 andrijapanic_| <FONT>poz</FONT>
+20:07 playahater| ma ja samo shto stigo kutji ..
+20:07 playahater| iz zvoni telefon ..
+20:07 playahater| reko shta sad majka mu stara
+20:07 playahater| :)
+20:08 andrijapanic_| <FONT>a dobro je onda :)</FONT>
+20:08 playahater| to ti ka`em .. 
+20:08 playahater| :)
+20:08 andrijapanic_| <FONT>jbg, ivan je hteo jos ranije da ga ukinem, rekoh ajd da sacekam koji dan</FONT>
+20:08 andrijapanic_| <FONT>nebitno ko ga j, mislim gd</FONT>
+20:08 andrijapanic_| <FONT>vozdraaaa</FONT>
+20:09 playahater| sutra tje smishaljam kako da ga patchujem .. :) ..
+20:09 playahater| uglavnom ..
+20:09 playahater| vozzzzdrrraaaaa ..
+20:09 playahater| :)
+20:10 andrijapanic_| <FONT>ma nebitno, i onako nisam nista primetio da se smanjio apache proces… Ć</FONT>
+20:10 Closing query with andrijapanic_
+--- Log closed Wed Apr 06 20:10:45 2011
+--- Log opened Tue Apr 19 11:16:09 2011
+11:16 Starting query in Bitlbee with andrijapanic_
+11:16 andrijapanic_| dodao sam kljuc, ip: 192.168.0.242, pa probaj i javi ako treba nesto.
+--- Log closed Tue Apr 19 11:21:35 2011
+--- Log opened Tue Apr 19 12:01:47 2011
+12:01          <-- andrijapanic_ has quit irc
+--- Log closed Tue Apr 19 12:07:35 2011
+--- Log opened Tue Apr 19 13:02:52 2011
+13:02          <-- andrijapanic_ has quit irc
+--- Log closed Tue Apr 19 13:08:35 2011
+--- Log opened Tue Apr 19 16:40:56 2011
+16:40 Starting query in Bitlbee with andrijapanic_
+16:40 andrijapanic_| ne znam jel tu covek, ne odgovara mi na chat, mora da se nesto naljutio :) pitaj miroljuba, samo za drush sintaksu za disable modula, moraju da se ukinu 2 modula, da bi sajt radio, znam to od ranije...
+--- Log closed Tue Apr 19 16:46:21 2011
+--- Log opened Thu Apr 21 12:52:10 2011
+12:52 Starting query in Bitlbee with andrijapanic_
+12:52 playahater| http://espaceculturel-leclerc.com
+12:52 Closing query with andrijapanic_
+--- Log closed Thu Apr 21 12:52:13 2011

@@ -1,0 +1,14 @@
+--- Log opened Wed Mar 03 20:37:30 2010
+20:37          --> playahater has joined
+20:37 #drupal: Total of 529 nicks [0 ops, 0 halfops, 0 voices, 529 normal]
+20:37 Join to #drupal was synced in 2 secs
+20:37  gooddesignusa| i swear i had to use it for a module but couldn't remember
+20:37          --> bjaspan_ has joined
+20:38          <-- bjaspan has quit irc
+20:38          -#- bjaspan_ is known as bjaspan
+20:38          <-- derhasi has left
+20:39          --> RobertLaptop_ has joined
+20:39          --> flobruit has joined
+20:40  lucasgladding| tots: good to hear
+20:41  lucasgladding| I usually use page.tpl.php first then try to move things into the template.php
+--- Log closed Wed Mar 03 20:41:11 2010
