@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/var/www/localhost/htdocs/m3com/sites/all'
 let g:netrw_dirhist_2='/var/www/localhost/htdocs/m3com/sites/default/files/xmlsitemap'
 let g:netrw_dirhist_3='/home/playahater/screenshots'
@@ -7,3 +7,5 @@ let g:netrw_dirhist_4='/var/www/localhost/htdocs/m3com/sites/all/themes/m3com'
 let g:netrw_dirhist_5='/var/www/localhost/htdocs/m3com/sites/all/modules/custom/m3com_misc'
 let g:netrw_dirhist_6='/srv/http/m3com/sites/all/modules/custom/m3com_ar_flash'
 let g:netrw_dirhist_7='/home/play/screenshots'
+let g:netrw_dirhist_8='/srv/http/m3com/sites/all/modules/custom/m3com_dialog'
+let g:netrw_dirhist_9='/srv/http/m3com/sites/all/themes/m3com'

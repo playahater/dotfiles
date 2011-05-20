@@ -4,9 +4,10 @@
 # === Core settings ==========================================================
 
 # common directory locations
-set prefix     = @(echo $PREFIX)@
-set data_home  = @(echo $XDG_DATA_HOME)@
-set cache_home = @(echo $XDG_CACHE_HOME)@
+set prefix      = @(echo $PREFIX)@
+set data_home   = @(echo $XDG_DATA_HOME)@
+set cache_home  = @(echo $XDG_CACHE_HOME)@
+set config_home = @(echo $XDG_CONFIG_HOME)@
 
 # Interface paths.
 set fifo_dir   = /tmp
@@ -72,6 +73,7 @@ set download_handler    = sync_spawn @scripts_dir/download.sh
   # add some javascript to the page for other 'js' and 'script' commands to access later.
 @on_event   LOAD_COMMIT    js uzbl = {};
 @on_event   LOAD_COMMIT    script @scripts_dir/formfiller.js
+@on_event   LOAD_COMMIT    script @scripts_dir/follow.js
 
 # Userscripts/per-site-settings. See the script and the example configuration for details
 #@on_event   LOAD_COMMIT    spawn @scripts_dir/per-site-settings.py @data_home/uzbl/per-site-settings
@@ -92,6 +94,9 @@ set download_handler    = sync_spawn @scripts_dir/download.sh
 @on_event   SCROLL_VERT    set scroll_message = \@<(function(){var p='--';if(%3!=%2){p=(%1/(%3-%4));p=Math.round(10000*p)/100;};return p+'%';})()>\@
 
 # === Behaviour and appearance ===============================================
+
+# Custom CSS can be defined here, including link follower hint styles
+set stylesheet_uri = file://@config_home/uzbl/style.css
 
 set show_status       = 1
 set status_top        = 0
@@ -181,6 +186,7 @@ set ebind     = @mode_bind global,-insert
 # Resets keycmd and returns to default mode.
 @on_event  ESCAPE    @set_mode
 @on_event  ESCAPE    event KEYCMD_CLEAR
+@on_event  ESCAPE    js uzbl.follow.clearHints()
 @bind   <Escape>     = event ESCAPE
 @bind   <Ctrl>[      = event ESCAPE
 
@@ -263,6 +269,9 @@ set ebind     = @mode_bind global,-insert
 @cbind  n   = search
 @cbind  N   = search_reverse
 
+# Print pages to a printer
+@cbind  <Ctrl>p = hardcopy
+
 # Web searching binds
 @cbind  gg<Google:>_         = uri http://www.google.com/search?q=\@<encodeURIComponent(%r)>\@
 @cbind  ddg<DuckDuckGo:>_    = uri http://duckduckgo.com/?q=%s
@@ -296,6 +305,13 @@ set ebind     = @mode_bind global,-insert
 # Hard-bound bookmarks
 @cbind  gh  = uri http://www.uzbl.org
 
+# New window binds
+@cbind  gw  = event REQ_NEW_WINDOW
+
+# SSL-ify bindings
+@cbind  zs  = uri \@(echo "$UZBL_URI" | sed -e 's/^http:/https:/')\@
+@cbind  zS  = event REQ_NEW_WINDOW \@(echo "$UZBL_URI" | sed -e 's/^http:/https:/')\@
+
 # Yanking & pasting binds
 @cbind  yu  = sh 'echo -n "$UZBL_URI" | xclip'
 @cbind  yU  = sh 'echo -n "$1" | xclip' \@SELECTED_URI
@@ -327,8 +343,9 @@ set follow_hint_keys = 0123456789
 #set follow_hint_keys = qwerty
 #set follow_hint_keys = asdfghjkl;
 #set follow_hint_keys = thsnd-rcgmvwb/;789aefijkopquxyz234
-@cbind  fl*  = spawn @scripts_dir/follow.sh "%s"
-@cbind  gi   = spawn @scripts_dir/go_input.sh
+@cbind  fl*  = spawn @scripts_dir/follow.sh \@< uzbl.follow("\@follow_hint_keys", "%s", 0) >\@
+@cbind  Fl*  = spawn @scripts_dir/follow.sh \@< uzbl.follow("\@follow_hint_keys", "%s", 1) >\@
+@cbind  fi   = spawn @scripts_dir/go_input.sh
 
 # Form filler binds
 # This script allows you to configure (per domain) values to fill in form
@@ -365,7 +382,8 @@ set preset = event PRESET_TABS
 @cbind  gs<preset save:>_   = @preset save %s
 @cbind  glo<preset load:>_  = @preset load %s
 @cbind  gd<preset del:>_    = @preset del %s
-@cbind  gli                 = @preset list
+# This doesn't work right now.
+#@cbind  gli                 = @preset list
 
 # === Context menu items =====================================================
 

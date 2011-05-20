@@ -8,57 +8,57 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/jk
+~Msle0~/\<m3com_misc_comment_form\>
 
 # Last Substitute Search Pattern:
-~MSle0&m3com.com.sa
+~MSle0&
 
 # Last Substitute String:
 $
 
 # Command Line History (newest to oldest):
+:q
 :wq
 :w
-:colorscheme darkblue
-:colorscheme darkspectrum
-:q
-:GundoToggle
-:set c
-:colorscheme railscasts
-:w]
-:g
-:Gblame
+:107
+:wqa
+:1284
+:1248
 :Gstatus
-:Gdiff
-:python print 2+2
+:1247
+:body
+:body-register
 :q!
-:Gread
-:Glog
-:Git 
-:Git blame
-:Git status
+:tabnew
+:1556
+:q:q
+:312
+:Gblame
+:70
+:788
+:780
 
 # Search String History (newest to oldest):
+? \<m3com_misc_comment_form\>
+?/_theme
 ?/jk
-?/hi
-?/is_ch
-?/users_rela
-?/is_par
-?/gentoo
-?/hidden
-?/kl
-?/linebrake
-?/accept_invalid_cert
-?/function m3com_
-? \<function\>
-? \<m3com_auth_user\>
-?/body.body-register
-?/edit-name
-? \<m3com_misc_dsl_unlink\>
-?/body.body-grouplogin .account-content-wide .manage-accounts-form-holder form label
-?/44
-?/views_api
-?/سودوكو
+? \<msgNotificationTitle\>
+? \<\$query\>
+? \<brightcove_remote_image\>
+?/variable
+?/body-register
+?/b
+?/access
+?/status
+? \<views_bulk_operations_normalize_node_context\>
+? \<views_bulk_operations_node_load\>
+?/nodeapi
+?/queryable_variable
+?/imagecache_cache
+?/bright
+?/_user
+? \<m3com_auth_multi_registration_callback\>
+? \<m3com_auth_unlink_account\>
 
 # Expression History (newest to oldest):
 
@@ -67,196 +67,217 @@ $
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	CHAR	0
-	/proc/acpi/battery/BAT0
+""0	LINE	0
+	                    , Run CommandReader "/home/play/.xmonad/battery" "BAT"
 "1	LINE	0
-	!
+	    <?php print drupal_render($form['password_current']); ?>
 "2	LINE	0
-	!.gitignore
+	    <?php print drupal_render($form['field_profile_birthdate']); ?>
 "3	LINE	0
-	!.htaccess
+	    
 "4	LINE	0
-	*.zip
+	    
 "5	LINE	0
-	nbproject/
-	sites/default/files/
-	sites/default/settings.php
-	sites/default/files/afp_news_pictures/
-	sites/default/files/album/photos/
-	sites/default/files/arsel/
-	sites/default/files/backup_migrate/manual/
-	sites/default/files/backup_migrate/scheduled/
-	sites/default/files/brightcove_thumbnail/
-	sites/default/files/category_pictures/
-	sites/default/files/covers/
-	sites/default/files/family_article_pictures/
-	sites/default/files/games/pictures/
-	sites/default/files/imagecache/
-	sites/default/files/imagefield_thumbs/
-	sites/default/files/images/
-	sites/default/files/quran_audio/
-	sites/default/files/tmp/
-	sites/default/files/imagefield_thumbs/
-	sites/all/themes/m3com/old_templates/
+	    <?php print drupal_render($form['account']['pass']); ?>
+	    <?php print drupal_render($form['password_reset']); ?>
+	    <?php print drupal_render($form['field_profile_birthdate']); ?>
 "6	LINE	0
-	
+	    <?php print drupal_render($form['field_profile_mobile_phone']); ?>
+	    <?php print drupal_render($form['account']['mail']); ?>
+	    <?php print drupal_render($form['captcha']); ?>
+	    <?php print drupal_render($form['field_referral']); ?>
+	    <?php print drupal_render($form['field_referral_other']); ?>
+	    <?php print drupal_render($form['field_profile_agree']); ?>
 "7	LINE	0
-	  # prevent a charge of more than 100% displaying
-	  if [ "$CHARGE" -gt "99.5" ]
-	  then
-	     CHARGE=100
-	  fi
+	</div>
 "8	LINE	0
-	  if [ "$CHARGE" -gt "99" ]
-	  then
-	     CHARGE=100
-	  fi
+	<div class="span-22 main-box last">
+	<div class="common-title">
+	<div class="content span-21 last">
 "9	LINE	0
-	  #CHARGE=`printf %.2f $(( $REM_CAP * 100 / $FULL_CAP ))`
+	<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
 "k	CHAR	0
 	jjjjjjjjjjjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkjjjjjjjjjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkhhvllllllllllllllllllllllllllllllllllljjjjjjkkyjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjkkokp
-""-	CHAR	0
-	&bitlbee.log
+"-	CHAR	0
+	['name']
 
 # File marks:
-'0  70  6  ~/.gitignore
-'1  88  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
-'2  1  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc.module
-'3  1  0  ~/.gitconfig
-'4  12  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
-'5  1  0  .wine/drive_c/Program Files (x86)/hitman2/Hitman2.ini
-'6  12  0  ~/.xmonad/battery
-'7  49  4  ~/stuff/battt.rb
-'8  71  2  ~/stuff/battt.rb
-'9  40  3  ~/.xmonad/battery
+'0  14  59  ~/.xmobarrc
+'1  1  0  ~/conc
+'2  120  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+'3  27  0  /srv/http/m3com/sites/all/themes/m3com/template.php
+'4  32  1  /srv/http/m3com/sites/all/themes/m3com/template.php
+'5  61  0  /srv/http/m3com/sites/all/modules/password_change/password_change.module
+'6  1  0  /srv/http/m3com/sites/all/modules/password_change/password_change.install
+'7  113  0  ~/stuff/drupal/sites/m3com/sandbox/password_change/password_change.module
+'8  108  6  /srv/http/m3com/sites/all/modules/mm_remove/mm_remove.module
+'9  39  0  /srv/http/m3com/sites/all/modules/custom/m3com_sports/NERD_tree_1
 
 # Jumplist (newest first):
--'  70  6  ~/.gitignore
--'  69  42  ~/.gitignore
--'  1  0  ~/.gitignore
--'  88  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+-'  14  59  ~/.xmobarrc
+-'  15  67  ~/.xmobarrc
+-'  1  0  ~/.xmobarrc
+-'  1  0  ~/conc
+-'  120  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+-'  112  16  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+-'  113  14  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+-'  68  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
 -'  1  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
--'  1  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc.module
--'  1  0  ~/.gitconfig
--'  12  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
--'  1  0  .wine/drive_c/Program Files (x86)/hitman2/Hitman2.ini
--'  12  0  ~/.xmonad/battery
--'  1  0  ~/.xmonad/battery
--'  49  4  ~/stuff/battt.rb
--'  14  47  ~/stuff/battt.rb
--'  1  2  ~/stuff/battt.rb
--'  71  2  ~/stuff/battt.rb
--'  40  3  ~/.xmonad/battery
--'  27  0  ~/.xmonad/battery
--'  13  24  ~/.xmonad/battery
--'  7  0  ~/.xmonad/battery
--'  18  18  ~/.wine/drive_c/Program Files (x86)/Eidos Interactive/Hitman 2 Silent Assassin/Hitman2.ini
--'  17  10  ~/.wine/drive_c/Program Files (x86)/Eidos Interactive/Hitman 2 Silent Assassin/Hitman2.ini
--'  1  0  ~/.wine/drive_c/Program Files (x86)/Eidos Interactive/Hitman 2 Silent Assassin/Hitman2.ini
--'  9  18  ~/.wine/drive_c/Program Files (x86)/Eidos Interactive/Hitman 2 Silent Assassin/Hitman2.ini
--'  38  0  ~/.wine/drive_c/Program Files (x86)/hitman2/Hitman2.ini
--'  1  0  ~/.wine/drive_c/Program Files (x86)/hitman2/Hitman2.ini
--'  10  0  ~/.wine/drive_c/Program Files (x86)/hitman2/Hitman2.ini
--'  12  11  ~/.wine/drive_c/Program Files (x86)/hitman2/Hitman2.ini
--'  5  0  ~/.xinitrc
+-'  51  15  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+-'  656  3  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+-'  27  0  /srv/http/m3com/sites/all/themes/m3com/template.php
+-'  1  0  /srv/http/m3com/sites/all/themes/m3com/template.php
+-'  32  1  /srv/http/m3com/sites/all/themes/m3com/template.php
+-'  61  0  /srv/http/m3com/sites/all/modules/password_change/password_change.module
+-'  113  0  /srv/http/m3com/sites/all/modules/password_change/password_change.module
+-'  1  0  /srv/http/m3com/sites/all/modules/password_change/password_change.module
+-'  1  0  /srv/http/m3com/sites/all/modules/password_change/password_change.install
+-'  113  0  ~/stuff/drupal/sites/m3com/sandbox/password_change/password_change.module
+-'  1  0  ~/stuff/drupal/sites/m3com/sandbox/password_change/password_change.module
+-'  29  8  /srv/http/m3com/sites/all/themes/m3com/template.php
+-'  479  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/NERD_tree_1
+-'  485  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/NERD_tree_1
+-'  1  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/NERD_tree_1
+-'  220  8  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+-'  34  9  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+-'  73  9  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+-'  71  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+-'  74  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+-'  70  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+-'  69  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+-'  100  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+-'  88  63  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+-'  214  5  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+-'  210  5  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+-'  108  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+-'  851  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+-'  216  54  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+-'  108  6  /srv/http/m3com/sites/all/modules/mm_remove/mm_remove.module
+-'  1  0  /srv/http/m3com/sites/all/modules/mm_remove/mm_remove.module
+-'  39  0  /srv/http/m3com/sites/all/modules/custom/m3com_sports/NERD_tree_1
+-'  135  0  /srv/http/m3com/sites/all/modules/custom/m3com_sports/NERD_tree_1
+-'  1  0  /srv/http/m3com/sites/all/modules/custom/m3com_sports/NERD_tree_1
+-'  34  8  /srv/http/m3com/sites/all/modules/custom/m3com_sports/m3com_sports.module
+-'  463  8  /srv/http/m3com/sites/all/modules/custom/m3com_sports/m3com_sports.module
+-'  1  0  /srv/http/m3com/sites/all/modules/custom/m3com_sports/m3com_sports.module
+-'  295  44  /srv/http/m3com/sites/all/modules/brightcove/brightcove_cck/brightcove_cck.formatters.inc
+-'  30  44  /srv/http/m3com/sites/all/modules/brightcove/brightcove_cck/brightcove_cck.formatters.inc
+-'  211  44  /srv/http/m3com/sites/all/modules/brightcove/brightcove_cck/brightcove_cck.formatters.inc
+-'  1  0  /srv/http/m3com/sites/all/modules/brightcove/brightcove_cck/brightcove_cck.formatters.inc
+-'  2  0  /srv/http/m3com/sites/all/modules/object_cache/object_cache.module
+-'  1  0  /srv/http/m3com/sites/all/modules/object_cache/object_cache.module
+-'  169  0  ~/stuff/drupal/sites/m3com/modules/top_searches/top_searches.module
+-'  1  0  ~/stuff/drupal/sites/m3com/modules/top_searches/top_searches.module
+-'  251  0  /srv/http/m3com/sites/all/modules/object_cache/object_cache.module
+-'  230  0  /srv/http/m3com/sites/all/modules/object_cache/object_cache.module
+-'  228  0  /srv/http/m3com/sites/all/modules/object_cache/object_cache.module
+-'  53  0  /srv/http/m3com/sites/all/modules/object_cache/object_cache.module
+-'  227  0  /srv/http/m3com/sites/all/modules/object_cache/object_cache.module
+-'  236  16  /srv/http/m3com/sites/all/modules/object_cache/object_cache.module
+-'  250  0  /srv/http/m3com/sites/all/modules/object_cache/object_cache.module
+-'  160  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+-'  1287  0  /srv/http/m3com/sites/all/themes/m3com/css/m3com.css
+-'  1  0  /srv/http/m3com/sites/all/themes/m3com/css/m3com.css
+-'  237  0  /srv/http/m3com/sites/all/modules/object_cache/object_cache.module
 -'  1  0  ~/.xinitrc
--'  5  0  ~/.xinitrc
--'  1  0  ~/.xinitrc
--'  5  0  ~/.xinitrc
--'  1  0  ~/.xinitrc
--'  49  4  ~/stuff/battt.rb
--'  14  47  ~/stuff/battt.rb
--'  1  2  ~/stuff/battt.rb
--'  71  2  ~/stuff/battt.rb
--'  18  18  ~/.wine/drive_c/Program Files (x86)/Eidos Interactive/Hitman 2 Silent Assassin/Hitman2.ini
--'  17  10  ~/.wine/drive_c/Program Files (x86)/Eidos Interactive/Hitman 2 Silent Assassin/Hitman2.ini
--'  1  0  ~/.wine/drive_c/Program Files (x86)/Eidos Interactive/Hitman 2 Silent Assassin/Hitman2.ini
--'  9  18  ~/.wine/drive_c/Program Files (x86)/Eidos Interactive/Hitman 2 Silent Assassin/Hitman2.ini
--'  38  0  ~/.wine/drive_c/Program Files (x86)/hitman2/Hitman2.ini
--'  1  0  ~/.wine/drive_c/Program Files (x86)/hitman2/Hitman2.ini
--'  10  0  ~/.wine/drive_c/Program Files (x86)/hitman2/Hitman2.ini
--'  12  11  ~/.wine/drive_c/Program Files (x86)/hitman2/Hitman2.ini
--'  5  0  ~/.xinitrc
--'  1  0  ~/.xinitrc
--'  5  0  ~/.xinitrc
--'  1  0  ~/.xinitrc
--'  5  0  ~/.xinitrc
--'  1  0  ~/.xinitrc
--'  12  0  ~/.xmonad/battery
--'  1  0  ~/.xmonad/battery
--'  49  4  ~/stuff/battt.rb
--'  14  47  ~/stuff/battt.rb
--'  1  2  ~/stuff/battt.rb
--'  71  2  ~/stuff/battt.rb
--'  40  3  ~/.xmonad/battery
--'  27  0  ~/.xmonad/battery
--'  13  24  ~/.xmonad/battery
--'  7  0  ~/.xmonad/battery
--'  18  18  ~/.wine/drive_c/Program Files (x86)/Eidos Interactive/Hitman 2 Silent Assassin/Hitman2.ini
--'  17  10  ~/.wine/drive_c/Program Files (x86)/Eidos Interactive/Hitman 2 Silent Assassin/Hitman2.ini
--'  1  0  ~/.wine/drive_c/Program Files (x86)/Eidos Interactive/Hitman 2 Silent Assassin/Hitman2.ini
--'  9  18  ~/.wine/drive_c/Program Files (x86)/Eidos Interactive/Hitman 2 Silent Assassin/Hitman2.ini
--'  38  0  ~/.wine/drive_c/Program Files (x86)/hitman2/Hitman2.ini
--'  1  0  ~/.wine/drive_c/Program Files (x86)/hitman2/Hitman2.ini
--'  10  0  ~/.wine/drive_c/Program Files (x86)/hitman2/Hitman2.ini
--'  12  11  ~/.wine/drive_c/Program Files (x86)/hitman2/Hitman2.ini
--'  5  0  ~/.xinitrc
--'  1  0  ~/.xinitrc
--'  5  0  ~/.xinitrc
--'  1  0  ~/.xinitrc
--'  5  0  ~/.xinitrc
--'  1  0  ~/.xinitrc
--'  49  4  ~/stuff/battt.rb
--'  14  47  ~/stuff/battt.rb
--'  1  2  ~/stuff/battt.rb
--'  71  2  ~/stuff/battt.rb
--'  18  18  ~/.wine/drive_c/Program Files (x86)/Eidos Interactive/Hitman 2 Silent Assassin/Hitman2.ini
--'  17  10  ~/.wine/drive_c/Program Files (x86)/Eidos Interactive/Hitman 2 Silent Assassin/Hitman2.ini
--'  1  0  ~/.wine/drive_c/Program Files (x86)/Eidos Interactive/Hitman 2 Silent Assassin/Hitman2.ini
--'  9  18  ~/.wine/drive_c/Program Files (x86)/Eidos Interactive/Hitman 2 Silent Assassin/Hitman2.ini
--'  38  0  ~/.wine/drive_c/Program Files (x86)/hitman2/Hitman2.ini
--'  1  0  ~/.wine/drive_c/Program Files (x86)/hitman2/Hitman2.ini
--'  10  0  ~/.wine/drive_c/Program Files (x86)/hitman2/Hitman2.ini
--'  12  11  ~/.wine/drive_c/Program Files (x86)/hitman2/Hitman2.ini
--'  5  0  ~/.xinitrc
--'  1  0  ~/.xinitrc
--'  5  0  ~/.xinitrc
--'  1  0  ~/.xinitrc
--'  5  0  ~/.xinitrc
--'  1  0  ~/.xinitrc
--'  1  0  .wine/drive_c/Program Files (x86)/hitman2/Hitman2.ini
--'  12  0  ~/.xmonad/battery
--'  1  0  ~/.xmonad/battery
--'  49  4  ~/stuff/battt.rb
--'  14  47  ~/stuff/battt.rb
--'  1  2  ~/stuff/battt.rb
--'  71  2  ~/stuff/battt.rb
+-'  1284  0  /srv/http/m3com/sites/all/themes/m3com/css/m3com.css
+-'  1277  5  /srv/http/m3com/sites/all/themes/m3com/css/m3com.css
+-'  1273  5  /srv/http/m3com/sites/all/themes/m3com/css/m3com.css
+-'  1272  5  /srv/http/m3com/sites/all/themes/m3com/css/m3com.css
+-'  1271  5  /srv/http/m3com/sites/all/themes/m3com/css/m3com.css
+-'  1247  1  /srv/http/m3com/sites/all/themes/m3com/css/m3com.css
+-'  1291  0  /srv/http/m3com/sites/all/themes/m3com/css/m3com.css
+-'  235  0  /srv/http/m3com/sites/all/modules/object_cache/object_cache.module
+-'  18  0  /srv/http/m3com-crm/sites/all/modules/custom/m3com_sms_manager/m3com_sms_manager.module
+-'  1  0  /srv/http/m3com-crm/sites/all/modules/custom/m3com_sms_manager/m3com_sms_manager.module
+-'  35  0  /srv/http/m3com-crm/sites/all/modules/custom/m3com_sms_manager/m3com_sms_manager.module
+-'  51  0  ~/stuff/drupal/sites/m3com/sandbox/examples/page_example/NERD_tree_1
+-'  92  0  ~/stuff/drupal/sites/m3com/sandbox/examples/page_example/NERD_tree_1
+-'  1  0  ~/stuff/drupal/sites/m3com/sandbox/examples/page_example/NERD_tree_1
+-'  1  0  ~/stuff/drupal/sites/m3com/sandbox/examples/page_example/page_example.module
+-'  9  0  /srv/http/m3com-crm/sites/all/modules/custom/m3com_sms_manager/m3com_sms_manager.module
+-'  101  0  /srv/http/m3com/sites/all/modules/custom/m3com_log/m3com_log.module
+-'  1  0  /srv/http/m3com/sites/all/modules/custom/m3com_log/m3com_log.module
+-'  84  2  /srv/http/m3com/sites/all/modules/custom/m3com_log/m3com_log.module
+-'  82  0  /srv/http/m3com/sites/all/modules/object_cache/object_cache.module
+-'  1  0  /srv/http/m3com/sites/all/modules/object_cache/object_cache.install
+-'  252  0  /srv/http/m3com/sites/all/modules/object_cache/object_cache.module
+-'  131  4  /srv/http/m3com/sites/all/modules/object_cache/object_cache.module
+-'  75  49  /srv/http/m3com/sites/all/modules/custom/m3com_log/m3com_log.module
+-'  74  0  /srv/http/m3com/sites/all/modules/custom/m3com_log/m3com_log.module
+-'  100  2  /srv/http/m3com/sites/all/modules/custom/m3com_log/m3com_log.module
+-'  102  0  /srv/http/m3com/sites/all/modules/custom/m3com_log/m3com_log.module
+-'  2  0  ~/.xinitrc
+-'  3  0  /srv/http/m3com/sites/all/themes/m3com/layouts/styles/mainbox/mainbox_template.tpl.php
+-'  120  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+-'  112  16  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+-'  113  14  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+-'  68  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
 
 # History of marks within files (newest to oldest):
 
-> ~/.gitignore
-	"	70	6
-	^	70	7
-	.	70	0
-	+	1	0
-	+	4	0
-	+	4	0
-	+	33	0
-	+	4	0
-	+	34	8
-	+	51	10
-	+	69	10
-	+	69	32
-	+	70	6
-	+	70	0
+> ~/.xmobarrc
+	"	14	59
+	.	15	0
+	+	13	0
+	+	14	72
+	+	18	150
+	+	14	73
+	+	8	65
+	+	7	55
+	+	6	37
+	+	8	71
+	+	6	0
+	+	7	83
+	+	6	0
+	+	7	0
+	+	18	171
+	+	18	0
+	+	18	171
+	+	7	0
+	+	7	39
+	+	18	177
+	+	7	19
+	+	18	171
+	+	7	35
+	+	6	26
+	+	7	20
+	+	6	0
+	+	6	0
+	+	18	173
+	+	18	64
+	+	18	180
+	+	6	22
+	+	7	0
+	+	12	41
+	+	18	176
+	+	12	35
+	+	12	168
+	+	12	0
+	+	10	0
+	+	11	0
+	+	12	26
+	+	18	178
+	+	12	0
+	+	12	87
+	+	18	179
+	+	18	0
+	+	18	181
+	+	7	42
+	+	14	73
+	+	15	0
+	i	18	175
+
+> ~/conc
+	"	1	0
 
 > /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
-	"	88	0
-	^	66	0
-	.	71	0
-	+	28	0
-	+	28	0
-	+	29	0
+	"	120	0
+	.	120	0
 	+	28	1
 	+	29	34
 	+	28	0
@@ -265,222 +286,342 @@ $
 	+	33	59
 	+	28	0
 	+	30	26
-	+	302	0
-	+	302	1
-	+	302	0
-	+	203	0
-	+	203	28
-	+	190	0
-	+	192	0
-	+	195	0
-	+	203	0
-	+	195	0
-	+	191	21
-	+	193	9
-	+	192	34
-	+	191	43
-	+	201	54
-	+	201	126
-	+	200	7
-	+	203	92
-	+	201	179
-	+	203	0
-	+	201	185
-	+	191	37
-	+	203	0
-	+	201	0
-	+	201	123
-	+	201	0
-	+	202	59
-	+	202	143
-	+	202	70
-	+	215	42
-	+	359	54
-	+	493	12
-	+	502	43
-	+	507	0
-	+	504	55
-	+	504	81
-	+	504	19
-	+	504	19
-	+	504	80
-	+	494	8
-	+	495	28
-	+	494	0
-	+	504	68
-	+	504	75
-	+	496	0
-	+	495	89
-	+	496	56
-	+	502	29
-	+	504	0
+	+	320	0
+	+	320	1
+	+	320	0
+	+	221	0
+	+	221	28
+	+	207	0
+	+	209	0
+	+	212	0
+	+	221	0
+	+	212	0
+	+	208	21
+	+	210	9
+	+	209	34
+	+	208	43
+	+	219	54
+	+	219	126
+	+	218	7
+	+	221	92
+	+	219	179
+	+	221	0
+	+	219	185
+	+	208	37
+	+	221	0
+	+	219	0
+	+	219	123
+	+	219	0
+	+	220	59
+	+	220	143
+	+	220	70
+	+	233	42
+	+	377	54
+	+	511	12
+	+	520	43
+	+	525	0
+	+	522	55
+	+	522	81
+	+	522	19
+	+	522	19
+	+	522	80
+	+	512	8
+	+	513	28
+	+	512	0
+	+	522	68
+	+	522	75
+	+	514	0
+	+	513	89
+	+	514	56
+	+	520	29
+	+	522	0
 	+	14	36
 	+	15	26
-	+	496	112
-	+	505	0
-	+	507	0
-	+	506	0
-	+	507	0
-	+	505	65
-	+	355	0
-	+	493	0
+	+	514	112
+	+	523	0
+	+	525	0
+	+	524	0
+	+	525	0
+	+	523	65
+	+	373	0
+	+	511	0
 	+	48	0
 	+	46	0
-	+	66	0
-	+	67	0
-	+	68	0
+	+	78	0
+	+	79	0
+	+	80	0
+	+	81	0
+	+	82	0
+	+	83	0
+	+	193	140
+	+	193	0
+	+	192	122
+	+	193	0
+	+	116	0
+	+	216	0
+	+	216	0
+	+	216	52
+	+	113	0
+	+	90	50
+	+	102	50
+	+	77	0
 	+	69	0
+	+	69	0
+	+	69	1
+	+	69	1
+	+	69	9
 	+	70	0
-	+	71	0
+	+	120	38
+	+	61	7
+	+	63	30
+	+	112	0
+	+	113	0
+	+	113	0
+	+	120	0
 
-> /srv/http/m3com/sites/all/modules/custom/m3com_misc.module
-	"	1	0
-
-> ~/.gitconfig
-	"	1	0
-
-> .wine/drive_c/Program Files (x86)/hitman2/Hitman2.ini
-	"	1	0
-
-> ~/.xmonad/battery
-	"	12	0
-	.	24	14
-	+	21	0
-	+	14	10
-	+	14	10
-	+	14	17
-	+	14	17
-	+	14	19
-	+	14	20
-	+	14	17
-	+	14	15
-	+	14	15
-	+	14	15
-	+	14	15
-	+	14	15
-	+	21	15
-	+	24	16
-	+	18	16
-	+	21	16
-	+	24	16
-	+	24	0
-	+	8	14
-	+	40	3
-	+	9	0
-	+	39	10
-	+	21	25
-	+	18	25
-	+	24	23
-	+	14	19
-	+	12	0
-	+	14	10
-	+	38	18
-	+	14	12
-	+	30	15
-	+	38	0
-	+	38	0
-	+	35	15
-	+	33	24
-	+	14	20
-	+	18	18
-	+	21	18
-	+	24	18
-	+	38	38
-	+	28	0
-	+	14	10
-	+	41	0
-	+	9	0
-	+	7	1
-	+	7	0
-	+	7	19
-	+	7	0
-	+	7	2
-	+	7	0
-	+	7	8
-	+	7	5
-	+	7	0
-	+	7	0
-	+	7	22
-	+	14	0
-	+	12	0
-	+	14	30
-	+	7	22
-	+	7	6
-	+	7	30
-	+	7	8
-	+	14	10
-	+	7	14
-	+	7	7
-	+	12	29
-	+	14	0
-	+	7	0
-	+	14	0
-	+	14	0
-	+	14	10
-	+	14	0
-	+	7	0
-	+	14	10
-	+	7	0
-	+	14	0
-	+	14	0
-	+	12	0
-	+	14	33
-	+	12	46
-	+	14	25
-	+	14	0
-	+	12	0
-	+	12	0
-	+	12	46
-	+	13	22
-	+	12	0
-	+	13	0
-	+	12	0
-	+	13	55
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	12	2
-	+	27	0
-	+	18	14
-	+	21	14
-	+	24	14
-
-> ~/stuff/battt.rb
-	"	49	4
-	^	14	48
-	.	14	0
-	+	74	0
-	+	14	0
-
-> ~/stuff/NERD_tree_1
-	"	36	0
+> /srv/http/m3com/sites/all/modules/custom/m3com_misc/NERD_tree_1
+	"	30	0
 	.	1	0
 	+	1	0
 	+	1	0
 	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
 
-> ~/.wine/drive_c/Program Files (x86)/Eidos Interactive/Hitman 2 Silent Assassin/Hitman2.ini
-	"	18	18
-	^	9	19
-	.	18	0
-	+	6	8
-	+	9	18
-	+	18	0
+> /srv/http/m3com/sites/all/themes/m3com/scripts/jq-init.js
+	"	44	0
+	^	54	62
+	.	44	5
+	+	166	0
+	+	166	0
+	+	67	0
+	+	67	0
+	+	67	0
+	+	67	5
+	+	67	0
+	+	67	21
+	+	67	0
+	+	67	0
+	+	67	0
+	+	67	102
+	+	40	0
+	+	66	0
+	+	67	0
+	+	67	0
+	+	67	0
+	+	67	3
+	+	67	0
+	+	66	0
+	+	66	1
+	+	66	0
+	+	66	0
+	+	66	0
+	+	66	0
+	+	66	14
+	+	66	0
+	+	66	0
+	+	40	0
+	+	43	20
+	+	45	0
+	+	66	0
+	+	67	0
+	+	40	0
+	+	45	0
+	+	44	0
+	+	45	9
+	+	54	0
+	+	42	6
+	+	44	20
+	+	42	42
+	+	44	34
+	+	41	39
+	+	40	0
+	+	66	0
+	+	39	0
+	+	42	29
+	+	44	31
+	+	54	61
+	+	44	5
 
-> ~/.wine/drive_c/Program Files (x86)/hitman2/Hitman2.ini
-	"	38	0
-	^	9	19
-	.	9	18
+> /srv/http/m3com/sites/all/themes/m3com/scripts/NERD_tree_2
+	"	137	0
+	.	1	0
+	+	1	0
+	+	1	0
+
+> /srv/http/m3com/sites/all/themes/m3com/template.php
+	"	27	0
+	^	27	77
+	.	27	64
+	+	29	0
+	+	27	26
+	+	33	104
+	+	27	131
+	+	27	0
+	+	33	0
+	+	27	64
+
+> /srv/http/m3com/sites/all/themes/m3com/templates/m3com-misc-user-profile-form.tpl.php
+	"	11	6
+	^	5	63
+	.	5	57
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	24
+	+	12	0
+	+	12	49
+	+	12	0
 	+	6	0
-	+	9	18
-	+	12	12
-	+	9	18
+	+	3	53
+	+	4	51
+	+	7	0
+	+	8	0
+	+	7	52
+	+	8	53
+	+	9	52
+	+	10	0
+	+	9	0
+	+	5	57
+
+> /srv/http/m3com/sites/all/themes/m3com/templates/m3com-misc-user-register-form.tpl.php
+	"	1	0
+
+> /srv/http/m3com/sites/all/themes/m3com/templates/edit-user-profile-form.tpl.php
+	"	1	0
+
+> /srv/http/m3com/sites/all/themes/NERD_tree_1
+	"	1	0
+	.	1	0
+	+	1	0
+
+> /srv/http/m3com/sites/all/themes/NERD_tree_2
+	"	23	0
+	.	1	0
+	+	1	0
+	+	1	0
+
+> /srv/http/m3com/sites/all/themes/m3com/NERD_tree_1
+	"	26	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> /srv/http/m3com/sites/all/modules/password_change/password_change.module
+	"	61	0
+
+> /srv/http/m3com/sites/all/modules/password_change/password_change.install
+	"	1	0
+
+> ~/stuff/drupal/sites/m3com/sandbox/password_change/password_change.module
+	"	113	0
+
+> /srv/http/m3com/sites/all/modules/password_reset/password_reset.module
+	"	214	2
+
+> /srv/http/m3com/sites/default/settings.php
+	"	161	6
+
+> /srv/http/misha.html
+	"	2	26
+	^	2	62
+	.	2	60
+	+	1	6
+	+	3	5
+	+	2	60
+
+> ~/stuff/drupal/sites/m3com/sandbox/frameprevention/frameprevention.module
+	"	94	0
+
+> /srv/http/m3com/sites/all/modules/mm_remove/mm_remove.module
+	"	108	6
+
+> /srv/http/m3com/sites/all/modules/custom/m3com_sports/m3com_sports.module
+	"	34	8
+
+> /srv/http/m3com/sites/all/modules/custom/m3com_sports/NERD_tree_1
+	"	39	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> /srv/http/m3com/sites/all/modules/feeds_xpathparser/feeds_xpathparser.module
+	"	50	2
+
+> /srv/http/m3com/sites/all/modules/feeds_xpathparser/FeedsXPathParser.inc
+	"	231	26
+
+> /srv/http/m3com/sites/all/modules/brightcove/brightcove_cck/brightcove_cck.formatters.inc
+	"	295	44
+
+> /srv/http/m3com/sites/all/modules/object_cache/object_cache.module
+	"	2	0
+	^	228	148
+	.	228	0
+	+	237	0
+	+	227	0
+	+	238	19
+	+	228	131
+	+	228	131
+	+	228	1
+	+	252	0
+	+	228	0
+
+> /srv/http/m3com/sites/all/modules/object_cache/NERD_tree_1
+	"	11	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> /srv/http/m3com/sites/all/modules/object_cache/object_cache.install
+	"	7	0
+
+> ~/stuff/drupal/sites/m3com/modules/top_searches/top_searches.module
+	"	169	0
+
+> /srv/http/m3com/sites/all/themes/m3com/css/m3com.css
+	"	1287	0
+	.	1284	0
+	+	1284	0
+
+> .git/index
+	"	1	0
 
 > ~/.xinitrc
-	"	5	0
-	^	3	24
-	.	3	23
+	"	1	0
+	^	2	1
+	.	2	0
 	+	5	10
 	+	4	35
 	+	2	37
@@ -530,145 +671,401 @@ $
 	+	1	0
 	+	2	0
 	+	3	23
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
 
-> ~/.xmobarrc
-	"	12	36
-	^	13	75
-	.	13	73
-	+	12	0
-	+	13	72
-	+	17	150
-	+	13	73
+> /srv/http/m3com-crm/sites/all/modules/custom/m3com_sms_manager/m3com_sms_manager.module
+	"	18	0
+	.	57	0
+	+	24	0
+	+	29	0
+	+	35	0
+	+	40	0
+	+	46	0
+	+	52	0
+	+	57	0
 
-> ~/NERD_tree_1
-	"	36	0
+> ~/stuff/drupal/sites/m3com/sandbox/examples/page_example/page_example.module
+	"	83	0
+
+> ~/stuff/drupal/sites/m3com/sandbox/examples/page_example/NERD_tree_1
+	"	51	0
 	.	1	0
 	+	1	0
 	+	1	0
 	+	1	0
 	+	1	0
 	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
 
-> ~/.vimrc
-	"	37	0
-	^	4	37
-	.	4	0
-	+	111	6
-	+	41	0
-	+	66	0
-	+	64	14
-	+	65	14
-	+	66	12
-	+	67	0
+> /srv/http/m3com-crm/sites/all/modules/custom/m3com_sms_manager/NERD_tree_2
+	"	33	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> /srv/http/m3com/sites/all/modules/custom/m3com_arsel/m3com_arsel.module
+	"	100	0
+
+> /srv/http/m3com/sites/all/modules/custom/m3com_arsel/NERD_tree_3
+	"	25	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> /srv/http/m3com/sites/all/modules/custom/m3com_group_login/m3com_group_login.module
+	"	84	0
+
+> /srv/http/m3com-crm/sites/all/modules/custom/m3com_statistics/m3com_statistics.module
+	"	121	0
+
+> /srv/http/m3com-crm/sites/all/modules/custom/m3com_sms_manager/NERD_tree_1
+	"	4	0
+	.	1	0
+	+	1	0
+
+> /srv/http/m3com/sites/all/modules/custom/m3com_log/m3com_log.module
+	"	101	0
+	^	69	0
+	.	101	0
+	+	79	0
+	+	67	9
 	+	68	0
 	+	69	0
-	+	70	0
-	+	71	0
-	+	67	10
-	+	68	7
-	+	69	10
-	+	70	7
-	+	71	10
-	+	72	0
-	+	73	0
-	+	74	0
-	+	72	10
-	+	73	7
-	+	74	10
-	+	75	20
-	+	65	0
-	+	15	27
-	+	122	20
-	+	15	0
-	+	185	0
-	+	15	0
-	+	122	27
-	+	41	0
-	+	33	21
-	+	38	134
-	+	38	39
-	+	38	116
-	+	4	24
-	+	4	0
+	+	101	0
 
-> ~/.vim/colors/railscasts.vim
-	"	51	45
-	^	49	44
-	.	49	0
-	+	51	0
-	+	48	48
-	+	49	0
-
-> ~/.vim/colors/desert.vim
-	"	80	0
-
-> ~/xinitrc
+> /srv/http/m3com/sites/all/modules/object_cache/views/object-cache-comment.tpl.php
 	"	1	0
 
+> /srv/http/m3com/sites/all/modules/custom/m3com_log/NERD_tree_1
+	"	86	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> /srv/http/m3com/sites/all/modules/object_cache/README.txt
+	"	1	0
+
+> /srv/http/m3com/sites/all/themes/m3com/layouts/styles/mainbox/mainbox.inc
+	"	21	5
+
+> /srv/http/m3com/sites/all/themes/m3com/layouts/styles/mainbox/NERD_tree_1
+	"	4	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> /srv/http/m3com/sites/all/themes/m3com/layouts/styles/mainbox/mainbox_template.tpl.php
+	"	3	0
+
+> /srv/http/m3com/sites/all/themes/m3com/m3com.info
+	"	80	0
+
+> /srv/http/m3com/sites/all/modules/custom/m3com_ar_flash/m3com_ar_flash.module
+	"	154	0
+	^	154	39
+	.	154	38
+	+	154	38
+
+> /srv/http/m3com/sites/all/contemplates/node-image-body.tpl.php
+	"	1	0
+	^	83	49
+	.	83	48
+	+	4	63
+	+	5	72
+	+	8	0
+	+	87	74
+	+	83	48
+
+> /srv/http/m3com/sites/all/modules/views_bulk_operations/views_bulk_operations.module
+	"	1556	81
+
+> /srv/http/m3com/sites/all/modules/views_bulk_operations/NERD_tree_1
+	"	18	0
+	.	1	0
+	+	1	0
+
+> /srv/http/m3com/sites/all/modules/views_bulk_operations/delete.action.inc
+	"	49	0
+
+> /srv/http/m3com/sites/all/modules/views_bulk_operations/archive.action.inc
+	"	27	0
+
+> /srv/http/m3com/sites/all/modules/views_bulk_operations/argument_selector.action.inc
+	"	1	0
+
+> /srv/http/m3com/sites/all/modules/views_bulk_operations/views_bulk_operations.views.inc
+	"	7	0
+
+> /srv/http/m3com/sites/all/modules/views_bulk_operations/views_bulk_operations.views_default.inc
+	"	650	0
+
+> /srv/http/m3com/sites/all/modules/views_bulk_operations/script.action.inc
+	"	1	0
+
+> /srv/http/m3com/sites/all/modules/views_bulk_operations/views_bulk_operations.action.js
+	"	1	0
+
+> /srv/http/m3com/sites/all/modules/custom/m3com_auth/m3com_auth.module
+	"	699	33
+	^	53	0
+	.	54	0
+	+	305	0
+	+	309	111
+	+	306	29
+	+	308	29
+	+	309	78
+	+	309	178
+	+	306	17
+	+	306	39
+	+	306	39
+	+	308	39
+	+	306	54
+	+	309	62
+	+	306	21
+	+	308	21
+	+	309	57
+	+	309	36
+	+	309	187
+	+	309	36
+	+	302	18
+	+	302	149
+	+	309	35
+	+	309	37
+	+	310	17
+	+	306	54
+	+	307	21
+	+	304	0
+	+	312	1
+	+	304	8
+	+	302	0
+	+	309	24
+	+	17	0
+	+	195	0
+	+	845	0
+	+	845	24
+	+	845	0
+	+	845	0
+	+	845	0
+	+	845	0
+	+	845	0
+	+	845	71
+	+	845	0
+	+	845	0
+	+	845	0
+	+	845	2
+	+	845	1
+	+	866	0
+	+	858	0
+	+	845	0
+	+	845	0
+	+	845	0
+	+	853	0
+	+	845	6
+	+	845	0
+	+	845	36
+	+	845	0
+	+	845	0
+	+	845	21
+	+	845	6
+	+	845	0
+	+	845	0
+	+	845	32
+	+	848	0
+	+	845	0
+	+	767	0
+	+	768	0
+	+	845	0
+	+	767	0
+	+	839	22
+	+	839	0
+	+	839	0
+	+	839	0
+	+	839	0
+	+	800	0
+	+	806	0
+	+	789	0
+	+	808	0
+	+	808	0
+	+	825	32
+	+	811	0
+	+	799	2
+	+	811	0
+	+	24	0
+	+	789	40
+	+	789	0
+	+	826	0
+	+	789	0
+	+	789	40
+	+	837	0
+	+	74	0
+	+	73	0
+	+	75	0
+	+	74	3
+	+	825	45
+	+	789	0
+	+	69	4
+	+	68	0
+	+	70	0
+	+	38	0
+	+	53	0
+	+	54	0
+
+> /srv/http/m3com/sites/all/modules/queryable_variables/queryable_variables.module
+	"	718	0
+
+> /srv/http/m3com/sites/all/modules/queryable_variables/NERD_tree_1
+	"	122	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> /srv/http/m3com/sites/all/modules/variable_clean/variable_clean.module
+	"	156	1
+
+> ~/stuff/drupal/sites/m3com/variables
+	"	1	79
+	^	1	80
+	.	1	80
+	+	6	59
+	+	1	80
+
+> /srv/http/m3com/sites/all/modules/queryable_variables/readme.txt
+	"	338	0
+	^	7	91
+	.	7	0
+	+	7	90
+	+	7	0
+
+> /srv/http/m3com/sites/all/modules/queryable_variables/NERD_tree_2
+	"	7	0
+	.	1	0
+	+	1	0
+
+> /srv/http/m3com/sites/all/modules/queryable_variables/queryable_variables.install
+	"	26	0
+	.	11	0
+	+	11	0
+
+> /srv/http/m3com/sites/all/modules/memcache/memcache-session.inc
+	"	207	1
+	.	204	0
+	+	204	0
+	+	204	0
+	+	204	0
+
+> ~/.zshrc
+	"	138	0
+	.	142	0
+	+	151	0
+	+	9	0
+	+	10	0
+	+	10	0
+	+	8	0
+	+	41	0
+	+	8	0
+	+	150	0
+	+	149	39
+	+	142	0
+
+> /srv/http/m3com/sites/all/modules/custom/m3com_dropbox/m3com_dropbox.module
+	"	957	0
+
+> /srv/http/m3com/sites/all/modules/imagecache/imagecache.module
+	"	355	0
+
+> ~/stuff/drupal/sites/m3com/offload
+	"	3	131
+	^	3	19
+	.	3	18
+	+	1	11
+	+	3	0
+	+	8	0
+	+	3	90
+	+	7	2
+	+	3	0
+	+	3	117
+	+	3	18
+
+> /srv/http/m3com/includes/bootstrap.inc
+	"	644	0
+
 > /srv/http/m3com/sites/all/themes/m3com/block-header.tpl.php
-	"	92	113
-	^	99	14
-	.	90	0
-	+	22	0
-	+	22	0
-	+	14	14
-	+	12	0
-	+	13	0
-	+	12	0
-	+	13	0
-	+	13	54
-	+	13	39
-	+	13	0
-	+	13	0
-	+	14	0
-	+	11	3
-	+	11	0
-	+	11	0
-	+	20	0
-	+	12	0
-	+	20	0
-	+	12	0
-	+	12	5
-	+	12	0
-	+	12	6
-	+	12	0
-	+	12	37
-	+	12	52
-	+	12	8
-	+	12	0
-	+	12	14
-	+	12	7
-	+	12	0
-	+	12	7
-	+	12	69
-	+	12	0
-	+	12	5
-	+	12	0
-	+	12	8
-	+	12	8
-	+	12	0
-	+	12	0
-	+	12	8
-	+	12	0
-	+	12	0
-	+	12	8
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	8
-	+	12	8
-	+	12	8
-	+	12	37
-	+	12	27
-	+	12	35
-	+	12	46
-	+	12	46
-	+	12	54
-	+	12	46
-	+	12	46
-	+	12	54
-	+	12	112
+	"	92	12
+	.	92	0
 	+	12	120
 	+	12	63
 	+	12	0
@@ -678,21 +1075,100 @@ $
 	+	12	50
 	+	19	0
 	+	12	0
-	+	88	64
-	+	88	13
+	+	87	64
+	+	87	13
 	+	12	0
-	+	90	0
-	+	89	4
-	+	98	0
-	+	89	0
-	+	99	13
+	+	87	0
+	+	87	4
+	+	87	0
+	+	87	0
+	+	87	13
 	+	19	0
 	+	12	0
 	+	20	0
+	+	87	0
+	+	92	38
+	+	92	0
+	+	92	0
+	+	92	0
+	+	92	0
+	+	92	0
+	+	92	0
+	+	92	29
+	+	92	31
+	+	92	31
+	+	92	31
+	+	92	0
+	+	87	0
+	+	87	12
+	+	92	0
+	+	92	0
+	+	87	0
+	+	92	0
+	+	92	0
+	+	92	0
+	+	45	0
+	+	41	3
+	+	48	3
+	+	39	6
+	+	92	0
+	+	92	38
+	+	92	0
+	+	87	0
+	+	88	38
+	+	90	100
+	+	88	0
+	+	88	0
+	+	88	0
+	+	89	0
 	+	90	0
+	+	87	0
+	+	87	0
+	+	71	45
+	+	74	59
+	+	71	59
+	+	88	98
+	+	88	0
+	+	87	102
+	+	87	0
+	+	90	98
+	+	88	102
+	+	74	45
+	+	71	59
+	+	74	59
+	+	1	4
+	+	2	13
+	+	3	46
+	+	4	16
+	+	5	1
+	+	6	32
+	+	7	27
+	+	8	122
+	+	9	137
+	+	10	2
+	+	11	9
+	+	12	21
+	+	13	90
+	+	14	106
+	+	15	59
+	+	16	19
+	+	17	13
+	+	18	100
+	+	19	7
+	+	20	5
+	+	21	2
+	+	22	143
+	+	88	0
+	+	92	0
+	+	23	0
+	+	87	0
+	+	87	98
+	+	87	102
+	+	87	0
+	+	92	0
 
-> /srv/http/m3com/sites/all/themes/m3com/NERD_tree_1
-	"	44	0
+> /srv/http/m3com/sites/all/modules/custom/m3com_auth/NERD_tree_1
+	"	21	0
 	.	1	0
 	+	1	0
 	+	1	0
@@ -700,1038 +1176,192 @@ $
 	+	1	0
 	+	1	0
 	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
 
-> /srv/http/m3com/sites/all/modules/custom/m3com_group_login/m3com_group_login.module
-	"	49	15
-	^	403	13
-	.	403	0
-	+	403	0
+> /srv/http/m3com/sites/all/modules/captcha/image_captcha/image_captcha.module
+	"	56	24
 
-> /srv/http/m3com/sites/all/modules/custom/m3com_auth/m3com_auth.module
-	"	845	0
-	^	307	2
-	.	190	0
-	+	300	0
-	+	300	0
-	+	300	37
-	+	306	0
-	+	300	21
-	+	301	14
-	+	304	162
-	+	301	44
-	+	303	58
-	+	300	0
-	+	303	18
-	+	304	54
-	+	300	0
-	+	304	111
-	+	301	29
-	+	303	29
-	+	304	78
-	+	304	178
-	+	301	17
-	+	301	39
-	+	301	39
-	+	303	39
-	+	301	54
-	+	304	62
-	+	301	21
-	+	303	21
-	+	304	57
-	+	304	36
-	+	304	187
-	+	304	36
-	+	297	18
-	+	297	149
-	+	304	35
-	+	304	37
-	+	305	17
-	+	301	54
-	+	302	21
-	+	299	0
-	+	307	1
-	+	299	8
-	+	297	0
-	+	304	24
-	+	17	0
-	+	190	0
-
-> /srv/http/m3com/sites/all/modules/openx/openx.inc
-	"	102	39
-	^	102	40
-	.	102	29
-	+	116	0
-	+	94	16
-	+	94	0
-	+	94	0
-	+	94	0
-	+	106	0
-	+	106	0
-	+	112	2
-	+	106	0
-	+	98	35
-	+	98	0
-	+	98	0
-	+	106	0
-	+	98	0
-	+	106	16
-	+	109	38
-	+	106	2
-	+	109	52
-	+	106	0
-	+	106	0
-	+	106	45
-	+	106	30
-	+	106	9
-	+	106	0
-	+	109	31
-	+	105	0
-	+	106	0
-	+	109	27
-	+	106	0
-	+	106	0
-	+	106	36
-	+	106	6
-	+	105	0
-	+	106	15
-	+	106	10
-	+	106	45
-	+	105	0
-	+	106	5
-	+	106	0
-	+	106	0
-	+	106	0
-	+	106	0
-	+	106	0
-	+	106	0
-	+	106	0
-	+	109	7
-	+	106	0
-	+	105	16
-	+	109	56
-	+	105	9
-	+	109	63
-	+	105	0
-	+	105	2
-	+	105	23
-	+	105	3
-	+	105	0
-	+	102	0
-	+	103	28
-	+	101	0
-	+	100	0
-	+	102	6
-	+	103	5
-	+	97	38
-	+	102	29
-
-> /srv/http/m3com/sites/all/modules/openx/NERD_tree_1
-	"	142	0
+> /srv/http/m3com/sites/all/modules/captcha/image_captcha/NERD_tree_1
+	"	12	0
 	.	1	0
 	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
 
-> /srv/http/m3com/sites/all/themes/m3com/template.php
-	"	157	0
+> /srv/http/m3com/sites/all/modules/captcha/image_captcha/image_captcha.user.inc
+	"	21	0
 
-> /srv/http/m3com/sites/all/modules/openx/openx.
+> /srv/http/m3com/sites/all/modules/custom/qa/qa.install
+	"	55	12
+
+> /srv/http/m3com/sites/all/modules/userpoints/userpoints.install
+	"	176	0
+	.	181	0
+	+	181	0
+
+> /srv/http/m3com/sites/all/modules/custom/userpoints_day/userpoints_day.install
+	"	33	0
+
+> /srv/http/m3com/sites/all/modules/custom/m3com_group_login/m3com_group_login.install
+	"	21	0
+
+> /srv/http/m3com/sites/all/modules/custom/voting_points/voting_points.info
 	"	1	0
 
-> ~/.Xdefaults
-	"	25	0
-	^	26	0
-	.	26	0
-	+	27	34
-	+	27	34
-	+	27	42
-	+	27	34
-	+	27	34
-	+	27	0
-	+	27	35
-	+	27	0
-	+	27	0
-	+	27	0
-	+	27	0
-	+	27	0
-	+	27	5
-	+	27	16
-	+	27	36
-	+	27	42
-	+	27	0
-	+	27	0
-	+	30	0
-	+	27	0
-	+	30	0
-	+	30	43
-	+	30	0
-	+	30	6
-	+	27	0
-	+	30	0
-	+	31	0
-	+	30	58
-	+	30	0
-	+	30	0
-	+	30	57
-	+	27	86
-	+	29	32
-	+	27	82
-	+	29	0
-	+	30	0
-	+	30	0
-	+	27	60
-	+	30	0
-	+	28	6
-	+	27	59
-	+	28	63
-	+	27	44
-	+	28	48
-	+	10	28
-	+	34	29
-	+	27	44
-	+	28	48
-	+	9	25
-	+	10	24
-	+	27	0
-	+	27	0
-	+	27	0
-	+	27	0
-	+	24	0
-	+	27	0
-	+	27	0
-	+	27	0
-	+	24	0
-	+	27	0
-	+	27	0
-	+	27	0
-	+	27	5
-	+	27	5
-	+	27	5
-	+	6	0
-	+	5	3
-	+	10	24
-	+	27	44
-	+	28	48
-	+	5	0
-	+	27	74
-	+	27	44
-	+	28	48
-	+	27	0
-	+	27	0
-	+	28	0
-	+	27	17
-	+	28	17
-	+	34	28
-	+	25	0
-	+	27	0
-	+	17	30
-	+	28	14
-	+	28	0
-	+	31	34
-	+	30	0
-	+	31	0
-	+	27	0
-	+	28	0
-	+	25	0
-	+	28	0
-	+	27	49
-	+	28	49
-	+	27	49
-	+	28	49
-	+	25	24
-	+	28	0
-	+	26	0
-
-> ~/.zshrc
-	"	197	0
-	^	148	34
-	.	59	0
-	+	17	16
-	+	10	0
-	+	11	0
-	+	15	0
-	+	16	0
-	+	5	0
-	+	115	0
-	+	139	0
-	+	198	0
-	+	77	0
-	+	131	0
-	+	139	0
-	+	156	0
-	+	134	59
-	+	137	34
-	+	153	33
-	+	155	0
-	+	126	43
-	+	126	45
-	+	154	31
-	+	153	15
-	+	152	14
-	+	151	14
-	+	150	49
-	+	151	33
-	+	152	67
-	+	148	9
-	+	149	33
-	+	148	33
-	+	15	0
-	+	16	0
-	+	161	0
-	+	5	0
-	+	16	0
-	+	59	0
-	+	137	28
-	+	59	0
-
-> fugitive:///srv/http/m3com/.git//0/sites/all/modules/custom/m3com_misc/m3com_misc.module
-	"	86	0
-
-> .git/index
-	"	6	0
-
-> /tmp/vao63TK/7.fugitiveblame
-	"	1	44
-
-> fugitive:///srv/http/m3com/.git//93e960cceef3a7a731e15d0dbdd858efdf157d74/sites/all/modules/custom/m3com_misc/m3com_misc.module
-	"	36	0
-
-> /srv/http/m3com/sites/all/modules/ctools/ctools.module
+> /srv/http/m3com/sites/all/modules/custom/userpoints_levels/userpoints_levels.install
 	"	1	0
-	.	638	0
-	+	717	36
-	+	717	0
-	+	717	0
-	+	638	0
-	+	710	0
-	+	638	0
+	.	33	0
+	+	33	0
 
-> ~/.screenrc
-	"	18	0
-	^	24	26
-	.	24	0
-	+	25	20
-	+	25	20
-	+	25	0
-	+	25	0
-	+	12	0
-	+	25	25
-	+	25	23
-	+	25	0
-	+	12	0
-	+	12	0
-	+	25	0
-	+	25	22
-	+	25	0
-	+	25	0
-	+	25	0
-	+	12	0
-	+	25	0
-	+	1	0
-	+	10	0
-	+	25	0
-	+	26	0
-	+	43	0
-	+	44	0
-	+	26	0
-	+	40	0
-	+	38	0
-	+	9	0
-	+	36	0
-	+	29	0
-	+	24	2
-	+	18	0
-	+	20	0
-	+	22	0
+> /srv/http/m3com/sites/all/modules/javascript_aggregator/javascript_aggregator.info
+	"	1	0
+
+> /srv/http/m3com/sites/all/modules/dialog/example/dialog_example.module
+	"	11	0
+
+> /tmp/v4oyd4z/0.fugitiveblame
+	"	67	34
+
+> /srv/http/m3com/sites/all/contemplates/node-tube_video-body.tpl.php
+	"	76	0
+	.	23	0
+	+	24	3
+	+	23	65
 	+	24	0
+	+	23	0
 
-> /srv/http/m3com/sites/all/modules/ctools/NERD_tree_1
+> /srv/http/m3com/sites/all/modules/drupalvb/config.php
+	"	61	38
+
+> /etc/httpd/conf/extra/httpd-phpmyadmin.conf
+	"	1	1
+
+> /etc/httpd/conf/httpd.conf
+	"	143	0
+
+> .xmonad/battery
+	"	1	0
+
+> ~/.xmonad/battery
+	"	39	0
+	.	39	0
+	+	39	0
+
+> ~/.xmonad/NERD_tree_1
 	"	68	0
 	.	1	0
 	+	1	0
 	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
 
-> ~/.xmonad/xmonad.hs
-	"	131	19
-	^	293	53
-	.	292	52
-	+	292	0
-	+	293	0
-	+	294	0
-	+	293	11
-	+	292	0
-	+	294	0
-	+	294	1
-	+	294	1
-	+	292	0
-	+	293	0
-	+	292	0
-	+	294	0
-	+	294	0
-	+	294	60
-	+	294	60
-	+	294	62
-	+	294	62
-	+	294	1
-	+	294	1
-	+	292	0
-	+	293	50
-	+	292	50
-	+	294	0
-	+	293	52
-	+	292	52
-
-> ~/NERD_tree_2
-	"	1	0
-	.	1	0
-	+	1	0
-
-> /srv/http/m3com/sites/all/modules/openx/openx.module
-	"	1	0
-
-> /srv/http/m3com/sites/all/modules/openx/openx.admin.inc
-	"	89	0
-
-> /srv/http/m3com/sites/all/modules/openx/README.txt
-	"	57	0
-
-> /srv/http/m3com/packages_links.php
-	"	1	0
-
-> /srv/http/m3com/is_barred_check.php
-	"	55	0
-	.	1	0
-	+	1	0
-
-> /srv/http/m3com/sites/all/modules/addresses/addresses.module
-	"	414	1
-
-> /srv/http/m3com/auth.php
-	"	21	0
-
-> ~/dsl_check.php
-	"	1	0
-
-> /srv/http/m3com/dsl_check.php
-	"	10	31
-	.	10	31
-	+	3	0
-	+	5	0
-	+	9	0
-	+	15	0
-	+	18	0
-	+	20	0
-	+	22	0
-	+	26	0
-	+	29	0
-	+	32	0
-	+	1	5
-	+	2	7
-	+	4	19
-	+	6	45
-	+	7	82
-	+	8	67
-	+	10	31
-
-> /srv/http/m3com/.Xdefaults
-	"	1	0
-
-> /srv/http/m3com/sites/all/modules/ctools/ctools.api.php
-	"	1	0
-
-> ctools/ctools.module
-	"	1	0
-
-> ~/.vim/git/vim-fugitive/doc/fugitive.txt
-	"	1	0
-
-> ~/.vim/git/vim-fugitive/README.markdown
-	"	12	0
-
-> ~/.asoundrc
-	"	90	0
-	^	92	1
-	.	10	0
-	+	92	0
-	+	10	0
-
-> ~/stuff/haklab/haklabbeograd.github.com/.aso
-	"	1	0
-
-> ~/stuff/haklab/haklabbeograd.github.com/_layouts/default.html
-	"	25	0
-	^	25	41
-	.	25	40
-	+	39	0
-	+	39	0
-	+	39	19
-	+	39	6
-	+	38	342
-	+	38	9
-	+	38	0
-	+	38	0
-	+	38	0
-	+	38	0
-	+	38	1
-	+	39	0
-	+	15	0
-	+	15	0
-	+	15	31
-	+	38	0
-	+	15	0
-	+	15	0
-	+	15	4
-	+	15	0
-	+	15	0
-	+	15	0
-	+	15	34
-	+	15	31
-	+	15	33
-	+	15	31
-	+	15	35
-	+	15	0
-	+	38	0
-	+	15	12
-	+	15	0
-	+	15	0
-	+	15	11
-	+	38	0
-	+	38	0
-	+	15	0
-	+	15	0
-	+	38	0
-	+	15	0
-	+	15	0
-	+	15	0
-	+	39	0
-	+	8	0
-	+	9	0
-	+	9	2
-	+	9	0
-	+	9	37
-	+	9	0
-	+	11	0
-	+	9	0
-	+	11	0
-	+	9	0
-	+	11	0
-	+	11	0
-	+	8	0
-	+	8	0
-	+	8	0
-	+	8	0
-	+	8	0
-	+	8	0
-	+	8	0
-	+	38	0
-	+	15	124
-	+	15	0
-	+	35	15
-	+	10	0
-	+	15	0
-	+	30	0
-	+	34	0
-	+	32	0
-	+	32	0
-	+	18	0
-	+	19	10
-	+	18	23
-	+	19	0
-	+	31	0
-	+	18	22
-	+	23	35
-	+	24	31
-	+	25	33
-	+	26	28
-	+	27	30
-	+	35	35
-	+	31	6
-	+	31	7
-	+	32	7
-	+	33	5
-	+	31	0
-	+	33	0
-	+	25	40
-
-> ~/stuff/haklab/haklabbeograd.github.com/_layouts/NERD_tree_1
-	"	15	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> ~/stuff/haklab/haklabbeograd.github.com/atom.xml
-	"	1	0
-
-> ~/stuff/haklab/haklabbeograd.github.com/elektronika/header.md
-	"	6	0
-	.	7	0
-	+	7	0
-
-> ~/stuff/haklab/haklabbeograd.github.com/elektronika/NERD_tree_1
-	"	7	0
-	.	1	0
-	+	1	0
-
-> ~/stuff/haklab/haklabbeograd.github.com/elektronika/index.md
-	"	1	2
-	^	7	6
-	.	5	0
-	+	13	0
-	+	12	0
-	+	7	0
-	+	13	0
-	+	5	0
-	+	13	0
-	+	7	48
-	+	9	0
-	+	12	0
-	+	7	1
-	+	9	0
-	+	12	0
-	+	5	0
-	+	7	0
-	+	5	0
-	+	5	0
-	+	9	0
-	+	12	0
-	+	10	52
-	+	7	5
-	+	5	0
-
-> ~/stuff/haklab/haklabbeograd.github.com/elektronika/test.md
-	"	6	0
-	.	7	0
-	+	7	0
-
-> ~/stuff/haklab/haklabbeograd.github.com/elektronika/NERD_tree_2
-	"	14	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> ~/stuff/haklab/haklabbeograd.github.com/gadgets/index.md
-	"	1	0
-
-> ~/stuff/haklab/haklabbeograd.github.com/lang_gang/index.md
-	"	3	14
-	.	2	17
-	+	2	17
-
-> ~/stuff/haklab/haklabbeograd.github.com/mods/index.md
-	"	1	0
-
-> ~/stuff/haklab/haklabbeograd.github.com/_layouts/post.html
-	"	6	1
-	^	6	76
-	.	6	0
-	+	5	0
-	+	5	0
-	+	5	0
-	+	28	0
-	+	5	0
-	+	6	0
-	+	7	0
-	+	6	0
-	+	8	0
-	+	6	0
-	+	7	0
-	+	5	0
-	+	27	0
-	+	6	0
-	+	5	14
-	+	6	12
-	+	5	10
-	+	4	0
-	+	6	0
-
-> ~/stuff/haklab/haklabbeograd.github.com/index.html
-	"	9	4
-	^	8	40
-	.	8	0
-	+	7	0
-	+	7	54
-	+	7	0
-	+	9	25
-	+	7	0
-	+	13	0
-	+	7	0
-	+	7	0
-	+	5	0
-	+	13	0
-	+	14	0
-	+	4	0
-	+	5	0
-	+	14	0
-	+	5	0
-	+	13	0
-	+	11	8
-	+	11	0
-	+	9	11
-	+	10	0
-	+	5	0
-	+	14	0
-	+	5	0
-	+	3	0
-	+	6	0
-	+	12	0
-	+	7	0
-	+	6	0
-	+	11	0
-	+	8	14
-	+	6	11
-	+	8	0
-
-> ~/stuff/haklab/haklabbeograd.github.com/_layouts/NERD_tree_2
-	"	17	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> ~/stuff/haklab/haklabbeograd.github.com/style.css
-	"	46	0
-	^	32	10
-	.	46	15
-	+	1	0
-	+	1	0
-	+	50	13
-	+	91	13
-	+	102	13
-	+	1	0
-	+	102	0
-	+	32	0
-	+	58	0
-	+	64	0
-	+	60	8
-	+	32	8
-	+	33	11
-	+	107	9
-	+	71	14
-	+	32	9
-	+	102	12
-	+	95	0
-	+	94	0
-	+	91	0
-	+	92	15
-	+	112	0
-	+	111	0
-	+	109	9
-	+	110	0
-	+	115	0
-	+	121	0
-	+	44	0
-	+	47	0
-	+	45	10
-	+	44	12
-	+	121	0
-	+	121	0
-	+	121	0
-	+	121	0
-	+	121	0
-	+	121	0
-	+	121	0
-	+	21	1
-	+	22	0
-	+	121	0
-	+	23	0
-	+	117	0
-	+	116	0
-	+	117	13
-	+	121	0
-	+	117	22
-	+	46	16
-	+	45	1
-	+	46	1
-	+	45	1
-	+	27	7
-	+	32	9
-	+	46	15
-
-> ~/stuff/haklab/haklabbeograd.github.com/_config.yml
-	"	6	0
-
-> ~/stuff/haklab/haklabbeograd.github.com/NERD_tree_3
-	"	3	0
-	.	1	0
-	+	1	0
-
-> /usr/share/vim/vim73/doc/help.txt
-	"	1	0
-
-> ~/stuff/haklab/haklabbeograd.github.com/elektronika/NERD_tree_3
-	"	7	0
-	.	1	0
-	+	1	0
-
-> ~/stuff/haklab/haklabbeograd.github.com/NERD_tree_4
-	"	14	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> ~/stuff/haklab/haklabbeograd.github.com/_posts/2011-04-24-Izveštaj-sa-razmene.markdown
-	"	3	0
-	^	6	111
-	.	6	111
-	+	6	111
-
-> ~/stuff/haklab/plain_and_simple/index.html
-	"	1	0
-
-> ~/stuff/haklab/plain_and_simple/style.css
-	"	1	0
-
-> ~/stuff/haklab/haklabbeograd.github.com/_posts/2009-08-05-first-post.markdown
-	"	2	0
-	.	1	0
-	+	3	0
-	+	3	0
-	+	3	4
-	+	3	0
-	+	1	0
-	+	1	0
-	+	3	0
-	+	1	0
-
-> ~/stuff/haklab/haklabbeograd.github.com/_posts/2011-04-20-prve-ideje.markdown
-	"	6	0
-	.	6	0
-	+	2	0
-	+	4	0
-	+	8	1
-	+	8	155
-	+	8	3
-	+	9	121
-	+	9	0
-	+	10	1
-	+	10	151
-	+	11	152
-	+	11	1
-	+	10	0
-	+	8	15
-	+	9	17
-	+	10	45
-	+	11	37
-	+	9	16
-	+	10	0
-	+	11	0
-	+	8	0
-	+	6	0
-
-> ~/stuff/haklab/haklabbeograd.github.com/_posts/2011-04-21-kruzoci.markdown
-	"	5	0
-	.	16	0
-	+	2	0
-	+	4	0
-	+	16	0
-
-> ~/stuff/haklab/haklabbeograd.github.com/_posts/2011-04-23-grupa-elektronika.markdown
-	"	4	0
-	.	7	0
-	+	7	29
-	+	2	0
-	+	8	0
-	+	7	0
-	+	7	0
-	+	7	0
-
-> ~/stuff/haklabbeograd.github.com/_layouts/default.html
-	"	1	0
-	^	15	0
-	.	14	9
-	+	13	0
-	+	14	348
-	+	14	9
-
-> ~/stuff/haklabbeograd.github.com/_layouts/NERD_tree_1
-	"	22	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> ~/stuff/haklabbeograd.github.com/_layouts/post.html
-	"	13	0
-
-> ~/stuff/haklabbeograd.github.com/style.css
-	"	17	0
-
-> ~/.mplayer/config
-	"	3	0
-	^	7	20
-	.	3	0
-	+	8	0
-	+	18	0
-	+	9	0
-	+	8	0
-	+	7	19
-	+	20	0
-	+	4	0
-	+	3	0
-
-> ~/.mpd.conf
-	"	401	0
-	^	185	21
-	.	213	21
-	+	187	22
-	+	213	21
-
-> ~/.mpdconf
-	"	401	0
-	^	187	23
-	.	213	0
-	+	187	22
-	+	213	0
-
-> ~/.mpd/mpd.conf
-	"	401	8
-	^	187	23
-	.	187	22
-	+	187	22
-
-> ~/stuff/hacklab/haklabbeograd.github.com/elektronika/index.md
-	"	1	0
-
-> ~/stuff/hacklab/haklabbeograd.github.com/elektronika/test.md
-	"	1	0
-
-> ~/stuff/hacklab/haklabbeograd.github.com/gadgets/index.md
-	"	1	0
-
-> ~/stuff/hacklab/haklabbeograd.github.com/lang_gang/index.md
-	"	1	0
-
-> ~/stuff/hacklab/haklabbeograd.github.com/ostalo/index.md
-	"	1	0
-
-> ~/stuff/hacklab/haklabbeograd.github.com/style.css
-	"	1	0
-
-> ~/stuff/hacklab/haklabbeograd.github.com/_config.yml
-	"	1	1
-
-> ~/zile
-	"	1	0
-	^	1	0
-	.	1	0
-	+	1	0
-
-> http://magalogue.mixicom.com/datas/xml/livre.xml
-	"	1	387
-
-> /srv/http/leclerc/sites/all/modules/feeds/libraries/http_request.inc
-	"	151	6
-	.	228	0
-	+	221	0
-	+	221	0
-	+	221	0
-	+	229	0
-	+	228	0
-	+	229	1
-	+	47	0
-	+	46	0
-	+	47	0
-	+	47	0
-	+	229	0
-	+	228	0
-
-> ~/stuff/drupal/sites/leclerc/t.php
-	"	13	1
-	^	13	2
-	.	13	0
-	+	13	0
-
-> /srv/http/leclerc/sites/default/settings.php
-	"	93	15
-	^	92	33
-	.	92	32
-	+	92	32
-
-> ~/stuff/hacklab/haklabbeograd.github.com/index.html
+> /tmp/bash-fc-3595568384
+	"	1	9
+	^	1	10
+	.	1	9
+	+	1	9
+
+> /tmp/bash-fc-1305477111
+	"	1	46
+	^	1	47
+	.	1	46
+	+	1	46
+
+> ~/stuff/tmp/todo
+	"	3	9
+	^	3	10
+	.	3	9
+	+	1	21
+	+	3	9
+
+> /.xini
 	"	1	0
