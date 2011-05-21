@@ -106,21 +106,28 @@ $
 	['name']
 
 # File marks:
-'0  14  59  ~/.xmobarrc
-'1  1  0  ~/conc
-'2  120  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
-'3  27  0  /srv/http/m3com/sites/all/themes/m3com/template.php
-'4  32  1  /srv/http/m3com/sites/all/themes/m3com/template.php
-'5  61  0  /srv/http/m3com/sites/all/modules/password_change/password_change.module
-'6  1  0  /srv/http/m3com/sites/all/modules/password_change/password_change.install
-'7  113  0  ~/stuff/drupal/sites/m3com/sandbox/password_change/password_change.module
-'8  108  6  /srv/http/m3com/sites/all/modules/mm_remove/mm_remove.module
-'9  39  0  /srv/http/m3com/sites/all/modules/custom/m3com_sports/NERD_tree_1
+'0  86  5  /usr/sbin/pm-hibernate
+'1  19  7  ~/.xmobarrc
+'2  36  0  ~/.gitignore
+'3  2  51  ~/stuff/tmp/nerd
+'4  14  59  ~/.xmobarrc
+'5  1  0  ~/conc
+'6  120  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+'7  27  0  /srv/http/m3com/sites/all/themes/m3com/template.php
+'8  32  1  /srv/http/m3com/sites/all/themes/m3com/template.php
+'9  61  0  /srv/http/m3com/sites/all/modules/password_change/password_change.module
 
 # Jumplist (newest first):
+-'  86  5  /usr/sbin/pm-hibernate
+-'  1  0  /usr/sbin/pm-hibernate
+-'  19  7  ~/.xmobarrc
+-'  1  0  ~/.xmobarrc
+-'  36  0  ~/.gitignore
+-'  1  0  ~/.gitignore
+-'  2  51  ~/stuff/tmp/nerd
+-'  1  0  ~/stuff/tmp/nerd
 -'  14  59  ~/.xmobarrc
 -'  15  67  ~/.xmobarrc
--'  1  0  ~/.xmobarrc
 -'  1  0  ~/conc
 -'  120  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
 -'  112  16  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
@@ -211,17 +218,14 @@ $
 -'  74  0  /srv/http/m3com/sites/all/modules/custom/m3com_log/m3com_log.module
 -'  100  2  /srv/http/m3com/sites/all/modules/custom/m3com_log/m3com_log.module
 -'  102  0  /srv/http/m3com/sites/all/modules/custom/m3com_log/m3com_log.module
--'  2  0  ~/.xinitrc
--'  3  0  /srv/http/m3com/sites/all/themes/m3com/layouts/styles/mainbox/mainbox_template.tpl.php
--'  120  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
--'  112  16  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
--'  113  14  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
--'  68  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
 
 # History of marks within files (newest to oldest):
 
+> /usr/sbin/pm-hibernate
+	"	86	5
+
 > ~/.xmobarrc
-	"	14	59
+	"	19	7
 	.	15	0
 	+	13	0
 	+	14	72
@@ -271,6 +275,15 @@ $
 	+	14	73
 	+	15	0
 	i	18	175
+
+> ~/.gitignore
+	"	36	0
+
+> ~/stuff/tmp/nerd
+	"	2	51
+	^	2	52
+	.	2	0
+	+	2	0
 
 > ~/conc
 	"	1	0
@@ -1349,19 +1362,3 @@ $
 	^	1	10
 	.	1	9
 	+	1	9
-
-> /tmp/bash-fc-1305477111
-	"	1	46
-	^	1	47
-	.	1	46
-	+	1	46
-
-> ~/stuff/tmp/todo
-	"	3	9
-	^	3	10
-	.	3	9
-	+	1	21
-	+	3	9
-
-> /.xini
-	"	1	0
