@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~Msle0~/\<m3com_misc_comment_form\>
+~MSle0~/page_compression
 
 # Last Substitute Search Pattern:
 ~MSle0&
@@ -17,9 +17,11 @@
 $
 
 # Command Line History (newest to oldest):
-:q
 :wq
+:q
+:600
 :w
+:788
 :107
 :wqa
 :1284
@@ -35,30 +37,28 @@ $
 :312
 :Gblame
 :70
-:788
-:780
 
 # Search String History (newest to oldest):
+?/page_compression
+? \<filefield_progress\>
+? \<filefield_progress_implementation\>
+? \<originalName\>
+?/progress
+?/user_edit_validate
+?/querya
+?/variab
+?/variable
 ? \<m3com_misc_comment_form\>
 ?/_theme
 ?/jk
 ? \<msgNotificationTitle\>
 ? \<\$query\>
 ? \<brightcove_remote_image\>
-?/variable
 ?/body-register
 ?/b
 ?/access
 ?/status
 ? \<views_bulk_operations_normalize_node_context\>
-? \<views_bulk_operations_node_load\>
-?/nodeapi
-?/queryable_variable
-?/imagecache_cache
-?/bright
-?/_user
-? \<m3com_auth_multi_registration_callback\>
-? \<m3com_auth_unlink_account\>
 
 # Expression History (newest to oldest):
 
@@ -67,57 +67,116 @@ $
 # Input Line History (newest to oldest):
 
 # Registers:
-""0	LINE	0
-	                    , Run CommandReader "/home/play/.xmonad/battery" "BAT"
+"0	LINE	0
+	  <?php print drupal_render($form['password_reset']); ?>
 "1	LINE	0
-	    <?php print drupal_render($form['password_current']); ?>
+	    $form['#attributes'][]['autocomplete'] = 'off';
 "2	LINE	0
-	    <?php print drupal_render($form['field_profile_birthdate']); ?>
+	<?php dsm($form) ?>
 "3	LINE	0
-	    
+	  <?php print drupal_render($form['password_current']['#title']); ?>
 "4	LINE	0
-	    
+	  <?php print drupal_render($form['password_reset']); ?>
 "5	LINE	0
-	    <?php print drupal_render($form['account']['pass']); ?>
-	    <?php print drupal_render($form['password_reset']); ?>
-	    <?php print drupal_render($form['field_profile_birthdate']); ?>
+	  <?php print drupal_render($form['password_reset']); ?>
 "6	LINE	0
-	    <?php print drupal_render($form['field_profile_mobile_phone']); ?>
-	    <?php print drupal_render($form['account']['mail']); ?>
-	    <?php print drupal_render($form['captcha']); ?>
-	    <?php print drupal_render($form['field_referral']); ?>
-	    <?php print drupal_render($form['field_referral_other']); ?>
-	    <?php print drupal_render($form['field_profile_agree']); ?>
+	    <?php print drupal_render($form['password_current']); ?>
 "7	LINE	0
-	</div>
+	    <?php print drupal_render($form['field_profile_birthdate']); ?>
 "8	LINE	0
-	<div class="span-22 main-box last">
-	<div class="common-title">
-	<div class="content span-21 last">
+	    
 "9	LINE	0
-	<div class="clear"></div>
-	</div>
-	<div class="clear"></div>
-	</div>
-	<div class="clear"></div>
+	    
 "k	CHAR	0
 	jjjjjjjjjjjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkjjjjjjjjjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkhhvllllllllllllllllllllllllllllllllllljjjjjjkkyjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjkkokp
-"-	CHAR	0
-	['name']
+""-	CHAR	0
+	#
 
 # File marks:
-'0  86  5  /usr/sbin/pm-hibernate
-'1  19  7  ~/.xmobarrc
-'2  36  0  ~/.gitignore
-'3  2  51  ~/stuff/tmp/nerd
-'4  14  59  ~/.xmobarrc
-'5  1  0  ~/conc
-'6  120  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
-'7  27  0  /srv/http/m3com/sites/all/themes/m3com/template.php
-'8  32  1  /srv/http/m3com/sites/all/themes/m3com/template.php
-'9  61  0  /srv/http/m3com/sites/all/modules/password_change/password_change.module
+'0  2  0  ~/.xinitrc
+'1  947  12  /srv/http/m3com/includes/bootstrap.inc
+'2  1000  3  /srv/http/m3com/includes/bootstrap.inc
+'3  221  6  /srv/http/m3com/sites/all/modules/custom/m3com_group_login/m3com_group_login.module
+'4  683  0  /srv/http/m3com/sites/all/modules/filefield/filefield.module
+'5  1  0  /srv/http/m3com/sites/all/modules/filefield/filefield.js
+'6  669  0  /srv/http/m3com/sites/all/modules/filefield/filefield.module
+'7  1  0  /srv/http/m3com/sites/all/modules/fb_social/modules/fb_social_like/fb_social_like.module
+'8  100  0  /srv/http/m3com/sites/default/settings.php
+'9  1623  0  /srv/http/m3com/modules/user/user.module
 
 # Jumplist (newest first):
+-'  2  0  ~/.xinitrc
+-'  1  0  ~/.xinitrc
+-'  947  12  /srv/http/m3com/includes/bootstrap.inc
+-'  1  0  /srv/http/m3com/includes/bootstrap.inc
+-'  1000  3  /srv/http/m3com/includes/bootstrap.inc
+-'  1073  10  /srv/http/m3com/includes/bootstrap.inc
+-'  1071  7  /srv/http/m3com/includes/bootstrap.inc
+-'  1001  24  /srv/http/m3com/includes/bootstrap.inc
+-'  221  6  /srv/http/m3com/sites/all/modules/custom/m3com_group_login/m3com_group_login.module
+-'  1  0  /srv/http/m3com/sites/all/modules/custom/m3com_group_login/m3com_group_login.module
+-'  683  0  /srv/http/m3com/sites/all/modules/filefield/filefield.module
+-'  503  4  /srv/http/m3com/sites/all/modules/filefield/filefield.module
+-'  82  24  /srv/http/m3com/sites/all/modules/filefield/filefield.module
+-'  674  9  /srv/http/m3com/sites/all/modules/filefield/filefield.module
+-'  43  24  /srv/http/m3com/sites/all/modules/filefield/filefield.module
+-'  1  0  /srv/http/m3com/sites/all/modules/filefield/filefield.module
+-'  1  0  /srv/http/m3com/sites/all/modules/filefield/filefield.js
+-'  669  0  /srv/http/m3com/sites/all/modules/filefield/filefield.module
+-'  702  9  /srv/http/m3com/sites/all/modules/filefield/filefield.module
+-'  720  9  /srv/http/m3com/sites/all/modules/filefield/filefield.module
+-'  680  29  /srv/http/m3com/sites/all/modules/filefield/filefield.module
+-'  44  0  /srv/http/m3com/sites/all/modules/filefield/NERD_tree_1
+-'  49  0  /srv/http/m3com/sites/all/modules/filefield/NERD_tree_1
+-'  1  0  /srv/http/m3com/sites/all/modules/filefield/NERD_tree_1
+-'  42  0  /srv/http/m3com/sites/all/modules/filefield/filefield.js
+-'  109  36  /srv/http/m3com/sites/all/modules/filefield/filefield.js
+-'  1  0  /srv/http/m3com/sites/all/modules/fb_social/modules/fb_social_like/fb_social_like.module
+-'  13  0  /srv/http/m3com/sites/all/modules/fb_social/NERD_tree_1
+-'  24  0  /srv/http/m3com/sites/all/modules/fb_social/NERD_tree_1
+-'  1  0  /srv/http/m3com/sites/all/modules/fb_social/NERD_tree_1
+-'  1  0  /srv/http/m3com/sites/all/modules/fb_social/fb_social.module
+-'  100  0  /srv/http/m3com/sites/default/settings.php
+-'  1  0  /srv/http/m3com/sites/default/settings.php
+-'  1623  0  /srv/http/m3com/modules/user/user.module
+-'  646  12  /srv/http/m3com/modules/user/user.module
+-'  1  0  /srv/http/m3com/modules/user/user.module
+-'  1610  2  /srv/http/m3com/modules/user/user.module
+-'  60  0  /srv/http/m3com/sites/all/modules/custom/m3com_log/m3com_log.module
+-'  1  0  /srv/http/m3com/sites/all/modules/custom/m3com_log/m3com_log.module
+-'  12  0  /srv/http/m3com/sites/all/modules/custom/m3com_ecare/m3com_ecare.inc
+-'  1  0  /srv/http/m3com/sites/all/modules/custom/m3com_ecare/m3com_ecare.inc
+-'  63  0  /srv/http/m3com/sites/all/modules/drupalvb/drupalvb.inc
+-'  1  0  /srv/http/m3com/sites/all/modules/drupalvb/drupalvb.inc
+-'  1  0  /srv/http/m3com/sites/all/modules/drupalvb/drupalvb.in
+-'  55  0  /srv/http/m3com/sites/all/modules/custom/m3com_ecare/m3com_ecare.inc
+-'  134  0  /srv/http/m3com/sites/all/modules/custom/m3com_ecare/m3com_ecare.inc
+-'  39  0  /srv/http/m3com/sites/default/settings.php
+-'  89  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+-'  101  24  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+-'  74  22  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+-'  71  22  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+-'  72  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+-'  1  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+-'  96  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+-'  776  1  /srv/http/m3com/sites/all/modules/custom/m3com_auth/m3com_auth.module
+-'  1  0  /srv/http/m3com/sites/all/modules/custom/m3com_auth/m3com_auth.module
+-'  186  4  /srv/http/m3com/sites/all/modules/mailchimp_extras/mailchimp_extras.module
+-'  1  0  /srv/http/m3com/sites/all/modules/mailchimp_extras/mailchimp_extras.module
+-'  1070  0  /srv/http/m3com/sites/all/modules/custom/m3com_group_login/m3com_group_login.module
+-'  50  0  /srv/http/m3com/sites/all/themes/m3com/page.tpl.php
+-'  100  0  /srv/http/m3com/sites/all/themes/m3com/page.tpl.php
+-'  2  203  /srv/http/m3com/sites/all/themes/m3com/page.tpl.php
+-'  1  0  /srv/http/m3com/sites/all/themes/m3com/page.tpl.php
+-'  27  0  /srv/http/m3com/sites/all/themes/m3com/template.php
+-'  1  0  /srv/http/m3com/sites/all/themes/m3com/template.php
+-'  1  0  /srv/http/m3com/sites/all/themes/m3com/template.
+-'  28  0  /srv/http/m3com-crm/sites/all/modules/custom/m3com_sms_manager/m3com_sms_manager.module
+-'  1  0  /srv/http/m3com-crm/sites/all/modules/custom/m3com_sms_manager/m3com_sms_manager.module
+-'  113  4  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+-'  103  1  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+-'  61  22  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
+-'  1  0  /srv/http/m3com/sites/all/themes/m3com/templates/m3com-misc-user-profile-form.tpl.php
 -'  86  5  /usr/sbin/pm-hibernate
 -'  1  0  /usr/sbin/pm-hibernate
 -'  19  7  ~/.xmobarrc
@@ -131,174 +190,233 @@ $
 -'  1  0  ~/conc
 -'  120  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
 -'  112  16  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
--'  113  14  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
 -'  68  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
--'  1  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
--'  51  15  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
--'  656  3  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
--'  27  0  /srv/http/m3com/sites/all/themes/m3com/template.php
--'  1  0  /srv/http/m3com/sites/all/themes/m3com/template.php
--'  32  1  /srv/http/m3com/sites/all/themes/m3com/template.php
--'  61  0  /srv/http/m3com/sites/all/modules/password_change/password_change.module
--'  113  0  /srv/http/m3com/sites/all/modules/password_change/password_change.module
--'  1  0  /srv/http/m3com/sites/all/modules/password_change/password_change.module
--'  1  0  /srv/http/m3com/sites/all/modules/password_change/password_change.install
--'  113  0  ~/stuff/drupal/sites/m3com/sandbox/password_change/password_change.module
--'  1  0  ~/stuff/drupal/sites/m3com/sandbox/password_change/password_change.module
--'  29  8  /srv/http/m3com/sites/all/themes/m3com/template.php
--'  479  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/NERD_tree_1
--'  485  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/NERD_tree_1
--'  1  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/NERD_tree_1
--'  220  8  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
--'  34  9  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
--'  73  9  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
--'  71  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
--'  74  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
--'  70  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
--'  69  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
--'  100  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
--'  88  63  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
--'  214  5  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
--'  210  5  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
--'  108  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
--'  851  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
--'  216  54  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
--'  108  6  /srv/http/m3com/sites/all/modules/mm_remove/mm_remove.module
--'  1  0  /srv/http/m3com/sites/all/modules/mm_remove/mm_remove.module
--'  39  0  /srv/http/m3com/sites/all/modules/custom/m3com_sports/NERD_tree_1
--'  135  0  /srv/http/m3com/sites/all/modules/custom/m3com_sports/NERD_tree_1
--'  1  0  /srv/http/m3com/sites/all/modules/custom/m3com_sports/NERD_tree_1
--'  34  8  /srv/http/m3com/sites/all/modules/custom/m3com_sports/m3com_sports.module
--'  463  8  /srv/http/m3com/sites/all/modules/custom/m3com_sports/m3com_sports.module
--'  1  0  /srv/http/m3com/sites/all/modules/custom/m3com_sports/m3com_sports.module
--'  295  44  /srv/http/m3com/sites/all/modules/brightcove/brightcove_cck/brightcove_cck.formatters.inc
--'  30  44  /srv/http/m3com/sites/all/modules/brightcove/brightcove_cck/brightcove_cck.formatters.inc
--'  211  44  /srv/http/m3com/sites/all/modules/brightcove/brightcove_cck/brightcove_cck.formatters.inc
--'  1  0  /srv/http/m3com/sites/all/modules/brightcove/brightcove_cck/brightcove_cck.formatters.inc
--'  2  0  /srv/http/m3com/sites/all/modules/object_cache/object_cache.module
--'  1  0  /srv/http/m3com/sites/all/modules/object_cache/object_cache.module
--'  169  0  ~/stuff/drupal/sites/m3com/modules/top_searches/top_searches.module
--'  1  0  ~/stuff/drupal/sites/m3com/modules/top_searches/top_searches.module
--'  251  0  /srv/http/m3com/sites/all/modules/object_cache/object_cache.module
--'  230  0  /srv/http/m3com/sites/all/modules/object_cache/object_cache.module
--'  228  0  /srv/http/m3com/sites/all/modules/object_cache/object_cache.module
--'  53  0  /srv/http/m3com/sites/all/modules/object_cache/object_cache.module
--'  227  0  /srv/http/m3com/sites/all/modules/object_cache/object_cache.module
--'  236  16  /srv/http/m3com/sites/all/modules/object_cache/object_cache.module
--'  250  0  /srv/http/m3com/sites/all/modules/object_cache/object_cache.module
--'  160  0  /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
--'  1287  0  /srv/http/m3com/sites/all/themes/m3com/css/m3com.css
--'  1  0  /srv/http/m3com/sites/all/themes/m3com/css/m3com.css
--'  237  0  /srv/http/m3com/sites/all/modules/object_cache/object_cache.module
--'  1  0  ~/.xinitrc
--'  1284  0  /srv/http/m3com/sites/all/themes/m3com/css/m3com.css
--'  1277  5  /srv/http/m3com/sites/all/themes/m3com/css/m3com.css
--'  1273  5  /srv/http/m3com/sites/all/themes/m3com/css/m3com.css
--'  1272  5  /srv/http/m3com/sites/all/themes/m3com/css/m3com.css
--'  1271  5  /srv/http/m3com/sites/all/themes/m3com/css/m3com.css
--'  1247  1  /srv/http/m3com/sites/all/themes/m3com/css/m3com.css
--'  1291  0  /srv/http/m3com/sites/all/themes/m3com/css/m3com.css
--'  235  0  /srv/http/m3com/sites/all/modules/object_cache/object_cache.module
--'  18  0  /srv/http/m3com-crm/sites/all/modules/custom/m3com_sms_manager/m3com_sms_manager.module
--'  1  0  /srv/http/m3com-crm/sites/all/modules/custom/m3com_sms_manager/m3com_sms_manager.module
--'  35  0  /srv/http/m3com-crm/sites/all/modules/custom/m3com_sms_manager/m3com_sms_manager.module
--'  51  0  ~/stuff/drupal/sites/m3com/sandbox/examples/page_example/NERD_tree_1
--'  92  0  ~/stuff/drupal/sites/m3com/sandbox/examples/page_example/NERD_tree_1
--'  1  0  ~/stuff/drupal/sites/m3com/sandbox/examples/page_example/NERD_tree_1
--'  1  0  ~/stuff/drupal/sites/m3com/sandbox/examples/page_example/page_example.module
--'  9  0  /srv/http/m3com-crm/sites/all/modules/custom/m3com_sms_manager/m3com_sms_manager.module
--'  101  0  /srv/http/m3com/sites/all/modules/custom/m3com_log/m3com_log.module
--'  1  0  /srv/http/m3com/sites/all/modules/custom/m3com_log/m3com_log.module
--'  84  2  /srv/http/m3com/sites/all/modules/custom/m3com_log/m3com_log.module
--'  82  0  /srv/http/m3com/sites/all/modules/object_cache/object_cache.module
--'  1  0  /srv/http/m3com/sites/all/modules/object_cache/object_cache.install
--'  252  0  /srv/http/m3com/sites/all/modules/object_cache/object_cache.module
--'  131  4  /srv/http/m3com/sites/all/modules/object_cache/object_cache.module
--'  75  49  /srv/http/m3com/sites/all/modules/custom/m3com_log/m3com_log.module
--'  74  0  /srv/http/m3com/sites/all/modules/custom/m3com_log/m3com_log.module
--'  100  2  /srv/http/m3com/sites/all/modules/custom/m3com_log/m3com_log.module
--'  102  0  /srv/http/m3com/sites/all/modules/custom/m3com_log/m3com_log.module
+-'  683  0  /srv/http/m3com/sites/all/modules/filefield/filefield.module
+-'  503  4  /srv/http/m3com/sites/all/modules/filefield/filefield.module
+-'  82  24  /srv/http/m3com/sites/all/modules/filefield/filefield.module
+-'  674  9  /srv/http/m3com/sites/all/modules/filefield/filefield.module
+-'  43  24  /srv/http/m3com/sites/all/modules/filefield/filefield.module
+-'  1  0  /srv/http/m3com/sites/all/modules/filefield/filefield.module
+-'  1  0  /srv/http/m3com/sites/all/modules/filefield/filefield.js
+-'  669  0  /srv/http/m3com/sites/all/modules/filefield/filefield.module
+-'  702  9  /srv/http/m3com/sites/all/modules/filefield/filefield.module
+-'  720  9  /srv/http/m3com/sites/all/modules/filefield/filefield.module
+-'  680  29  /srv/http/m3com/sites/all/modules/filefield/filefield.module
+-'  44  0  /srv/http/m3com/sites/all/modules/filefield/NERD_tree_1
 
 # History of marks within files (newest to oldest):
 
-> /usr/sbin/pm-hibernate
-	"	86	5
-
-> ~/.xmobarrc
-	"	19	7
-	.	15	0
-	+	13	0
-	+	14	72
-	+	18	150
-	+	14	73
-	+	8	65
-	+	7	55
-	+	6	37
-	+	8	71
-	+	6	0
-	+	7	83
-	+	6	0
-	+	7	0
-	+	18	171
-	+	18	0
-	+	18	171
-	+	7	0
-	+	7	39
-	+	18	177
-	+	7	19
-	+	18	171
-	+	7	35
-	+	6	26
-	+	7	20
-	+	6	0
-	+	6	0
-	+	18	173
-	+	18	64
-	+	18	180
-	+	6	22
-	+	7	0
-	+	12	41
-	+	18	176
-	+	12	35
-	+	12	168
-	+	12	0
-	+	10	0
-	+	11	0
-	+	12	26
-	+	18	178
-	+	12	0
-	+	12	87
-	+	18	179
-	+	18	0
-	+	18	181
-	+	7	42
-	+	14	73
-	+	15	0
-	i	18	175
-
-> ~/.gitignore
-	"	36	0
-
-> ~/stuff/tmp/nerd
-	"	2	51
-	^	2	52
+> ~/.xinitrc
+	"	2	0
+	^	2	1
 	.	2	0
+	+	5	10
+	+	4	35
+	+	2	37
+	+	2	37
+	+	3	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	3	23
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	4	0
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	0
 	+	2	0
 
-> ~/conc
+> /srv/http/m3com/includes/bootstrap.inc
+	"	947	12
+
+> /srv/http/m3com/sites/all/modules/custom/m3com_group_login/m3com_group_login.module
+	"	221	6
+
+> /srv/http/m3com/sites/all/modules/filefield/filefield.module
+	"	683	0
+	.	503	0
+	+	503	4
+	+	503	4
+	+	503	4
+	+	503	4
+	+	503	4
+	+	503	4
+	+	503	4
+	+	503	4
+	+	503	4
+	+	503	4
+	+	503	4
+	+	503	4
+	+	503	4
+	+	503	4
+	+	503	4
+	+	503	4
+	+	503	4
+	+	503	4
+	+	503	4
+	+	503	4
+	+	503	0
+
+> /srv/http/m3com/sites/all/modules/filefield/NERD_tree_1
+	"	19	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> /srv/http/m3com/sites/all/modules/filefield/filefield.js
+	"	1	0
+
+> /srv/http/m3com/.gitignore
+	"	18	0
+	^	21	1
+	.	21	0
+	+	23	23
+	+	22	24
+	+	21	0
+
+> /srv/http/m3com/NERD_tree_1
+	"	1	0
+	.	1	0
+	+	1	0
+
+> /srv/http/m3com/NERD_tree_2
+	"	1	0
+	.	1	0
+	+	1	0
+
+> /srv/http/m3com/sites/all/modules/filefield/filefield_formatter.inc
+	"	1	0
+
+> /srv/http/m3com/sites/all/modules/filefield/filefield_widget.inc
+	"	577	0
+
+> /srv/http/m3com/sites/all/modules/filefield/field_file.inc
+	"	1	0
+
+> /srv/http/m3com/sites/all/modules/filefield/filefield_field.inc
+	"	97	0
+
+> /srv/http/m3com/sites/all/modules/fb_social/fb_social.module
+	"	239	0
+
+> /srv/http/m3com/sites/all/modules/fb_social/NERD_tree_1
+	"	13	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> /srv/http/m3com/sites/all/modules/fb_social/modules/fb_social_like/fb_social_like.module
+	"	1	0
+
+> /srv/http/m3com/sites/default/settings.php
+	"	100	0
+
+> /srv/http/m3com/modules/user/user.module
+	"	1623	0
+	^	1	16
+	.	1	0
+	+	1	0
+
+> /srv/http/m3com/sites/all/modules/custom/m3com_log/m3com_log.module
+	"	60	0
+	^	69	0
+	.	101	0
+	+	79	0
+	+	67	9
+	+	68	0
+	+	69	0
+	+	101	0
+
+> /srv/http/m3com/sites/all/modules/custom/m3com_ecare/m3com_ecare.inc
+	"	12	0
+
+> /srv/http/m3com/sites/all/modules/drupalvb/drupalvb.inc
+	"	63	0
+
+> /srv/http/m3com/sites/all/modules/drupalvb/drupalvb.in
 	"	1	0
 
 > /srv/http/m3com/sites/all/modules/custom/m3com_misc/m3com_misc.module
-	"	120	0
-	.	120	0
-	+	28	1
-	+	29	34
-	+	28	0
-	+	29	31
-	+	32	0
-	+	33	59
-	+	28	0
-	+	30	26
+	"	89	0
+	.	89	24
 	+	320	0
 	+	320	1
 	+	320	0
@@ -391,505 +509,17 @@ $
 	+	113	0
 	+	113	0
 	+	120	0
-
-> /srv/http/m3com/sites/all/modules/custom/m3com_misc/NERD_tree_1
-	"	30	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> /srv/http/m3com/sites/all/themes/m3com/scripts/jq-init.js
-	"	44	0
-	^	54	62
-	.	44	5
-	+	166	0
-	+	166	0
-	+	67	0
-	+	67	0
-	+	67	0
-	+	67	5
-	+	67	0
-	+	67	21
-	+	67	0
-	+	67	0
-	+	67	0
-	+	67	102
-	+	40	0
-	+	66	0
-	+	67	0
-	+	67	0
-	+	67	0
-	+	67	3
-	+	67	0
-	+	66	0
-	+	66	1
-	+	66	0
-	+	66	0
-	+	66	0
-	+	66	0
-	+	66	14
-	+	66	0
-	+	66	0
-	+	40	0
-	+	43	20
-	+	45	0
-	+	66	0
-	+	67	0
-	+	40	0
-	+	45	0
-	+	44	0
-	+	45	9
-	+	54	0
-	+	42	6
-	+	44	20
-	+	42	42
-	+	44	34
-	+	41	39
-	+	40	0
-	+	66	0
-	+	39	0
-	+	42	29
-	+	44	31
-	+	54	61
-	+	44	5
-
-> /srv/http/m3com/sites/all/themes/m3com/scripts/NERD_tree_2
-	"	137	0
-	.	1	0
-	+	1	0
-	+	1	0
-
-> /srv/http/m3com/sites/all/themes/m3com/template.php
-	"	27	0
-	^	27	77
-	.	27	64
-	+	29	0
-	+	27	26
-	+	33	104
-	+	27	131
-	+	27	0
-	+	33	0
-	+	27	64
-
-> /srv/http/m3com/sites/all/themes/m3com/templates/m3com-misc-user-profile-form.tpl.php
-	"	11	6
-	^	5	63
-	.	5	57
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	24
-	+	12	0
-	+	12	49
-	+	12	0
-	+	6	0
-	+	3	53
-	+	4	51
-	+	7	0
-	+	8	0
-	+	7	52
-	+	8	53
-	+	9	52
-	+	10	0
-	+	9	0
-	+	5	57
-
-> /srv/http/m3com/sites/all/themes/m3com/templates/m3com-misc-user-register-form.tpl.php
-	"	1	0
-
-> /srv/http/m3com/sites/all/themes/m3com/templates/edit-user-profile-form.tpl.php
-	"	1	0
-
-> /srv/http/m3com/sites/all/themes/NERD_tree_1
-	"	1	0
-	.	1	0
-	+	1	0
-
-> /srv/http/m3com/sites/all/themes/NERD_tree_2
-	"	23	0
-	.	1	0
-	+	1	0
-	+	1	0
-
-> /srv/http/m3com/sites/all/themes/m3com/NERD_tree_1
-	"	26	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> /srv/http/m3com/sites/all/modules/password_change/password_change.module
-	"	61	0
-
-> /srv/http/m3com/sites/all/modules/password_change/password_change.install
-	"	1	0
-
-> ~/stuff/drupal/sites/m3com/sandbox/password_change/password_change.module
-	"	113	0
-
-> /srv/http/m3com/sites/all/modules/password_reset/password_reset.module
-	"	214	2
-
-> /srv/http/m3com/sites/default/settings.php
-	"	161	6
-
-> /srv/http/misha.html
-	"	2	26
-	^	2	62
-	.	2	60
-	+	1	6
-	+	3	5
-	+	2	60
-
-> ~/stuff/drupal/sites/m3com/sandbox/frameprevention/frameprevention.module
-	"	94	0
-
-> /srv/http/m3com/sites/all/modules/mm_remove/mm_remove.module
-	"	108	6
-
-> /srv/http/m3com/sites/all/modules/custom/m3com_sports/m3com_sports.module
-	"	34	8
-
-> /srv/http/m3com/sites/all/modules/custom/m3com_sports/NERD_tree_1
-	"	39	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> /srv/http/m3com/sites/all/modules/feeds_xpathparser/feeds_xpathparser.module
-	"	50	2
-
-> /srv/http/m3com/sites/all/modules/feeds_xpathparser/FeedsXPathParser.inc
-	"	231	26
-
-> /srv/http/m3com/sites/all/modules/brightcove/brightcove_cck/brightcove_cck.formatters.inc
-	"	295	44
-
-> /srv/http/m3com/sites/all/modules/object_cache/object_cache.module
-	"	2	0
-	^	228	148
-	.	228	0
-	+	237	0
-	+	227	0
-	+	238	19
-	+	228	131
-	+	228	131
-	+	228	1
-	+	252	0
-	+	228	0
-
-> /srv/http/m3com/sites/all/modules/object_cache/NERD_tree_1
-	"	11	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> /srv/http/m3com/sites/all/modules/object_cache/object_cache.install
-	"	7	0
-
-> ~/stuff/drupal/sites/m3com/modules/top_searches/top_searches.module
-	"	169	0
-
-> /srv/http/m3com/sites/all/themes/m3com/css/m3com.css
-	"	1287	0
-	.	1284	0
-	+	1284	0
-
-> .git/index
-	"	1	0
-
-> ~/.xinitrc
-	"	1	0
-	^	2	1
-	.	2	0
-	+	5	10
-	+	4	35
-	+	2	37
-	+	2	37
-	+	3	0
-	+	2	0
-	+	1	0
-	+	2	0
-	+	1	0
-	+	2	0
-	+	2	0
-	+	1	0
-	+	2	0
-	+	1	0
-	+	2	0
-	+	1	0
-	+	2	0
-	+	1	0
-	+	2	0
-	+	1	0
-	+	2	0
-	+	1	0
-	+	2	0
-	+	2	0
-	+	1	0
-	+	2	0
-	+	1	0
-	+	2	0
-	+	1	0
-	+	2	0
-	+	1	0
-	+	2	0
-	+	1	0
-	+	2	0
-	+	1	0
-	+	2	0
-	+	1	0
-	+	2	0
-	+	1	0
-	+	2	0
-	+	1	0
-	+	2	0
-	+	1	0
-	+	2	0
-	+	1	0
-	+	2	0
-	+	1	0
-	+	2	0
-	+	3	23
-	+	1	0
-	+	2	0
-	+	1	0
-	+	2	0
-	+	1	0
-	+	2	0
-	+	1	0
-	+	2	0
-	+	1	0
-	+	2	0
-	+	1	0
-	+	2	0
-	+	1	0
-	+	2	0
-	+	1	0
-	+	2	0
-	+	1	0
-	+	2	0
-	+	1	0
-	+	2	0
-	+	1	0
-	+	2	0
-	+	1	0
-	+	2	0
-
-> /srv/http/m3com-crm/sites/all/modules/custom/m3com_sms_manager/m3com_sms_manager.module
-	"	18	0
-	.	57	0
-	+	24	0
-	+	29	0
-	+	35	0
-	+	40	0
-	+	46	0
-	+	52	0
-	+	57	0
-
-> ~/stuff/drupal/sites/m3com/sandbox/examples/page_example/page_example.module
-	"	83	0
-
-> ~/stuff/drupal/sites/m3com/sandbox/examples/page_example/NERD_tree_1
-	"	51	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> /srv/http/m3com-crm/sites/all/modules/custom/m3com_sms_manager/NERD_tree_2
-	"	33	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> /srv/http/m3com/sites/all/modules/custom/m3com_arsel/m3com_arsel.module
-	"	100	0
-
-> /srv/http/m3com/sites/all/modules/custom/m3com_arsel/NERD_tree_3
-	"	25	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> /srv/http/m3com/sites/all/modules/custom/m3com_group_login/m3com_group_login.module
-	"	84	0
-
-> /srv/http/m3com-crm/sites/all/modules/custom/m3com_statistics/m3com_statistics.module
-	"	121	0
-
-> /srv/http/m3com-crm/sites/all/modules/custom/m3com_sms_manager/NERD_tree_1
-	"	4	0
-	.	1	0
-	+	1	0
-
-> /srv/http/m3com/sites/all/modules/custom/m3com_log/m3com_log.module
-	"	101	0
-	^	69	0
-	.	101	0
-	+	79	0
-	+	67	9
-	+	68	0
-	+	69	0
+	+	71	22
+	+	74	0
+	+	74	0
+	+	90	0
 	+	101	0
-
-> /srv/http/m3com/sites/all/modules/object_cache/views/object-cache-comment.tpl.php
-	"	1	0
-
-> /srv/http/m3com/sites/all/modules/custom/m3com_log/NERD_tree_1
-	"	86	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> /srv/http/m3com/sites/all/modules/object_cache/README.txt
-	"	1	0
-
-> /srv/http/m3com/sites/all/themes/m3com/layouts/styles/mainbox/mainbox.inc
-	"	21	5
-
-> /srv/http/m3com/sites/all/themes/m3com/layouts/styles/mainbox/NERD_tree_1
-	"	4	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> /srv/http/m3com/sites/all/themes/m3com/layouts/styles/mainbox/mainbox_template.tpl.php
-	"	3	0
-
-> /srv/http/m3com/sites/all/themes/m3com/m3com.info
-	"	80	0
-
-> /srv/http/m3com/sites/all/modules/custom/m3com_ar_flash/m3com_ar_flash.module
-	"	154	0
-	^	154	39
-	.	154	38
-	+	154	38
-
-> /srv/http/m3com/sites/all/contemplates/node-image-body.tpl.php
-	"	1	0
-	^	83	49
-	.	83	48
-	+	4	63
-	+	5	72
-	+	8	0
-	+	87	74
-	+	83	48
-
-> /srv/http/m3com/sites/all/modules/views_bulk_operations/views_bulk_operations.module
-	"	1556	81
-
-> /srv/http/m3com/sites/all/modules/views_bulk_operations/NERD_tree_1
-	"	18	0
-	.	1	0
-	+	1	0
-
-> /srv/http/m3com/sites/all/modules/views_bulk_operations/delete.action.inc
-	"	49	0
-
-> /srv/http/m3com/sites/all/modules/views_bulk_operations/archive.action.inc
-	"	27	0
-
-> /srv/http/m3com/sites/all/modules/views_bulk_operations/argument_selector.action.inc
-	"	1	0
-
-> /srv/http/m3com/sites/all/modules/views_bulk_operations/views_bulk_operations.views.inc
-	"	7	0
-
-> /srv/http/m3com/sites/all/modules/views_bulk_operations/views_bulk_operations.views_default.inc
-	"	650	0
-
-> /srv/http/m3com/sites/all/modules/views_bulk_operations/script.action.inc
-	"	1	0
-
-> /srv/http/m3com/sites/all/modules/views_bulk_operations/views_bulk_operations.action.js
-	"	1	0
+	+	89	0
+	+	101	24
+	+	89	24
 
 > /srv/http/m3com/sites/all/modules/custom/m3com_auth/m3com_auth.module
-	"	699	33
+	"	776	1
 	^	53	0
 	.	54	0
 	+	305	0
@@ -993,11 +623,8 @@ $
 	+	53	0
 	+	54	0
 
-> /srv/http/m3com/sites/all/modules/queryable_variables/queryable_variables.module
-	"	718	0
-
-> /srv/http/m3com/sites/all/modules/queryable_variables/NERD_tree_1
-	"	122	0
+> /srv/http/m3com/sites/all/modules/custom/m3com_auth/NERD_tree_1
+	"	27	0
 	.	1	0
 	+	1	0
 	+	1	0
@@ -1005,79 +632,103 @@ $
 	+	1	0
 	+	1	0
 	+	1	0
-
-> /srv/http/m3com/sites/all/modules/variable_clean/variable_clean.module
-	"	156	1
-
-> ~/stuff/drupal/sites/m3com/variables
-	"	1	79
-	^	1	80
-	.	1	80
-	+	6	59
-	+	1	80
-
-> /srv/http/m3com/sites/all/modules/queryable_variables/readme.txt
-	"	338	0
-	^	7	91
-	.	7	0
-	+	7	90
-	+	7	0
-
-> /srv/http/m3com/sites/all/modules/queryable_variables/NERD_tree_2
-	"	7	0
-	.	1	0
 	+	1	0
-
-> /srv/http/m3com/sites/all/modules/queryable_variables/queryable_variables.install
-	"	26	0
-	.	11	0
-	+	11	0
-
-> /srv/http/m3com/sites/all/modules/memcache/memcache-session.inc
-	"	207	1
-	.	204	0
-	+	204	0
-	+	204	0
-	+	204	0
-
-> ~/.zshrc
-	"	138	0
-	.	142	0
-	+	151	0
-	+	9	0
-	+	10	0
-	+	10	0
-	+	8	0
-	+	41	0
-	+	8	0
-	+	150	0
-	+	149	39
-	+	142	0
-
-> /srv/http/m3com/sites/all/modules/custom/m3com_dropbox/m3com_dropbox.module
-	"	957	0
-
-> /srv/http/m3com/sites/all/modules/imagecache/imagecache.module
-	"	355	0
-
-> ~/stuff/drupal/sites/m3com/offload
-	"	3	131
-	^	3	19
-	.	3	18
-	+	1	11
-	+	3	0
-	+	8	0
-	+	3	90
-	+	7	2
-	+	3	0
-	+	3	117
-	+	3	18
-
-> /srv/http/m3com/includes/bootstrap.inc
-	"	644	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
 
 > /srv/http/m3com/sites/all/themes/m3com/block-header.tpl.php
-	"	92	12
+	"	79	0
 	.	92	0
 	+	12	120
 	+	12	63
@@ -1180,185 +831,567 @@ $
 	+	87	0
 	+	92	0
 
-> /srv/http/m3com/sites/all/modules/custom/m3com_auth/NERD_tree_1
-	"	21	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
+> /srv/http/m3com/sites/all/modules/mailchimp_extras/mailchimp_extras.module
+	"	186	4
 
-> /srv/http/m3com/sites/all/modules/captcha/image_captcha/image_captcha.module
-	"	56	24
+> /srv/http/m3com/sites/all/themes/m3com/page.tpl.php
+	"	50	0
 
-> /srv/http/m3com/sites/all/modules/captcha/image_captcha/NERD_tree_1
-	"	12	0
-	.	1	0
-	+	1	0
-
-> /srv/http/m3com/sites/all/modules/captcha/image_captcha/image_captcha.user.inc
-	"	21	0
-
-> /srv/http/m3com/sites/all/modules/custom/qa/qa.install
-	"	55	12
-
-> /srv/http/m3com/sites/all/modules/userpoints/userpoints.install
-	"	176	0
-	.	181	0
-	+	181	0
-
-> /srv/http/m3com/sites/all/modules/custom/userpoints_day/userpoints_day.install
-	"	33	0
-
-> /srv/http/m3com/sites/all/modules/custom/m3com_group_login/m3com_group_login.install
-	"	21	0
-
-> /srv/http/m3com/sites/all/modules/custom/voting_points/voting_points.info
-	"	1	0
-
-> /srv/http/m3com/sites/all/modules/custom/userpoints_levels/userpoints_levels.install
-	"	1	0
-	.	33	0
+> /srv/http/m3com/sites/all/themes/m3com/template.php
+	"	27	0
+	^	27	77
+	.	27	61
+	+	29	0
+	+	27	26
+	+	33	104
+	+	27	131
+	+	27	0
 	+	33	0
+	+	27	61
 
-> /srv/http/m3com/sites/all/modules/javascript_aggregator/javascript_aggregator.info
+> /srv/http/m3com/sites/all/themes/m3com/template.
 	"	1	0
 
-> /srv/http/m3com/sites/all/modules/dialog/example/dialog_example.module
-	"	11	0
-
-> /tmp/v4oyd4z/0.fugitiveblame
-	"	67	34
-
-> /srv/http/m3com/sites/all/contemplates/node-tube_video-body.tpl.php
-	"	76	0
-	.	23	0
-	+	24	3
-	+	23	65
+> /srv/http/m3com-crm/sites/all/modules/custom/m3com_sms_manager/m3com_sms_manager.module
+	"	28	0
+	.	57	0
 	+	24	0
-	+	23	0
+	+	29	0
+	+	35	0
+	+	40	0
+	+	46	0
+	+	52	0
+	+	57	0
 
-> /srv/http/m3com/sites/all/modules/drupalvb/config.php
-	"	61	38
+> /srv/http/m3com/sites/all/themes/m3com/templates/m3com-misc-user-profile-form.tpl.php
+	"	1	0
+	^	4	47
+	.	1	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	24
+	+	11	0
+	+	11	49
+	+	11	0
+	+	5	0
+	+	2	53
+	+	3	51
+	+	7	0
+	+	8	0
+	+	7	52
+	+	8	53
+	+	9	52
+	+	9	0
+	+	9	0
+	+	4	57
+	+	1	0
+	+	1	8
+	+	9	0
+	+	5	0
+	+	6	0
+	+	4	0
+	+	1	0
 
-> /etc/httpd/conf/extra/httpd-phpmyadmin.conf
-	"	1	1
+> /usr/sbin/pm-hibernate
+	"	86	5
 
-> /etc/httpd/conf/httpd.conf
-	"	143	0
+> ~/.xmobarrc
+	"	19	7
+	.	15	0
+	+	13	0
+	+	14	72
+	+	18	150
+	+	14	73
+	+	8	65
+	+	7	55
+	+	6	37
+	+	8	71
+	+	6	0
+	+	7	83
+	+	6	0
+	+	7	0
+	+	18	171
+	+	18	0
+	+	18	171
+	+	7	0
+	+	7	39
+	+	18	177
+	+	7	19
+	+	18	171
+	+	7	35
+	+	6	26
+	+	7	20
+	+	6	0
+	+	6	0
+	+	18	173
+	+	18	64
+	+	18	180
+	+	6	22
+	+	7	0
+	+	12	41
+	+	18	176
+	+	12	35
+	+	12	168
+	+	12	0
+	+	10	0
+	+	11	0
+	+	12	26
+	+	18	178
+	+	12	0
+	+	12	87
+	+	18	179
+	+	18	0
+	+	18	181
+	+	7	42
+	+	14	73
+	+	15	0
+	i	18	175
 
-> .xmonad/battery
+> ~/.gitignore
+	"	36	0
+
+> ~/stuff/tmp/nerd
+	"	2	51
+	^	2	52
+	.	2	0
+	+	2	0
+
+> ~/conc
 	"	1	0
 
-> ~/.xmonad/battery
-	"	39	0
-	.	39	0
-	+	39	0
+> /srv/http/m3com/sites/all/modules/custom/m3com_misc/NERD_tree_1
+	"	30	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
 
-> ~/.xmonad/NERD_tree_1
-	"	68	0
+> /srv/http/m3com/sites/all/themes/m3com/scripts/jq-init.js
+	"	44	0
+	^	54	62
+	.	44	5
+	+	166	0
+	+	166	0
+	+	67	0
+	+	67	0
+	+	67	0
+	+	67	5
+	+	67	0
+	+	67	21
+	+	67	0
+	+	67	0
+	+	67	0
+	+	67	102
+	+	40	0
+	+	66	0
+	+	67	0
+	+	67	0
+	+	67	0
+	+	67	3
+	+	67	0
+	+	66	0
+	+	66	1
+	+	66	0
+	+	66	0
+	+	66	0
+	+	66	0
+	+	66	14
+	+	66	0
+	+	66	0
+	+	40	0
+	+	43	20
+	+	45	0
+	+	66	0
+	+	67	0
+	+	40	0
+	+	45	0
+	+	44	0
+	+	45	9
+	+	54	0
+	+	42	6
+	+	44	20
+	+	42	42
+	+	44	34
+	+	41	39
+	+	40	0
+	+	66	0
+	+	39	0
+	+	42	29
+	+	44	31
+	+	54	61
+	+	44	5
+
+> /srv/http/m3com/sites/all/themes/m3com/scripts/NERD_tree_2
+	"	137	0
 	.	1	0
 	+	1	0
 	+	1	0
 
-> /tmp/bash-fc-3595568384
-	"	1	9
-	^	1	10
-	.	1	9
-	+	1	9
+> /srv/http/m3com/sites/all/themes/m3com/templates/m3com-misc-user-register-form.tpl.php
+	"	1	0
+
+> /srv/http/m3com/sites/all/themes/m3com/templates/edit-user-profile-form.tpl.php
+	"	1	0
+
+> /srv/http/m3com/sites/all/themes/NERD_tree_1
+	"	1	0
+	.	1	0
+	+	1	0
+
+> /srv/http/m3com/sites/all/themes/NERD_tree_2
+	"	23	0
+	.	1	0
+	+	1	0
+	+	1	0
+
+> /srv/http/m3com/sites/all/themes/m3com/NERD_tree_1
+	"	26	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> /srv/http/m3com/sites/all/modules/password_change/password_change.module
+	"	61	0
+
+> /srv/http/m3com/sites/all/modules/password_change/password_change.install
+	"	1	0
+
+> ~/stuff/drupal/sites/m3com/sandbox/password_change/password_change.module
+	"	113	0
+
+> /srv/http/m3com/sites/all/modules/password_reset/password_reset.module
+	"	214	2
+
+> /srv/http/misha.html
+	"	2	26
+	^	2	62
+	.	2	60
+	+	1	6
+	+	3	5
+	+	2	60
+
+> ~/stuff/drupal/sites/m3com/sandbox/frameprevention/frameprevention.module
+	"	94	0
+
+> /srv/http/m3com/sites/all/modules/mm_remove/mm_remove.module
+	"	108	6
+
+> /srv/http/m3com/sites/all/modules/custom/m3com_sports/m3com_sports.module
+	"	34	8
+
+> /srv/http/m3com/sites/all/modules/custom/m3com_sports/NERD_tree_1
+	"	39	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> /srv/http/m3com/sites/all/modules/feeds_xpathparser/feeds_xpathparser.module
+	"	50	2
+
+> /srv/http/m3com/sites/all/modules/feeds_xpathparser/FeedsXPathParser.inc
+	"	231	26
+
+> /srv/http/m3com/sites/all/modules/brightcove/brightcove_cck/brightcove_cck.formatters.inc
+	"	295	44
+
+> /srv/http/m3com/sites/all/modules/object_cache/object_cache.module
+	"	2	0
+	^	228	148
+	.	228	0
+	+	237	0
+	+	227	0
+	+	238	19
+	+	228	131
+	+	228	131
+	+	228	1
+	+	252	0
+	+	228	0
+
+> /srv/http/m3com/sites/all/modules/object_cache/NERD_tree_1
+	"	11	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> /srv/http/m3com/sites/all/modules/object_cache/object_cache.install
+	"	7	0
+
+> ~/stuff/drupal/sites/m3com/modules/top_searches/top_searches.module
+	"	169	0
+
+> /srv/http/m3com/sites/all/themes/m3com/css/m3com.css
+	"	1287	0
+	.	1284	0
+	+	1284	0
+
+> .git/index
+	"	1	0
+
+> ~/stuff/drupal/sites/m3com/sandbox/examples/page_example/page_example.module
+	"	83	0
+
+> ~/stuff/drupal/sites/m3com/sandbox/examples/page_example/NERD_tree_1
+	"	51	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> /srv/http/m3com-crm/sites/all/modules/custom/m3com_sms_manager/NERD_tree_2
+	"	33	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> /srv/http/m3com/sites/all/modules/custom/m3com_arsel/m3com_arsel.module
+	"	100	0
+
+> /srv/http/m3com/sites/all/modules/custom/m3com_arsel/NERD_tree_3
+	"	25	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> /srv/http/m3com-crm/sites/all/modules/custom/m3com_statistics/m3com_statistics.module
+	"	121	0
+
+> /srv/http/m3com-crm/sites/all/modules/custom/m3com_sms_manager/NERD_tree_1
+	"	4	0
+	.	1	0
+	+	1	0
+
+> /srv/http/m3com/sites/all/modules/object_cache/views/object-cache-comment.tpl.php
+	"	1	0
+
+> /srv/http/m3com/sites/all/modules/custom/m3com_log/NERD_tree_1
+	"	86	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> /srv/http/m3com/sites/all/modules/object_cache/README.txt
+	"	1	0
+
+> /srv/http/m3com/sites/all/themes/m3com/layouts/styles/mainbox/mainbox.inc
+	"	21	5
+
+> /srv/http/m3com/sites/all/themes/m3com/layouts/styles/mainbox/NERD_tree_1
+	"	4	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> /srv/http/m3com/sites/all/themes/m3com/layouts/styles/mainbox/mainbox_template.tpl.php
+	"	3	0
+
+> /srv/http/m3com/sites/all/themes/m3com/m3com.info
+	"	80	0
+
+> /srv/http/m3com/sites/all/modules/custom/m3com_ar_flash/m3com_ar_flash.module
+	"	154	0
+	^	154	39
+	.	154	38
+	+	154	38
+
+> /srv/http/m3com/sites/all/contemplates/node-image-body.tpl.php
+	"	1	0
+	^	83	49
+	.	83	48
+	+	4	63
+	+	5	72
+	+	8	0
+	+	87	74
+	+	83	48
+
+> /srv/http/m3com/sites/all/modules/views_bulk_operations/views_bulk_operations.module
+	"	1556	81
+
+> /srv/http/m3com/sites/all/modules/views_bulk_operations/NERD_tree_1
+	"	18	0
+	.	1	0
+	+	1	0
+
+> /srv/http/m3com/sites/all/modules/views_bulk_operations/delete.action.inc
+	"	49	0
+
+> /srv/http/m3com/sites/all/modules/views_bulk_operations/archive.action.inc
+	"	27	0
+
+> /srv/http/m3com/sites/all/modules/views_bulk_operations/argument_selector.action.inc
+	"	1	0
+
+> /srv/http/m3com/sites/all/modules/views_bulk_operations/views_bulk_operations.views.inc
+	"	7	0
+
+> /srv/http/m3com/sites/all/modules/views_bulk_operations/views_bulk_operations.views_default.inc
+	"	650	0
+
+> /srv/http/m3com/sites/all/modules/views_bulk_operations/script.action.inc
+	"	1	0
+
+> /srv/http/m3com/sites/all/modules/views_bulk_operations/views_bulk_operations.action.js
+	"	1	0
+
+> /srv/http/m3com/sites/all/modules/queryable_variables/queryable_variables.module
+	"	718	0
+
+> /srv/http/m3com/sites/all/modules/queryable_variables/NERD_tree_1
+	"	122	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> /srv/http/m3com/sites/all/modules/variable_clean/variable_clean.module
+	"	156	1
+
+> ~/stuff/drupal/sites/m3com/variables
+	"	1	79
+	^	1	80
+	.	1	80
+	+	6	59
+	+	1	80
+
+> /srv/http/m3com/sites/all/modules/queryable_variables/readme.txt
+	"	338	0
+	^	7	91
+	.	7	0
+	+	7	90
+	+	7	0
+
+> /srv/http/m3com/sites/all/modules/queryable_variables/NERD_tree_2
+	"	7	0
+	.	1	0
+	+	1	0
+
+> /srv/http/m3com/sites/all/modules/queryable_variables/queryable_variables.install
+	"	26	0
+	.	11	0
+	+	11	0
+
+> /srv/http/m3com/sites/all/modules/memcache/memcache-session.inc
+	"	207	1
+	.	204	0
+	+	204	0
+	+	204	0
+	+	204	0
+
+> ~/.zshrc
+	"	138	0
+	.	142	0
+	+	151	0
+	+	9	0
+	+	10	0
+	+	10	0
+	+	8	0
+	+	41	0
+	+	8	0
+	+	150	0
+	+	149	39
+	+	142	0
+
+> /srv/http/m3com/sites/all/modules/custom/m3com_dropbox/m3com_dropbox.module
+	"	957	0
+
+> /srv/http/m3com/sites/all/modules/imagecache/imagecache.module
+	"	355	0
+
+> ~/stuff/drupal/sites/m3com/offload
+	"	3	131
+	^	3	19
+	.	3	18
+	+	1	11
+	+	3	0
+	+	8	0
+	+	3	90
+	+	7	2
+	+	3	0
+	+	3	117
+	+	3	18
