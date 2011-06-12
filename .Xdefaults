@@ -31,6 +31,6 @@ URxvt.boldFont:   xft:Liberation Mono:pixelsize=14:antialias=true:autohint=true
 !URxvt.boldFont: xft:ProFont:size=13
 
 URxvt*transparent:          true
-URxvt*shading:              5
+URxvt*shading:              13
 URxvt*tint:                 Black
 URxvt*inheritPixmap:        true

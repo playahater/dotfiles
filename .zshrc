@@ -11,11 +11,6 @@ export EDITOR="vim"
 #export ANDROID_SDK_HOME="/opt/android-sdk-update-manager/"
 #export PATH="${PATH}:${HOME}/bin"
 
-
-#LS_COLORS='rs=0:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:tw=30;42:ow=34;42:st=37;44:ex=01;32:';
-#export LS_COLORS
-
-
 setopt appendhistory
 setopt autopushd pushdminus pushdsilent pushdtohome
 setopt autocd
@@ -29,16 +24,31 @@ setopt HIST_IGNORE_SPACE
 setopt SH_WORD_SPLIT
 setopt nohup
 setopt notify
+# Allow for functions in the prompt.
+setopt PROMPT_SUBST
 unsetopt beep
+
+PROMPT='[%n@%m][\$ ' # default prompt
+RPROMPT='][%{${fg[cyan]}%}%B%~%b$(prompt_git_info)%{${fg[default]}%} %T]'
 
 typeset -gU path cdpath manpath fpath
 
-autoload -Uz compinit promptinit
+# Enable auto-execution of functions.
+typeset -ga preexec_functions
+typeset -ga precmd_functions
+typeset -ga chpwd_functions
+
+autoload -Uz compinit promptinit colors 
 compinit
 promptinit 
-prompt bart
+colors
 
-bindkey -v
+# Autoload zsh functions.
+fpath=(~/.zsh/functions $fpath)
+autoload -U ~/.zsh/functions/*(:t)
+
+bindkey -e
+bindkey ' ' magic-space # also do history expansion on space
 typeset -g -A key
 #bindkey '\e[3~' delete-char
 bindkey '\e[1~' beginning-of-line
@@ -112,6 +122,7 @@ zstyle ':completion:*' cache-path ~/.zsh_cache
 alias ls='ls -lha --color=always'
 alias sl='ls -lha --color=always'
 alias ll='ls -lha --color=always'
+alias grep='grep -rni --color=always'
 alias df='df -hT'
 alias ping='ping -c 3'
 alias rm="rm -v"
@@ -135,6 +146,7 @@ alias b92="mplayer http://stream.b92.net:7999/tv-b92.ogg.m3u"
 alias hrt="mplayer rtsp://195.29.5.148/encoder/htv1.rm"
 alias rtvpink="mplayer mms://beotelmedia.beotel.net/rtvpink"
 alias webcam="mplayer -fps 24 tv://"
+#alias webcam="mplayer tv:// -tv driver=v4l:width=352:height=288:device=/dev/video0 "
 alias begraund='feh --bg-scale'
 alias gb='git branch'
 alias gba='git branch -a'
@@ -148,16 +160,20 @@ alias gplm='git pull origin master'
 alias gpsm='git push origin master'
 alias git_diff='git diff --stat --color'
 #alias firefox='firefox -no-remote -ProfileManager'
+alias tjao='acpitool -s'
 alias devping='ping 192.168.0.240'
 alias twit.tv='mplayer http://bglive-a.bitgravity.com/twit/live/low'
-alias netbeans='netbeans --laf GTK'
+#alias netbeans='netbeans --laf GTK'
 alias alsamixer='alsamixer -c 0'
 
-#alias less=$PAGER
 
 
 # custom completion commands
  
+local _myhosts
+_myhosts=( ${${${${(f)"$(<$HOME/.ssh/known_hosts)"}:#[0-9]*}%%\ *}%%,*} )
+zstyle ':completion:*' hosts $_myhosts
+
 rmmodcomplete () { reply=(`/sbin/lsmod|cut -f1 -d" "|grep -v Module`) }
 compctl -K rmmodcomplete rmmod
  
@@ -195,3 +211,57 @@ rationalise-dot() {
   fi
 }
 zle -N rationalise-dot
+
+# Append git functions needed for prompt.
+preexec_functions+='preexec_update_git_vars'
+precmd_functions+='precmd_update_git_vars'
+chpwd_functions+='chpwd_update_git_vars'
+
+# if using GNU screen, let the zsh tell screen what the title and hardstatus
+# of the tab window should be.
+if [[ $TERM == "screen" ]]; then
+  _GET_PATH='echo $PWD | sed "s/^\/Users\//~/;s/^~$USER/~/"'
+
+  # use the current user as the prefix of the current tab title (since that's
+  # fairly important, and I change it fairly often)
+  TAB_TITLE_PREFIX='"'  # when at the shell prompt, show a truncated version of the current path (with
+  # standard ~ replacement) as the rest of the title.
+  TAB_TITLE_PROMPT='$SHELL:t'
+  # when running a command, show the title of the command as the rest of the
+  # title (truncate to drop the path to the command)
+  TAB_TITLE_EXEC='$cmd[1]:t'
+
+  # use the current path (with standard ~ replacement) in square brackets as the
+  # prefix of the tab window hardstatus.
+  TAB_HARDSTATUS_PREFIX='"['  # when at the shell prompt, use the shell name (truncated to remove the path to
+  # the shell) as the rest of the title
+  TAB_HARDSTATUS_PROMPT='$SHELL:t'
+  # when running a command, show the command name and arguments as the rest of
+  # the title
+  TAB_HARDSTATUS_EXEC='$cmd'
+
+  # tell GNU screen what the tab window title ($1) and the hardstatus($2) should be
+  function screen_set()
+  {
+    # set the tab window title (%t) for screen
+    print -nR $'\033k'$1$'\033'\\\
+
+    # set hardstatus of tab window (%h) for screen
+    print -nR $'\033]0;'$2$'\a'
+  }
+  # called by zsh before executing a command
+  function preexec()
+  {
+    local -a cmd; cmd=(${(z)1}) # the command string
+    eval "tab_title=$TAB_TITLE_PREFIX$TAB_TITLE_EXEC"
+    eval "tab_hardstatus=$TAB_HARDSTATUS_PREFIX$TAB_HARDSTATUS_EXEC"
+    screen_set $tab_title $tab_hardstatus
+  }
+  # called by zsh before showing the prompt
+  function precmd()
+  {
+    eval "tab_title=$TAB_TITLE_PREFIX$TAB_TITLE_PROMPT"
+    eval "tab_hardstatus=$TAB_HARDSTATUS_PREFIX$TAB_HARDSTATUS_PROMPT"
+    screen_set $tab_title $tab_hardstatus
+  }
+fi

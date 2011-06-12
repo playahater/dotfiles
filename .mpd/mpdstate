@@ -1,0 +1,61 @@
+sw_volume: 100
+audio_device_state:1:snd-hda-intel
+audio_device_state:1:ncmpcpp-visualisation
+state: play
+current: 4
+time: 10239
+random: 0
+repeat: 0
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0.000000
+mixrampdelay: nan
+playlist_begin
+song_begin: http://stream.b92.net:7999/radio-b92.ogg
+mtime: 0
+song_end
+song_begin: http://wwoz-sc.streamguys.com:80/wwoz-hi.mp3
+mtime: 0
+song_end
+song_begin: http://64.62.252.134:5100
+mtime: 0
+song_end
+song_begin: http://www.live365.com/play/kkjz1
+mtime: 0
+song_end
+song_begin: http://streamingserver01.byte.fm:8000
+Title: Steely Dan - Babylon Sisters
+Name: ByteFM
+mtime: 0
+song_end
+song_begin: http://onestream.group-network.net:8006
+mtime: 0
+song_end
+song_begin: http://scfire-mtc-aa04.stream.aol.com:80/stream/1015
+mtime: 0
+song_end
+song_begin: http://www.radioreddit.com:8000/
+mtime: 0
+song_end
+song_begin: http://72.26.204.18:6314
+mtime: 0
+song_end
+song_begin: http://scfire-ntc-aa04.stream.aol.com:80/stream/1039
+Title: Black Label Society - Born To Lose
+Name: ChroniX Aggression - Loud & Clear - www.chronixradio.com
+mtime: 0
+song_end
+song_begin: http://gal.bitsyu.net:8000
+mtime: 0
+song_end
+song_begin: http://radio.net1zen.com:8000/mpd.ogg
+mtime: 0
+song_end
+song_begin: http://streamer-dtc-aa04.somafm.com:80/stream/1018
+mtime: 0
+song_end
+song_begin: mms://a973.l3944038972.c39440.g.lm.akamaistream.net/D/973/39440/v0001/reflector:38972
+mtime: 0
+song_end
+playlist_end

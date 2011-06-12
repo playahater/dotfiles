@@ -282,7 +282,7 @@ set ebind     = @mode_bind global,-insert
 # Set function shortcut
 @cbind  s<var:>_<value:>_  = set %1 = %2
 # Exit binding
-@cbind  ZZ                 = exit
+@cbind  :q                 = exit
 # Dump config to stdout
 @cbind  !dump              = sh 'echo dump_config > "$UZBL_FIFO"'
 # Reload all variables in the config
@@ -290,8 +290,8 @@ set ebind     = @mode_bind global,-insert
 
 # Use socat to directly inject commands into uzbl-core and view events
 # raised by uzbl-core:
-@cbind  <Ctrl><Alt>t  = sh 'xterm -e "socat unix-connect:\"$UZBL_SOCKET\" -"'
-#@cbind  <Ctrl><Alt>t  = sh 'urxvt -e socat unix-connect:"$UZBL_SOCKET" -'
+#@cbind  <Ctrl><Alt>t  = sh 'xterm -e "socat unix-connect:\"$UZBL_SOCKET\" -"'
+@cbind  <Ctrl><Alt>t  = sh 'urxvt -e socat unix-connect:"$UZBL_SOCKET" -'
 
 # Uri opening prompts
 @cbind  o<uri:>_       = uri %s
@@ -388,8 +388,8 @@ set preset = event PRESET_TABS
 # === Context menu items =====================================================
 
 # Default context menu
-menu_add Google = set uri = http://google.com
-menu_add Go Home = set uri = http://uzbl.org
+#menu_add Google = set uri = https://www.google.com
+menu_add Go Home = set uri = https://www.google.com
 menu_separator separator_1
 menu_add Quit uzbl = exit
 
@@ -434,6 +434,6 @@ sync_spawn_exec @scripts_dir/load_cookies.sh
 sync_spawn_exec @scripts_dir/load_cookies.sh @data_home/uzbl/session-cookies.txt
 
 # Set the "home" page.
-set uri = uzbl.org/doesitwork/@COMMIT
+set uri = https://www.google.com
 
 # vim: set fdm=syntax:

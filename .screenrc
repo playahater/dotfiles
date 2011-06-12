@@ -1,48 +1,29 @@
-#term screen-256color
-#termcapinfo rxvt-unicode ti@:te@     #enable SHIFT-PGUP / SHIFT-PGDOWN scroll
-#terminfo rxvt-unicode ti@:te@:
-#terminfo rxvt-unicode 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
-#caption always "%{= kb}[ %=%{w}%?%-Lw%?%{b}(%{W}%n*%f %t%?(%u)%?%{b})%{w}%?%+Lw%?%?%= %{b}][%{B} %H %{W}%l %{b}][%{B} %d.%m.%Y %{W}%0c %{b}]"
-#attrcolor b ".I"
-#termcapinfo rxvt-unicode 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
-#terminfo rxvt-unicode 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
-#term screen-256color-bce
-
 escape ``
 setenv LC_CTYPE en_US.UTF-8
 defutf8 on
 setenv DISPLAY ':0'
-
-# terminfo and termcap for nice 256 color terminal
-# # allow bold colors - necessary for some reason
 attrcolor b ".I"
-# # tell screen how to set colors. AB = background, AF=foreground
-termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
-# # erase background with current bg color
-defbce "on" 
-# # set TERM
 term screen-256color-bce
-
 defscrollback 10000
 select 0
 altscreen on
-#nethack on
+nethack on
 nonblock on
 defnonblock 1
 startup_message off
 vbell off
 autodetach on
 deflogin on
-#defbce on
 defflow off
-#msgwait 1
+msgwait 1
 acladd playahater
 hardstatus alwayslastline
 sorendition +b kG
-hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
+hardstatus string '%{= kG}[ %=%{W}%?%-Lw%?%{g}(%{W}%n*%f %t%?(%u)%?%{g})%{W}%?%+Lw%?%?%= %{g}][%{B} %{W}%l %{g}]'
 
-screen    -t $                  0
-screen    -t $                  1
+screen    -t root                  0
+screen    -t alpha                  1
+
 #screen    -t titja              2 ssh agena1@192.168.0.118
 #screen    -t jeca               3 ssh agena3@192.168.0.143
 #screen    -t miroljub           4 ssh agena2@192.168.0.131

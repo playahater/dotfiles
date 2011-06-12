@@ -24,3 +24,5 @@ clear
 ls sadfad 
 ls sadfad  
 su
+vim adsf
+vim adsf
