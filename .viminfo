@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/var_dump
+~MSle0~/correct
 
 # Last Substitute Search Pattern:
 ~MSle0&m3com_weather_selection
@@ -17,9 +17,9 @@
 $egh_embed_selection
 
 # Command Line History (newest to oldest):
+:wq
 :q
 :w
-:wq
 :Gblame
 :q!
 :preprocess
@@ -39,13 +39,17 @@ $egh_embed_selection
 :167
 
 # Search String History (newest to oldest):
+?/correct
+?/extended
+?/jk
+?/all_du
+?/vcs
 ?/var_dump
 ?/var
 ?/simple
 ?/current
 ? \<custom_pagers_php_array\>
 ? \<custom_pagers_simple\>
-?/jk
 ?/view
 ? \<custom_pagers_get_list_from_view\>
 ? \<custom_pager_build_nav\>
@@ -55,10 +59,6 @@ $egh_embed_selection
 ?/taalim
 ?/page-taalim
 ?/page-talim
-?/expire
-? \<m3com_group_login_request\>
-?/إضافة حساب فرعي جديد
-?/ليس لديك أي حساب فر
 
 # Expression History (newest to oldest):
 
@@ -68,45 +68,102 @@ $egh_embed_selection
 
 # Registers:
 "0	CHAR	0
-	$list
+	%{${fg[default]}%}
 ""1	LINE	0
-	  var_dump($value, $list);die('Ok');
+	#export ANDROID_SDK_HOME="/opt/android-sdk-update-manager/"
 "2	LINE	0
-	  $prevTitle = isset($nav['prev']) ? check_plain(db_result(db_query('SELECT title FROM {node} WHERE nid = %d',$nav['prev']))) : '';
+	#export PATH="${PATH}:${HOME}/bin"
 "3	LINE	0
-	
+	#export PAGER="vimpager"
+	#export MANPAGER="vimmanpager"
 "4	LINE	0
-	    //var_dump($node->content);
+	
 "5	LINE	0
-	    var_dump($node->content['custom_pager_bottom']);
+	# if using GNU screen, let the zsh tell screen what the title and hardstatus
+	# of the tab window should be.
+	if [[ $TERM == "screen" ]]; then
+	  _GET_PATH='echo $PWD | sed "s/^\/Users\//~/;s/^~$USER/~/"'
+	
+	  # use the current user as the prefix of the current tab title (since that's
+	  # fairly important, and I change it fairly often)
+	  TAB_TITLE_PREFIX='"'  # when at the shell prompt, show a truncated version of the current path (with
+	  # standard ~ replacement) as the rest of the title.
+	  TAB_TITLE_PROMPT='$SHELL:t'
+	  # when running a command, show the title of the command as the rest of the
+	  # title (truncate to drop the path to the command)
+	  TAB_TITLE_EXEC='$cmd[1]:t'
+	
+	  # use the current path (with standard ~ replacement) in square brackets as the
+	  # prefix of the tab window hardstatus.
+	  TAB_HARDSTATUS_PREFIX='"['  # when at the shell prompt, use the shell name (truncated to remove the path to
+	  # the shell) as the rest of the title
+	  TAB_HARDSTATUS_PROMPT='$SHELL:t'
+	  # when running a command, show the command name and arguments as the rest of
+	  # the title
+	  TAB_HARDSTATUS_EXEC='$cmd'
+	
+	  # tell GNU screen what the tab window title ($1) and the hardstatus($2) should be
+	  function screen_set()
+	  {
+	    # set the tab window title (%t) for screen
+	    print -nR $'\033k'$1$'\033'\\\
+	
+	    # set hardstatus of tab window (%h) for screen
+	    print -nR $'\033]0;'$2$'\a'
+	  }
+	  # called by zsh before executing a command
+	  function preexec()
+	  {
+	    local -a cmd; cmd=(${(z)1}) # the command string
+	    eval "tab_title=$TAB_TITLE_PREFIX$TAB_TITLE_EXEC"
+	    eval "tab_hardstatus=$TAB_HARDSTATUS_PREFIX$TAB_HARDSTATUS_EXEC"
+	    screen_set $tab_title $tab_hardstatus
+	  }
+	  # called by zsh before showing the prompt
+	  function precmd()
+	  {
+	    eval "tab_title=$TAB_TITLE_PREFIX$TAB_TITLE_PROMPT"
+	    eval "tab_hardstatus=$TAB_HARDSTATUS_PREFIX$TAB_HARDSTATUS_PROMPT"
+	    screen_set $tab_title $tab_hardstatus
+	  }
+	fi
 "6	LINE	0
-	    $view->display_handler->set_option('items_per_page', 0);
+	bindkey '^?' backward-delete-char
 "7	LINE	0
 	  var_dump($value, $list);die('Ok');
 "8	LINE	0
-	var_dump($nav_array);
+	  $prevTitle = isset($nav['prev']) ? check_plain(db_result(db_query('SELECT title FROM {node} WHERE nid = %d',$nav['prev']))) : '';
 "9	LINE	0
-	    $view->set_items_per_page(1000);
+	
 "k	CHAR	0
 	jjjjjjjjjjjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkjjjjjjjjjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkhhvllllllllllllllllllllllllllllllllllljjjjjjkkyjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjkkokp
 "q	CHAR	0
 	kkkkkkkkkkkkkjjjjjjw
 "-	CHAR	0
-	0
+	%{${fg[default]}%}
 
 # File marks:
-'0  5  0  /srv/http/m3com/sites/all/contemplates/node-image-body.tpl.php
-'1  427  0  /srv/http/m3com/sites/all/modules/jquery_ui/jquery.ui/themes/m3com/m3com.css
-'2  2515  1  /srv/http/m3com/sites/all/themes/m3com/css/m3com.css
-'3  58  3  /srv/http/m3com/sites/all/modules/custom/m3com_group_login/templates/group_login_home.tpl.php
-'4  59  3  /srv/http/m3com/sites/all/modules/custom/m3com_group_login/templates/group_login_home.tpl.php
-'5  950  12  /srv/http/m3com/includes/bootstrap.inc
-'6  1480  0  /srv/http/m3com/sites/all/modules/custom/m3com_group_login/m3com_group_login.module
-'7  13  0  /srv/http/m3com/sites/all/themes/m3com/css/superfish-navbar.css
-'8  775  4  /srv/http/m3com/sites/all/modules/custom/m3com_group_login/m3com_group_login.module
-'9  160  11  /srv/http/m3com/sites/all/modules/custom/m3com_group_login/templates/group_login_child_home.tpl.php
+'0  23  26  ~/.zshrc
+'1  9  0  ~/.zshrc
+'2  5  0  /srv/http/m3com/sites/all/contemplates/node-image-body.tpl.php
+'3  427  0  /srv/http/m3com/sites/all/modules/jquery_ui/jquery.ui/themes/m3com/m3com.css
+'4  2515  1  /srv/http/m3com/sites/all/themes/m3com/css/m3com.css
+'5  58  3  /srv/http/m3com/sites/all/modules/custom/m3com_group_login/templates/group_login_home.tpl.php
+'6  59  3  /srv/http/m3com/sites/all/modules/custom/m3com_group_login/templates/group_login_home.tpl.php
+'7  950  12  /srv/http/m3com/includes/bootstrap.inc
+'8  1480  0  /srv/http/m3com/sites/all/modules/custom/m3com_group_login/m3com_group_login.module
+'9  13  0  /srv/http/m3com/sites/all/themes/m3com/css/superfish-navbar.css
 
 # Jumplist (newest first):
+-'  23  26  ~/.zshrc
+-'  83  22  ~/.zshrc
+-'  25  7  ~/.zshrc
+-'  1  0  ~/.zshrc
+-'  9  0  ~/.zshrc
+-'  84  0  ~/.zshrc
+-'  208  0  ~/.zshrc
+-'  48  0  ~/.zshrc
+-'  29  9  ~/.zshrc
 -'  5  0  /srv/http/m3com/sites/all/contemplates/node-image-body.tpl.php
 -'  2  20  /srv/http/m3com/sites/all/contemplates/node-image-body.tpl.php
 -'  1  0  /srv/http/m3com/sites/all/contemplates/node-image-body.tpl.php
@@ -187,25 +244,103 @@ $egh_embed_selection
 -'  773  5  /srv/http/m3com/sites/all/modules/custom/m3com_group_login/m3com_group_login.module
 -'  768  5  /srv/http/m3com/sites/all/modules/custom/m3com_group_login/m3com_group_login.module
 -'  767  5  /srv/http/m3com/sites/all/modules/custom/m3com_group_login/m3com_group_login.module
--'  89  0  /srv/http/m3com/sites/all/modules/custom/m3com_group_login/m3com_group_login.module
--'  1547  49  /srv/http/m3com/sites/all/modules/custom/m3com_group_login/m3com_group_login.module
--'  1480  0  /srv/http/m3com/sites/all/modules/custom/m3com_group_login/m3com_group_login.module
--'  100  36  /srv/http/m3com/sites/all/modules/custom/m3com_group_login/m3com_group_login.module
--'  131  8  /srv/http/m3com/sites/all/modules/custom/m3com_group_login/m3com_group_login.module
--'  1  0  /srv/http/m3com/sites/all/modules/custom/m3com_group_login/m3com_group_login.module
--'  13  0  /srv/http/m3com/sites/all/themes/m3com/css/superfish-navbar.css
--'  7  0  /srv/http/m3com/sites/all/themes/m3com/css/superfish-navbar.css
--'  35  0  /srv/http/m3com/sites/all/themes/m3com/css/superfish-navbar.css
--'  1  0  /srv/http/m3com/sites/all/themes/m3com/css/superfish-navbar.css
--'  775  4  /srv/http/m3com/sites/all/modules/custom/m3com_group_login/m3com_group_login.module
--'  747  0  /srv/http/m3com/sites/all/modules/custom/m3com_group_login/m3com_group_login.module
--'  147  0  /srv/http/m3com/sites/all/modules/custom/m3com_group_login/m3com_group_login.module
--'  257  0  /srv/http/m3com/sites/all/modules/custom/m3com_group_login/m3com_group_login.module
--'  235  54  /srv/http/m3com/sites/all/modules/custom/m3com_group_login/m3com_group_login.module
--'  132  41  /srv/http/m3com/sites/all/modules/custom/m3com_group_login/m3com_group_login.module
--'  192  5  /srv/http/m3com/sites/all/modules/custom/m3com_group_login/m3com_group_login.module
 
 # History of marks within files (newest to oldest):
+
+> ~/.zshrc
+	"	23	26
+	.	24	0
+	+	8	0
+	+	48	9
+	+	47	11
+	+	8	0
+	+	122	0
+	+	211	0
+	+	212	0
+	+	78	0
+	+	39	27
+	+	51	0
+	+	49	59
+	+	47	0
+	+	31	0
+	+	30	11
+	+	29	11
+	+	29	0
+	+	29	0
+	+	31	0
+	+	30	10
+	+	29	0
+	+	30	9
+	+	29	0
+	+	30	9
+	+	33	0
+	+	33	0
+	+	33	0
+	+	33	0
+	+	33	0
+	+	27	17
+	+	211	0
+	+	211	0
+	+	211	0
+	+	211	0
+	+	211	0
+	+	211	0
+	+	211	0
+	+	211	0
+	+	211	0
+	+	30	33
+	+	9	0
+	+	30	0
+	+	29	0
+	+	9	0
+	+	9	0
+	+	31	0
+	+	31	0
+	+	30	28
+	+	31	0
+	+	30	0
+	+	30	0
+	+	30	10
+	+	29	13
+	+	30	0
+	+	29	15
+	+	30	68
+	+	47	0
+	+	39	12
+	+	39	33
+	+	39	14
+	+	42	0
+	+	39	0
+	+	9	0
+	+	34	0
+	+	38	0
+	+	9	0
+	+	25	0
+	+	9	0
+	+	43	0
+	+	44	0
+	+	9	0
+	+	206	0
+	+	207	0
+	+	211	0
+	+	9	0
+	+	38	0
+	+	38	0
+	+	29	8
+	+	30	9
+	+	29	19
+	+	29	31
+	+	48	0
+	+	55	0
+	+	188	56
+	+	192	79
+	+	216	0
+	+	29	31
+	+	9	0
+	+	9	0
+	+	9	0
+	+	25	0
+	+	24	0
 
 > /srv/http/m3com/sites/all/contemplates/node-image-body.tpl.php
 	"	5	0
@@ -1187,89 +1322,6 @@ $egh_embed_selection
 
 > ~/.screenrc
 	"	1	0
-
-> ~/.zshrc
-	"	50	0
-	^	32	10
-	.	32	9
-	+	8	0
-	+	50	9
-	+	49	11
-	+	8	0
-	+	125	0
-	+	214	0
-	+	215	0
-	+	81	0
-	+	41	27
-	+	53	0
-	+	51	59
-	+	49	0
-	+	33	0
-	+	32	11
-	+	31	11
-	+	31	0
-	+	31	0
-	+	33	0
-	+	32	10
-	+	31	0
-	+	32	9
-	+	31	0
-	+	32	9
-	+	35	0
-	+	35	0
-	+	35	0
-	+	35	0
-	+	35	0
-	+	29	17
-	+	214	0
-	+	214	0
-	+	214	0
-	+	214	0
-	+	214	0
-	+	214	0
-	+	214	0
-	+	214	0
-	+	214	0
-	+	32	33
-	+	13	0
-	+	32	0
-	+	31	0
-	+	13	0
-	+	13	0
-	+	33	0
-	+	33	0
-	+	32	28
-	+	33	0
-	+	32	0
-	+	32	0
-	+	32	10
-	+	31	13
-	+	32	0
-	+	31	15
-	+	32	68
-	+	49	0
-	+	41	12
-	+	41	33
-	+	41	14
-	+	44	0
-	+	41	0
-	+	13	0
-	+	36	0
-	+	40	0
-	+	13	0
-	+	27	0
-	+	13	0
-	+	45	0
-	+	46	0
-	+	13	0
-	+	209	0
-	+	210	0
-	+	214	0
-	+	13	0
-	+	40	0
-	+	40	0
-	+	31	8
-	+	32	9
 
 > ~/.zsh/functions/precmd_update_git_vars
 	"	4	1

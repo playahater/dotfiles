@@ -6,10 +6,6 @@ eval `dircolors -b`
 
 # Variables
 export EDITOR="vim"
-#export PAGER="vimpager"
-#export MANPAGER="vimmanpager"
-#export ANDROID_SDK_HOME="/opt/android-sdk-update-manager/"
-#export PATH="${PATH}:${HOME}/bin"
 
 setopt appendhistory
 setopt autopushd pushdminus pushdsilent pushdtohome
@@ -24,6 +20,8 @@ setopt HIST_IGNORE_SPACE
 setopt SH_WORD_SPLIT
 setopt nohup
 setopt notify
+setopt hist_ignore_all_dups
+setopt extendedglob
 # Allow for functions in the prompt.
 setopt PROMPT_SUBST
 unsetopt beep
