@@ -1,9 +1,8 @@
 sw_volume: 100
 audio_device_state:1:snd-hda-intel
 audio_device_state:1:ncmpcpp-visualisation
-state: play
+state: stop
 current: 4
-time: 10239
 random: 0
 repeat: 0
 single: 0
@@ -25,7 +24,7 @@ song_begin: http://www.live365.com/play/kkjz1
 mtime: 0
 song_end
 song_begin: http://streamingserver01.byte.fm:8000
-Title: Steely Dan - Babylon Sisters
+Title: Popol Vuh - Haram Dei Haram Dei (Prog Rock Edit by Alexander Barck)
 Name: ByteFM
 mtime: 0
 song_end

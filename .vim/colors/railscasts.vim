@@ -44,11 +44,24 @@
   hi link htmlTagName                 xmlTagName
   hi link htmlEndTag                  xmlEndTag
 
-  highlight Normal                    guifg=#E6E1DC guibg=#111111 
+
+" tab pages line, not active tab page label
+highlight TabLine                   guifg=#b6bf98           guibg=#000000           gui=none
+highlight TabLine                   ctermfg=gray            ctermbg=black           cterm=none
+" tab pages line, where there are no labels
+highlight TabLineFill               guifg=#cfcfaf           guibg=#000000           gui=none
+highlight TabLineFill               ctermfg=gray            ctermbg=black             cterm=none
+" tab pages line, active tab page label
+highlight TabLineSel                guifg=#efefef           guibg=#999999           gui=bold
+highlight TabLineSel                ctermfg=yellow             ctermbg=black             cterm=bold
+highlight StatusLine                guifg=#FFFFFF guibg=#000000
+highlight StatusLine                ctermfg=gray             ctermbg=black             cterm=none
+highlight StatusLineNC              guifg=#FFFFFF guibg=#000000
+highlight StatusLineNC              ctermfg=gray             ctermbg=black             cterm=none
+
+highlight Normal                    guifg=#E6E1DC guibg=#111111 
 highlight Cursor                    guifg=#FFFFFF ctermfg=0 guibg=#000000 ctermbg=15	
 highlight CursorLine                guibg=#000000 ctermbg=233 cterm=NONE
-highlight StatusLine                guifg=#000000 guibg=#FFFFFF
-highlight StatusLineNC              guifg=#000000 guibg=#FFFFFF
 
 highlight Comment                   guifg=#BC9458 ctermfg=180 gui=italic
 highlight Constant                  guifg=#6D9CBE ctermfg=73

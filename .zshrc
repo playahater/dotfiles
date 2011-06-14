@@ -28,7 +28,7 @@ setopt notify
 setopt PROMPT_SUBST
 unsetopt beep
 
-PROMPT='[%n@%m][\$ ' # default prompt
+PROMPT='%{${fg[green]}%}[%n@%m][\$ ' # default prompt
 RPROMPT='][%{${fg[cyan]}%}%B%~%b$(prompt_git_info)%{${fg[default]}%} %T]'
 
 typeset -gU path cdpath manpath fpath
@@ -54,7 +54,6 @@ typeset -g -A key
 bindkey '\e[1~' beginning-of-line
 bindkey '\e[4~' end-of-line
 #bindkey '\e[2~' overwrite-mode
-bindkey '^?' backward-delete-char
 bindkey '^[[1~' beginning-of-line
 bindkey '^[[5~' up-line-or-history
 bindkey '^[[3~' delete-char
@@ -188,11 +187,11 @@ compctl -k ping telnet ncftp host nslookup irssi rlogin ftp
  
 compctl -j -P '%' fg jobs disown
 compctl -g '*.(gz|z|Z|t[agp]z|tarZ|tz)' + -g '*(-/)' gunzip gzcat zcat
-compctl -g '*.(mp3|MP3|ogg|OGG|wav|WAV)' + -g '*(-/)' mpg123 mpg321 xmms
+compctl -g '*.(mp3|MP3|ogg|OGG|wav|WAV)' + -g '*(-/)' mpc mpg123 mpg321 xmms
 compctl -g "*.html *.htm" + -g "*(-/) .*(-/)" + -H 0 '' remurl lynx links wget opera
 compctl -g '*.(pdf|PDF)(ps|PS)' + -g '*(-/)' gv
 compctl -g '*(-/)' + -g '.*(/)' cd chdir dirs pushd rmdir dircmp cl tree
-compctl -g '*.(jpg|JPG|jpeg|JPEG|gif|GIF|png|PNG|bmp)' + -g '*(-/)' qiv gimp
+compctl -g '*.(jpg|JPG|jpeg|JPEG|gif|GIF|png|PNG|bmp)' + -g '*(-/)' qiv gimp feh
 compctl -g '*.tex*' + -g '*(-/)' {,la,gla,ams{la,},{g,}sli}tex texi2dvi
 compctl -g '*.dvi' + -g '*(-/)' xdvi
 compctl -g '[^.]*(-/) *.(c|C|cc|c++|cxx|cpp)' + -f cc CC c++ gcc g++
@@ -216,52 +215,3 @@ zle -N rationalise-dot
 preexec_functions+='preexec_update_git_vars'
 precmd_functions+='precmd_update_git_vars'
 chpwd_functions+='chpwd_update_git_vars'
-
-# if using GNU screen, let the zsh tell screen what the title and hardstatus
-# of the tab window should be.
-if [[ $TERM == "screen" ]]; then
-  _GET_PATH='echo $PWD | sed "s/^\/Users\//~/;s/^~$USER/~/"'
-
-  # use the current user as the prefix of the current tab title (since that's
-  # fairly important, and I change it fairly often)
-  TAB_TITLE_PREFIX='"'  # when at the shell prompt, show a truncated version of the current path (with
-  # standard ~ replacement) as the rest of the title.
-  TAB_TITLE_PROMPT='$SHELL:t'
-  # when running a command, show the title of the command as the rest of the
-  # title (truncate to drop the path to the command)
-  TAB_TITLE_EXEC='$cmd[1]:t'
-
-  # use the current path (with standard ~ replacement) in square brackets as the
-  # prefix of the tab window hardstatus.
-  TAB_HARDSTATUS_PREFIX='"['  # when at the shell prompt, use the shell name (truncated to remove the path to
-  # the shell) as the rest of the title
-  TAB_HARDSTATUS_PROMPT='$SHELL:t'
-  # when running a command, show the command name and arguments as the rest of
-  # the title
-  TAB_HARDSTATUS_EXEC='$cmd'
-
-  # tell GNU screen what the tab window title ($1) and the hardstatus($2) should be
-  function screen_set()
-  {
-    # set the tab window title (%t) for screen
-    print -nR $'\033k'$1$'\033'\\\
-
-    # set hardstatus of tab window (%h) for screen
-    print -nR $'\033]0;'$2$'\a'
-  }
-  # called by zsh before executing a command
-  function preexec()
-  {
-    local -a cmd; cmd=(${(z)1}) # the command string
-    eval "tab_title=$TAB_TITLE_PREFIX$TAB_TITLE_EXEC"
-    eval "tab_hardstatus=$TAB_HARDSTATUS_PREFIX$TAB_HARDSTATUS_EXEC"
-    screen_set $tab_title $tab_hardstatus
-  }
-  # called by zsh before showing the prompt
-  function precmd()
-  {
-    eval "tab_title=$TAB_TITLE_PREFIX$TAB_TITLE_PROMPT"
-    eval "tab_hardstatus=$TAB_HARDSTATUS_PREFIX$TAB_HARDSTATUS_PROMPT"
-    screen_set $tab_title $tab_hardstatus
-  }
-fi
