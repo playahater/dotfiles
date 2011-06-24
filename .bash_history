@@ -26,3 +26,15 @@ ls sadfad
 su
 vim adsf
 vim adsf
+pwd
+git branch
+git reset --hard HEAD^
+git reset --hard HEAD^
+ls ?[[:digit:]][[:digit:]]?
+ls [[:digit:]]_[[:digit:]]*.jpg
+ls [[:digit:]]*.jpg
+ls
+touch misa.jpg
+clear
+ls [[:digit:]]*.jpg
+ls -lah [[:digit:]]*.jpg

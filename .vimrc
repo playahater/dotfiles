@@ -90,7 +90,7 @@ map <F9>  :set wrap!<Bar>set wrap?<CR>
 " Visual Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set showmatch       " Show matching brackets.
-set matchtime=5     " Bracket blinking.
+set matchtime=8     " Bracket blinking.
 set novisualbell    " No blinking .
 set noerrorbells    " No noise.
 set vb t_vb="."

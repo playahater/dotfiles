@@ -90,3 +90,21 @@ pcm.dsp0 {
   type plug
   slave.pcm "duplex"
 }
+
+pcm.btheadset {
+   type plug
+   slave {
+       pcm {
+           type bluetooth
+           device 00:1C:EF:7E:A1:88
+           profile "voice"
+       }   
+   }   
+   hint {
+       show on
+       description "BT Headset"
+   }   
+}
+ctl.btheadset {
+  type bluetooth
+}

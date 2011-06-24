@@ -203,7 +203,7 @@ myFocusedBorderColor = "#400000"
  
 --Workspaces
 myWorkspaces :: [WorkspaceId]
-myWorkspaces = ["1:chat", "2:webdev", "3:code", "4:web", "5:vbox" ,"6:misc", "7:vid", "8:gimp", "9:pdf"]
+myWorkspaces = ["1:chat", "2:webdev", "3:code", "4:web", "5:vbox" ,"6:misc", "7:vid", "8:gimp", "9:vlc"]
 --
  
 -- Switch to the "2:web" workspace

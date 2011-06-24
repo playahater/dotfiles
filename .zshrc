@@ -162,6 +162,8 @@ alias devping='ping 192.168.0.240'
 alias twit.tv='mplayer http://bglive-a.bitgravity.com/twit/live/low'
 #alias netbeans='netbeans --laf GTK'
 alias alsamixer='alsamixer -c 0'
+alias plantronics='bluez-simple-agent hci0 00:1C:EF:7E:A1:88'
+alias pmplayer='mplayer -ao alsa:device=btheadset'
 
 
 
