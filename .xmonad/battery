@@ -5,7 +5,6 @@
 
 BATTERY=/proc/acpi/battery/BAT0
 
-while true; do 
   REM_CAP=`grep "^remaining capacity" $BATTERY/state | awk '{ print $3 }'`
   FULL_CAP=`grep "^last full capacity" $BATTERY/info | awk '{ print $4 }'`
   BATSTATE=`grep "^charging state" $BATTERY/state | awk '{ print $3 }'`
@@ -36,5 +35,3 @@ while true; do
   fi
 
   echo -e "Batt: ${COLOUR}${CHARGE}% ${BATSTT}</fc>"
-  sleep 1
-done

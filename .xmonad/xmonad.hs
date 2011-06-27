@@ -55,7 +55,6 @@ main = do
                 , keys = myKeys
                 , logHook = myLogHook xmproc
                 , modMask = myModMask  
---                , startupHook = setWMName "LG3D"
                 , startupHook = myStartupHook
                 , terminal = myTerminal
                 , workspaces = myWorkspaces
@@ -67,28 +66,15 @@ main = do
 -- hooks
 -- automaticly switching app to workspace 
 myManageHook :: ManageHook
-myManageHook = scratchpadManageHook (W.RationalRect 0.1 0.1 0.8 0.75) <+> ( composeAll . concat $
+myManageHook = scratchpadManageHook (W.RationalRect 0.07 0.09 0.86 0.85) <+> ( composeAll . concat $
                 [[isFullscreen                  --> ask >>= \x -> doF (W.float x (W.RationalRect 0 0.02 1 1))
-                , isDialog                       --> doCenterFloat
-                , className =? "OpenOffice.org 3.1" --> doShift "6:misc" 
-                , className =?  "Xmessage"  --> doCenterFloat 
-                , className =?  "Zenity"  --> doCenterFloat 
-                , className =? "feh"  --> doCenterFloat 
-                , className =? "Save a Bookmark on Delicious"  --> doCenterFloat 
+                , isDialog                       --> doFloat
+                , className =?  "Xmessage"  --> doFloat 
+                , className =? "Save a Bookmark on Delicious"  --> doFloat 
                 , className =? "8:gimp"           --> doShift "8:gimp"
---                , className =? "Firefox"           --> doShift "2:web"
---                , className =? "Chromium"           --> doShift "2:web"
-                , className =? "uzbl"           --> doShift "4:web"
-                , className =? "vimprobable"           --> doShift "4:web"
---                , className =? "Pidgin"           --> doShift "1:chat"
-                , className =? "Skype"           --> doShift "1:chat"
---                , className =? "MPlayer"  --> doShift "8:vid"
+                , className =? "uzbl-browser"           --> doShift "4:web"
                 , className =? "VirtualBox" --> doShift "5:vbox"
                 , className =? "Zathura"    --> doShift "9:pdf"
---                , className =? "Evince"   --> doShift "9:pdf"
---                , className =? "Epdfview"   --> doShift "9:pdf"
---                , className =? "Remmina"  --> doShift "6:vbox"]
- 
                 ]]
                         )  <+> manageDocks
  
@@ -120,7 +106,6 @@ customPP = defaultPP {
                             ppHidden = xmobarColor "green" ""
                           , ppCurrent = xmobarColor "orange" "" . wrap "[" "]"
                           , ppUrgent = xmobarColor "green" "" . wrap "*" "*"
---                          , ppLayout = xmobarColor "#400000" ""
                           , ppLayout = \x -> ""
                           , ppTitle = xmobarColor "green" "" . shorten 120
                           , ppSep = "<fc=#008518> | </fc>"
@@ -134,13 +119,13 @@ myXPConfig = defaultXPConfig
     , fgHLight = "#008518"
     , bgHLight = "#000000"
     , borderColor = "black"
-    , promptBorderWidth = 0
+    , promptBorderWidth = 1
     , position = Bottom
     , height = 14
     , historySize = 50
     }
  
---- My Theme For Tabbed layout
+--- MyTheme For Tabbed layout
 myTheme = defaultTheme { decoHeight = 14
     , activeColor = "#000000"
     , activeBorderColor = "#000000"
@@ -155,7 +140,8 @@ myTheme = defaultTheme { decoHeight = 14
 --LayoutHook
 myLayoutHook  = onWorkspace "1:chat" imLayout $ onWorkspace "2:webdev" webL $ onWorkspace "8:gimp" gimpL $ standardLayouts 
    where
-        standardLayouts =   avoidStruts  $ (tiled ||| tabLayout ||| reflectTiled ||| Mirror tiled |||  Grid ||| Full) 
+
+        standardLayouts = avoidStruts $ (tiled ||| tabLayout ||| reflectTiled ||| Mirror tiled |||  Grid ||| Full)
  
         --Layouts
         tiled     = smartBorders (ResizableTall 1 (2/100) (1/2) [])
@@ -164,23 +150,16 @@ myLayoutHook  = onWorkspace "1:chat" imLayout $ onWorkspace "2:webdev" webL $ on
         full    = noBorders Full
  
         --Im Layout
-        imLayout = avoidStruts $ smartBorders $ withIM ratio pidginRoster $ reflectHoriz $ withIM skypeRatio skypeRoster (tiled ||| reflectTiled ||| Grid) where
-                chatLayout      = Grid
-                ratio = (1%9)
-                skypeRatio = (1%8)
-                pidginRoster    = And (ClassName "Pidgin") (Role "buddy_list")
-                skypeRoster     = (ClassName "Skype") `And` (Not (Title "Options")) `And` (Not (Role "Chats")) `And` (Not (Role "CallWindowForm")) 
+        imLayout = avoidStruts $ smartBorders $ reflectHoriz $ withIM skypeRatio skypeRoster (tiled ||| reflectTiled ||| Grid) where
+                chatLayout  = Grid
+                skypeRatio  = (1%6)
+                skypeRoster = (ClassName "Skype") `And` (Not (Title "Options")) `And` (Not (Role "Chats")) `And` (Not (Role "CallWindowForm")) 
+
         --Gimp Layout
         gimpL = avoidStruts $ smartBorders $ withIM (0.11) (Role "gimp-toolbox") $ reflectHoriz $ withIM (0.15) (Role "gimp-dock") tabLayout
 
-        --web Layout
-        --webL      = avoidStruts $  tabLayout  ||| tiled ||| reflectHoriz tiled |||  full 
         webL      = avoidStruts $ full 
- 
-        --VirtualLayout
-        fullL = avoidStruts $ full
- 
- 
+
 -------------------------------------------------------------------------------
 ---- Terminal --
 myTerminal :: String
@@ -206,27 +185,6 @@ myWorkspaces :: [WorkspaceId]
 myWorkspaces = ["1:chat", "2:webdev", "3:code", "4:web", "5:vbox" ,"6:misc", "7:vid", "8:gimp", "9:vlc"]
 --
  
--- Switch to the "2:web" workspace
---viewWeb = windows (W.greedyView "2:web")                           -- (0,0a)
---
- 
---Search engines to be selected :  [google (g), wikipedia (w) , youtube (y) , maps (m), dictionary (d) , wikipedia (w), bbs (b) ,aur (r), wiki (a) , TPB (t), mininova (n), isohunt (i) ]
---keybinding: hit mod + s + <searchengine>
---searchEngineMap method = M.fromList $
---      [ ((0, xK_g), method S.google )
---       , ((0, xK_y), method S.youtube )
---       , ((0, xK_m), method S.maps )
---       , ((0, xK_d), method S.dictionary )
---       , ((0, xK_w), method S.wikipedia )
---       , ((0, xK_h), method S.hoogle )
---       , ((0, xK_i), method S.isohunt )
---       , ((0, xK_b), method $ S.searchEngine "archbbs" "http://bbs.archlinux.org/search.php?action=search&keywords=")
---       , ((0, xK_r), method $ S.searchEngine "AUR" "http://aur.archlinux.org/packages.php?O=0&L=0&C=0&K=")
---       , ((0, xK_a), method $ S.searchEngine "archwiki" "http://wiki.archlinux.org/index.php/Special:Search?search=")
---       ]
- 
- 
---ssh = "ssh homoludens@tv "
 -- keys
 myKeys :: XConfig Layout -> M.Map (KeyMask, KeySym) (X ())
 myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
@@ -235,9 +193,8 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     , ((modMask, xK_c ), kill)
  
     -- opening program launcher / search engine
---   , ((modMask , xK_s ), SM.submap $ searchEngineMap $ S.promptSearchBrowser myXPConfig "uzbl-browser")
-    ,((modMask , xK_F2), runOrRaisePrompt myXPConfig)
---    ,((modMask , xK_F2), shellPrompt myXPConfig)
+--    ,((modMask , xK_F2), runOrRaisePrompt myXPConfig)
+    ,((modMask , xK_F2), shellPrompt myXPConfig)
 
     -- GridSelect
     , ((modMask, xK_g), goToSelected defaultGSConfig)
@@ -275,18 +232,8 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     , ((modMask .|. shiftMask, xK_h ), sendMessage MirrorShrink)
     , ((modMask .|. shiftMask, xK_l ), sendMessage MirrorExpand)
  
---    , ((mod4Mask .|. controlMask, xK_Home), spawn "mocp -G") -- play/pause song
---    , ((mod4Mask .|. controlMask, xK_End), spawn "mocp -s") -- stop playback
---    , ((mod4Mask .|. controlMask, xK_Prior), spawn "mocp -r") -- previous song
---    , ((mod4Mask .|. controlMask, xK_Next), spawn "mocp -f") -- next song
- 
     -- scratchpad
     , ((modMask , xK_grave), scratchpadSpawnAction defaultConfig  {terminal = myTerminal}) 
- 
-    --Programs
---    , ((modMask .|.  shiftMask, xK_f ), spawn "firefox")
---    , ((modMask .|.  shiftMask, xK_p ), spawn "pidgin")
---    , ((modMask .|.  shiftMask, xK_b ), spawn "chromium")
 
     -- volume control
     , ((0, 0x1008ff13), spawn "amixer -q set Master 1dB+") -- raise volume
