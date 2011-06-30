@@ -38,3 +38,4 @@ touch misa.jpg
 clear
 ls [[:digit:]]*.jpg
 ls -lah [[:digit:]]*.jpg
+find /home/play/ > find_home.log
