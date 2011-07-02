@@ -39,3 +39,8 @@ clear
 ls [[:digit:]]*.jpg
 ls -lah [[:digit:]]*.jpg
 find /home/play/ > find_home.log
+which rm
+which acpitool
+ps
+ps faux
+kill 27938
