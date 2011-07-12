@@ -165,7 +165,8 @@ alias alsamixer='alsamixer -c 0'
 alias plantronics='bluez-simple-agent hci0 00:1C:EF:7E:A1:88'
 alias pmplayer='mplayer -ao alsa:device=btheadset'
 alias drushall='/usr/bin/php -d memory_limit=512M /home/play/stuff/drupal/drush/drush.php --php="/usr/bin/php -d memory_limit=512M" cc all'
-alias drush='/usr/bin/php -d memory_limit=512M /home/play/stuff/drupal/drush/drush.php --php="/usr/bin/php -d memory_limit=512M" cc'
+alias drushcc='/usr/bin/php -d memory_limit=512M /home/play/stuff/drupal/drush/drush.php --php="/usr/bin/php -d memory_limit=512M" cc'
+alias drush='/usr/bin/php -d memory_limit=512M /home/play/stuff/drupal/drush/drush.php --php="/usr/bin/php -d memory_limit=512M"'
 alias git-diff-branch='git diff --stat --color master..staging'
 #alias firedatabases="for database in ~/.mozilla/firefox/*/*.sqlite; do echo processing $database... ; sqlite3 $database 'VACUUM;'; done ;"
 

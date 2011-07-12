@@ -1,4 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =3
 let g:netrw_dirhist_1='/srv/http/m3com/sites/all/modules/custom/m3com_misc'
 let g:netrw_dirhist_2='/srv/http/m3com/sites/all/modules/custom/m3com_weather'
+let g:netrw_dirhist_3='/srv/http/m3com/sites/all/themes/m3com'

@@ -56,7 +56,7 @@
     "script-torrent-done-enabled": false, 
     "script-torrent-done-filename": "", 
     "speed-limit-down": 200, 
-    "speed-limit-down-enabled": true, 
+    "speed-limit-down-enabled": false, 
     "speed-limit-up": 3, 
     "speed-limit-up-enabled": true, 
     "start-added-torrents": true, 

@@ -44,3 +44,4 @@ which acpitool
 ps
 ps faux
 kill 27938
+su
