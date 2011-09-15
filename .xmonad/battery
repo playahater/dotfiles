@@ -8,7 +8,8 @@ BATTERY=/proc/acpi/battery/BAT0
   REM_CAP=`grep "^remaining capacity" $BATTERY/state | awk '{ print $3 }'`
   FULL_CAP=`grep "^last full capacity" $BATTERY/info | awk '{ print $4 }'`
   BATSTATE=`grep "^charging state" $BATTERY/state | awk '{ print $3 }'`
-  CHARGE=`echo $(( $REM_CAP * 100 / $FULL_CAP ))`
+  CHARGE=`echo "scale=2;$REM_CAP * 100 / $FULL_CAP" | bc`
+  CHARGEINT=`echo $(( $REM_CAP * 100 / $FULL_CAP ))`
 
   COLOUR="<fc=#FF0000>"
 
@@ -24,12 +25,12 @@ BATTERY=/proc/acpi/battery/BAT0
      ;;
   esac
 
-  if [ "$CHARGE" -gt "10" ]
+  if [ "$CHARGEINT" -gt "10" ]
   then
      COLOUR="<fc=#FFA500>"
   fi
 
-  if [ "$CHARGE" -gt "60" ]
+  if [ "$CHARGEINT" -gt "60" ]
   then
      COLOUR="<fc=#00FF00>"
   fi

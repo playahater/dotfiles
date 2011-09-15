@@ -238,6 +238,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     -- volume control
     , ((0, 0x1008ff13), spawn "amixer -q set Master 1dB+") -- raise volume
     , ((0, 0x1008ff11), spawn "amixer -q set Master 1dB-") -- lower volume
+    , ((modMask, xK_s ),spawn "xset dpms force off")
 
     -- take screenshot
     , ((0, xK_Print), spawn "screenshot")

@@ -169,6 +169,9 @@ alias drushcc='/usr/bin/php -d memory_limit=512M /home/play/stuff/drupal/drush/d
 alias drush='/usr/bin/php -d memory_limit=512M /home/play/stuff/drupal/drush/drush.php --php="/usr/bin/php -d memory_limit=512M"'
 alias git-diff-branch='git diff --stat --color master..staging'
 #alias firedatabases="for database in ~/.mozilla/firefox/*/*.sqlite; do echo processing $database... ; sqlite3 $database 'VACUUM;'; done ;"
+alias ssh240='ssh root@192.168.0.240 -p 40'
+alias ssh242='ssh root@192.168.0.242 -p 40'
+alias ssh246='ssh root@192.168.0.246'
 
 
 

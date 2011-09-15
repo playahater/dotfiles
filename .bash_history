@@ -45,3 +45,8 @@ ps
 ps faux
 kill 27938
 su
+pwd
+git co staging2 sites/all/themes/m3com/views/views-view--tube-new--*
+gst
+git co staging sites/all/themes/m3com/views/views-view-list--views-sport-channel--block-4.tpl.php views-view-fields--views-sport*
+git co staging sites/all/themes/m3com/views/views-view-list--views-sport-channel--block-4.tpl.php sites/all/themes/m3com/views/views-view-fields--views-sport*
