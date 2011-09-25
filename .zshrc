@@ -173,6 +173,7 @@ alias ssh240='ssh root@192.168.0.240 -p 40'
 alias ssh242='ssh root@192.168.0.242 -p 40'
 alias ssh246='ssh root@192.168.0.246'
 
+alias tvfeed="curl 'http://api.dailytvtorrents.org/1.0/shows.getTextInfo?show_names=the-big-bang-theory,breaking-bad,eureka,weeds,warehouse-13,house,fringe,burn-notice,top-gear,castle,game-of-thrones&colors=yes&links=yes'"
 
 
 # custom completion commands

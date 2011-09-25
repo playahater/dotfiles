@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/srv/http/m3com/sites/all/modules/custom/m3com_misc'
 let g:netrw_dirhist_2='/srv/http/m3com/sites/all/modules/custom/m3com_weather'
 let g:netrw_dirhist_3='/srv/http/m3com/sites/all/themes/m3com'
@@ -7,3 +7,4 @@ let g:netrw_dirhist_4='/srv/http/m3com/sites/all/themes/m3com/css'
 let g:netrw_dirhist_5='/srv/http/m3com/sites/all/modules/custom/plus1'
 let g:netrw_dirhist_6='/srv/http/drupal/sites/sandbox'
 let g:netrw_dirhist_7='/srv/http/m3com/sites/all/modules/custom'
+let g:netrw_dirhist_8='/srv/http/m3com/sites/all/modules/custom/m3com_misc'
