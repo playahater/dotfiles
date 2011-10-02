@@ -61,3 +61,8 @@ for f in $(file /proc/$(pidof luakit)/fd/*|gawk '/\/tmp\/Flash/ {print $1}'); do
 for f (${$(file /proc/$(pidof luakit)/fd/*|gawk '/\/tmp\/Flash/ {print $1}')//:}){mplayer $f}
 mplayer $(d=/proc/$(pidof plugin-container)/fd; ls --color=no  -l $d | gawk '/\/tmp\/Flash/ {print "'$d'/" $9}' ) 
 wget http://videos-3.youporn.com/l3-unlimited/save/mpeg1_640w_1200k/617043/YouPorn%20-%20Real%20Amateur%20hottie%20gets%20fucked%20hard.mpg?nva=20110926030000
+pwd
+git co staging2 sites/all/themes/m3com/images/filestorage-
+git co staging2 sites/all/themes/m3com/images/filestorage*
+gst
+git status

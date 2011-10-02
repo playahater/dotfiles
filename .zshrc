@@ -157,6 +157,7 @@ alias gplm='git pull origin master'
 alias gpsm='git push origin master'
 alias git_diff='git diff --stat --color'
 #alias firefox='firefox -no-remote -ProfileManager'
+alias firefox='firefox -no-remote'
 alias tjao='acpitool -s'
 alias devping='ping 192.168.0.240'
 alias twit.tv='mplayer http://bglive-a.bitgravity.com/twit/live/low'
@@ -172,6 +173,9 @@ alias git-diff-branch='git diff --stat --color master..staging'
 alias ssh240='ssh root@192.168.0.240 -p 40'
 alias ssh242='ssh root@192.168.0.242 -p 40'
 alias ssh246='ssh root@192.168.0.246'
+alias linode='ssh root@178.79.129.19 -p 49752'
+
+alias vpnserver='VBoxManage startvm --type headless sept'
 
 alias tvfeed="curl 'http://api.dailytvtorrents.org/1.0/shows.getTextInfo?show_names=the-big-bang-theory,breaking-bad,eureka,weeds,warehouse-13,house,fringe,burn-notice,top-gear,castle,game-of-thrones&colors=yes&links=yes'"
 
