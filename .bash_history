@@ -66,3 +66,19 @@ git co staging2 sites/all/themes/m3com/images/filestorage-
 git co staging2 sites/all/themes/m3com/images/filestorage*
 gst
 git status
+clear
+pwd
+grep -P '[\x80-\xFF]' .
+grep -P '[\x80-\xFF]' sites/all/modules/custom/m3com_auth/templates/auth_dsl_registration_dialog.tpl.php 
+vim sites/all/modules/custom/m3com_auth/templates/auth_dsl_registration_dialog.tpl.php
+vim sites/all/modules/custom/m3com_auth/templates/auth_dsl_registration.tpl.php 
+grep -P '[\x80-\xFF]' sites/all/modules/custom/m3com_auth/templates/auth_dsl_registration.tpl.php 
+clear
+grep -P '[\x80-\xFF]' sites/all/
+grep -PR '[\x80-\xFF]' sites/all/
+man grep
+man grep
+grep -PR '[\x80-\xFF]' sites/all/ --exclude-from=po
+man grep
+grep -PR '[\x80-\xFF]' sites/all/modules/custom
+grep -PR '[\x80-\xFF]' sites/all/
