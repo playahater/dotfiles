@@ -82,3 +82,24 @@ grep -PR '[\x80-\xFF]' sites/all/ --exclude-from=po
 man grep
 grep -PR '[\x80-\xFF]' sites/all/modules/custom
 grep -PR '[\x80-\xFF]' sites/all/
+grep -PR '[\x80-\xFF]' sites/all/modules/custom/m3com_auth
+grep -PR '[\x80-\xFF]' sites/all/modules/custom/m3com_auth
+grep -PR '[\x80-\xFF]' sites/all/modules/custom/m3com_auth| wc -l
+grep -PR '[\x80-\xFF]' sites/all/| wc -l
+grep -PR '[\x80-\xFF]' --exclude=*.po .
+grep -PR '[\x80-\xFF]' --exclude=*.po,*csv .
+grep -PR '[\x80-\xFF]' --exclude=*csv .
+grep -PR '[\x80-\xFF]' --exclude=*csv --exclude=*.po .
+grep -PR '[\x80-\xFF]' --exclude=*csv --exclude=*.po .
+man grep
+grep -PR '[\x80-\xFF]' sites/all/|grep '.module' 
+grep -PR '[\x80-\xFF]' sites/all/|grep '\.module' 
+grep -PR '[\x80-\xFF]' sites/all/|grep '\.module' 
+grep -PR '[\x80-\xFF]' sites/all/|grep '\.module' || '\.php'
+grep -PR '[\x80-\xFF]' sites/all/|grep '\.module' || '\.php'
+grep -PR '[\x80-\xFF]' sites/all/|grep '\.module' || '\.php'
+grep -PR '[\x80-\xFF]' sites/all/|grep '\.module' || '\.php'
+grep -PR '[\x80-\xFF]' sites/all/|grep '\.module' || '\.php'|less
+grep -PR '[\x80-\xFF]' sites/all/|grep '\.module' || '\.php'
+grep -PR '[\x80-\xFF]' sites/all/|grep '\.module' || '\.php'
+grep -PR '[\x80-\xFF]' sites/all/|grep '\.module' || '\.php'

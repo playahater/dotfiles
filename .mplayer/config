@@ -7,11 +7,10 @@ ao=alsa
 af=resample=44100:16:2
 subfont-encoding=unicode
 subcp = cp1250
-#font="Comic Sans MS"
-font="profont"
-#font = "/usr/share/fonts/corefonts/comic.ttf"
+subfont="/usr/share/fonts/TTF/LiberationSans-Regular.ttf"
+font="/usr/share/fonts/TTF/"
 #sub_cp = "cp1250"
-subfont-osd-scale=2
+subfont-osd-scale=1
 sub-fuzziness=1
 #aspect=1.7777
 channels=2

@@ -1,5 +1,5 @@
 ﻿###
-###  vlc 1.1.7
+###  vlc 1.1.12
 ###
 
 ###
@@ -663,7 +663,7 @@
 [freetype] # Freetype2 font renderer
 
 # Font (string)
-#freetype-font=Serif Bold
+freetype-font=Liberation Serif [unknown]
 
 # Font size in pixels (integer)
 #freetype-fontsize=0
@@ -845,59 +845,6 @@ qt-privacy-ask=0
 # CDDB port (integer)
 #cddb-port=8880
 
-[v4l] # Video4Linux input
-
-# Caching value in ms (integer)
-#v4l-caching=300
-
-# Video input chroma format (string)
-#v4l-chroma=
-
-# Framerate (float)
-#v4l-fps=-1.000000
-
-# Channel (integer)
-#v4l-channel=0
-
-# Tuner (integer)
-#v4l-tuner=-1
-
-# Norm (integer)
-#v4l-norm=3
-
-# Frequency (integer)
-#v4l-frequency=-1
-
-# Audio Channel (integer)
-#v4l-audio=-1
-
-# Width (integer)
-#v4l-width=0
-
-# Height (integer)
-#v4l-height=0
-
-# Brightness (integer)
-#v4l-brightness=-1
-
-# Color (integer)
-#v4l-colour=-1
-
-# Hue (integer)
-#v4l-hue=-1
-
-# Contrast (integer)
-#v4l-contrast=-1
-
-# MJPEG (boolean)
-#v4l-mjpeg=0
-
-# Decimation (integer)
-#v4l-decimation=1
-
-# Quality (integer)
-#v4l-quality=100
-
 [access_http] # HTTP input
 
 # HTTP proxy (string)
@@ -910,7 +857,7 @@ qt-privacy-ask=0
 #http-caching=1200
 
 # HTTP user agent (string)
-#http-user-agent=vlc/1.1.7
+#http-user-agent=vlc/1.1.12
 
 # Auto re-connect (boolean)
 #http-reconnect=0
@@ -2226,7 +2173,7 @@ qt-privacy-ask=0
 #audiobargraph_v-transparency=255
 
 # Bargraph position (integer)
-#audiobargraph_v-position=-1
+audiobargraph_v-position=0
 
 # Alarm (integer)
 #audiobargraph_v-alarm=0
@@ -2373,7 +2320,7 @@ qt-privacy-ask=0
 #rss-y=0
 
 # Text position (integer)
-#rss-position=-1
+rss-position=0
 
 # Opacity (integer)
 #rss-opacity=255
@@ -2420,33 +2367,7 @@ qt-privacy-ask=0
 #logo-opacity=255
 
 # Logo position (integer)
-#logo-position=-1
-
-[osdmenu] # On Screen Display menu
-
-# X coordinate (integer)
-#osdmenu-x=-1
-
-# Y coordinate (integer)
-#osdmenu-y=-1
-
-# Menu position (integer)
-#osdmenu-position=8
-
-# Configuration file (string)
-#osdmenu-file=share/osdmenu/default.cfg
-
-# Path to OSD menu images (string)
-#osdmenu-file-path=
-
-# Menu timeout (integer)
-#osdmenu-timeout=15
-
-# Menu update interval (integer)
-#osdmenu-update=300
-
-# Alpha transparency value (default 255) (integer)
-#osdmenu-alpha=255
+logo-position=0
 
 [croppadd] # Video scaling filter
 
@@ -2593,10 +2514,10 @@ qt-privacy-ask=0
 #mosaic-keep-picture=0
 
 # Elements order (string)
-#mosaic-order=
+mosaic-order=
 
 # Offsets in order (string)
-#mosaic-offsets=
+mosaic-offsets=
 
 # Delay (integer)
 #mosaic-delay=0
@@ -2729,7 +2650,7 @@ qt-privacy-ask=0
 #marq-y=0
 
 # Marquee position (integer)
-#marq-position=-1
+marq-position=0
 
 # Opacity (integer)
 #marq-opacity=255
@@ -2755,10 +2676,10 @@ qt-privacy-ask=0
 #rmtosd-port=20001
 
 # VNC Password (string)
-#rmtosd-password=
+rmtosd-password=
 
 # VNC poll interval (integer)
-#rmtosd-update=1000
+rmtosd-update=300
 
 # VNC polling (boolean)
 #rmtosd-vnc-polling=0
@@ -4413,3 +4334,55 @@ album-art=2
 # Playlist bookmark 10 (string)
 #bookmark10=
 
+[v4l] # Video4Linux input
+# Caching value in ms (integer)
+#v4l-caching=300
+# Video input chroma format (string)
+#v4l-chroma=
+# Framerate (float)
+#v4l-fps=-1.000000
+# Channel (integer)
+#v4l-channel=0
+# Tuner (integer)
+#v4l-tuner=-1
+# Norm (integer)
+#v4l-norm=3
+# Frequency (integer)
+#v4l-frequency=-1
+# Audio Channel (integer)
+#v4l-audio=-1
+# Width (integer)
+#v4l-width=0
+# Height (integer)
+#v4l-height=0
+# Brightness (integer)
+#v4l-brightness=-1
+# Color (integer)
+#v4l-colour=-1
+# Hue (integer)
+#v4l-hue=-1
+# Contrast (integer)
+#v4l-contrast=-1
+# MJPEG (boolean)
+#v4l-mjpeg=0
+# Decimation (integer)
+#v4l-decimation=1
+# Quality (integer)
+#v4l-quality=100
+[osdmenu] # On Screen Display menu
+# X coordinate (integer)
+#osdmenu-x=-1
+# Y coordinate (integer)
+#osdmenu-y=-1
+# Menu position (integer)
+#osdmenu-position=8
+# Configuration file (string)
+#osdmenu-file=share/osdmenu/default.cfg
+# Path to OSD menu images (string)
+#osdmenu-file-path=
+# Menu timeout (integer)
+#osdmenu-timeout=15
+# Menu update interval (integer)
+#osdmenu-update=300
+# Alpha transparency value (default 255) (integer)
+#osdmenu-alpha=255
