@@ -36,14 +36,12 @@
   enabled = true
   autoupdate = true
 [alias]
+  lg = log --graph --pretty=format:'%Cred%h%Creset :: %ar :: %C(yellow)%s%Creset :: %Cgreen%an%Creset'
   st = status
   ci = commit
   br = branch
   co = checkout
   df = diff
-  lg = log -p
-  lol = log --graph --decorate --pretty=oneline --abbrev-commit
-  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
   ls = ls-files
 [merge]
 	tool = vimdiff

@@ -103,3 +103,7 @@ grep -PR '[\x80-\xFF]' sites/all/|grep '\.module' || '\.php'|less
 grep -PR '[\x80-\xFF]' sites/all/|grep '\.module' || '\.php'
 grep -PR '[\x80-\xFF]' sites/all/|grep '\.module' || '\.php'
 grep -PR '[\x80-\xFF]' sites/all/|grep '\.module' || '\.php'
+grep -PR '[\x80-\xFF]' sites/all/|grep '\.module' 
+grep -PR '[\x80-\xFF]' sites/all/
+grep -PR '[\x80-\xFF]' sites/all/|grep '\.module' 
+grep -PR '[\x80-\xFF]' sites/all/|grep '\.module' 
