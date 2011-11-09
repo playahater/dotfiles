@@ -139,9 +139,10 @@ alias screencast="ffmpeg -f x11grab -r 25 -s 1280x800 -i :0.0 /tmp/screencast.mp
 alias sshradioswap='ssh playahater@radioswap.net -p 2222'
 alias rts1="mplayer mms://rts.videostreaming.rs/rts"
 alias rts2="mplayer rtsp://helix.beotel.net/encoder/rts2.rm"
-alias b92="mplayer http://stream.b92.net:7999/tv-b92.ogg.m3u"
+alias b92="mplayer http://stream.b92.net:7999/tv-b92.ogg"
 alias hrt="mplayer rtsp://195.29.5.148/encoder/htv1.rm"
 alias rtvpink="mplayer mms://beotelmedia.beotel.net/rtvpink"
+alias twit.tv='mplayer http://bglive-a.bitgravity.com/twit/live/high'
 alias webcam="mplayer -fps 24 tv://"
 #alias webcam="mplayer tv:// -tv driver=v4l:width=352:height=288:device=/dev/video0 "
 alias begraund='feh --bg-scale'
@@ -158,11 +159,8 @@ alias gpsm='git push origin master'
 alias gpull='git pull origin'
 alias gpush='git push origin'
 alias git_diff='git diff --stat --color'
-#alias firefox='firefox -no-remote -ProfileManager'
-alias firefox='firefox -no-remote'
-alias tjao='acpitool -s'
+alias firefox='firefox -no-remote -no-remote -ProfileManager'
 alias devping='ping 192.168.0.240'
-alias twit.tv='mplayer http://bglive-a.bitgravity.com/twit/live/low'
 #alias netbeans='netbeans --laf GTK'
 alias alsamixer='alsamixer -c 0'
 alias plantronics='bluez-simple-agent hci0 00:1C:EF:7E:A1:88'
@@ -179,7 +177,7 @@ alias linode='ssh root@178.79.129.19 -p 49752'
 
 alias vpnserver='VBoxManage startvm --type headless sept'
 
-alias tvfeed="curl 'http://api.dailytvtorrents.org/1.0/shows.getTextInfo?show_names=the-big-bang-theory,breaking-bad,eureka,weeds,warehouse-13,house,fringe,burn-notice,top-gear,castle,game-of-thrones&colors=yes&links=yes'"
+alias tvfeed="curl 'http://api.dailytvtorrents.org/1.0/shows.getTextInfo?show_names=dexter,the-big-bang-theory,breaking-bad,eureka,merlin,the-mentalist,weeds,warehouse-13,house,fringe,burn-notice,top-gear,castle,game-of-thrones&colors=yes&links=yes'"
 
 
 # custom completion commands

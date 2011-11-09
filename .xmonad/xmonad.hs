@@ -67,8 +67,7 @@ main = do
 -- automaticly switching app to workspace 
 myManageHook :: ManageHook
 myManageHook = scratchpadManageHook (W.RationalRect 0.07 0.09 0.86 0.85) <+> ( composeAll . concat $
-                [[isFullscreen                  --> ask >>= \x -> doF (W.float x (W.RationalRect 0 0.02 1 1))
-                , isDialog                       --> doFloat
+                [[isDialog                       --> doFloat
                 , className =?  "Xmessage"  --> doFloat 
                 , className =? "Save a Bookmark on Delicious"  --> doFloat 
                 , className =? "8:gimp"           --> doShift "8:gimp"
@@ -138,7 +137,7 @@ myTheme = defaultTheme { decoHeight = 14
 }
  
 --LayoutHook
-myLayoutHook  = onWorkspace "1:chat" imLayout $ onWorkspace "2:webdev" webL $ onWorkspace "8:gimp" gimpL $ standardLayouts 
+myLayoutHook  = onWorkspace "1:chat" imLayout $ onWorkspace "2:webdev" webL $ onWorkspace "8:gimp" gimpL $ onWorkspace "7:wine" full $ standardLayouts 
    where
 
         standardLayouts = avoidStruts $ (tiled ||| tabLayout ||| reflectTiled ||| Mirror tiled |||  Grid ||| Full)
@@ -182,7 +181,7 @@ myFocusedBorderColor = "#400000"
  
 --Workspaces
 myWorkspaces :: [WorkspaceId]
-myWorkspaces = ["1:chat", "2:webdev", "3:code", "4:web", "5:vbox" ,"6:misc", "7:vid", "8:gimp", "9:vlc"]
+myWorkspaces = ["1:chat", "2:webdev", "3:code", "4:web", "5:vbox" ,"6:misc", "7:wine", "8:gimp", "9:vlc"]
 --
  
 -- keys

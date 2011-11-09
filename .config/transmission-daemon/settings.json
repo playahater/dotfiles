@@ -65,7 +65,7 @@
     "speed-limit-down": 250, 
     "speed-limit-down-enabled": false, 
     "speed-limit-up": 3, 
-    "speed-limit-up-enabled": false, 
+    "speed-limit-up-enabled": true, 
     "start-added-torrents": true, 
     "trash-original-torrent-files": false, 
     "umask": 18, 
