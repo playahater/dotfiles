@@ -3,36 +3,18 @@
 # battery status script
 #
 
-BATTERY=/proc/acpi/battery/BAT0
+BATTERY=`acpi -b`
+PERCENT=`echo $BATTERY | awk '{ print $4 }'`
+COLOUR="<fc=#FF0000>"
 
-  REM_CAP=`grep "^remaining capacity" $BATTERY/state | awk '{ print $3 }'`
-  FULL_CAP=`grep "^last full capacity" $BATTERY/info | awk '{ print $4 }'`
-  BATSTATE=`grep "^charging state" $BATTERY/state | awk '{ print $3 }'`
-  CHARGE=`echo "scale=2;$REM_CAP * 100 / $FULL_CAP" | bc`
-  CHARGEINT=`echo $(( $REM_CAP * 100 / $FULL_CAP ))`
+ if [ "${PERCENT//[!0-9]}" -gt "10" ]
+ then
+    COLOUR="<fc=#FFA500>"
+ fi
 
-  COLOUR="<fc=#FF0000>"
+ if [ "${PERCENT//[!0-9]}" -gt "60" ]
+ then
+    COLOUR="<fc=#00FF00>"
+ fi
 
-  case "${BATSTATE}" in
-     'charged')
-     BATSTT="=="
-     ;;
-     'charging')
-     BATSTT="++"
-     ;;
-     'discharging')
-     BATSTT="--"
-     ;;
-  esac
-
-  if [ "$CHARGEINT" -gt "10" ]
-  then
-     COLOUR="<fc=#FFA500>"
-  fi
-
-  if [ "$CHARGEINT" -gt "60" ]
-  then
-     COLOUR="<fc=#00FF00>"
-  fi
-
-  echo -e "Batt: ${COLOUR}${CHARGE}% ${BATSTT}</fc>"
+ echo -e "batt: ${COLOUR}${PERCENT%%,}</fc>"
