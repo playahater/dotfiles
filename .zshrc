@@ -1,7 +1,7 @@
 # History stuff
 HISTFILE=~/.zsh_history
-HISTSIZE=5000000
-SAVEHIST=5000000
+HISTSIZE=5000000000
+SAVEHIST=5000000000
 eval `dircolors -b`
 
 # Variables
@@ -145,6 +145,7 @@ alias rtvpink="mplayer mms://beotelmedia.beotel.net/rtvpink"
 alias twit.tv='mplayer http://bglive-a.bitgravity.com/twit/live/high'
 alias webcam="mplayer -fps 24 tv://"
 #alias webcam="mplayer tv:// -tv driver=v4l:width=352:height=288:device=/dev/video0 "
+
 alias begraund='feh --bg-scale'
 alias gb='git branch'
 alias gba='git branch -a'
