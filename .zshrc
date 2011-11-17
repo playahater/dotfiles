@@ -177,7 +177,7 @@ alias linode='ssh root@178.79.129.19 -p 49752'
 
 alias vpnserver='VBoxManage startvm --type headless sept'
 
-alias tvfeed="curl 'http://api.dailytvtorrents.org/1.0/shows.getTextInfo?show_names=dexter,the-big-bang-theory,breaking-bad,eureka,merlin,the-mentalist,weeds,warehouse-13,house,fringe,burn-notice,top-gear,castle,game-of-thrones&colors=yes&links=yes'"
+alias tvfeed="curl 'http://api.dailytvtorrents.org/1.0/shows.getTextInfo?show_names=grimm,dexter,the-big-bang-theory,breaking-bad,eureka,merlin,the-mentalist,weeds,warehouse-13,house,fringe,burn-notice,top-gear,castle,game-of-thrones&colors=yes&links=yes'"
 
 
 # custom completion commands
