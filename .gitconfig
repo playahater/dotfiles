@@ -1,9 +1,6 @@
 [user]
 	name = playahater
 	email = mishkez@gmail.com
-[github]
-	user = playahater
-	token = 8c352ef8d7459bb990bdcb577c82e332
 [color]
   pager = true
   ui = true
