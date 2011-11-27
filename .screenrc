@@ -2,21 +2,21 @@ escape ``
 setenv LC_CTYPE en_US.UTF-8
 defutf8 on
 setenv DISPLAY ':0'
-attrcolor b ".I"
+#attrcolor b ".I"
 term screen-256color-bce
-defscrollback 10000
+defscrollback 100000
 select 0
 altscreen on
 nethack on
 nonblock on
 defnonblock 1
 startup_message off
-vbell off
+vbell on
 autodetach on
 deflogin on
 defflow off
 msgwait 1
-acladd playahater
+acladd play
 hardstatus alwayslastline
 sorendition +b kG
 hardstatus string '%{= kG}[ %=%{W}%?%-Lw%?%{g}(%{W}%n*%f %t%?(%u)%?%{g})%{W}%?%+Lw%?%?%= %{g}][%{B} %{W}%l %{g}]'

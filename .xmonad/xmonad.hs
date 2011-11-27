@@ -85,9 +85,6 @@ myStartupHook = do
                 setWMName "LG3D"
                 spawn "xmodmap ~/.Xmodmap"
                 spawn "xsetroot -cursor_name left_ptr"
-                spawn "xset -dpms"
-                spawn "setterm -blank 0 -powersave off -powerdown 0"
-                spawn "xset s off"
                 spawn "xset r rate 180 90"
                 spawn "xrdb -load ~/.Xdefaults"
 
@@ -251,7 +248,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     -- mod-shift-[1..9] %! Move client to workspace N
     [((m .|. modMask, k), windows $ f i)
         | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_9]
-        , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]]
+        , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
     ++
     -- mod-[w,e] %! switch to twinview screen 1/2
     -- mod-shift-[w,e] %! move window to screen 1/2

@@ -24,12 +24,6 @@ set nowritebackup       "
 set winaltkeys=yes
 syntax on           " Turn on syntax highlighting
 
-"colorscheme zenburn
-"let g:zenburn_high_Contrast = 1
-"let g:zenburn_alternate_Visual = 1
-"let g:zenburn_alternate_Error = 1
-"let g:zenburn_force_dark_Background = 1
-
 colorscheme railscasts
 set wildmenu
 "set background=dark

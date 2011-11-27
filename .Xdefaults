@@ -23,6 +23,9 @@ URxvt.cursorColor:White
 URxvt.background:Black
 URxvt.perl-lib:         /usr/lib/urxvt/perl
 URxvt.perl-ext-common:  searchable-scrollback
+URxvt.colorIT:      #87af5f
+URxvt.colorBD:      #d7d7d7
+URxvt.colorUL:      #87afd7
 
 URxvt.font:       xft:Liberation Mono:pixelsize=14:antialias=true:autohint=true
 URxvt.boldFont:   xft:Liberation Mono:pixelsize=14:antialias=true:autohint=true

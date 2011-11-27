@@ -7,7 +7,7 @@ Config { font = "xft:ProFont:size=10:antialias=true:hinting=true"
                     , Run MultiCpu ["-L","0","-H","70","--normal","green","--high","red"] 10
                     , Run CpuFreq ["-t", "@<cpu0>", "-L", "0", "-H", "2","-l", "green", "-n","orange", "-h", "red"] 50
                     , Run Memory ["-t","Mem: <usedratio>% <fc=#008518>/</fc> <used> MB", "-L","4000","-H","7300", "-l", "green", "--normal","orange","--high","red"] 50
-                    , Run Network "wlan0" ["-L","0","-H","490","-l", "green", "--normal","orange","--high","red"] 5
+                    , Run Network "wlan0" ["-L","0","-H","480","-l", "green", "--normal","orange","--high","red"] 5
                     , Run Wireless "wlan0" [] 10
                     , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
                     , Run TopProc ["-l", "green", "--normal","orange","--high","red"] 10

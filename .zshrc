@@ -144,6 +144,7 @@ alias hrt="mplayer rtsp://195.29.5.148/encoder/htv1.rm"
 alias rtvpink="mplayer mms://beotelmedia.beotel.net/rtvpink"
 alias twit.tv='mplayer http://bglive-a.bitgravity.com/twit/live/high'
 alias webcam="mplayer -fps 24 tv://"
+alias sopcast="mplayer http://127.0.0.1:8908/tv.asf"
 #alias webcam="mplayer tv:// -tv driver=v4l:width=352:height=288:device=/dev/video0 "
 
 alias begraund='feh --bg-scale'
