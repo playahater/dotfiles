@@ -152,13 +152,15 @@ alias webcam="mplayer -fps 24 tv://"
 alias sopcast="mplayer http://127.0.0.1:8908/tv.asf"
 #alias webcam="mplayer tv:// -tv driver=v4l:width=352:height=288:device=/dev/video0 "
 
-alias begraund='feh --bg-scale'
+
+
 alias gb='git branch'
 alias gba='git branch -a'
-alias gc='git commit -v'
+alias gc='git commit -v -a -m'
 alias gl='git pull --rebase'
 alias gp='git push'
 alias gst='git status'
+alias gsh='git show'
 alias gpld='git pull origin develop'
 alias gpsd='git push origin develop'
 alias gplm='git pull origin master'
@@ -166,6 +168,10 @@ alias gpsm='git push origin master'
 alias gpull='git pull origin'
 alias gpush='git push origin'
 alias git_diff='git diff --stat --color'
+
+
+
+alias begraund='feh --bg-scale'
 alias firefox='firefox -no-remote -no-remote -ProfileManager'
 alias devping='ping 192.168.0.240'
 #alias netbeans='netbeans --laf GTK'

@@ -1,0 +1,10 @@
+!data "hello world!"
+.*w.*
+Cats
+.*w.*
+!data "The lazy dog\nsleeps in the yard."
+[a-z]\.
+!data "The lazy dog\nsleeps in the yard."
+[a-z]\.
+[]
+[a-b]

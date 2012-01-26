@@ -24,7 +24,7 @@ hardstatus string '%{= kG}[ %=%{W}%?%-Lw%?%{g}(%{W}%n*%f %t%?(%u)%?%{g})%{W}%?%+
 screen    -t root                  0
 screen    -t alpha                  1
 
-#screen    -t titja              2 ssh agena1@192.168.0.118
-#screen    -t jeca               3 ssh agena3@192.168.0.143
-#screen    -t miroljub           4 ssh agena2@192.168.0.131
-#screen    -t vuchinitj           5 ssh agena5@192.168.0.120
+screen    -t kaca              2 ssh agena7@192.168.0.114
+screen    -t jeca               3 ssh agena3@192.168.0.143
+screen    -t miroljub           4 ssh agena2@192.168.0.131
+screen    -t vuchinitj           5 ssh agena5@192.168.0.120
