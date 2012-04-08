@@ -9,7 +9,7 @@ channels=2
 softvol="yes"
 framedrop="no"
 lavdopts=threads=4
-vf-add=expand=::::1:16/9:16
+#vf-add=expand=::::1:16/9:16
 nofontconfig = 1
 subfont-encoding=unicode
 subcp = cp1250

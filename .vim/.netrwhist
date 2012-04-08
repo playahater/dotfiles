@@ -1,9 +1,9 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/srv/http/m3com/sites/all/modules/custom/m3com_maazoun'
-let g:netrw_dirhist_2='/srv/http/m3com/sites/all/modules/panels_cache'
-let g:netrw_dirhist_3='/srv/http/m3com/sites/all/themes/m3com'
-let g:netrw_dirhist_4='/srv/http/m3com/sites/all/themes/m3com/page'
-let g:netrw_dirhist_5='/home/play/Downloads'
-let g:netrw_dirhist_6='/bin'
-let g:netrw_dirhist_7='/srv/http/m3com/sites/all/modules/memcache'
+let g:netrw_dirhist_1='/srv/http/m3com/sites/all/modules/password_reset'
+let g:netrw_dirhist_2='/srv/http/m3com/sites/all/modules/views/theme'
+let g:netrw_dirhist_3='/srv/http/m3com/sites/all/modules/custom/m3com_feeds_newsml'
+let g:netrw_dirhist_4='/srv/http/m3com/sites/all/modules/ctools/views_content'
+let g:netrw_dirhist_5='/srv/http/m3com/sites/all/modules/authcache'
+let g:netrw_dirhist_6='/srv/http/m3com/sites/all/modules/custom/m3com_arsel'
+let g:netrw_dirhist_7='/srv/http/m3com/sites/all/modules/nodewords/nodewords_ui'

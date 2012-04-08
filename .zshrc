@@ -130,7 +130,7 @@ alias ping='ping -c 3'
 alias rm="rm -v"
 alias mv="mv -v"
 alias top='htop'
-alias mc='mc -d -t'
+alias mc='mc -d'
 alias ps='ps faux'
 alias du='du -sh'
 alias free='free -m'
@@ -167,7 +167,7 @@ alias gplm='git pull origin master'
 alias gpsm='git push origin master'
 alias gpull='git pull origin'
 alias gpush='git push origin'
-alias git_diff='git diff --stat --color'
+alias gf='git diff --stat --color'
 
 
 
@@ -183,9 +183,6 @@ alias drushcc='/usr/bin/php -d memory_limit=512M /home/play/stuff/drupal/drush/d
 alias drush='/usr/bin/php -d memory_limit=512M /home/play/stuff/drupal/drush/drush.php --php="/usr/bin/php -d memory_limit=512M"'
 alias git-diff-branch='git diff --stat --color master..staging'
 #alias firedatabases="for database in ~/.mozilla/firefox/*/*.sqlite; do echo processing $database... ; sqlite3 $database 'VACUUM;'; done ;"
-alias ssh240='ssh root@192.168.0.240 -p 40'
-alias ssh242='ssh root@192.168.0.242 -p 40'
-alias ssh246='ssh root@192.168.0.246'
 alias linode='ssh root@178.79.129.19 -p 49752'
 
 alias dozeboot='VBoxManage startvm sept'
@@ -195,9 +192,9 @@ alias tvfeed="curl 'http://api.dailytvtorrents.org/1.0/shows.getTextInfo?show_na
 
 # custom completion commands
  
-local _myhosts
-_myhosts=( ${${${${(f)"$(<$HOME/.ssh/known_hosts)"}:#[0-9]*}%%\ *}%%,*} )
-zstyle ':completion:*' hosts $_myhosts
+#local _myhosts
+#_myhosts=( ${${${${(f)"$(<$HOME/.ssh/known_hosts)"}:#[0-9]*}%%\ *}%%,*} )
+#zstyle ':completion:*' hosts $_myhosts
 
 rmmodcomplete () { reply=(`/sbin/lsmod|cut -f1 -d" "|grep -v Module`) }
 compctl -K rmmodcomplete rmmod

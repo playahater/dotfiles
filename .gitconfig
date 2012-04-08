@@ -32,12 +32,11 @@
   autocrlf = input
   pager = less -RSFX
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
-  mergeoptions = --no-ff
 [rerere]
   enabled = true
   autoupdate = true
 [alias]
-  lg = log --graph --pretty=format:'%Cred%h%Creset :: %ar :: %C(yellow)%s%Creset :: %Cgreen%an%Creset'
+  lg = log --stat --graph --pretty=format:'%Cred%h%Creset :: %ar :: %C(yellow)%s%Creset :: %Cgreen%an%Creset'
   st = status
   ci = commit
   br = branch

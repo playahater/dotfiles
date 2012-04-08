@@ -175,4 +175,8 @@ if has("autocmd")
   augroup END
 endif
 
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
 au BufRead,BufNewFile *.js set ft=javascript.jquery

@@ -3,15 +3,16 @@ setenv LC_CTYPE en_US.UTF-8
 defutf8 on
 setenv DISPLAY ':0'
 #attrcolor b ".I"
-term screen-256color-bce
-defscrollback 100000
+#term screen-256color-bce
+term xterm-256color
+defscrollback 100
 select 0
 altscreen on
 nethack on
 nonblock on
 defnonblock 1
 startup_message off
-vbell on
+vbell off
 autodetach on
 deflogin on
 defflow off
@@ -24,7 +25,6 @@ hardstatus string '%{= kG}[ %=%{W}%?%-Lw%?%{g}(%{W}%n*%f %t%?(%u)%?%{g})%{W}%?%+
 screen    -t root                  0
 screen    -t alpha                  1
 
-screen    -t kaca              2 ssh agena7@192.168.0.114
-screen    -t jeca               3 ssh agena3@192.168.0.143
-screen    -t miroljub           4 ssh agena2@192.168.0.131
-screen    -t vuchinitj           5 ssh agena5@192.168.0.120
+#screen 2 ssh agena7@192.168.0.114
+#screen 3 ssh agena3@192.168.0.143
+#screen 4 ssh diwanee13@192.168.0.170
