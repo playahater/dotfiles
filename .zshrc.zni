@@ -2,7 +2,7 @@
 
 zstyle ':completion:*' completer _expand _complete _correct _approximate
 zstyle ':completion:*' list-colors ''
-zstyle :compinstall filename '/home/playahater/.zshrc'
+zstyle :compinstall filename '/home/play/.zshrc'
 
 autoload -Uz compinit
 compinit

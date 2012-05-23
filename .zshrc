@@ -124,7 +124,7 @@ zstyle ':completion:*' cache-path ~/.zsh_cache
 alias ls='ls -lha --color=always'
 alias sl='ls -lha --color=always'
 alias ll='ls -lha --color=always'
-alias grep='grep -rni --color=always'
+alias grep='grep --color=always'
 alias df='df -hT'
 alias ping='ping -c 3'
 alias rm="rm -v"

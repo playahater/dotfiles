@@ -17,16 +17,19 @@ set showmode            " Show current mode down the bottom
 set clipboard+=unnamed  " Yanks go on clipboard instead
 set ruler               " Ruler on
 set number      " Display line numbers
-set timeoutlen=250      " Time to wait after ESC (default causes an annoying delay)
+set timeoutlen=50      " Time to wait after ESC (default causes an annoying delay)
 set nobackup            " 
 set hlsearch    " Highlight search strings
 set nowritebackup       " 
 set winaltkeys=yes
-syntax on           " Turn on syntax highlighting
+"syntax on           " Turn on syntax highlighting
+syntax enable
 
 colorscheme railscasts
+"set background=light
+"colorscheme solarized
+
 set wildmenu
-"set background=dark
 set numberwidth=5
 set scrolloff=10
 set statusline=%<%F%h%m%r%h%w\ %y\ %{&ff}\ %{strftime(\"%c\",getftime(expand(\"%:p\")))}%=\ %{fugitive#statusline()}\ lin:%l\,%L\ col:%c%V\ pos:%o\ ascii:%b\ %P
@@ -50,33 +53,37 @@ set formatoptions=rq
 " map <leader>pb :r!xsel -b<CR>
 "
 vmap <C-c> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
-nmap <C-v> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
+"nmap <C-v> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tabs and Buffers
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "map <D-S-]> gt
 "map <D-S-[> gT
-map <D-1> 1gt
-map <D-2> 2gt
-map <D-3> 3gt
-map <D-4> 4gt
-map <D-5> 5gt
-map <D-6> 6gt
-map <D-7> 7gt
-map <D-8> 8gt
-map <D-9> 9gt
-map <D-0> :tablast<CR>
+"map <D-1> 1gt
+"map <D-2> 2gt
+"map <D-3> 3gt
+"map <D-4> 4gt
+"map <D-5> 5gt
+"map <D-6> 6gt
+"map <D-7> 7gt
+"map <D-8> 8gt
+"map <D-9> 9gt
+"map <D-0> :tablast<CR>
 
 nnoremap <silent><C-n> :tabnext<CR>
 nnoremap <silent><C-p> :tabprevious<CR>
-nnoremap <silent><C-t> :tabnew<CR>
-noremap <C-j> :bprev<CR>
-noremap <C-k> :bnext<CR>
+"nnoremap <silent><C-t> :tabnew<CR>
+"noremap <C-j> :bprev<CR>
+"noremap <C-k> :bnext<CR>
 
 let g:buftabs_only_basename=1
 let g:buftabs_in_statusline=1
 
+
+map <F3> :TlistToggle<CR>
+map <F5> :SyntasticCheck<CR>
+map <F4> :SyntasticToggleMode<CR>
 map <F10> :set paste<CR>
 map <F9>  :set wrap!<Bar>set wrap?<CR>
 
@@ -103,7 +110,7 @@ set backspace=indent,eol,start                  " Allow backspacing over everyth
 set smarttab                                    " Insert indents at the beginning os a line
 set cinwords=if,else,while,do,for,switch,case   " Define keywords that cause an extra indent
 set lbr
-"set nowrap
+set nowrap
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Encoding

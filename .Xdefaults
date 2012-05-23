@@ -14,7 +14,7 @@ URxvt.scrollBar:         false
 URxvt.internalBorder:        0
 URxvt.borderWidth:           0
 URxvt.secondaryScroll:    true
-URxvt.saveLines:          10240
+URxvt.saveLines:          1024
 URxvt.cursorBlink:        false
 URxvt.buffered:         true
 URxvt.urgentOnBell: true
@@ -22,7 +22,9 @@ URxvt.foreground:White
 URxvt.cursorColor:White
 URxvt.background:Black
 URxvt.perl-lib:         /usr/lib/urxvt/perl
-URxvt.perl-ext-common:  searchable-scrollback
+URxvt.perl-ext-common:  searchable-scrollback,default,matcher,clipboard
+URxvt.matcher.button:       1
+URxvt.urlLauncher:      firefox -new-tab
 URxvt.colorIT:      #87af5f
 URxvt.colorBD:      #d7d7d7
 URxvt.colorUL:      #87afd7
