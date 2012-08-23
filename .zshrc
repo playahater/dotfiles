@@ -151,12 +151,14 @@ alias twit.tv='mplayer http://bglive-a.bitgravity.com/twit/live/high'
 alias webcam="mplayer -fps 24 tv://"
 alias sopcast="mplayer http://127.0.0.1:8908/tv.asf"
 #alias webcam="mplayer tv:// -tv driver=v4l:width=352:height=288:device=/dev/video0 "
-
+alias fabric="fab -f /srv/http/m3com/scripts/python/deploy/fabfile.py"
 
 
 alias gb='git branch'
+alias gc='git commit -a -m'
 alias gba='git branch -a'
-alias gc='git commit -v -a -m'
+alias gcv='git commit -v'
+alias gcm='git commit -m'
 alias gl='git pull --rebase'
 alias gp='git push'
 alias gst='git status'
@@ -187,7 +189,7 @@ alias linode='ssh root@178.79.129.19 -p 49752'
 
 alias dozeboot='VBoxManage startvm sept'
 
-alias tvfeed="curl 'http://api.dailytvtorrents.org/1.0/shows.getTextInfo?show_names=grimm,dexter,the-big-bang-theory,breaking-bad,eureka,merlin,the-mentalist,weeds,warehouse-13,house,fringe,burn-notice,top-gear,castle,game-of-thrones&colors=yes&links=yes'"
+alias tvfeed="curl 'http://api.dailytvtorrents.org/1.0/shows.getTextInfo?show_names=suits,grimm,dexter,the-big-bang-theory,breaking-bad,eureka,merlin,the-mentalist,weeds,warehouse-13,house,fringe,burn-notice,top-gear,castle,game-of-thrones&colors=yes&links=yes'"
 
 
 # custom completion commands
@@ -238,3 +240,4 @@ zle -N rationalise-dot
 preexec_functions+='preexec_update_git_vars'
 precmd_functions+='precmd_update_git_vars'
 chpwd_functions+='chpwd_update_git_vars'
+unset MAILCHECK

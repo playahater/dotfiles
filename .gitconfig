@@ -25,7 +25,7 @@
   changed = green
   untracked = cyan
 [branch]
-  autosetupmerge = always
+  #autosetupmerge = always
   #autosetuprebase = always
 [apply]
   whitespace = fix
@@ -45,5 +45,5 @@
   df = diff
   ls = ls-files
   adddatetag = 'tag date `"+%Y%m%d%H%M"`'
-#[merge]
-	#tool = vimdiff
+[merge]
+	tool = vimdiff

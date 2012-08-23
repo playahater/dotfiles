@@ -22,58 +22,47 @@ set nobackup            "
 set hlsearch    " Highlight search strings
 set nowritebackup       " 
 set winaltkeys=yes
-"syntax on           " Turn on syntax highlighting
+set modeline
+set shortmess+=filmnrxoOtT
+set viewoptions=folds,options,cursor,unix,slash " better unix / windows compatibility
+set history=1000
+set gdefault
 syntax enable
 
+"buffer check
+set hidden
+
 colorscheme railscasts
-"set background=light
+set background=dark
 "colorscheme solarized
 
 set wildmenu
 set numberwidth=5
 set scrolloff=10
-set statusline=%<%F%h%m%r%h%w\ %y\ %{&ff}\ %{strftime(\"%c\",getftime(expand(\"%:p\")))}%=\ %{fugitive#statusline()}\ lin:%l\,%L\ col:%c%V\ pos:%o\ ascii:%b\ %P
+"set statusline=%<%F%h%m%r%h%w\ %y\ %{&ff}\ %{strftime(\"%c\",getftime(expand(\"%:p\")))}%=\ %{fugitive#statusline()}\ lin:%l\,%L\ col:%c%V\ pos:%o\ ascii:%b\ %P
+set statusline=%<%F%h%m%r%h%w%=\ %{fugitive#statusline()}\ lin:%l\,%L\ col:%c%V\ %P
 set expandtab
 set formatoptions=rq
 "set t_Co=256 
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Stupid shift key fixes
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+cmap W w                       
+cmap WQ wq
+cmap wQ wq
+cmap Q q
+cmap Tabe tabe
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Copy to X CLIPBOARD
+" CLIPBOARD
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" map <leader>cc :w !xsel -i -b<CR>
-" map <leader>cp :w !xsel -i -p<CR>
-" map <leader>cs :w !xsel -i -s<CR>
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Paste from X CLIPBOARD
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" map <leader>pp :r!xsel -p<CR>
-" map <leader>ps :r!xsel -s<CR>
-" map <leader>pb :r!xsel -b<CR>
-"
-vmap <C-c> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
+"vmap <C-c> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
 "nmap <C-v> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Tabs and Buffers
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"map <D-S-]> gt
-"map <D-S-[> gT
-"map <D-1> 1gt
-"map <D-2> 2gt
-"map <D-3> 3gt
-"map <D-4> 4gt
-"map <D-5> 5gt
-"map <D-6> 6gt
-"map <D-7> 7gt
-"map <D-8> 8gt
-"map <D-9> 9gt
-"map <D-0> :tablast<CR>
 
 nnoremap <silent><C-n> :tabnext<CR>
 nnoremap <silent><C-p> :tabprevious<CR>
-"nnoremap <silent><C-t> :tabnew<CR>
 "noremap <C-j> :bprev<CR>
 "noremap <C-k> :bnext<CR>
 
@@ -96,7 +85,7 @@ set novisualbell    " No blinking .
 set noerrorbells    " No noise.
 set vb t_vb="."
 set laststatus=2    " Always show status line.
-set tabpagemax=20   " 
+set tabpagemax=50   " 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Indentation
@@ -154,7 +143,6 @@ set nofoldenable        " dont fold by default
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
   map <F7> :execute 'NERDTreeToggle ' . getcwd()<CR>
-  "nmap <F7> :NERDTreeToggle<CR>
   let NERDChristmasTree = 1
   let NERDTreeCaseSensitiveSort = 1
   let NERDTreeIgnore = ['\~$','\.[ao]$','\.swp$','\.DS_Store','\.pyc','\.pyo','\vendor','\coverage']
@@ -182,8 +170,10 @@ if has("autocmd")
   augroup END
 endif
 
-if has("autocmd")
-  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-endif
+"if has("autocmd")
+"  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+"  autocmd FileType c,cpp,java,php,module,tpl.php,js,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
+"endif
 
+au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
 au BufRead,BufNewFile *.js set ft=javascript.jquery
