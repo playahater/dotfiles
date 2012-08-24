@@ -4,6 +4,8 @@ defutf8 on
 setenv DISPLAY ':0'
 #attrcolor b ".I"
 #term screen-256color-bce
+defmonitor on
+shell zsh
 term xterm-256color
 defscrollback 100
 select 0
@@ -21,6 +23,7 @@ acladd play
 hardstatus alwayslastline
 sorendition +b kG
 hardstatus string '%{= kG}[ %=%{W}%?%-Lw%?%{g}(%{W}%n*%f %t%?(%u)%?%{g})%{W}%?%+Lw%?%?%= %{g}][%{B} %{W}%l %{g}]'
+#hardstatus alwayslastline "%{=b}%{G} : %{b}%w %=%{kG}%C%A"
 
 screen    -t root                  0
 screen    -t alpha                  1
