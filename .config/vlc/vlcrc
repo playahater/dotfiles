@@ -1,5 +1,5 @@
 ﻿###
-###  vlc 2.0.1
+###  vlc 2.0.3
 ###
 
 ###
@@ -563,7 +563,7 @@
 #soundfont=
 
 # Synthesis gain (float)
-#synth-gain=0.800000
+#synth-gain=0.500000
 
 [dvbsub] # DVB subtitles decoder
 
@@ -1593,19 +1593,19 @@ freetype-font=Liberation Serif [unknown]
 [spatializer] # Audio Spatializer
 
 # Room size (float)
-#spatializer-roomsize=1.050000
+#spatializer-roomsize=0.850000
 
 # Room width (float)
-#spatializer-width=10.000000
+#spatializer-width=1.000000
 
 # Wet (float)
-#spatializer-wet=3.000000
+#spatializer-wet=0.400000
 
 # Dry (float)
-#spatializer-dry=2.000000
+#spatializer-dry=0.500000
 
 # Damp (float)
-#spatializer-damp=1.000000
+#spatializer-damp=0.500000
 
 [speex_resampler] # Speex resampler
 
@@ -3626,7 +3626,7 @@ rmtosd-update=300
 #sub-autodetect-fuzzy=3
 
 # Subtitle autodetection paths (string)
-#sub-autodetect-path=./Subtitles, ./subtitles
+#sub-autodetect-path=./Subtitles, ./subtitles, ./Subs, ./subs
 
 # Force subtitle position (integer)
 #sub-margin=0

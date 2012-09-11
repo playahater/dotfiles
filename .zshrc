@@ -149,6 +149,7 @@ alias mount='mount -vv'
 alias gping='ping google.com'
 alias myip="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
 alias screencast="ffmpeg -f x11grab -r 25 -s 1280x800 -i :0.0 /tmp/screencast.mpg"
+alias graball="ffmpeg -y -f alsa -ac 2 -i hw:0,0 -f x11grab -r 30 -s `xdpyinfo | grep 'dimensions:'|awk '{print $2}'` -i :0.0 -acodec pcm_s16le /tmp/output.wav -an -acodec pcm_s16le -vcodec libx264 -preset ultrafast -crf 0 -threads 0 /tmp/output.mp4"
 alias sshradioswap='ssh playahater@radioswap.net -p 2222'
 alias rts1="mplayer mms://rts.videostreaming.rs/rts"
 alias rts2="mplayer rtsp://helix.beotel.net/encoder/rts2.rm"
@@ -198,6 +199,8 @@ alias linode='ssh root@178.79.129.19 -p 49752'
 alias dozeboot='VBoxManage startvm sept'
 
 alias tvfeed="curl 'http://api.dailytvtorrents.org/1.0/shows.getTextInfo?show_names=suits,grimm,dexter,the-big-bang-theory,breaking-bad,eureka,merlin,the-mentalist,weeds,warehouse-13,house,fringe,burn-notice,top-gear,castle,game-of-thrones&colors=yes&links=yes'"
+
+alias clear="echo NO!"
 
 
 # custom completion commands

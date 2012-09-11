@@ -4,7 +4,7 @@ defutf8 on
 setenv DISPLAY ':0'
 #attrcolor b ".I"
 #term screen-256color-bce
-defmonitor on
+#defmonitor on
 shell zsh
 term xterm-256color
 defscrollback 100
