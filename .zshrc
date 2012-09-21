@@ -41,9 +41,9 @@ typeset -ga preexec_functions
 typeset -ga precmd_functions
 typeset -ga chpwd_functions
 
-autoload -Uz compinit promptinit colors 
+autoload -Uz compinit promptinit colors
 compinit
-promptinit 
+promptinit
 colors
 
 # Autoload zsh functions.
@@ -65,15 +65,15 @@ bindkey '^[[6~' down-line-or-history
 bindkey '^[[A' up-line-or-search
 bindkey '^[[D' backward-char
 bindkey '^[[B' down-line-or-search
-bindkey '^[[C' forward-char 
+bindkey '^[[C' forward-char
 # home/end for rxvt
 bindkey "\e[8~" end-of-line
 bindkey "\e[7~" beginning-of-line
-bindkey "^D" clear-and-exit 
+bindkey "^D" clear-and-exit
 bindkey . rationalise-dot
 
 # Comp stuff
-zmodload zsh/complist 
+zmodload zsh/complist
 zstyle :compinstall filename '${HOME}/.zshrc'
 zstyle ':completion:*:functions' ignored-patterns '_*'
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
@@ -109,7 +109,7 @@ zstyle ':completion:*' cache-path ~/.zsh_cache
 # aliases
 alias less=$PAGER
 alias more=$PAGER
-alias zless=$PAGER 
+alias zless=$PAGER
 alias ls='ls -lha --color=always'
 alias sl='ls -lha --color=always'
 alias ll='ls -lha --color=always'
@@ -177,16 +177,16 @@ alias fmplayer="mplayer /proc/`pidof plugin-container`/fd/15"
 
 rmmodcomplete () { reply=(`/sbin/lsmod|cut -f1 -d" "|grep -v Module`) }
 compctl -K rmmodcomplete rmmod
- 
+
 function insmodcomplete() { reply=(`find /lib/modules/$(uname -r)/* ! -type d -printf "%f\n"|sed "s/\.o$//"`) }
 compctl -K insmodcomplete insmod modprobe
- 
+
 compile=(install clean remove uninstall deinstall)
 compctl -k compile make
- 
+
 compctl -k '(up commit checkout update status)' svn
 compctl -k ping telnet ncftp host nslookup irssi rlogin ftp
- 
+
 compctl -j -P '%' fg jobs disown
 compctl -g '*.(gz|z|Z|t[agp]z|tarZ|tz)' + -g '*(-/)' gunzip gzcat zcat
 compctl -g '*.(mp3|MP3|ogg|OGG|wav|WAV)' + -g '*(-/)' mpc mpg123 mpg321 xmms

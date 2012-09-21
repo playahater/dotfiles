@@ -29,6 +29,9 @@ set history=1000
 set gdefault
 syntax enable
 
+set list
+set listchars=tab:>.,trail:.,extends:#,nbsp:.
+
 "buffer check
 set hidden
 
@@ -48,7 +51,7 @@ set formatoptions=rq
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Stupid shift key fixes
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-cmap W w                       
+cmap W w
 cmap WQ wq
 cmap wQ wq
 cmap Q q
@@ -159,6 +162,14 @@ set incsearch   " Search as you type
 set ignorecase  " Ignore case when searching
 set smartcase   " 
 
+set ofu=syntaxcomplete#Complete
+
+" Trailing or broken whitespace.
+let c_space_errors=1
+highlight WhitespaceEOL ctermbg=red guibg=red
+match WhitespaceEOL /\s\+$/
+set backupcopy=auto,breakhardlink
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Miscellaneous
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -168,12 +179,15 @@ if has("autocmd")
     autocmd BufRead,BufNewFile *.module set filetype=php
     autocmd BufRead,BufNewFile *.install set filetype=php
   augroup END
+
+  autocmd FileType python set tabstop=8 expandtab shiftwidth=4 softtabstop=4 omnifunc=pythoncomplete#Complete
+  autocmd FileType javascript set softtabstop=2 shiftwidth=2 omnifunc=javascriptcomplete#CompleteJS
+  autocmd FileType html set softtabstop=3 shiftwidth=3 textwidth=0 omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType css set softtabstop=2 shiftwidth=2 textwidth=0 omnifunc=csscomplete#CompleteCSS
+  autocmd FileType c,cpp,java,php,module,tpl.php,js,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
+
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+  au BufRead,BufNewFile *.js set ft=javascript.jquery
+  au BufNewFile,BufRead *.wsgi set filetype=python
+
 endif
-
-"if has("autocmd")
-"  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-"  autocmd FileType c,cpp,java,php,module,tpl.php,js,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
-"endif
-
-au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
-au BufRead,BufNewFile *.js set ft=javascript.jquery
