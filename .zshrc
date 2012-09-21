@@ -153,6 +153,7 @@ alias gpull='git pull origin'
 alias gpush='git push origin'
 alias gf='git diff --stat --color'
 alias git-diff-branch='git diff --stat --color master..staging'
+alias git-deleted="git log --all --pretty=format: --name-only --diff-filter=D | sort -u"
 alias begraund='feh --bg-scale'
 alias firefox='firefox -no-remote -no-remote -ProfileManager'
 alias devping='ping 192.168.0.240'
@@ -167,6 +168,7 @@ alias drush='/usr/bin/php -d memory_limit=512M /home/play/stuff/drupal/drush/dru
 alias dozeboot='VBoxManage startvm sept'
 alias tvfeed="curl 'http://api.dailytvtorrents.org/1.0/shows.getTextInfo?show_names=suits,grimm,dexter,the-big-bang-theory,breaking-bad,eureka,merlin,the-mentalist,weeds,warehouse-13,house,fringe,burn-notice,top-gear,castle,game-of-thrones&colors=yes&links=yes'"
 alias clear="echo NO!"
+alias fmplayer="mplayer /proc/`pidof plugin-container`/fd/15"
 
 # custom completion commands
 #local _myhosts
