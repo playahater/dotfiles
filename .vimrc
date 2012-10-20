@@ -16,10 +16,10 @@ set showcmd             " Show incomplete cmds down the bottom
 set showmode            " Show current mode down the bottom
 set clipboard+=unnamed  " Yanks go on clipboard instead
 set ruler               " Ruler on
-set number      " Display line numbers
-set timeoutlen=50      " Time to wait after ESC (default causes an annoying delay)
+set number              " Display line numbers
+set timeoutlen=10       " Time to wait after ESC (default causes an annoying delay)
 set nobackup            " 
-set hlsearch    " Highlight search strings
+set hlsearch            " Highlight search strings
 set nowritebackup       " 
 set winaltkeys=yes
 set modeline
@@ -29,8 +29,8 @@ set history=1000
 set gdefault
 syntax enable
 
-set list
-set listchars=tab:>.,trail:.,extends:#,nbsp:.
+"set list
+"set listchars=tab:>.,trail:.,extends:#,nbsp:.
 
 "buffer check
 set hidden
