@@ -14,12 +14,15 @@ Config { font = "xft:ProFont:size=10:antialias=true:hinting=true"
                     , Run TopProc ["-l", "green", "--normal","orange","--high","red"] 10
                     , Run TopMem ["-l", "green", "--normal","orange","--high","red"] 10
                     , Run ThermalZone 0 ["-t","<temp> C", "-L","0","-H","70","--normal","green","--high","red"] 30
-                    , Run MPD ["-t","<artist> - <title> <statei> ","--", "-P", ">>", "-Z", "|", "-S", "><"]  10
+--                    , Run MPD ["-t","<artist> - <title> <statei> ","--", "-P", ">>", "-Z", "|", "-S", "><"]  10
                     , Run Volume "default" "Master" ["-t","vol: <volume>%"] 10
+                    , Run BatteryP ["BAT0"] ["-t", "<acstatus><watts> (<left>%)", "-L", "10", "-H", "80", "-p", "3", "--", "-O", "<fc=green>on</fc> - ", "-o", "", "-L", "-15", "-H", "-5", "-l", "red", "-m", "blue", "-h", "green"] 600
+                    , Run DiskU [("/home", "<used>/<size>")] ["-L", "20", "-H", "50", "-m", "1", "-p", "3"] 20
                     , Run StdinReader
-                    , Run Com "sh" ["/home/play/.xmonad/battery"] "BAT" 10
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{ <fc=#008518>||</fc> %LYBE% <fc=#008518>||</fc> %multicpu% %cpufreq% <fc=#008518>/</fc> %top% <fc=#008518>/</fc> %topmem% <fc=#008518>/</fc> %thermal0% <fc=#008518>||</fc> %memory% <fc=#008518>||</fc> %eth0% / %wlan0% - %wlan0wi% <fc=#008518>||</fc> %default:Master% <fc=#008518>||</fc> %mpd% <fc=#008518>||</fc> %BAT% <fc=#008518>||</fc><fc=green> %date%</fc>"
+--       , template = "%StdinReader% }{ <fc=#008518>||</fc> %LYBE% <fc=#008518>||</fc> %multicpu% %cpufreq% <fc=#008518>/</fc> %top% <fc=#008518>/</fc> %topmem% <fc=#008518>/</fc> %thermal0% <fc=#008518>||</fc> %memory% <fc=#008518>/</fc> %disku% <fc=#008518>||</fc> %eth0% / %wlan0% - %wlan0wi% <fc=#008518>||</fc> %default:Master% <fc=#008518>||</fc> %mpd% <fc=#008518>||</fc> %battery% <fc=#008518>||</fc><fc=green> %date%</fc>"
+       , template = "%StdinReader% }{ <fc=#008518>||</fc> %LYBE% <fc=#008518>||</fc> %multicpu% %cpufreq% <fc=#008518>/</fc> %top% <fc=#008518>/</fc> %topmem% <fc=#008518>/</fc> %thermal0% <fc=#008518>||</fc> %memory% <fc=#008518>/</fc> %disku% <fc=#008518>||</fc> %eth0% / %wlan0% - %wlan0wi% <fc=#008518>||</fc> %default:Master% <fc=#008518>||</fc> %battery% <fc=#008518>||</fc><fc=green> %date%</fc>"
+
        }

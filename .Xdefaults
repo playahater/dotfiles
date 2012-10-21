@@ -1,4 +1,3 @@
-
 Xft.antialias: true
 Xft.dpi:       96
 Xft.hinting:   true
@@ -12,9 +11,9 @@ URxvt.loginShell:        true
 URxvt.letterSpace:      -1
 URxvt.utmpInhibit:      true
 URxvt.scrollBar:         false
-URxvt.internalBorder:        2
+URxvt.internalBorder:        1
 URxvt.borderWidth:           0
-URxvt.secondaryScroll:    true
+URxvt.secondaryScroll:    false
 URxvt.saveLines:          4096
 URxvt.cursorBlink:        false
 URxvt.buffered:         true
@@ -23,10 +22,8 @@ URxvt.foreground:White
 URxvt.cursorColor: Gray
 URxvt.background:Black
 URxvt.perl-lib:         /usr/lib/urxvt/perl
-!URxvt.perl-ext-common:  searchable-scrollback,default,matcher,clipboard
+!URxvt.matcher.button:       1
 URxvt.perl-ext-common:  searchable-scrollback,default,clipboard
-URxvt.matcher.button:       1
-URxvt.urlLauncher:      firefox -new-tab
 URxvt.colorIT:      #87af5f
 URxvt.colorBD:      #d7d7d7
 URxvt.colorUL:      #87afd7
@@ -34,10 +31,7 @@ URxvt.colorUL:      #87afd7
 URxvt.font:       xft:Liberation Mono:pixelsize=14:antialias=true:autohint=true:dpi=96
 URxvt.boldFont:   xft:Liberation Mono:pixelsize=14:antialias=true:autohint=true:dpi=96
 
-!URxvt.font:     xft:ProFont:size=13
-!URxvt.boldFont: xft:ProFont:size=13
-
 URxvt*transparent:          true
-URxvt*shading:              70
+URxvt*shading:              15
 URxvt*tint:                 Black
 URxvt*inheritPixmap:        true
