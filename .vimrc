@@ -36,7 +36,7 @@ syntax enable
 set hidden
 
 colorscheme railscasts
-set background=dark
+"set background=dark
 "colorscheme solarized
 
 set wildmenu
