@@ -86,7 +86,7 @@ myStartupHook = do
                 spawn "xmodmap ~/.Xmodmap"
                 spawn "xsetroot -cursor_name left_ptr"
                 spawn "xset r rate 180 90"
-                spawn "xrdb -load ~/.Xdefaults"
+                spawn "xrdb -load ~/.Xresources"
 
                 --spawn "xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1"
                 --spawn "xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 2"
@@ -104,22 +104,22 @@ myLogHook h = dynamicLogWithPP $ customPP { ppOutput = hPutStrLn h }
 ---- bar
 customPP :: PP
 customPP = defaultPP { 
-                            ppHidden = xmobarColor "green" ""
-                          , ppCurrent = xmobarColor "orange" "" . wrap "[" "]"
-                          , ppUrgent = xmobarColor "green" "" . wrap "*" "*"
+                            ppHidden = xmobarColor "#82C16D" ""
+                          , ppCurrent = xmobarColor "#FFC17E" "" . wrap "[" "]"
+                          , ppUrgent = xmobarColor "#901010" "" . wrap "*" "*"
                           , ppLayout = \x -> ""
-                          , ppTitle = xmobarColor "green" "" . shorten 120
-                          , ppSep = "<fc=#008518> | </fc>"
+                          , ppTitle = xmobarColor "#82C16D" "" . shorten 120
+                          , ppSep = "<fc=#008518> || </fc>"
                      }
  
 -- some nice colors for the prompt windows
 myXPConfig = defaultXPConfig                                    
-    { font = "xft:ProFont:size=11"
-    , bgColor = "black"
-    , fgColor = "#008518"
-    , fgHLight = "#008518"
+    { font = "xft:Liberation Mono:size=9:antialias=true:hinting=true"
+    , bgColor = "#000000"
+    , fgColor = "#FFC17E"
+    , fgHLight = "#FFC17E"
     , bgHLight = "#000000"
-    , borderColor = "black"
+    , borderColor = "#000000"
     , promptBorderWidth = 1
     , position = Bottom
     , height = 14
@@ -130,16 +130,16 @@ myXPConfig = defaultXPConfig
 myTheme = defaultTheme { decoHeight = 14
     , activeColor = "#000000"
     , activeBorderColor = "#000000"
-    , activeTextColor = "#008518"
+    , activeTextColor = "#FFC17E"
     , inactiveColor = "#000000"
     , inactiveBorderColor = "#000000"
     , inactiveTextColor = "#EBEBEB"
     , urgentColor = "#000000"
-    , urgentTextColor = "#008518"
+    , urgentTextColor = "#FFC17E"
 }
  
 --LayoutHook
-myLayoutHook  = onWorkspace "1:chat" imLayout $ onWorkspace "2:webdev" webL $ onWorkspace "8:gimp" gimpL $ onWorkspace "7:wine" full $ standardLayouts 
+myLayoutHook  = onWorkspace "1:c" imLayout $ onWorkspace "2:w" webL $ onWorkspace "8:g" gimpL $ onWorkspace "7:w" full $ standardLayouts 
    where
 
         standardLayouts = avoidStruts $ (tiled ||| tabLayout ||| reflectTiled ||| Mirror tiled |||  Grid ||| Full)
@@ -183,7 +183,7 @@ myFocusedBorderColor = "#400000"
  
 --Workspaces
 myWorkspaces :: [WorkspaceId]
-myWorkspaces = ["1:chat", "2:webdev", "3:code", "4:web", "5:vbox" ,"6:misc", "7:wine", "8:gimp", "9:vlc"]
+myWorkspaces = ["1:c", "2:w", "3:c", "4:w", "5:v" ,"6:m", "7:w", "8:g", "9:v"]
 --
  
 -- keys

@@ -5,8 +5,9 @@ setenv DISPLAY ':0'
 #attrcolor b ".I"
 #term screen-256color-bce
 #defmonitor on
-shell zsh
 term xterm-256color
+#term rxvt
+shell zsh
 defscrollback 100
 select 0
 altscreen on

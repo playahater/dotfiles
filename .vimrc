@@ -46,7 +46,7 @@ set scrolloff=10
 set statusline=%<%F%h%m%r%h%w%=\ %{fugitive#statusline()}\ lin:%l\,%L\ col:%c%V\ %P
 set expandtab
 set formatoptions=rq
-"set t_Co=256 
+set t_Co=256 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Stupid shift key fixes
