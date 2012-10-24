@@ -1,13 +1,15 @@
 # Write your default config options here!
 [default]
 
-ontop="yes"
-vo=xv
-ao=alsa
+ontop=yes
+#vo=xv
+vo=gl2
+ao=alsa:device=default
 af=resample=44100:16:2=volnorm
 channels=2
-softvol="yes"
-framedrop="no"
+softvol=yes
+softvol-max=100
+framedrop=no
 lavdopts=threads=4
 #vf-add=expand=::::1:16/9:16
 nofontconfig = 1
