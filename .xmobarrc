@@ -1,27 +1,27 @@
-Config { font = "xft:Liberation Mono:size=9:antialias=true:hinting=true"
-       , bgColor = "black"
-       , fgColor = "#FFEBD3"
+Config { font = "xft:Liberation Mono:size=10:antialias=true:hinting=true"
+       , bgColor = "#151515"
+       , fgColor = "#D7D0C7"
        , position = Top
        , lowerOnStart = True
-       , commands = [ Run Weather "LYBE" ["-t","<tempC> C","-L","10","-H","28","--normal","#82C16D","--high","#901010","--low","lightblue"] 18000
-                    , Run MultiCpu ["-L","0","-H","70","--normal","#82C16D","--high","#901010"] 10
-                    , Run CpuFreq ["-t", "@<cpu0>", "-L", "0", "-H", "2","-l", "#82C16D", "-n","#FFC17E", "-h", "#901010"] 50
-                    , Run Memory ["-t","Mem: <usedratio>% <fc=#008518>/</fc> <used> MB", "-L","4000","-H","7300", "-l", "#82C16D", "--normal","#FFC17E","--high","#901010"] 50
-                    , Run Network "wlan0" ["-L","0","-H","480","-l", "#82C16D", "--normal","#FFC17E","--high","#901010"] 5
+       , commands = [ Run Weather "LYBE" ["-t","<tempC> C","-L","10","-H","28","--normal","#B8D68C","--high","#E84F4F","--low","#6D878D"] 18000
+                    , Run MultiCpu ["-L","0","-H","70","--normal","#B8D68C","--high","#E84F4F"] 10
+                    , Run CpuFreq ["-t", "@<cpu0>", "-L", "0", "-H", "2","-l", "#B8D68C", "-n","#E1AA5D", "-h", "#E84F4F"] 50
+                    , Run Memory ["-t","Mem: <usedratio>% <fc=#A0CF5D>/</fc> <used> MB", "-L","4000","-H","7300", "-l", "#B8D68C", "--normal","#E1AA5D","--high","#E84F4F"] 50
+                    , Run Network "wlan0" ["-L","0","-H","480","-l", "#B8D68C", "--normal","#E1AA5D","--high","#E84F4F"] 5
                     , Run Wireless "wlan0" [] 10
                     , Run Network "eth0" [] 10
                     , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
-                    , Run TopProc ["-l", "#82C16D", "--normal","#FFC17E","--high","#901010"] 10
-                    , Run TopMem ["-l", "#82C16D", "--normal","#FFC17E","--high","#901010"] 10
-                    , Run ThermalZone 0 ["-t","<temp> C", "-L","0","-H","70","--normal","#82C16D","--high","#901010"] 30
+                    , Run TopProc ["-l", "#B8D68C", "--normal","#E1AA5D","--high","#E84F4F"] 10
+                    , Run TopMem ["-l", "#B8D68C", "--normal","#E1AA5D","--high","#E84F4F"] 10
+                    , Run ThermalZone 0 ["-t","<temp> C", "-L","0","-H","70","--normal","#B8D68C","--high","#E84F4F"] 30
                     , Run MPD ["-t","<artist> - <title> <statei> ","--", "-P", ">>", "-Z", "|", "-S", "><"]  10
                     , Run Volume "default" "Master" ["-t","vol: <volume>%"] 10
-                    , Run BatteryP ["BAT0"] ["-t", "<acstatus><watts> (<left>%)", "-L", "10", "-H", "80", "-p", "3", "--", "-O", "<fc=#82C16D>on</fc> - ", "-o", "", "-L", "-15", "-H", "-5", "-l", "#901010", "-m", "blue", "-h", "green"] 600
+                    , Run BatteryP ["BAT0"] ["-t", "<acstatus><watts> (<left>%)", "-L", "10", "-H", "80", "-p", "3", "--", "-O", "<fc=#B8D68C>on</fc> - ", "-o", "", "-L", "-15", "-H", "-5", "-l", "#E84F4F", "-m", "blue", "-h", "green"] 600
                     , Run DiskU [("/home", "<used>/<size>")] ["-L", "20", "-H", "50", "-m", "1", "-p", "3"] 20
                     , Run StdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{ <fc=#008518>||</fc> %LYBE% <fc=#008518>||</fc> %multicpu% %cpufreq% <fc=#008518>/</fc> %top% <fc=#008518>/</fc> %topmem% <fc=#008518>/</fc> %thermal0% <fc=#008518>||</fc> %memory% <fc=#008518>/</fc> %disku% <fc=#008518>||</fc> %eth0% / %wlan0% - %wlan0wi% <fc=#008518>||</fc> %default:Master% <fc=#008518>||</fc> %mpd% <fc=#008518>||</fc> %battery% <fc=#008518>||</fc><fc=#82C16D> %date%</fc>"
+       , template = "%StdinReader% }{<fc=#A0CF5D>|</fc> %LYBE% <fc=#A0CF5D>|</fc> %multicpu% %cpufreq% <fc=#A0CF5D>/</fc> %top% <fc=#A0CF5D>/</fc> %topmem% <fc=#A0CF5D>/</fc> %thermal0% <fc=#A0CF5D>|</fc> %memory% <fc=#A0CF5D>/</fc> %disku% <fc=#A0CF5D>|</fc> %eth0% / %wlan0% - %wlan0wi% <fc=#A0CF5D>|</fc> %default:Master% <fc=#A0CF5D>|</fc> %mpd% <fc=#A0CF5D>|</fc> %battery% <fc=#A0CF5D>|</fc><fc=#B8D68C> %date%</fc>"
 
        }

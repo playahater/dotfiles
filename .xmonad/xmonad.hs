@@ -87,6 +87,7 @@ myStartupHook = do
                 spawn "xsetroot -cursor_name left_ptr"
                 spawn "xset r rate 180 90"
                 spawn "xrdb -load ~/.Xresources"
+                spawn "xsetroot -solid '#151515'"
 
                 --spawn "xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1"
                 --spawn "xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 2"
@@ -98,28 +99,28 @@ myStartupHook = do
 myLogHook :: Handle -> X ()
 myLogHook h = dynamicLogWithPP $ customPP { ppOutput = hPutStrLn h }
  
- 
+
  
 ---- Looks --
 ---- bar
 customPP :: PP
 customPP = defaultPP { 
-                            ppHidden = xmobarColor "#82C16D" ""
-                          , ppCurrent = xmobarColor "#FFC17E" "" . wrap "[" "]"
-                          , ppUrgent = xmobarColor "#901010" "" . wrap "*" "*"
+                            ppHidden = xmobarColor "#B8D68C" ""
+                          , ppCurrent = xmobarColor "#F39D21" "" . wrap "[" "]"
+                          , ppUrgent = xmobarColor "#E84F4F" "" . wrap "*" "*"
                           , ppLayout = \x -> ""
-                          , ppTitle = xmobarColor "#82C16D" "" . shorten 120
-                          , ppSep = "<fc=#008518> || </fc>"
+                          , ppTitle = xmobarColor "#B8D68C" "" . shorten 120
+                          , ppSep = "<fc=#A0CF5D> || </fc>"
                      }
  
 -- some nice colors for the prompt windows
 myXPConfig = defaultXPConfig                                    
-    { font = "xft:Liberation Mono:size=9:antialias=true:hinting=true"
-    , bgColor = "#000000"
-    , fgColor = "#FFC17E"
-    , fgHLight = "#FFC17E"
-    , bgHLight = "#000000"
-    , borderColor = "#000000"
+    { font = "xft:Liberation Mono:size=10:antialias=true:hinting=true"
+    , bgColor = "#151515"
+    , fgColor = "#D7D0C7"
+    , fgHLight = "#D7D0C7"
+    , bgHLight = "#151515"
+    , borderColor = "#151515"
     , promptBorderWidth = 1
     , position = Bottom
     , height = 14
@@ -128,14 +129,14 @@ myXPConfig = defaultXPConfig
  
 --- MyTheme For Tabbed layout
 myTheme = defaultTheme { decoHeight = 14
-    , activeColor = "#000000"
-    , activeBorderColor = "#000000"
-    , activeTextColor = "#FFC17E"
-    , inactiveColor = "#000000"
-    , inactiveBorderColor = "#000000"
-    , inactiveTextColor = "#EBEBEB"
-    , urgentColor = "#000000"
-    , urgentTextColor = "#FFC17E"
+    , activeColor = "#151515"
+    , activeBorderColor = "#151515"
+    , activeTextColor = "#D7D0C7"
+    , inactiveColor = "#151515"
+    , inactiveBorderColor = "#151515"
+    , inactiveTextColor = "#dddddd"
+    , urgentColor = "#E84F4F"
+    , urgentTextColor = "#D7D0C7"
 }
  
 --LayoutHook
