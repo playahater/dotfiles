@@ -1,4 +1,4 @@
-Config { font = "xft:Liberation Mono:size=10:antialias=true:hinting=true"
+Config { font = "xft:Liberation Mono:size=9:antialias=false:hinting=true"
        , bgColor = "#151515"
        , fgColor = "#D7D0C7"
        , position = Top
