@@ -2,8 +2,7 @@
 [default]
 
 ontop=yes
-#vo=xv
-vo=gl2
+vo=xv
 ao=alsa:device=default
 af=resample=44100:16:2=volnorm
 channels=2

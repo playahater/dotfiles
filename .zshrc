@@ -163,7 +163,8 @@ alias plantronics='bluez-simple-agent hci0 00:1C:EF:7E:A1:88'
 alias pmplayer='mplayer -ao alsa:device=btheadset'
 alias drushall='/usr/bin/php -d memory_limit=512M /home/play/stuff/drupal/drush/drush.php --php="/usr/bin/php -d memory_limit=512M" cc all'
 alias drushcc='/usr/bin/php -d memory_limit=512M /home/play/stuff/drupal/drush/drush.php --php="/usr/bin/php -d memory_limit=512M" cc'
-alias drush='/usr/bin/php -d memory_limit=512M /home/play/stuff/drupal/drush/drush.php --php="/usr/bin/php -d memory_limit=512M"'
+#alias drush='/usr/bin/php -d memory_limit=512M /home/play/stuff/drupal/drush/drush.php --php="/usr/bin/php -d memory_limit=512M"'
+alias drush='/usr/bin/php /home/play/stuff/drupal/drush/drush.php'
 #alias firedatabases="for database in ~/.mozilla/firefox/*/*.sqlite; do echo processing $database... ; sqlite3 $database 'VACUUM;'; done ;"
 alias dozeboot='VBoxManage startvm sept'
 alias tvfeed="curl 'http://api.dailytvtorrents.org/1.0/shows.getTextInfo?show_names=suits,grimm,dexter,the-big-bang-theory,breaking-bad,eureka,merlin,the-mentalist,weeds,warehouse-13,house,fringe,burn-notice,top-gear,castle,game-of-thrones&colors=yes&links=yes'"

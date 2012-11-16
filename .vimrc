@@ -27,6 +27,7 @@ set shortmess+=filmnrxoOtT
 set viewoptions=folds,options,cursor,unix,slash " better unix / windows compatibility
 set history=1000
 set gdefault
+set autoread
 syntax enable
 
 "set list
