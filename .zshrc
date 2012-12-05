@@ -145,12 +145,8 @@ alias gl='git pull --rebase'
 alias gp='git push'
 alias gst='git status'
 alias gsh='git show'
-alias gpld='git pull origin develop'
-alias gpsd='git push origin develop'
-alias gplm='git pull origin master'
-alias gpsm='git push origin master'
-alias gpull='git pull origin'
-alias gpush='git push origin'
+alias gpull='git pull origin $(current_branch)'
+alias gpush='git push origin $(current_branch)'
 alias gf='git diff --stat --color'
 alias git-diff-branch='git diff --stat --color master..staging'
 alias git-deleted="git log --all --pretty=format: --name-only --diff-filter=D | sort -u"
@@ -213,6 +209,10 @@ rationalise-dot() {
   fi
 }
 zle -N rationalise-dot
+
+current_branch() {
+  echo $__CURRENT_GIT_BRANCH
+}
 
 # Append git functions needed for prompt.
 preexec_functions+='preexec_update_git_vars'

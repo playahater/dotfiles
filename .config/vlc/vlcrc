@@ -1,5 +1,5 @@
 ﻿###
-###  vlc 2.0.3
+###  vlc 2.0.4
 ###
 
 ###
@@ -629,7 +629,7 @@
 #ffmpeg-hw=0
 
 # Threads (integer)
-#ffmpeg-threads=0
+#ffmpeg-threads=1
 
 # Codec name (string)
 #sout-ffmpeg-codec=
@@ -659,7 +659,7 @@
 #sout-ffmpeg-pre-me=0
 
 # Rate control buffer size (integer)
-#sout-ffmpeg-rc-buffer-size=1835008
+#sout-ffmpeg-rc-buffer-size=0
 
 # Rate control buffer aggressiveness (float)
 #sout-ffmpeg-rc-buffer-aggressivity=1.000000
@@ -1150,6 +1150,14 @@ freetype-font=Liberation Serif [unknown]
 # Continuous 22kHz tone (integer)
 #dvb-tone=-1
 
+[access_sftp] # SFTP input
+
+# Read size (integer)
+#sftp-readsize=8192
+
+# SFTP port (integer)
+#sftp-port=22
+
 [xcb_screen] # Screen capture (with X11/XCB)
 
 # Frame rate (float)
@@ -1626,25 +1634,25 @@ freetype-font=Liberation Serif [unknown]
 [compressor] # Dynamic range compressor
 
 # RMS/peak (float)
-#compressor-rms-peak=0.000000
+compressor-rms-peak=0.999000
 
 # Attack time (float)
-#compressor-attack=25.000000
+compressor-attack=1.500000
 
 # Release time (float)
-#compressor-release=100.000000
+compressor-release=226.600006
 
 # Threshold level (float)
-#compressor-threshold=-11.000000
+compressor-threshold=0.000000
 
 # Ratio (float)
-#compressor-ratio=8.000000
+compressor-ratio=20.000000
 
 # Knee radius (float)
-#compressor-knee=2.500000
+compressor-knee=10.000000
 
 # Makeup gain (float)
-#compressor-makeup-gain=7.000000
+compressor-makeup-gain=24.000000
 
 [equalizer] # Equalizer with 10 bands
 
@@ -1658,7 +1666,7 @@ freetype-font=Liberation Serif [unknown]
 #equalizer-2pass=0
 
 # Global gain (float)
-#equalizer-preamp=12.000000
+equalizer-preamp=0.000000
 
 [normvol] # Volume normalizer
 
@@ -3335,6 +3343,11 @@ rmtosd-update=300
 # Channels count (integer)
 #amem-channels=2
 
+[portaudio] # PORTAUDIO audio output
+
+# Output device (integer)
+#portaudio-audio-device=0
+
 [oss] # Open Sound System
 
 # OSS DSP device (string)
@@ -3344,11 +3357,6 @@ rmtosd-update=300
 
 # Change the lirc configuration file (string)
 #lirc-file=
-
-[dbus] # D-Bus control interface
-
-# Unique DBUS service id (org.mpris.vlc-<pid>) (boolean)
-#dbus-unique-service-id=0
 
 [gestures] # Mouse gestures control interface
 
@@ -3428,7 +3436,7 @@ rmtosd-update=300
 #audio=1
 
 # Default audio volume (integer)
-#volume=256
+volume=366
 
 # Audio output volume step (integer)
 #volume-step=32
