@@ -3404,7 +3404,7 @@ rmtosd-update=300
 [lua] # Lua interpreter
 
 # Lua interface (string)
-lua-intf=0.0.0.0:8080
+lua-intf=http
 
 # Lua interface configuration (string)
 #lua-config=
