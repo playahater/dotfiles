@@ -19,7 +19,7 @@ setopt cdablevars
 setopt ignoreeof
 setopt interactivecomments
 setopt nobanghist
-setopt noclobber
+#setopt noclobber
 setopt HIST_REDUCE_BLANKS
 setopt HIST_IGNORE_SPACE
 setopt SH_WORD_SPLIT

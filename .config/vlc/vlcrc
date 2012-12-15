@@ -799,10 +799,10 @@
 #qt-minimal-view=0
 
 # Systray icon (boolean)
-#qt-system-tray=1
+qt-system-tray=0
 
 # Show notification popup on track change (boolean)
-#qt-notification=1
+qt-notification=0
 
 # Start VLC with only a systray icon (boolean)
 #qt-start-minimized=0
@@ -3404,7 +3404,7 @@ rmtosd-update=300
 [lua] # Lua interpreter
 
 # Lua interface (string)
-#lua-intf=dummy
+lua-intf=0.0.0.0:8080
 
 # Lua interface configuration (string)
 #lua-config=
@@ -3422,13 +3422,13 @@ rmtosd-update=300
 #cli-host=
 
 # Host (string)
-#telnet-host=localhost
+telnet-host=
 
 # Port (integer)
-#telnet-port=4212
+telnet-port=8080
 
 # Password (string)
-#telnet-password=admin
+telnet-password=
 
 [main] # main program
 
@@ -3436,7 +3436,7 @@ rmtosd-update=300
 #audio=1
 
 # Default audio volume (integer)
-volume=366
+volume=84
 
 # Audio output volume step (integer)
 #volume-step=32
@@ -3889,7 +3889,7 @@ volume=366
 #data-path=
 
 # Allow real-time priority (boolean)
-#rt-priority=0
+rt-priority=1
 
 # Adjust VLC priority (integer)
 #rt-offset=0
@@ -3898,7 +3898,7 @@ volume=366
 #inhibit=1
 
 # Allow only one running instance (boolean)
-#one-instance=0
+one-instance=1
 
 # One instance when started from file (boolean)
 #one-instance-when-started-from-file=1
@@ -3979,10 +3979,10 @@ album-art=2
 #stats=1
 
 # Interface module (string)
-#intf=
+intf=oldrc
 
 # Extra interface modules (string)
-#extraintf=
+extraintf=http
 
 # Control interfaces (string)
 #control=
