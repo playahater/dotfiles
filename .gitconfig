@@ -1,6 +1,7 @@
 [user]
 	name = playahater
 	email = mishkez@gmail.com
+  logallrefupdates = true
 [github]
   user = playahater
   token = 8c352ef8d7459bb990bdcb577c82e332
