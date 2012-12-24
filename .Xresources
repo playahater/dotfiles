@@ -14,7 +14,7 @@ Xft.rgba: rgb
 
 URxvt.cursorBlink: true
 URxvt.depth: 24
-URxvt.font: xft:Liberation Mono:pixelsize=14:antialias=true:autohint=true:dpi=96
+URxvt.font: xft:Liberation Mono:pixelsize=14:antialias=false:autohint=true:dpi=96
 URxvt.inheritPixmap: true
 URxvt.internalBorder: 4
 URxvt.loginShell: true
@@ -22,7 +22,7 @@ URxvt.mapAlert: true
 URxvt.pointerBlank: true
 URxvt.resource: value
 URxvt.termName: xterm-256color
-URxvt.transparent: true
+URxvt.transparent: false
 URxvt.urgentOnBell: true
 
 ! === Appearance =============================================================
