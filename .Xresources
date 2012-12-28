@@ -58,7 +58,7 @@ URxvt.color15: #dddddd
 
 URxvt.buffered: true
 URxvt.jumpScroll: false
-URxvt.saveLines: 1000
+URxvt.saveLines: 100000
 URxvt.scrollBar: false
 URxvt.scrollTtyKeypress: true
 URxvt.scrollTtyOutput: false

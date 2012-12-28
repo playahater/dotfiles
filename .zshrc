@@ -163,7 +163,7 @@ alias drushcc='/usr/bin/php -d memory_limit=512M /home/play/stuff/drupal/drush/d
 alias drush='/usr/bin/php /home/play/stuff/drupal/drush/drush.php'
 #alias firedatabases="for database in ~/.mozilla/firefox/*/*.sqlite; do echo processing $database... ; sqlite3 $database 'VACUUM;'; done ;"
 alias dozeboot='VBoxManage startvm sept'
-alias tvfeed="curl 'http://api.dailytvtorrents.org/1.0/shows.getTextInfo?show_names=suits,grimm,dexter,the-big-bang-theory,breaking-bad,eureka,merlin,the-mentalist,weeds,warehouse-13,house,fringe,burn-notice,top-gear,castle,game-of-thrones&colors=yes&links=yes'"
+alias tvfeed="curl 'http://api.dailytvtorrents.org/1.0/shows.getTextInfo?show_names=suits,grimm,dexter,the-big-bang-theory,breaking-bad,eureka,the-mentalist,warehouse-13,fringe,burn-notice,top-gear,castle,game-of-thrones&colors=yes&links=yes'"
 alias clear="echo NO!"
 alias fmplayer="mplayer /proc/`pidof plugin-container`/fd/15"
 
