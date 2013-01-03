@@ -1,5 +1,5 @@
 ﻿###
-###  vlc 2.0.4
+###  vlc 2.0.5
 ###
 
 ###
@@ -799,10 +799,10 @@
 #qt-minimal-view=0
 
 # Systray icon (boolean)
-qt-system-tray=0
+#qt-system-tray=1
 
 # Show notification popup on track change (boolean)
-qt-notification=0
+#qt-notification=1
 
 # Start VLC with only a systray icon (boolean)
 #qt-start-minimized=0
@@ -872,7 +872,7 @@ qt-privacy-ask=0
 [freetype] # Freetype2 font renderer
 
 # Font (string)
-freetype-font=Liberation Serif [unknown]
+#freetype-font=Serif Bold
 
 # Font size in pixels (integer)
 #freetype-fontsize=0
@@ -1634,25 +1634,25 @@ freetype-font=Liberation Serif [unknown]
 [compressor] # Dynamic range compressor
 
 # RMS/peak (float)
-compressor-rms-peak=0.999000
+#compressor-rms-peak=0.000000
 
 # Attack time (float)
-compressor-attack=1.500000
+#compressor-attack=25.000000
 
 # Release time (float)
-compressor-release=226.600006
+#compressor-release=100.000000
 
 # Threshold level (float)
-compressor-threshold=0.000000
+#compressor-threshold=-11.000000
 
 # Ratio (float)
-compressor-ratio=20.000000
+#compressor-ratio=8.000000
 
 # Knee radius (float)
-compressor-knee=10.000000
+#compressor-knee=2.500000
 
 # Makeup gain (float)
-compressor-makeup-gain=24.000000
+#compressor-makeup-gain=7.000000
 
 [equalizer] # Equalizer with 10 bands
 
@@ -1666,7 +1666,7 @@ compressor-makeup-gain=24.000000
 #equalizer-2pass=0
 
 # Global gain (float)
-equalizer-preamp=0.000000
+#equalizer-preamp=12.000000
 
 [normvol] # Volume normalizer
 
@@ -2423,7 +2423,7 @@ equalizer-preamp=0.000000
 #audiobargraph_v-transparency=255
 
 # Bargraph position (integer)
-audiobargraph_v-position=0
+#audiobargraph_v-position=-1
 
 # Alarm (integer)
 #audiobargraph_v-alarm=0
@@ -2581,7 +2581,7 @@ audiobargraph_v-position=0
 #rss-y=0
 
 # Text position (integer)
-rss-position=0
+#rss-position=-1
 
 # Opacity (integer)
 #rss-opacity=255
@@ -2628,7 +2628,7 @@ rss-position=0
 #logo-opacity=255
 
 # Logo position (integer)
-logo-position=0
+#logo-position=-1
 
 [osdmenu] # On Screen Display menu
 
@@ -2961,7 +2961,7 @@ logo-position=0
 #marq-y=0
 
 # Marquee position (integer)
-marq-position=0
+#marq-position=-1
 
 # Opacity (integer)
 #marq-opacity=255
@@ -2990,7 +2990,7 @@ marq-position=0
 #rmtosd-password=
 
 # VNC poll interval (integer)
-rmtosd-update=300
+#rmtosd-update=1000
 
 # VNC polling (boolean)
 #rmtosd-vnc-polling=0
@@ -3404,7 +3404,7 @@ rmtosd-update=300
 [lua] # Lua interpreter
 
 # Lua interface (string)
-lua-intf=http
+#lua-intf=dummy
 
 # Lua interface configuration (string)
 #lua-config=
@@ -3422,13 +3422,13 @@ lua-intf=http
 #cli-host=
 
 # Host (string)
-telnet-host=
+#telnet-host=localhost
 
 # Port (integer)
-telnet-port=8080
+#telnet-port=4212
 
 # Password (string)
-telnet-password=
+#telnet-password=admin
 
 [main] # main program
 
@@ -3436,7 +3436,7 @@ telnet-password=
 #audio=1
 
 # Default audio volume (integer)
-volume=84
+#volume=256
 
 # Audio output volume step (integer)
 #volume-step=32
@@ -3889,7 +3889,7 @@ volume=84
 #data-path=
 
 # Allow real-time priority (boolean)
-rt-priority=1
+#rt-priority=0
 
 # Adjust VLC priority (integer)
 #rt-offset=0
@@ -3898,7 +3898,7 @@ rt-priority=1
 #inhibit=1
 
 # Allow only one running instance (boolean)
-one-instance=1
+#one-instance=0
 
 # One instance when started from file (boolean)
 #one-instance-when-started-from-file=1
@@ -3979,10 +3979,10 @@ album-art=2
 #stats=1
 
 # Interface module (string)
-intf=oldrc
+#intf=
 
 # Extra interface modules (string)
-extraintf=http
+#extraintf=
 
 # Control interfaces (string)
 #control=
@@ -4629,197 +4629,3 @@ extraintf=http
 # Playlist bookmark 10 (string)
 #bookmark10=
 
-[fake] # Fake video decoder
-# Image file (string)
-#fake-file=
-# Reload image file (integer)
-#fake-file-reload=0
-# Video width (integer)
-#fake-width=0
-# Video height (integer)
-#fake-height=0
-# Keep aspect ratio (boolean)
-#fake-keep-ar=0
-# Background aspect ratio (string)
-#fake-aspect-ratio=
-# Deinterlace video (boolean)
-#fake-deinterlace=0
-# Deinterlace module (string)
-#fake-deinterlace-module=deinterlace
-# Chroma used (string)
-#fake-chroma=I420
-[invmem] # Memory video decoder
-# Width (integer)
-#invmem-width=0
-# Height (integer)
-#invmem-height=0
-# Lock function (string)
-#invmem-lock=0
-# Unlock function (string)
-#invmem-unlock=0
-# Callback data (string)
-#invmem-data=0
-# Chroma (string)
-#invmem-chroma=RV24
-[dvb] # DVB input with v4l2 support
-# Caching value in ms (integer)
-#dvb-caching=300
-# Adapter card to tune (integer)
-#dvb-adapter=0
-# Device number to use on adapter (integer)
-#dvb-device=0
-# Transponder/multiplex frequency (integer)
-#dvb-frequency=0
-# Inversion mode (integer)
-#dvb-inversion=2
-# Probe DVB card for capabilities (boolean)
-#dvb-probe=1
-# Budget mode (boolean)
-#dvb-budget-mode=0
-# Satellite number in the Diseqc system (integer)
-#dvb-satno=0
-# LNB voltage (integer)
-#dvb-voltage=13
-# High LNB voltage (boolean)
-#dvb-high-voltage=0
-# 22 kHz tone (integer)
-#dvb-tone=-1
-# Transponder FEC (integer)
-#dvb-fec=9
-# Transponder symbol rate in kHz (integer)
-#dvb-srate=27500000
-# Antenna lnb_lof1 (kHz) (integer)
-#dvb-lnb-lof1=0
-# Antenna lnb_lof2 (kHz) (integer)
-#dvb-lnb-lof2=0
-# Antenna lnb_slof (kHz) (integer)
-#dvb-lnb-slof=0
-# Modulation type (integer)
-#dvb-modulation=0
-# Terrestrial high priority stream code rate (FEC) (integer)
-#dvb-code-rate-hp=9
-# Terrestrial low priority stream code rate (FEC) (integer)
-#dvb-code-rate-lp=9
-# Terrestrial bandwidth (integer)
-#dvb-bandwidth=0
-# Terrestrial guard interval (integer)
-#dvb-guard=0
-# Terrestrial transmission mode (integer)
-#dvb-transmission=0
-# Terrestrial hierarchy mode (integer)
-#dvb-hierarchy=0
-# HTTP Host address (string)
-#dvb-http-host=
-# HTTP user name (string)
-#dvb-http-user=
-# HTTP password (string)
-#dvb-http-password=
-# HTTP ACL (string)
-#dvb-http-acl=
-# Certificate file (string)
-#dvb-http-intf-cert=
-# Private key file (string)
-#dvb-http-intf-key=
-# Root CA file (string)
-#dvb-http-intf-ca=
-# CRL file (string)
-#dvb-http-intf-crl=
-[access_mmap] # Memory-mapped file input
-# Use file memory mapping (boolean)
-#file-mmap=0
-[access_fake] # Fake video input
-# Caching value in ms (integer)
-#fake-caching=300
-# Framerate (float)
-#fake-fps=25.000000
-# ID (integer)
-#fake-id=0
-# Duration in ms (integer)
-#fake-duration=-1
-[crop] # Crop video filter
-# Crop geometry (pixels) (string)
-#crop-geometry=
-# Automatic cropping (boolean)
-#autocrop=0
-# Ratio max (x 1000) (integer)
-#autocrop-ratio-max=2405
-# Manual ratio (integer)
-#crop-ratio=0
-# Number of images for change (integer)
-#autocrop-time=25
-# Number of lines for change (integer)
-#autocrop-diff=16
-# Number of non black pixels  (integer)
-#autocrop-non-black-pixels=3
-# Skip percentage (%) (integer)
-#autocrop-skip-percent=17
-# Luminance threshold  (integer)
-#autocrop-luminance-threshold=40
-[snapshot] # Snapshot output
-# Snapshot width (integer)
-#vout-snapshot-width=320
-# Snapshot height (integer)
-#vout-snapshot-height=200
-# Chroma (string)
-#vout-snapshot-chroma=RV32
-# Cache size (number of images) (integer)
-#vout-snapshot-cache-size=50
-[oldhttp] # HTTP remote control interface
-# Host address (string)
-#http-host=
-# Source directory (string)
-#http-src=
-# Handlers (string)
-#http-handlers=
-# Export album art as /art (boolean)
-#http-album-art=0
-# Certificate file (string)
-#http-intf-cert=
-# Private key file (string)
-#http-intf-key=
-# Root CA file (string)
-#http-intf-ca=
-# CRL file (string)
-#http-intf-crl=
-[oldtelnet] # VLM remote control interface
-# Host (string)
-#telnet-host=localhost
-# Port (integer)
-#telnet-port=4212
-# Password (string)
-#telnet-password=admin
-[v4l] # Video4Linux input
-# Caching value in ms (integer)
-#v4l-caching=300
-# Video input chroma format (string)
-#v4l-chroma=
-# Framerate (float)
-#v4l-fps=-1.000000
-# Channel (integer)
-#v4l-channel=0
-# Tuner (integer)
-#v4l-tuner=-1
-# Norm (integer)
-#v4l-norm=3
-# Frequency (integer)
-#v4l-frequency=-1
-# Audio Channel (integer)
-#v4l-audio=-1
-# Width (integer)
-#v4l-width=0
-# Height (integer)
-#v4l-height=0
-# Brightness (integer)
-#v4l-brightness=-1
-# Color (integer)
-#v4l-colour=-1
-# Hue (integer)
-#v4l-hue=-1
-# Contrast (integer)
-#v4l-contrast=-1
-# MJPEG (boolean)
-#v4l-mjpeg=0
-# Decimation (integer)
-#v4l-decimation=1
-# Quality (integer)
-#v4l-quality=100
