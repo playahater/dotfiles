@@ -2,13 +2,12 @@ escape ``
 setenv LC_CTYPE en_US.UTF-8
 defutf8 on
 setenv DISPLAY ':0'
-#attrcolor b ".I"
 #term screen-256color-bce
-#defmonitor on
 term xterm-256color
-#term rxvt
+attrcolor b ".I"
+#defmonitor on
 shell zsh
-defscrollback 100
+defscrollback 1000
 select 0
 altscreen on
 nethack on
@@ -30,5 +29,3 @@ screen    -t root                  0
 screen    -t alpha                  1
 
 #screen 2 ssh agena7@192.168.0.114
-#screen 3 ssh agena3@192.168.0.143
-#screen 4 ssh diwanee13@192.168.0.170

@@ -1,8 +1,13 @@
 Config { font = "xft:Liberation Mono:size=9:antialias=false:hinting=true"
-       , bgColor = "#151515"
-       , fgColor = "#D7D0C7"
+       , borderColor = "black"
+       , border = TopB
        , position = Top
        , lowerOnStart = True
+       , persistent = False
+       , bgColor = "#151515"
+       , fgColor = "#D7D0C7"
+       , hideOnStart = False
+
        , commands = [ Run Weather "LYBE" ["-t","<tempC> C","-L","10","-H","28","--normal","#B8D68C","--high","#E84F4F","--low","#6D878D"] 18000
                     , Run MultiCpu ["-L","0","-H","70","--normal","#B8D68C","--high","#E84F4F"] 10
                     , Run CpuFreq ["-t", "@<cpu0>", "-L", "0", "-H", "2","-l", "#B8D68C", "-n","#E1AA5D", "-h", "#E84F4F"] 50
@@ -14,14 +19,11 @@ Config { font = "xft:Liberation Mono:size=9:antialias=false:hinting=true"
                     , Run TopProc ["-l", "#B8D68C", "--normal","#E1AA5D","--high","#E84F4F"] 10
                     , Run TopMem ["-l", "#B8D68C", "--normal","#E1AA5D","--high","#E84F4F"] 10
                     , Run ThermalZone 0 ["-t","<temp> C", "-L","0","-H","70","--normal","#B8D68C","--high","#E84F4F"] 30
-                    , Run MPD ["-t","<artist> - <title> <statei> ","--", "-P", ">>", "-Z", "|", "-S", "><"]  10
-                    , Run Volume "default" "Master" ["-t","vol: <volume>%"] 10
-                    , Run BatteryP ["BAT0"] ["-t", "<acstatus><watts> (<left>%)", "-L", "10", "-H", "80", "-p", "3", "--", "-O", "<fc=#B8D68C>on</fc> - ", "-o", "", "-L", "-15", "-H", "-5", "-l", "#E84F4F", "-m", "blue", "-h", "green"] 600
                     , Run DiskU [("/home", "<used>/<size>")] ["-L", "20", "-H", "50", "-m", "1", "-p", "3"] 20
+                    , Run BatteryP ["BAT0"] ["-t", "<acstatus><watts> (<left>%)", "-L", "10", "-H", "80", "-p", "3", "--", "-O", "<fc=#B8D68C>on</fc> - ", "-o", "", "-L", "-15", "-H", "-5", "-l", "#E84F4F", "-m", "blue", "-h", "green"] 600
                     , Run StdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{<fc=#A0CF5D>|</fc> %LYBE% <fc=#A0CF5D>|</fc> %multicpu% %cpufreq% <fc=#A0CF5D>/</fc> %top% <fc=#A0CF5D>/</fc> %topmem% <fc=#A0CF5D>/</fc> %thermal0% <fc=#A0CF5D>|</fc> %memory% <fc=#A0CF5D>/</fc> %disku% <fc=#A0CF5D>|</fc> %eth0% / %wlan0% - %wlan0wi% <fc=#A0CF5D>|</fc> %default:Master% <fc=#A0CF5D>|</fc> %mpd% <fc=#A0CF5D>|</fc> %battery% <fc=#A0CF5D>|</fc><fc=#B8D68C> %date%</fc>"
-
+       , template = "%StdinReader% }{<fc=#A0CF5D>|</fc> %LYBE% <fc=#A0CF5D>|</fc> %multicpu% %cpufreq% <fc=#A0CF5D>/</fc> %top% <fc=#A0CF5D>/</fc> %topmem% <fc=#A0CF5D>/</fc> %thermal0% <fc=#A0CF5D>|</fc> %disku% <fc=#A0CF5D>|</fc> %memory% <fc=#A0CF5D>|</fc> %eth0% %wlan0% - %wlan0wi%  <fc=#A0CF5D>|</fc> %battery% <fc=#A0CF5D>|</fc><fc=#B8D68C> %date%</fc>"
        }
