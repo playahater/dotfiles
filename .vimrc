@@ -191,3 +191,5 @@ if has("autocmd")
   au BufNewFile,BufRead *.wsgi set filetype=python
 
 endif
+
+call pathogen#infect()
