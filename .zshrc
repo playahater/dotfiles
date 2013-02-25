@@ -136,7 +136,7 @@ alias webcam="mplayer -fps 24 tv://"
 alias sopcast="mplayer http://127.0.0.1:8908/tv.asf"
 #alias webcam="mplayer tv:// -tv driver=v4l:width=352:height=288:device=/dev/video0 "
 alias fabric="fab -f /srv/http/m3com/scripts/python/deploy/fabfile.py"
-alias gb='git branch'
+alias gb='git branch -v'
 alias gc='git commit -a -m'
 alias gba='git branch -a'
 alias gcv='git commit -v'

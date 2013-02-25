@@ -48,7 +48,7 @@
   adddatetag = 'tag date `"+%Y%m%d%H%M"`'
 [merge]
   log = true
-  #tool = vimdiff
+  tool = vimdiff
 [log]
   decorate = true
 [help]
