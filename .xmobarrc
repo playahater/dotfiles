@@ -1,4 +1,4 @@
-Config { font = "xft:Liberation Mono:size=9:antialias=false:hinting=true"
+Config { font = "xft:Liberation Mono:size=9:antialias=true:hinting=true"
        , borderColor = "black"
        , border = TopB
        , position = Top
