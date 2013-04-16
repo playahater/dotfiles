@@ -68,10 +68,10 @@ main = do
 myManageHook :: ManageHook
 myManageHook = scratchpadManageHook (W.RationalRect 0.07 0.09 0.86 0.85) <+> ( composeAll . concat $
                 [[isDialog                       --> doFloat
+                , isFullscreen --> doFullFloat
                 , className =?  "Xmessage"  --> doFloat
                 , className =? "Save a Bookmark on Delicious"  --> doFloat
                 , className =? "8:gimp"           --> doShift "8:gimp"
-                , className =? "uzbl-browser"           --> doShift "4:web"
                 , className =? "VirtualBox" --> doShift "5:vbox"
                 , className =? "Zathura"    --> doShift "9:pdf"
                 ]]
