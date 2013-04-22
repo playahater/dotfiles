@@ -136,6 +136,7 @@ alias webcam="mplayer -fps 24 tv://"
 alias sopcast="mplayer http://127.0.0.1:8908/tv.asf"
 #alias webcam="mplayer tv:// -tv driver=v4l:width=352:height=288:device=/dev/video0 "
 alias fabric="fab -f /srv/http/m3com/scripts/python/deploy/fabfile.py"
+alias g='git'
 alias gb='git branch -v'
 alias gc='git commit -a -m'
 alias gba='git branch -a'
@@ -147,6 +148,8 @@ alias gst='git status'
 alias gsh='git show'
 alias gpull='git pull origin $(current_branch)'
 alias gpush='git push origin $(current_branch)'
+alias gd='git diff --color'
+alias gdc='git diff --cached'
 alias gf='git diff --stat --color'
 alias git-diff-branch='git diff --stat --color master..staging'
 alias git-deleted="git log --all --pretty=format: --name-only --diff-filter=D | sort -u"

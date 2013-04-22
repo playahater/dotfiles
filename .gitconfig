@@ -49,6 +49,7 @@
 [merge]
   log = true
   tool = vimdiff
+	conflictstyle = diff3
 [log]
   decorate = true
 [help]
