@@ -72,6 +72,14 @@ nnoremap <silent><C-p> :tabprevious<CR>
 let g:buftabs_only_basename=1
 let g:buftabs_in_statusline=1
 
+if &diff
+  nnoremap <silent><C-j> :diffget LOCAL<CR>
+"  nnoremap <silent><C-.> :diffget BASE<CR>
+  nnoremap <silent><C-k> :diffget REMOTE<CR>
+
+  set background=dark
+  colorscheme zenburn
+endif
 
 map <F3> :TlistToggle<CR>
 map <F5> :SyntasticCheck<CR>
