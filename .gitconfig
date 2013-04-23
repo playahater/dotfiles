@@ -32,7 +32,6 @@
 [merge]
   log = true
 	tool = vimdiff3
-	conflictstyle = diff3
 [mergetool]
   prompt = false
 [mergetool "vimdiff3"]
