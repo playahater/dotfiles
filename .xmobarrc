@@ -25,5 +25,5 @@ Config { font = "xft:Liberation Mono:size=9:antialias=true:hinting=true"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{<fc=#A0CF5D>|</fc> %LYBE% <fc=#A0CF5D>|</fc> %multicpu% %cpufreq% <fc=#A0CF5D>/</fc> %top% <fc=#A0CF5D>/</fc> %topmem% <fc=#A0CF5D>/</fc> %thermal0% <fc=#A0CF5D>|</fc> %disku% <fc=#A0CF5D>|</fc> %memory% <fc=#A0CF5D>|</fc> %eth0% %wlan0% - %wlan0wi%  <fc=#A0CF5D>|</fc> %battery% <fc=#A0CF5D>|</fc><fc=#B8D68C> %date%</fc>"
+       , template = "%StdinReader% }{<fc=#A0CF5D>|</fc> %LYBE% <fc=#A0CF5D>|</fc> %multicpu% %cpufreq% <fc=#A0CF5D>/</fc> %top% <fc=#A0CF5D>/</fc> %topmem% <fc=#A0CF5D>/</fc> %thermal0% <fc=#A0CF5D>|</fc> %memory% <fc=#A0CF5D>|</fc> %disku% <fc=#A0CF5D>|</fc> %eth0% %wlan0% - %wlan0wi%  <fc=#A0CF5D>|</fc> %battery% <fc=#A0CF5D>|</fc><fc=#B8D68C> %date%</fc>"
        }

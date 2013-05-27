@@ -22,3 +22,4 @@
 #feh --bg-scale http://onlyhdwallpapers.com/wallpaper/green_ship_black_vector_the_pirate_bay_piratebay_monotone_desktop_1280x800_wallpaper-105606.jpeg
 ###############$
 exec xmonad
+/usr/bin/start-pulseaudio-x11
