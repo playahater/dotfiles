@@ -12,15 +12,15 @@ set winminheight=0
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Global Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set showcmd             " Show incomplete cmds down the bottom
-set showmode            " Show current mode down the bottom
-set clipboard+=unnamed  " Yanks go on clipboard instead
-set ruler               " Ruler on
-set number              " Display line numbers
-set timeoutlen=10       " Time to wait after ESC (default causes an annoying delay)
-set nobackup            " 
-set hlsearch            " Highlight search strings
-set nowritebackup       " 
+set showcmd                       " Show incomplete cmds down the bottom
+set showmode                      " Show current mode down the bottom
+set clipboard=autoselectplus      " save the selection into the system clipboard
+set ruler                         " Ruler on
+set number                        " Display line numbers
+set timeoutlen=10                 " Time to wait after ESC (default causes an annoying delay)
+set nobackup
+set hlsearch                      " Highlight search strings
+set nowritebackup
 set winaltkeys=yes
 set modeline
 set shortmess+=filmnrxoOtT

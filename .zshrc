@@ -217,6 +217,24 @@ current_branch() {
   echo $__CURRENT_GIT_BRANCH
 }
 
+dual-right-of () {
+  xrandr --output VGA1 --primary --right-of LVDS1 --output LVDS1 --auto
+}
+
+dual-left-of () {
+  xrandr --output VGA1 --primary --left-of LVDS1 --output LVDS1 --auto
+}
+
+single-vga () {
+  xrandr --output LVDS1 --off
+  xrandr --output VGA1 --auto
+}
+
+single-lvds () {
+  xrandr --output VGA1 --off
+  xrandr --output LVDS1 --auto
+}
+
 # Append git functions needed for prompt.
 preexec_functions+='preexec_update_git_vars'
 precmd_functions+='precmd_update_git_vars'

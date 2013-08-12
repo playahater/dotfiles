@@ -25,6 +25,7 @@
     "message-level": 2, 
     "open-file-limit": 32, 
     "peer-congestion-algorithm": "", 
+    "peer-id-ttl-hours": 6, 
     "peer-limit-global": 340, 
     "peer-limit-per-torrent": 90, 
     "peer-port": 7881, 
