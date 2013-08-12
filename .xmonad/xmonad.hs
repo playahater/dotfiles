@@ -68,12 +68,13 @@ main = do
 myManageHook :: ManageHook
 myManageHook = scratchpadManageHook (W.RationalRect 0.07 0.09 0.86 0.85) <+> ( composeAll . concat $
                 [[isDialog                       --> doFloat
-                , isFullscreen --> doFullFloat
+--                , isFullscreen --> doFullFloat
+                , isFullscreen --> doFloat
                 , className =?  "Xmessage"  --> doFloat
                 , className =? "Save a Bookmark on Delicious"  --> doFloat
-                , className =? "8:gimp"           --> doShift "8:gimp"
-                , className =? "VirtualBox" --> doShift "5:vbox"
-                , className =? "Zathura"    --> doShift "9:pdf"
+                , className =? "8:gimp"           --> doShift "8:g"
+                , className =? "VirtualBox" --> doShift "5:v"
+                , className =? "Zathura"    --> doShift "6:m"
                 ]]
                         )  <+> manageDocks
 
@@ -140,7 +141,7 @@ myTheme = defaultTheme { decoHeight = 14
 }
 
 --LayoutHook
-myLayoutHook  = onWorkspace "1:c" imLayout $ onWorkspace "2:w" webL $ onWorkspace "8:g" gimpL $ onWorkspace "7:w" full $ standardLayouts
+myLayoutHook  = onWorkspace "1:c" imLayout $ onWorkspace "2:w" webL $ standardLayouts
    where
 
         standardLayouts = avoidStruts $ (tiled ||| tabLayout ||| reflectTiled ||| Mirror tiled |||  Grid ||| Full)
@@ -158,7 +159,7 @@ myLayoutHook  = onWorkspace "1:c" imLayout $ onWorkspace "2:w" webL $ onWorkspac
                 skypeRoster = (ClassName "Skype") `And` (Not (Title "Options")) `And` (Not (Role "Chats")) `And` (Not (Role "CallWindowForm"))
 
         --Gimp Layout
-        gimpL = avoidStruts $ smartBorders $ withIM (0.11) (Role "gimp-toolbox") $ reflectHoriz $ withIM (0.15) (Role "gimp-dock") tabLayout
+--        gimpL = avoidStruts $ smartBorders $ withIM (0.11) (Role "gimp-toolbox") $ reflectHoriz $ withIM (0.15) (Role "gimp-dock") tabLayout
 
         webL      = avoidStruts $ full
 
