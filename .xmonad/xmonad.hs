@@ -87,6 +87,7 @@ myStartupHook = do
                 spawn "xmodmap ~/.Xmodmap"
                 spawn "xsetroot -cursor_name left_ptr"
                 spawn "xset r rate 180 90"
+                spawn "xset b 50 440 50"
                 spawn "xrdb -load ~/.Xresources"
                 spawn "xsetroot -solid '#151515'"
 
@@ -246,7 +247,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     , ((modMask, xK_s ),spawn "xset dpms force off")
 
     -- take screenshot
-    , ((0, xK_Print), spawn "screenshot")
+    , ((0, xK_Print), spawn "import -window root ~/media/screenshots/$(date '+%Y%m%d-%H%M%S').png")
 
     -- quit, or restart
     , ((modMask .|. shiftMask, xK_q ), io (exitWith ExitSuccess))

@@ -84,8 +84,9 @@ zstyle ':completion:*' select-prompt %SScrolling active: current selection at %P
 zstyle ':completion:*:corrections' format $'%{\e[0;31m%}%d (errors: %e)%}'
 zstyle ':completion:*:complete:-command-::commands' ignored-patterns '*\~'
 zstyle ':completion:*' file-sort name
-zstyle ':completion:*' menu select=long
-zstyle ':completion:*-case' menu select=5
+#zstyle ':completion:*' menu select=long
+#zstyle ':completion:*-case' menu select=5
+zstyle ':completion:*' menu select=long-list select=3        # Enable menu completion if 3 or more alternatives
 zstyle -e ':completion:*:approximate:*' max-errors 'reply=( $((($#PREFIX+$#SUFFIX)/3 )) numeric )'
 zstyle ':completion:*:expand:*' tag-order all-expansions
 # allow approximate
@@ -106,20 +107,38 @@ zstyle ':completion::complete:*' use-cache 1
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh_cache
 
+zstyle ':completion:*' completer _complete _list _oldlist _expand _ignored _match _correct _approximate _prefix
+zstyle ':completion:*' list-colors $(dircolors)            # Use colors in the menu selection
+zstyle ':completion:*' glob 'yes'                # Expand globs when tab-completing
+zstyle ':completion:*:functions' ignored-patterns '_*'        # Ignore completion functions for unavailable commands
+zstyle ':completion:*' accept-exact '*(N)'            # Speed up path completion, by avoiding partial globs
+
+zstyle ':completion:*:complete:-command-::commands' ignored-patterns '*\~' # Don't complete backup files as executables
+zstyle ':completion:*' ignore-parents parent pwd        # Don't let ../<tab> match $PWD
+zstyle ':completion::*:(rm|vi):*' ignore-line true        # Don't match the same filenames multiple times
+
+# SSH Completion
+zstyle ':completion:*:scp:*' tag-order \
+   files users 'hosts:-host hosts:-domain:domain hosts:-ipaddr"IP\ Address *'
+zstyle ':completion:*:scp:*' group-order \
+   files all-files users hosts-domain hosts-host hosts-ipaddr
+zstyle ':completion:*:ssh:*' tag-order \
+   users 'hosts:-host hosts:-domain:domain hosts:-ipaddr"IP\ Address *'
+zstyle ':completion:*:ssh:*' group-order \
+   hosts-domain hosts-host users hosts-ipaddr
+
 # aliases
 alias less=$PAGER
 alias more=$PAGER
 alias zless=$PAGER
 alias ls='ls -lha --color=always'
 alias sl='ls -lha --color=always'
-alias ll='ls -lha --color=always'
 alias grep='grep --color=always'
 alias df='df -hT'
 alias ping='ping -c 3'
 alias rm="rm -v"
 alias mv="mv -v"
 alias top='htop'
-alias mc='mc -d'
 alias ps='ps faux'
 alias du='du -sh'
 alias free='free -m'
@@ -157,13 +176,9 @@ alias begraund='feh --bg-scale'
 alias firefox='firefox -no-remote -no-remote -ProfileManager'
 alias devping='ping 192.168.0.240'
 #alias netbeans='netbeans --laf GTK'
-alias alsamixer='alsamixer -c 0'
 alias plantronics='bluez-simple-agent hci0 00:1C:EF:7E:A1:88'
 alias pmplayer='mplayer -ao alsa:device=btheadset'
-alias drushall='/usr/bin/php -d memory_limit=512M /home/play/stuff/drupal/drush/drush.php --php="/usr/bin/php -d memory_limit=512M" cc all'
-alias drushcc='/usr/bin/php -d memory_limit=512M /home/play/stuff/drupal/drush/drush.php --php="/usr/bin/php -d memory_limit=512M" cc'
-#alias drush='/usr/bin/php -d memory_limit=512M /home/play/stuff/drupal/drush/drush.php --php="/usr/bin/php -d memory_limit=512M"'
-alias drush='/usr/bin/php /home/play/stuff/drupal/drush/drush.php'
+#alias drush='/usr/bin/php /home/play/stuff/drupal/drush/drush.php'
 #alias firedatabases="for database in ~/.mozilla/firefox/*/*.sqlite; do echo processing $database... ; sqlite3 $database 'VACUUM;'; done ;"
 alias dozeboot='VBoxManage startvm sept'
 alias tvfeed="curl 'http://api.dailytvtorrents.org/1.0/shows.getTextInfo?show_names=suits,grimm,dexter,the-big-bang-theory,breaking-bad,eureka,the-mentalist,warehouse-13,fringe,burn-notice,top-gear,castle,game-of-thrones&colors=yes&links=yes'"
@@ -198,13 +213,22 @@ compctl -g '*.tex*' + -g '*(-/)' {,la,gla,ams{la,},{g,}sli}tex texi2dvi
 compctl -g '*.dvi' + -g '*(-/)' xdvi
 compctl -g '[^.]*(-/) *.(c|C|cc|c++|cxx|cpp)' + -f cc CC c++ gcc g++
 
-clear-and-exit() {
+compctl -f -x 'S[1][2][3][4][5][6][7][8][9]' -k '(1 2 3 4 5 6 7 8 9)' \
+  - 'R[[1-9nlo]|[1-9](|[a-z]),^*]' -K 'match-man' \
+  - 's[-M],c[-1,-M]' -g '*(-/)' \
+  - 's[-P],c[-1,-P]' -c \
+  - 's[-S],s[-1,-S]' -k '( )' \
+  - 's[-]' -k '(a d f h k t M P)' \
+  - 'p[1,-1]' -c + -K 'match-man' \
+  -- man
+
+function clear-and-exit() {
   zle kill-whole-line
   exit
 }
 zle -N clear-and-exit
 
-rationalise-dot() {
+function rationalise-dot() {
   if [[ $LBUFFER = *.. ]]; then
     LBUFFER+=/..
   else
@@ -213,26 +237,53 @@ rationalise-dot() {
 }
 zle -N rationalise-dot
 
-current_branch() {
+function current_branch() {
   echo $__CURRENT_GIT_BRANCH
 }
 
-dual-right-of () {
+function dual-right-of () {
   xrandr --output VGA1 --primary --right-of LVDS1 --output LVDS1 --auto
 }
 
-dual-left-of () {
+function dual-left-of () {
   xrandr --output VGA1 --primary --left-of LVDS1 --output LVDS1 --auto
 }
 
-single-vga () {
+function single-vga () {
   xrandr --output LVDS1 --off
   xrandr --output VGA1 --auto
 }
 
-single-lvds () {
+function single-lvds () {
   xrandr --output VGA1 --off
   xrandr --output LVDS1 --auto
+}
+
+function vacuum-mozilla() {
+  for i in ~/.mozilla/firefox/mufwh4cg.default/*.sqlite
+  do
+      echo "VACUUM;"|sqlite3 $i
+      echo "REINDEX;"|sqlite3 $i
+  done
+}
+
+function ll () {
+  ls -l "$@"| egrep "^d" ; ls -lXB "$@" 2>&-| egrep -v "^d|total ";
+}
+
+function most_useless_use_of_zsh {
+   local lines columns colour a b p q i pnew
+   ((columns=COLUMNS-1, lines=LINES-1, colour=0))
+   for ((b=-1.5; b<=1.5; b+=3.0/lines)) do
+       for ((a=-2.0; a<=1; a+=3.0/columns)) do
+           for ((p=0.0, q=0.0, i=0; p*p+q*q < 4 && i < 32; i++)) do
+               ((pnew=p*p-q*q+a, q=2*p*q+b, p=pnew))
+           done
+           ((colour=(i/4)%8))
+            echo -n "\\e[4${colour}m "
+        done
+        echo
+    done
 }
 
 # Append git functions needed for prompt.
@@ -240,3 +291,9 @@ preexec_functions+='preexec_update_git_vars'
 precmd_functions+='precmd_update_git_vars'
 chpwd_functions+='chpwd_update_git_vars'
 unset MAILCHECK
+
+# Welcome message... #################################################
+if [ -x /usr/bin/fortune ]; then                                   ##
+    /usr/bin/fortune -s     # makes our day a bit more fun.... :-) ##
+fi                                                                 ##
+#####################################################################

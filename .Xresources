@@ -66,5 +66,17 @@ URxvt.scrollWithBuffer: false
 URxvt.scrollstyle: plain
 URxvt.secondaryScroll: false
 
+
 URxvt*perl-lib: /usr/lib/urxvt/perl
-URxvt.perl-ext: searchable-scrollback,default,clipboard
+! URxvt.perl-ext: searchable-scrollback,default,clipboard
+
+URxvt.perl-ext:      default,url-select
+URxvt.perl-ext-common: clipboard
+URxvt.keysym.M-u:   perl:url-select:select_next
+URxvt.keysym.M-c:   perl:clipboard:copy
+URxvt.keysym.M-v:   perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+URxvt.clipboard.autocopy: true
+
+URxvt.url-select.launcher:   /usr/bin/firefox -new-tab
+URxvt.url-select.underline: true
