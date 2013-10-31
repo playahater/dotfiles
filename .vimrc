@@ -147,6 +147,10 @@ set nofoldenable        " dont fold by default
   let apache_version = "2.0"
   let enforce_freedesktop_standard = 1
   let python_highlight_all = 1
+
+  let g:syntastic_always_populate_loc_list=1
+  let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
+
 "  let g:is_bash = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -189,15 +193,12 @@ if has("autocmd")
   augroup END
 
   autocmd FileType python set tabstop=8 expandtab shiftwidth=4 softtabstop=4 omnifunc=pythoncomplete#Complete
-  autocmd FileType javascript set softtabstop=2 shiftwidth=2 omnifunc=javascriptcomplete#CompleteJS
   autocmd FileType html set softtabstop=3 shiftwidth=3 textwidth=0 omnifunc=htmlcomplete#CompleteTags
   autocmd FileType css set softtabstop=2 shiftwidth=2 textwidth=0 omnifunc=csscomplete#CompleteCSS
   autocmd FileType c,cpp,java,php,module,tpl.php,js,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
 
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-  au BufRead,BufNewFile *.js set ft=javascript.jquery
   au BufNewFile,BufRead *.wsgi set filetype=python
+  au FileType javascript call JavaScriptFold()
 
 endif
-
-call pathogen#infect()
