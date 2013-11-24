@@ -122,10 +122,6 @@ zstyle ':completion:*:scp:*' tag-order \
    files users 'hosts:-host hosts:-domain:domain hosts:-ipaddr"IP\ Address *'
 zstyle ':completion:*:scp:*' group-order \
    files all-files users hosts-domain hosts-host hosts-ipaddr
-zstyle ':completion:*:ssh:*' tag-order \
-   users 'hosts:-host hosts:-domain:domain hosts:-ipaddr"IP\ Address *'
-zstyle ':completion:*:ssh:*' group-order \
-   hosts-domain hosts-host users hosts-ipaddr
 
 # aliases
 alias less=$PAGER
@@ -184,11 +180,6 @@ alias dozeboot='VBoxManage startvm sept'
 alias tvfeed="curl 'http://api.dailytvtorrents.org/1.0/shows.getTextInfo?show_names=suits,grimm,dexter,the-big-bang-theory,breaking-bad,eureka,the-mentalist,warehouse-13,fringe,burn-notice,top-gear,castle,game-of-thrones&colors=yes&links=yes'"
 alias clear="echo NO!"
 alias fmplayer="mplayer /proc/`pidof plugin-container`/fd/15"
-
-# custom completion commands
-#local _myhosts
-#_myhosts=( ${${${${(f)"$(<$HOME/.ssh/known_hosts)"}:#[0-9]*}%%\ *}%%,*} )
-#zstyle ':completion:*' hosts $_myhosts
 
 rmmodcomplete () { reply=(`/sbin/lsmod|cut -f1 -d" "|grep -v Module`) }
 compctl -K rmmodcomplete rmmod
@@ -294,6 +285,6 @@ unset MAILCHECK
 
 # Welcome message... #################################################
 if [ -x /usr/bin/fortune ]; then                                   ##
-    /usr/bin/fortune -s     # makes our day a bit more fun.... :-) ##
+    /usr/bin/fortune -s     # makes a day a bit more fun.... :-)   ##
 fi                                                                 ##
 #####################################################################

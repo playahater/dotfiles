@@ -17,7 +17,7 @@ set showmode                      " Show current mode down the bottom
 set clipboard=autoselectplus      " save the selection into the system clipboard
 set ruler                         " Ruler on
 set number                        " Display line numbers
-set timeoutlen=10                 " Time to wait after ESC (default causes an annoying delay)
+set timeoutlen=5                  " Time to wait after ESC (default causes an annoying delay)
 set nobackup
 set hlsearch                      " Highlight search strings
 set nowritebackup
@@ -47,7 +47,7 @@ set scrolloff=10
 set statusline=%<%F%h%m%r%h%w%=\ %{fugitive#statusline()}\ lin:%l\,%L\ col:%c%V\ %P
 set expandtab
 set formatoptions=rq
-set t_Co=256 
+set t_Co=256
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Stupid shift key fixes
@@ -76,9 +76,6 @@ if &diff
   nnoremap <silent><C-j> :diffget LOCAL<CR>
 "  nnoremap <silent><C-.> :diffget BASE<CR>
   nnoremap <silent><C-k> :diffget REMOTE<CR>
-
-  set background=dark
-  colorscheme zenburn
 endif
 
 map <F3> :TlistToggle<CR>
@@ -107,7 +104,7 @@ set softtabstop=4                               " Define whattabstop  is to be s
 set autoindent                                  " Automatically indent eache line like previous one
 set smartindent                                 " Automatically indent when adding a curly bracket, etc.
 set backspace=indent,eol,start                  " Allow backspacing over everything in insert mode
-set smarttab                                    " Insert indents at the beginning os a line
+set smarttab                                    " Insert indents at the beginning of a line
 set cinwords=if,else,while,do,for,switch,case   " Define keywords that cause an extra indent
 set lbr
 set nowrap
@@ -172,7 +169,7 @@ set nofoldenable        " dont fold by default
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set incsearch   " Search as you type
 set ignorecase  " Ignore case when searching
-set smartcase   " 
+set smartcase   "
 
 set ofu=syntaxcomplete#Complete
 
@@ -186,19 +183,16 @@ set backupcopy=auto,breakhardlink
 " Miscellaneous
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("autocmd")
-  " Drupal *.module and *.install files.
-  augroup module
-    autocmd BufRead,BufNewFile *.module set filetype=php
-    autocmd BufRead,BufNewFile *.install set filetype=php
-  augroup END
+  au BufRead,BufNewFile *.module set filetype=php
+  au BufRead,BufNewFile *.install set filetype=php
+  au BufRead,BufNewFile *.wsgi set filetype=python
 
   autocmd FileType python set tabstop=8 expandtab shiftwidth=4 softtabstop=4 omnifunc=pythoncomplete#Complete
-  autocmd FileType html set softtabstop=3 shiftwidth=3 textwidth=0 omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType html set softtabstop=2 shiftwidth=2 textwidth=0 omnifunc=htmlcomplete#CompleteTags
   autocmd FileType css set softtabstop=2 shiftwidth=2 textwidth=0 omnifunc=csscomplete#CompleteCSS
   autocmd FileType c,cpp,java,php,module,tpl.php,js,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
 
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-  au BufNewFile,BufRead *.wsgi set filetype=python
   au FileType javascript call JavaScriptFold()
 
 endif
