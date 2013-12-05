@@ -157,7 +157,7 @@ set nofoldenable        " dont fold by default
   map <F7> :execute 'NERDTreeToggle ' . getcwd()<CR>
   let NERDChristmasTree = 1
   let NERDTreeCaseSensitiveSort = 1
-  let NERDTreeIgnore = ['\~$','\.[ao]$','\.swp$','\.DS_Store','\.pyc','\.pyo','\vendor','\coverage']
+  let NERDTreeIgnore = ['\~$','\.[ao]$','\.swp$','\.DS_Store','\.pyc','\.pyo','\coverage']
   let NERDTreeMouseMode = 2
   let NERDTreeShowHidden = 1
   let NERDTreeChDirMode = 2
