@@ -180,6 +180,7 @@ alias dozeboot='VBoxManage startvm sept'
 alias tvfeed="curl 'http://api.dailytvtorrents.org/1.0/shows.getTextInfo?show_names=suits,grimm,dexter,the-big-bang-theory,breaking-bad,eureka,the-mentalist,warehouse-13,fringe,burn-notice,top-gear,castle,game-of-thrones&colors=yes&links=yes'"
 alias clear="echo NO!"
 alias fmplayer="mplayer /proc/`pidof plugin-container`/fd/15"
+alias composer="php /home/play/projects/composer/composer.phar"
 
 rmmodcomplete () { reply=(`/sbin/lsmod|cut -f1 -d" "|grep -v Module`) }
 compctl -K rmmodcomplete rmmod

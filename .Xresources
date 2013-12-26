@@ -1,7 +1,5 @@
 ! To save run xrdb -all ~/.Xresources
-
 ! === X f t ==================================================================
-
 Xft.antialias: 1
 Xft.autohint: 1
 Xft.dpi: 96
@@ -11,72 +9,63 @@ Xft.lcdfilter: lcddefault
 Xft.rgba: rgb
 
 ! === U R x v t ==============================================================
-
-URxvt.cursorBlink: true
-URxvt.depth: 24
-URxvt.font: xft:Liberation Mono:pixelsize=14:antialias=true:autohint=true:dpi=96
-URxvt.inheritPixmap: true
-URxvt.internalBorder: 4
-URxvt.loginShell: true
-URxvt.mapAlert: true
-URxvt.pointerBlank: true
-URxvt.resource: value
-URxvt.termName: xterm-256color
-URxvt.transparent: false
-URxvt.urgentOnBell: true
+URxvt*.cursorBlink: true
+URxvt*.depth: 32
+URxvt*.font: xft:Liberation Mono:pixelsize=14:antialias=true:autohint=true:dpi=96
+URxvt*.inheritPixmap: true
+URxvt*.internalBorder: 0
+URxvt*.loginShell: true
+URxvt*.mapAlert: true
+URxvt*.pointerBlank: true
+URxvt*.resource: value
+URxvt*.termName: xterm-256color
+URxvt*.urgentOnBell: true
+URxvt*.cursorColor: rgba:DD00/DD00/DD00/ee00
+URxvt*.shading: 25
+URxvt*.buffered: true
+URxvt*.jumpScroll: false
+URxvt*.saveLines: 100000
+URxvt*.scrollBar: false
+URxvt*.scrollTtyKeypress: true
+URxvt*.scrollTtyOutput: false
+URxvt*.scrollWithBuffer: false
+URxvt*.scrollstyle: plain
+URxvt*.secondaryScroll: false
+URxvt*.perl-lib: /usr/lib/urxvt/perl
+URxvt*.perl-ext:      default,url-select
+URxvt*.perl-ext-common: clipboard
+URxvt*.keysym.M-u:   perl:url-select:select_next
+URxvt*.keysym.M-c:   perl:clipboard:copy
+URxvt*.keysym.M-v:   perl:clipboard:paste
+URxvt*.keysym.M-C-v: perl:clipboard:paste_escaped
+URxvt*.clipboard.autocopy: true
+URxvt*.url-select.launcher:   /usr/bin/firefox -new-tab
+URxvt*.url-select.underline: true
 
 ! === Appearance =============================================================
-
-URxvt.foreground: #D7D0C7
-URxvt.background: #151515
+URxvt.foreground: rgba:D700/D000/C700/ee00
+URxvt.background: rgba:1500/1500/1500/ee00
 ! Black
-URxvt.color0: #303030
-URxvt.color8: #404040
+URxvt.color0: rgba:3000/3000/3000/ee00
+URxvt.color8: rgba:4000/4000/4000/ee00
 ! Red
-URxvt.color1: #E84F4F
-URxvt.color9: #D23D3D
+URxvt.color1: rgba:E800/4F00/4F00/ee00
+URxvt.color9: rgba:D200/3D00/3D00/ee00
 ! Green
-URxvt.color2: #B8D68C
-URxvt.color10: #A0CF5D
+URxvt.color2: rgba:B800/D600/8C00/ee00
+URxvt.color10: rgba:A000/CF00/5D00/ee00
 ! Yellow
-URxvt.color3: #E1AA5D
-URxvt.color11: #F39D21
+URxvt.color3: rgba:E100/AA00/5D00/ee00
+URxvt.color11: rgba:F300/9D00/2100/ee00
 ! Blue
-URxvt.color4: #7DC1CF
-URxvt.color12: #4E9FB1
+URxvt.color4: rgba:7D00/C100/CF00/ee00
+URxvt.color12: rgba:4E00/9F00/B100/ee00
 ! Magenta
-URxvt.color5: #9B64FB
-URxvt.color13: #8542FF
+URxvt.color5: rgba:9B00/6400/FB00/ee00
+URxvt.color13: rgba:8500/4200/FF00/ee00
 ! Cyan
-URxvt.color6: #6D878D
-URxvt.color14: #42717B
+URxvt.color6: rgba:6D00/8700/8D00/ee00
+URxvt.color14: rgba:4200/7100/7B00/ee00
 ! White
-URxvt.color7: #dddddd
-URxvt.color15: #dddddd
-
-! === Scrolling ==============================================================
-
-URxvt.buffered: true
-URxvt.jumpScroll: false
-URxvt.saveLines: 100000
-URxvt.scrollBar: false
-URxvt.scrollTtyKeypress: true
-URxvt.scrollTtyOutput: false
-URxvt.scrollWithBuffer: false
-URxvt.scrollstyle: plain
-URxvt.secondaryScroll: false
-
-
-URxvt*perl-lib: /usr/lib/urxvt/perl
-! URxvt.perl-ext: searchable-scrollback,default,clipboard
-
-URxvt.perl-ext:      default,url-select
-URxvt.perl-ext-common: clipboard
-URxvt.keysym.M-u:   perl:url-select:select_next
-URxvt.keysym.M-c:   perl:clipboard:copy
-URxvt.keysym.M-v:   perl:clipboard:paste
-URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
-URxvt.clipboard.autocopy: true
-
-URxvt.url-select.launcher:   /usr/bin/firefox -new-tab
-URxvt.url-select.underline: true
+URxvt.color7: rgba:DD00/DD00/DD00/ee00
+URxvt.color15: rgba:DD00/DD00/DD00/ee00
