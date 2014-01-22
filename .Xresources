@@ -21,7 +21,7 @@ URxvt*.resource: value
 URxvt*.termName: xterm-256color
 URxvt*.urgentOnBell: true
 URxvt*.cursorColor: rgba:DD00/DD00/DD00/ee00
-URxvt*.shading: 25
+URxvt*.shading: 20
 URxvt*.buffered: true
 URxvt*.jumpScroll: false
 URxvt*.saveLines: 100000

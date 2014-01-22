@@ -4,7 +4,7 @@
 hi StatusLine guifg=black guibg=white
 set nocompatible    " Unable Vi compatibility
 set ttyfast
-set wildmode=longest,list
+set wildmode=longest,list:longest
 set autowrite
 set textauto
 set winminheight=0
@@ -59,6 +59,15 @@ cmap Q q
 cmap Tabe tabe
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Improved status bar - airline
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '||'
+set fillchars+=stl:\ ,stlnc:\
+let g:airline_section_c = '%F'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CLIPBOARD
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "vmap <C-c> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
@@ -83,6 +92,13 @@ map <F5> :SyntasticCheck<CR>
 map <F4> :SyntasticToggleMode<CR>
 map <F10> :set paste<CR>
 map <F9>  :set wrap!<Bar>set wrap?<CR>
+nmap <F8> :TagbarToggle<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Completion Settings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set complete=.,b,u,]
+set completeopt=menu,preview
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Visual Settings
@@ -93,14 +109,14 @@ set novisualbell    " No blinking .
 set noerrorbells    " No noise.
 set vb t_vb="."
 set laststatus=2    " Always show status line.
-set tabpagemax=50   " 
+set tabpagemax=50   "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Indentation
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set tabstop=2                                   " Tabs are 2 spaces
 set shiftwidth=2                                " Define the width of a shift for the<<  and>>  commands. (Tabs under smart indent)
-set softtabstop=4                               " Define whattabstop  is to be simulated when Tab is pressed
+set softtabstop=4                               " Define what tabstop  is to be simulated when Tab is pressed
 set autoindent                                  " Automatically indent eache line like previous one
 set smartindent                                 " Automatically indent when adding a curly bracket, etc.
 set backspace=indent,eol,start                  " Allow backspacing over everything in insert mode
@@ -131,6 +147,10 @@ set nofoldenable        " dont fold by default
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " syntax stuff
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+  let html_number_lines = 0
+  let html_use_css = 0
+  let use_xhtml = 0
   let html_wrong_comments=1
   let php_sql_query = 1
   let php_baselib = 1
@@ -147,6 +167,11 @@ set nofoldenable        " dont fold by default
 
   let g:syntastic_always_populate_loc_list=1
   let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
+  let g:syntastic_javascript_checkers = ['jslint']
+  let g:syntastic_enable_signs=1
+  let g:syntastic_auto_jump=1
+  let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
+
 
 "  let g:is_bash = 1
 
@@ -169,7 +194,7 @@ set nofoldenable        " dont fold by default
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set incsearch   " Search as you type
 set ignorecase  " Ignore case when searching
-set smartcase   "
+set smartcase   " if there are caps, go case-sensitive
 
 set ofu=syntaxcomplete#Complete
 
@@ -187,6 +212,7 @@ if has("autocmd")
   au BufRead,BufNewFile *.install set filetype=php
   au BufRead,BufNewFile *.wsgi set filetype=python
 
+  autocmd FileType php set omnifunc=phpcomplete#CompletePHP
   autocmd FileType python set tabstop=8 expandtab shiftwidth=4 softtabstop=4 omnifunc=pythoncomplete#Complete
   autocmd FileType html set softtabstop=2 shiftwidth=2 textwidth=0 omnifunc=htmlcomplete#CompleteTags
   autocmd FileType css set softtabstop=2 shiftwidth=2 textwidth=0 omnifunc=csscomplete#CompleteCSS

@@ -89,7 +89,8 @@ myStartupHook = do
                 spawn "xset r rate 180 90"
                 spawn "xset b 50 440 50"
                 spawn "xrdb -load ~/.Xresources"
-                spawn "xsetroot -solid '#151515'"
+                spawn "feh --bg-scale media/img/coulds.jpg"
+                --spawn "xsetroot -solid '#151515'"
 
                 --spawn "xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1"
                 --spawn "xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 2"
