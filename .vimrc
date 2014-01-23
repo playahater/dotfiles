@@ -65,8 +65,18 @@ set noshowmode                    " get rid of the default mode indicator
 let g:airline#extensions#tabline#enabled = 1
 set fillchars+=stl:\ ,stlnc:\
 let g:airline_section_c = '%F'
+let g:airline_section_y = '-%L-'
+
 let g:bufferline_echo = 0
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#ctrlp#color_template = 'visual'
+let g:airline#extensions#tabline#show_tab_nr = 1
+let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
+let g:airline#extensions#whitespace#enabled = 1
+let g:airline#extensions#csv#enabled = 1
+let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#branch#empty_message = 'git it!!'
+
 
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
@@ -223,6 +233,7 @@ if has("autocmd")
   au BufRead,BufNewFile *.module set filetype=php
   au BufRead,BufNewFile *.install set filetype=php
   au BufRead,BufNewFile *.wsgi set filetype=python
+  au BufRead * AirlineTheme serene
 
   autocmd FileType php set omnifunc=phpcomplete#CompletePHP
   autocmd FileType python set tabstop=8 expandtab shiftwidth=4 softtabstop=4 omnifunc=pythoncomplete#Complete
