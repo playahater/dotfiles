@@ -172,6 +172,11 @@ set nofoldenable        " dont fold by default
   let g:syntastic_auto_jump=1
   let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 
+  let g:gitgutter_enabled = 1
+  let g:gitgutter_signs = 1
+  let g:gitgutter_highlight_lines = 1
+  let g:gitgutter_realtime = 1
+  let g:gitgutter_eager = 1
 
 "  let g:is_bash = 1
 
