@@ -63,8 +63,6 @@ cmap Tabe tabe
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set noshowmode                    " get rid of the default mode indicator
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '||'
 set fillchars+=stl:\ ,stlnc:\
 let g:airline_section_c = '%F'
 let g:bufferline_echo = 0
