@@ -35,6 +35,8 @@ syntax enable
 
 "buffer check
 set hidden
+set ttimeout
+set ttimeoutlen=50
 
 colorscheme railscasts
 
@@ -42,7 +44,7 @@ set wildmenu
 set numberwidth=5
 set scrolloff=10
 "set statusline=%<%F%h%m%r%h%w\ %y\ %{&ff}\ %{strftime(\"%c\",getftime(expand(\"%:p\")))}%=\ %{fugitive#statusline()}\ lin:%l\,%L\ col:%c%V\ pos:%o\ ascii:%b\ %P
-set statusline=%<%F%h%m%r%h%w%=\ %{fugitive#statusline()}\ lin:%l\,%L\ col:%c%V\ %P
+"set statusline=%<%F%h%m%r%h%w%=\ %{fugitive#statusline()}\ lin:%l\,%L\ col:%c%V\ %P
 set expandtab
 set formatoptions=rq
 set t_Co=256
@@ -59,11 +61,13 @@ cmap Tabe tabe
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Improved status bar - airline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set noshowmode                    " get rid of the default mode indicator
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '||'
 set fillchars+=stl:\ ,stlnc:\
 let g:airline_section_c = '%F'
+let g:bufferline_echo = 0
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CLIPBOARD
@@ -73,8 +77,8 @@ let g:airline_section_c = '%F'
 
 nnoremap <silent><C-n> :tabnext<CR>
 nnoremap <silent><C-p> :tabprevious<CR>
-"noremap <C-j> :bprev<CR>
-"noremap <C-k> :bnext<CR>
+noremap <C-j> :bprev<CR>
+noremap <C-k> :bnext<CR>
 
 let g:buftabs_only_basename=1
 let g:buftabs_in_statusline=1
@@ -107,7 +111,7 @@ set novisualbell    " No blinking .
 set noerrorbells    " No noise.
 set vb t_vb="."
 set laststatus=2    " Always show status line.
-set tabpagemax=50   "
+set tabpagemax=50   " set maximum number of tabs
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Indentation
