@@ -68,6 +68,12 @@ let g:airline#extensions#tabline#left_alt_sep = '||'
 set fillchars+=stl:\ ,stlnc:\
 let g:airline_section_c = '%F'
 let g:bufferline_echo = 0
+let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CLIPBOARD
