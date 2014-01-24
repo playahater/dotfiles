@@ -28,6 +28,8 @@ set viewoptions=folds,options,cursor,unix,slash " better unix / windows compatib
 set history=1000
 set gdefault
 set autoread
+set magic                         " change the way backslashes are used in search patterns
+set confirm
 syntax enable
 
 "set list
@@ -38,8 +40,10 @@ set hidden
 set ttimeout
 set ttimeoutlen=50
 
+set background=dark     " enable for dark terminals
 colorscheme railscasts
 
+set lazyredraw
 set wildmenu
 set numberwidth=5
 set scrolloff=10
@@ -57,6 +61,13 @@ cmap WQ wq
 cmap wQ wq
 cmap Q q
 cmap Tabe tabe
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Ag - code Search tool
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:agprg="ag --column --smart-case --hidden --stats"
+let g:aghighlight=1
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Improved status bar - airline
