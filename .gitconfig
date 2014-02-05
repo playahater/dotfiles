@@ -63,4 +63,4 @@
   co = checkout
   df = diff --word-diff
   ls = ls-files
-  adddatetag = 'tag date `"+%Y%m%d%H%M"`'
+	datetag = !git tag `date \"+%Y%m%d%H%M\"`
