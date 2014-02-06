@@ -246,7 +246,6 @@ if has("autocmd")
   au BufRead,BufNewFile *.module set filetype=php
   au BufRead,BufNewFile *.install set filetype=php
   au BufRead,BufNewFile *.wsgi set filetype=python
-  au BufRead * AirlineTheme serene
 
   autocmd FileType php set omnifunc=phpcomplete#CompletePHP
   autocmd FileType python set tabstop=8 expandtab shiftwidth=4 softtabstop=4 omnifunc=pythoncomplete#Complete
@@ -257,4 +256,5 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
   au FileType javascript call JavaScriptFold()
 
+  au VimEnter * AirlineTheme serene
 endif
