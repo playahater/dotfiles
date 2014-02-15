@@ -101,7 +101,6 @@ let g:airline_symbols.space = "\ua0"
 "nmap <C-v> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
 
 nmap <F1> @q
-noremap x "_x"
 nnoremap <silent><C-n> :tabnext<CR>
 nnoremap <silent><C-p> :tabprevious<CR>
 noremap <C-j> :bprev<CR>
