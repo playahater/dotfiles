@@ -9,6 +9,13 @@ softvol=yes
 softvol-max=150
 framedrop=no
 lavdopts=threads=4
+af-add=volnorm=2:0.75
+a52drc=1
+idx=yes
+double=yes
+ffactor=10
+autoq=100
+vf=pp=de,hqdn3d
 #vf-add=expand=::::1:16/9:16
 nofontconfig = 1
 subfont-encoding=unicode
