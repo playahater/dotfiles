@@ -87,7 +87,7 @@ myStartupHook = do
                 spawn "xmodmap ~/.Xmodmap"
                 spawn "xsetroot -cursor_name left_ptr"
                 spawn "xset r rate 180 90"
-                spawn "xset b 50 440 50"
+                spawn "xset -b"
                 spawn "xrdb -load ~/.Xresources"
                 spawn "feh --bg-scale media/img/coulds.jpg"
                 --spawn "xsetroot -solid '#151515'"
