@@ -1,6 +1,9 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use Vim settings, rather then Vi settings (much better!).
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"automatic reloading of vimrc"
+autocmd! bufwritepost .vimrc source %
+
 hi StatusLine guifg=black guibg=white
 set nocompatible    " Unable Vi compatibility
 set ttyfast
@@ -14,6 +17,7 @@ set winminheight=0
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set showcmd                       " Show incomplete cmds down the bottom
 set showmode                      " Show current mode down the bottom
+"set clipboard=unnamed
 set clipboard=autoselectplus      " save the selection into the system clipboard
 set ruler                         " Ruler on
 set number                        " Display line numbers
@@ -21,6 +25,7 @@ set timeoutlen=5                  " Time to wait after ESC (default causes an an
 set nobackup
 set hlsearch                      " Highlight search strings
 set nowritebackup
+set noswapfile
 set winaltkeys=yes
 set modeline
 set shortmess+=filmnrxoOtT
@@ -122,11 +127,24 @@ map <F10> :set paste<CR>
 map <F9>  :set wrap!<Bar>set wrap?<CR>
 nmap <F8> :TagbarToggle<CR>
 
+""let mapleader = "," " rebind <Leader> key
+""nnoremap . <NOP>"
+
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+
+vnoremap < <gv "better indentation
+vnoremap > >gv "better indentation
+""map <Leader>a ggVG "select all
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Completion Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set complete=.,b,u,]
-set completeopt=menu,preview
+"set completeopt=menu,preview
+set completeopt=longest,menuone
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Visual Settings
@@ -246,6 +264,7 @@ if has("autocmd")
   au BufRead,BufNewFile *.install set filetype=php
   au BufRead,BufNewFile *.wsgi set filetype=python
 
+  autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
   autocmd FileType php set omnifunc=phpcomplete#CompletePHP
   autocmd FileType python set tabstop=8 expandtab shiftwidth=4 softtabstop=4 omnifunc=pythoncomplete#Complete
   autocmd FileType html set softtabstop=2 shiftwidth=2 textwidth=0 omnifunc=htmlcomplete#CompleteTags
