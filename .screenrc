@@ -4,6 +4,7 @@ defutf8 on
 setenv DISPLAY ':0'
 #term screen-256color-bce
 term xterm-256color
+termcapinfo xterm* ti@:te@
 attrcolor b ".I"
 #defmonitor on
 shell zsh

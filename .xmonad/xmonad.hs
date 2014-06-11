@@ -16,7 +16,7 @@ import qualified XMonad.Actions.Submap as SM
 import XMonad.Actions.GridSelect
 
 -- utils
-import XMonad.Util.Scratchpad (scratchpadSpawnAction, scratchpadManageHook, scratchpadFilterOutWorkspace)
+import XMonad.Util.Scratchpad (scratchpadSpawnAction, scratchpadSpawnActionCustom, scratchpadManageHook, scratchpadFilterOutWorkspace)
 import XMonad.Util.Run(spawnPipe)
 import qualified XMonad.Prompt    as P
 import XMonad.Prompt.Shell
@@ -239,6 +239,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
 
     -- scratchpad
     , ((modMask , xK_grave), scratchpadSpawnAction defaultConfig  {terminal = myTerminal})
+    -- , ((modMask , xK_grave),  scratchpadSpawnActionCustom "urxvt -e screen")
 
     -- volume control
     -- , ((0, 0x1008ff13), spawn "amixer -q set Master 1dB+") -- raise volume

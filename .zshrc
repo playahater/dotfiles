@@ -181,6 +181,7 @@ alias tvfeed="curl 'http://api.dailytvtorrents.org/1.0/shows.getTextInfo?show_na
 alias clear="echo NO!"
 alias fmplayer="mplayer /proc/`pidof plugin-container`/fd/15"
 alias composer="php /home/play/projects/composer/composer.phar"
+alias mediamode="xset s off"
 
 rmmodcomplete () { reply=(`/sbin/lsmod|cut -f1 -d" "|grep -v Module`) }
 compctl -K rmmodcomplete rmmod
