@@ -275,11 +275,11 @@ autocenter_mode = "yes"
 #progressbar_look = "=⟫-"
 progressbar_look = "◾◾◽"
 #
-default_place_to_search_in = "~/.mpd/mpd.db"
+#default_place_to_search_in = "~/.mpd/mpd.db"
 #
 user_interface = "alternative" (classic/alternative)
 #
-media_library_left_column = "a" (possible values: a,y,g,c,p, legend above)
+#media_library_left_column = "a" (possible values: a,y,g,c,p, legend above)
 #
 #default_find_mode = "wrapped" (wrapped/normal)
 #
@@ -295,7 +295,7 @@ statusbar_visibility = "yes"
 #
 header_text_scrolling = "yes"
 #
-fancy_scrolling = "yes"
+#fancy_scrolling = "yes"
 #
 #cyclic_scrolling = "yes"
 #
