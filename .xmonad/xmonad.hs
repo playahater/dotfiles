@@ -246,10 +246,13 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     -- , ((0, 0x1008ff11), spawn "amixer -q set Master 1dB-") -- lower volume
     , ((0, 0x1008ff13), spawn "/usr/bin/vol_up") -- raise volume
     , ((0, 0x1008ff11), spawn "/usr/bin/vol_down") -- lower volume
-    , ((modMask, xK_s ),spawn "xset dpms force off")
 
     -- take screenshot
     , ((0, xK_Print), spawn "import -window root ~/media/screenshots/$(date '+%Y%m%d-%H%M%S').png")
+
+    -- Handle xrandr
+    , ((modMask , xK_F7), spawn "single-lvds")
+    , ((modMask .|. shiftMask , xK_F7), spawn "single-vga")
 
     -- quit, or restart
     , ((modMask .|. shiftMask, xK_q ), io (exitWith ExitSuccess))

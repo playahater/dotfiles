@@ -23,7 +23,8 @@ msgwait 1
 acladd play
 hardstatus alwayslastline
 sorendition +b kG
-hardstatus string '%{= kG}[ %=%{W}%?%-Lw%?%{g}(%{W}%n*%f %t%?(%u)%?%{g})%{W}%?%+Lw%?%?%= %{g}][%{B} %{W}%l %{g}]'
+#hardstatus string '%{= kG}[ %=%{W}%?%-Lw%?%{g}(%{W}%n*%f %t%?(%u)%?%{g})%{W}%?%+Lw%?%?%= %{g}][%{B} %{W}%l %{g}]'
+hardstatus string "%{.kW}%-w%{+b r}%n %t%{-}%+w"
 #hardstatus alwayslastline "%{=b}%{G} : %{b}%w %=%{kG}%C%A"
 
 screen    -t root                  0

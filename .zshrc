@@ -11,6 +11,7 @@ export LS_COLORS
 export ZLS_COLORS
 export EDITOR="vim"
 export PAGER=/usr/bin/vimpager
+export TERM=xterm-256color
 
 setopt appendhistory
 setopt autopushd pushdminus pushdsilent pushdtohome
@@ -19,7 +20,6 @@ setopt cdablevars
 setopt ignoreeof
 setopt interactivecomments
 setopt nobanghist
-#setopt noclobber
 setopt HIST_REDUCE_BLANKS
 setopt HIST_IGNORE_SPACE
 setopt SH_WORD_SPLIT
@@ -145,12 +145,11 @@ alias mount='mount -vv'
 alias gping='ping google.com'
 alias myip="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
 alias screencast="ffmpeg -f x11grab -r 25 -s 1280x800 -i :0.0 /tmp/screencast.mpg"
-alias graball="ffmpeg -y -f alsa -ac 2 -i hw:0,0 -f x11grab -r 30 -s `xdpyinfo | grep 'dimensions:'|awk '{print $2}'` -i :0.0 -acodec pcm_s16le /tmp/output.wav -an -acodec pcm_s16le -vcodec libx264 -preset ultrafast -crf 0 -threads 0 /tmp/output.mp4"
+#alias graball="ffmpeg -y -f alsa -ac 2 -i hw:0,0 -f x11grab -r 30 -s `xdpyinfo | grep 'dimensions:'|awk '{print $2}'` -i :0.0 -acodec pcm_s16le /tmp/output.wav -an -acodec pcm_s16le -vcodec libx264 -preset ultrafast -crf 0 -threads 0 /tmp/output.mp4"
 alias twit.tv='mplayer http://bglive-a.bitgravity.com/twit/live/high'
 alias webcam="mplayer -fps 24 tv://"
 alias sopcast="mplayer http://127.0.0.1:8908/tv.asf"
 #alias webcam="mplayer tv:// -tv driver=v4l:width=352:height=288:device=/dev/video0 "
-alias fabric="fab -f /srv/http/m3com/scripts/python/deploy/fabfile.py"
 alias g='git'
 alias gb='git branch -v'
 alias gc='git commit -a -m'
@@ -181,7 +180,7 @@ alias tvfeed="curl 'http://api.dailytvtorrents.org/1.0/shows.getTextInfo?show_na
 alias clear="echo NO!"
 alias fmplayer="mplayer /proc/`pidof plugin-container`/fd/15"
 alias composer="php /home/play/projects/composer/composer.phar"
-alias mediamode="xset s off"
+#alias mc='mc -bd'
 
 rmmodcomplete () { reply=(`/sbin/lsmod|cut -f1 -d" "|grep -v Module`) }
 compctl -K rmmodcomplete rmmod
@@ -242,15 +241,15 @@ function dual-left-of () {
   xrandr --output VGA1 --primary --left-of LVDS1 --output LVDS1 --auto
 }
 
-function single-vga () {
-  xrandr --output LVDS1 --off
-  xrandr --output VGA1 --auto
-}
-
-function single-lvds () {
-  xrandr --output VGA1 --off
-  xrandr --output LVDS1 --auto
-}
+#function single-vga () {
+#  xrandr --output LVDS1 --off
+#  xrandr --output VGA1 --auto
+#}
+#
+#function single-lvds () {
+#  xrandr --output VGA1 --off
+#  xrandr --output LVDS1 --auto
+#}
 
 function vacuum-mozilla() {
   for i in ~/.mozilla/firefox/mufwh4cg.default/*.sqlite
