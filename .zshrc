@@ -123,7 +123,7 @@ zstyle ':completion:*:scp:*' tag-order \
 zstyle ':completion:*:scp:*' group-order \
    files all-files users hosts-domain hosts-host hosts-ipaddr
 
-# aliases
+# system aliases
 alias less=$PAGER
 alias more=$PAGER
 alias zless=$PAGER
@@ -131,25 +131,36 @@ alias ls='ls -lha --color=always'
 alias sl='ls -lha --color=always'
 alias grep='grep --color=always'
 alias df='df -hT'
-alias ping='ping -c 3'
 alias rm="rm -v"
 alias mv="mv -v"
-alias top='htop'
 alias ps='ps faux'
 alias du='du -sh'
-alias free='free -m'
 alias untbz2='tar -xjvf'
 alias untgz='tar -xzvf'
-alias brzinski='python2.7 -m SimpleHTTPServer'
 alias mount='mount -vv'
-alias gping='ping google.com'
+
+# custom aliases
+alias brzinski='python2.7 -m SimpleHTTPServer'
+alias gping='ping -c 3 google.com'
 alias myip="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
 alias screencast="ffmpeg -f x11grab -r 25 -s 1280x800 -i :0.0 /tmp/screencast.mpg"
-#alias graball="ffmpeg -y -f alsa -ac 2 -i hw:0,0 -f x11grab -r 30 -s `xdpyinfo | grep 'dimensions:'|awk '{print $2}'` -i :0.0 -acodec pcm_s16le /tmp/output.wav -an -acodec pcm_s16le -vcodec libx264 -preset ultrafast -crf 0 -threads 0 /tmp/output.mp4"
 alias twit.tv='mplayer http://bglive-a.bitgravity.com/twit/live/high'
 alias webcam="mplayer -fps 24 tv://"
 alias sopcast="mplayer http://127.0.0.1:8908/tv.asf"
+alias begraund='feh --bg-scale'
+alias plantronics='bluez-simple-agent hci0 00:1C:EF:7E:A1:88'
+alias dozeboot='VBoxManage startvm sept'
+alias tvfeed="curl 'http://api.dailytvtorrents.org/1.0/shows.getTextInfo?show_names=suits,grimm,dexter,the-big-bang-theory,breaking-bad,eureka,the-mentalist,warehouse-13,fringe,burn-notice,top-gear,castle,game-of-thrones&colors=yes&links=yes'"
+alias composer="php /home/play/projects/composer/composer.phar"
+alias clear="echo NO!"
 #alias webcam="mplayer tv:// -tv driver=v4l:width=352:height=288:device=/dev/video0 "
+#alias graball="ffmpeg -y -f alsa -ac 2 -i hw:0,0 -f x11grab -r 30 -s `xdpyinfo | grep 'dimensions:'|awk '{print $2}'` -i :0.0 -acodec pcm_s16le /tmp/output.wav -an -acodec pcm_s16le -vcodec libx264 -preset ultrafast -crf 0 -threads 0 /tmp/output.mp4"
+#alias pmplayer='mplayer -ao alsa:device=btheadset'
+#alias drush='/usr/bin/php /home/play/stuff/drupal/drush/drush.php'
+#alias firedatabases="for database in ~/.mozilla/firefox/*/*.sqlite; do echo processing $database... ; sqlite3 $database 'VACUUM;'; done ;"
+#alias netbeans='netbeans --laf GTK'
+
+# git aliases
 alias g='git'
 alias gb='git branch -v'
 alias gc='git commit -a -m'
@@ -167,20 +178,6 @@ alias gdc='git diff --cached'
 alias gf='git diff --stat --color'
 alias git-diff-branch='git diff --stat --color master..staging'
 alias git-deleted="git log --all --pretty=format: --name-only --diff-filter=D | sort -u"
-alias begraund='feh --bg-scale'
-alias firefox='firefox -no-remote -no-remote -ProfileManager'
-alias devping='ping 192.168.0.240'
-#alias netbeans='netbeans --laf GTK'
-alias plantronics='bluez-simple-agent hci0 00:1C:EF:7E:A1:88'
-alias pmplayer='mplayer -ao alsa:device=btheadset'
-#alias drush='/usr/bin/php /home/play/stuff/drupal/drush/drush.php'
-#alias firedatabases="for database in ~/.mozilla/firefox/*/*.sqlite; do echo processing $database... ; sqlite3 $database 'VACUUM;'; done ;"
-alias dozeboot='VBoxManage startvm sept'
-alias tvfeed="curl 'http://api.dailytvtorrents.org/1.0/shows.getTextInfo?show_names=suits,grimm,dexter,the-big-bang-theory,breaking-bad,eureka,the-mentalist,warehouse-13,fringe,burn-notice,top-gear,castle,game-of-thrones&colors=yes&links=yes'"
-alias clear="echo NO!"
-alias fmplayer="mplayer /proc/`pidof plugin-container`/fd/15"
-alias composer="php /home/play/projects/composer/composer.phar"
-#alias mc='mc -bd'
 
 rmmodcomplete () { reply=(`/sbin/lsmod|cut -f1 -d" "|grep -v Module`) }
 compctl -K rmmodcomplete rmmod

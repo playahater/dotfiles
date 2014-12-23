@@ -3,7 +3,7 @@
 
 ontop=yes
 vo=xv
-ao=alsa
+ao=pulse
 channels=2
 softvol=yes
 softvol-max=150

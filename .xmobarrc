@@ -1,21 +1,24 @@
 Config { font = "xft:Liberation Mono:size=9:antialias=true:hinting=true"
        , borderColor = "black"
        , border = TopB
-       , position = Top
-       , lowerOnStart = True
-       , persistent = False
        , bgColor = "#151515"
        , fgColor = "#D7D0C7"
+       , position = Top
+       , persistent = False
        , hideOnStart = False
+       , lowerOnStart = True
+       , allDesktops = True
+       , overrideRedirect = True
+       , pickBroadest = False
 
-       , commands = [ Run Weather "LYBE" ["-t","<tempC> C","-L","10","-H","28","--normal","#B8D68C","--high","#E84F4F","--low","#6D878D"] 18000
+       , commands = [ Run Weather "LDPL" ["-t","<tempC>","-L","10","-H","28","--normal","#B8D68C","--high","#E84F4F","--low","#6D878D"] 18000
                     , Run MultiCpu ["-L","0","-H","70","--normal","#B8D68C","--high","#E84F4F"] 10
                     , Run CpuFreq ["-t", "@<cpu0>", "-L", "0", "-H", "2","-l", "#B8D68C", "-n","#E1AA5D", "-h", "#E84F4F"] 50
-                    , Run Memory ["-t","Mem: <usedratio>% <fc=#A0CF5D>/</fc> <used> MB", "-L","4000","-H","7300", "-l", "#B8D68C", "--normal","#E1AA5D","--high","#E84F4F"] 50
+                    , Run Memory ["-t","Mem: <used> MB", "-L","4000","-H","7300", "-l", "#B8D68C", "--normal","#E1AA5D","--high","#E84F4F"] 50
                     , Run Network "wlan0" ["-L","0","-H","480","-l", "#B8D68C", "--normal","#E1AA5D","--high","#E84F4F"] 5
                     , Run Network "eth0" ["-L","0","-H","480","-l", "#B8D68C", "--normal","#E1AA5D","--high","#E84F4F"] 5
                     , Run Wireless "wlan0" [] 10
-                    , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
+                    , Run Date "%a %b %_d %Y %H:%M" "date" 10
                     , Run TopProc ["-l", "#B8D68C", "--normal","#E1AA5D","--high","#E84F4F"] 10
                     , Run TopMem ["-l", "#B8D68C", "--normal","#E1AA5D","--high","#E84F4F"] 10
                     , Run ThermalZone 0 ["-t","<temp> C", "-L","0","-H","70","--normal","#B8D68C","--high","#E84F4F"] 30
@@ -25,5 +28,5 @@ Config { font = "xft:Liberation Mono:size=9:antialias=true:hinting=true"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{<fc=#A0CF5D>|</fc> %LYBE% <fc=#A0CF5D>|</fc> %multicpu% %cpufreq% <fc=#A0CF5D>/</fc> %top% <fc=#A0CF5D>/</fc> %topmem% <fc=#A0CF5D>/</fc> %thermal0% <fc=#A0CF5D>|</fc> %memory% <fc=#A0CF5D>|</fc> %disku% <fc=#A0CF5D>|</fc> %eth0% %wlan0% - %wlan0wi%  <fc=#A0CF5D>|</fc> %battery% <fc=#A0CF5D>|</fc><fc=#B8D68C> %date%</fc>"
+       , template = "%StdinReader% }{<fc=#A0CF5D>|</fc> %LDPL% <fc=#A0CF5D>|</fc> %multicpu% %cpufreq% <fc=#A0CF5D>/</fc> %top% <fc=#A0CF5D>/</fc> %thermal0% <fc=#A0CF5D>|</fc> %memory% <fc=#A0CF5D>|</fc>%eth0% %wlan0% <fc=#A0CF5D>/</fc> %wlan0wi% <fc=#A0CF5D>|</fc> %battery% <fc=#A0CF5D>|</fc><fc=#B8D68C> %date% </fc>"
        }
