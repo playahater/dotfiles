@@ -89,7 +89,7 @@ myStartupHook = do
                 spawn "xset r rate 180 90"
                 spawn "xset -b"
                 spawn "xrdb -load ~/.Xresources"
-                spawn "feh --bg-scale media/img/coulds.jpg"
+                spawn "feh --bg-scale media/img/pirate.jpg"
                 --spawn "xsetroot -solid '#151515'"
 
                 --spawn "xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1"
@@ -244,8 +244,8 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     -- volume control
     -- , ((0, 0x1008ff13), spawn "amixer -q set Master 1dB+") -- raise volume
     -- , ((0, 0x1008ff11), spawn "amixer -q set Master 1dB-") -- lower volume
-    , ((0, 0x1008ff13), spawn "/usr/bin/vol_up") -- raise volume
-    , ((0, 0x1008ff11), spawn "/usr/bin/vol_down") -- lower volume
+    -- , ((0, 0x1008ff13), spawn "/usr/bin/vol_up") -- raise volume
+    -- , ((0, 0x1008ff11), spawn "/usr/bin/vol_down") -- lower volume
 
     -- take screenshot
     , ((0, xK_Print), spawn "import -window root ~/media/screenshots/$(date '+%Y%m%d-%H%M%S').png")

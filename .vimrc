@@ -146,8 +146,8 @@ set tabpagemax=50   " set maximum number of tabs
 
 " Indentation
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set tabstop=2                                   " Tabs are 2 spaces
-set shiftwidth=2                                " Define the width of a shift for the<<  and>>  commands. (Tabs under smart indent)
+set tabstop=4                                   " Tabs are 4 spaces
+set shiftwidth=4                                " Define the width of a shift for the<<  and>>  commands. (Tabs under smart indent)
 set softtabstop=4                               " Define what tabstop  is to be simulated when Tab is pressed
 set autoindent                                  " Automatically indent eache line like previous one
 set smartindent                                 " Automatically indent when adding a curly bracket, etc.
@@ -255,8 +255,8 @@ if has("autocmd")
   autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
   autocmd FileType php set omnifunc=phpcomplete#CompletePHP
   autocmd FileType python set tabstop=8 expandtab shiftwidth=4 softtabstop=4 omnifunc=pythoncomplete#Complete
-  autocmd FileType html set softtabstop=2 shiftwidth=2 textwidth=0 omnifunc=htmlcomplete#CompleteTags
-  autocmd FileType css set softtabstop=2 shiftwidth=2 textwidth=0 omnifunc=csscomplete#CompleteCSS
+  autocmd FileType html set softtabstop=4 shiftwidth=4 textwidth=0 omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType css set softtabstop=4 shiftwidth=4 textwidth=0 omnifunc=csscomplete#CompleteCSS
   autocmd FileType c,cpp,java,php,module,tpl.php,js,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
 
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
