@@ -61,17 +61,13 @@ main = do
                 , focusFollowsMouse = False
                 }
 
-
-
 -- hooks
 -- automaticly switching app to workspace
 myManageHook :: ManageHook
-myManageHook = scratchpadManageHook (W.RationalRect 0.07 0.09 0.86 0.85) <+> ( composeAll . concat $
+myManageHook = scratchpadManageHook (W.RationalRect 0.03 0.025 0.95 0.97) <+> ( composeAll . concat $
                 [[isDialog                       --> doFloat
---                , isFullscreen --> doFullFloat
                 , isFullscreen --> doFloat
                 , className =?  "Xmessage"  --> doFloat
-                , className =? "Save a Bookmark on Delicious"  --> doFloat
                 , className =? "8:gimp"           --> doShift "8:g"
                 , className =? "VirtualBox" --> doShift "5:v"
                 , className =? "Zathura"    --> doShift "6:m"
@@ -90,19 +86,16 @@ myStartupHook = do
                 spawn "xset -b"
                 spawn "xrdb -load ~/.Xresources"
                 spawn "feh --bg-scale media/img/pirate.jpg"
+                spawn "xinput set-prop 'TPPS/2 IBM TrackPoint' 'Evdev Wheel Emulation' 1"
+                spawn "xinput set-prop 'TPPS/2 IBM TrackPoint' 'Evdev Wheel Emulation Button' 2"
+                spawn "xinput set-prop 'TPPS/2 IBM TrackPoint' 'Evdev Wheel Emulation Timeout' 200"
+                spawn "xinput set-prop 'TPPS/2 IBM TrackPoint' 'Evdev Wheel Emulation Axes' 6 7 4 5"
                 --spawn "xsetroot -solid '#151515'"
-
-                --spawn "xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1"
-                --spawn "xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 2"
-                --spawn "xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Timeout" 200"
-                --spawn "xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 6 7 4 5"
 
 
 --logHook
 myLogHook :: Handle -> X ()
 myLogHook h = dynamicLogWithPP $ customPP { ppOutput = hPutStrLn h }
-
-
 
 ---- Looks --
 ---- bar
@@ -198,8 +191,8 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     , ((modMask, xK_c ), kill)
 
     -- opening program launcher / search engine
---    ,((modMask , xK_F2), runOrRaisePrompt myXPConfig)
-    ,((modMask , xK_F2), shellPrompt myXPConfig)
+    ,((modMask , xK_F2), runOrRaisePrompt myXPConfig)
+--    ,((modMask , xK_F2), shellPrompt myXPConfig)
 
     -- GridSelect
     , ((modMask, xK_g), goToSelected defaultGSConfig)
@@ -238,14 +231,12 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     , ((modMask .|. shiftMask, xK_l ), sendMessage MirrorExpand)
 
     -- scratchpad
-    , ((modMask , xK_grave), scratchpadSpawnAction defaultConfig  {terminal = myTerminal})
-    -- , ((modMask , xK_grave),  scratchpadSpawnActionCustom "urxvt -e screen")
+    , ((modMask , xK_grave),  scratchpadSpawnActionCustom "urxvt -name scratchpad -e screen -R")
 
     -- volume control
-    -- , ((0, 0x1008ff13), spawn "amixer -q set Master 1dB+") -- raise volume
-    -- , ((0, 0x1008ff11), spawn "amixer -q set Master 1dB-") -- lower volume
-    -- , ((0, 0x1008ff13), spawn "/usr/bin/vol_up") -- raise volume
-    -- , ((0, 0x1008ff11), spawn "/usr/bin/vol_down") -- lower volume
+    , ((0, 0x1008ff13), spawn "/usr/bin/pulseaudio-ctl up") -- raise volume
+    , ((0, 0x1008ff11), spawn "/usr/bin/pulseaudio-ctl down") -- lower volume
+    , ((0, 0x1008ff12), spawn "/usr/bin/pulseaudio-ctl mute") -- mute volume
 
     -- take screenshot
     , ((0, xK_Print), spawn "import -window root ~/media/screenshots/$(date '+%Y%m%d-%H%M%S').png")
