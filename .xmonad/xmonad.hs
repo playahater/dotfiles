@@ -148,13 +148,10 @@ myLayoutHook  = onWorkspace "1:c" imLayout $ onWorkspace "2:w" webL $ standardLa
         full    = noBorders Full
 
         --Im Layout
-        imLayout = avoidStruts $ smartBorders $ reflectHoriz $ withIM skypeRatio skypeRoster (tiled ||| reflectTiled ||| Grid) where
+        imLayout = avoidStruts $ smartBorders $ reflectHoriz $ withIM skypeRatio skypeRoster (tabLayout) where
                 chatLayout  = Grid
                 skypeRatio  = (1%6)
                 skypeRoster = (ClassName "Skype") `And` (Not (Title "Options")) `And` (Not (Role "Chats")) `And` (Not (Role "CallWindowForm"))
-
-        --Gimp Layout
---        gimpL = avoidStruts $ smartBorders $ withIM (0.11) (Role "gimp-toolbox") $ reflectHoriz $ withIM (0.15) (Role "gimp-dock") tabLayout
 
         webL      = avoidStruts $ full
 

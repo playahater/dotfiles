@@ -13,6 +13,9 @@ export EDITOR="vim"
 export PAGER=/usr/bin/vimpager
 export TERM=xterm-256color
 
+setopt APPEND_HISTORY
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
 setopt appendhistory
 setopt autopushd pushdminus pushdsilent pushdtohome
 setopt autocd
