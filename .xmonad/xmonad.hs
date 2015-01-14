@@ -18,10 +18,9 @@ import XMonad.Actions.GridSelect
 -- utils
 import XMonad.Util.Scratchpad (scratchpadSpawnAction, scratchpadSpawnActionCustom, scratchpadManageHook, scratchpadFilterOutWorkspace)
 import XMonad.Util.Run(spawnPipe)
-import qualified XMonad.Prompt    as P
+import XMonad.Prompt
 import XMonad.Prompt.Shell
 import XMonad.Prompt.RunOrRaise
-import XMonad.Prompt
 
 -- hooks
 import XMonad.Hooks.DynamicLog
@@ -36,82 +35,109 @@ import XMonad.Layout.ResizableTile
 import XMonad.Layout.Reflect
 import XMonad.Layout.IM
 import XMonad.Layout.Tabbed
-import XMonad.Layout.PerWorkspace (onWorkspace)
+import XMonad.Layout.PerWorkspace
 import XMonad.Layout.Grid
 
 -- Data.Ratio for IM layout
 import Data.Ratio ((%))
 
-
 -- Main --
 main = do
-        xmproc <- spawnPipe "xmobar"  -- start xmobar
-        xmonad  $ withUrgencyHook NoUrgencyHook $ defaultConfig
-                { manageHook = myManageHook
-                , layoutHook = myLayoutHook
-                , borderWidth = myBorderWidth
-                , normalBorderColor = myNormalBorderColor
-                , focusedBorderColor = myFocusedBorderColor
-                , keys = myKeys
-                , logHook = myLogHook xmproc
-                , modMask = myModMask
-                , startupHook = myStartupHook
-                , terminal = myTerminal
-                , workspaces = myWorkspaces
-                , focusFollowsMouse = False
-                }
+    xmproc <- spawnPipe "xmobar"  -- start xmobar
+    xmonad  $ withUrgencyHook NoUrgencyHook $ defaultConfig {
+          manageHook = myManageHook <+> manageDocks
+        , layoutHook = myLayoutHook
+        , borderWidth = myBorderWidth
+        , normalBorderColor = myNormalBorderColor
+        , focusedBorderColor = myFocusedBorderColor
+        , keys = myKeys
+        , logHook = myLogHook xmproc
+        , modMask = myModMask
+        , startupHook = myStartupHook
+        , terminal = myTerminal
+        , workspaces = myWorkspaces
+        , focusFollowsMouse = False
+    }
 
--- hooks
--- automaticly switching app to workspace
+-- workspaces
+myWorkspaces :: [WorkspaceId]
+myWorkspaces = ["chat", "web", "3", "4", "5" ,"6", "7", "8", "9"]
+
+-- LayoutHook
+myLayoutHook = onWorkspace "chat" imL $ onWorkspace "web" webL $ standardLayouts where
+
+    -- Layouts
+    standardLayouts = avoidStruts $ (tiled ||| tabL ||| reflectTiled ||| Mirror tiled |||  Grid ||| Full)
+    tiled = smartBorders (ResizableTall 1 (2/100) (1/2) [])
+    reflectTiled = (reflectHoriz tiled)
+    tabL = (tabbedBottom shrinkText myTheme)
+    full = noBorders Full
+    webL = avoidStruts $ full
+    imL = avoidStruts $ smartBorders $ reflectHoriz $
+               withIM (1%5) (Or (And (ClassName "Pidgin") (Role "buddy_list"))
+                            (And (ClassName "Skype")  (And (Role "") (Not (Title "Options"))))) (tabL)
+
+-- ManageHook
 myManageHook :: ManageHook
-myManageHook = scratchpadManageHook (W.RationalRect 0.03 0.025 0.95 0.97) <+> ( composeAll . concat $
-                [[isDialog                       --> doFloat
-                , isFullscreen --> doFloat
-                , className =?  "Xmessage"  --> doFloat
-                , className =? "8:gimp"           --> doShift "8:g"
-                , className =? "VirtualBox" --> doShift "5:v"
-                , className =? "Zathura"    --> doShift "6:m"
-                ]]
-                        )  <+> manageDocks
+myManageHook = scratchpadManageHook (W.RationalRect 0.03 0.025 0.95 0.97) <+> (
+         composeAll . concat $ [[
+               isDialog --> doFloat
+             , isFullscreen --> doFloat
+             , className =? "Xmessage" --> doFloat
+             , className =? "Skype"    --> doShift "chat"
+             , className =? "Firefox"  --> doShift "web"
+             , className =? "Chromium"  --> doShift "web"
+         ]]
+    )
 
-
-
---StartupHook
+-- StartupHook
 myStartupHook :: X ()
 myStartupHook = do
-                setWMName "LG3D"
-                spawn "xmodmap ~/.Xmodmap"
-                spawn "xsetroot -cursor_name left_ptr"
-                spawn "xset r rate 180 90"
-                spawn "xset -b"
-                spawn "xrdb -load ~/.Xresources"
-                spawn "feh --bg-scale media/img/pirate.jpg"
-                spawn "xinput set-prop 'TPPS/2 IBM TrackPoint' 'Evdev Wheel Emulation' 1"
-                spawn "xinput set-prop 'TPPS/2 IBM TrackPoint' 'Evdev Wheel Emulation Button' 2"
-                spawn "xinput set-prop 'TPPS/2 IBM TrackPoint' 'Evdev Wheel Emulation Timeout' 200"
-                spawn "xinput set-prop 'TPPS/2 IBM TrackPoint' 'Evdev Wheel Emulation Axes' 6 7 4 5"
-                --spawn "xsetroot -solid '#151515'"
+    setWMName "LG3D"
+    spawn "xmodmap ~/.Xmodmap"
+    spawn "xsetroot -cursor_name left_ptr"
+    spawn "xset r rate 180 90"
+    spawn "xset -b"
+    spawn "xrdb -load ~/.Xresources"
+    spawn "feh --bg-scale media/img/pirate.jpg"
+    spawn "xinput set-prop 'TPPS/2 IBM TrackPoint' 'Evdev Wheel Emulation' 1"
+    spawn "xinput set-prop 'TPPS/2 IBM TrackPoint' 'Evdev Wheel Emulation Button' 2"
+    spawn "xinput set-prop 'TPPS/2 IBM TrackPoint' 'Evdev Wheel Emulation Timeout' 200"
+    spawn "xinput set-prop 'TPPS/2 IBM TrackPoint' 'Evdev Wheel Emulation Axes' 6 7 4 5"
+    --spawn "xsetroot -solid '#151515'"
 
-
---logHook
+-- logHook
 myLogHook :: Handle -> X ()
-myLogHook h = dynamicLogWithPP $ customPP { ppOutput = hPutStrLn h }
+myLogHook h = dynamicLogWithPP $ customPP {
+    ppOutput = hPutStrLn h
+}
 
----- Looks --
----- bar
+-- bar
 customPP :: PP
 customPP = defaultPP {
-                            ppHidden = xmobarColor "#B8D68C" ""
-                          , ppCurrent = xmobarColor "#F39D21" "" . wrap "[" "]"
-                          , ppUrgent = xmobarColor "#E84F4F" "" . wrap "*" "*"
-                          , ppLayout = \x -> ""
-                          , ppTitle = xmobarColor "#B8D68C" "" . shorten 120
-                          , ppSep = "<fc=#A0CF5D> || </fc>"
-                     }
+      ppHidden = xmobarColor "#B8D68C" ""
+    , ppCurrent = xmobarColor "#F39D21" "" . wrap "[" "]"
+    , ppUrgent = xmobarColor "#E84F4F" "" . wrap "*" "*"
+    , ppLayout = \x -> ""
+    , ppTitle = xmobarColor "#B8D68C" "" . shorten 120
+    , ppSep = "<fc=#A0CF5D> || </fc>"
+}
+
+-- terminal
+myTerminal :: String
+myTerminal = "urxvt"
+
+-- borders
+myBorderWidth :: Dimension
+myBorderWidth = 0
+myNormalBorderColor, myFocusedBorderColor :: String
+myNormalBorderColor = "#333333"
+myFocusedBorderColor = "#400000"
+
 
 -- some nice colors for the prompt windows
-myXPConfig = defaultXPConfig
-    { font = "xft:Liberation Mono:size=10:antialias=true:hinting=true"
+myXPConfig = defaultXPConfig {
+      font = "xft:Liberation Mono:size=10:antialias=true:hinting=true"
     , bgColor = "#151515"
     , fgColor = "#D7D0C7"
     , fgHLight = "#D7D0C7"
@@ -121,10 +147,11 @@ myXPConfig = defaultXPConfig
     , position = Bottom
     , height = 14
     , historySize = 50
-    }
+}
 
---- MyTheme For Tabbed layout
-myTheme = defaultTheme { decoHeight = 14
+-- MyTheme For Tabbed layout
+myTheme = defaultTheme {
+      decoHeight = 14
     , activeColor = "#151515"
     , activeBorderColor = "#151515"
     , activeTextColor = "#D7D0C7"
@@ -135,126 +162,87 @@ myTheme = defaultTheme { decoHeight = 14
     , urgentTextColor = "#D7D0C7"
 }
 
---LayoutHook
-myLayoutHook  = onWorkspace "1:c" imLayout $ onWorkspace "2:w" webL $ standardLayouts
-   where
-
-        standardLayouts = avoidStruts $ (tiled ||| tabLayout ||| reflectTiled ||| Mirror tiled |||  Grid ||| Full)
-
-        --Layouts
-        tiled     = smartBorders (ResizableTall 1 (2/100) (1/2) [])
-        reflectTiled = (reflectHoriz tiled)
-        tabLayout = (tabbedBottom shrinkText myTheme)
-        full    = noBorders Full
-
-        --Im Layout
-        imLayout = avoidStruts $ smartBorders $ reflectHoriz $ withIM skypeRatio skypeRoster (tabLayout) where
-                chatLayout  = Grid
-                skypeRatio  = (1%6)
-                skypeRoster = (ClassName "Skype") `And` (Not (Title "Options")) `And` (Not (Role "Chats")) `And` (Not (Role "CallWindowForm"))
-
-        webL      = avoidStruts $ full
-
--------------------------------------------------------------------------------
----- Terminal --
-myTerminal :: String
-myTerminal = "urxvt"
-
--------------------------------------------------------------------------------
--- Keys/Button bindings --
 -- modmask
 myModMask :: KeyMask
 myModMask = mod4Mask
 
--- borders
-myBorderWidth :: Dimension
-myBorderWidth = 0
---
-myNormalBorderColor, myFocusedBorderColor :: String
-myNormalBorderColor = "#333333"
-myFocusedBorderColor = "#400000"
---
-
---Workspaces
-myWorkspaces :: [WorkspaceId]
-myWorkspaces = ["1:c", "2:w", "3:c", "4:w", "5:v" ,"6:m", "7:w", "8:g", "9:v"]
---
-
 -- keys
 myKeys :: XConfig Layout -> M.Map (KeyMask, KeySym) (X ())
 myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
-    -- killing programs
-    [ ((modMask, xK_F1), spawn $ XMonad.terminal conf)
-    , ((modMask, xK_c ), kill)
+    [
+        -- killing programs
+          ((modMask, xK_F1), spawn $ XMonad.terminal conf)
+        , ((modMask, xK_c ), kill)
 
-    -- opening program launcher / search engine
-    ,((modMask , xK_F2), runOrRaisePrompt myXPConfig)
---    ,((modMask , xK_F2), shellPrompt myXPConfig)
+        -- opening program launcher / search engine
+        ,((modMask , xK_F2), runOrRaisePrompt myXPConfig)
+        -- ,((modMask , xK_F2), shellPrompt myXPConfig)
 
-    -- GridSelect
-    , ((modMask, xK_g), goToSelected defaultGSConfig)
+        -- GridSelect
+        , ((modMask, xK_g), goToSelected defaultGSConfig)
 
-    -- layouts
-    , ((modMask, xK_space ), sendMessage NextLayout)
-    , ((modMask .|. shiftMask, xK_space ), setLayout $ XMonad.layoutHook conf)
-    , ((modMask, xK_b ), sendMessage ToggleStruts)
+        -- layouts
+        , ((modMask, xK_space ), sendMessage NextLayout)
+        , ((modMask .|. shiftMask, xK_space ), setLayout $ XMonad.layoutHook conf)
+        , ((modMask, xK_b ), sendMessage ToggleStruts)
 
-    -- floating layer stuff
-    , ((modMask, xK_t ), withFocused $ windows . W.sink)
+        -- floating layer stuff
+        , ((modMask, xK_t ), withFocused $ windows . W.sink)
 
-    -- refresh'
-    , ((modMask, xK_n ), refresh)
-
-    -- focus
-    , ((modMask, xK_Tab ), windows W.focusDown)
-    , ((modMask, xK_j ), windows W.focusDown)
-    , ((modMask, xK_k ), windows W.focusUp)
-    , ((modMask, xK_m ), windows W.focusMaster)
+        -- focus
+        , ((modMask, xK_Tab ), windows W.focusDown)
+        , ((modMask, xK_j ), windows W.focusDown)
+        , ((modMask, xK_k ), windows W.focusUp)
+        , ((modMask, xK_m ), windows W.focusMaster)
 
 
-    -- swapping
-    , ((modMask .|. shiftMask, xK_Return), windows W.swapMaster)
-    , ((modMask .|. shiftMask, xK_j ), windows W.swapDown )
-    , ((modMask .|. shiftMask, xK_k ), windows W.swapUp )
+        -- swapping
+        , ((modMask .|. shiftMask, xK_Return), windows W.swapMaster)
+        , ((modMask .|. shiftMask, xK_j ), windows W.swapDown )
+        , ((modMask .|. shiftMask, xK_k ), windows W.swapUp )
 
-    -- increase or decrease number of windows in the master area
-    , ((modMask , xK_comma ), sendMessage (IncMasterN 1))
-    , ((modMask , xK_period), sendMessage (IncMasterN (-1)))
+        -- increase or decrease number of windows in the master area
+        , ((modMask , xK_comma ), sendMessage (IncMasterN 1))
+        , ((modMask , xK_period), sendMessage (IncMasterN (-1)))
 
-    -- resizing
-    , ((modMask, xK_h ), sendMessage Shrink)
-    , ((modMask, xK_l ), sendMessage Expand)
-    , ((modMask .|. shiftMask, xK_h ), sendMessage MirrorShrink)
-    , ((modMask .|. shiftMask, xK_l ), sendMessage MirrorExpand)
+        -- resizing
+        , ((modMask, xK_h ), sendMessage Shrink)
+        , ((modMask, xK_l ), sendMessage Expand)
+        , ((modMask .|. shiftMask, xK_h ), sendMessage MirrorShrink)
+        , ((modMask .|. shiftMask, xK_l ), sendMessage MirrorExpand)
 
-    -- scratchpad
-    , ((modMask , xK_grave),  scratchpadSpawnActionCustom "urxvt -name scratchpad -e screen -R")
+        -- scratchpad
+        , ((modMask , xK_grave),  scratchpadSpawnActionCustom "urxvt -name scratchpad -e screen -R")
 
-    -- volume control
-    , ((0, 0x1008ff13), spawn "/usr/bin/pulseaudio-ctl up") -- raise volume
-    , ((0, 0x1008ff11), spawn "/usr/bin/pulseaudio-ctl down") -- lower volume
-    , ((0, 0x1008ff12), spawn "/usr/bin/pulseaudio-ctl mute") -- mute volume
+        -- volume control
+        , ((0, 0x1008ff13), spawn "/usr/bin/pulseaudio-ctl up") -- raise volume
+        , ((0, 0x1008ff11), spawn "/usr/bin/pulseaudio-ctl down") -- lower volume
+        , ((0, 0x1008ff12), spawn "/usr/bin/pulseaudio-ctl mute") -- mute volume
 
-    -- take screenshot
-    , ((0, xK_Print), spawn "import -window root ~/media/screenshots/$(date '+%Y%m%d-%H%M%S').png")
+        -- take screenshot
+        , ((0, xK_Print), spawn "import -window root ~/media/screenshots/$(date '+%Y%m%d-%H%M%S').png")
 
-    -- Handle xrandr
-    , ((modMask , xK_F7), spawn "single-lvds")
-    , ((modMask .|. shiftMask , xK_F7), spawn "single-vga")
+        -- Handle xrandr
+        , ((modMask , xK_F7), spawn "single-lvds")
+        , ((modMask .|. shiftMask , xK_F7), spawn "single-vga")
 
-    -- quit, or restart
-    , ((modMask .|. shiftMask, xK_q ), io (exitWith ExitSuccess))
-    , ((modMask , xK_q ), restart "xmonad" True)
+        -- quit, or restart
+        , ((modMask .|. shiftMask, xK_q ), io (exitWith ExitSuccess))
+        , ((modMask , xK_q ), restart "xmonad" True)
     ]
     ++
-    -- mod-[1..9] %! Switch to workspace N
-    -- mod-shift-[1..9] %! Move client to workspace N
-    [((m .|. modMask, k), windows $ f i)
+    [
+        -- mod-[1..9] %! Switch to workspace N
+        -- mod-shift-[1..9] %! Move client to workspace N
+        ((m .|. modMask, k), windows $ f i)
         | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_9]
-        , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
+        , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]
+    ]
     ++
-    -- mod-[w,e] %! switch to twinview screen 1/2
-    -- mod-shift-[w,e] %! move window to screen 1/2
-    [((m .|. modMask, key), screenWorkspace sc >>= flip whenJust (windows . f))
+    [
+        -- mod-[w,e] %! switch to twinview screen 1/2
+        -- mod-shift-[w,e] %! move window to screen 1/2
+        ((m .|. modMask, key), screenWorkspace sc >>= flip whenJust (windows . f))
         | (key, sc) <- zip [xK_e, xK_w] [0..]
-        , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
+        , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]
+    ]
