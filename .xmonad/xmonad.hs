@@ -76,6 +76,7 @@ myLayoutHook = onWorkspace "chat" imL $ onWorkspace "web" webL $ standardLayouts
     imL = avoidStruts $ smartBorders $ reflectHoriz $
                withIM (1%5) (Or (And (ClassName "Pidgin") (Role "buddy_list"))
                             (And (ClassName "Skype")  (And (Role "") (Not (Title "Options"))))) (tabL)
+                            -- TODO: add File Transfers
 
 -- ManageHook
 myManageHook :: ManageHook
