@@ -61,6 +61,7 @@
   unignore = update-index --no-assume-unchanged
   lgs = log --stat --color --graph --pretty=format:'%Cred%h%Creset :: %ar :: %C(yellow)%s%Creset :: %Cgreen%an%Creset' --abbrev-commit
   lg = log --color --graph --pretty=format:'%Cred%h%Creset :: %ar :: %C(yellow)%s%Creset :: %Cgreen%an%Creset' --abbrev-commit
+  shlg = shortlog -s -n
   st = status
   ci = commit
   br = branch
