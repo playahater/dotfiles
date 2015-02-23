@@ -16,6 +16,7 @@ Config { font = "xft:Liberation Mono:size=9:antialias=true:hinting=true"
                     , Run Memory ["-t","Mem: <used> MB", "-L","4000","-H","7300", "-l", "#B8D68C", "--normal","#E1AA5D","--high","#E84F4F"] 50
                     , Run Network "wlan0" ["-L","0","-H","480","-l", "#B8D68C", "--normal","#E1AA5D","--high","#E84F4F"] 5
                     , Run Network "eth0" ["-L","0","-H","480","-l", "#B8D68C", "--normal","#E1AA5D","--high","#E84F4F"] 5
+                    , Run Network "ppp0" ["-L","0","-H","480","-l", "#B8D68C", "--normal","#E1AA5D","--high","#E84F4F"] 5
                     , Run Wireless "wlan0" [] 10
                     , Run Date "%a %b %_d %Y %H:%M" "date" 10
                     , Run TopProc ["-l", "#B8D68C", "--normal","#E1AA5D","--high","#E84F4F"] 10
@@ -27,5 +28,5 @@ Config { font = "xft:Liberation Mono:size=9:antialias=true:hinting=true"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{<fc=#A0CF5D>|</fc> %LDPL% <fc=#A0CF5D>|</fc> %multicpu% <fc=#A0CF5D>/</fc> %top% <fc=#A0CF5D>/</fc> %thermal0% <fc=#A0CF5D>|</fc> %memory% <fc=#A0CF5D>|</fc>%eth0% %wlan0% <fc=#A0CF5D>/</fc> %wlan0wi% <fc=#A0CF5D>|</fc> %battery% <fc=#A0CF5D>|</fc><fc=#B8D68C> %date% </fc>"
+       , template = "%StdinReader% }{<fc=#A0CF5D>|</fc> %LDPL% <fc=#A0CF5D>|</fc> %multicpu% <fc=#A0CF5D>/</fc> %top% <fc=#A0CF5D>/</fc> %thermal0% <fc=#A0CF5D>|</fc> %memory% <fc=#A0CF5D>|</fc>%ppp0% %eth0% %wlan0% <fc=#A0CF5D>/</fc> %wlan0wi% <fc=#A0CF5D>|</fc> %battery% <fc=#A0CF5D>|</fc><fc=#B8D68C> %date% </fc>"
        }
