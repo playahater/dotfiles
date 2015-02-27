@@ -126,6 +126,8 @@ map <F10> :set paste<CR>
 map <F9>  :set wrap!<Bar>set wrap?<CR>
 nmap <F8> :TagbarToggle<CR>
 
+map <C-L> :!php -l %<CR>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Completion Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
