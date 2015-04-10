@@ -61,7 +61,7 @@ main = do
 
 -- workspaces
 myWorkspaces :: [WorkspaceId]
-myWorkspaces = ["chat", "web", "3", "4", "5" ,"6", "7", "8", "9"]
+myWorkspaces = ["chat", "web", "dev", "4", "5" ,"6", "7", "8", "9"]
 
 -- LayoutHook
 myLayoutHook = onWorkspace "chat" imL $ onWorkspace "web" webL $ standardLayouts where
@@ -88,6 +88,7 @@ myManageHook = scratchpadManageHook (W.RationalRect 0.03 0.025 0.95 0.97) <+> (
              , className =? "Skype"    --> doShift "chat"
              , className =? "Firefox"  --> doShift "web"
              , className =? "Chromium"  --> doShift "web"
+             , className =? "PhpStorm"  --> doShift "dev"
          ]]
     )
 
