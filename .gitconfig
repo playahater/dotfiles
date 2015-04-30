@@ -34,7 +34,7 @@
   log = true
 	tool = vimdiff3
 [mergetool]
-  prompt = false
+  prompt = true
 [mergetool "vimdiff3"]
   cmd = vim -f -d -c \"wincmd J\" -c \"wincmd =\" \"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
   trustExitCode = true
