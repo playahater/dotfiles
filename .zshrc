@@ -12,6 +12,7 @@ export ZLS_COLORS
 export EDITOR="vim"
 export PAGER=/usr/bin/vimpager
 export TERM=xterm-256color
+export PATH="${PATH}:/home/play/.gem/ruby/2.2.0/bin"
 
 setopt APPEND_HISTORY
 setopt INC_APPEND_HISTORY
@@ -181,6 +182,7 @@ alias gdc='git diff --cached'
 alias gf='git diff --stat --color'
 alias git-diff-branch='git diff --stat --color master..staging'
 alias git-deleted="git log --all --pretty=format: --name-only --diff-filter=D | sort -u"
+alias gfa='git fetch upstream'
 
 rmmodcomplete () { reply=(`/sbin/lsmod|cut -f1 -d" "|grep -v Module`) }
 compctl -K rmmodcomplete rmmod
