@@ -256,6 +256,8 @@ if has("autocmd")
 
   autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
   autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+  autocmd FileType php setlocal makeprg=zca\ %<.php
+  autocmd FileType php setlocal errorformat=%f(line\ %l):\ %m
   autocmd FileType python set tabstop=8 expandtab shiftwidth=2 softtabstop=2 omnifunc=pythoncomplete#Complete
   autocmd FileType html set softtabstop=2 shiftwidth=2 textwidth=0 omnifunc=htmlcomplete#CompleteTags
   autocmd FileType css set softtabstop=2 shiftwidth=2 textwidth=0 omnifunc=csscomplete#CompleteCSS
