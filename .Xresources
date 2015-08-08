@@ -9,7 +9,7 @@ Xft.lcdfilter: lcddefault
 Xft.rgba: rgba
 
 ! === U R x v t ==============================================================
-URxvt*.cursorBlink: true
+URxvt*.cursorBlink: false
 URxvt*.depth: 32
 URxvt*.font: xft:Literation Mono Powerline:pixelsize=14:antialias=true:autohint=true:dpi=96
 URxvt*.inheritPixmap: true
@@ -21,7 +21,7 @@ URxvt*.resource: value
 URxvt*.termName: xterm-256color
 URxvt*.urgentOnBell: true
 URxvt*.cursorColor: rgba:DD00/DD00/DD00/ee00
-URxvt*.shading: 0
+URxvt*.shading: 15
 URxvt*.buffered: true
 URxvt*.jumpScroll: false
 URxvt*.saveLines: 100000
@@ -44,8 +44,7 @@ URxvt*.url-select.underline: true
 
 ! === Appearance =============================================================
 URxvt.foreground: rgba:D700/D000/C700/ee00
-URxvt.background: rgba:3000/3000/3000/ee00
-!URxvt.background: rgba:1500/1500/1500/ee00
+URxvt.background: rgba:1500/1500/1500/ee00
 ! Black
 URxvt.color0: rgba:3000/3000/3000/ee00
 URxvt.color8: rgba:4000/4000/4000/ee00
