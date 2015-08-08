@@ -2,7 +2,8 @@
 [default]
 
 ontop=yes
-vo=xv
+#vo=xv
+vo=gl
 ao=pulse
 #ao=alsa
 channels=2
