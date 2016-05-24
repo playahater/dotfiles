@@ -59,7 +59,7 @@
 [alias]
   ignore = update-index --assume-unchanged
   unignore = update-index --no-assume-unchanged
-  lgs = log --stat --color --graph --pretty=format:'%Cred%h%Creset :: %ar :: %C(yellow)%s%Creset :: %Cgreen%an%Creset' --abbrev-commit
+  lgs = log --stat --color --graph --pretty=format:'%Cred%h%Creset :: %ar :: %Cblue%ad%Creset :: %C(yellow)%s%Creset :: %Cgreen%an%Creset :: %Cblue%G?%Creset %n %N' --abbrev-commit
   lg = log --color --graph --pretty=format:'%Cred%h%Creset :: %ar :: %C(yellow)%s%Creset :: %Cgreen%an%Creset' --abbrev-commit
   shlg = shortlog -s -n
   st = status

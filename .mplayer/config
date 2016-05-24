@@ -7,8 +7,8 @@ vo=gl
 ao=pulse
 #ao=alsa
 channels=2
-softvol=yes
-softvol-max=150
+#softvol=yes
+#softvol-max=150
 framedrop=no
 lavdopts=threads=4
 af-add=volnorm=2:0.75

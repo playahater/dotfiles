@@ -18,6 +18,7 @@ import XMonad.Actions.GridSelect
 -- utils
 import XMonad.Util.Scratchpad (scratchpadSpawnAction, scratchpadSpawnActionCustom, scratchpadManageHook, scratchpadFilterOutWorkspace)
 import XMonad.Util.Run(spawnPipe)
+import XMonad.Util.Paste
 import XMonad.Prompt
 import XMonad.Prompt.Shell
 import XMonad.Prompt.RunOrRaise
@@ -101,12 +102,13 @@ myStartupHook = do
     spawn "xset r rate 180 90"
     spawn "xset -b"
     spawn "xrdb -load ~/.Xresources"
-    spawn "feh --bg-scale media/img/pirate.jpg"
     spawn "xinput set-prop 'TPPS/2 IBM TrackPoint' 'Evdev Wheel Emulation' 1"
     spawn "xinput set-prop 'TPPS/2 IBM TrackPoint' 'Evdev Wheel Emulation Button' 2"
     spawn "xinput set-prop 'TPPS/2 IBM TrackPoint' 'Evdev Wheel Emulation Timeout' 200"
     spawn "xinput set-prop 'TPPS/2 IBM TrackPoint' 'Evdev Wheel Emulation Axes' 6 7 4 5"
-    --spawn "xsetroot -solid '#151515'"
+    --spawn "syndaemon -i 1 -d"
+    spawn "xsetroot -solid '#151515'"
+    -- spawn "feh --bg-scale media/img/pirate.jpg"
 
 -- logHook
 myLogHook :: Handle -> X ()
@@ -139,7 +141,7 @@ myFocusedBorderColor = "#400000"
 
 -- some nice colors for the prompt windows
 myXPConfig = defaultXPConfig {
-      font = "xft:Liberation Mono:size=10:antialias=true:hinting=true"
+      font = "xft:Literation Mono Powerline:pixelsize=13:antialias=true:autohint=true:hinting=true:dpi=96"
     , bgColor = "#151515"
     , fgColor = "#D7D0C7"
     , fgHLight = "#D7D0C7"
@@ -177,8 +179,8 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
         , ((modMask, xK_c ), kill)
 
         -- opening program launcher / search engine
-        ,((modMask , xK_F2), runOrRaisePrompt myXPConfig)
-        -- ,((modMask , xK_F2), shellPrompt myXPConfig)
+        --,((modMask , xK_F2), runOrRaisePrompt myXPConfig)
+         ,((modMask , xK_F2), shellPrompt myXPConfig)
 
         -- GridSelect
         , ((modMask, xK_g), goToSelected defaultGSConfig)
@@ -213,13 +215,20 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
         , ((modMask .|. shiftMask, xK_h ), sendMessage MirrorShrink)
         , ((modMask .|. shiftMask, xK_l ), sendMessage MirrorExpand)
 
+		-- X-selection-paste buffer
+		, ((0, xK_Insert), pasteSelection)
+
         -- scratchpad
         , ((modMask , xK_grave),  scratchpadSpawnActionCustom "urxvt -name scratchpad -e screen -R")
 
         -- volume control
-        , ((0, 0x1008ff13), spawn "/usr/bin/pulseaudio-ctl up") -- raise volume
-        , ((0, 0x1008ff11), spawn "/usr/bin/pulseaudio-ctl down") -- lower volume
-        , ((0, 0x1008ff12), spawn "/usr/bin/pulseaudio-ctl mute") -- mute volume
+        , ((0, 0x1008ff13), spawn "sh -c 'pactl set-sink-mute 0 false ; pactl set-sink-volume 0 +5%'") -- raise volume
+        , ((0, 0x1008ff11), spawn "sh -c 'pactl set-sink-mute 0 false ; pactl -- set-sink-volume 0 -5%'") -- lower volume
+        , ((0, 0x1008FF12), spawn "pactl set-sink-mute 0 toggle") -- mute volume
+
+        -- brightness control
+        , ((0, 0x1008FF02), spawn "xbacklight -inc 10") -- Monitor/panel brightness up
+        , ((0, 0x1008FF03), spawn "xbacklight -dec 10") -- Monitor/panel brightness down
 
         -- take screenshot
         , ((0, xK_Print), spawn "import -window root ~/media/screenshots/$(date '+%Y%m%d-%H%M%S').png")

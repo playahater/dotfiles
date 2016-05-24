@@ -53,7 +53,6 @@ set numberwidth=5
 set scrolloff=10
 "set statusline=%<%F%h%m%r%h%w\ %y\ %{&ff}\ %{strftime(\"%c\",getftime(expand(\"%:p\")))}%=\ %{fugitive#statusline()}\ lin:%l\,%L\ col:%c%V\ pos:%o\ ascii:%b\ %P
 "set statusline=%<%F%h%m%r%h%w%=\ %{fugitive#statusline()}\ lin:%l\,%L\ col:%c%V\ %P
-set expandtab
 set formatoptions=rq
 set t_Co=256
 
@@ -128,6 +127,10 @@ nmap <F8> :TagbarToggle<CR>
 
 map <C-L> :!php -l %<CR>
 
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Completion Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -148,13 +151,16 @@ set tabpagemax=50   " set maximum number of tabs
 
 " Indentation
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set tabstop=2                                   " Tabs are 2 spaces
-set shiftwidth=2                                " Define the width of a shift for the<<  and>>  commands. (Tabs under smart indent)
-set softtabstop=2                               " Define what tabstop  is to be simulated when Tab is pressed
+filetype plugin indent on
+
+"set tabstop=4                                   " Tabs are 2 spaces
+set expandtab
+set shiftwidth=4                                " Define the width of a shift for the<<  and>>  commands. (Tabs under smart indent)
+set softtabstop=4                               " Define what tabstop  is to be simulated when Tab is pressed
 set autoindent                                  " Automatically indent eache line like previous one
 set smartindent                                 " Automatically indent when adding a curly bracket, etc.
 set backspace=indent,eol,start                  " Allow backspacing over everything in insert mode
-set smarttab                                    " Insert indents at the beginning of a line
+"set smarttab                                    " Insert indents at the beginning of a line
 set cinwords=if,else,while,do,for,switch,case   " Define keywords that cause an extra indent
 set lbr
 set nowrap
@@ -163,8 +169,6 @@ set nowrap
 " Encoding
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set encoding=utf-8
-
-filetype plugin indent on
 
 set autochdir
 set fileformats=unix,mac,dos
@@ -227,7 +231,28 @@ set nofoldenable        " dont fold by default
   let NERDTreeShowHidden = 1
   let NERDTreeChDirMode = 2
   let NERDTreeWinPos = "right"
-  let NERDTreeWinSize = 50
+  let NERDTreeWinSize = 40
+  let g:NERDTreeDirArrowExpandable = '▸'
+  let g:NERDTreeDirArrowCollapsible = '▾'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" VIM-Tags
+" https://github.com/szw/vim-tags
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+  let g:vim_tags_auto_generate = 1
+  let g:vim_tags_use_vim_dispatch = 1
+
+  " required for https://github.com/Valloric/YouCompleteMe
+  let g:vim_tags_use_language_field = 1
+
+  let g:vim_tags_ignore_files = ['.gitignore', '.svnignore', '.cvsignore']
+  let g:vim_tags_ignore_file_comment_pattern = '^[#""]'
+  let g:vim_tags_directories = [".git", ".hg", ".svn", ".bzr", "_darcs", "CVS"]
+  let g:vim_tags_main_file = 'tags'
+  let g:vim_tags_extension = '.tags'
+  let g:vim_tags_cache_dir = expand($HOME)
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Search Settings
@@ -235,6 +260,8 @@ set nofoldenable        " dont fold by default
 set incsearch   " Search as you type
 set ignorecase  " Ignore case when searching
 set smartcase   " if there are caps, go case-sensitive
+
+set tags=./tags,tags,./.git/tags;
 
 set ofu=syntaxcomplete#Complete
 
@@ -258,10 +285,12 @@ if has("autocmd")
   autocmd FileType php set omnifunc=phpcomplete#CompletePHP
   autocmd FileType php setlocal makeprg=zca\ %<.php
   autocmd FileType php setlocal errorformat=%f(line\ %l):\ %m
-  autocmd FileType python set tabstop=8 expandtab shiftwidth=2 softtabstop=2 omnifunc=pythoncomplete#Complete
-  autocmd FileType html set softtabstop=2 shiftwidth=2 textwidth=0 omnifunc=htmlcomplete#CompleteTags
-  autocmd FileType css set softtabstop=2 shiftwidth=2 textwidth=0 omnifunc=csscomplete#CompleteCSS
+  autocmd FileType python set expandtab shiftwidth=4 softtabstop=4 omnifunc=pythoncomplete#Complete
+  autocmd FileType html set softtabstop=4 shiftwidth=4 textwidth=0 omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType css set softtabstop=4 shiftwidth=4 textwidth=0 omnifunc=csscomplete#CompleteCSS
   autocmd FileType c,cpp,java,php,module,tpl.php,js,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
+
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
   au FileType javascript call JavaScriptFold()

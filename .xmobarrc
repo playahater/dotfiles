@@ -1,4 +1,4 @@
-Config { font = "xft:Liberation Mono:size=9:antialias=true:hinting=true"
+Config { font = "xft:Literation Mono Powerline:pixelsize=13:antialias=true:autohint=true:hinting=true:dpi=96"
        , borderColor = "black"
        , border = TopB
        , bgColor = "#151515"
@@ -11,22 +11,19 @@ Config { font = "xft:Liberation Mono:size=9:antialias=true:hinting=true"
        , overrideRedirect = True
        , pickBroadest = False
 
-       , commands = [ Run Weather "LDPL" ["-t","<tempC>","-L","10","-H","28","--normal","#B8D68C","--high","#E84F4F","--low","#6D878D"] 18000
+       , commands = [ Run Weather "LYBE" ["-t","<tempC>","-L","10","-H","28","--normal","#B8D68C","--high","#E84F4F","--low","#6D878D"] 18000
                     , Run MultiCpu ["-L","0","-H","70","--normal","#B8D68C","--high","#E84F4F"] 10
                     , Run Memory ["-t","Mem: <used> MB", "-L","4000","-H","7300", "-l", "#B8D68C", "--normal","#E1AA5D","--high","#E84F4F"] 50
-                    , Run Network "wlan0" ["-L","0","-H","480","-l", "#B8D68C", "--normal","#E1AA5D","--high","#E84F4F"] 5
-                    , Run Network "eth0" ["-L","0","-H","480","-l", "#B8D68C", "--normal","#E1AA5D","--high","#E84F4F"] 5
-                    , Run Network "ppp0" ["-L","0","-H","480","-l", "#B8D68C", "--normal","#E1AA5D","--high","#E84F4F"] 5
-                    , Run Wireless "wlan0" [] 10
+                    , Run Network "wlp3s0" ["-L","0","-H","480","-l", "#B8D68C", "--normal","#E1AA5D","--high","#E84F4F"] 5
                     , Run Date "%a %b %_d %Y %H:%M" "date" 10
+                    , Run Wireless "wlp3s0" [] 10
                     , Run TopProc ["-l", "#B8D68C", "--normal","#E1AA5D","--high","#E84F4F"] 10
-                    , Run TopMem ["-l", "#B8D68C", "--normal","#E1AA5D","--high","#E84F4F"] 10
                     , Run ThermalZone 0 ["-t","<temp> C", "-L","0","-H","70","--normal","#B8D68C","--high","#E84F4F"] 30
-                    , Run DiskU [("/home", "<used>/<size>")] ["-L", "20", "-H", "50", "-m", "1", "-p", "3"] 20
-                    , Run BatteryP ["BAT0"] ["-t", "<acstatus><watts> (<left>%)", "-L", "10", "-H", "80", "-p", "3", "--", "-O", "<fc=#B8D68C>on</fc> - ", "-o", "", "-L", "-15", "-H", "-5", "-l", "#E84F4F", "-m", "blue", "-h", "green"] 600
+                    , Run BatteryN ["BAT0"] ["-t", "<acstatus><watts> (<left>%)", "-L", "10", "-H", "80", "-p", "3", "--", "-O", "<fc=#B8D68C>on</fc> - ", "-o", "", "-L", "-15", "-H", "-5", "-l", "#E84F4F", "-m", "blue", "-h", "green"] 600 "bat0"
+                    , Run BatteryN ["BAT1"] ["-t", "<acstatus><watts> (<left>%)", "-L", "10", "-H", "80", "-p", "3", "--", "-O", "<fc=#B8D68C>on</fc> - ", "-o", "", "-L", "-15", "-H", "-5", "-l", "#E84F4F", "-m", "blue", "-h", "green"] 600 "bat1"
                     , Run StdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{<fc=#A0CF5D>|</fc> %LDPL% <fc=#A0CF5D>|</fc> %multicpu% <fc=#A0CF5D>/</fc> %top% <fc=#A0CF5D>/</fc> %thermal0% <fc=#A0CF5D>|</fc> %memory% <fc=#A0CF5D>|</fc>%ppp0% %eth0% %wlan0% <fc=#A0CF5D>/</fc> %wlan0wi% <fc=#A0CF5D>|</fc> %battery% <fc=#A0CF5D>|</fc><fc=#B8D68C> %date% </fc>"
+       , template = "%StdinReader% }{<fc=#A0CF5D>|</fc> %LYBE% <fc=#A0CF5D>|</fc> %multicpu% <fc=#A0CF5D>/</fc> %top% <fc=#A0CF5D>/</fc> %thermal0% <fc=#A0CF5D>|</fc> %memory% <fc=#A0CF5D>|</fc> %wlp3s0% <fc=#A0CF5D>/</fc> %wlp3s0wi% <fc=#A0CF5D>|</fc> Bat0: %bat0% <fc=#A0CF5D>/</fc> Bat1: %bat1% <fc=#A0CF5D>|</fc><fc=#B8D68C> %date% </fc>"
        }

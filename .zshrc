@@ -12,7 +12,9 @@ export ZLS_COLORS
 export EDITOR="vim"
 export PAGER=/usr/bin/vimpager
 export TERM=xterm-256color
-export PATH="${PATH}:/home/play/.gem/ruby/2.2.0/bin"
+export PATH="${PATH}:/home/green/.gem/ruby/2.3.0/bin"
+export PHP_PATH=/usr/bin/php
+export BROWSER="google-chrome-stable"
 
 setopt APPEND_HISTORY
 setopt INC_APPEND_HISTORY
@@ -147,32 +149,39 @@ alias mount='mount -vv'
 alias brzinski='python2.7 -m SimpleHTTPServer'
 alias gping='ping -c 3 google.com'
 alias myip="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
-alias screencast="ffmpeg -f x11grab -r 25 -s 1280x800 -i :0.0 /tmp/screencast.mpg"
+alias screencast="ffmpeg -f x11grab -r 60 -s 1920x1080 -i :0.0 /tmp/screencast.mpg"
 alias twit.tv='mplayer http://bglive-a.bitgravity.com/twit/live/high'
 alias webcam="mplayer -fps 24 tv://"
-alias sopcast="mplayer http://127.0.0.1:8908/tv.asf"
-alias begraund='feh --bg-scale'
-alias plantronics='bluez-simple-agent hci0 00:1C:EF:7E:A1:88'
-alias dozeboot='VBoxManage startvm sept'
-alias tvfeed="curl 'http://api.dailytvtorrents.org/1.0/shows.getTextInfo?show_names=suits,grimm,dexter,the-big-bang-theory,breaking-bad,eureka,the-mentalist,warehouse-13,fringe,burn-notice,top-gear,castle,game-of-thrones&colors=yes&links=yes'"
-alias composer="php /home/play/projects/composer/composer.phar"
+#alias sopcast="mplayer http://127.0.0.1:8908/tv.asf"
+#alias begraund='feh --bg-scale'
+#alias plantronics='bluez-simple-agent hci0 00:1C:EF:7E:A1:88'
+#alias tvfeed="curl 'http://api.dailytvtorrents.org/1.0/shows.getTextInfo?show_names=suits,grimm,dexter,the-big-bang-theory,breaking-bad,eureka,the-mentalist,warehouse-13,fringe,burn-notice,top-gear,castle,game-of-thrones&colors=yes&links=yes'"
+alias composer="php /home/green/projects/composer/composer.phar"
 alias clear="echo NO!"
+#alias dozeboot='VBoxManage startvm sept'
 #alias webcam="mplayer tv:// -tv driver=v4l:width=352:height=288:device=/dev/video0 "
 #alias graball="ffmpeg -y -f alsa -ac 2 -i hw:0,0 -f x11grab -r 30 -s `xdpyinfo | grep 'dimensions:'|awk '{print $2}'` -i :0.0 -acodec pcm_s16le /tmp/output.wav -an -acodec pcm_s16le -vcodec libx264 -preset ultrafast -crf 0 -threads 0 /tmp/output.mp4"
 #alias pmplayer='mplayer -ao alsa:device=btheadset'
-#alias drush='/usr/bin/php /home/play/stuff/drupal/drush/drush.php'
+#alias drush='/usr/bin/php /home/green/stuff/drupal/drush/drush.php'
 #alias firedatabases="for database in ~/.mozilla/firefox/*/*.sqlite; do echo processing $database... ; sqlite3 $database 'VACUUM;'; done ;"
 #alias netbeans='netbeans --laf GTK'
 
+alias dozeboot="qemu-system-i386 -cpu host -enable-kvm -machine type=pc,accel=kvm -m 4G -drive file=/home/green/sandbox/doze/doze.raw,format=raw,if=ide -net nic,model=rtl8139 -net user -usbdevice host:13fe:4200"
+alias doze8boot="qemu-system-i386 -cpu host -enable-kvm -machine type=pc,accel=kvm -m 4G -drive file=/home/green/sandbox/doze8/doze8.raw,format=raw,if=ide -net nic,model=rtl8139 -net user -usbdevice host:13fe:4200"
+#alias bsdboot="qemu-system-x86_64 -cpu host -enable-kvm -machine type=pc,accel=kvm -m 2G -drive file=/home/green/sandbox/freebsd/freebsd.raw,format=raw,if=virtio -usbdevice host:13fe:4200"
+alias bsdboot="qemu-system-x86_64 -cpu host -enable-kvm -machine type=pc,accel=kvm -m 2G -drive file=/home/green/sandbox/freebsd/freebsd.raw,format=raw,if=virtio -net nic,model=virtio -usbdevice host:13fe:4200"
+#alias freebsdboot="qemu-system-x86_64 -enable-kvm  -cpu host -smp cpus=1 -drive file=freebsd102.qcow2,if=virtio  -device e1000,netdev=user.0 -netdev user,id=user.0,hostfwd=tcp::10022-:22 -m 256 -name 'FreeBSD VM' -machine type=pc,accel=kvm   -show-cursor -spice port=5900,addr=127.0.0.1,disable-ticketing"
+alias freebsdboot="qemu-system-x86_64 -enable-kvm  -cpu host -smp cpus=1 -drive file=/home/green/sandbox/freebsd/freebsd.raw,format=raw,if=virtio -device e1000,netdev=user.0 -netdev user,id=user.0,hostfwd=tcp::10022-:22 -m 2G -name 'FreeBSD VM' -machine type=pc,accel=kvm   -show-cursor -vga qxl  -global VGA.vgamem_mb=32 -display sdl"
+
 # git aliases
 alias g='git'
-alias gb='git branch -v'
+alias gb='git branch -vv'
 alias gc='git commit -a -m'
-alias gba='git branch -a'
-alias gcv='git commit -v'
+alias gba='git branch -a -vv'
+alias gcv='git commit -vv'
 alias gcm='git commit -m'
 alias gl='git pull --rebase'
-alias gp='git push'
+alias gp='git push -vv'
 alias gst='git status'
 alias gsh='git show'
 alias gpull='git pull origin $(current_branch)'
@@ -180,9 +189,8 @@ alias gpush='git push origin $(current_branch)'
 alias gd='git diff --color'
 alias gdc='git diff --cached'
 alias gf='git diff --stat --color'
-alias git-diff-branch='git diff --stat --color master..staging'
 alias git-deleted="git log --all --pretty=format: --name-only --diff-filter=D | sort -u"
-alias gfa='git fetch upstream'
+alias gfa='git fetch origin'
 
 rmmodcomplete () { reply=(`/sbin/lsmod|cut -f1 -d" "|grep -v Module`) }
 compctl -K rmmodcomplete rmmod
@@ -198,9 +206,9 @@ compctl -k ping telnet ncftp host nslookup irssi rlogin ftp
 
 compctl -j -P '%' fg jobs disown
 compctl -g '*.(gz|z|Z|t[agp]z|tarZ|tz)' + -g '*(-/)' gunzip gzcat zcat
-compctl -g '*.(mp3|MP3|ogg|OGG|wav|WAV)' + -g '*(-/)' mpc mpg123 mpg321 xmms
-compctl -g "*.html *.htm" + -g "*(-/) .*(-/)" + -H 0 '' remurl lynx links wget opera
-compctl -g '*.(pdf|PDF)(ps|PS)' + -g '*(-/)' gv
+compctl -g '*.(mp3|MP3|ogg|OGG|wav|WAV)' + -g '*(-/)' mpc mpg123 mpg321 mplayer
+compctl -g "*.html *.htm" + -g "*(-/) .*(-/)" + -H 0 '' remurl lynx links wget firefox
+compctl -g '*.(pdf|PDF)(ps|PS)' + -g '*(-/)' gv zathura
 compctl -g '*(-/)' + -g '.*(/)' cd chdir dirs pushd rmdir dircmp cl tree
 compctl -g '*.(jpg|JPG|jpeg|JPEG|gif|GIF|png|PNG|bmp)' + -g '*(-/)' qiv gimp feh
 compctl -g '*.tex*' + -g '*(-/)' {,la,gla,ams{la,},{g,}sli}tex texi2dvi
@@ -236,11 +244,11 @@ function current_branch() {
 }
 
 function dual-right-of () {
-  xrandr --output VGA1 --primary --right-of LVDS1 --output LVDS1 --auto
+  xrandr --output DP1 --primary --right-of eDP1 --output eDP1 --auto
 }
 
 function dual-left-of () {
-  xrandr --output VGA1 --primary --left-of LVDS1 --output LVDS1 --auto
+  xrandr --output DP1 --primary --left-of eDP1 --output eDP1 --auto
 }
 
 #function single-vga () {
@@ -291,3 +299,6 @@ if [ -x /usr/bin/fortune ]; then                                   ##
     /usr/bin/fortune -s     # makes a day a bit more fun.... :-)   ##
 fi                                                                 ##
 #####################################################################
+#
+
+source /usr/share/doc/pkgfile/command-not-found.zsh
