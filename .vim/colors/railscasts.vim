@@ -83,7 +83,13 @@ hi String                    guifg=#87af5f ctermfg=107
 hi Title                     guifg=#FFFFFF ctermfg=15
 hi Type                      guifg=#df5f5f gui=NONE ctermfg=167 cterm=NONE
 hi PreProc                   guifg=#ff8700 ctermfg=208
-hi Special                   guifg=#005f00 ctermfg=22
+hi Special                   guifg=#DA4939 ctermfg=167
+hi Define                    guifg=#CC7833 ctermfg=173
+hi Function                  guifg=#FFC66D ctermfg=221 gui=NONE cterm=NONE
+hi Tag                       guifg=#FFC66D ctermfg=221 gui=NONE cterm=NONE
+hi Include                   guifg=#CC7833 ctermfg=173 gui=NONE cterm=NONE
+hi PreCondit                 guifg=#CC7833 ctermfg=173 gui=NONE cterm=NONE
+hi IncSearch                 guifg=NONE guibg=#2b2b2b ctermfg=yellow ctermbg=black gui=italic cterm=underline
 
 " Diffs
 " -----

@@ -165,6 +165,7 @@ alias clear="echo NO!"
 #alias drush='/usr/bin/php /home/green/stuff/drupal/drush/drush.php'
 #alias firedatabases="for database in ~/.mozilla/firefox/*/*.sqlite; do echo processing $database... ; sqlite3 $database 'VACUUM;'; done ;"
 #alias netbeans='netbeans --laf GTK'
+alias moonphase="curl wttr.in/Moon"
 
 alias dozeboot="qemu-system-i386 -cpu host -enable-kvm -machine type=pc,accel=kvm -m 4G -drive file=/home/green/sandbox/doze/doze.raw,format=raw,if=ide -net nic,model=rtl8139 -net user -usbdevice host:13fe:4200"
 alias doze8boot="qemu-system-i386 -cpu host -enable-kvm -machine type=pc,accel=kvm -m 4G -drive file=/home/green/sandbox/doze8/doze8.raw,format=raw,if=ide -net nic,model=rtl8139 -net user -usbdevice host:13fe:4200"
