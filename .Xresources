@@ -10,9 +10,9 @@ Xft.rgba: rgba
 
 ! === U R x v t ==============================================================
 URxvt*.cursorBlink: false
-URxvt*.depth: 32
+URxvt*.depth: 24
 URxvt*.font: xft:Literation Mono Powerline:pixelsize=14:antialias=true:autohint=true:dpi=96
-URxvt*.inheritPixmap: true
+!URxvt*.inheritPixmap: true
 URxvt*.internalBorder: 0
 URxvt*.loginShell: true
 URxvt*.mapAlert: true
@@ -20,8 +20,10 @@ URxvt*.pointerBlank: true
 URxvt*.resource: value
 URxvt*.termName: xterm-256color
 URxvt*.urgentOnBell: true
-URxvt*.cursorColor: rgba:DD00/DD00/DD00/ee00
-URxvt*.shading: 15
+URxvt*.cursorColor: #ebdbb2
+URxvt*.skipBuiltinGlyphs:    true
+!URxvt*.shading: 0
+URxvt*.transparent:   false
 URxvt*.buffered: true
 URxvt*.jumpScroll: false
 URxvt*.saveLines: 100000
@@ -30,7 +32,8 @@ URxvt*.scrollTtyKeypress: true
 URxvt*.scrollTtyOutput: false
 URxvt*.scrollWithBuffer: false
 URxvt*.scrollstyle: plain
-URxvt*.secondaryScroll: false
+URxvt*.secondaryScroll: 0
+URxvt*.secondaryScreen: 1
 URxvt*.perl-lib: /usr/lib/urxvt/perl
 URxvt*.perl-ext:      default,url-select
 URxvt*.perl-ext-common: clipboard
@@ -42,30 +45,29 @@ URxvt*.clipboard.autocopy: true
 URxvt*.url-select.launcher:   /usr/bin/firefox -new-tab
 URxvt*.url-select.underline: true
 
-! === Appearance =============================================================
-URxvt.foreground: rgba:D700/D000/C700/ee00
-URxvt.background: rgba:1500/1500/1500/ee00
-! Black
-URxvt.color0: rgba:3000/3000/3000/ee00
-URxvt.color8: rgba:4000/4000/4000/ee00
-! Red
-URxvt.color1: rgba:E800/4F00/4F00/ee00
-URxvt.color9: rgba:D200/3D00/3D00/ee00
-! Green
-URxvt.color2: rgba:B800/D600/8C00/ee00
-URxvt.color10: rgba:A000/CF00/5D00/ee00
-! Yellow
-URxvt.color3: rgba:E100/AA00/5D00/ee00
-URxvt.color11: rgba:F300/9D00/2100/ee00
-! Blue
-URxvt.color4: rgba:7D00/C100/CF00/ee00
-URxvt.color12: rgba:4E00/9F00/B100/ee00
-! Magenta
-URxvt.color5: rgba:9B00/6400/FB00/ee00
-URxvt.color13: rgba:8500/4200/FF00/ee00
-! Cyan
-URxvt.color6: rgba:6D00/8700/8D00/ee00
-URxvt.color14: rgba:4200/7100/7B00/ee00
-! White
-URxvt.color7: rgba:DD00/DD00/DD00/ee00
-URxvt.color15: rgba:DD00/DD00/DD00/ee00
+*background: #282828
+*foreground: #ebdbb2
+! Black + DarkGrey
+*color0:  #282828
+*color8:  #928374
+! DarkRed + Red
+*color1:  #cc241d
+*color9:  #fb4934
+! DarkGreen + Green
+*color2:  #98971a
+*color10: #b8bb26
+! DarkYellow + Yellow
+*color3:  #d79921
+*color11: #fabd2f
+! DarkBlue + Blue
+*color4:  #458588
+*color12: #83a598
+! DarkMagenta + Magenta
+*color5:  #b16286
+*color13: #d3869b
+! DarkCyan + Cyan
+*color6:  #689d6a
+*color14: #8ec07c
+! LightGrey + White
+*color7:  #a89984
+*color15: #ebdbb2

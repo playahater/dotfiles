@@ -45,7 +45,10 @@ set ttimeout
 set ttimeoutlen=50
 
 set background=dark     " enable for dark terminals
-colorscheme railscasts
+colorscheme gruvbox
+let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_italic = 1
+"let g:gruvbox_invert_signs = 1
 
 set lazyredraw
 set wildmenu
@@ -70,7 +73,6 @@ cmap Tabe tabe
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:agprg="ag --column --smart-case --hidden --stats"
 let g:aghighlight=1
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Improved status bar - airline
@@ -295,5 +297,15 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
   au FileType javascript call JavaScriptFold()
 
-  au VimEnter * AirlineTheme serene
+  function! PhpSyntaxOverride()
+    hi! def link phpDocTags  phpDefine
+    hi! def link phpDocParam phpType
+  endfunction
+
+  augroup phpSyntaxOverride
+    autocmd!
+    autocmd FileType php call PhpSyntaxOverride()
+  augroup END
+
+  au VimEnter * AirlineTheme gruvbox
 endif
