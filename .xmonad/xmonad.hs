@@ -107,7 +107,7 @@ myStartupHook = do
     spawn "xinput set-prop 'TPPS/2 IBM TrackPoint' 'Evdev Wheel Emulation Timeout' 200"
     spawn "xinput set-prop 'TPPS/2 IBM TrackPoint' 'Evdev Wheel Emulation Axes' 6 7 4 5"
     --spawn "syndaemon -i 1 -d"
-    spawn "xsetroot -solid '#151515'"
+    spawn "xsetroot -solid '#282828'"
     -- spawn "feh --bg-scale media/img/pirate.jpg"
 
 -- logHook
@@ -142,11 +142,11 @@ myFocusedBorderColor = "#400000"
 -- some nice colors for the prompt windows
 myXPConfig = defaultXPConfig {
       font = "xft:Literation Mono Powerline:pixelsize=13:antialias=true:autohint=true:hinting=true:dpi=96"
-    , bgColor = "#151515"
+    , bgColor = "#282828"
     , fgColor = "#D7D0C7"
     , fgHLight = "#D7D0C7"
-    , bgHLight = "#151515"
-    , borderColor = "#151515"
+    , bgHLight = "#282828"
+    , borderColor = "#282828"
     , promptBorderWidth = 1
     , position = Bottom
     , height = 14
@@ -156,11 +156,11 @@ myXPConfig = defaultXPConfig {
 -- MyTheme For Tabbed layout
 myTheme = defaultTheme {
       decoHeight = 14
-    , activeColor = "#151515"
-    , activeBorderColor = "#151515"
+    , activeColor = "#282828"
+    , activeBorderColor = "#282828"
     , activeTextColor = "#D7D0C7"
-    , inactiveColor = "#151515"
-    , inactiveBorderColor = "#151515"
+    , inactiveColor = "#282828"
+    , inactiveBorderColor = "#282828"
     , inactiveTextColor = "#dddddd"
     , urgentColor = "#E84F4F"
     , urgentTextColor = "#D7D0C7"

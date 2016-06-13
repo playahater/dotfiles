@@ -95,7 +95,7 @@ let g:airline#extensions#branch#empty_message = 'git it!!'
 
 
 if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
+    let g:airline_symbols = {}
 endif
 let g:airline_symbols.space = "\ua0"
 
@@ -115,13 +115,13 @@ let g:buftabs_only_basename=1
 let g:buftabs_in_statusline=1
 
 if &diff
-  nnoremap <silent><C-j> :diffget LOCAL<CR>
-"  nnoremap <silent><C-.> :diffget BASE<CR>
-  nnoremap <silent><C-k> :diffget REMOTE<CR>
+    nnoremap <silent><C-j> :diffget LOCAL<CR>
+    "  nnoremap <silent><C-.> :diffget BASE<CR>
+    nnoremap <silent><C-k> :diffget REMOTE<CR>
 endif
 
 map <F3> :TlistToggle<CR>
-map <F5> :SyntasticCheck<CR>
+map <F5> mzgg=G`z<CR>
 map <F4> :SyntasticToggleMode<CR>
 map <F10> :set paste<CR>
 map <F9>  :set wrap!<Bar>set wrap?<CR>
@@ -155,7 +155,7 @@ set tabpagemax=50   " set maximum number of tabs
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype plugin indent on
 
-"set tabstop=4                                   " Tabs are 2 spaces
+"set tabstop=4                                   " Tabs are 4 spaces
 set expandtab
 set shiftwidth=4                                " Define the width of a shift for the<<  and>>  commands. (Tabs under smart indent)
 set softtabstop=4                               " Define what tabstop  is to be simulated when Tab is pressed
@@ -188,36 +188,36 @@ set nofoldenable        " dont fold by default
 " syntax stuff
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-  let html_number_lines = 0
-  let html_use_css = 0
-  let use_xhtml = 0
-  let html_wrong_comments=1
-  let php_sql_query = 1
-  let php_baselib = 1
-  let php_htmlInStrings = 1
-  let hs_highlight_delimiters = 1
-  let hs_highlight_boolean = 1
-  let hs_highlight_types = 1
-  let java_javascript=1
-  let java_css=1
-  let msql_sql_query = 1
-  let apache_version = "2.0"
-  let enforce_freedesktop_standard = 1
-  let python_highlight_all = 1
+let html_number_lines = 0
+let html_use_css = 0
+let use_xhtml = 0
+let html_wrong_comments=1
+let php_sql_query = 1
+let php_baselib = 1
+let php_htmlInStrings = 1
+let hs_highlight_delimiters = 1
+let hs_highlight_boolean = 1
+let hs_highlight_types = 1
+let java_javascript=1
+let java_css=1
+let msql_sql_query = 1
+let apache_version = "2.0"
+let enforce_freedesktop_standard = 1
+let python_highlight_all = 1
 
-  let g:syntastic_always_populate_loc_list=1
-  let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
-  let g:syntastic_javascript_checkers = ['jslint']
-  let g:syntastic_enable_signs=1
-  let g:syntastic_auto_jump=1
-  let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
+let g:syntastic_javascript_checkers = ['jslint']
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_jump=1
+let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 
-  let g:gitgutter_escape_grep = 1
-  let g:gitgutter_enabled = 1
-  let g:gitgutter_signs = 1
-  let g:gitgutter_highlight_lines = 0
-  let g:gitgutter_realtime = 1
-  let g:gitgutter_eager = 1
+let g:gitgutter_escape_grep = 1
+let g:gitgutter_enabled = 1
+let g:gitgutter_signs = 1
+let g:gitgutter_highlight_lines = 0
+let g:gitgutter_realtime = 1
+let g:gitgutter_eager = 1
 
 "  let g:is_bash = 1
 
@@ -225,35 +225,35 @@ set nofoldenable        " dont fold by default
 " NERD_tree
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-  map <F7> :execute 'NERDTreeToggle ' . getcwd()<CR>
-  let NERDChristmasTree = 1
-  let NERDTreeCaseSensitiveSort = 1
-  let NERDTreeIgnore = ['\~$','\.[ao]$','\.swp$','\.DS_Store','\.pyc','\.pyo','\coverage']
-  let NERDTreeMouseMode = 2
-  let NERDTreeShowHidden = 1
-  let NERDTreeChDirMode = 2
-  let NERDTreeWinPos = "right"
-  let NERDTreeWinSize = 40
-  let g:NERDTreeDirArrowExpandable = '▸'
-  let g:NERDTreeDirArrowCollapsible = '▾'
+map <F7> :execute 'NERDTreeToggle ' . getcwd()<CR>
+let NERDChristmasTree = 1
+let NERDTreeCaseSensitiveSort = 1
+let NERDTreeIgnore = ['\~$','\.[ao]$','\.swp$','\.DS_Store','\.pyc','\.pyo','\coverage']
+let NERDTreeMouseMode = 2
+let NERDTreeShowHidden = 1
+let NERDTreeChDirMode = 2
+let NERDTreeWinPos = "right"
+let NERDTreeWinSize = 40
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM-Tags
 " https://github.com/szw/vim-tags
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-  let g:vim_tags_auto_generate = 1
-  let g:vim_tags_use_vim_dispatch = 1
+let g:vim_tags_auto_generate = 1
+let g:vim_tags_use_vim_dispatch = 1
 
-  " required for https://github.com/Valloric/YouCompleteMe
-  let g:vim_tags_use_language_field = 1
+" required for https://github.com/Valloric/YouCompleteMe
+let g:vim_tags_use_language_field = 1
 
-  let g:vim_tags_ignore_files = ['.gitignore', '.svnignore', '.cvsignore']
-  let g:vim_tags_ignore_file_comment_pattern = '^[#""]'
-  let g:vim_tags_directories = [".git", ".hg", ".svn", ".bzr", "_darcs", "CVS"]
-  let g:vim_tags_main_file = 'tags'
-  let g:vim_tags_extension = '.tags'
-  let g:vim_tags_cache_dir = expand($HOME)
+let g:vim_tags_ignore_files = ['.gitignore', '.svnignore', '.cvsignore']
+let g:vim_tags_ignore_file_comment_pattern = '^[#""]'
+let g:vim_tags_directories = [".git", ".hg", ".svn", ".bzr", "_darcs", "CVS"]
+let g:vim_tags_main_file = 'tags'
+let g:vim_tags_extension = '.tags'
+let g:vim_tags_cache_dir = expand($HOME)
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -277,35 +277,35 @@ set backupcopy=auto,breakhardlink
 " Miscellaneous
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("autocmd")
-  au BufRead,BufNewFile *.module set filetype=php
-  au BufRead,BufNewFile *.install set filetype=php
-  au BufRead,BufNewFile *.wsgi set filetype=python
-  autocmd BufNewFile,BufRead *.twig set filetype=twig
-  autocmd BufNewFile,BufRead *.html.twig set filetype=html.twig
+    au BufRead,BufNewFile *.module set filetype=php
+    au BufRead,BufNewFile *.install set filetype=php
+    au BufRead,BufNewFile *.wsgi set filetype=python
+    autocmd BufNewFile,BufRead *.twig set filetype=twig
+    autocmd BufNewFile,BufRead *.html.twig set filetype=html.twig
 
-  autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-  autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-  autocmd FileType php setlocal makeprg=zca\ %<.php
-  autocmd FileType php setlocal errorformat=%f(line\ %l):\ %m
-  autocmd FileType python set expandtab shiftwidth=4 softtabstop=4 omnifunc=pythoncomplete#Complete
-  autocmd FileType html set softtabstop=4 shiftwidth=4 textwidth=0 omnifunc=htmlcomplete#CompleteTags
-  autocmd FileType css set softtabstop=4 shiftwidth=4 textwidth=0 omnifunc=csscomplete#CompleteCSS
-  autocmd FileType c,cpp,java,php,module,tpl.php,js,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
+    autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+    autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+    autocmd FileType php setlocal makeprg=zca\ %<.php
+    autocmd FileType php setlocal errorformat=%f(line\ %l):\ %m
+    autocmd FileType python set expandtab shiftwidth=4 softtabstop=4 omnifunc=pythoncomplete#Complete
+    autocmd FileType html set softtabstop=4 shiftwidth=4 textwidth=0 omnifunc=htmlcomplete#CompleteTags
+    autocmd FileType css set softtabstop=4 shiftwidth=4 textwidth=0 omnifunc=csscomplete#CompleteCSS
+    autocmd FileType c,cpp,java,php,module,tpl.php,js,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
 
-  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-  au FileType javascript call JavaScriptFold()
+    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+    au FileType javascript call JavaScriptFold()
 
-  function! PhpSyntaxOverride()
-    hi! def link phpDocTags  phpDefine
-    hi! def link phpDocParam phpType
-  endfunction
+    function! PhpSyntaxOverride()
+        hi! def link phpDocTags  phpDefine
+        hi! def link phpDocParam phpType
+    endfunction
 
-  augroup phpSyntaxOverride
-    autocmd!
-    autocmd FileType php call PhpSyntaxOverride()
-  augroup END
+    augroup phpSyntaxOverride
+        autocmd!
+        autocmd FileType php call PhpSyntaxOverride()
+    augroup END
 
-  au VimEnter * AirlineTheme gruvbox
+    au VimEnter * AirlineTheme gruvbox
 endif
