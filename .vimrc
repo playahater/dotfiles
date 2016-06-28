@@ -205,8 +205,16 @@ let apache_version = "2.0"
 let enforce_freedesktop_standard = 1
 let python_highlight_all = 1
 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 let g:syntastic_always_populate_loc_list=1
-let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
+let g:syntastic_php_checkers=['php', 'phpmd']
 let g:syntastic_javascript_checkers = ['jslint']
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_jump=1
