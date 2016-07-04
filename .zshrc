@@ -6,15 +6,20 @@ LS_COLORS='rs=0:di=01;36:ln=00;35:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:c
 ZLS_COLORS=$LS_COLORS
 eval `dircolors -b`
 
+# append
+path+=('/home/green/.gem/ruby/2.3.0/bin:/home/green/.composer/vendor/bin')
+# or prepend
+#path=('/home/david/pear/bin' $path)
+
 # Variables
+export PATH
 export LS_COLORS
 export ZLS_COLORS
 export EDITOR="vim"
 export PAGER=/usr/bin/vimpager
 export TERM=xterm-256color
-export PATH="${PATH}:/home/green/.gem/ruby/2.3.0/bin"
 export PHP_PATH=/usr/bin/php
-export BROWSER="google-chrome-stable"
+export BROWSER="chromium"
 
 setopt APPEND_HISTORY
 setopt INC_APPEND_HISTORY
