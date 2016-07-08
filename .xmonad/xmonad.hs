@@ -22,6 +22,7 @@ import XMonad.Util.Paste
 import XMonad.Prompt
 import XMonad.Prompt.Shell
 import XMonad.Prompt.RunOrRaise
+import XMonad.Layout.IndependentScreens
 
 -- hooks
 import XMonad.Hooks.DynamicLog
@@ -62,7 +63,8 @@ main = do
 
 -- workspaces
 myWorkspaces :: [WorkspaceId]
-myWorkspaces = ["chat", "web", "dev", "4", "5" ,"6", "7", "8", "9"]
+myWorkspaces = withScreens 2 ["chat", "web", "dev", "ext", "5" ,"6", "7", "8", "9"]
+-- myWorkspaces = ["chat", "web", "dev", "4", "5" ,"6", "7", "8", "9"]
 
 -- LayoutHook
 myLayoutHook = onWorkspace "chat" imL $ onWorkspace "web" webL $ standardLayouts where
@@ -199,6 +201,9 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
         , ((modMask, xK_k ), windows W.focusUp)
         , ((modMask, xK_m ), windows W.focusMaster)
 
+        -- screens
+	, ((modMask, xK_o), swapNextScreen)
+	, ((modMask .|. shiftMask, xK_o), shiftNextScreen)
 
         -- swapping
         , ((modMask .|. shiftMask, xK_Return), windows W.swapMaster)
@@ -215,8 +220,8 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
         , ((modMask .|. shiftMask, xK_h ), sendMessage MirrorShrink)
         , ((modMask .|. shiftMask, xK_l ), sendMessage MirrorExpand)
 
-		-- X-selection-paste buffer
-		, ((0, xK_Insert), pasteSelection)
+	-- X-selection-paste buffer
+	, ((0, xK_Insert), pasteSelection)
 
         -- scratchpad
         , ((modMask , xK_grave),  scratchpadSpawnActionCustom "urxvt -name scratchpad -e screen -R")
@@ -243,17 +248,28 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     ]
     ++
     [
+        -- workspaces are distinct by screen
+     	((m .|. modMask, k), windows $ onCurrentScreen f i)
+         | (i, k) <- zip (workspaces' conf) [xK_1 .. xK_9]
+         , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]
+
         -- mod-[1..9] %! Switch to workspace N
         -- mod-shift-[1..9] %! Move client to workspace N
-        ((m .|. modMask, k), windows $ f i)
-        | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_9]
-        , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]
+--        ((m .|. modMask, k), windows $ f i)
+--        | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_9]
+--        , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]
     ]
     ++
     [
+         -- swap screen order
+         ((m .|. modMask, key), screenWorkspace sc >>= flip whenJust (windows . f))
+	   | (key, sc) <- zip [xK_w, xK_e, xK_r] [1,0,2]
+	   , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]
+
         -- mod-[w,e] %! switch to twinview screen 1/2
         -- mod-shift-[w,e] %! move window to screen 1/2
-        ((m .|. modMask, key), screenWorkspace sc >>= flip whenJust (windows . f))
-        | (key, sc) <- zip [xK_e, xK_w] [0..]
-        , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]
+--        ((m .|. modMask, key), screenWorkspace sc >>= flip whenJust (windows . f))
+--        | (key, sc) <- zip [xK_e, xK_w] [0..]
+--        , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]
+
     ]

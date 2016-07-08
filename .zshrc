@@ -250,11 +250,13 @@ function current_branch() {
 }
 
 function dual-right-of () {
-  xrandr --output DP1 --primary --right-of eDP1 --output eDP1 --auto
+#  xrandr --output DP2 --primary --right-of eDP1 --output eDP1 --auto
+  xrandr --output eDP1 --primary --auto --output DP2 --right-of eDP1  --auto
 }
 
 function dual-left-of () {
-  xrandr --output DP1 --primary --left-of eDP1 --output eDP1 --auto
+#  xrandr --output DP2 --primary --left-of eDP1 --output eDP1 --auto
+  xrandr --output eDP1 --primary --auto --output DP2 --left-of eDP1  --auto
 }
 
 #function single-vga () {
