@@ -22,6 +22,7 @@ import XMonad.Util.Paste
 import XMonad.Prompt
 import XMonad.Prompt.Shell
 import XMonad.Prompt.RunOrRaise
+import XMonad.Layout.IndependentScreens
 
 -- hooks
 import XMonad.Hooks.DynamicLog
@@ -141,7 +142,7 @@ myFocusedBorderColor = "#400000"
 
 -- some nice colors for the prompt windows
 myXPConfig = defaultXPConfig {
-      font = "xft:Literation Mono Powerline:pixelsize=13:antialias=true:autohint=true:hinting=true:dpi=96"
+      font = "xft:Literation Mono Powerline:pixelsize=14:antialias=true:autohint=true:hinting=true:dpi=96"
     , bgColor = "#282828"
     , fgColor = "#D7D0C7"
     , fgHLight = "#D7D0C7"
@@ -199,6 +200,9 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
         , ((modMask, xK_k ), windows W.focusUp)
         , ((modMask, xK_m ), windows W.focusMaster)
 
+        -- screens
+	, ((modMask, xK_o), swapNextScreen)
+	, ((modMask .|. shiftMask, xK_o), shiftNextScreen)
 
         -- swapping
         , ((modMask .|. shiftMask, xK_Return), windows W.swapMaster)
@@ -215,8 +219,8 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
         , ((modMask .|. shiftMask, xK_h ), sendMessage MirrorShrink)
         , ((modMask .|. shiftMask, xK_l ), sendMessage MirrorExpand)
 
-		-- X-selection-paste buffer
-		, ((0, xK_Insert), pasteSelection)
+	-- X-selection-paste buffer
+	, ((0, xK_Insert), pasteSelection)
 
         -- scratchpad
         , ((modMask , xK_grave),  scratchpadSpawnActionCustom "urxvt -name scratchpad -e screen -R")
@@ -247,7 +251,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
         -- mod-shift-[1..9] %! Move client to workspace N
         ((m .|. modMask, k), windows $ f i)
         | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_9]
-        , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]
+        , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]
     ]
     ++
     [
