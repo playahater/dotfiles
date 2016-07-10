@@ -258,6 +258,6 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
         -- mod-[w,e] %! switch to twinview screen 1/2
         -- mod-shift-[w,e] %! move window to screen 1/2
         ((m .|. modMask, key), screenWorkspace sc >>= flip whenJust (windows . f))
-        | (key, sc) <- zip [xK_e, xK_w] [0..]
+        | (key, sc) <- zip [xK_w, xK_e, xK_r] [0..]
         , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]
     ]
