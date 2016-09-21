@@ -7,7 +7,9 @@ ZLS_COLORS=$LS_COLORS
 eval `dircolors -b`
 
 # append
-path+=('/home/green/.gem/ruby/2.3.0/bin:/home/green/.composer/vendor/bin')
+path+=('/home/green/.gem/ruby/2.3.0/bin:/home/green/.composer/vendor/bin:/home/green/go/bin')
+path+="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+
 # or prepend
 #path=('/home/david/pear/bin' $path)
 
@@ -149,6 +151,7 @@ alias du='du -sh'
 alias untbz2='tar -xjvf'
 alias untgz='tar -xzvf'
 alias mount='mount -vv'
+alias mplayer='mpv'
 
 # custom aliases
 alias brzinski='python2.7 -m SimpleHTTPServer'

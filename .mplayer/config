@@ -3,7 +3,10 @@
 
 ontop=yes
 #vo=xv
-vo=gl
+#vo=gl
+vo=vaapi
+va=vaapi
+
 ao=pulse
 #ao=alsa
 channels=2
@@ -19,6 +22,7 @@ ffactor=10
 autoq=100
 vf=pp=de,hqdn3d
 #vf-add=expand=::::1:16/9:16
+ass=true
 nofontconfig = 1
 subfont-encoding=unicode
 subcp = cp1250

@@ -155,7 +155,7 @@ set tabpagemax=50   " set maximum number of tabs
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype plugin indent on
 
-"set tabstop=4                                   " Tabs are 4 spaces
+set tabstop=4                                   " Tabs are 4 spaces
 set expandtab
 set shiftwidth=4                                " Define the width of a shift for the<<  and>>  commands. (Tabs under smart indent)
 set softtabstop=4                               " Define what tabstop  is to be simulated when Tab is pressed
@@ -209,15 +209,16 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 1
-let g:syntastic_always_populate_loc_list=1
-let g:syntastic_php_checkers=['php', 'phpmd']
-let g:syntastic_javascript_checkers = ['jslint']
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_jump=1
-let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 0
+"let g:syntastic_check_on_wq = 0
+"let g:syntastic_always_populate_loc_list=1
+"let g:syntastic_python_checkers = ['pylint']
+"let g:syntastic_php_checkers=['php', 'phpmd']
+"let g:syntastic_javascript_checkers = ['jslint']
+"let g:syntastic_enable_signs=1
+"let g:syntastic_auto_jump=1
+"let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 
 let g:gitgutter_escape_grep = 1
 let g:gitgutter_enabled = 1
@@ -248,6 +249,9 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 " VIM-Tags
 " https://github.com/szw/vim-tags
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+map <F5> :execute 'TagsGenerate '<CR>
+map <A-F5> :execute 'TagsGenerate! '<CR>
 
 let g:vim_tags_auto_generate = 1
 let g:vim_tags_use_vim_dispatch = 1

@@ -231,8 +231,8 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
         , ((0, 0x1008FF12), spawn "pactl set-sink-mute 0 toggle") -- mute volume
 
         -- brightness control
-        , ((0, 0x1008FF02), spawn "xbacklight -inc 10") -- Monitor/panel brightness up
-        , ((0, 0x1008FF03), spawn "xbacklight -dec 10") -- Monitor/panel brightness down
+        , ((0, 0x1008FF02), spawn "light -A 10") -- Monitor/panel brightness up
+        , ((0, 0x1008FF03), spawn "light -U 10") -- Monitor/panel brightness down
 
         -- take screenshot
         , ((0, xK_Print), spawn "import -window root ~/media/screenshots/$(date '+%Y%m%d-%H%M%S').png")
@@ -251,7 +251,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
         -- mod-shift-[1..9] %! Move client to workspace N
         ((m .|. modMask, k), windows $ f i)
         | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_9]
-        , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]
+        , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]
     ]
     ++
     [
