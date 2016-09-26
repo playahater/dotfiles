@@ -54,8 +54,6 @@ set lazyredraw
 set wildmenu
 set numberwidth=5
 set scrolloff=10
-"set statusline=%<%F%h%m%r%h%w\ %y\ %{&ff}\ %{strftime(\"%c\",getftime(expand(\"%:p\")))}%=\ %{fugitive#statusline()}\ lin:%l\,%L\ col:%c%V\ pos:%o\ ascii:%b\ %P
-"set statusline=%<%F%h%m%r%h%w%=\ %{fugitive#statusline()}\ lin:%l\,%L\ col:%c%V\ %P
 set formatoptions=rq
 set t_Co=256
 
@@ -67,12 +65,6 @@ cmap WQ wq
 cmap wQ wq
 cmap Q q
 cmap Tabe tabe
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Ag - code Search tool
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:agprg="ag --column --smart-case --hidden --stats"
-let g:aghighlight=1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Improved status bar - airline
@@ -219,6 +211,7 @@ set statusline+=%*
 "let g:syntastic_enable_signs=1
 "let g:syntastic_auto_jump=1
 "let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
+let g:syntastic_quiet_messages = { "type": "style" }
 
 let g:gitgutter_escape_grep = 1
 let g:gitgutter_enabled = 1
@@ -249,9 +242,6 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 " VIM-Tags
 " https://github.com/szw/vim-tags
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-map <F5> :execute 'TagsGenerate '<CR>
-map <A-F5> :execute 'TagsGenerate! '<CR>
 
 let g:vim_tags_auto_generate = 1
 let g:vim_tags_use_vim_dispatch = 1
