@@ -21,7 +21,7 @@ export EDITOR="vim"
 export PAGER=/usr/bin/vimpager
 export TERM=xterm-256color
 export PHP_PATH=/usr/bin/php
-export BROWSER="chromium"
+export BROWSER="chromium.desktop"
 
 setopt APPEND_HISTORY
 setopt INC_APPEND_HISTORY
