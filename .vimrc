@@ -248,10 +248,9 @@ let g:vim_tags_auto_generate = 1
 let g:vim_tags_use_vim_dispatch = 1
 
 " required for https://github.com/Valloric/YouCompleteMe
-let g:vim_tags_use_language_field = 1
+" let g:vim_tags_use_language_field = 1
 
-"let g:vim_tags_ignore_files = ['.gitignore', '.svnignore', '.cvsignore']
-let g:vim_tags_ignore_files = []
+let g:vim_tags_ignore_files = ['.gitignore', '.svnignore', '.cvsignore']
 let g:vim_tags_ignore_file_comment_pattern = '^[#""]'
 let g:vim_tags_directories = [".git", ".hg", ".svn", ".bzr", "_darcs", "CVS"]
 let g:vim_tags_main_file = 'tags'
