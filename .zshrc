@@ -184,7 +184,7 @@ alias freebsdboot="qemu-system-x86_64 -enable-kvm  -cpu host -smp cpus=1 -drive 
 
 # git aliases
 alias g='git'
-alias gb='git branch -vv'
+alias gb="git for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
 alias gc='git commit -a -m'
 alias gba='git branch -a -vv'
 alias gcv='git commit -vv'
@@ -200,6 +200,9 @@ alias gdc='git diff --cached'
 alias gf='git diff --stat --color'
 alias git-deleted="git log --all --pretty=format: --name-only --diff-filter=D | sort -u"
 alias gfa='git fetch origin'
+alias gbdl='git branch -d $(git branch --merged)'
+
+alias embarkClear='php56 artisan route:clear && php56 artisan view:clear && php56 artisan cache:clear && php56 artisan config:clear'
 
 rmmodcomplete () { reply=(`/sbin/lsmod|cut -f1 -d" "|grep -v Module`) }
 compctl -K rmmodcomplete rmmod
