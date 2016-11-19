@@ -10,8 +10,8 @@ Xft.rgba: rgba
 
 ! === U R x v t ==============================================================
 URxvt*.cursorBlink: false
-URxvt*.depth: 24
-URxvt*.font: xft:Literation Mono Powerline:pixelsize=16:antialias=true:autohint=true:dpi=96
+URxvt*.depth: 32
+URxvt*.font: xft:Literation Mono Powerline:pixelsize=15:antialias=true:autohint=true:dpi=96
 !URxvt*.inheritPixmap: true
 URxvt*.internalBorder: 0
 URxvt*.loginShell: true
