@@ -1,18 +1,12 @@
-[user]
-	name = playahater
-	email = mishkez@gmail.com
-  logallrefupdates = true
-[github]
-  user = playahater
-  token = 8c352ef8d7459bb990bdcb577c82e332
-  ssl = true
+[include]
+  path = ~/.gitconfig.local
 [core]
   legacyheaders = false
   quotepath = false
   autocrlf = input
   pager = less -RSFX
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol,space-before-tab,tabwidth=4
-	excludesfile = /home/play/.gitignore
+  excludesfile = /home/play/.gitignore
 [branch]
   autosetupmerge = always
   autosetuprebase = always
@@ -29,10 +23,10 @@
 [repack]
   usedeltabaseoffset = true
 [push]
-	default = matching
+  default = matching
 [merge]
   log = true
-	tool = vimdiff3
+  tool = vimdiff3
 [mergetool]
   prompt = true
 [mergetool "vimdiff3"]
@@ -68,4 +62,4 @@
   co = checkout
   df = diff --word-diff
   ls = ls-files
-	datetag = !git tag `date \"+%Y%m%d%H%M\"`
+  datetag = !git tag `date \"+%Y%m%d%H%M\"`
