@@ -15,6 +15,7 @@ set winminheight=0
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Global Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+syntax enable
 set showcmd                       " Show incomplete cmds down the bottom
 set showmode                      " Show current mode down the bottom
 set clipboard=autoselectplus      " save the selection into the system clipboard
@@ -35,7 +36,6 @@ set autoread
 set magic                         " change the way backslashes are used in search patterns
 set confirm
 set paste
-syntax enable
 
 "set list
 "set listchars=tab:>.,trail:.,extends:#,nbsp:.
