@@ -4,33 +4,33 @@
 
 call plug#begin('~/.vim/plugged')
 
-	" utilities
-	Plug 'tpope/vim-dispatch'
-	Plug 'Shougo/neocomplete.vim'
-	Plug 'vim-scripts/L9'
-	Plug 'airblade/vim-gitgutter'
-	Plug 'Townk/vim-autoclose'
-	Plug 'szw/vim-tags'
-	Plug 'tpope/vim-fugitive'
-	Plug 'majutsushi/tagbar'
-	Plug 'vim-syntastic/syntastic', { 'on':  'SyntasticToggleMode' }
-	Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-	Plug 'alvan/vim-closetag'
+    " utilities
+    Plug 'tpope/vim-dispatch'
+    Plug 'Shougo/neocomplete.vim'
+    Plug 'vim-scripts/L9'
+    Plug 'airblade/vim-gitgutter'
+    Plug 'Townk/vim-autoclose'
+    Plug 'szw/vim-tags'
+    Plug 'tpope/vim-fugitive'
+    Plug 'majutsushi/tagbar'
+    Plug 'vim-syntastic/syntastic', { 'on':  'SyntasticToggleMode' }
+    Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+    Plug 'alvan/vim-closetag'
     Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-	"Plug 'vim-ctrlspace/vim-ctrlspace'
-	"Plug 'ctrlpvim/ctrlp.vim'
-	"Plug 'edkolev/promptline.vim'
+    "Plug 'vim-ctrlspace/vim-ctrlspace'
+    "Plug 'ctrlpvim/ctrlp.vim'
+    "Plug 'edkolev/promptline.vim'
 
-	" themes
-	Plug 'morhetz/gruvbox'
-	Plug 'vim-airline/vim-airline'
-	"Plug 'vim-airline/vim-airline-themes'
+    " themes
+    Plug 'morhetz/gruvbox'
+    Plug 'vim-airline/vim-airline'
+    "Plug 'vim-airline/vim-airline-themes'
 
-	" syntax
-	Plug 'StanAngeloff/php.vim'
-	Plug 'cakebaker/scss-syntax.vim'
-	Plug 'jwalton512/vim-blade'
-	Plug 'mustache/vim-mustache-handlebars'
+    " syntax
+    Plug 'StanAngeloff/php.vim'
+    Plug 'cakebaker/scss-syntax.vim'
+    Plug 'jwalton512/vim-blade'
+    Plug 'mustache/vim-mustache-handlebars'
 
 call plug#end()
 
@@ -329,10 +329,10 @@ let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 
 " Define dictionary.
 let g:neocomplete#sources#dictionary#dictionaries = {
-    \ 'default' : '',
-    \ 'vimshell' : $HOME.'/.vimshell_hist',
-    \ 'scheme' : $HOME.'/.gosh_completions'
-        \ }
+            \ 'default' : '',
+            \ 'vimshell' : $HOME.'/.vimshell_hist',
+            \ 'scheme' : $HOME.'/.gosh_completions'
+            \ }
 
 " Define keyword.
 if !exists('g:neocomplete#keyword_patterns')
@@ -348,9 +348,9 @@ inoremap <expr><C-l>     neocomplete#complete_common_string()
 " <CR>: close popup and save indent.
 inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
 function! s:my_cr_function()
-  return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
-  " For no inserting <CR> key.
-  "return pumvisible() ? "\<C-y>" : "\<CR>"
+    return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
+    " For no inserting <CR> key.
+    "return pumvisible() ? "\<C-y>" : "\<CR>"
 endfunction
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -371,7 +371,7 @@ inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 
 " Enable heavy omni completion.
 if !exists('g:neocomplete#sources#omni#input_patterns')
-  let g:neocomplete#sources#omni#input_patterns = {}
+    let g:neocomplete#sources#omni#input_patterns = {}
 endif
 "let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 "let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
@@ -395,8 +395,8 @@ if has("autocmd")
     autocmd BufNewFile,BufRead *.twig set filetype=twig
     autocmd BufNewFile,BufRead *.html.twig set filetype=html.twig
 
-	autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-	autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+    autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+    autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
     autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
     autocmd FileType php set omnifunc=phpcomplete#CompletePHP
     autocmd FileType php setlocal makeprg=zca\ %<.php

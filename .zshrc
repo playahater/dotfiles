@@ -316,4 +316,4 @@ fi                                                                 ##
 #
 
 source /usr/share/doc/pkgfile/command-not-found.zsh
-source "$HOME/.vim/lib/gruvbox_256palette.sh"
+source "$HOME/.vim/plugged/gruvbox/gruvbox_256palette.sh"
