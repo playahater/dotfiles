@@ -1,14 +1,25 @@
 escape ``
+attrcolor b ".I"
 setenv LC_CTYPE en_US.UTF-8
+encoding utf8 utf8
+defencoding utf8
+defutf8 on
+utf8 on
 defutf8 on
 setenv DISPLAY ':0'
 term xterm-256color
-termcapinfo xterm* ti@:te@
+#termcapinfo xterm* ti@:te@
+termcapinfo xterm*|rxvt*|urxvt* 'hs:ts=\E]2;:fs=\007:ds=\E]2;screen\007'
+hardcopy_append on
+crlf off
+altscreen on
+defhstatus "screen: ^En (^Et)"
 shell zsh
 shelltitle ''
-defscrollback 1000
+defmonitor on
+defbce on
+defscrollback 3000
 select 0
-altscreen on
 nethack on
 nonblock on
 defnonblock 1
@@ -19,6 +30,5 @@ deflogin on
 defflow off
 msgwait 1
 acladd play
-hardstatus alwayslastline
 sorendition +b kG
-hardstatus string "%{.kW}%-w%{+b r}%n %t%{-}%+w"
+hardstatus alwayslastline "%{=b}%{G}%{r}%w"

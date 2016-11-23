@@ -274,14 +274,14 @@ let g:vim_tags_extension = '.tags'
 let g:vim_tags_cache_dir = expand($HOME)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" VIM UltiSnips
+" ultisnips
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Neocomplete
+" neocomplete
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:acp_enableAtStartup = 0
 let g:neocomplete#enable_auto_select = 1
