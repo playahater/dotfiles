@@ -8,7 +8,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'Shougo/neocomplete.vim'
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
-    Plug 'Townk/vim-autoclose'
+    Plug 'yukunlin/auto-pairs'
     Plug 'alvan/vim-closetag'
     Plug 'szw/vim-tags'
     Plug 'majutsushi/tagbar'
@@ -16,8 +16,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
     Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
     Plug 'vim-ctrlspace/vim-ctrlspace'
-    "Plug 'ctrlpvim/ctrlp.vim'
-    "Plug 'edkolev/promptline.vim'
+    Plug 'wikitopian/hardmode'
+    Plug 'scrooloose/nerdcommenter'
+    "Plug 'joonty/vdebug'
 
     " themes
     Plug 'morhetz/gruvbox'
@@ -28,8 +29,15 @@ call plug#begin('~/.vim/plugged')
     Plug 'StanAngeloff/php.vim'
     Plug 'cakebaker/scss-syntax.vim'
     Plug 'jwalton512/vim-blade'
+    Plug 'pangloss/vim-javascript'
+    Plug 'othree/html5.vim'
+    Plug 'tpope/vim-markdown'
     Plug 'mustache/vim-mustache-handlebars'
 call plug#end()
+
+"automatic reloading of vimrc"
+autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+autocmd! bufwritepost .vimrc source %
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " key maps
@@ -56,6 +64,7 @@ map <F10> :set paste<CR>
 map <C-L> :!php -l %<CR>
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+map <C-c> :call NERDComment(0,"toggle")<C-m>
 
 inoremap <expr><C-g>     neocomplete#undo_completion()
 inoremap <expr><C-l>     neocomplete#complete_common_string()
@@ -75,10 +84,6 @@ inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " global
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-"automatic reloading of vimrc"
-autocmd! bufwritepost .vimrc source %
-
 syntax enable
 filetype plugin indent on
 
@@ -238,6 +243,39 @@ let g:airline#extensions#tabline#show_buffers = 1
 let g:syntastic_quiet_messages = { 'type': 'style' }
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" nerdcommenter
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:NERDSpaceDelims = 1
+let g:NERDCompactSexyComs = 1
+let g:NERDDefaultAlign = 'left'
+let g:NERDAltDelims_java = 1
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+let g:NERDCommentEmptyLines = 1
+let g:NERDTrimTrailingWhitespace = 1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" markdown
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" javascript
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:javascript_plugin_jsdoc           = 1
+let g:javascript_plugin_ngdoc           = 1
+let g:javascript_plugin_flow            = 1
+let g:javascript_conceal_function       = "ƒ"
+let g:javascript_conceal_null           = "ø"
+let g:javascript_conceal_this           = "@"
+let g:javascript_conceal_return         = "⇚"
+let g:javascript_conceal_undefined      = "¿"
+let g:javascript_conceal_NaN            = "ℕ"
+let g:javascript_conceal_prototype      = "¶"
+let g:javascript_conceal_static         = "•"
+let g:javascript_conceal_super          = "Ω"
+let g:javascript_conceal_arrow_function = "⇒"
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " gitgutter
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gitgutter_escape_grep = 1
@@ -334,6 +372,7 @@ if has('autocmd')
     au BufRead,BufNewFile *.wsgi set filetype=python
     autocmd BufNewFile,BufRead *.twig set filetype=twig
     autocmd BufNewFile,BufRead *.html.twig set filetype=html.twig
+    autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
     autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
     autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
