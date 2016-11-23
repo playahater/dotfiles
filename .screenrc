@@ -16,7 +16,7 @@ altscreen on
 defhstatus "screen: ^En (^Et)"
 shell zsh
 shelltitle ''
-defmonitor on
+#defmonitor on
 defbce on
 defscrollback 3000
 select 0
