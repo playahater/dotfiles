@@ -1,9 +1,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " plugs
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 call plug#begin('~/.vim/plugged')
-
     " utilities
     Plug 'tpope/vim-dispatch'
     Plug 'vim-scripts/L9'
@@ -31,74 +29,113 @@ call plug#begin('~/.vim/plugged')
     Plug 'cakebaker/scss-syntax.vim'
     Plug 'jwalton512/vim-blade'
     Plug 'mustache/vim-mustache-handlebars'
-
 call plug#end()
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" key maps
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <silent><C-n> :tabnext<CR>
+nmap <silent><C-p> :tabprevious<CR>
+nmap <C-j> :bprev<CR>
+nmap <C-k> :bnext<CR>
+
+if &diff
+    nnoremap <silent><C-j> :diffget LOCAL<CR>
+    "nnoremap <silent><C-.> :diffget BASE<CR>
+    nnoremap <silent><C-k> :diffget REMOTE<CR>
+endif
+
+map <F1> @q
+map <F3> :TlistToggle<CR>
+map <F4> :SyntasticToggleMode<CR>
+map <F5> mzgg=G`z<CR>
+map <F7> :execute 'NERDTreeToggle ' . getcwd()<CR>
+map <F8> :TagbarToggle<CR>
+map <F9> :set wrap!<Bar>set wrap?<CR>
+map <F10> :set paste<CR>
+map <C-L> :!php -l %<CR>
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+
+inoremap <expr><C-g>     neocomplete#undo_completion()
+inoremap <expr><C-l>     neocomplete#complete_common_string()
+
+" <CR>: close popup and save indent.
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+function! s:my_cr_function()
+    return pumvisible() ? "\<C-y>" : "\<CR>"
+endfunction
+
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" <C-h>, <BS>: close popup and delete backword char.
+inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" global
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "automatic reloading of vimrc"
 autocmd! bufwritepost .vimrc source %
 
-hi StatusLine guifg=black guibg=white
+syntax enable
+filetype plugin indent on
+
 set nocompatible    " Unable Vi compatibility
 set ttyfast
 set wildmode=longest,list:longest
 set autowrite
 set textauto
 set winminheight=0
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Global Settings
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-syntax enable
-filetype plugin indent on
-set showcmd                       " Show incomplete cmds down the bottom
-set showmode                      " Show current mode down the bottom
-set clipboard=autoselectplus      " save the selection into the system clipboard
-set ruler                         " Ruler on
-set number                        " Display line numbers
-set timeoutlen=5                  " Time to wait after ESC (default causes an annoying delay)
+set showcmd     " Show incomplete cmds down the bottom
+set showmode    " Show current mode down the bottom
+set clipboard=autoselectplus    " save the selection into the system clipboard
+set ruler   " Ruler on
+set number  " Display line numbers
+set timeoutlen=1    " Time to wait after ESC
 set nobackup
 set noswapfile
-set hlsearch                      " Highlight search strings
+set hlsearch    " Highlight search strings
 set nowritebackup
 set winaltkeys=yes
 set modeline
 set shortmess+=filmnrxoOtT
-set viewoptions=folds,options,cursor,unix,slash " better unix / windows compatibility
+set viewoptions=folds,options,cursor,unix,slash
 set history=1000
 set gdefault
 set autoread
-set magic                         " change the way backslashes are used in search patterns
+set magic   " change the way backslashes are used in search patterns
 set confirm
 set showtabline=0
 set hidden
 set ttimeout
 set ttimeoutlen=50
-set background=dark     " enable for dark terminals
+set background=dark " enable for dark terminals
 set lazyredraw
 set wildmenu
 set numberwidth=5
 set scrolloff=10
 set formatoptions=rq
 set t_Co=256
-set noshowmode                    " get rid of the default mode indicator
+set noshowmode    " get rid of the default mode indicator
 set complete=.,b,u,]
-set completeopt=menu,preview
-set showmatch       " Show matching brackets.
-set matchtime=8     " Bracket blinking.
+set completeopt=longest,menu,preview
+set showmatch   " Show matching brackets.
+set matchtime=8 " Bracket blinking.
 set novisualbell    " No blinking .
 set noerrorbells    " No noise.
 set vb t_vb="."
 set laststatus=2    " Always show status line.
 set tabpagemax=50   " set maximum number of tabs
-set tabstop=4                                   " Tabs are 4 spaces
+set tabstop=4   " Tabs are 4 spaces
 set expandtab
-set shiftwidth=4                                " Define the width of a shift for the<<  and>>  commands. (Tabs under smart indent)
-set softtabstop=4                               " Define what tabstop  is to be simulated when Tab is pressed
-set autoindent                                  " Automatically indent eache line like previous one
-set smartindent                                 " Automatically indent when adding a curly bracket, etc.
-set backspace=indent,eol,start                  " Allow backspacing over everything in insert mode
-set cinwords=if,else,while,do,for,switch,case   " Define keywords that cause an extra indent
+set shiftwidth=4    " Define the width of a shift for the<<  and>>  commands. (Tabs under smart indent)
+set softtabstop=4   " Define what tabstop  is to be simulated when Tab is pressed
+set autoindent      " Automatically indent eache line like previous one
+set smartindent     " Automatically indent when adding a curly bracket, etc.
+set backspace=indent,eol,start    " Allow backspacing over everything in insert mode
+set cinwords=if,else,while,do,for,switch,case    " Define keywords that cause an extra indent
 set lbr
 set nowrap
 set encoding=utf-8
@@ -108,56 +145,63 @@ set iskeyword+=_,$,@,%,#
 set foldmethod=indent   " fold based on indent
 set foldnestmax=3       " deepest fold is 3 levels
 set nofoldenable        " dont fold by default
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
 set incsearch   " Search as you type
 set ignorecase  " Ignore case when searching
 set smartcase   " if there are caps, go case-sensitive
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" color
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 colorscheme gruvbox
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_italic = 1
 "let g:gruvbox_invert_signs = 1
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" system
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:buftabs_only_basename=1
+let g:buftabs_in_statusline=1
+let html_number_lines = 0
+let html_use_css = 0
+let use_xhtml = 0
+let html_wrong_comments=1
+let php_sql_query = 1
+let php_baselib = 1
+let php_htmlInStrings = 1
+let hs_highlight_delimiters = 1
+let hs_highlight_boolean = 1
+let hs_highlight_types = 1
+let java_javascript=1
+let java_css=1
+let msql_sql_query = 1
+let apache_version = '2.0'
+let enforce_freedesktop_standard = 1
+let python_highlight_all = 1
+"let g:is_bash = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Stupid shift key fixes
+" search
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-cmap W w
-cmap WQ wq
-cmap wQ wq
-cmap Q q
-cmap Tabe tabe
+set tags=./tags,tags,./.git/tags;
+set ofu=syntaxcomplete#Complete
+set backupcopy=auto,breakhardlink
 
-nmap <F1> @q
-nnoremap <silent><C-n> :tabnext<CR>
-nnoremap <silent><C-p> :tabprevious<CR>
-noremap <C-j> :bprev<CR>
-noremap <C-k> :bnext<CR>
+" Trailing or broken whitespace.
+let c_space_errors=1
+highlight WhitespaceEOL ctermbg=red guibg=red
+match WhitespaceEOL /\s\+$/
 
-if &diff
-    nnoremap <silent><C-j> :diffget LOCAL<CR>
-    "  nnoremap <silent><C-.> :diffget BASE<CR>
-    nnoremap <silent><C-k> :diffget REMOTE<CR>
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" airline
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
 endif
-
-map <F3> :TlistToggle<CR>
-map <F5> mzgg=G`z<CR>
-map <F4> :SyntasticToggleMode<CR>
-map <F10> :set paste<CR>
-map <F9>  :set wrap!<Bar>set wrap?<CR>
-nmap <F8> :TagbarToggle<CR>
-
-map <C-L> :!php -l %<CR>
-
-map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Improved status bar - airline
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:airline_symbols.space = "\ua0"
 let g:airline#extensions#tabline#enabled = 0
 set fillchars+=stl:\ ,stlnc:\
 let g:airline_section_c = '%F'
@@ -178,32 +222,9 @@ let g:airline#extensions#tabline#ctrlspace#enabled = 1
 let g:airline#extensions#tabline#switch_buffers_and_tabs = 0
 let g:airline#extensions#tabline#show_buffers = 1
 
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-let g:airline_symbols.space = "\ua0"
-
-
-let g:buftabs_only_basename=1
-let g:buftabs_in_statusline=1
-
-let html_number_lines = 0
-let html_use_css = 0
-let use_xhtml = 0
-let html_wrong_comments=1
-let php_sql_query = 1
-let php_baselib = 1
-let php_htmlInStrings = 1
-let hs_highlight_delimiters = 1
-let hs_highlight_boolean = 1
-let hs_highlight_types = 1
-let java_javascript=1
-let java_css=1
-let msql_sql_query = 1
-let apache_version = "2.0"
-let enforce_freedesktop_standard = 1
-let python_highlight_all = 1
-
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" syntastic
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "let g:syntastic_auto_loc_list = 1
 "let g:syntastic_check_on_open = 0
 "let g:syntastic_check_on_wq = 0
@@ -214,8 +235,11 @@ let python_highlight_all = 1
 "let g:syntastic_enable_signs=1
 "let g:syntastic_auto_jump=1
 "let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
-let g:syntastic_quiet_messages = { "type": "style" }
+let g:syntastic_quiet_messages = { 'type': 'style' }
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" gitgutter
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gitgutter_escape_grep = 1
 let g:gitgutter_enabled = 1
 let g:gitgutter_signs = 1
@@ -223,29 +247,23 @@ let g:gitgutter_highlight_lines = 0
 let g:gitgutter_realtime = 1
 let g:gitgutter_eager = 1
 
-"  let g:is_bash = 1
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERD_tree
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-map <F7> :execute 'NERDTreeToggle ' . getcwd()<CR>
 let NERDChristmasTree = 1
 let NERDTreeCaseSensitiveSort = 1
 let NERDTreeIgnore = ['\~$','\.[ao]$','\.swp$','\.DS_Store','\.pyc','\.pyo','\coverage']
 let NERDTreeMouseMode = 2
 let NERDTreeShowHidden = 1
 let NERDTreeChDirMode = 2
-let NERDTreeWinPos = "right"
-let NERDTreeWinSize = 40
+let NERDTreeWinPos = 'right'
+let NERDTreeWinSize = 45
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" VIM-Tags
-" https://github.com/szw/vim-tags
+" vimtags
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 let g:vim_tags_auto_generate = 1
 let g:vim_tags_use_vim_dispatch = 1
 let g:vim_tags_ignore_files = ['.gitignore', '.svnignore', '.cvsignore']
@@ -258,34 +276,20 @@ let g:vim_tags_cache_dir = expand($HOME)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM UltiSnips
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"let g:UltiSnipsExpandTrigger="<tab>"
-"let g:UltiSnipsJumpForwardTrigger="<tab>"
-"let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Search Settings
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set tags=./tags,tags,./.git/tags;
-set ofu=syntaxcomplete#Complete
-
-" Trailing or broken whitespace.
-let c_space_errors=1
-highlight WhitespaceEOL ctermbg=red guibg=red
-match WhitespaceEOL /\s\+$/
-set backupcopy=auto,breakhardlink
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Neocomplete
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
-" Use neocomplete.
+let g:neocomplete#enable_auto_select = 1
 let g:neocomplete#enable_at_startup = 1
-" Use smartcase.
 let g:neocomplete#enable_smart_case = 1
-" Set minimum syntax keyword length.
 let g:neocomplete#sources#syntax#min_keyword_length = 3
 let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+let g:neocomplete#enable_auto_select = 1
 
 " Define dictionary.
 "let g:neocomplete#sources#dictionary#dictionaries = {
@@ -300,34 +304,6 @@ if !exists('g:neocomplete#keyword_patterns')
 endif
 let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 
-" Plugin key-mappings.
-inoremap <expr><C-g>     neocomplete#undo_completion()
-inoremap <expr><C-l>     neocomplete#complete_common_string()
-
-" Recommended key-mappings.
-" <CR>: close popup and save indent.
-inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-function! s:my_cr_function()
-    return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
-    " For no inserting <CR> key.
-    "return pumvisible() ? "\<C-y>" : "\<CR>"
-endfunction
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-" <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-" Close popup by <Space>.
-"inoremap <expr><Space> pumvisible() ? "\<C-y>" : "\<Space>"
-
-" AutoComplPop like behavior.
-let g:neocomplete#enable_auto_select = 1
-
-" Shell like behavior(not recommended).
-"set completeopt+=longest
-"let g:neocomplete#enable_auto_select = 1
-"inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<C-x>\<C-u>"
-
 " Enable heavy omni completion.
 if !exists('g:neocomplete#sources#omni#input_patterns')
     let g:neocomplete#sources#omni#input_patterns = {}
@@ -335,32 +311,24 @@ endif
 let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
 let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-
-" For perlomni.vim setting.
-" https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Vim-CtrlSpace
+" ctrlspace
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:CtrlSpaceLoadLastWorkspaceOnStart = 1
 let g:CtrlSpaceSaveWorkspaceOnSwitch = 1
 let g:CtrlSpaceSaveWorkspaceOnExit = 1
 let g:CtrlSpaceSearchTiming = 500
 let g:CtrlSpaceUseTabline = 1
-let g:CtrlSpaceFileEngine = "file_engine_linux_amd64"
-let g:CtrlSpaceStatuslineFunction = "airline#extensions#ctrlspace#statusline()"
+let g:CtrlSpaceFileEngine = 'file_engine_linux_amd64'
+let g:CtrlSpaceStatuslineFunction = 'airline#extensions#ctrlspace#statusline()'
 let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
-"let g:CtrlSpaceSymbols = { "File": "◯", "CTab": "▣", "Tabs": "▢" }
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Miscellaneous
+" misc
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if has("autocmd")
+if has('autocmd')
     au BufRead,BufNewFile *.module set filetype=php
     au BufRead,BufNewFile *.install set filetype=php
     au BufRead,BufNewFile *.wsgi set filetype=python
