@@ -12,7 +12,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'alvan/vim-closetag'
     Plug 'szw/vim-tags'
     Plug 'majutsushi/tagbar'
-    Plug 'vim-syntastic/syntastic', { 'on':  'SyntasticToggleMode' }
+    Plug 'vim-syntastic/syntastic'
     Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
     Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
     Plug 'vim-ctrlspace/vim-ctrlspace'
@@ -36,8 +36,8 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 "automatic reloading of vimrc"
-autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
-autocmd! bufwritepost .vimrc source %
+au VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+au! bufwritepost .vimrc source %
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " key maps
@@ -230,17 +230,20 @@ let g:airline#extensions#tabline#show_buffers = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " syntastic
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 0
-"let g:syntastic_check_on_wq = 0
-"let g:syntastic_always_populate_loc_list=1
-"let g:syntastic_python_checkers = ['pylint']
 "let g:syntastic_php_checkers=['php', 'phpmd']
-"let g:syntastic_javascript_checkers = ['jslint']
-"let g:syntastic_enable_signs=1
-"let g:syntastic_auto_jump=1
-"let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
+let g:syntastic_php_checkers=['php']
+let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_jump=1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
 let g:syntastic_quiet_messages = { 'type': 'style' }
+let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
+let g:syntastic_error_symbol = '▸'
+let g:syntastic_warning_symbol = "\u26A0"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " nerdcommenter
@@ -370,25 +373,24 @@ if has('autocmd')
     au BufRead,BufNewFile *.module set filetype=php
     au BufRead,BufNewFile *.install set filetype=php
     au BufRead,BufNewFile *.wsgi set filetype=python
-    autocmd BufNewFile,BufRead *.twig set filetype=twig
-    autocmd BufNewFile,BufRead *.html.twig set filetype=html.twig
-    autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+    au BufNewFile,BufRead *.twig set filetype=twig
+    au BufNewFile,BufRead *.html.twig set filetype=html.twig
+    au BufNewFile,BufReadPost *.md set filetype=markdown
 
-    autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-    autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-    autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-    autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-    autocmd FileType php setlocal makeprg=zca\ %<.php
-    autocmd FileType php setlocal errorformat=%f(line\ %l):\ %m
-    autocmd FileType python set expandtab shiftwidth=4 softtabstop=4 omnifunc=pythoncomplete#Complete
-    autocmd FileType html set softtabstop=4 shiftwidth=4 textwidth=0 omnifunc=htmlcomplete#CompleteTags
-    autocmd FileType css set softtabstop=4 shiftwidth=4 textwidth=0 omnifunc=csscomplete#CompleteCSS
-    autocmd FileType c,cpp,java,php,module,tpl.php,js,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
+    au FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+    au FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+    au FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+    au FileType php set omnifunc=phpcomplete#CompletePHP
+    au FileType php setlocal makeprg=zca\ %<.php
+    au FileType php setlocal errorformat=%f(line\ %l):\ %m
+    au FileType python set expandtab shiftwidth=4 softtabstop=4 omnifunc=pythoncomplete#Complete
+    au FileType html set softtabstop=4 shiftwidth=4 textwidth=0 omnifunc=htmlcomplete#CompleteTags
+    au FileType css set softtabstop=4 shiftwidth=4 textwidth=0 omnifunc=csscomplete#CompleteCSS
+    au FileType c,cpp,java,php,module,tpl.php,js,python,twig,xml,yml au BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
 
-    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+    au bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-    au FileType javascript call JavaScriptFold()
 
     function! PhpSyntaxOverride()
         hi! def link phpDocTags  phpDefine
@@ -396,8 +398,8 @@ if has('autocmd')
     endfunction
 
     augroup phpSyntaxOverride
-        autocmd!
-        autocmd FileType php call PhpSyntaxOverride()
+        au!
+        au FileType php call PhpSyntaxOverride()
     augroup END
 
     au VimEnter * AirlineTheme gruvbox
