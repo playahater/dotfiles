@@ -64,7 +64,7 @@ map <F10> :set paste<CR>
 map <C-L> :!php -l %<CR>
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
-map <C-c> :call NERDComment(0,"toggle")<C-m>
+map <C-c> :call NERDComment(1,'sexy')<C-m>
 
 inoremap <expr><C-g>     neocomplete#undo_completion()
 inoremap <expr><C-l>     neocomplete#complete_common_string()
@@ -247,11 +247,12 @@ let g:syntastic_stl_format = "[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]"
 " nerdcommenter
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:NERDSpaceDelims = 1
-let g:NERDCompactSexyComs = 1
 let g:NERDDefaultAlign = 'left'
-let g:NERDAltDelims_java = 1
-let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+let g:NERDCustomDelimiters = { 'c': { 'left': '/*','right': '*/' } }
 let g:NERDCommentEmptyLines = 1
+let g:NERDTrimTrailingWhitespace = 1
+let g:NERDDefaultNesting = 1
+let g:NERDRemoveExtraSpaces = 1
 let g:NERDTrimTrailingWhitespace = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
