@@ -229,8 +229,7 @@ let g:airline#extensions#tabline#show_buffers = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " syntastic
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"let g:syntastic_php_checkers=['php', 'phpmd']
-let g:syntastic_php_checkers=['php']
+let g:syntastic_php_checkers=['php', 'phpmd']
 let g:syntastic_python_checkers = ['pylint']
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_enable_signs=1
@@ -242,6 +241,7 @@ let g:syntastic_check_on_wq = 1
 let g:syntastic_quiet_messages = { "!level" : "errors", "type" : "style",  "regex" : "\m\[C03\d\d\]" }
 let g:syntastic_error_symbol = '▸'
 let g:syntastic_warning_symbol = "\u26A0"
+let g:syntastic_stl_format = "[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " nerdcommenter
