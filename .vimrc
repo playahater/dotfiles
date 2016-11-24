@@ -353,11 +353,12 @@ let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 let g:CtrlSpaceLoadLastWorkspaceOnStart = 1
 let g:CtrlSpaceSaveWorkspaceOnSwitch = 1
 let g:CtrlSpaceSaveWorkspaceOnExit = 1
-let g:CtrlSpaceSearchTiming = 500
+let g:CtrlSpaceSearchTiming = 200
 let g:CtrlSpaceUseTabline = 1
 let g:CtrlSpaceFileEngine = 'file_engine_linux_amd64'
 let g:CtrlSpaceStatuslineFunction = 'airline#extensions#ctrlspace#statusline()'
 let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
+let g:CtrlSpaceUseTabline = 0
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " misc
