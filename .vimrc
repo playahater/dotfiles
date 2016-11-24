@@ -8,7 +8,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'Shougo/neocomplete.vim'
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
-    Plug 'yukunlin/auto-pairs'
+    Plug 'jiangmiao/auto-pairs'
     Plug 'alvan/vim-closetag'
     Plug 'szw/vim-tags'
     Plug 'majutsushi/tagbar'
@@ -240,8 +240,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
-let g:syntastic_quiet_messages = { 'type': 'style' }
-let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
+let g:syntastic_quiet_messages = { "!level" : "errors", "type" : "style",  "regex" : "\m\[C03\d\d\]" }
 let g:syntastic_error_symbol = '▸'
 let g:syntastic_warning_symbol = "\u26A0"
 
@@ -260,6 +259,11 @@ let g:NERDTrimTrailingWhitespace = 1
 " markdown
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" autopairs
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:AutoPairsFlyMode = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " javascript
