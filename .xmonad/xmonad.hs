@@ -108,8 +108,8 @@ myStartupHook = do
     spawn "xinput set-prop 'TPPS/2 IBM TrackPoint' 'Evdev Wheel Emulation Timeout' 200"
     spawn "xinput set-prop 'TPPS/2 IBM TrackPoint' 'Evdev Wheel Emulation Axes' 6 7 4 5"
     --spawn "syndaemon -i 1 -d"
-    --spawn "xsetroot -solid '#000000'"
-    spawn "feh --bg-fill ~/media/img/baby.jpg"
+    spawn "xsetroot -solid '#000000'"
+    --spawn "feh --bg-fill ~/media/img/baby.jpg"
 
 -- logHook
 myLogHook :: Handle -> X ()
