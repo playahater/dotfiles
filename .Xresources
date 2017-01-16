@@ -34,16 +34,6 @@ URxvt*.scrollWithBuffer: false
 URxvt*.scrollstyle: plain
 URxvt*.secondaryScroll: 0
 URxvt*.secondaryScreen: 1
-URxvt*.perl-lib: /usr/lib/urxvt/perl
-URxvt*.perl-ext:      default,url-select
-URxvt*.perl-ext-common: clipboard
-URxvt*.keysym.M-u:   perl:url-select:select_next
-URxvt*.keysym.M-c:   perl:clipboard:copy
-URxvt*.keysym.M-v:   perl:clipboard:paste
-URxvt*.keysym.M-C-v: perl:clipboard:paste_escaped
-URxvt*.clipboard.autocopy: true
-URxvt*.url-select.launcher:   /usr/bin/firefox -new-tab
-URxvt*.url-select.underline: true
 
 *background: #282828
 *foreground: #ebdbb2
