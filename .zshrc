@@ -22,6 +22,8 @@ export PAGER=/usr/bin/vimpager
 export TERM=xterm-256color
 export PHP_PATH=/usr/bin/php
 export BROWSER="chromium.desktop"
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
+export ANDROID_EMULATOR_FORCE_32BIT=true
 
 setopt APPEND_HISTORY
 setopt INC_APPEND_HISTORY
