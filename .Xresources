@@ -2,7 +2,7 @@
 ! === X f t ==================================================================
 Xft.antialias: 1
 Xft.autohint: 1
-Xft.dpi: 120
+Xft.dpi: 144
 Xft.hinting: 1
 Xft.hintstyle: hintfull
 Xft.lcdfilter: lcddefault
@@ -11,7 +11,7 @@ Xft.rgba: rgba
 ! === U R x v t ==============================================================
 URxvt*.cursorBlink: false
 URxvt*.depth: 32
-URxvt*.font: xft:Literation Mono Powerline:pixelsize=17:antialias=true:autohint=true:dpi=120
+URxvt*.font: xft:Literation Mono Powerline:pixelsize=17:antialias=true:autohint=true:dpi=144
 !URxvt*.inheritPixmap: true
 URxvt*.internalBorder: 0
 URxvt*.loginShell: true

@@ -142,7 +142,7 @@ myFocusedBorderColor = "#400000"
 
 -- some nice colors for the prompt windows
 myXPConfig = defaultXPConfig {
-      font = "xft:Literation Mono Powerline:pixelsize=16:antialias=true:autohint=true:hinting=true:dpi=120"
+      font = "xft:Literation Mono Powerline:pixelsize=16:antialias=true:autohint=true:hinting=true:dpi=144"
     , bgColor = "#000000"
     , fgColor = "#D7D0C7"
     , fgHLight = "#D7D0C7"
