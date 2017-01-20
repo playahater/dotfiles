@@ -8,15 +8,15 @@ utf8 on
 defutf8 on
 setenv DISPLAY ':0'
 term xterm-256color
-#termcapinfo xterm* ti@:te@
-termcapinfo xterm*|rxvt*|urxvt* 'hs:ts=\E]2;:fs=\007:ds=\E]2;screen\007'
+termcapinfo xterm* ti@:te@
+#termcapinfo xterm*|rxvt*|urxvt* 'hs:ts=\E]2;:fs=\007:ds=\E]2;screen\007'
 hardcopy_append on
 crlf off
 altscreen on
 defhstatus "screen: ^En (^Et)"
 shell zsh
 shelltitle ''
-#defmonitor on
+defmonitor on
 defbce on
 defscrollback 3000
 select 0
