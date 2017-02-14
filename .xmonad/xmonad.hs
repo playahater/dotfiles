@@ -1,4 +1,7 @@
 --------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
 -- Compiler flags
 {-# OPTIONS_GHC -threaded #-}
 
@@ -111,7 +114,6 @@ myXPConfig = def
   , historySize = 50
   }
 
-
 --------------------------------------------------------------------------------
 -- MyTheme For Tabbed layout
 myTheme = def
@@ -140,12 +142,10 @@ addTagHook tag = do
 myManageHook :: ManageHook
 myManageHook = namedScratchpadManageHook scratchpads
   <+> composeAll
-  [ className =? "Chromium"     --> doRectFloat rightBarRect <+> addTagHook "d"
-  , title =? "xmessage"         --> doRectFloat centeredRect
-  , className =? "Xmessage"     --> doFloat
-  , className =? "Skype"        --> doShift "1"
+  [ title =? "xmessage"         --> doRectFloat centeredRect
+  , className =? "Slack"        --> doShift "1" <+> addTagHook "d"
   , className =? "Firefox"      --> doShift "2"
-  , className =? "Chromium"     --> doShift "2"
+  , className =? "Chromium"     --> doShift "2" <+> addTagHook "d"
   , className =? "PhpStorm"     --> doShift "3"
   , isDialog                    --> doFloat
   , isFullscreen                --> doFloat
@@ -230,13 +230,11 @@ keyToCode :: M.Map Char KeySym
 keyToCode = M.fromList $ zip (['a' .. 'z'] ++ ['0' .. '9']) ([xK_a .. xK_z] ++ [xK_0 .. xK_9])
 
 --------------------------------------------------------------------------------
-myModMask, tagSelectMask, tagToggleMask, workspaceMask :: ButtonMask
+myModMask, workspaceMask :: ButtonMask
 myModMask           = mod4Mask
 myShiftMask         = myModMask .|. shiftMask
 myControlMask       = myModMask .|. controlMask
 myAltMask           = myModMask .|. mod1Mask
-tagSelectMask       = myModMask
-tagToggleMask       = tagSelectMask .|. mod4Mask
 workspaceMask       = myModMask
 
 --------------------------------------------------------------------------------
@@ -248,6 +246,9 @@ myMainKeys =
   , ((0, 0x1008FF02), spawn "light -A 10") -- Monitor/panel brightness up
   , ((0, 0x1008FF03), spawn "light -U 10") -- Monitor/panel brightness down
   , ((0, xK_Print), spawn "import -window root ~/media/screenshots/$(date '+%Y%m%d-%H%M%S').png")
+  , ((myModMask, xK_grave), namedScratchpadAction scratchpads "screen")
+  , ((myAltMask, xK_h), namedScratchpadAction scratchpads "htop")
+  , ((myAltMask, xK_m), namedScratchpadAction scratchpads "mc")
   ]
 
 myBaseKeys :: XConfig Layout -> [(( ButtonMask, KeySym ), X () )]
@@ -255,16 +256,12 @@ myBaseKeys conf = myMainKeys ++
   [ ((mod1Mask, xK_Tab), windows W.focusUp >> windows W.shiftMaster)
   , ((mod1Mask .|. shiftMask, xK_Tab), windows W.focusDown)
   , ((myModMask, xK_Return), windows W.focusMaster  )
-  , ((myModMask, xK_grave), namedScratchpadAction scratchpads "screen")
-  , ((myShiftMask, xK_grave), namedScratchpadAction scratchpads "htop")
-  , ((myShiftMask, xK_m), namedScratchpadAction scratchpads "mc")
   , ((myModMask, xK_F7), spawn "single-lvds")
   , ((myShiftMask, xK_F7), spawn "single-vga")
   , ((myModMask, xK_F1), spawn $ XMonad.terminal conf)
   , ((myModMask, xK_F2), shellPrompt myXPConfig)
   , ((myModMask, xK_r), toggleWS' ["NSP"])
   , ((myModMask, xK_s), nextScreen)
-  , ((myModMask, xK_h), namedScratchpadAction scratchpads "chromium")
   , ((myModMask, xK_f), sendMessage $ Toggle NBFULL)
   , ((myModMask, xK_k), windows W.focusUp >> windows W.shiftMaster)
   , ((myModMask, xK_j), windows W.focusDown >> windows W.shiftMaster)
@@ -303,11 +300,13 @@ myKeys conf = M.fromList $
     , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]] ++
   buildTagKeys tags focusUpTagged
 
+--------------------------------------------------------------------------------
 buildTagKeys :: [Tag] -> ( String -> X () ) -> [(( ButtonMask, KeySym ), X () )]
 buildTagKeys tagKeys action =
-  [((tagSelectMask, keyToCode M.! key), action [key] >> windows W.shiftMaster) | key <- tagKeys ] ++
-  [((tagToggleMask, keyToCode M.! key), (withFocused . toggleTag) [key])       | key <- tagKeys ]
+  [((myShiftMask, keyToCode M.! key), action [key] >> windows W.shiftMaster) | key <- tagKeys ] ++
+  [((myModMask, keyToCode M.! key), (withFocused . toggleTag) [key])       | key <- tagKeys ]
 
+--------------------------------------------------------------------------------
 toggleTag :: String -> Window -> X ()
 toggleTag tag window = do
   tagActive <- hasTag tag window
@@ -315,12 +314,17 @@ toggleTag tag window = do
   then delTag tag window
   else addTag tag window
 
+--------------------------------------------------------------------------------
 xmessage :: String -> X ()
 xmessage msg = spawn $ "xmessage " ++ msg
 
+--------------------------------------------------------------------------------
 -- explicit list of tags
 tags :: [Tag]
 tags = [ 'e' -- editor
        , 'd' -- project-related documentation
        , 'o' -- org mode: project-related org or similar
        ]
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
