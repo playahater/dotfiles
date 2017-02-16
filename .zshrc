@@ -176,7 +176,7 @@ alias clear="echo NO!"
 alias moonphase="curl wttr.in/Moon"
 
 alias dozeboot="qemu-system-i386 -cpu host -enable-kvm -machine type=pc,accel=kvm -m 4G -drive file=/home/green/sandbox/doze/doze.raw,format=raw,if=ide -net nic,model=rtl8139 -net user -usbdevice host:13fe:4200"
-alias doze8boot="qemu-system-i386 -cpu host -enable-kvm -machine type=pc,accel=kvm -m 4G -drive file=/home/green/sandbox/doze8/doze8.raw,format=raw,if=ide -net nic,model=rtl8139 -net user -usbdevice host:13fe:4200"
+alias doze10boot="qemu-system-x86_64 -cpu host -enable-kvm -machine type=pc,accel=kvm -m 4G -drive file=/home/green/sandbox/doze10/doze10.raw,format=raw,if=ide -net nic,model=rtl8139 -net user -usbdevice host:13fe:4200"
 #alias bsdboot="qemu-system-x86_64 -cpu host -enable-kvm -machine type=pc,accel=kvm -m 2G -drive file=/home/green/sandbox/freebsd/freebsd.raw,format=raw,if=virtio -usbdevice host:13fe:4200"
 alias bsdboot="qemu-system-x86_64 -cpu host -enable-kvm -machine type=pc,accel=kvm -m 2G -drive file=/home/green/sandbox/freebsd/freebsd.raw,format=raw,if=virtio -net nic,model=virtio -usbdevice host:13fe:4200"
 #alias freebsdboot="qemu-system-x86_64 -enable-kvm  -cpu host -smp cpus=1 -drive file=freebsd102.qcow2,if=virtio  -device e1000,netdev=user.0 -netdev user,id=user.0,hostfwd=tcp::10022-:22 -m 256 -name 'FreeBSD VM' -machine type=pc,accel=kvm   -show-cursor -spice port=5900,addr=127.0.0.1,disable-ticketing"

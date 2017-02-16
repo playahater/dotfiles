@@ -283,6 +283,20 @@ myBaseKeys conf = myMainKeys ++
   , ((myModMask, xK_b ), sendMessage ToggleStruts)
   , ((myModMask, xK_space ), sendMessage NextLayout)
   --, ((myModMask, xK_g), goToSelected defaultGSConfig)
+  --
+
+--  , ((modm,                 xK_f  ), withFocused (addTag "abc"))
+--  , ((modm .|. controlMask, xK_f  ), withFocused (delTag "abc"))
+--  , ((modm .|. shiftMask,   xK_f  ), withTaggedGlobalP "abc" W.sink)
+--  , ((modm,                 xK_d  ), withTaggedP "abc" (W.shiftWin "2"))
+--  , ((modm .|. shiftMask,   xK_d  ), withTaggedGlobalP "abc" shiftHere)
+--  , ((modm .|. controlMask, xK_d  ), focusUpTaggedGlobal "abc")
+--  , ((modm,                 xK_g  ), tagPrompt def (\s -> withFocused (addTag s)))
+--  , ((modm .|. controlMask, xK_g  ), tagDelPrompt def)
+--  , ((modm .|. shiftMask,   xK_g  ), tagPrompt def (\s -> withTaggedGlobal s float))
+--  , ((modWinMask,                xK_g  ), tagPrompt def (\s -> withTaggedP s (W.shiftWin "2")))
+--  , ((modWinMask .|. shiftMask,  xK_g  ), tagPrompt def (\s -> withTaggedGlobalP s shiftHere))
+--  , ((modWinMask .|. controlMask, xK_g ), tagPrompt def (\s -> focusUpTaggedGlobal s))
   ]
 
 myKeys :: XConfig Layout -> M.Map ( ButtonMask, KeySym ) ( X () )
