@@ -193,11 +193,11 @@ myStartupHook = do
 --------------------------------------------------------------------------------
 -- XmobarHook
 myConfig = def {
-    ppHidden = xmobarColor "#B8D68C" ""
-  , ppCurrent = xmobarColor "#F39D21" "" . wrap "[" "]"
+    ppHidden = xmobarColor "#F6F1D1" ""
+  , ppCurrent = xmobarColor "#E6B89C" "" . wrap "[" "]"
   , ppUrgent = xmobarColor "#E84F4F" "" . wrap "*" "*"
   , ppLayout = \x -> ""
-  , ppTitle = xmobarColor "#B8D68C" "" . shorten 120
+  , ppTitle = xmobarColor "#F6F1D1" "" . shorten 120
   , ppSep = "<fc=#A0CF5D> || </fc>"
 }
 
@@ -210,11 +210,11 @@ myLogHook h = dynamicLogWithPP $ customPP {
 -- bar
 customPP :: PP
 customPP = def {
-      ppHidden = xmobarColor "#B8D68C" ""
-    , ppCurrent = xmobarColor "#F39D21" "" . wrap "[" "]"
+      ppHidden = xmobarColor "#F6F1D1" ""
+    , ppCurrent = xmobarColor "#E6B89C" "" . wrap "[" "]"
     , ppUrgent = xmobarColor "#E84F4F" "" . wrap "*" "*"
     , ppLayout = \x -> ""
-    , ppTitle = xmobarColor "#B8D68C" "" . shorten 120
+    , ppTitle = xmobarColor "#F6F1D1" "" . shorten 120
     , ppSep = "<fc=#A0CF5D> || </fc>"
 }
 
