@@ -1,8 +1,8 @@
 Config { font = "xft:Literation Mono Powerline:pixelsize=15:antialias=true:autohint=true:hinting=true:dpi=144"
        , borderColor = "black"
        , border = TopB
-       , bgColor = "#000000"
-       , fgColor = "#D7D0C7"
+       , bgColor = "#0B2027"
+       , fgColor = "#F6F1D1"
        , position = Top
        , persistent = False
        , hideOnStart = False

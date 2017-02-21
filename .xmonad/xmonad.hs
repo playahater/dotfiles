@@ -102,11 +102,11 @@ myLayout = avoidStruts $ (Full ||| tabL)
 -- some nice colors for the prompt windows
 myXPConfig = def
   { font = "xft:Literation Mono Powerline:pixelsize=14:antialias=true:autohint=true:hinting=true:dpi=96"
-  , bgColor = "#282828"
-  , fgColor = "#D7D0C7"
-  , fgHLight = "#D7D0C7"
-  , bgHLight = "#282828"
-  , borderColor = "#282828"
+  , bgColor = "#0B2027"
+  , fgColor = "#F6F1D1"
+  , fgHLight = "#F6F1D1"
+  , bgHLight = "#0B2027"
+  , borderColor = "#0B2027"
   , alwaysHighlight   = True
   , promptBorderWidth = 1
   , position = Bottom
@@ -119,14 +119,14 @@ myXPConfig = def
 myTheme = def
   {
     decoHeight = 14
-  , activeColor = "#282828"
-  , activeBorderColor = "#282828"
-  , activeTextColor = "#D7D0C7"
-  , inactiveColor = "#282828"
-  , inactiveBorderColor = "#282828"
+  , activeColor = "#0B2027"
+  , activeBorderColor = "#0B2027"
+  , activeTextColor = "#F6F1D1"
+  , inactiveColor = "#0B2027"
+  , inactiveBorderColor = "#0B2027"
   , inactiveTextColor = "#dddddd"
   , urgentColor = "#E84F4F"
-  , urgentTextColor = "#D7D0C7"
+  , urgentTextColor = "#F6F1D1"
   }
 
 --------------------------------------------------------------------------------
@@ -188,7 +188,7 @@ myStartupHook = do
   spawn "xset r rate 180 90"
   spawn "xset -b"
   spawn "xrdb -load ~/.Xresources"
-  spawn "xsetroot -solid '#282828'"
+  spawn "xsetroot -solid '#0B2027'"
 
 --------------------------------------------------------------------------------
 -- XmobarHook
