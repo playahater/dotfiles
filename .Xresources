@@ -35,7 +35,7 @@ URxvt*.scrollstyle: plain
 URxvt*.secondaryScroll: 0
 URxvt*.secondaryScreen: 1
 
-*background: #282828
+*background: #0B2027
 *foreground: #ebdbb2
 ! Black + DarkGrey
 *color0:  #282828

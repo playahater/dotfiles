@@ -99,11 +99,11 @@ myLayout = avoidStruts $ (Full ||| tabL)
 -- some nice colors for the prompt windows
 myXPConfig = def
   { font = "xft:Literation Mono Powerline:pixelsize=14:antialias=true:autohint=true:hinting=true:dpi=96"
-  , bgColor = "#282828"
-  , fgColor = "#D7D0C7"
-  , fgHLight = "#D7D0C7"
-  , bgHLight = "#282828"
-  , borderColor = "#282828"
+  , bgColor = "#0B2027"
+  , fgColor = "#F6F1D1"
+  , fgHLight = "#F6F1D1"
+  , bgHLight = "#0B2027"
+  , borderColor = "#0B2027"
   , alwaysHighlight   = True
   , promptBorderWidth = 1
   , position = Bottom
@@ -116,14 +116,14 @@ myXPConfig = def
 myTheme = def
   {
     decoHeight = 14
-  , activeColor = "#282828"
-  , activeBorderColor = "#282828"
-  , activeTextColor = "#D7D0C7"
-  , inactiveColor = "#282828"
-  , inactiveBorderColor = "#282828"
+  , activeColor = "#0B2027"
+  , activeBorderColor = "#0B2027"
+  , activeTextColor = "#F6F1D1"
+  , inactiveColor = "#0B2027"
+  , inactiveBorderColor = "#0B2027"
   , inactiveTextColor = "#dddddd"
   , urgentColor = "#E84F4F"
-  , urgentTextColor = "#D7D0C7"
+  , urgentTextColor = "#F6F1D1"
   }
 
 --------------------------------------------------------------------------------
@@ -185,7 +185,7 @@ myStartupHook = do
   spawn "xset r rate 180 90"
   spawn "xset -b"
   spawn "xrdb -load ~/.Xresources"
-  spawn "xsetroot -solid '#282828'"
+  spawn "xsetroot -solid '#0B2027'"
 
 --------------------------------------------------------------------------------
 ---- logHook
@@ -197,11 +197,11 @@ myLogHook h = dynamicLogWithPP $ customPP {
 -- bar
 customPP :: PP
 customPP = def {
-      ppHidden = xmobarColor "#B8D68C" ""
-    , ppCurrent = xmobarColor "#F39D21" "" . wrap "[" "]"
+      ppHidden = xmobarColor "#F6F1D1" ""
+    , ppCurrent = xmobarColor "#E6B89C" "" . wrap "[" "]"
     , ppUrgent = xmobarColor "#E84F4F" "" . wrap "*" "*"
     , ppLayout = \x -> ""
-    , ppTitle = xmobarColor "#B8D68C" "" . shorten 120
+    , ppTitle = xmobarColor "#F6F1D1" "" . shorten 120
     , ppSep = "<fc=#A0CF5D> || </fc>"
 }
 
