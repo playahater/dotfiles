@@ -1,7 +1,4 @@
 --------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------
 -- Compiler flags
 {-# OPTIONS_GHC -threaded #-}
 
@@ -81,7 +78,7 @@ myFocusFollowsMouse = False
 --------------------------------------------------------------------------------
 -- Workspaces
 myWorkspaces :: [WorkspaceId]
-myWorkspaces = map show [1 .. 9 :: Int]
+myWorkspaces = ["α","β","γ","δ","ε","ζ","η","θ", "ι"]
 
 --------------------------------------------------------------------------------
 -- LayoutHook
@@ -143,10 +140,10 @@ myManageHook :: ManageHook
 myManageHook = namedScratchpadManageHook scratchpads
   <+> composeAll
   [ title =? "xmessage"         --> doRectFloat centeredRect
-  , className =? "Slack"        --> doShift "1" <+> addTagHook "d"
-  , className =? "Firefox"      --> doShift "2"
-  , className =? "Chromium"     --> doShift "2" <+> addTagHook "d"
-  , className =? "PhpStorm"     --> doShift "3"
+  , className =? "Slack"        --> doShift "α" <+> addTagHook "d"
+  , className =? "Firefox"      --> doShift "β"
+  , className =? "Chromium"     --> doShift "β" <+> addTagHook "d"
+  , className =? "PhpStorm"     --> doShift "γ"
   , isDialog                    --> doFloat
   , isFullscreen                --> doFloat
   --, isFullscreen --> (doF W.focusDown <+> doFullFloat)
@@ -191,16 +188,6 @@ myStartupHook = do
   spawn "xsetroot -solid '#0B2027'"
 
 --------------------------------------------------------------------------------
--- XmobarHook
-myConfig = def {
-    ppHidden = xmobarColor "#F6F1D1" ""
-  , ppCurrent = xmobarColor "#E6B89C" "" . wrap "[" "]"
-  , ppUrgent = xmobarColor "#E84F4F" "" . wrap "*" "*"
-  , ppLayout = \x -> ""
-  , ppTitle = xmobarColor "#F6F1D1" "" . shorten 120
-  , ppSep = "<fc=#A0CF5D> || </fc>"
-}
-
 ---- logHook
 myLogHook :: Handle -> X ()
 myLogHook h = dynamicLogWithPP $ customPP {
@@ -283,6 +270,20 @@ myBaseKeys conf = myMainKeys ++
   , ((myModMask, xK_b ), sendMessage ToggleStruts)
   , ((myModMask, xK_space ), sendMessage NextLayout)
   --, ((myModMask, xK_g), goToSelected defaultGSConfig)
+  --
+
+--  , ((modm,                 xK_f  ), withFocused (addTag "abc"))
+--  , ((modm .|. controlMask, xK_f  ), withFocused (delTag "abc"))
+--  , ((modm .|. shiftMask,   xK_f  ), withTaggedGlobalP "abc" W.sink)
+--  , ((modm,                 xK_d  ), withTaggedP "abc" (W.shiftWin "2"))
+--  , ((modm .|. shiftMask,   xK_d  ), withTaggedGlobalP "abc" shiftHere)
+--  , ((modm .|. controlMask, xK_d  ), focusUpTaggedGlobal "abc")
+--  , ((modm,                 xK_g  ), tagPrompt def (\s -> withFocused (addTag s)))
+--  , ((modm .|. controlMask, xK_g  ), tagDelPrompt def)
+--  , ((modm .|. shiftMask,   xK_g  ), tagPrompt def (\s -> withTaggedGlobal s float))
+--  , ((modWinMask,                xK_g  ), tagPrompt def (\s -> withTaggedP s (W.shiftWin "2")))
+--  , ((modWinMask .|. shiftMask,  xK_g  ), tagPrompt def (\s -> withTaggedGlobalP s shiftHere))
+--  , ((modWinMask .|. controlMask, xK_g ), tagPrompt def (\s -> focusUpTaggedGlobal s))
   ]
 
 myKeys :: XConfig Layout -> M.Map ( ButtonMask, KeySym ) ( X () )
