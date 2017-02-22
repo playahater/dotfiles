@@ -10,6 +10,8 @@ eval `dircolors -b`
 path+=('/home/green/.gem/ruby/2.3.0/bin:/home/green/.composer/vendor/bin:/home/green/go/bin')
 path+="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 
+source ~/.zsh/functions/spectrum.zsh
+
 # or prepend
 #path=('/home/david/pear/bin' $path)
 
@@ -46,9 +48,6 @@ setopt extendedglob
 setopt PROMPT_SUBST
 unsetopt beep
 
-PROMPT='%{${fg[003]}%}[%n@%m][\$ ' # default prompt
-RPROMPT='][%{${fg[cyan]}%}%B%~%b$(prompt_git_info)%{${fg[default]}%} %T]'
-
 typeset -gU path cdpath manpath fpath
 
 # Enable auto-execution of functions.
@@ -64,6 +63,9 @@ colors
 # Autoload zsh functions.
 fpath=(~/.zsh/functions $fpath)
 autoload -U ~/.zsh/functions/*(:t)
+
+PROMPT='%{${FG[014]}%}[%n@%m][\$ ' # default prompt
+RPROMPT='%{${FG[014]}%}][%B%~%b$(prompt_git_info)%{${fg[default]}%} %T %{${FG[014]}%}]'
 
 bindkey -e
 bindkey ' ' magic-space # also do history expansion on space
