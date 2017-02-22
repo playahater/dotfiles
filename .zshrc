@@ -46,7 +46,7 @@ setopt extendedglob
 setopt PROMPT_SUBST
 unsetopt beep
 
-PROMPT='%{${fg[green]}%}[%n@%m][\$ ' # default prompt
+PROMPT='%{${fg[003]}%}[%n@%m][\$ ' # default prompt
 RPROMPT='][%{${fg[cyan]}%}%B%~%b$(prompt_git_info)%{${fg[default]}%} %T]'
 
 typeset -gU path cdpath manpath fpath
