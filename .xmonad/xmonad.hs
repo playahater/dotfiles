@@ -1,7 +1,4 @@
 --------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------
 -- Compiler flags
 {-# OPTIONS_GHC -threaded #-}
 
@@ -81,7 +78,7 @@ myFocusFollowsMouse = False
 --------------------------------------------------------------------------------
 -- Workspaces
 myWorkspaces :: [WorkspaceId]
-myWorkspaces = map show [1 .. 9 :: Int]
+myWorkspaces = ["α","β","γ","δ","ε","ζ","η","θ", "ι"]
 
 --------------------------------------------------------------------------------
 -- LayoutHook
@@ -143,10 +140,10 @@ myManageHook :: ManageHook
 myManageHook = namedScratchpadManageHook scratchpads
   <+> composeAll
   [ title =? "xmessage"         --> doRectFloat centeredRect
-  , className =? "Slack"        --> doShift "1" <+> addTagHook "d"
-  , className =? "Firefox"      --> doShift "2"
-  , className =? "Chromium"     --> doShift "2" <+> addTagHook "d"
-  , className =? "PhpStorm"     --> doShift "3"
+  , className =? "Slack"        --> doShift "α" <+> addTagHook "d"
+  , className =? "Firefox"      --> doShift "β"
+  , className =? "Chromium"     --> doShift "β" <+> addTagHook "d"
+  , className =? "PhpStorm"     --> doShift "γ"
   , isDialog                    --> doFloat
   , isFullscreen                --> doFloat
   --, isFullscreen --> (doF W.focusDown <+> doFullFloat)
@@ -191,16 +188,6 @@ myStartupHook = do
   spawn "xsetroot -solid '#282828'"
 
 --------------------------------------------------------------------------------
--- XmobarHook
-myConfig = def {
-    ppHidden = xmobarColor "#B8D68C" ""
-  , ppCurrent = xmobarColor "#F39D21" "" . wrap "[" "]"
-  , ppUrgent = xmobarColor "#E84F4F" "" . wrap "*" "*"
-  , ppLayout = \x -> ""
-  , ppTitle = xmobarColor "#B8D68C" "" . shorten 120
-  , ppSep = "<fc=#A0CF5D> || </fc>"
-}
-
 ---- logHook
 myLogHook :: Handle -> X ()
 myLogHook h = dynamicLogWithPP $ customPP {
