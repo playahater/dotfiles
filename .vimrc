@@ -56,7 +56,7 @@ endif
 map <F1> @q
 map <F3> :TlistToggle<CR>
 map <F4> :SyntasticToggleMode<CR>
-map <F5> mzgg=G`z<CR>
+map <F5> mzgg=G`z && retab!<CR>
 map <F7> :execute 'NERDTreeToggle ' . getcwd()<CR>
 map <F8> :TagbarToggle<CR>
 map <F9> :set wrap!<Bar>set wrap?<CR>
@@ -136,7 +136,7 @@ set tabpagemax=50   " set maximum number of tabs
 set tabstop=4   " Tabs are 4 spaces
 set expandtab
 set shiftwidth=4    " Define the width of a shift for the<<  and>>  commands. (Tabs under smart indent)
-set softtabstop=4   " Define what tabstop  is to be simulated when Tab is pressed
+set tabstop=4   " Define what tabstop  is to be simulated when Tab is pressed
 set autoindent      " Automatically indent eache line like previous one
 set smartindent     " Automatically indent when adding a curly bracket, etc.
 set backspace=indent,eol,start    " Allow backspacing over everything in insert mode
