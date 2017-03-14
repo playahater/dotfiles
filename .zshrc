@@ -1,8 +1,8 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.gem/ruby/2.3.0/bin:$HOME/.gem/ruby/2.4.0/bin:$HOME/.composer/vendor/bin:$HOME/go/bin:$HOME/projects/composer/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/green/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -51,7 +51,7 @@ HIST_STAMPS="dd.mm.yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git branch archlinux bower bundler cabal celery chucknorris coffee colored-man-pages colorize command-not-found common-aliases compleat composer cp django git-extras github gulp laravel5 rsync redis-cli)
+plugins=(git branch archlinux bower bundler cabal celery chucknorris coffee colored-man-pages colorize command-not-found common-aliases compleat composer cp django git-extras github gulp laravel5 rsync redis-cli zsh-completions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -59,8 +59,9 @@ source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# You may need to manually set your language environment
+# manually set lang environment
 export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -71,21 +72,12 @@ export LANG=en_US.UTF-8
 export EDITOR='vim'
 
 # Compilation flags
-export ARCHFLAGS="-arch x86_64"
+#export ARCHFLAGS="-arch x86_64"
 
 # ssh
-export SSH_KEY_PATH="~/.ssh/rsa_id"
+#export SSH_KEY_PATH="$HOME/.ssh"
 
 #####################################################################################################################################################
-
-#path+=('/home/green/.gem/ruby/2.3.0/bin:/home/green/.composer/vendor/bin:/home/green/go/bin')
-#path+="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
-#
-#export PAGER=/usr/bin/vimpager
-#
-#HISTFILE=~/.zsh_history
-#HISTSIZE=5000000000
-#SAVEHIST=5000000000
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
