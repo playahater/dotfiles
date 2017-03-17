@@ -51,7 +51,8 @@ HIST_STAMPS="dd.mm.yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git branch archlinux bower bundler cabal celery chucknorris coffee colored-man-pages colorize command-not-found common-aliases compleat composer cp django git-extras github gulp laravel5 rsync redis-cli zsh-completions)
+#plugins=(git branch archlinux bower bundler cabal celery chucknorris coffee colored-man-pages colorize command-not-found common-aliases compleat composer cp django git-extras github gulp laravel5 rsync redis-cli zsh-completions)
+plugins=(git cp rsync colored-man-pages colorize zsh-completions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -93,6 +94,7 @@ alias myip="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
 alias screencast="ffmpeg -f x11grab -r 60 -s 1920x1080 -i :0.0 /tmp/screencast.mpg"
 alias webcam="mplayer -fps 24 tv://"
 alias dozeboot="qemu-system-i386 -cpu host -enable-kvm -machine type=pc,accel=kvm -m 4G -drive file=/home/green/sandbox/doze/doze.raw,format=raw,if=ide -net nic,model=rtl8139 -net user -usbdevice host:13fe:4200"
+alias gping='ping -c 5 google.com'
 ## git aliases
 alias g='git'
 alias gb="git for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
