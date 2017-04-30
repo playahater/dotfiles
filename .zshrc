@@ -94,6 +94,7 @@ alias myip="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
 alias screencast="ffmpeg -f x11grab -r 60 -s 1920x1080 -i :0.0 /tmp/screencast.mpg"
 alias webcam="mplayer -fps 24 tv://"
 alias dozeboot="qemu-system-i386 -cpu host -enable-kvm -machine type=pc,accel=kvm -m 4G -drive file=$HOME/sandbox/doze/doze.raw,format=raw,if=ide -net nic,model=rtl8139 -net user -usbdevice host:13fe:4200"
+alias stretchboot="qemu-system-x86_64 -cpu host -enable-kvm -machine type=pc,accel=kvm -m 3G -drive file=/home/toor/sandbox/stretch/stretch.raw,format=raw,if=ide"
 alias gping='ping -c 5 google.com'
 ## git aliases
 alias g='git'
