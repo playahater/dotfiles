@@ -13,7 +13,7 @@ Config { font = "xft:Literation Mono Powerline:pixelsize=15:antialias=true:autoh
 
        , commands = [ Run Weather "LYBE" ["-t","<tempC>","-L","10","-H","28","--normal","#F6F1D1","--high","#E84F4F","--low","#6D878D"] 18000
                     , Run MultiCpu ["-L","0","-H","70","--normal","#F6F1D1","--high","#E84F4F"] 10
-                    , Run Memory ["-t","Mem: <used> MB", "-L","4000","-H","7300", "-l", "#F6F1D1", "--normal","#E1AA5D","--high","#E84F4F"] 50
+                    , Run Memory ["-t","Mem: <used> MB", "-L","7000","-H","14500", "-l", "#F6F1D1", "--normal","#E1AA5D","--high","#E84F4F"] 50
                     , Run Network "wlp3s0" ["-L","0","-H","480","-l", "#F6F1D1", "--normal","#E1AA5D","--high","#E84F4F"] 5
                     , Run Date "%a %b %_d %Y %H:%M" "date" 10
                     , Run Wireless "wlp3s0" [] 10
