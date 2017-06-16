@@ -26,13 +26,15 @@ call plug#begin('~/.vim/plugged')
     "Plug 'vim-airline/vim-airline-themes'
 
     " syntax
-    Plug 'StanAngeloff/php.vim'
-    Plug 'cakebaker/scss-syntax.vim'
-    Plug 'jwalton512/vim-blade'
-    Plug 'pangloss/vim-javascript'
-    Plug 'othree/html5.vim'
-    Plug 'tpope/vim-markdown'
-    Plug 'mustache/vim-mustache-handlebars'
+    Plug 'Quramy/tsuquyomi', { 'for': 'typescript'  }
+    Plug 'leafgarland/typescript-vim', { 'for': 'typescript'  }
+    Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript'  }
+    Plug 'StanAngeloff/php.vim', { 'for': 'php'  }
+    Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss'  }
+    Plug 'jwalton512/vim-blade', { 'for': 'blade'  }
+    Plug 'othree/html5.vim', { 'for': 'html'  }
+    Plug 'tpope/vim-markdown', { 'for': 'markdown'  }
+    Plug 'mustache/vim-mustache-handlebars', { 'for': 'javascript'  }
 call plug#end()
 
 "automatic reloading of vimrc"
@@ -76,7 +78,7 @@ function! s:my_cr_function()
 endfunction
 
 " <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+"inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " <C-h>, <BS>: close popup and delete backword char.
 inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
@@ -283,6 +285,17 @@ let g:javascript_conceal_super          = "Ω"
 let g:javascript_conceal_arrow_function = "⇒"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" typescript
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"let g:typescript_indent_disable = 1
+"let g:typescript_compiler_binary = 'tsc'
+"let g:typescript_compiler_options = ''
+"autocmd QuickFixCmdPost [^l]* nested cwindow
+"autocmd QuickFixCmdPost    l* nested lwindow
+"autocmd FileType typescript :set makeprg=tsc
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " gitgutter
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gitgutter_escape_grep = 1
@@ -329,8 +342,8 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " neocomplete
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:acp_enableAtStartup = 0
-let g:neocomplete#enable_auto_select = 1
 let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_auto_select = 1
 let g:neocomplete#enable_smart_case = 1
 let g:neocomplete#sources#syntax#min_keyword_length = 3
 let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
