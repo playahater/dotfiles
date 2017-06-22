@@ -98,7 +98,7 @@ myLayout = avoidStruts $ (Full ||| tabL)
 --------------------------------------------------------------------------------
 -- some nice colors for the prompt windows
 myXPConfig = def
-  { font = "xft:Literation Mono Powerline:pixelsize=14:antialias=true:autohint=true:hinting=true:dpi=96"
+  { font = "xft:Literation Mono Powerline:pixelsize=14:antialias=true:autohint=true:hinting=true:dpi=120"
   , bgColor = "#0B2027"
   , fgColor = "#F6F1D1"
   , fgHLight = "#F6F1D1"

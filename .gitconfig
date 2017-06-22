@@ -1,3 +1,5 @@
+[init]
+    templatedir = ~/.git_template
 [include]
     path = /etc/git/.gitconfig.local
 [core]
@@ -6,7 +8,7 @@
     autocrlf = input
     pager = less -RSFX
     whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol,space-before-tab,tabwidth=4
-    excludesfile = /home/play/.gitignore
+    excludesfile = ~/.gitignore
 [branch]
     autosetupmerge = always
     autosetuprebase = always
@@ -76,3 +78,4 @@
     ls = ls-files
     datetag = !git tag `date \"+%Y%m%d%H%M\"`
 	poppers = !git log -M -C --format=\"format:%aN\" --grep \"Revert\" | sort | uniq -c | sort -n
+    ctags = !.git/hooks/ctags

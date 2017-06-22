@@ -124,8 +124,8 @@ set scrolloff=10
 set formatoptions=rq
 set t_Co=256
 set noshowmode    " get rid of the default mode indicator
-set complete=.,b,u,]
-set completeopt=longest,menu,preview
+"set complete=.,b,u,]
+"set completeopt=longest,menu,preview
 set showmatch   " Show matching brackets.
 set matchtime=8 " Bracket blinking.
 set novisualbell    " No blinking .
@@ -310,13 +310,11 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 " vimtags
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:vim_tags_auto_generate = 1
+let g:vim_tags_use_language_field = 1
 let g:vim_tags_use_vim_dispatch = 1
-let g:vim_tags_ignore_files = ['.gitignore', '.svnignore', '.cvsignore']
-let g:vim_tags_ignore_file_comment_pattern = '^[#""]'
 let g:vim_tags_directories = [".git", ".hg", ".svn", ".bzr", "_darcs", "CVS"]
 let g:vim_tags_main_file = 'tags'
 let g:vim_tags_extension = '.tags'
-let g:vim_tags_cache_dir = expand($HOME)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ultisnips
