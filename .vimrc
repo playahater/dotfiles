@@ -26,13 +26,15 @@ call plug#begin('~/.vim/plugged')
     "Plug 'vim-airline/vim-airline-themes'
 
     " syntax
-    Plug 'StanAngeloff/php.vim'
-    Plug 'cakebaker/scss-syntax.vim'
-    Plug 'jwalton512/vim-blade'
-    Plug 'pangloss/vim-javascript'
-    Plug 'othree/html5.vim'
-    Plug 'tpope/vim-markdown'
-    Plug 'mustache/vim-mustache-handlebars'
+    Plug 'Quramy/tsuquyomi', { 'for': 'typescript'  }
+    Plug 'leafgarland/typescript-vim', { 'for': 'typescript'  }
+    Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript'  }
+    Plug 'StanAngeloff/php.vim', { 'for': 'php'  }
+    Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss'  }
+    Plug 'jwalton512/vim-blade', { 'for': 'blade'  }
+    Plug 'othree/html5.vim', { 'for': 'html'  }
+    Plug 'tpope/vim-markdown', { 'for': 'markdown'  }
+    Plug 'mustache/vim-mustache-handlebars', { 'for': 'javascript'  }
 call plug#end()
 
 "automatic reloading of vimrc"
@@ -42,28 +44,23 @@ au! bufwritepost .vimrc source %
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " key maps
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <silent><C-n> :tabnext<CR>
-nmap <silent><C-p> :tabprevious<CR>
-nmap <C-j> :bprev<CR>
-nmap <C-k> :bnext<CR>
+nmap <C-p> :bprev<CR>
+nmap <C-n> :bnext<CR>
+nmap <C-]> :exec("tag ".expand("<cword>"))<CR>
 
 if &diff
     nnoremap <silent><C-j> :diffget LOCAL<CR>
-    "nnoremap <silent><C-.> :diffget BASE<CR>
+    nnoremap <silent><C-.> :diffget BASE<CR>
     nnoremap <silent><C-k> :diffget REMOTE<CR>
 endif
 
 map <F1> @q
-map <F3> :TlistToggle<CR>
-map <F4> :SyntasticToggleMode<CR>
 map <F5> mzgg=G`z && retab!<CR>
 map <F7> :execute 'NERDTreeToggle ' . getcwd()<CR>
 map <F8> :TagbarToggle<CR>
 map <F9> :set wrap!<Bar>set wrap?<CR>
 map <F10> :set paste<CR>
 map <C-L> :!php -l %<CR>
-map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 map <C-c> :call NERDComment(1,'sexy')<C-m>
 
 inoremap <expr><C-g>     neocomplete#undo_completion()
@@ -124,8 +121,8 @@ set scrolloff=10
 set formatoptions=rq
 set t_Co=256
 set noshowmode    " get rid of the default mode indicator
-"set complete=.,b,u,]
-"set completeopt=longest,menu,preview
+set complete=.,b,u,]
+set completeopt=longest,menu,preview
 set showmatch   " Show matching brackets.
 set matchtime=8 " Bracket blinking.
 set novisualbell    " No blinking .
@@ -232,6 +229,7 @@ let g:airline#extensions#tabline#show_buffers = 1
 let g:syntastic_php_checkers=['php', 'phpmd']
 let g:syntastic_python_checkers = ['pylint']
 let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_enable_perl_checker = 1
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_jump=1
 let g:syntastic_auto_loc_list = 1
@@ -283,6 +281,16 @@ let g:javascript_conceal_super          = "Ω"
 let g:javascript_conceal_arrow_function = "⇒"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" typescript
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:typescript_indent_disable = 1
+let g:typescript_compiler_binary = 'tsc'
+let g:typescript_compiler_options = ''
+autocmd QuickFixCmdPost [^l]* nested cwindow
+autocmd QuickFixCmdPost    l* nested lwindow
+autocmd FileType typescript :set makeprg=tsc
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " gitgutter
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gitgutter_escape_grep = 1
@@ -312,7 +320,6 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 let g:vim_tags_auto_generate = 1
 let g:vim_tags_use_language_field = 1
 let g:vim_tags_use_vim_dispatch = 1
-let g:vim_tags_directories = [".git", ".hg", ".svn", ".bzr", "_darcs", "CVS"]
 let g:vim_tags_main_file = 'tags'
 let g:vim_tags_extension = '.tags'
 
