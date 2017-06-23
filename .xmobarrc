@@ -16,6 +16,7 @@ Config { font = "xft:Literation Mono Powerline:pixelsize=15:antialias=true:autoh
                     , Run Memory ["-t","Mem: <used> MB", "-L","7000","-H","14500", "-l", "#F6F1D1", "--normal","#E1AA5D","--high","#E84F4F"] 50
                     , Run Network "wlp3s0" ["-L","0","-H","480","-l", "#F6F1D1", "--normal","#E1AA5D","--high","#E84F4F"] 5
                     , Run Date "%a %b %_d %Y %H:%M" "date" 10
+                    , Run Com "xmobar-dropbox-status" [] "dropbox" 10
                     , Run Wireless "wlp3s0" [] 10
                     , Run TopProc ["-l", "#F6F1D1", "--normal","#E1AA5D","--high","#E84F4F"] 10
                     , Run ThermalZone 0 ["-t","<temp> C", "-L","0","-H","70","--normal","#F6F1D1","--high","#E84F4F"] 30
@@ -25,5 +26,5 @@ Config { font = "xft:Literation Mono Powerline:pixelsize=15:antialias=true:autoh
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{<fc=#F6F1D1>|</fc> %LYBE% <fc=#F6F1D1>|</fc> %multicpu% <fc=#F6F1D1>/</fc> %top% <fc=#F6F1D1>/</fc> %thermal0% <fc=#F6F1D1>|</fc> %memory% <fc=#F6F1D1>|</fc> %wlp3s0% <fc=#F6F1D1>/</fc> %wlp3s0wi% <fc=#F6F1D1>|</fc> Bat0: %bat0% <fc=#F6F1D1>/</fc> Bat1: %bat1% <fc=#F6F1D1>|</fc><fc=#F6F1D1> %date% </fc>"
+       , template = "%StdinReader% }{<fc=#F6F1D1>|</fc> %LYBE% <fc=#F6F1D1>|</fc> %multicpu% <fc=#F6F1D1>/</fc> %top% <fc=#F6F1D1>/</fc> %thermal0% <fc=#F6F1D1>|</fc> %memory% <fc=#F6F1D1>|</fc> %wlp3s0% <fc=#F6F1D1>/</fc> %wlp3s0wi% <fc=#F6F1D1>|</fc> Bat0: %bat0% <fc=#F6F1D1>/</fc> Bat1: %bat1% <fc=#F6F1D1>|</fc> sync: %dropbox% <fc=#F6F1D1>|</fc><fc=#F6F1D1> %date% </fc>"
        }
