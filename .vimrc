@@ -44,28 +44,23 @@ au! bufwritepost .vimrc source %
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " key maps
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <silent><C-n> :tabnext<CR>
-nmap <silent><C-p> :tabprevious<CR>
-nmap <C-j> :bprev<CR>
-nmap <C-k> :bnext<CR>
+nmap <C-p> :bprev<CR>
+nmap <C-n> :bnext<CR>
+nmap <C-]> :exec("tag ".expand("<cword>"))<CR>
 
 if &diff
     nnoremap <silent><C-j> :diffget LOCAL<CR>
-    "nnoremap <silent><C-.> :diffget BASE<CR>
+    nnoremap <silent><C-.> :diffget BASE<CR>
     nnoremap <silent><C-k> :diffget REMOTE<CR>
 endif
 
 map <F1> @q
-map <F3> :TlistToggle<CR>
-map <F4> :SyntasticToggleMode<CR>
 map <F5> mzgg=G`z && retab!<CR>
 map <F7> :execute 'NERDTreeToggle ' . getcwd()<CR>
 map <F8> :TagbarToggle<CR>
 map <F9> :set wrap!<Bar>set wrap?<CR>
 map <F10> :set paste<CR>
 map <C-L> :!php -l %<CR>
-map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 map <C-c> :call NERDComment(1,'sexy')<C-m>
 
 inoremap <expr><C-g>     neocomplete#undo_completion()
@@ -78,7 +73,7 @@ function! s:my_cr_function()
 endfunction
 
 " <TAB>: completion.
-"inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " <C-h>, <BS>: close popup and delete backword char.
 inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
@@ -234,6 +229,7 @@ let g:airline#extensions#tabline#show_buffers = 1
 let g:syntastic_php_checkers=['php', 'phpmd']
 let g:syntastic_python_checkers = ['pylint']
 let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_enable_perl_checker = 1
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_jump=1
 let g:syntastic_auto_loc_list = 1
@@ -287,13 +283,12 @@ let g:javascript_conceal_arrow_function = "⇒"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " typescript
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"let g:typescript_indent_disable = 1
-"let g:typescript_compiler_binary = 'tsc'
-"let g:typescript_compiler_options = ''
-"autocmd QuickFixCmdPost [^l]* nested cwindow
-"autocmd QuickFixCmdPost    l* nested lwindow
-"autocmd FileType typescript :set makeprg=tsc
-
+let g:typescript_indent_disable = 1
+let g:typescript_compiler_binary = 'tsc'
+let g:typescript_compiler_options = ''
+autocmd QuickFixCmdPost [^l]* nested cwindow
+autocmd QuickFixCmdPost    l* nested lwindow
+autocmd FileType typescript :set makeprg=tsc
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " gitgutter
@@ -323,13 +318,10 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 " vimtags
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:vim_tags_auto_generate = 1
+let g:vim_tags_use_language_field = 1
 let g:vim_tags_use_vim_dispatch = 1
-let g:vim_tags_ignore_files = ['.gitignore', '.svnignore', '.cvsignore']
-let g:vim_tags_ignore_file_comment_pattern = '^[#""]'
-let g:vim_tags_directories = [".git", ".hg", ".svn", ".bzr", "_darcs", "CVS"]
 let g:vim_tags_main_file = 'tags'
 let g:vim_tags_extension = '.tags'
-let g:vim_tags_cache_dir = expand($HOME)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ultisnips
@@ -342,8 +334,8 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " neocomplete
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:acp_enableAtStartup = 0
-let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_auto_select = 1
+let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
 let g:neocomplete#sources#syntax#min_keyword_length = 3
 let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
