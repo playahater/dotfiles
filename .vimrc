@@ -14,6 +14,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'majutsushi/tagbar'
     Plug 'vim-syntastic/syntastic'
     Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+    Plug 'Xuyuanp/nerdtree-git-plugin'
     Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
     Plug 'vim-ctrlspace/vim-ctrlspace'
     Plug 'wikitopian/hardmode'
@@ -29,6 +30,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'Quramy/tsuquyomi', { 'for': 'typescript'  }
     Plug 'leafgarland/typescript-vim', { 'for': 'typescript'  }
     Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript'  }
+    Plug 'Quramy/vim-js-pretty-template', { 'for': ['typescript', 'javascript']  }
     Plug 'StanAngeloff/php.vim', { 'for': 'php'  }
     Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss'  }
     Plug 'jwalton512/vim-blade', { 'for': 'blade'  }
@@ -55,6 +57,7 @@ if &diff
 endif
 
 map <F1> @q
+map <F2> :TagsGenerate!<CR>
 map <F5> mzgg=G`z && retab!<CR>
 map <F7> :execute 'NERDTreeToggle ' . getcwd()<CR>
 map <F8> :TagbarToggle<CR>
@@ -306,9 +309,13 @@ let g:gitgutter_eager = 1
 let NERDChristmasTree = 1
 let NERDTreeCaseSensitiveSort = 1
 let NERDTreeIgnore = ['\~$','\.[ao]$','\.swp$','\.DS_Store','\.pyc','\.pyo','\coverage']
-let NERDTreeMouseMode = 2
 let NERDTreeShowHidden = 1
-let NERDTreeChDirMode = 2
+let NERDTreeChDirMode = 1
+let NERDTreeQuitOnOpen = 1
+let NERDTreeStatusline = ''
+let NERDTreeHijackNetrw = 1
+let NERDTreeAutoDeleteBuffer = 1
+let NERDTreeMinimalUI = 1
 let NERDTreeWinPos = 'right'
 let NERDTreeWinSize = 45
 let g:NERDTreeDirArrowExpandable = '▸'
