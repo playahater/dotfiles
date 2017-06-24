@@ -112,6 +112,7 @@ set gdefault
 set autoread
 set magic   " change the way backslashes are used in search patterns
 set confirm
+set splitbelow
 set showtabline=0
 set hidden
 set ttimeout
