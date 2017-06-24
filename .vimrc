@@ -317,7 +317,7 @@ let NERDTreeHijackNetrw = 1
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeWinPos = 'right'
-let NERDTreeWinSize = 45
+let NERDTreeWinSize = 55
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
