@@ -20,7 +20,7 @@ HYPHEN_INSENSITIVE="true"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=21
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -76,42 +76,4 @@ export EDITOR='vim'
 #export ARCHFLAGS="-arch x86_64"
 
 # ssh
-#export SSH_KEY_PATH="$HOME/.ssh"
-
-#####################################################################################################################################################
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-
-alias df='df -hT'
-alias ps='ps faux'
-alias du='du -sh'
-alias mplayer='mpv'
-alias brzinski='python2.7 -m SimpleHTTPServer'
-alias myip="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
-alias screencast="ffmpeg -f x11grab -r 60 -s 1920x1080 -i :0.0 /tmp/screencast.mpg"
-alias webcam="mplayer -fps 24 tv://"
-alias dozeboot="qemu-system-i386 -cpu host -enable-kvm -machine type=pc,accel=kvm -m 4G -drive file=$HOME/sandbox/doze/doze.raw,format=raw,if=ide -net nic,model=rtl8139 -net user -usbdevice host:13fe:4200"
-alias stretchboot="qemu-system-x86_64 -cpu host -enable-kvm -machine type=pc,accel=kvm -m 3G -drive file=/home/toor/sandbox/stretch/stretch.raw,format=raw,if=ide"
-alias gping='ping -c 5 google.com'
-## git aliases
-alias g='git'
-alias gb="git for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
-alias gc='git commit -a -m'
-alias gba='git branch -a -vv'
-alias gcv='git commit -vv'
-alias gcm='git commit -m'
-alias gl='git pull --rebase'
-alias gp='git push -vv'
-alias gst='git status'
-alias gsh='git show'
-alias gpull='git pull origin $(current_branch)'
-alias gpush='git push origin $(current_branch)'
-alias gd='git diff --color'
-alias gdc='git diff --cached'
-alias gf='git diff --stat --color'
-alias git-deleted="git log --all --pretty=format: --name-only --diff-filter=D | sort -u"
-alias gfa='git fetch origin'
-alias gbdl='git branch -d $(git branch --merged)'
+export SSH_KEY_PATH="$HOME/.ssh"
