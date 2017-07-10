@@ -87,7 +87,7 @@ myLayoutHook = noBorders
         . mkToggle (NOBORDERS ?? NBFULL ?? EOT)
         $ myLayout
 
-myLayout = avoidStruts $ (Full ||| tabL)
+myLayout = avoidStruts $ (Full ||| tiled ||| tabL)
   where
      tiled   = Tall nmaster delta ratio
      nmaster = 1
