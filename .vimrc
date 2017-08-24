@@ -11,7 +11,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'jiangmiao/auto-pairs'
     Plug 'alvan/vim-closetag'
     Plug 'szw/vim-tags'
-    Plug 'majutsushi/tagbar'
+    "Plug 'majutsushi/tagbar'
     Plug 'vim-syntastic/syntastic'
     Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
     Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -35,6 +35,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss'  }
     Plug 'jwalton512/vim-blade', { 'for': 'blade'  }
     Plug 'othree/html5.vim', { 'for': 'html'  }
+    Plug 'mxw/vim-jsx', { 'for': ['typescript', 'javascript']  }
     Plug 'tpope/vim-markdown', { 'for': 'markdown'  }
     Plug 'mustache/vim-mustache-handlebars', { 'for': 'javascript'  }
 call plug#end()
@@ -232,7 +233,7 @@ let g:airline#extensions#tabline#show_buffers = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:syntastic_php_checkers=['php', 'phpmd']
 let g:syntastic_python_checkers = ['pylint']
-let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_enable_perl_checker = 1
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_jump=1
@@ -283,6 +284,8 @@ let g:javascript_conceal_prototype      = "¶"
 let g:javascript_conceal_static         = "•"
 let g:javascript_conceal_super          = "Ω"
 let g:javascript_conceal_arrow_function = "⇒"
+
+let g:jsx_ext_required = 0
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " typescript
