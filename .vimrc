@@ -27,6 +27,7 @@ call plug#begin('~/.vim/plugged')
     "Plug 'vim-airline/vim-airline-themes'
 
     " syntax
+    Plug 'prettier/vim-prettier', { 'do': 'sudo npm install -g', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
     Plug 'Quramy/tsuquyomi', { 'for': 'typescript'  }
     Plug 'leafgarland/typescript-vim', { 'for': 'typescript'  }
     Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript'  }
@@ -342,6 +343,34 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" prettier
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:prettier#autoformat = 0
+let g:prettier#quickfix_enabled = 0
+let g:prettier#exec_cmd_async = 1
+
+" max line length that prettier will wrap on
+let g:prettier#config#print_width = 170
+" number of spaces per indentation level
+let g:prettier#config#tab_width = 4
+" use tabs over spaces
+let g:prettier#config#use_tabs = 'false'
+" print semicolons
+let g:prettier#config#semi = 'true'
+" single quotes over double quotes
+let g:prettier#config#single_quote = 'true'
+" print spaces between brackets
+let g:prettier#config#bracket_spacing = 'true'
+" put > on the last line instead of new line
+let g:prettier#config#jsx_bracket_same_line = 'true'
+" none|es5|all
+let g:prettier#config#trailing_comma = 'all'
+" flow|babylon|typescript|postcss|json|graphql
+let g:prettier#config#parser = 'typescript'
+" cli-override|file-override|prefer-file
+let g:prettier#config#config_precedence = 'prefer-file'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " neocomplete
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:acp_enableAtStartup = 0
@@ -387,6 +416,7 @@ if has('autocmd')
     au BufNewFile,BufRead *.twig set filetype=twig
     au BufNewFile,BufRead *.html.twig set filetype=html.twig
     au BufNewFile,BufReadPost *.md set filetype=markdown
+    au BufWritePre,TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql PrettierAsync
 
     au FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
     au FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
