@@ -51,6 +51,7 @@ au! bufwritepost .vimrc source %
 nmap <C-p> :bprev<CR>
 nmap <C-n> :bnext<CR>
 nmap <C-]> :exec("tag ".expand("<cword>"))<CR>
+nmap P "+p
 
 if &diff
     nnoremap <silent><C-j> :diffget LOCAL<CR>
@@ -126,6 +127,7 @@ set numberwidth=5
 set scrolloff=10
 set formatoptions=rq
 set t_Co=256
+let base16colorspace=256  " Access colors present in 256 colorspace
 set noshowmode    " get rid of the default mode indicator
 set complete=.,b,u,]
 set completeopt=longest,menu,preview
@@ -135,7 +137,7 @@ set novisualbell    " No blinking .
 set noerrorbells    " No noise.
 set vb t_vb="."
 set laststatus=2    " Always show status line.
-set tabpagemax=50   " set maximum number of tabs
+set tabpagemax=100   " set maximum number of tabs
 set tabstop=4   " Tabs are 4 spaces
 set expandtab
 set shiftwidth=4    " Define the width of a shift for the<<  and>>  commands. (Tabs under smart indent)
@@ -145,6 +147,8 @@ set smartindent     " Automatically indent when adding a curly bracket, etc.
 set backspace=indent,eol,start    " Allow backspacing over everything in insert mode
 set cinwords=if,else,while,do,for,switch,case    " Define keywords that cause an extra indent
 set lbr
+set list
+set list listchars=tab:▶→,trail:•,extends:»,precedes:«,nbsp:×
 set nowrap
 set encoding=utf-8
 set autochdir
@@ -152,10 +156,13 @@ set fileformats=unix,mac,dos
 set iskeyword+=_,$,@,%,#
 set foldmethod=indent   " fold based on indent
 set foldnestmax=3       " deepest fold is 3 levels
-set nofoldenable        " dont fold by default
+set foldlevelstart=1
+"set nofoldenable        " dont fold by default
 set incsearch   " Search as you type
 set ignorecase  " Ignore case when searching
 set smartcase   " if there are caps, go case-sensitive
+set spell
+set spelllang=en_gb
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -416,7 +423,7 @@ if has('autocmd')
     au BufNewFile,BufRead *.twig set filetype=twig
     au BufNewFile,BufRead *.html.twig set filetype=html.twig
     au BufNewFile,BufReadPost *.md set filetype=markdown
-    au BufWritePre,TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql PrettierAsync
+    au BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql PrettierAsync
 
     au FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
     au FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
@@ -428,6 +435,17 @@ if has('autocmd')
     au FileType html set softtabstop=4 shiftwidth=4 textwidth=0 omnifunc=htmlcomplete#CompleteTags
     au FileType css set softtabstop=4 shiftwidth=4 textwidth=0 omnifunc=csscomplete#CompleteCSS
     au FileType c,cpp,java,php,module,tpl.php,js,python,twig,xml,yml au BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
+
+    " Don't automatically insert a comment command when entering insert mode with o
+    au FileType * setl formatoptions-=o
+    " " But do when hitting enter on a comment line, or when wrapping
+    au FileType * setl formatoptions+=rq
+    " Recognise numbered lists
+    au FileType * setl formatoptions+=n
+    " Don't automatically break lines when they are too long, unless they are comments
+    au FileType * setl formatoptions+=lc
+    " And try to remove comment leaders when joining lines
+    au FileType * setl formatoptions+=j"
 
     au bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
