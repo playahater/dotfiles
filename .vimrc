@@ -61,6 +61,7 @@ endif
 
 map <F1> @q
 map <F2> :TagsGenerate!<CR>
+map <F3> :Gblame<CR>
 map <F5> mzgg=G`z && retab!<CR>
 map <F7> :execute 'NERDTreeToggle ' . getcwd()<CR>
 map <F8> :TagbarToggle<CR>
@@ -155,14 +156,12 @@ set autochdir
 set fileformats=unix,mac,dos
 set iskeyword+=_,$,@,%,#
 set foldmethod=indent   " fold based on indent
-set foldnestmax=3       " deepest fold is 3 levels
-set foldlevelstart=1
-"set nofoldenable        " dont fold by default
+set nofoldenable        " dont fold by default
 set incsearch   " Search as you type
 set ignorecase  " Ignore case when searching
 set smartcase   " if there are caps, go case-sensitive
 set spell
-set spelllang=en_gb
+set spelllang=en_us
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
