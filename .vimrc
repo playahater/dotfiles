@@ -23,6 +23,7 @@ call plug#begin('~/.vim/plugged')
     "Plug 'vim-airline/vim-airline-themes'
 
     " syntax
+    Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php'  }
     Plug 'prettier/vim-prettier', { 'do': 'sudo npm install -g', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
     Plug 'Quramy/tsuquyomi', { 'for': 'typescript'  }
     Plug 'leafgarland/typescript-vim', { 'for': 'typescript'  }
@@ -58,12 +59,14 @@ endif
 map <F1> @q
 map <F2> :TagsGenerate!<CR>
 map <F3> :Gblame<CR>
+map <F4> :call PhpCsFixerFixDirectory()<CR>
 map <F5> mzgg=G`z && retab!<CR>
 map <F6> :PrettierAsync<CR>
 map <F7> :execute 'NERDTreeToggle ' . getcwd()<CR>
 map <F8> :TagbarToggle<CR>
 map <F9> :set wrap!<Bar>set wrap?<CR>
 map <F10> :set paste<CR>
+map <F12> :call PhpCsFixerFixFile()<CR>
 map <C-L> :!php -l %<CR>
 map <C-c> :call NERDComment(1,'sexy')<C-m>
 
