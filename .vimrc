@@ -6,20 +6,16 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-dispatch'
     Plug 'vim-scripts/L9'
     Plug 'Shougo/neocomplete.vim'
+    Plug 'w0rp/ale'
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
     Plug 'jiangmiao/auto-pairs'
-    Plug 'alvan/vim-closetag'
     Plug 'szw/vim-tags'
-    "Plug 'majutsushi/tagbar'
-    Plug 'vim-syntastic/syntastic'
     Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
     Plug 'Xuyuanp/nerdtree-git-plugin'
-    Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
     Plug 'vim-ctrlspace/vim-ctrlspace'
     Plug 'wikitopian/hardmode'
     Plug 'scrooloose/nerdcommenter'
-    "Plug 'joonty/vdebug'
 
     " themes
     Plug 'morhetz/gruvbox'
@@ -63,6 +59,7 @@ map <F1> @q
 map <F2> :TagsGenerate!<CR>
 map <F3> :Gblame<CR>
 map <F5> mzgg=G`z && retab!<CR>
+map <F6> :PrettierAsync<CR>
 map <F7> :execute 'NERDTreeToggle ' . getcwd()<CR>
 map <F8> :TagbarToggle<CR>
 map <F9> :set wrap!<Bar>set wrap?<CR>
@@ -163,7 +160,6 @@ set smartcase   " if there are caps, go case-sensitive
 set spell
 set spelllang=en_us
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -236,22 +232,20 @@ let g:airline#extensions#tabline#switch_buffers_and_tabs = 0
 let g:airline#extensions#tabline#show_buffers = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" syntastic
+" ale
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:syntastic_php_checkers=['php', 'phpmd']
-let g:syntastic_python_checkers = ['pylint']
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_enable_perl_checker = 1
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_jump=1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_always_populate_loc_list=1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
-let g:syntastic_quiet_messages = { "level" : [], "type" : "style",  "regex" : "\m\[C03\d\d\]" }
-let g:syntastic_error_symbol = '▸'
-let g:syntastic_warning_symbol = "\u26A0"
-let g:syntastic_stl_format = "[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]"
+let g:ale_sign_error = '▸'
+let g:ale_sign_warning = "\u26A0"
+let g:ale_fixers = { 'javascript': ['eslint']}
+let g:ale_fix_on_save = 1
+let g:airline#extensions#ale#enabled = 1
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
+let g:ale_linters = {'jsx': ['stylelint', 'eslint']}
+let g:ale_linter_aliases = {'jsx': 'css'}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " nerdcommenter
@@ -421,6 +415,7 @@ if has('autocmd')
     au BufRead,BufNewFile *.wsgi set filetype=python
     au BufNewFile,BufRead *.twig set filetype=twig
     au BufNewFile,BufRead *.html.twig set filetype=html.twig
+    au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
     au BufNewFile,BufReadPost *.md set filetype=markdown
     au BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql PrettierAsync
 
