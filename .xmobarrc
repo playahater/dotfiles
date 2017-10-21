@@ -1,8 +1,8 @@
 Config { font = "xft:Literation Mono Powerline:pixelsize=15:antialias=true:autohint=true:hinting=true:dpi=120"
        , borderColor = "black"
        , border = TopB
-       , bgColor = "#0B2027"
-       , fgColor = "#F6F1D1"
+       , bgColor = "#1d2021"
+       , fgColor = "#ebdbb2"
        , position = Top
        , persistent = False
        , hideOnStart = False
@@ -11,19 +11,51 @@ Config { font = "xft:Literation Mono Powerline:pixelsize=15:antialias=true:autoh
        , overrideRedirect = True
        , pickBroadest = False
 
-       , commands = [ Run Weather "LYBE" ["-t","<tempC>","-L","10","-H","28","--normal","#F6F1D1","--high","#E84F4F","--low","#6D878D"] 18000
-                    , Run MultiCpu ["-L","0","-H","70","--normal","#F6F1D1","--high","#E84F4F"] 10
-                    , Run Memory ["-t","Mem: <used> MB", "-L","7000","-H","14500", "-l", "#F6F1D1", "--normal","#E1AA5D","--high","#E84F4F"] 50
-                    , Run Network "wlp3s0" ["-L","0","-H","480","-l", "#F6F1D1", "--normal","#E1AA5D","--high","#E84F4F"] 5
+       , commands = [ Run Weather "LYBE" ["-t","<fc=#83a598><icon=/home/toor/.xmonad/.icons/temp.xbm/></fc> <tempC>°C","-L","10","-H","28","--normal","#ebdbb2","--high","#fb4934","--low","#ebdbb2"] 18000
+                    , Run MultiCpu ["-t","<fc=#83a598><icon=/home/toor/.xmonad/.icons/cpu.xbm/></fc> <autototal>", "-L","0","-H","70","--normal","#ebdbb2","--high","#fb4934","--low","#ebdbb2"] 10
+                    , Run Memory ["-t","<fc=#83a598><icon=/home/toor/.xmonad/.icons/mem.xbm/></fc> <used> MB", "-L","7000","-H","14500","--normal","#ebdbb2","--high","#fb4934","--low","#ebdbb2"] 50
+                    , Run DynNetwork ["-t", "<fc=#83a598><icon=/home/toor/.xmonad/.icons/net_wired.xbm/></fc> <dev>: <rx>Kb/s<fc=#83a598>|</fc><tx>Kb/s","--Low","500","--High","5000","--normal","#ebdbb2","--high","#fb4934","--low","#ebdbb2"] 10
+                    , Run Wireless "wlp3s0" ["-t", "<fc=#83a598><icon=/home/toor/.xmonad/.icons/wifi_02.xbm/></fc> <essid> <quality>", "--normal","#ebdbb2","--high","#fb4934","--low","#ebdbb2"] 10
+                    , Run TopProc ["--normal","#ebdbb2","--high","#fb4934","--low","#ebdbb2"] 10
+                    , Run ThermalZone 0 ["-t","<fc=#83a598><icon=/home/toor/.xmonad/.icons/temp.xbm/></fc> <temp>°C", "-L","0","-H","70","--normal","#ebdbb2","--high","#fb4934","--low","#ebdbb2"] 30
+                    , Run BatteryN [ "BAT0" ]
+                                   [ "--template" , "<acstatus> <fc=#83a598>/</fc> <watts> W"
+                                   , "--Low"      , "10"
+                                   , "--High"     , "60"
+                                   , "--low"      , "#fb4934"
+                                   , "--normal"   , "#ebdbb2"
+                                   , "--high"     , "#98be65"
+
+                                   , "--" -- battery specific options
+                                             -- discharging status
+                                             , "-o"   , "<left>% (<timeleft>)"
+                                             -- AC "on" status
+                                             , "-O"   , "(<left>%)"
+                                             -- charged status
+                                             , "-i"   , "(<left>%)"
+                                   ] 10 "bat0"
+
+                    , Run BatteryN [ "BAT1" ]
+                                   [ "--template" , "<acstatus> <fc=#83a598>/</fc> <watts> W"
+                                   , "--Low"      , "10"
+                                   , "--High"     , "60"
+                                   , "--low"      , "#fb4934"
+                                   , "--normal"   , "#ebdbb2"
+                                   , "--high"     , "#98be65"
+
+                                   , "--" -- battery specific options
+                                             -- discharging status
+                                             , "-o"   , "<left>% (<timeleft>)"
+                                             -- AC "on" status
+                                             , "-O"   , "(<left>%)"
+                                             -- charged status
+                                             , "-i"   , "(<left>%)"
+                                   ] 10 "bat1"
+
                     , Run Date "%a %b %_d %Y %H:%M" "date" 10
-                    , Run Wireless "wlp3s0" [] 10
-                    , Run TopProc ["-l", "#F6F1D1", "--normal","#E1AA5D","--high","#E84F4F"] 10
-                    , Run ThermalZone 0 ["-t","<temp> C", "-L","0","-H","70","--normal","#F6F1D1","--high","#E84F4F"] 30
-                    , Run BatteryN ["BAT0"] ["-t", "<acstatus><watts> (<left>%)", "-L", "10", "-H", "80", "-p", "3", "--", "-O", "<fc=#F6F1D1>on</fc> - ", "-o", "", "-L", "-15", "-H", "-5", "-l", "#E84F4F", "-m", "blue", "-h", "green"] 600 "bat0"
-                    , Run BatteryN ["BAT1"] ["-t", "<acstatus><watts> (<left>%)", "-L", "10", "-H", "80", "-p", "3", "--", "-O", "<fc=#F6F1D1>on</fc> - ", "-o", "", "-L", "-15", "-H", "-5", "-l", "#E84F4F", "-m", "blue", "-h", "green"] 600 "bat1"
                     , Run StdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{<fc=#F6F1D1>|</fc> %LYBE% <fc=#F6F1D1>|</fc> %multicpu% <fc=#F6F1D1>/</fc> %top% <fc=#F6F1D1>/</fc> %thermal0% <fc=#F6F1D1>|</fc> %memory% <fc=#F6F1D1>|</fc> %wlp3s0% <fc=#F6F1D1>/</fc> %wlp3s0wi% <fc=#F6F1D1>|</fc> Bat0: %bat0% <fc=#F6F1D1>/</fc> Bat1: %bat1% <fc=#F6F1D1>|</fc><fc=#F6F1D1> %date% </fc>"
+       , template = "%StdinReader% }{%LYBE% <fc=#83a598>||</fc> %multicpu% <fc=#83a598>/</fc> %top% <fc=#83a598>/</fc> %thermal0% <fc=#83a598>||</fc> %memory% <fc=#83a598>||</fc> %dynnetwork% <fc=#83a598>/</fc> %wlp3s0wi% <fc=#83a598>||</fc> Bat0: %bat0% <fc=#83a598>|</fc> Bat1: %bat1% <fc=#83a598>||</fc><fc=#ebdbb2> %date% </fc>"
        }

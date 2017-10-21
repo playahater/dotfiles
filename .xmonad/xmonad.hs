@@ -99,15 +99,15 @@ myLayout = avoidStruts $ (Full ||| tiled ||| tabL)
 -- some nice colors for the prompt windows
 myXPConfig = def
   { font = "xft:Literation Mono Powerline:pixelsize=14:antialias=true:autohint=true:hinting=true:dpi=120"
-  , bgColor = "#0B2027"
-  , fgColor = "#F6F1D1"
+  , bgColor = "#1d2021"
+  , fgColor = "#ebdbb2"
   , fgHLight = "#F6F1D1"
   , bgHLight = "#0B2027"
   , borderColor = "#0B2027"
   , alwaysHighlight   = True
   , promptBorderWidth = 1
   , position = Bottom
-  , height = 14
+  , height = 16
   , historySize = 50
   }
 
@@ -115,7 +115,7 @@ myXPConfig = def
 -- MyTheme For Tabbed layout
 myTheme = def
   {
-    decoHeight = 14
+    decoHeight = 16
   , activeColor = "#0B2027"
   , activeBorderColor = "#0B2027"
   , activeTextColor = "#F6F1D1"
@@ -185,7 +185,7 @@ myStartupHook = do
   spawn "xset r rate 180 90"
   spawn "xset -b"
   spawn "xrdb -load ~/.Xresources"
-  spawn "xsetroot -solid '#0B2027'"
+  spawn "xsetroot -solid '#1d2021'"
 
 --------------------------------------------------------------------------------
 ---- logHook
@@ -199,7 +199,7 @@ customPP :: PP
 customPP = def {
       ppHidden = xmobarColor "#F6F1D1" ""
     , ppCurrent = xmobarColor "#E6B89C" "" . wrap "[" "]"
-    , ppUrgent = xmobarColor "#E84F4F" "" . wrap "*" "*"
+    , ppUrgent = xmobarColor "#cc241d" "" . wrap "*" "*"
     , ppLayout = \x -> ""
     , ppTitle = xmobarColor "#F6F1D1" "" . shorten 120
     , ppSep = "<fc=#A0CF5D> || </fc>"
