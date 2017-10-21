@@ -48,7 +48,7 @@ au! bufwritepost .vimrc source %
 nmap <C-p> :bprev<CR>
 nmap <C-n> :bnext<CR>
 nmap <C-]> :exec("tag ".expand("<cword>"))<CR>
-nmap P "+p
+"nmap P "+p
 
 if &diff
     nnoremap <silent><C-j> :diffget LOCAL<CR>
@@ -169,9 +169,13 @@ set statusline+=%*
 " color
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 colorscheme gruvbox
-let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_contrast_dark = 'soft'
 let g:gruvbox_italic = 1
-"let g:gruvbox_invert_signs = 1
+let g:gruvbox_termcolors = 256
+let g:gruvbox_invert_signs = 1
+let g:gruvbox_invert_selection = 1
+let g:gruvbox_improved_strings = 1
+let g:gruvbox_improved_warnings = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " system

@@ -1,4 +1,5 @@
 escape ``
+
 attrcolor b ".I"
 setenv LC_CTYPE en_US.UTF-8
 encoding utf8 utf8
@@ -7,9 +8,9 @@ defutf8 on
 utf8 on
 defutf8 on
 setenv DISPLAY ':0'
-term xterm-256color
-termcapinfo xterm* ti@:te@
-#termcapinfo xterm*|rxvt*|urxvt* 'hs:ts=\E]2;:fs=\007:ds=\E]2;screen\007'
+term rxvt-unicode-256color
+termcapinfo rxvt* 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'   # tell screen how to set colors. AB = background, AF=foreground
+termcapinfo rxvt* ti@:te@
 hardcopy_append on
 crlf off
 altscreen on
@@ -31,4 +32,6 @@ defflow off
 msgwait 1
 acladd play
 sorendition +b kG
+windowlist string "%4n %h%=%f"
+hardstatus off
 hardstatus alwayslastline "%{=b}%{G}%{r}%w"

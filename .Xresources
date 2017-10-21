@@ -12,18 +12,17 @@ Xft.rgba: rgba
 URxvt*.cursorBlink: false
 URxvt*.depth: 24
 URxvt*.font: xft:Literation Mono Powerline:pixelsize=15:antialias=true:autohint=true:dpi=96
-!URxvt*.inheritPixmap: true
 URxvt*.internalBorder: 0
 URxvt*.loginShell: true
 URxvt*.mapAlert: true
 URxvt*.pointerBlank: true
 URxvt*.resource: value
-URxvt*.termName: xterm-256color
+URxvt*.termName: rxvt-unicode-256color
 URxvt*.urgentOnBell: true
 URxvt*.cursorColor: #ebdbb2
-URxvt*.skipBuiltinGlyphs:    true
-!URxvt*.shading: 0
-URxvt*.transparent:   false
+!URxvt*.skipBuiltinGlyphs:    true
+URxvt*.shading: 20
+URxvt*.transparent: true
 URxvt*.buffered: true
 URxvt*.jumpScroll: false
 URxvt*.saveLines: 100000
@@ -35,7 +34,11 @@ URxvt*.scrollstyle: plain
 URxvt*.secondaryScroll: 0
 URxvt*.secondaryScreen: 1
 
-*background: #0B2027
+!hard contrast: *background: #1d2021
+!soft contrast: *background: #32302f
+!default contrast: *background: #282828
+
+*background: #1d2021
 *foreground: #ebdbb2
 ! Black + DarkGrey
 *color0:  #282828
@@ -61,3 +64,34 @@ URxvt*.secondaryScreen: 1
 ! LightGrey + White
 *color7:  #a89984
 *color15: #ebdbb2
+
+URxvt*.color24:  #076678
+URxvt*.color66:  #427b58
+URxvt*.color88:  #9d0006
+URxvt*.color96:  #8f3f71
+URxvt*.color100: #79740e
+URxvt*.color108: #8ec07c
+URxvt*.color109: #83a598
+URxvt*.color130: #af3a03
+URxvt*.color136: #b57614
+URxvt*.color142: #b8bb26
+URxvt*.color167: #fb4934
+URxvt*.color175: #d3869b
+URxvt*.color208: #fe8019
+URxvt*.color214: #fabd2f
+URxvt*.color223: #ebdbb2
+URxvt*.color228: #f2e5bc
+URxvt*.color229: #fbf1c7
+URxvt*.color230: #f9f5d7
+URxvt*.color234: #1d2021
+URxvt*.color235: #282828
+URxvt*.color236: #32302f
+URxvt*.color237: #3c3836
+URxvt*.color239: #504945
+URxvt*.color241: #665c54
+URxvt*.color243: #7c6f64
+URxvt*.color244: #928374
+URxvt*.color245: #928374
+URxvt*.color246: #a89984
+URxvt*.color248: #bdae93
+URxvt*.color250: #d5c4a1
