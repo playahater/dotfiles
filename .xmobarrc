@@ -1,4 +1,4 @@
-Config { font = "xft:Literation Mono Powerline:pixelsize=15:antialias=true:autohint=true:hinting=true:dpi=120"
+Config { font = "xft:Literation Mono Powerline:pixelsize=17:antialias=true:autohint=true:hinting=true:dpi=120"
        , borderColor = "black"
        , border = TopB
        , bgColor = "#1d2021"

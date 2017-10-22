@@ -98,7 +98,7 @@ myLayout = avoidStruts $ (Full ||| tiled ||| tabL)
 --------------------------------------------------------------------------------
 -- some nice colors for the prompt windows
 myXPConfig = def
-  { font = "xft:Literation Mono Powerline:pixelsize=14:antialias=true:autohint=true:hinting=true:dpi=120"
+  { font = "xft:Literation Mono Powerline:pixelsize=19:antialias=true:autohint=true:hinting=true:dpi=120"
   , bgColor = "#1d2021"
   , fgColor = "#ebdbb2"
   , fgHLight = "#F6F1D1"
@@ -107,7 +107,7 @@ myXPConfig = def
   , alwaysHighlight   = True
   , promptBorderWidth = 1
   , position = Bottom
-  , height = 16
+  , height = 19
   , historySize = 50
   }
 
@@ -115,7 +115,7 @@ myXPConfig = def
 -- MyTheme For Tabbed layout
 myTheme = def
   {
-    decoHeight = 16
+    decoHeight = 19
   , activeColor = "#0B2027"
   , activeBorderColor = "#0B2027"
   , activeTextColor = "#F6F1D1"
@@ -202,7 +202,7 @@ customPP = def {
     , ppUrgent = xmobarColor "#cc241d" "" . wrap "*" "*"
     , ppLayout = \x -> ""
     , ppTitle = xmobarColor "#F6F1D1" "" . shorten 120
-    , ppSep = "<fc=#A0CF5D> || </fc>"
+    , ppSep = "<fc=#83a598> || </fc>"
 }
 
 --------------------------------------------------------------------------------
