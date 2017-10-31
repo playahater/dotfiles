@@ -48,6 +48,7 @@ nmap <C-p> :bprev<CR>
 nmap <C-n> :bnext<CR>
 nmap <C-]> :exec("tag ".expand("<cword>"))<CR>
 "nmap P "+p
+nnoremap <C-\> :noh<CR>
 
 if &diff
     nnoremap <silent><C-j> :diffget LOCAL<CR>
