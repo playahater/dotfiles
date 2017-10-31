@@ -10,12 +10,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
     Plug 'jiangmiao/auto-pairs'
-    Plug 'szw/vim-tags'
-    Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-    Plug 'Xuyuanp/nerdtree-git-plugin'
-    Plug 'vim-ctrlspace/vim-ctrlspace'
     Plug 'wikitopian/hardmode'
-    Plug 'scrooloose/nerdcommenter'
+    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin'  }
+    Plug 'junegunn/fzf.vim'
 
     " themes
     Plug 'morhetz/gruvbox'
@@ -45,6 +42,8 @@ au! bufwritepost .vimrc source %
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " key maps
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"let mapleader = ""
+
 nmap <C-p> :bprev<CR>
 nmap <C-n> :bnext<CR>
 nmap <C-]> :exec("tag ".expand("<cword>"))<CR>
@@ -57,18 +56,13 @@ if &diff
 endif
 
 map <F1> @q
-map <F2> :TagsGenerate!<CR>
 map <F3> :Gblame<CR>
 map <F4> :call PhpCsFixerFixDirectory()<CR>
 map <F5> mzgg=G`z && retab!<CR>
 map <F6> :PrettierAsync<CR>
-map <F7> :execute 'NERDTreeToggle ' . getcwd()<CR>
-map <F8> :TagbarToggle<CR>
 map <F9> :set wrap!<Bar>set wrap?<CR>
 map <F10> :set paste<CR>
 map <F12> :call PhpCsFixerFixFile()<CR>
-map <C-L> :!php -l %<CR>
-map <C-c> :call NERDComment(1,'sexy')<C-m>
 
 inoremap <expr><C-g>     neocomplete#undo_completion()
 inoremap <expr><C-l>     neocomplete#complete_common_string()
@@ -233,8 +227,6 @@ let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#branch#empty_message = 'git it!!'
 let g:airline_exclude_preview = 1
 let g:airline#extensions#bufferline#enabled = 1
-let g:airline#extensions#ctrlspace#enabled = 1
-let g:airline#extensions#tabline#ctrlspace#enabled = 1
 let g:airline#extensions#tabline#switch_buffers_and_tabs = 0
 let g:airline#extensions#tabline#show_buffers = 1
 
@@ -255,21 +247,56 @@ let g:ale_linters = {'jsx': ['stylelint', 'eslint']}
 let g:ale_linter_aliases = {'jsx': 'css'}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" nerdcommenter
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:NERDSpaceDelims = 1
-let g:NERDDefaultAlign = 'left'
-let g:NERDCustomDelimiters = { 'c': { 'left': '/*','right': '*/' } }
-let g:NERDCommentEmptyLines = 1
-let g:NERDTrimTrailingWhitespace = 1
-let g:NERDDefaultNesting = 1
-let g:NERDRemoveExtraSpaces = 1
-let g:NERDTrimTrailingWhitespace = 1
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " markdown
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" fzf
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"[Buffers] Jump to the existing window if possible
+let g:fzf_buffers_jump = 1
+" [[B]Commits] Customize the options used by 'git log':
+let g:fzf_commits_log_options = '--graph --color=always "--format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'
+"[Tags] Command to generate tags file
+let g:fzf_tags_command = 'ctags -R'
+" [Commands] --expect expression for directly executing the command
+let g:fzf_commands_expect = 'alt-enter,ctrl-x'
+
+function! s:find_git_root()
+  return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
+endfunction
+
+command! ProjectFiles execute 'Files' s:find_git_root()
+
+" Command for git grep
+" - fzf#vim#grep(command, with_column, [options], [fullscreen])
+command! -bang -nargs=* GGrep
+  \ call fzf#vim#grep('git grep --line-number '.shellescape(<q-args>), 0, <bang>0)
+
+" Augmenting Ag command using fzf#vim#with_preview function
+"   * fzf#vim#with_preview([[options], preview window, [toggle keys...]])
+"     * For syntax-highlighting, Ruby and any of the following tools are required:
+"       - Highlight: http://www.andre-simon.de/doku/highlight/en/highlight.php
+"       - CodeRay: http://coderay.rubychan.de/
+"       - Rouge: https://github.com/jneen/rouge
+"
+"   :Ag  - Start fzf with hidden preview window that can be enabled with "?" key
+"   :Ag! - Start fzf in fullscreen and display the preview window above
+command! -bang -nargs=* Ag
+  \ call fzf#vim#ag(<q-args>,
+  \                 <bang>0 ? fzf#vim#with_preview('up:60%')
+  \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \                 <bang>0)
+
+" Likewise, Files command with preview window
+command! -bang -nargs=? -complete=dir Files
+  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+
+nmap <silent> <C-@> :Buffers<CR>
+nmap <silent> / :BLines<CR>
+nmap <silent> <C-f> :ProjectFiles<CR>
+nmap <silent> <C-g> :GitFiles<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " autopairs
@@ -314,40 +341,6 @@ let g:gitgutter_signs = 1
 let g:gitgutter_highlight_lines = 0
 let g:gitgutter_realtime = 1
 let g:gitgutter_eager = 1
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" NERD_tree
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let NERDChristmasTree = 1
-let NERDTreeCaseSensitiveSort = 1
-let NERDTreeIgnore = ['\~$','\.[ao]$','\.swp$','\.DS_Store','\.pyc','\.pyo','\coverage']
-let NERDTreeShowHidden = 1
-let NERDTreeChDirMode = 1
-let NERDTreeQuitOnOpen = 1
-let NERDTreeStatusline = ''
-let NERDTreeHijackNetrw = 1
-let NERDTreeAutoDeleteBuffer = 1
-let NERDTreeMinimalUI = 1
-let NERDTreeWinPos = 'right'
-let NERDTreeWinSize = 55
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" vimtags
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:vim_tags_auto_generate = 1
-let g:vim_tags_use_language_field = 1
-let g:vim_tags_use_vim_dispatch = 1
-let g:vim_tags_main_file = 'tags'
-let g:vim_tags_extension = '.tags'
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" ultisnips
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " prettier
@@ -399,19 +392,6 @@ let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
 let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" ctrlspace
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:CtrlSpaceLoadLastWorkspaceOnStart = 1
-let g:CtrlSpaceSaveWorkspaceOnSwitch = 1
-let g:CtrlSpaceSaveWorkspaceOnExit = 1
-let g:CtrlSpaceSearchTiming = 200
-let g:CtrlSpaceUseTabline = 1
-let g:CtrlSpaceFileEngine = 'file_engine_linux_amd64'
-let g:CtrlSpaceStatuslineFunction = 'airline#extensions#ctrlspace#statusline()'
-let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
-let g:CtrlSpaceUseTabline = 0
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " misc
