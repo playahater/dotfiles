@@ -9,7 +9,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'w0rp/ale'
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
-    Plug 'jiangmiao/auto-pairs'
     Plug 'wikitopian/hardmode'
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin'  }
     Plug 'junegunn/fzf.vim'
@@ -20,19 +19,18 @@ call plug#begin('~/.vim/plugged')
     "Plug 'vim-airline/vim-airline-themes'
 
     " syntax
-    Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php'  }
     Plug 'prettier/vim-prettier', { 'do': 'sudo npm install -g', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
-    Plug 'Quramy/tsuquyomi', { 'for': 'typescript'  }
     Plug 'leafgarland/typescript-vim', { 'for': 'typescript'  }
-    Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript'  }
     Plug 'Quramy/vim-js-pretty-template', { 'for': ['typescript', 'javascript']  }
+    Plug 'jelera/vim-javascript-syntax', { 'for': ['typescript', 'javascript']  }
+    Plug 'mxw/vim-jsx', { 'for': ['typescript', 'javascript']  }
+    Plug 'mustache/vim-mustache-handlebars', { 'for': 'javascript'  }
     Plug 'StanAngeloff/php.vim', { 'for': 'php'  }
+    Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php'  }
     Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss'  }
     Plug 'jwalton512/vim-blade', { 'for': 'blade'  }
     Plug 'othree/html5.vim', { 'for': 'html'  }
-    Plug 'mxw/vim-jsx', { 'for': ['typescript', 'javascript']  }
     Plug 'tpope/vim-markdown', { 'for': 'markdown'  }
-    Plug 'mustache/vim-mustache-handlebars', { 'for': 'javascript'  }
 call plug#end()
 
 "automatic reloading of vimrc"
@@ -238,14 +236,14 @@ let g:ale_sign_error = '▸'
 let g:ale_sign_warning = "\u26A0"
 let g:ale_fixers = { 'javascript': ['eslint']}
 let g:ale_fix_on_save = 1
+let g:ale_completion_enabled = 1
 let g:airline#extensions#ale#enabled = 1
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
-let g:ale_linters = {'jsx': ['stylelint', 'eslint']}
-let g:ale_linter_aliases = {'jsx': 'css'}
+let g:ale_linters = { 'typescript': ['tsserver'], 'javascript': ['eslint'] }
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " markdown
@@ -300,11 +298,6 @@ nmap <silent> <C-f> :ProjectFiles<CR>
 nmap <silent> <C-g> :GitFiles<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" autopairs
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:AutoPairsFlyMode = 1
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " javascript
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:javascript_plugin_jsdoc           = 1
@@ -322,16 +315,6 @@ let g:javascript_conceal_super          = "Ω"
 let g:javascript_conceal_arrow_function = "⇒"
 
 let g:jsx_ext_required = 0
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" typescript
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:typescript_indent_disable = 1
-let g:typescript_compiler_binary = 'tsc'
-let g:typescript_compiler_options = ''
-autocmd QuickFixCmdPost [^l]* nested cwindow
-autocmd QuickFixCmdPost    l* nested lwindow
-autocmd FileType typescript :set makeprg=tsc
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " gitgutter
@@ -398,14 +381,18 @@ let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 " misc
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has('autocmd')
+    au VimEnter * AirlineTheme gruvbox
     au BufRead,BufNewFile *.module set filetype=php
     au BufRead,BufNewFile *.install set filetype=php
     au BufRead,BufNewFile *.wsgi set filetype=python
     au BufNewFile,BufRead *.twig set filetype=twig
     au BufNewFile,BufRead *.html.twig set filetype=html.twig
     au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
+    au BufNewFile,BufRead *.ts set filetype=typescript
     au BufNewFile,BufReadPost *.md set filetype=markdown
-    au BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql PrettierAsync
+    au BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
+    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+    au BufWritePre,TextChanged *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql PrettierAsync
 
     au FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
     au FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
@@ -416,7 +403,6 @@ if has('autocmd')
     au FileType python set expandtab shiftwidth=4 softtabstop=4 omnifunc=pythoncomplete#Complete
     au FileType html set softtabstop=4 shiftwidth=4 textwidth=0 omnifunc=htmlcomplete#CompleteTags
     au FileType css set softtabstop=4 shiftwidth=4 textwidth=0 omnifunc=csscomplete#CompleteCSS
-    au FileType c,cpp,java,php,module,tpl.php,js,python,twig,xml,yml au BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
 
     " Don't automatically insert a comment command when entering insert mode with o
     au FileType * setl formatoptions-=o
@@ -429,19 +415,12 @@ if has('autocmd')
     " And try to remove comment leaders when joining lines
     au FileType * setl formatoptions+=j"
 
-    au bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-
     function! PhpSyntaxOverride()
         hi! def link phpDocTags  phpDefine
         hi! def link phpDocParam phpType
     endfunction
-
     augroup phpSyntaxOverride
         au!
         au FileType php call PhpSyntaxOverride()
     augroup END
-
-    au VimEnter * AirlineTheme gruvbox
 endif
