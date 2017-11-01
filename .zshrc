@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.gem/ruby/2.3.0/bin:$HOME/.gem/ruby/2.4.0/bin:$HOME/.composer/vendor/bin:$HOME/go/bin:$HOME/projects/composer/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.gem/ruby/2.3.0/bin:$HOME/.gem/ruby/2.4.0/bin:$HOME/.composer/vendor/bin:$HOME/go/bin:$HOME/projects/composer/bin:/usr/local/bin:$HOME/.node/bin:$PATH
 export GEM_PATH=$HOME/.gem/ruby/2.3.0:$HOME/.gem/ruby/2.4.0:$GEM_PATH
 
 # Path to your oh-my-zsh installation.
