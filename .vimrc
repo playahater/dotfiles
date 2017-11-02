@@ -392,7 +392,7 @@ if has('autocmd')
     au BufNewFile,BufReadPost *.md set filetype=markdown
     au BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-    au BufWritePre,TextChanged *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql PrettierAsync
+    au BufRead,BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql PrettierAsync
 
     au FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
     au FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
