@@ -12,6 +12,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'wikitopian/hardmode'
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin'  }
     Plug 'junegunn/fzf.vim'
+    Plug 'Quramy/tsuquyomi', { 'for': ['typescript', 'javascript']  }
 
     " themes
     Plug 'morhetz/gruvbox'
@@ -44,7 +45,6 @@ au! bufwritepost .vimrc source %
 
 nmap <C-p> :bprev<CR>
 nmap <C-n> :bnext<CR>
-nmap <C-]> :exec("tag ".expand("<cword>"))<CR>
 "nmap P "+p
 nnoremap <C-\> :noh<CR>
 
@@ -243,7 +243,7 @@ let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
-let g:ale_linters = { 'typescript': ['tsserver'], 'javascript': ['eslint'] }
+let g:ale_linters = { 'typescript': ['tsuquyomi'], 'javascript': ['eslint'] }
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " markdown
@@ -310,6 +310,16 @@ let g:javascript_conceal_super          = "Ω"
 let g:javascript_conceal_arrow_function = "⇒"
 
 let g:jsx_ext_required = 0
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" typescript
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:tsuquyomi_completion_detail = 1
+let g:tsuquyomi_disable_quickfix = 1
+let g:tsuquyomi_shortest_import_path = 1
+
+au FileType typescript nmap <buffer> <Leader>e <Plug>(TsuquyomiRenameSymbol)
+au FileType typescript nmap <buffer> <Leader>E <Plug>(TsuquyomiRenameSymbolC)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " gitgutter
