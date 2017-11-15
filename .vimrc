@@ -12,7 +12,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'wikitopian/hardmode'
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin'  }
     Plug 'junegunn/fzf.vim'
-    Plug 'Quramy/tsuquyomi', { 'for': ['typescript', 'javascript']  }
+    Plug 'Quramy/tsuquyomi', { 'for': 'typescript' }
 
     " themes
     Plug 'morhetz/gruvbox'
@@ -21,17 +21,17 @@ call plug#begin('~/.vim/plugged')
 
     " syntax
     Plug 'prettier/vim-prettier', { 'do': 'sudo npm install -g', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
-    Plug 'leafgarland/typescript-vim', { 'for': 'typescript'  }
-    Plug 'Quramy/vim-js-pretty-template', { 'for': ['typescript', 'javascript']  }
-    Plug 'jelera/vim-javascript-syntax', { 'for': ['typescript', 'javascript']  }
-    Plug 'mxw/vim-jsx', { 'for': ['typescript', 'javascript']  }
-    Plug 'mustache/vim-mustache-handlebars', { 'for': 'javascript'  }
-    Plug 'StanAngeloff/php.vim', { 'for': 'php'  }
-    Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php'  }
-    Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss'  }
-    Plug 'jwalton512/vim-blade', { 'for': 'blade'  }
-    Plug 'othree/html5.vim', { 'for': 'html'  }
-    Plug 'tpope/vim-markdown', { 'for': 'markdown'  }
+    Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
+    Plug 'Quramy/vim-js-pretty-template', { 'for': ['typescript', 'javascript'] }
+    Plug 'jelera/vim-javascript-syntax', { 'for': ['typescript', 'javascript'] }
+    Plug 'mxw/vim-jsx', { 'for': ['typescript', 'javascript'] }
+    Plug 'mustache/vim-mustache-handlebars', { 'for': 'javascript' }
+    Plug 'StanAngeloff/php.vim', { 'for': 'php' }
+    Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php' }
+    Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
+    Plug 'jwalton512/vim-blade', { 'for': 'blade' }
+    Plug 'othree/html5.vim', { 'for': 'html' }
+    Plug 'tpope/vim-markdown', { 'for': 'markdown' }
 call plug#end()
 
 "automatic reloading of vimrc"
