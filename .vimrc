@@ -2,36 +2,36 @@
 " plugs
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
-    " utilities
-    Plug 'tpope/vim-dispatch'
-    Plug 'vim-scripts/L9'
-    Plug 'Shougo/neocomplete.vim'
-    Plug 'w0rp/ale'
-    Plug 'tpope/vim-fugitive'
-    Plug 'airblade/vim-gitgutter'
-    Plug 'wikitopian/hardmode'
-    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin'  }
-    Plug 'junegunn/fzf.vim'
-    Plug 'Quramy/tsuquyomi', { 'for': 'typescript' }
+  " utilities
+  Plug 'tpope/vim-dispatch'
+  Plug 'vim-scripts/L9'
+  Plug 'Shougo/neocomplete.vim'
+  Plug 'w0rp/ale'
+  Plug 'tpope/vim-fugitive'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'wikitopian/hardmode'
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin'  }
+  Plug 'junegunn/fzf.vim'
+  Plug 'Quramy/tsuquyomi', { 'for': 'typescript' }
 
-    " themes
-    Plug 'morhetz/gruvbox'
-    Plug 'vim-airline/vim-airline'
-    "Plug 'vim-airline/vim-airline-themes'
+  " themes
+  Plug 'morhetz/gruvbox'
+  Plug 'vim-airline/vim-airline'
+  "Plug 'vim-airline/vim-airline-themes'
 
-    " syntax
-    Plug 'prettier/vim-prettier', { 'do': 'sudo npm install -g', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
-    Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
-    Plug 'Quramy/vim-js-pretty-template', { 'for': ['typescript', 'javascript'] }
-    Plug 'jelera/vim-javascript-syntax', { 'for': ['typescript', 'javascript'] }
-    Plug 'mxw/vim-jsx', { 'for': ['typescript', 'javascript'] }
-    Plug 'mustache/vim-mustache-handlebars', { 'for': 'javascript' }
-    Plug 'StanAngeloff/php.vim', { 'for': 'php' }
-    Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php' }
-    Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
-    Plug 'jwalton512/vim-blade', { 'for': 'blade' }
-    Plug 'othree/html5.vim', { 'for': 'html' }
-    Plug 'tpope/vim-markdown', { 'for': 'markdown' }
+  " syntax
+  Plug 'prettier/vim-prettier', { 'do': 'sudo npm install -g', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
+  Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
+  Plug 'Quramy/vim-js-pretty-template', { 'for': ['typescript', 'javascript'] }
+  Plug 'jelera/vim-javascript-syntax', { 'for': ['typescript', 'javascript'] }
+  Plug 'mxw/vim-jsx', { 'for': ['typescript', 'javascript'] }
+  Plug 'mustache/vim-mustache-handlebars', { 'for': 'javascript' }
+  Plug 'StanAngeloff/php.vim', { 'for': 'php' }
+  Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php' }
+  Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
+  Plug 'jwalton512/vim-blade', { 'for': 'blade' }
+  Plug 'othree/html5.vim', { 'for': 'html' }
+  Plug 'tpope/vim-markdown', { 'for': 'markdown' }
 call plug#end()
 
 "automatic reloading of vimrc"
@@ -43,17 +43,15 @@ au! bufwritepost .vimrc source %
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "let mapleader = ""
 
-nmap <C-p> :bprev<CR>
-nmap <C-n> :bnext<CR>
-"nmap P "+p
-nnoremap <C-\> :noh<CR>
-
 if &diff
-    nnoremap <silent><C-j> :diffget LOCAL<CR>
-    nnoremap <silent><C-.> :diffget BASE<CR>
-    nnoremap <silent><C-k> :diffget REMOTE<CR>
+  nnoremap <silent><C-j> :diffget LOCAL<CR>
+  nnoremap <silent><C-.> :diffget BASE<CR>
+  nnoremap <silent><C-k> :diffget REMOTE<CR>
 endif
 
+nnoremap <C-\> :noh<CR>
+nmap <C-p> :bprev<CR>
+nmap <C-n> :bnext<CR>
 map <F1> @q
 map <F3> :Gblame<CR>
 map <F4> :call PhpCsFixerFixDirectory()<CR>
@@ -63,13 +61,13 @@ map <F9> :set wrap!<Bar>set wrap?<CR>
 map <F10> :set paste<CR>
 map <F12> :call PhpCsFixerFixFile()<CR>
 
-inoremap <expr><C-g>     neocomplete#undo_completion()
-inoremap <expr><C-l>     neocomplete#complete_common_string()
+inoremap <expr><C-g> neocomplete#undo_completion()
+inoremap <expr><C-l> neocomplete#complete_common_string()
 
 " <CR>: close popup and save indent.
 inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
 function! s:my_cr_function()
-    return pumvisible() ? "\<C-y>" : "\<CR>"
+  return pumvisible() ? "\<C-y>" : "\<CR>"
 endfunction
 
 " <TAB>: completion.
@@ -208,7 +206,7 @@ match WhitespaceEOL /\s\+$/
 " airline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
+  let g:airline_symbols = {}
 endif
 let g:airline_symbols.space = "\ua0"
 let g:airline#extensions#tabline#enabled = 0
@@ -287,9 +285,7 @@ function! s:find_git_root()
   return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
 endfunction
 command! ProjectFiles execute 'Files' s:find_git_root()
-command! -bang -nargs=? -complete=dir Files
-  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
-
+command! -bang -nargs=? -complete=dir Files call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 command! Grep execute 'Ag' s:find_git_root()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -370,12 +366,12 @@ let g:neocomplete#sources#syntax#min_keyword_length = 3
 let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 let g:neocomplete#enable_auto_select = 1
 if !exists('g:neocomplete#keyword_patterns')
-    let g:neocomplete#keyword_patterns = {}
+  let g:neocomplete#keyword_patterns = {}
 endif
 let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 
 if !exists('g:neocomplete#sources#omni#input_patterns')
-    let g:neocomplete#sources#omni#input_patterns = {}
+  let g:neocomplete#sources#omni#input_patterns = {}
 endif
 let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
@@ -386,46 +382,46 @@ let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 " misc
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has('autocmd')
-    au VimEnter * AirlineTheme gruvbox
-    au BufRead,BufNewFile *.module set filetype=php
-    au BufRead,BufNewFile *.install set filetype=php
-    au BufRead,BufNewFile *.wsgi set filetype=python
-    au BufNewFile,BufRead *.twig set filetype=twig
-    au BufNewFile,BufRead *.html.twig set filetype=html.twig
-    au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
-    au BufNewFile,BufRead *.ts set filetype=typescript
-    au BufNewFile,BufReadPost *.md set filetype=markdown
-    au BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
-    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-    au BufRead,BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql PrettierAsync
+  au VimEnter * AirlineTheme gruvbox
+  au BufRead,BufNewFile *.module set filetype=php
+  au BufRead,BufNewFile *.install set filetype=php
+  au BufRead,BufNewFile *.wsgi set filetype=python
+  au BufNewFile,BufRead *.twig set filetype=twig
+  au BufNewFile,BufRead *.html.twig set filetype=html.twig
+  au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
+  au BufNewFile,BufRead *.ts set filetype=typescript
+  au BufNewFile,BufReadPost *.md set filetype=markdown
+  au BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+  au BufRead,BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql PrettierAsync
 
-    au FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-    au FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-    au FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-    au FileType php set omnifunc=phpcomplete#CompletePHP
-    au FileType php setlocal makeprg=zca\ %<.php
-    au FileType php setlocal errorformat=%f(line\ %l):\ %m
-    au FileType python set expandtab shiftwidth=4 softtabstop=4 omnifunc=pythoncomplete#Complete
-    au FileType html set softtabstop=4 shiftwidth=4 textwidth=0 omnifunc=htmlcomplete#CompleteTags
-    au FileType css set softtabstop=4 shiftwidth=4 textwidth=0 omnifunc=csscomplete#CompleteCSS
+  au FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+  au FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+  au FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+  au FileType php set omnifunc=phpcomplete#CompletePHP
+  au FileType php setlocal makeprg=zca\ %<.php
+  au FileType php setlocal errorformat=%f(line\ %l):\ %m
+  au FileType python set expandtab shiftwidth=4 softtabstop=4 omnifunc=pythoncomplete#Complete
+  au FileType html set softtabstop=4 shiftwidth=4 textwidth=0 omnifunc=htmlcomplete#CompleteTags
+  au FileType css set softtabstop=4 shiftwidth=4 textwidth=0 omnifunc=csscomplete#CompleteCSS
 
-    " Don't automatically insert a comment command when entering insert mode with o
-    au FileType * setl formatoptions-=o
-    " " But do when hitting enter on a comment line, or when wrapping
-    au FileType * setl formatoptions+=rq
-    " Recognise numbered lists
-    au FileType * setl formatoptions+=n
-    " Don't automatically break lines when they are too long, unless they are comments
-    au FileType * setl formatoptions+=lc
-    " And try to remove comment leaders when joining lines
-    au FileType * setl formatoptions+=j"
+  " Don't automatically insert a comment command when entering insert mode with o
+  au FileType * setl formatoptions-=o
+  " " But do when hitting enter on a comment line, or when wrapping
+  au FileType * setl formatoptions+=rq
+  " Recognise numbered lists
+  au FileType * setl formatoptions+=n
+  " Don't automatically break lines when they are too long, unless they are comments
+  au FileType * setl formatoptions+=lc
+  " And try to remove comment leaders when joining lines
+  au FileType * setl formatoptions+=j"
 
-    function! PhpSyntaxOverride()
-        hi! def link phpDocTags  phpDefine
-        hi! def link phpDocParam phpType
-    endfunction
-    augroup phpSyntaxOverride
-        au!
-        au FileType php call PhpSyntaxOverride()
-    augroup END
+  function! PhpSyntaxOverride()
+    hi! def link phpDocTags  phpDefine
+    hi! def link phpDocParam phpType
+  endfunction
+  augroup phpSyntaxOverride
+    au!
+    au FileType php call PhpSyntaxOverride()
+  augroup END
 endif
