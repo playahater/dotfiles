@@ -32,6 +32,10 @@ call plug#begin('~/.vim/plugged')
   Plug 'jwalton512/vim-blade', { 'for': 'blade' }
   Plug 'othree/html5.vim', { 'for': 'html' }
   Plug 'tpope/vim-markdown', { 'for': 'markdown' }
+
+  " fun
+  "Plug 'johngrib/vim-game-code-break'
+
 call plug#end()
 
 "automatic reloading of vimrc"
