@@ -51,6 +51,8 @@
     "no-catch-shadow": 2,
     "no-delete-var": 2,
     "no-label-var": 2,
+    "eqeqeq": 0,
+    "radix": 0,
     "no-shadow-restricted-names": 2,
     "camelcase": 0,
     "comma-spacing": 2,
@@ -94,6 +96,8 @@
     "react/display-name": 1,
     "react/jsx-no-undef": 1,
     "react/jsx-uses-react": 1,
-    "react/jsx-uses-vars": 1
+    "react/jsx-uses-vars": 1,
+    "jsx-a11y/alt-text": 0,
+    "jsx-a11y/href-no-hash": 0
   }
 }
