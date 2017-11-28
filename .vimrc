@@ -13,7 +13,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin'  }
   Plug 'junegunn/fzf.vim'
   Plug 'Quramy/tsuquyomi', { 'for': 'typescript' }
-  Plug 'szw/vim-tags', { 'for': ['php', 'javascript'] }
+  "Plug 'szw/vim-tags', { 'for': ['php', 'javascript'] }
 
   " themes
   Plug 'morhetz/gruvbox'
@@ -198,7 +198,8 @@ let python_highlight_all = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " search
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set tags=./tags,tags,./.git/tags;
+set tags=./tags;,tags;
+"set tags=./tags,tags,./.git/tags;
 set ofu=syntaxcomplete#Complete
 set backupcopy=auto,breakhardlink
 
