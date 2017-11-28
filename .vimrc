@@ -13,6 +13,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin'  }
   Plug 'junegunn/fzf.vim'
   Plug 'Quramy/tsuquyomi', { 'for': 'typescript' }
+  Plug 'szw/vim-tags', { 'for': ['php', 'javascript'] }
 
   " themes
   Plug 'morhetz/gruvbox'
@@ -381,6 +382,10 @@ let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
 let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
+
+
+let g:vim_tags_use_vim_dispatch = 1
+let g:vim_tags_use_language_field = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " misc
