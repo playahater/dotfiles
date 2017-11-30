@@ -13,7 +13,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin'  }
   Plug 'junegunn/fzf.vim'
   Plug 'Quramy/tsuquyomi', { 'for': 'typescript' }
-  "Plug 'szw/vim-tags', { 'for': ['php', 'javascript'] }
 
   " themes
   Plug 'morhetz/gruvbox'
@@ -258,7 +257,7 @@ let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
 " fzf
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "[Buffers] Jump to the existing window if possible
-let g:fzf_buffers_jump = 1
+"let g:fzf_buffers_jump = 1
 " [[B]Commits] Customize the options used by 'git log':
 let g:fzf_commits_log_options = '--graph --color=always "--format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'
 "[Tags] Command to generate tags file
@@ -282,6 +281,8 @@ let g:fzf_colors =
 nmap <silent> <C-@> :Buffers<CR>
 nmap <silent> / :BLines<CR>
 nmap <silent> <C-f> :ProjectFiles<CR>
+nmap <silent> <C-t> :Tags<CR>
+nmap <silent> <C-c> :Commits<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " fzf functions
