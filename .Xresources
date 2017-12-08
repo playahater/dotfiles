@@ -11,7 +11,7 @@ Xft.rgba: rgba
 ! === U R x v t ==============================================================
 URxvt*.cursorBlink: false
 URxvt*.depth: 24
-URxvt*.font: xft:Literation Mono Powerline:pixelsize=20:antialias=true:autohint=true:dpi=120
+URxvt*.font: xft:Literation Mono Powerline:pixelsize=22:antialias=true:autohint=true:dpi=120
 URxvt*.internalBorder: 0
 URxvt*.loginShell: true
 URxvt*.mapAlert: true
