@@ -33,7 +33,7 @@ import XMonad.Layout.MultiToggle.Instances
 import XMonad.Layout.NoBorders (noBorders)
 import XMonad.Layout.Spacing
 import XMonad.Layout.Tabbed
-
+import XMonad.Layout.Reflect
 
 --------------------------------------------------------------------------------
 -- Main
@@ -87,13 +87,14 @@ myLayoutHook = noBorders
         . mkToggle (NOBORDERS ?? NBFULL ?? EOT)
         $ myLayout
 
-myLayout = avoidStruts $ (Full ||| tiled ||| tabL)
+myLayout = avoidStruts $ (Full ||| tiled ||| reflectTiled ||| tabL)
   where
      tiled   = Tall nmaster delta ratio
      nmaster = 1
      ratio   = 3/6
      delta   = 5/100
      tabL = (tabbedBottom shrinkText myTheme)
+     reflectTiled = (reflectHoriz tiled)
 
 --------------------------------------------------------------------------------
 -- some nice colors for the prompt windows
@@ -140,13 +141,9 @@ myManageHook :: ManageHook
 myManageHook = namedScratchpadManageHook scratchpads
   <+> composeAll
   [ title =? "xmessage"         --> doRectFloat centeredRect
-  , className =? "Slack"        --> doShift "α" <+> addTagHook "d"
-  , className =? "Firefox"      --> doShift "β"
   , className =? "Chromium"     --> doShift "β" <+> addTagHook "d"
-  , className =? "PhpStorm"     --> doShift "γ"
   , isDialog                    --> doFloat
   , isFullscreen                --> doFloat
-  --, isFullscreen --> (doF W.focusDown <+> doFullFloat)
   , pure True                   --> doFloat
   ]
 
@@ -157,7 +154,7 @@ scratchpads =
     [ shellScratchpad "htop" ( customFloating $ lowerRightRect )
     , screenScratchpad "screen" ( customFloating $ centeredRect )
     , shellScratchpad "mc" ( customFloating $ upperRightRect )
-    , NS "chromium" "chromium" (className =? "Chromium") ( customFloating $ rightBarRect )
+--    , NS "chromium" "chromium" (className =? "Chromium") ( customFloating $ rightBarRect )
     ]
 
 -- NamedScratchpad
@@ -250,6 +247,7 @@ myBaseKeys conf = myMainKeys ++
   , ((myModMask, xK_r), toggleWS' ["NSP"])
   , ((myModMask, xK_s), nextScreen)
   , ((myModMask, xK_f), sendMessage $ Toggle NBFULL)
+  , ((myModMask, xK_m), sendMessage $ Toggle MIRROR)
   , ((myModMask, xK_k), windows W.focusUp >> windows W.shiftMaster)
   , ((myModMask, xK_j), windows W.focusDown >> windows W.shiftMaster)
   --, ((myModMask, xK_0), windows $ W.greedyView "NSP")
