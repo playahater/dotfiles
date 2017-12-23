@@ -32,7 +32,6 @@ import XMonad.Layout.MultiToggle
 import XMonad.Layout.MultiToggle.Instances
 import XMonad.Layout.NoBorders (noBorders)
 import XMonad.Layout.Spacing
-import XMonad.Layout.Tabbed
 import XMonad.Layout.Reflect
 
 --------------------------------------------------------------------------------
@@ -87,14 +86,12 @@ myLayoutHook = noBorders
         . mkToggle (NOBORDERS ?? NBFULL ?? EOT)
         $ myLayout
 
-myLayout = avoidStruts $ (Full ||| tiled ||| reflectTiled ||| tabL)
+myLayout = avoidStruts $ (Mirror tiled ||| Full ||| tiled)
   where
      tiled   = Tall nmaster delta ratio
      nmaster = 1
      ratio   = 3/6
      delta   = 5/100
-     tabL = (tabbedBottom shrinkText myTheme)
-     reflectTiled = (reflectHoriz tiled)
 
 --------------------------------------------------------------------------------
 -- some nice colors for the prompt windows
@@ -110,21 +107,6 @@ myXPConfig = def
   , position = Bottom
   , height = 19
   , historySize = 50
-  }
-
---------------------------------------------------------------------------------
--- MyTheme For Tabbed layout
-myTheme = def
-  {
-    decoHeight = 19
-  , activeColor = "#0B2027"
-  , activeBorderColor = "#0B2027"
-  , activeTextColor = "#F6F1D1"
-  , inactiveColor = "#0B2027"
-  , inactiveBorderColor = "#0B2027"
-  , inactiveTextColor = "#dddddd"
-  , urgentColor = "#E84F4F"
-  , urgentTextColor = "#F6F1D1"
   }
 
 --------------------------------------------------------------------------------
