@@ -181,7 +181,7 @@ customPP = def {
     , ppUrgent = xmobarColor "#cc241d" "" . wrap "*" "*"
     , ppLayout = \x -> ""
     , ppTitle = xmobarColor "#F6F1D1" "" . shorten 120
-    , ppSep = "<fc=#83a598> || </fc>"
+    , ppSep = "<fc=#A0CF5D> || </fc>"
 }
 
 --------------------------------------------------------------------------------
