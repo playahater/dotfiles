@@ -20,7 +20,7 @@ URxvt*.resource: value
 URxvt*.termName: rxvt-unicode-256color
 URxvt*.urgentOnBell: true
 URxvt*.cursorColor: #ebdbb2
-!URxvt*.skipBuiltinGlyphs:    true
+URxvt*.skipBuiltinGlyphs:    true
 URxvt*.shading: 20
 URxvt*.transparent: true
 URxvt*.buffered: true
