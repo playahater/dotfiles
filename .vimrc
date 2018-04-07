@@ -248,7 +248,18 @@ let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
+let g:ale_set_highlights = 1
+let g:ale_lint_on_enter = 1
 "let g:ale_linters = { 'typescript': ['tsuquyomi'], 'javascript': ['eslint'] }
+"let g:ale_linters = {'jsx': ['stylelint', 'eslint']}
+"let g:ale_linter_aliases = {'jsx': 'css'}
+" Do not lint or fix minified files.
+"let g:ale_pattern_options = {
+"\ '\.min\.js$': {'ale_linters': [], 'ale_fixers': []},
+"\ '\.min\.css$': {'ale_linters': [], 'ale_fixers': []},
+"\}
+"" If you configure g:ale_pattern_options outside of vimrc, you need this.
+"let g:ale_pattern_options_enabled = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " markdown
@@ -407,6 +418,7 @@ if has('autocmd')
   au BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
   au BufRead,BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql PrettierAsync
+
 
   au FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
   au FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
