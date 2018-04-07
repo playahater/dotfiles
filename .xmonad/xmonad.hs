@@ -165,6 +165,7 @@ myStartupHook = do
   spawn "xset -b"
   spawn "xrdb -load ~/.Xresources"
   spawn "xsetroot -solid '#1d2021'"
+  spawn "feh --bg-scale ~/.xmonad/zentree.png"
 
 --------------------------------------------------------------------------------
 ---- logHook
