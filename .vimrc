@@ -3,44 +3,43 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
   " utilities
-  Plug 'tpope/vim-dispatch'
-  Plug 'vim-scripts/L9'
-  Plug 'Shougo/neocomplete.vim'
-  Plug 'w0rp/ale'
+
+  Plug 'prabirshrestha/async.vim'
+  Plug 'prabirshrestha/vim-lsp'
+  Plug 'prabirshrestha/asyncomplete.vim'
+  Plug 'prabirshrestha/asyncomplete-lsp.vim'
+  Plug 'prabirshrestha/asyncomplete-file.vim'
+  Plug 'prabirshrestha/asyncomplete-tscompletejob.vim'
+  Plug 'prabirshrestha/asyncomplete-tags.vim'
+  Plug 'runoshun/tscompletejob'
+
   Plug 'tpope/vim-fugitive'
   Plug 'airblade/vim-gitgutter'
   Plug 'wikitopian/hardmode'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin'  }
   Plug 'junegunn/fzf.vim'
-  Plug 'Quramy/tsuquyomi', { 'for': 'typescript' }
 
   " themes
   Plug 'morhetz/gruvbox'
   Plug 'vim-airline/vim-airline'
-  "Plug 'vim-airline/vim-airline-themes'
 
   " syntax
   Plug 'prettier/vim-prettier', { 'do': 'sudo npm install -g', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
+  " Plug 'felixfbecker/php-language-server', {'do': 'composer install && composer run-script parse-stubs'}
+
   Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
   Plug 'Quramy/vim-js-pretty-template', { 'for': ['typescript', 'javascript'] }
-  Plug 'jelera/vim-javascript-syntax', { 'for': ['typescript', 'javascript'] }
+  Plug 'pangloss/vim-javascript', { 'for': ['typescript', 'javascript'] }
   Plug 'mxw/vim-jsx', { 'for': ['typescript', 'javascript'] }
   Plug 'mustache/vim-mustache-handlebars', { 'for': 'javascript' }
   Plug 'StanAngeloff/php.vim', { 'for': 'php' }
-  Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php' }
   Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
   Plug 'jwalton512/vim-blade', { 'for': 'blade' }
   Plug 'othree/html5.vim', { 'for': 'html' }
   Plug 'tpope/vim-markdown', { 'for': 'markdown' }
 
-  " fun
-  "Plug 'johngrib/vim-game-code-break'
-
 call plug#end()
 
-"automatic reloading of vimrc"
-au VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
-au! bufwritepost .vimrc source %
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " key maps
@@ -56,29 +55,18 @@ endif
 nnoremap <C-\> :noh<CR>
 nmap <C-p> :bprev<CR>
 nmap <C-n> :bnext<CR>
-map <F1> @q
 map <F3> :Gblame<CR>
-map <F4> :call PhpCsFixerFixDirectory()<CR>
 map <F5> mzgg=G`z && retab!<CR>
 map <F6> :PrettierAsync<CR>
 map <F9> :set wrap!<Bar>set wrap?<CR>
 map <F10> :set paste<CR>
-map <F12> :call PhpCsFixerFixFile()<CR>
 
-inoremap <expr><C-g> neocomplete#undo_completion()
-inoremap <expr><C-l> neocomplete#complete_common_string()
+" https://github.com/prabirshrestha/vim-lsp
+nnoremap <C-]> :LspDefinition<CR>
 
-" <CR>: close popup and save indent.
-inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-function! s:my_cr_function()
-  return pumvisible() ? "\<C-y>" : "\<CR>"
-endfunction
-
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-" <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " global
@@ -86,83 +74,37 @@ inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 syntax enable
 filetype plugin indent on
 
-set nocompatible    " Unable Vi compatibility
-set ttyfast
-set wildmode=longest,list:longest
-set autowrite
-set textauto
-set winminheight=0
-set showcmd     " Show incomplete cmds down the bottom
-set showmode    " Show current mode down the bottom
-set clipboard=autoselectplus    " save the selection into the system clipboard
-set ruler   " Ruler on
+set completeopt+=preview
+set t_Co=256
+let base16colorspace=256  " Access colors present in 256 colorspace
 set number  " Display line numbers
 set timeoutlen=1    " Time to wait after ESC
 set nobackup
 set noswapfile
-set hlsearch    " Highlight search strings
-set nowritebackup
-set winaltkeys=yes
-set modeline
-set shortmess+=filmnrxoOtT
-set viewoptions=folds,options,cursor,unix,slash
-set history=1000
-set gdefault
-set autoread
-set magic   " change the way backslashes are used in search patterns
-set confirm
-set splitbelow
-set showtabline=0
-set hidden
-set ttimeout
-set ttimeoutlen=50
-set background=dark " enable for dark terminals
-set lazyredraw
-set wildmenu
-set numberwidth=5
-set scrolloff=10
-set formatoptions=rq
-set t_Co=256
-let base16colorspace=256  " Access colors present in 256 colorspace
-set noshowmode    " get rid of the default mode indicator
-set complete=.,b,u,]
-set completeopt=longest,menu,preview
-set showmatch   " Show matching brackets.
-set matchtime=8 " Bracket blinking.
-set novisualbell    " No blinking .
-set noerrorbells    " No noise.
-set vb t_vb="."
-set laststatus=2    " Always show status line.
-set tabpagemax=100   " set maximum number of tabs
 set tabstop=4   " Tabs are 4 spaces
 set expandtab
 set shiftwidth=4    " Define the width of a shift for the<<  and>>  commands. (Tabs under smart indent)
 set tabstop=4   " Define what tabstop  is to be simulated when Tab is pressed
 set autoindent      " Automatically indent eache line like previous one
 set smartindent     " Automatically indent when adding a curly bracket, etc.
-set backspace=indent,eol,start    " Allow backspacing over everything in insert mode
-set cinwords=if,else,while,do,for,switch,case    " Define keywords that cause an extra indent
-set lbr
-set list
-set list listchars=tab:▶→,trail:•,extends:»,precedes:«,nbsp:×
-set nowrap
-set encoding=utf-8
-set autochdir
-set fileformats=unix,mac,dos
-set iskeyword+=_,$,@,%,#
-set foldmethod=indent   " fold based on indent
-set nofoldenable        " dont fold by default
-set incsearch   " Search as you type
-set ignorecase  " Ignore case when searching
-set smartcase   " if there are caps, go case-sensitive
-set spell
-set spelllang=en_us
+set backspace=0
+set clipboard=autoselectplus
+set hlsearch
+set history=1000
+set magic
+set showtabline=0
+set incsearch
+set ignorecase
+set smartcase
+set scrolloff=10
+
 set statusline+=%#warningmsg#
 set statusline+=%*
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " color
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set background=dark
 colorscheme gruvbox
 let g:gruvbox_contrast_dark = 'soft'
 let g:gruvbox_italic = 1
@@ -171,28 +113,6 @@ let g:gruvbox_invert_signs = 1
 let g:gruvbox_invert_selection = 1
 let g:gruvbox_improved_strings = 1
 let g:gruvbox_improved_warnings = 1
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" system
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:buftabs_only_basename=1
-let g:buftabs_in_statusline=1
-let html_number_lines = 0
-let html_use_css = 0
-let use_xhtml = 0
-let html_wrong_comments=1
-let php_sql_query = 1
-let php_baselib = 1
-let php_htmlInStrings = 1
-let hs_highlight_delimiters = 1
-let hs_highlight_boolean = 1
-let hs_highlight_types = 1
-let java_javascript=1
-let java_css=1
-let msql_sql_query = 1
-let apache_version = '2.0'
-let enforce_freedesktop_standard = 1
-let python_highlight_all = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " search
@@ -233,38 +153,11 @@ let g:airline#extensions#tabline#switch_buffers_and_tabs = 0
 let g:airline#extensions#tabline#show_buffers = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" ale
+" javascript
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:ale_sign_error = '▸'
-let g:ale_sign_warning = "\u26A0"
-let g:ale_fixers = {}
-let g:ale_fixers.javascript = ['eslint']
-let g:ale_fixers.typescript = ['tslint']
-let g:ale_fix_on_save = 1
-let g:ale_completion_enabled = 1
-let g:airline#extensions#ale#enabled = 1
-let g:ale_echo_msg_error_str = 'E'
-let g:ale_echo_msg_warning_str = 'W'
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-let g:ale_set_loclist = 0
-let g:ale_set_quickfix = 1
-let g:ale_set_highlights = 1
-let g:ale_lint_on_enter = 1
-"let g:ale_linters = { 'typescript': ['tsuquyomi'], 'javascript': ['eslint'] }
-"let g:ale_linters = {'jsx': ['stylelint', 'eslint']}
-"let g:ale_linter_aliases = {'jsx': 'css'}
-" Do not lint or fix minified files.
-"let g:ale_pattern_options = {
-"\ '\.min\.js$': {'ale_linters': [], 'ale_fixers': []},
-"\ '\.min\.css$': {'ale_linters': [], 'ale_fixers': []},
-"\}
-"" If you configure g:ale_pattern_options outside of vimrc, you need this.
-"let g:ale_pattern_options_enabled = 1
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" markdown
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_ngdoc = 1
+let g:javascript_plugin_flow = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " fzf
@@ -309,35 +202,6 @@ command! -bang -nargs=? -complete=dir Files call fzf#vim#files(<q-args>, fzf#vim
 command! Grep execute 'Ag' s:find_git_root()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" javascript
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:javascript_plugin_jsdoc           = 1
-let g:javascript_plugin_ngdoc           = 1
-let g:javascript_plugin_flow            = 1
-let g:javascript_conceal_function       = "ƒ"
-let g:javascript_conceal_null           = "ø"
-let g:javascript_conceal_this           = "@"
-let g:javascript_conceal_return         = "⇚"
-let g:javascript_conceal_undefined      = "¿"
-let g:javascript_conceal_NaN            = "ℕ"
-let g:javascript_conceal_prototype      = "¶"
-let g:javascript_conceal_static         = "•"
-let g:javascript_conceal_super          = "Ω"
-let g:javascript_conceal_arrow_function = "⇒"
-
-let g:jsx_ext_required = 0
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" typescript
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:tsuquyomi_completion_detail = 1
-let g:tsuquyomi_disable_quickfix = 1
-let g:tsuquyomi_shortest_import_path = 1
-
-au FileType typescript nmap <buffer> <Leader>e <Plug>(TsuquyomiRenameSymbol)
-au FileType typescript nmap <buffer> <Leader>E <Plug>(TsuquyomiRenameSymbolC)
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " gitgutter
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gitgutter_escape_grep = 1
@@ -375,38 +239,96 @@ let g:prettier#config#parser = 'typescript'
 " cli-override|file-override|prefer-file
 let g:prettier#config#config_precedence = 'prefer-file'
 
+let g:asyncomplete_remove_duplicates = 1
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" neocomplete
+" lsp
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:acp_enableAtStartup = 0
-let g:neocomplete#enable_auto_select = 1
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
-let g:neocomplete#enable_auto_select = 1
-if !exists('g:neocomplete#keyword_patterns')
-  let g:neocomplete#keyword_patterns = {}
+
+highlight link LspErrorText GruvboxRedSign
+highlight clear LspWarningLine
+let g:lsp_signs_enabled = 1
+let g:lsp_diagnostics_echo_cursor = 1
+let g:lsp_signs_error = {'text': '✗'}
+let g:lsp_signs_warning = {'text': '‼'}
+
+"if executable('typescript-language-server')
+"    au User lsp_setup call lsp#register_server({
+"        \ 'name': 'typescript-language-server',
+"        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
+"        \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'tsconfig.json'))},
+"        \ 'whitelist': ['typescript'],
+"        \ })
+"endif
+
+if executable('typescript-language-server')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'typescript-language-server',
+        \ 'cmd': { server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
+        \ 'root_uri': { server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_directory(lsp#utils#get_buffer_path(), '.git/..'))},
+        \ 'whitelist': ['typescript', 'javascript', 'javascript.jsx']
+        \ })
 endif
-let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 
-if !exists('g:neocomplete#sources#omni#input_patterns')
-  let g:neocomplete#sources#omni#input_patterns = {}
+"au User lsp_setup call lsp#register_server({
+"    \ 'name': 'php-language-server',
+"    \ 'cmd': {server_info->['php', expand('~/.vim/plugged/php-language-server/bin/php-language-server.php')]},
+"    \ 'whitelist': ['php'],
+"    \ })
+
+if executable('css-languageserver')
+    au User lsp_setup call lsp#register_server({
+       \ 'name': 'css-languageserver',
+       \ 'cmd': {server_info->[&shell, &shellcmdflag, 'css-languageserver --stdio']},
+       \ 'whitelist': ['css', 'less', 'sass'],
+       \ })
 endif
-let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
-let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
+"if executable('docker-langserver')
+"     au User lsp_setup call lsp#register_server({
+"        \ 'name': 'docker-langserver',
+"        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'docker-langserver --stdio']},
+"        \ 'whitelist': ['dockerfile'],
+"        \ })
+"endif
 
-let g:vim_tags_use_vim_dispatch = 1
-let g:vim_tags_use_language_field = 1
+"if executable('pyls')
+"     au User lsp_setup call lsp#register_server({
+"        \ 'name': 'pyls',
+"        \ 'cmd': {server_info->['pyls']},
+"        \ 'whitelist': ['python'],
+"        \ })
+"endif
+
+au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#file#get_source_options({
+    \ 'name': 'file',
+    \ 'whitelist': ['*'],
+    \ 'priority': 10,
+    \ 'completor': function('asyncomplete#sources#file#completor')
+    \ }))
+
+call asyncomplete#register_source(asyncomplete#sources#tscompletejob#get_source_options({
+    \ 'name': 'tscompletejob',
+    \ 'whitelist': ['typescript'],
+    \ 'completor': function('asyncomplete#sources#tscompletejob#completor'),
+    \ }))
+
+au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#tags#get_source_options({
+    \ 'name': 'tags',
+    \ 'whitelist': ['c'],
+    \ 'completor': function('asyncomplete#sources#tags#completor'),
+    \ 'config': {
+    \    'max_file_size': -1,
+    \  },
+    \ }))
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " misc
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has('autocmd')
+  au VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
   au VimEnter * AirlineTheme gruvbox
+
   au BufRead,BufNewFile *.module set filetype=php
   au BufRead,BufNewFile *.install set filetype=php
   au BufRead,BufNewFile *.wsgi set filetype=python
@@ -415,20 +337,10 @@ if has('autocmd')
   au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
   au BufNewFile,BufRead *.ts set filetype=typescript
   au BufNewFile,BufReadPost *.md set filetype=markdown
+
+  au BufRead,BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql PrettierAsync
   au BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-  au BufRead,BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql PrettierAsync
-
-
-  au FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-  au FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-  au FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-  au FileType php set omnifunc=phpcomplete#CompletePHP
-  au FileType php setlocal makeprg=zca\ %<.php
-  au FileType php setlocal errorformat=%f(line\ %l):\ %m
-  au FileType python set expandtab shiftwidth=4 softtabstop=4 omnifunc=pythoncomplete#Complete
-  au FileType html set softtabstop=4 shiftwidth=4 textwidth=0 omnifunc=htmlcomplete#CompleteTags
-  au FileType css set softtabstop=4 shiftwidth=4 textwidth=0 omnifunc=csscomplete#CompleteCSS
 
   " Don't automatically insert a comment command when entering insert mode with o
   au FileType * setl formatoptions-=o
@@ -440,13 +352,7 @@ if has('autocmd')
   au FileType * setl formatoptions+=lc
   " And try to remove comment leaders when joining lines
   au FileType * setl formatoptions+=j"
+  " auto close preview window when completion is done
+  au! CompleteDone * if pumvisible() == 0 | pclose | endif
 
-  function! PhpSyntaxOverride()
-    hi! def link phpDocTags  phpDefine
-    hi! def link phpDocParam phpType
-  endfunction
-  augroup phpSyntaxOverride
-    au!
-    au FileType php call PhpSyntaxOverride()
-  augroup END
 endif
