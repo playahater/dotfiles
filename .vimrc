@@ -225,7 +225,7 @@ let g:prettier#config#tab_width = 4
 " use tabs over spaces
 let g:prettier#config#use_tabs = 'false'
 " print semicolons
-let g:prettier#config#semi = 'true'
+let g:prettier#config#semi = 'false'
 " single quotes over double quotes
 let g:prettier#config#single_quote = 'true'
 " print spaces between brackets
