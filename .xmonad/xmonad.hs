@@ -13,6 +13,7 @@ import System.IO
 -- utils
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Prompt
+--import XMonad.Prompt.RunOrRaise
 import XMonad.Prompt.Shell
 import XMonad.Layout.IndependentScreens
 import XMonad.Util.NamedScratchpad
@@ -122,11 +123,12 @@ addTagHook tag = do
 myManageHook :: ManageHook
 myManageHook = namedScratchpadManageHook scratchpads
   <+> composeAll
-  [ title =? "xmessage"         --> doRectFloat centeredRect
-  , className =? "Chromium"     --> doShift "β" <+> addTagHook "d"
-  , isDialog                    --> doFloat
-  , isFullscreen                --> doFloat
-  , pure True                   --> doFloat
+  [ title =? "xmessage"                     --> doRectFloat centeredRect
+  , className =? "Chromium"                 --> doShift "β" <+> addTagHook "d"
+  , className =? "Checker Plus for Gmail"   --> doCenterFloat
+  , isDialog                                --> doCenterFloat
+  , isFullscreen                            --> doCenterFloat
+  , pure True                               --> doCenterFloat
   ]
 
 --------------------------------------------------------------------------------
@@ -227,6 +229,7 @@ myBaseKeys conf = myMainKeys ++
   , ((myShiftMask, xK_F7), spawn "single-vga")
   , ((myModMask, xK_F1), spawn $ XMonad.terminal conf)
   , ((myModMask, xK_F2), shellPrompt myXPConfig)
+--  , ((myModMask, xK_F2), runOrRaisePrompt myXPConfig)
   , ((myModMask, xK_r), toggleWS' ["NSP"])
   , ((myModMask, xK_s), nextScreen)
   , ((myModMask, xK_f), sendMessage $ Toggle NBFULL)
