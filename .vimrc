@@ -74,6 +74,9 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
 syntax enable
 filetype plugin indent on
 
+set undodir=~/.vim/undodir
+set undofile
+
 set completeopt+=preview
 set t_Co=256
 let base16colorspace=256  " Access colors present in 256 colorspace
@@ -88,7 +91,7 @@ set tabstop=4   " Define what tabstop  is to be simulated when Tab is pressed
 set autoindent      " Automatically indent eache line like previous one
 set smartindent     " Automatically indent when adding a curly bracket, etc.
 set backspace=0
-set clipboard=autoselectplus
+set clipboard=unnamed
 set hlsearch
 set history=1000
 set magic
@@ -100,6 +103,9 @@ set scrolloff=10
 
 set statusline+=%#warningmsg#
 set statusline+=%*
+
+set colorcolumn=80
+highlight ColorColumn ctermbg=232
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " color
