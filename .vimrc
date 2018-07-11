@@ -25,7 +25,7 @@ call plug#begin('~/.vim/plugged')
 
   " syntax
   Plug 'prettier/vim-prettier', { 'do': 'sudo npm install -g', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
-  " Plug 'felixfbecker/php-language-server', {'do': 'composer install && composer run-script parse-stubs'}
+  Plug 'felixfbecker/php-language-server', {'do': 'composer install && composer run-script parse-stubs'}
 
   Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
   Plug 'Quramy/vim-js-pretty-template', { 'for': ['typescript', 'javascript'] }
@@ -63,6 +63,9 @@ map <F10> :set paste<CR>
 
 " https://github.com/prabirshrestha/vim-lsp
 nnoremap <C-]> :LspDefinition<CR>
+nnoremap <C-[> :LspReferences<CR>
+nnoremap <C-'> :LspRename<CR>
+nnoremap <C-;> :LspDocumentFormat<CR>
 
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
@@ -169,9 +172,7 @@ let g:javascript_plugin_flow = 1
 " fzf
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "[Buffers] Jump to the existing window if possible
-"let g:fzf_buffers_jump = 1
-" [[B]Commits] Customize the options used by 'git log':
-let g:fzf_commits_log_options = '--graph --color=always "--format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'
+let g:fzf_buffers_jump = 1
 "[Tags] Command to generate tags file
 let g:fzf_tags_command = 'ctags --extra=+f -R'
 " [Commands] --expect expression for directly executing the command
@@ -193,8 +194,9 @@ let g:fzf_colors =
 nmap <silent> <C-@> :Buffers<CR>
 nmap <silent> / :BLines<CR>
 nmap <silent> <C-f> :ProjectFiles<CR>
-nmap <silent> <C-t> :Tags<CR>
+"nmap <silent> <C-t> :Tags<CR>
 nmap <silent> <C-c> :Commits<CR>
+nmap <silent> <C-b> :BCommits<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " fzf functions
@@ -258,14 +260,14 @@ let g:lsp_diagnostics_echo_cursor = 1
 let g:lsp_signs_error = {'text': '✗'}
 let g:lsp_signs_warning = {'text': '‼'}
 
-"if executable('typescript-language-server')
-"    au User lsp_setup call lsp#register_server({
-"        \ 'name': 'typescript-language-server',
-"        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
-"        \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'tsconfig.json'))},
-"        \ 'whitelist': ['typescript'],
-"        \ })
-"endif
+if executable('typescript-language-server')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'typescript-language-server',
+        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
+        \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'tsconfig.json'))},
+        \ 'whitelist': ['typescript'],
+        \ })
+endif
 
 if executable('typescript-language-server')
     au User lsp_setup call lsp#register_server({
@@ -276,11 +278,11 @@ if executable('typescript-language-server')
         \ })
 endif
 
-"au User lsp_setup call lsp#register_server({
-"    \ 'name': 'php-language-server',
-"    \ 'cmd': {server_info->['php', expand('~/.vim/plugged/php-language-server/bin/php-language-server.php')]},
-"    \ 'whitelist': ['php'],
-"    \ })
+au User lsp_setup call lsp#register_server({
+    \ 'name': 'php-language-server',
+    \ 'cmd': {server_info->['php', expand('~/.vim/plugged/php-language-server/bin/php-language-server.php')]},
+    \ 'whitelist': ['php'],
+    \ })
 
 if executable('css-languageserver')
     au User lsp_setup call lsp#register_server({
@@ -290,21 +292,13 @@ if executable('css-languageserver')
        \ })
 endif
 
-"if executable('docker-langserver')
-"     au User lsp_setup call lsp#register_server({
-"        \ 'name': 'docker-langserver',
-"        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'docker-langserver --stdio']},
-"        \ 'whitelist': ['dockerfile'],
-"        \ })
-"endif
-
-"if executable('pyls')
-"     au User lsp_setup call lsp#register_server({
-"        \ 'name': 'pyls',
-"        \ 'cmd': {server_info->['pyls']},
-"        \ 'whitelist': ['python'],
-"        \ })
-"endif
+if executable('pyls')
+     au User lsp_setup call lsp#register_server({
+        \ 'name': 'pyls',
+        \ 'cmd': {server_info->['pyls']},
+        \ 'whitelist': ['python'],
+        \ })
+endif
 
 au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#file#get_source_options({
     \ 'name': 'file',
