@@ -63,7 +63,7 @@ map <F10> :set paste<CR>
 
 " https://github.com/prabirshrestha/vim-lsp
 nnoremap <C-]> :LspDefinition<CR>
-nnoremap <C-[> :LspReferences<CR>
+nnoremap <M-[> :LspReferences<CR>
 nnoremap <C-'> :LspRename<CR>
 nnoremap <C-;> :LspDocumentFormat<CR>
 

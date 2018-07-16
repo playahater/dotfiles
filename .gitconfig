@@ -80,3 +80,8 @@
 	poppers = !git log -M -C --format=\"format:%aN\" --grep \"Revert\" | sort | uniq -c | sort -n
     ctags = !.git/hooks/ctags
     unmerged = branch --no-merged
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
