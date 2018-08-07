@@ -55,7 +55,7 @@ HIST_STAMPS="dd.mm.yyyy"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 #plugins=(git branch archlinux bower bundler cabal celery chucknorris coffee colored-man-pages colorize command-not-found common-aliases compleat composer cp django git-extras github gulp laravel5 rsync redis-cli zsh-completions)
-plugins=(git cp rsync colored-man-pages colorize zsh-completions)
+plugins=(git cp rsync colored-man-pages colorize zsh-completions fast-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
