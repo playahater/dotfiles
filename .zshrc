@@ -1,11 +1,11 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.gem/ruby/2.3.0/bin:$HOME/.gem/ruby/2.4.0/bin:$HOME/.composer/vendor/bin:$HOME/go/bin:$HOME/projects/composer/bin:/usr/local/bin:$HOME/.node/bin:$PATH
+export PATH=$HOME/bin:$HOME/.gem/ruby/2.3.0/bin:$HOME/.gem/ruby/2.4.0/bin:$HOME/.composer/vendor/bin:$HOME/go/bin:$HOME/projects/composer/bin:/usr/local/bin:$HOME/.node/bin:$PATH:$HOME/.fzf/bin
 export GEM_PATH=$HOME/.gem/ruby/2.3.0:$HOME/.gem/ruby/2.4.0:$GEM_PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-export FZF_DEFAULT_COMMAND='ag --word-regexp --numbers --hidden --ignore .git -g ""'
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --color=always --glob "!.git/*"'
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -23,7 +23,7 @@ HYPHEN_INSENSITIVE="true"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-export UPDATE_ZSH_DAYS=21
+#export UPDATE_ZSH_DAYS=21
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -54,7 +54,6 @@ HIST_STAMPS="dd.mm.yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-#plugins=(git branch archlinux bower bundler cabal celery chucknorris coffee colored-man-pages colorize command-not-found common-aliases compleat composer cp django git-extras github gulp laravel5 rsync redis-cli zsh-completions)
 plugins=(git cp rsync colored-man-pages colorize zsh-completions fast-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
