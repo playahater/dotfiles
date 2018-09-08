@@ -177,23 +177,25 @@ let g:fzf_buffers_jump = 1
 let g:fzf_tags_command = 'ctags --extra=+f -R'
 " [Commands] --expect expression for directly executing the command
 let g:fzf_commands_expect = 'alt-enter,ctrl-x'
+let g:fzf_layout = { 'down': '~20%' }
 let g:fzf_colors =
-\ { 'fg':      ['fg', 'Normal'],
-  \ 'bg':      ['bg', 'Normal'],
-  \ 'hl':      ['fg', 'Comment'],
-  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-  \ 'hl+':     ['fg', 'Statement'],
-  \ 'info':    ['fg', 'PreProc'],
-  \ 'prompt':  ['fg', 'Conditional'],
-  \ 'pointer': ['fg', 'Exception'],
-  \ 'marker':  ['fg', 'Keyword'],
-  \ 'spinner': ['fg', 'Label'],
-  \ 'header':  ['fg', 'Comment'] }
+  \ { 'fg':      ['fg', 'Normal'],
+    \ 'bg':      ['bg', 'Clear'],
+    \ 'hl':      ['fg', 'String'],
+    \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+    \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+    \ 'hl+':     ['fg', 'Statement'],
+    \ 'info':    ['fg', 'PreProc'],
+    \ 'prompt':  ['fg', 'Conditional'],
+    \ 'pointer': ['fg', 'Exception'],
+    \ 'marker':  ['fg', 'Keyword'],
+    \ 'spinner': ['fg', 'Label'],
+    \ 'header':  ['fg', 'Comment'] }
 
 nmap <silent> <C-@> :Buffers<CR>
 nmap <silent> / :BLines<CR>
-nmap <silent> <C-f> :ProjectFiles<CR>
+nmap <silent> <C-g> :Rg<CR>
+nmap <silent> <C-f> :Files<CR>
 "nmap <silent> <C-t> :Tags<CR>
 nmap <silent> <C-c> :Commits<CR>
 nmap <silent> <C-b> :BCommits<CR>
@@ -201,13 +203,16 @@ nmap <silent> <C-b> :BCommits<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " fzf functions
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" file search with preview
-function! s:find_git_root()
-  return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
-endfunction
-command! ProjectFiles execute 'Files' s:find_git_root()
-command! -bang -nargs=? -complete=dir Files call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
-command! Grep execute 'Ag' s:find_git_root()
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --hidden --ignore-case --no-heading --color=always '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'up:60%')
+  \           : fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'right:50%:hidden', '?'),
+  \   <bang>0)
+
+command! -bang -nargs=? -complete=dir Files
+  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " gitgutter
