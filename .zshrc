@@ -6,6 +6,7 @@ export GEM_PATH=$HOME/.gem/ruby/2.3.0:$HOME/.gem/ruby/2.4.0:$GEM_PATH
 export ZSH=$HOME/.oh-my-zsh
 
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --color=always --glob "!.git/*"'
+#export FZF_DEFAULT_OPTS='--height 20% --layout=reverse --border --preview'
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.

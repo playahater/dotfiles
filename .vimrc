@@ -195,14 +195,18 @@ let g:fzf_colors =
 nmap <silent> <C-@> :Buffers<CR>
 nmap <silent> / :BLines<CR>
 nmap <silent> <C-g> :Rg<CR>
-nmap <silent> <C-f> :Files<CR>
-"nmap <silent> <C-t> :Tags<CR>
+nmap <silent> <C-f> :ProjectFiles<CR>
 nmap <silent> <C-c> :Commits<CR>
 nmap <silent> <C-b> :BCommits<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " fzf functions
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" file search with preview
+function! s:find_git_root()
+  return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
+endfunction
+
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
   \   'rg --column --line-number --hidden --ignore-case --no-heading --color=always '.shellescape(<q-args>), 1,
@@ -211,8 +215,9 @@ command! -bang -nargs=* Rg
   \   <bang>0)
 
 command! -bang -nargs=? -complete=dir Files
-  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+  \ call fzf#vim#files(<q-args>, {'source': 'rg --color=never --no-heading --follow --ignore-case --hidden --files --glob "!.git/*"'}, <bang>0)
 
+command! ProjectFiles execute 'Files' s:find_git_root()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " gitgutter
