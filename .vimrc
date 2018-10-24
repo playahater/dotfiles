@@ -243,7 +243,7 @@ let g:prettier#config#tab_width = 4
 " use tabs over spaces
 let g:prettier#config#use_tabs = 'false'
 " print semicolons
-let g:prettier#config#semi = 'false'
+let g:prettier#config#semi = 'true'
 " single quotes over double quotes
 let g:prettier#config#single_quote = 'true'
 " print spaces between brackets
@@ -251,7 +251,7 @@ let g:prettier#config#bracket_spacing = 'true'
 " put > on the last line instead of new line
 let g:prettier#config#jsx_bracket_same_line = 'true'
 " none|es5|all
-let g:prettier#config#trailing_comma = 'all'
+let g:prettier#config#trailing_comma = 'none'
 " flow|babylon|typescript|postcss|json|graphql
 let g:prettier#config#parser = 'typescript'
 " cli-override|file-override|prefer-file
