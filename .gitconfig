@@ -21,8 +21,8 @@
     numbered = auto
 [status]
     submodulesummary = true
-#[column]
-#    ui = auto
+[column]
+    ui = auto
 [rerere]
     enabled = true
     autoupdate = true
