@@ -86,6 +86,8 @@
 	process = git-lfs filter-process
 	required = true
 [gpg]
-	program = gpg2.
+	program = gpg
 [user]
-	signingkey = B25F1E9DF8ADF45F
+	signingkey = EDE5CEA167742D08
+[commit]
+	gpgsign = true
