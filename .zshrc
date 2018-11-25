@@ -8,6 +8,9 @@ export ZSH=$HOME/.oh-my-zsh
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --color=auto --glob "!.git/*"'
 #export FZF_DEFAULT_OPTS='--height 20% --layout=reverse --border --preview'
 
+#support non-gui gpg agent
+export GPG_TTY=$(tty)
+
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -55,7 +58,6 @@ HIST_STAMPS="dd.mm.yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-#plugins=(git cp rsync colored-man-pages colorize zsh-completions fast-syntax-highlighting zsh-nvm)
 plugins=(git cp rsync colored-man-pages colorize zsh-completions fast-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
