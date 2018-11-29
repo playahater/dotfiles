@@ -55,6 +55,7 @@ endif
 nnoremap <C-\> :noh<CR>
 nmap <C-p> :bprev<CR>
 nmap <C-n> :bnext<CR>
+map <F2> :%s/\s\+$//e<CR>
 map <F3> :Gblame<CR>
 map <F5> mzgg=G`z && retab!<CR>
 map <F6> :PrettierAsync<CR>
