@@ -78,9 +78,6 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
 syntax enable
 filetype plugin indent on
 
-set undodir=~/.vim/undodir
-set undofile
-
 set completeopt+=preview
 set t_Co=256
 let base16colorspace=256  " Access colors present in 256 colorspace
