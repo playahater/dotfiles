@@ -91,7 +91,7 @@ set shiftwidth=4    " Define the width of a shift for the<<  and>>  commands. (T
 set tabstop=4   " Define what tabstop  is to be simulated when Tab is pressed
 set autoindent      " Automatically indent eache line like previous one
 set smartindent     " Automatically indent when adding a curly bracket, etc.
-set backspace=0
+set backspace=2
 set clipboard=unnamed
 set hlsearch
 set history=1000
