@@ -18,6 +18,7 @@ Config { font = "xft:Literation Mono Powerline:pixelsize=13:antialias=true:autoh
                     , Run Wireless "wlp3s0" ["-t", "<fc=#83a598><icon=/home/toor/.xmonad/.icons/wifi_02.xbm/></fc> <essid> <quality>", "--normal","#ebdbb2","--high","#fb4934","--low","#ebdbb2"] 10
                     , Run TopProc ["--normal","#ebdbb2","--high","#fb4934","--low","#ebdbb2"] 10
                     , Run ThermalZone 0 ["-t","<fc=#83a598><icon=/home/toor/.xmonad/.icons/temp.xbm/></fc> <temp>°C", "-L","0","-H","70","--normal","#ebdbb2","--high","#fb4934","--low","#ebdbb2"] 30
+                    , Run DiskIO [("sda2", "sda <fc=#83a598>/</fc> <read> <fc=#83a598>/</fc> <write>"), ("sdb", "sdb <fc=#83a598>/</fc> <read> <fc=#83a598>/</fc> <write>"), ("sdb1", "sdb <fc=#83a598>/</fc> <read> <fc=#83a598>/</fc> <write>"), ("sdc", "sdc <fc=#83a598>/</fc> <read> <fc=#83a598>/</fc> <write>"), ("sdc1", "sdc <fc=#83a598>/</fc> <read> <fc=#83a598>/</fc> <write>")] [] 10
                     , Run BatteryN [ "BAT0" ]
                                    [ "--template" , "<acstatus> <fc=#83a598>/</fc> <watts> W"
                                    , "--Low"      , "10"
@@ -57,5 +58,5 @@ Config { font = "xft:Literation Mono Powerline:pixelsize=13:antialias=true:autoh
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{%LYBE% <fc=#83a598>||</fc> %multicpu% <fc=#83a598>/</fc> %top% <fc=#83a598>/</fc> %thermal0% <fc=#83a598>||</fc> %memory% <fc=#83a598>||</fc> %dynnetwork% <fc=#83a598>/</fc> %wlp3s0wi% <fc=#83a598>||</fc> Bat0: %bat0% <fc=#83a598>|</fc> Bat1: %bat1% <fc=#83a598>||</fc><fc=#ebdbb2> %date% </fc>"
+       , template = "%StdinReader% }{%LYBE% <fc=#83a598>||</fc> %multicpu% <fc=#83a598>/</fc> %top% <fc=#83a598>/</fc> %thermal0% <fc=#83a598>||</fc> %memory% <fc=#83a598>||</fc> %diskio% <fc=#83a598>||</fc> %dynnetwork% <fc=#83a598>/</fc> %wlp3s0wi% <fc=#83a598>||</fc> Bat0: %bat0% <fc=#83a598>|</fc> Bat1: %bat1% <fc=#83a598>||</fc><fc=#ebdbb2> %date% </fc>"
        }
