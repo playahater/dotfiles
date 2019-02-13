@@ -192,10 +192,9 @@ let g:fzf_colors =
 
 nmap <silent> <C-@> :Buffers<CR>
 nmap <silent> / :BLines<CR>
-nmap <silent> <C-g> :Rg<CR>
+nmap <silent> <C-f> :Rg<CR>
 nmap <silent> <C-f> :ProjectFiles<CR>
 nmap <silent> <C-c> :Commits<CR>
-nmap <silent> <C-b> :BCommits<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " fzf functions
@@ -268,14 +267,14 @@ let g:lsp_diagnostics_echo_cursor = 1
 let g:lsp_signs_error = {'text': '✗'}
 let g:lsp_signs_warning = {'text': '‼'}
 
-if executable('typescript-language-server')
-    au User lsp_setup call lsp#register_server({
-        \ 'name': 'typescript-language-server',
-        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
-        \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'tsconfig.json'))},
-        \ 'whitelist': ['typescript'],
-        \ })
-endif
+"if executable('typescript-language-server')
+"    au User lsp_setup call lsp#register_server({
+"        \ 'name': 'typescript-language-server',
+"        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
+"        \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'tsconfig.json'))},
+"        \ 'whitelist': ['typescript'],
+"        \ })
+"endif
 
 if executable('typescript-language-server')
     au User lsp_setup call lsp#register_server({
