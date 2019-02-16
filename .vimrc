@@ -175,7 +175,7 @@ let g:fzf_buffers_jump = 1
 let g:fzf_tags_command = 'ctags --extra=+f -R'
 " [Commands] --expect expression for directly executing the command
 let g:fzf_commands_expect = 'alt-enter,ctrl-x'
-let g:fzf_layout = { 'down': '~20%' }
+let g:fzf_layout = { 'down': '~60%' }
 let g:fzf_colors =
   \ { 'fg':      ['fg', 'Normal'],
     \ 'bg':      ['bg', 'Clear'],
@@ -193,28 +193,20 @@ let g:fzf_colors =
 nmap <silent> <C-@> :Buffers<CR>
 nmap <silent> / :BLines<CR>
 nmap <silent> <C-f> :Rg<CR>
-nmap <silent> <C-f> :ProjectFiles<CR>
+nmap <silent> <C-g> :Files<CR>
 nmap <silent> <C-c> :Commits<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " fzf functions
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" file search with preview
-function! s:find_git_root()
-  return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
-endfunction
-
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
-  \   'rg --column --line-number --hidden --ignore-case --no-heading --color=always '.shellescape(<q-args>), 1,
-  \   <bang>0 ? fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'up:60%')
-  \           : fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'right:50%:hidden', '?'),
+  \   'rg --column --line-number --hidden --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview(),
   \   <bang>0)
 
 command! -bang -nargs=? -complete=dir Files
-  \ call fzf#vim#files(<q-args>, {'source': 'rg --color=never --no-heading --follow --ignore-case --hidden --files --glob "!.git/*"'}, <bang>0)
-
-command! ProjectFiles execute 'Files' s:find_git_root()
+  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " gitgutter
