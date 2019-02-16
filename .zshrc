@@ -5,7 +5,7 @@ export GEM_PATH=$HOME/.gem/ruby/2.3.0:$HOME/.gem/ruby/2.4.0:$GEM_PATH
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --color=auto --glob "!.git/*"'
+export FZF_DEFAULT_COMMAND='rg --files --hidden --smartcase --follow --color=auto --glob "!.git/*"'
 #export FZF_DEFAULT_OPTS='--height 20% --layout=reverse --border --preview'
 
 #support non-gui gpg agent
