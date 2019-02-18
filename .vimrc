@@ -10,7 +10,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'prabirshrestha/asyncomplete-lsp.vim'
   Plug 'prabirshrestha/asyncomplete-file.vim'
   Plug 'prabirshrestha/asyncomplete-tscompletejob.vim'
-  Plug 'prabirshrestha/asyncomplete-tags.vim'
   Plug 'runoshun/tscompletejob'
 
   Plug 'tpope/vim-fugitive'
@@ -25,7 +24,6 @@ call plug#begin('~/.vim/plugged')
 
   " syntax
   Plug 'prettier/vim-prettier', { 'do': 'sudo npm install -g', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
-  Plug 'felixfbecker/php-language-server', {'do': 'composer install && composer run-script parse-stubs'}
 
   Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
   Plug 'Quramy/vim-js-pretty-template', { 'for': ['typescript', 'javascript'] }
@@ -95,6 +93,7 @@ set backspace=2
 set clipboard=unnamed
 set hlsearch
 set history=1000
+set hidden
 set magic
 set showtabline=0
 set incsearch
@@ -125,7 +124,6 @@ let g:gruvbox_improved_warnings = 1
 " search
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set tags=./tags;,tags;
-"set tags=./tags,tags,./.git/tags;
 set ofu=syntaxcomplete#Complete
 set backupcopy=auto,breakhardlink
 
@@ -172,7 +170,7 @@ let g:javascript_plugin_flow = 1
 "[Buffers] Jump to the existing window if possible
 let g:fzf_buffers_jump = 1
 "[Tags] Command to generate tags file
-let g:fzf_tags_command = 'ctags --extra=+f -R'
+"let g:fzf_tags_command = 'ctags --extra=+f -R'
 " [Commands] --expect expression for directly executing the command
 let g:fzf_commands_expect = 'alt-enter,ctrl-x'
 let g:fzf_layout = { 'down': '~60%' }
@@ -246,8 +244,6 @@ let g:prettier#config#parser = 'typescript'
 " cli-override|file-override|prefer-file
 let g:prettier#config#config_precedence = 'prefer-file'
 
-let g:asyncomplete_remove_duplicates = 1
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " lsp
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -259,20 +255,11 @@ let g:lsp_diagnostics_echo_cursor = 1
 let g:lsp_signs_error = {'text': '✗'}
 let g:lsp_signs_warning = {'text': '‼'}
 
-"if executable('typescript-language-server')
-"    au User lsp_setup call lsp#register_server({
-"        \ 'name': 'typescript-language-server',
-"        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
-"        \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'tsconfig.json'))},
-"        \ 'whitelist': ['typescript'],
-"        \ })
-"endif
-
 if executable('typescript-language-server')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'typescript-language-server',
-        \ 'cmd': { server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
-        \ 'root_uri': { server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_directory(lsp#utils#get_buffer_path(), '.git/..'))},
+        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
+        \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'tsconfig.json'))},
         \ 'whitelist': ['typescript', 'javascript', 'javascript.jsx']
         \ })
 endif
@@ -299,6 +286,9 @@ if executable('pyls')
         \ })
 endif
 
+let g:asyncomplete_remove_duplicates = 1
+let g:asyncomplete_auto_popup = 1
+
 au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#file#get_source_options({
     \ 'name': 'file',
     \ 'whitelist': ['*'],
@@ -310,15 +300,6 @@ call asyncomplete#register_source(asyncomplete#sources#tscompletejob#get_source_
     \ 'name': 'tscompletejob',
     \ 'whitelist': ['typescript'],
     \ 'completor': function('asyncomplete#sources#tscompletejob#completor'),
-    \ }))
-
-au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#tags#get_source_options({
-    \ 'name': 'tags',
-    \ 'whitelist': ['c'],
-    \ 'completor': function('asyncomplete#sources#tags#completor'),
-    \ 'config': {
-    \    'max_file_size': -1,
-    \  },
     \ }))
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
