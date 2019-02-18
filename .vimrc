@@ -23,7 +23,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-airline/vim-airline'
 
   " syntax
-  Plug 'prettier/vim-prettier', { 'do': 'sudo npm install -g', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
+  Plug 'prettier/vim-prettier', { 'do': 'npm install -g', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
 
   Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
   Plug 'Quramy/vim-js-pretty-template', { 'for': ['typescript', 'javascript'] }
