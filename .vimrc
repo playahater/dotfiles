@@ -62,9 +62,11 @@ map <F10> :set paste<CR>
 
 " https://github.com/prabirshrestha/vim-lsp
 nnoremap <C-]> :LspDefinition<CR>
-nnoremap <M-[> :LspReferences<CR>
+nnoremap <ESC>[ :LspReferences<CR>
 nnoremap <C-'> :LspRename<CR>
 nnoremap <C-;> :LspDocumentFormat<CR>
+
+nnoremap <ESC>s :Gstatus<CR>
 
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
@@ -191,8 +193,11 @@ let g:fzf_colors =
 nmap <silent> <C-@> :Buffers<CR>
 nmap <silent> / :BLines<CR>
 nmap <silent> <C-f> :Rg<CR>
-nmap <silent> <C-g> :Files<CR>
-nmap <silent> <C-c> :Commits<CR>
+
+" meta key [ ALT ] mappings
+nmap <ESC>f :GFiles<CR>
+nmap <ESC>c :Commits<CR>
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " fzf functions
