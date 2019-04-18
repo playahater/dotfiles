@@ -14,6 +14,7 @@ Config { font = "xft:Literation Mono Powerline:pixelsize=13:antialias=true:autoh
        , commands = [ Run MultiCpu ["-t","<autototal>", "-L","0","-H","70","--normal","#ebdbb2","--high","#fb4934","--low","#ebdbb2"] 10
                     , Run Memory ["-t","<used> MB", "-L","7000","-H","14500","--normal","#ebdbb2","--high","#fb4934","--low","#ebdbb2"] 50
                     , Run DynNetwork ["-t", "<dev>: <rx>Kb/s<fc=#83a598>|</fc><tx>Kb/s","--Low","500","--High","5000","--normal","#ebdbb2","--high","#fb4934","--low","#ebdbb2"] 10
+                    , Run Brightness ["-t", "<percent>", "--", "-D", "intel_backlight"] 5
                     , Run Wireless "wlp3s0" ["-t", "<essid> <quality>", "--normal","#ebdbb2","--high","#fb4934","--low","#ebdbb2"] 10
                     , Run TopProc ["--normal","#ebdbb2","--high","#fb4934","--low","#ebdbb2"] 10
                     , Run ThermalZone 0 ["-t","<temp>°C", "-L","0","-H","70","--normal","#ebdbb2","--high","#fb4934","--low","#ebdbb2"] 30
@@ -57,5 +58,5 @@ Config { font = "xft:Literation Mono Powerline:pixelsize=13:antialias=true:autoh
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{%multicpu% <fc=#83a598>/</fc> %top% <fc=#83a598>/</fc> %thermal0% <fc=#83a598>|</fc> %memory% <fc=#83a598>|</fc> %diskio% <fc=#83a598>|</fc> %dynnetwork% <fc=#83a598>/</fc> %wlp3s0wi% <fc=#83a598>|</fc> Bat0: %bat0% <fc=#83a598>|</fc> Bat1: %bat1% <fc=#83a598>|</fc><fc=#ebdbb2> %date% </fc>"
+       , template = "%StdinReader% }{%bright% <fc=#83a598>/</fc> | %multicpu% <fc=#83a598>/</fc> %top% <fc=#83a598>/</fc> %thermal0% <fc=#83a598>|</fc> %memory% <fc=#83a598>|</fc> %diskio% <fc=#83a598>|</fc> %dynnetwork% <fc=#83a598>/</fc> %wlp3s0wi% <fc=#83a598>|</fc> Bat0: %bat0% <fc=#83a598>|</fc> Bat1: %bat1% <fc=#83a598>|</fc><fc=#ebdbb2> %date% </fc>"
        }
