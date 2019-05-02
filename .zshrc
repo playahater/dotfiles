@@ -11,6 +11,11 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden --smartcase --follow --color=aut
 #support non-gui gpg agent
 export GPG_TTY=$(tty)
 
+#emcc env
+export LLVM_ROOT=/usr/bin
+export NODE_JS=/usr/bin/node
+export EMSCRIPTEN_ROOT=/usr/lib/emscripten
+
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
