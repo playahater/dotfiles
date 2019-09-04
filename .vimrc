@@ -23,7 +23,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-airline/vim-airline'
 
   " syntax
-  Plug 'prettier/vim-prettier', { 'do': 'npm install -g', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
+  Plug 'prettier/vim-prettier', { 'do': 'npm install -g', 'branch': 'release/1.x', 'for': [ 'javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'lua', 'php', 'python', 'ruby', 'html', 'swift' ] }
+  Plug 'felixfbecker/php-language-server', {'do': 'composer install && composer run-script parse-stubs', 'for': ['php'] }
 
   Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
   Plug 'Quramy/vim-js-pretty-template', { 'for': ['typescript', 'javascript'] }
@@ -42,7 +43,6 @@ call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " key maps
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"let mapleader = ""
 
 if &diff
   nnoremap <silent><C-j> :diffget LOCAL<CR>
@@ -102,10 +102,8 @@ set incsearch
 set ignorecase
 set smartcase
 set scrolloff=10
-
 set statusline+=%#warningmsg#
 set statusline+=%*
-
 set colorcolumn=80
 highlight ColorColumn ctermbg=232
 
@@ -229,31 +227,9 @@ let g:prettier#autoformat = 0
 let g:prettier#quickfix_enabled = 0
 let g:prettier#exec_cmd_async = 1
 
-" max line length that prettier will wrap on
-let g:prettier#config#print_width = 170
-" number of spaces per indentation level
-let g:prettier#config#tab_width = 4
-" use tabs over spaces
-let g:prettier#config#use_tabs = 'false'
-" print semicolons
-let g:prettier#config#semi = 'true'
-" single quotes over double quotes
-let g:prettier#config#single_quote = 'true'
-" print spaces between brackets
-let g:prettier#config#bracket_spacing = 'true'
-" put > on the last line instead of new line
-let g:prettier#config#jsx_bracket_same_line = 'true'
-" none|es5|all
-let g:prettier#config#trailing_comma = 'none'
-" flow|babylon|typescript|postcss|json|graphql
-let g:prettier#config#parser = 'typescript'
-" cli-override|file-override|prefer-file
-let g:prettier#config#config_precedence = 'prefer-file'
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " lsp
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 highlight link LspErrorText GruvboxRedSign
 highlight clear LspWarningLine
 let g:lsp_signs_enabled = 1
@@ -315,19 +291,16 @@ if has('autocmd')
   au VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
   au VimEnter * AirlineTheme gruvbox
 
-  au BufRead,BufNewFile *.module set filetype=php
-  au BufRead,BufNewFile *.install set filetype=php
-  au BufRead,BufNewFile *.wsgi set filetype=python
-  au BufNewFile,BufRead *.twig set filetype=twig
-  au BufNewFile,BufRead *.html.twig set filetype=html.twig
-  au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
-  au BufNewFile,BufRead *.ts set filetype=typescript
-  au BufNewFile,BufReadPost *.md set filetype=markdown
+  au BufNewFile,BufRead *.module,*.install set filetype=php
 
-  au BufRead,BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql PrettierAsync
+  au BufRead,BufWritePre * if &modifiable | retab | endif
+
+  au BufRead,BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+
   au BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
+  au FileType php setlocal omnifunc=lsp#complete
   " Don't automatically insert a comment command when entering insert mode with o
   au FileType * setl formatoptions-=o
   " " But do when hitting enter on a comment line, or when wrapping
