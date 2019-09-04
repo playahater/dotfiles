@@ -1,0 +1,16 @@
+{
+  "printWidth": 170,
+  "tabWidth": 4,
+  "useTabs": false,
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "none",
+  "jsxBracketSameLine": true,
+  "bracketSpacing": true,
+  "overrides": [{
+    "files": "*.php",
+      "options": {
+        "braceStyle": "1tbs"
+   }
+  }],
+}

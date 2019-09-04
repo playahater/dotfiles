@@ -9,6 +9,9 @@
     pager = less -RSFX
     whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol,space-before-tab,tabwidth=4
     excludesfile = ~/.gitignore
+    packedGitLimit = 512m
+    packedGitWindowSize = 512m
+    compression = 9
 [branch]
     autosetupmerge = always
     autosetuprebase = always
@@ -26,6 +29,10 @@
 [rerere]
     enabled = true
     autoupdate = true
+[pack]
+    deltaCacheSize = 2047m
+    packSizeLimit = 2047m
+    windowMemory = 2047m
 [repack]
     usedeltabaseoffset = true
 [push]
@@ -57,13 +64,13 @@
     changed = green
     untracked = cyan
 [color "diff"]
-	meta = yellow bold
-	frag = magenta
-	plain = white bold
-	old = red
-	new = green
-	commit = yellow bold
-	func = cyan bold
+    meta = yellow bold
+    frag = magenta
+    plain = white bold
+    old = red
+    new = green
+    commit = yellow bold
+    func = cyan bold
 [alias]
     ignore = update-index --assume-unchanged
     unignore = update-index --no-assume-unchanged
@@ -77,17 +84,17 @@
     df = diff --word-diff
     ls = ls-files
     datetag = !git tag `date \"+%Y%m%d%H%M\"`
-	poppers = !git log -M -C --format=\"format:%aN\" --grep \"Revert\" | sort | uniq -c | sort -n
+    poppers = !git log -M -C --format=\"format:%aN\" --grep \"Revert\" | sort | uniq -c | sort -n
     ctags = !.git/hooks/ctags
     unmerged = branch -r --no-merged
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
 [gpg]
-	program = gpg
+    program = gpg
 [user]
-	signingkey = EDE5CEA167742D08
+    signingkey = EDE5CEA167742D08
 [commit]
-	gpgsign = true
+    gpgsign = true
