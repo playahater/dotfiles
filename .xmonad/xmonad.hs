@@ -215,7 +215,7 @@ myMainKeys =
   , ((0, 0x1008FF12), spawn "pactl set-sink-mute 0 toggle") -- mute volume
   , ((0, 0x1008FF02), spawn "light -A 10") -- Monitor/panel brightness up
   , ((0, 0x1008FF03), spawn "light -U 10") -- Monitor/panel brightness down
-  , ((0, xK_Print), spawn "import -window root ~/.screenshots/$(date '+%Y%m%d-%H%M%S').png")
+  , ((0, xK_Print), spawn "import ~/.screenshots/$(date '+%Y%m%d-%H%M%S').png")
   , ((myModMask, xK_grave), namedScratchpadAction scratchpads "screen")
   , ((myAltMask, xK_h), namedScratchpadAction scratchpads "htop")
   , ((myAltMask, xK_m), namedScratchpadAction scratchpads "mc")
