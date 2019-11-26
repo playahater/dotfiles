@@ -85,10 +85,9 @@ set number  " Display line numbers
 set timeoutlen=1    " Time to wait after ESC
 set nobackup
 set noswapfile
-set tabstop=4   " Tabs are 4 spaces
+set tabstop=2   " Tabs are 4 spaces
 set expandtab
-set shiftwidth=4    " Define the width of a shift for the<<  and>>  commands. (Tabs under smart indent)
-set tabstop=4   " Define what tabstop  is to be simulated when Tab is pressed
+set shiftwidth=2    " Define the width of a shift for the<<  and>>  commands. (Tabs under smart indent)
 set autoindent      " Automatically indent eache line like previous one
 set smartindent     " Automatically indent when adding a curly bracket, etc.
 set backspace=2
@@ -226,6 +225,7 @@ let g:gitgutter_max_signs = 1500
 let g:prettier#autoformat = 0
 let g:prettier#quickfix_enabled = 0
 let g:prettier#exec_cmd_async = 1
+let g:prettier#exec_cmd_path = "~/.node/bin/prettier"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " lsp
