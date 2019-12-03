@@ -103,7 +103,7 @@ set smartcase
 set scrolloff=10
 set statusline+=%#warningmsg#
 set statusline+=%*
-set colorcolumn=80
+set colorcolumn=150
 highlight ColorColumn ctermbg=232
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
