@@ -12,6 +12,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'prabirshrestha/asyncomplete-tscompletejob.vim'
   Plug 'runoshun/tscompletejob'
 
+  Plug 'majutsushi/tagbar'
   Plug 'tpope/vim-fugitive'
   Plug 'airblade/vim-gitgutter'
   Plug 'wikitopian/hardmode'
@@ -59,6 +60,7 @@ map <F5> mzgg=G`z && retab!<CR>
 map <F6> :PrettierAsync<CR>
 map <F9> :set wrap!<Bar>set wrap?<CR>
 map <F10> :set paste<CR>
+nmap <F8> :TagbarToggle<CR>
 
 " https://github.com/prabirshrestha/vim-lsp
 nnoremap <C-]> :LspDefinition<CR>
