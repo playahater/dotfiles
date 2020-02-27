@@ -286,12 +286,22 @@ call asyncomplete#register_source(asyncomplete#sources#tscompletejob#get_source_
     \ 'completor': function('asyncomplete#sources#tscompletejob#completor'),
     \ }))
 
+function PrettierPhpCursor()
+  let save_pos = getpos(".")
+  %! prettier --stdin --parser=php
+  call setpos('.', save_pos)
+endfunction
+" define custom command
+command PrettierPhp call PrettierPhpCursor()
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " misc
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has('autocmd')
   au VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
   au VimEnter * AirlineTheme gruvbox
+
+  au BufwritePre *.php PrettierPhp
 
   au BufNewFile,BufRead *.module,*.install set filetype=php
 
