@@ -106,6 +106,7 @@ set scrolloff=10
 set statusline+=%#warningmsg#
 set statusline+=%*
 set colorcolumn=150
+set mmp=10000
 highlight ColorColumn ctermbg=232
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -286,13 +287,13 @@ call asyncomplete#register_source(asyncomplete#sources#tscompletejob#get_source_
     \ 'completor': function('asyncomplete#sources#tscompletejob#completor'),
     \ }))
 
-function PrettierPhpCursor()
-  let save_pos = getpos(".")
-  %! prettier --stdin --parser=php
-  call setpos('.', save_pos)
-endfunction
-" define custom command
-command PrettierPhp call PrettierPhpCursor()
+"function PrettierPhpCursor()
+"  let save_pos = getpos(".")
+"  %! prettier --stdin --parser=php
+"  call setpos('.', save_pos)
+"endfunction
+"" define custom command
+"command PrettierPhp call PrettierPhpCursor()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " misc
@@ -301,7 +302,7 @@ if has('autocmd')
   au VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
   au VimEnter * AirlineTheme gruvbox
 
-  au BufwritePre *.php PrettierPhp
+  "au BufwritePre *.php PrettierPhp
 
   au BufNewFile,BufRead *.module,*.install set filetype=php
 
