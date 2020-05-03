@@ -10,6 +10,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'prabirshrestha/asyncomplete-lsp.vim'
   Plug 'prabirshrestha/asyncomplete-file.vim'
   Plug 'prabirshrestha/asyncomplete-tscompletejob.vim'
+  Plug 'mattn/vim-lsp-settings'
   Plug 'runoshun/tscompletejob'
 
   Plug 'majutsushi/tagbar'
@@ -25,8 +26,6 @@ call plug#begin('~/.vim/plugged')
 
   " syntax
   Plug 'prettier/vim-prettier', { 'do': 'npm install -g', 'branch': 'release/1.x', 'for': [ 'javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'lua', 'php', 'python', 'ruby', 'html', 'swift' ] }
-  Plug 'felixfbecker/php-language-server', {'do': 'composer install && composer run-script parse-stubs', 'for': ['php'] }
-
   Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
   Plug 'Quramy/vim-js-pretty-template', { 'for': ['typescript', 'javascript'] }
   Plug 'pangloss/vim-javascript', { 'for': ['typescript', 'javascript'] }
@@ -87,7 +86,7 @@ set number  " Display line numbers
 set timeoutlen=1    " Time to wait after ESC
 set nobackup
 set noswapfile
-set tabstop=2   " Tabs are 4 spaces
+set tabstop=2   " Tabs are 2 spaces
 set expandtab
 set shiftwidth=2    " Define the width of a shift for the<<  and>>  commands. (Tabs under smart indent)
 set autoindent      " Automatically indent eache line like previous one
@@ -239,38 +238,6 @@ let g:lsp_signs_enabled = 1
 let g:lsp_diagnostics_echo_cursor = 1
 let g:lsp_signs_error = {'text': '✗'}
 let g:lsp_signs_warning = {'text': '‼'}
-
-if executable('typescript-language-server')
-    au User lsp_setup call lsp#register_server({
-        \ 'name': 'typescript-language-server',
-        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
-        \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'tsconfig.json'))},
-        \ 'whitelist': ['typescript', 'javascript', 'javascript.jsx']
-        \ })
-endif
-
-au User lsp_setup call lsp#register_server({
-    \ 'name': 'php-language-server',
-    \ 'cmd': {server_info->['php', expand('~/.vim/plugged/php-language-server/bin/php-language-server.php')]},
-    \ 'whitelist': ['php'],
-    \ })
-
-if executable('css-languageserver')
-    au User lsp_setup call lsp#register_server({
-       \ 'name': 'css-languageserver',
-       \ 'cmd': {server_info->[&shell, &shellcmdflag, 'css-languageserver --stdio']},
-       \ 'whitelist': ['css', 'less', 'sass'],
-       \ })
-endif
-
-if executable('pyls')
-     au User lsp_setup call lsp#register_server({
-        \ 'name': 'pyls',
-        \ 'cmd': {server_info->['pyls']},
-        \ 'whitelist': ['python'],
-        \ })
-endif
-
 let g:asyncomplete_remove_duplicates = 1
 let g:asyncomplete_auto_popup = 1
 
@@ -279,12 +246,6 @@ au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#source
     \ 'whitelist': ['*'],
     \ 'priority': 10,
     \ 'completor': function('asyncomplete#sources#file#completor')
-    \ }))
-
-call asyncomplete#register_source(asyncomplete#sources#tscompletejob#get_source_options({
-    \ 'name': 'tscompletejob',
-    \ 'whitelist': ['typescript'],
-    \ 'completor': function('asyncomplete#sources#tscompletejob#completor'),
     \ }))
 
 "function PrettierPhpCursor()
