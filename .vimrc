@@ -86,6 +86,7 @@ set number  " Display line numbers
 set timeoutlen=1    " Time to wait after ESC
 set nobackup
 set noswapfile
+set nostartofline " cursor is kept in the same column
 set tabstop=2   " Tabs are 2 spaces
 set expandtab
 set shiftwidth=2    " Define the width of a shift for the<<  and>>  commands. (Tabs under smart indent)
